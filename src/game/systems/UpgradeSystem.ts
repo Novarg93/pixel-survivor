@@ -19,7 +19,7 @@ export const UPGRADES: UpgradeDefinition[] = [
   { id: 'cooldown', name: 'Быстрый ритуал', description: 'Перезарядка способностей быстрее на 10%.', max: 5, apply: w => { w.stats.cooldown *= 0.9; } },
   { id: 'projectiles', name: 'Двойная искра', description: '+1 огненный шар за атаку (до 4).', max: 3, apply: w => { w.stats.projectiles++; } },
   { id: 'speed', name: 'Лёгкий шаг', description: '+13.5px/с к скорости перемещения.', max: 4, apply: w => { w.player.speed += 13.5; } },
-  { id: 'health', name: 'Сила корней', description: '+20 к максимальному здоровью и лечение 30 HP.', max: 5, apply: w => { w.player.maxHp += 20; w.player.hp = Math.min(w.player.maxHp, w.player.hp + 30); } },
+  { id: 'health', name: 'Сила корней', description: '+20 к максимальному здоровью и лечение 30 HP.', max: 5, apply: w => { w.player.maxHp += 20; w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 30); } },
   { id: 'pickup', name: 'Притяжение', description: '+20 к радиусу притяжения кристаллов.', max: 5, apply: w => { w.stats.pickup += 20; } },
   { id: 'area', name: 'Широкий круг', description: '+15% к радиусу площадной магии.', max: 4, apply: w => { w.stats.area += 0.15; } },
   ...ABILITIES.filter(a => a.id !== 'fireball' && a.id !== 'cleave').map(a => ({ id: `unlock-${a.id}`, name: a.name, description: a.description ?? `Открыть: ${a.id === 'frost' ? 'урон и замедление вокруг мага' : a.id === 'lightning' ? 'молния прыгает между врагами' : a.id === 'meteor' ? 'удар по скоплению врагов после метки' : 'периодический щит поглощает удары'}.`, max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level === 0, apply: (w: World) => { w.abilities[a.id].level = 1; } })),
@@ -27,7 +27,7 @@ export const UPGRADES: UpgradeDefinition[] = [
   ...ABILITIES.filter(a => !a.character).map(a => ({ id: `evolve-${a.id}`, name: `${a.name}: эволюция`, description: ({ fireball: 'Первое попадание шара: взрыв 45% урона в радиусе 38px.', frost: 'Два морозных импульса за 4с замораживают на 0.75с. Иммунитет 6с.', lightning: 'Два вторичных разряда по новым целям с 35% уроном.', meteor: 'После удара горящая область на 3с, урон каждые 0.5с.', shield: 'Поглощение удара вызывает защитный импульс 90px.' })[a.id as 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield'], max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level >= 3, apply: () => undefined })),
 ];
 export const SUPPLIES: UpgradeDefinition[] = [
-  { id: 'restore', name: 'Глоток жизни', description: 'Восстановить 40 HP.', max: Infinity, apply: w => { w.player.hp = Math.min(w.player.maxHp, w.player.hp + 40); } },
+  { id: 'restore', name: 'Глоток жизни', description: 'Восстановить 40 HP.', max: Infinity, apply: w => { w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 40); } },
   { id: 'nova', name: 'Вспышка', description: '120 урона всем врагам в радиусе 150px.', max: Infinity, apply: w => { for (const e of [...w.enemies]) if (distance(w.player, e) <= 150 + e.radius) w.damageEnemy(e, 120, 'nova'); w.effect('death', w.player, 150, 0xdabaff); } },
   { id: 'magnet', name: 'Зов кристаллов', description: 'Собрать все кристаллы на поле.', max: Infinity, apply: w => { w.collectAllOrbs(); } },
 ];

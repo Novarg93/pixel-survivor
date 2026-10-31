@@ -11,10 +11,10 @@ export function chainTargets(origin: Point, enemies: readonly Enemy[], count: nu
   return hit;
 }
 export function chainLightning(w: World) {
-  const level = w.abilities.lightning.level, targets = chainTargets(w.player, w.enemies, 2 + level, 115 * w.stats.area);
+  const level = w.abilities.lightning.level, targets = chainTargets(w.player, w.combatTargets, 2 + level, 115 * w.stats.area);
   if (!targets.length) return false;
   let from: Point = w.player;
   for (const target of targets) { w.effect('lightning', from, 1, 0xdab5ff, 0.22, target); w.damageEnemy(target, (22 + level * 9) * w.stats.damage, 'lightning'); from = target; }
-  if (evolved(w, 'lightning')) for (const secondary of chainTargets(from, w.enemies.filter(e => !targets.includes(e)), 2, 90)) { w.effect('lightning', from, 1, 0xb68ce4, 0.18, secondary); w.damageEnemy(secondary, (22 + level * 9) * w.stats.damage * 0.35, 'lightning'); from = secondary; }
+  if (evolved(w, 'lightning')) for (const secondary of chainTargets(from, w.combatTargets.filter(e => !targets.includes(e)), 2, 90)) { w.effect('lightning', from, 1, 0xb68ce4, 0.18, secondary); w.damageEnemy(secondary, (22 + level * 9) * w.stats.damage * 0.35, 'lightning'); from = secondary; }
   return true;
 }

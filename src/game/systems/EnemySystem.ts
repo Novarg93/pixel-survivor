@@ -10,6 +10,7 @@ export class EnemySystem {
     this.grid.rebuild(w.enemies);
     for (const e of w.enemies) {
       if (w.status !== 'playing') break;
+      if (e.kind === 'guardian') { if (distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }
       if ((e.freezeUntil ?? 0) > w.elapsed) continue;
       if (e.boss) { updateBoss(w, e, dt); continue; }
       if (e.rush) { updateRusher(w, e, dt); continue; }

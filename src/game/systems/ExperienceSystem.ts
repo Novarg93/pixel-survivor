@@ -3,7 +3,7 @@ export class ExperienceSystem {
   level = 1; xp = 0; pending = 0;
   gain(amount: number) {
     if (!Number.isFinite(amount) || amount <= 0) return;
-    this.xp += Math.min(100000, amount);
+    this.xp = Math.round((this.xp + Math.min(100000, amount)) * 100) / 100;
     while (this.xp >= xpThreshold(this.level)) { this.xp -= xpThreshold(this.level); this.level++; this.pending++; }
   }
 }

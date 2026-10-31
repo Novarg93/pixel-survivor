@@ -2,7 +2,7 @@ import { BALANCE } from '../config/gameBalance';
 import type { World } from '../systems/World';
 import { nearest } from '../utils/math';
 export function fireball(w: World) {
-  const target = nearest(w.player, w.enemies, BALANCE.fireballRange);
+  const target = nearest(w.player, w.combatTargets, BALANCE.fireballRange);
   if (!target) return false;
   w.sound('cast');
   const level = w.abilities.fireball.level, evolved = level >= 5 && (w.upgrades.damage ?? 0) >= 3;

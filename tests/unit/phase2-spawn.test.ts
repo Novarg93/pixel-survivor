@@ -10,6 +10,6 @@ it('creates about 30% more actual mobs with identical seed/time without saturati
 it('consumes full-cap attempts and refills promptly without pause debt', () => {
   const w = new World(); w.elapsed = 1300; w.bossScheduler.nextAt = 1e9; w.player.invulnerableUntil = 1e9; w.abilities.fireball.level = 0;
   for (let i = 0; i < 150; i++) w.spawn('tank', { x: 200, y: 0 }); for (let i = 0; i < 100; i++) w.step(0.05);
-  expect(w.enemies.length).toBe(150); w.pause(); w.step(1000); w.enemies.splice(0, 10); w.resume(); w.step(0.05); expect(w.enemies.length).toBeLessThanOrEqual(144);
-  for (let i = 0; i < 8; i++) w.step(0.05); expect(w.enemies.length).toBeGreaterThanOrEqual(144); expect(w.enemies.length).toBeLessThanOrEqual(150);
+  expect(w.regularCount).toBe(150); w.pause(); w.step(1000); w.enemies.splice(0, 10); w.resume(); w.step(0.05); expect(w.regularCount).toBeLessThanOrEqual(144);
+  for (let i = 0; i < 8; i++) w.step(0.05); expect(w.regularCount).toBeGreaterThanOrEqual(144); expect(w.regularCount).toBeLessThanOrEqual(150);
 });

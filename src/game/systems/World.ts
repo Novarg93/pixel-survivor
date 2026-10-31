@@ -1,5 +1,5 @@
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
-import { BALANCE } from '../config/gameBalance';
+import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
 import { ENEMIES, ENEMY_NAMES, isBossKind, type EnemyKind } from '../config/enemyDefinitions';
 import type { Enemy, Projectile, Effect, XpOrb, Impact, Zone, DamageSource } from '../entities/types';
 import { evolved, shieldPulse } from '../abilities/evolutions';
@@ -20,11 +20,28 @@ import { BossScheduler, BOSS_CAP } from './BossSystem';
 import type { SoundCue } from '../services/AudioSystem';
 import { ScoreSystem } from './ScoreSystem';
 import { SpawnClock } from './SpawnClock';
+import { BuffSystem } from '../loot/BuffSystem';
+import { LootSystem } from '../loot/LootSystem';
+import { ArtifactSystem } from '../loot/ArtifactSystem';
+import { RareGuardianSystem, guardianVisible } from './RareGuardianSystem';
 export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
   readonly rng: SeededRandom;
+  readonly buffs = new BuffSystem();
+  readonly loot: LootSystem;
+  readonly artifacts: ArtifactSystem;
+  readonly guardianSystem: RareGuardianSystem;
+  facing = { x: 0, y: 1 };
+  get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed); }
+  get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed); }
+  get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown'); }
+  get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
+  get rareGuardian() { return this.enemies.find(e => e.kind === 'guardian'); }
+  get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
+  get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
+  clearTemporaryState() { this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   sounds: SoundCue[] = [];
@@ -65,15 +82,16 @@ export class World {
   width = 640; height = 360;
   spawnedRegular = 0;
   private serial = 0; private spawnClock = new SpawnClock();
-  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
+  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
   id() { return ++this.serial; }
   spawn(kind: EnemyKind, at?: Point, elite = false): Enemy | undefined {
     const boss = isBossKind(kind);
-    if (boss ? this.bosses.length >= BOSS_CAP : this.enemies.filter(e => !e.boss).length >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
-    const p = at ?? spawnPerimeter(this.player, this.width, this.height, this.rng), definition = ENEMIES[kind];
+    if (kind === 'guardian' ? this.enemies.filter(e => e.kind === 'guardian').length >= GUARDIAN_BALANCE.cap || !this.artifacts.canDrop(this.elapsed) : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
+    if (kind === 'guardian') elite = false;
+    const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng)), definition = ENEMIES[kind];
     const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
     const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + 2, shootingAt: 0, boss: boss ? { phase: 'approach', until: this.elapsed + 2, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
-    this.enemies.push(enemy); if (!boss) this.spawnedRegular++; return enemy;
+    this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this); else if (!boss) this.spawnedRegular++; return enemy;
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
     if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y } }); if (effect) this.effects.push(effect); }
@@ -85,16 +103,18 @@ export class World {
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown') {
     if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
+    if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; }
     const before = enemy.hp;
-    enemy.hp = Math.max(0, enemy.hp - amount * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
+    enemy.hp = Math.max(0, enemy.hp - amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
-    if (!enemy.boss) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
+    if (!enemy.boss && enemy.kind !== 'guardian') { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
       this.scoring.recordKill(enemy.kind, enemy.elite);
       this.sound('kill');
       this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
       this.dropXp(enemy, enemy.xp);
+      this.loot.onEnemyDeath(this, enemy);
       if (enemy.boss) this.clearOwnedEffects(enemy.id);
       this.enemies.splice(this.enemies.indexOf(enemy), 1); onSpecialDeath(this, enemy); return true;
     }
@@ -107,7 +127,7 @@ export class World {
     if (orb) this.orbs.push(orb);
     else { const old = nearest(at, this.orbs, Infinity); if (old) old.value += value; }
   }
-  gainXp(amount: number) { const level = this.experience.level; this.experience.gain(amount); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
+  gainXp(amount: number) { const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
   private openUpgrade() {
     if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.offerId++; this.choices = chooseUpgrades(this); }
   }
@@ -115,26 +135,28 @@ export class World {
     if (offer !== this.offerId || this.status !== 'upgrade' || !this.choices.some(c => c.id === id) || !applyUpgrade(this, id)) return false;
     this.experience.pending--; this.choices = []; this.status = 'playing'; this.openUpgrade(); return true;
   }
-  collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + o.value, 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
+  collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + (o.expires > this.elapsed ? o.value : 0), 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
   damagePlayer(amount: number) {
     if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || amount <= 0 || !Number.isFinite(amount)) return false;
     if (this.shield.activeUntil > this.elapsed && this.shield.charges > 0) {
       this.shield.charges--; this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability; this.effect('shield', this.player, 32, 0xa5c4ff); shieldPulse(this); return true;
     }
     const hit = receiveDamage(this.player, amount * (1 - CHARACTERS[this.character].armor) * (this.warrior.ironUntil > this.elapsed ? 0.5 : 1), this.elapsed);
-    if (hit) { this.sound('hurt'); this.effect('hit', this.player, 16, 0xff6f70); if (this.player.hp <= 0) this.status = 'over'; }
+    if (hit) { this.sound('hurt'); this.effect('hit', this.player, 16, 0xff6f70); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
   step(rawDelta: number, input: Point = { x: 0, y: 0 }) {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
-    const vector = direction(input.x, input.y); this.player.x += vector.x * this.player.speed * dt; this.player.y += vector.y * this.player.speed * dt;
+    const vector = direction(input.x, input.y); this.player.x += vector.x * this.effectiveSpeed * dt; this.player.y += vector.y * this.effectiveSpeed * dt;
+    if (vector.x || vector.y) this.facing = vector;
     const profile = profileAt(this.elapsed);
     if (this.spawnClock.tick(dt, profile.interval / (this.options.spawnRate ?? 1.3))) { for (let i = 0; i < profile.burst; i++) this.spawn(pickEnemy(profile, this.rng), undefined, this.rng.next() < profile.elite); }
     const dueBoss = this.bossScheduler.poll(this.elapsed, this.bosses.length); if (dueBoss) this.spawn(dueBoss);
+    this.guardianSystem.update(this);
     this.enemySystem.update(this, dt);
     if (this.status !== 'playing') return;
-    this.enemies = this.enemies.filter(e => { const keep = distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
+    this.enemies = this.enemies.filter(e => { const keep = e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
       if (this.status !== 'playing') break;
@@ -171,9 +193,11 @@ export class World {
       const d = distance(orb, this.player);
       if (d < 12 || orb.expires <= this.elapsed) {
         this.orbs.splice(this.orbs.indexOf(orb), 1); const value = orb.value; this.orbPool.release(orb);
-        if (d < 12) { this.sound('pickup'); this.gainXp(value); }
+        if (d < 12 && orb.expires > this.elapsed) { this.sound('pickup'); this.gainXp(value); if (this.status !== 'playing') break; }
       } else if (d < this.stats.pickup) { const vector = direction(this.player.x - orb.x, this.player.y - orb.y); orb.x += vector.x * 230 * dt; orb.y += vector.y * 230 * dt; }
     }
+    if (this.status === 'playing') this.loot.update(this);
+    if (this.status === 'playing') this.artifacts.update(this);
   }
   snapshot() {
     const damageByAbility=this.abilityDefinitions.map(a=>({id:a.id,name:a.name,damage:this.scoring.damage[a.id]}));
@@ -181,8 +205,10 @@ export class World {
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
-      hp: this.player.hp, maxHp: this.player.maxHp, kills: this.kills, score: this.score,
-      killsByKind: { ...this.scoring.byKind }, enemies: this.enemies.filter(e => !e.boss).length,
+      buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
+      artifacts: this.artifacts.snapshot(), runNotice: this.artifacts.notice?.text ?? this.guardianSystem.notice?.text ?? null, guardianKills: this.scoring.guardianKills,
+      hp: this.player.hp, maxHp: this.effectiveMaxHp, kills: this.kills, score: this.score,
+      killsByKind: { ...this.scoring.byKind }, enemies: this.regularCount,
       level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),
       offerId: this.offerId, pending: this.experience.pending,
       choices: this.choices.map(c => {

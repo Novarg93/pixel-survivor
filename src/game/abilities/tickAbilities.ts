@@ -9,7 +9,7 @@ const activate = { fireball, frost: frostAura, lightning: chainLightning, meteor
 export function tickAbilities(w: World) {
   for (const def of w.abilityDefinitions) {
     const state = w.abilities[def.id];
-    if (state.level > 0 && w.elapsed >= state.readyAt && activate[def.id](w)) state.readyAt = w.elapsed + def.cooldown * w.stats.cooldown;
+    if (state.level > 0 && w.elapsed >= state.readyAt && activate[def.id](w)) state.readyAt = w.elapsed + def.cooldown * w.effectiveCooldown;
   }
   if(w.character === 'warrior')tickWarrior(w);
 }

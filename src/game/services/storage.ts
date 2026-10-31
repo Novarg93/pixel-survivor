@@ -32,7 +32,7 @@ export function loadProfile(storage = browserStorage()): Profile {
     const data: unknown = JSON.parse(storage?.getItem(STORAGE_KEY) ?? 'null');
     if (!object(data) || (data.version !== 1 && data.version !== 2)) return fallback;
     if (validSettings(data.settings)) fallback.settings = { ...data.settings };
-    if (Array.isArray(data.records)) { const ids = new Set<string>(); fallback.records = sortedRecords(data.records.slice(0, 100).map(r => object(r) && object(r.byKind) ? { ...r, byKind: { rusher: 0, splitter: 0, eclipse: 0, ...r.byKind } } : r).filter(validRecord).filter(r => { if (ids.has(r.id)) return false; ids.add(r.id); return true; })); }
+    if (Array.isArray(data.records)) { const ids = new Set<string>(); fallback.records = sortedRecords(data.records.slice(0, 100).map(r => object(r) && object(r.byKind) ? { ...r, byKind: { guardian: 0, rusher: 0, splitter: 0, eclipse: 0, ...r.byKind } } : r).filter(validRecord).filter(r => { if (ids.has(r.id)) return false; ids.add(r.id); return true; })); }
     if (object(data.lastPlayed) && typeof data.lastPlayed.id === 'string' && data.lastPlayed.id.length <= 100 && date(data.lastPlayed.at)) fallback.lastPlayed = { id: data.lastPlayed.id, at: data.lastPlayed.at };
     if (object(data.statistics) && count(data.statistics.runs) && count(data.statistics.kills) && seconds(data.statistics.seconds)) fallback.statistics = { runs: data.statistics.runs, kills: data.statistics.kills, seconds: data.statistics.seconds };
   } catch { /* Corruption, disabled storage, unknown schema: playable defaults. */ }

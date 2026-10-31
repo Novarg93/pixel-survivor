@@ -8,7 +8,7 @@ export function denseTarget(points: readonly Point[], radius: number): Point | u
 }
 export function meteor(w: World) {
   const level = w.abilities.meteor.level, radius = (48 + level * 7) * w.stats.area;
-  const target = denseTarget(w.enemies, radius);
+  const target = denseTarget(w.combatTargets, radius);
   if (!target || w.impacts.length + w.zones.length >= 24) return false;
   w.impacts.push({ id: w.id(), x: target.x, y: target.y, radius, damage: (55 + level * 25) * w.stats.damage, landAt: w.elapsed + 0.85, hostile: false, source: 'meteor' }); return true;
 }

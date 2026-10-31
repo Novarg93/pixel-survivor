@@ -1,4 +1,5 @@
 export const ENEMIES = {
+  guardian: { hp: 1800, speed: 0, damage: 20, score: 500, xp: 40, radius: 17, color: 0xf2cb72 },
   grunt: { hp: 22, speed: 38, damage: 10, score: 10, xp: 5, radius: 10, color: 0x97b975 },
   runner: { hp: 16, speed: 68, damage: 8, score: 15, xp: 7, radius: 8, color: 0xd79b65 },
   tank: { hp: 105, speed: 27, damage: 18, score: 30, xp: 16, radius: 15, color: 0x8ba2a2 },
@@ -10,7 +11,7 @@ export const ENEMIES = {
   eclipse: { hp: 2400, speed: 26, damage: 24, score: 1500, xp: 150, radius: 24, color: 0x8bc4d5 },
 } as const;
 export type EnemyKind = keyof typeof ENEMIES;
-export const ENEMY_NAMES: Record<EnemyKind, string> = { grunt: 'Росток', runner: 'Бегун', tank: 'Каменный голем', caster: 'Рунный стрелок', rusher: 'Рывковик', splitter: 'Осколочник', charger: 'Терновый таран', eclipse: 'Хранитель затмения', sorcerer: 'Хранитель рун' };
+export const ENEMY_NAMES: Record<EnemyKind, string> = { guardian: 'Редкий хранитель', grunt: 'Росток', runner: 'Бегун', tank: 'Каменный голем', caster: 'Рунный стрелок', rusher: 'Рывковик', splitter: 'Осколочник', charger: 'Терновый таран', eclipse: 'Хранитель затмения', sorcerer: 'Хранитель рун' };
 export type BossKind = 'charger' | 'sorcerer' | 'eclipse';
-export type RegularKind = Exclude<EnemyKind, BossKind>;
+export type RegularKind = Exclude<EnemyKind, BossKind | 'guardian'>;
 export function isBossKind(kind: EnemyKind): kind is BossKind { return kind === 'charger' || kind === 'sorcerer' || kind === 'eclipse'; }

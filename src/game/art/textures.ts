@@ -9,7 +9,14 @@ const CREATURES: Record<string, string[]> = {
  charger: ['.bb..........bb.','bRrb........brRb','bRRrb......brRRb','.bRRrbbbbbbrrRb.','..bRRRRRRRRRRb..','.rRRRoRRRoRRRRr.','.rRRRXRRRXRRRRr.','..rRRRRRRRRRRr..','.rrrRRbbbbRRrrr.','rRRrrRRRRRRrrRRr','rRRrRRRRRRRRrRRr','rrrrRRRbbRRRrrrr','...rRRRRRRRRr...','..rrRRrrrrRRrr..','..rRRr....rRRr..','..oooo....oooo..'],
  sorcerer: ['......bPPb......','.....bPPPPb.....','....bPPppPPb....','...bPPppppPPb...','..bPPPPPPPPPPb..','.oooooooooooooo.','....oppppppo....','....opXppXpo....','.P..oppppppo..P.','PXPooPPPPPPooPXP','.P.oPppbbppPo.P.','...oPpbPPbpPo...','...oPPpbPPPPo...','..oPPppbpppPPo..','.oPPPppppppPPPo.','.oooooooooooooo.'],
 };
+import { LOOT_PALETTE, LOOT_PIXELS } from './lootPixels';
 export function createTextures(scene: Phaser.Scene) {
+ const lootGraphics = scene.make.graphics({ x: 0, y: 0 });
+ for (const [kind, rows] of Object.entries(LOOT_PIXELS)) if (!scene.textures.exists(`loot-${kind}`)) {
+  rows.forEach((row, y) => [...row].forEach((color, x) => { if (LOOT_PALETTE[color] !== undefined) lootGraphics.fillStyle(LOOT_PALETTE[color]).fillRect(x, y, 1, 1); }));
+  lootGraphics.generateTexture(`loot-${kind}`, 16, 16); lootGraphics.clear();
+ }
+ lootGraphics.destroy();
  if (scene.textures.exists('mage')) return;
  CREATURES.rusher = ['..bb........bb..','..bRr......rRb..','...rRRrrrrRRr...','..rRRRRRRRRRRr..','..rRoRRRRoRRRr..','..rRXRRRRXRRRr..','...rRRRRRRRRr...','....rrRRRRrr....','...rRrRRRRrRr...','..rRr.rRRr.rRr..','..rr..rRRr..rr..','.....rRRRRr.....','....rRRrrRRr....','...rRr....rRr...','...ooo....ooo...','................'];
  CREATURES.eclipse = ['...b........b...','..bgGg....gGgb..','.bgGg......gGgb.','bgGg..gggg..gGgb','bgGg.gTTTTg.gGgb','.bgGgTTXXTTgGgb.','..bgTTTXXTTTgb..','...gTTTTTTTTg...','...gTTbbbbTTg...','..gTTbggggbTTg..','..gTTbgGGgbTTg..','...gTTbggbTTg...','....gTTbbTTg....','...gTTTggTTTg...','..gTTgg..ggTTg..','..ooo......ooo..'];
