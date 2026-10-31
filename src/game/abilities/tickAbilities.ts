@@ -1,0 +1,15 @@
+import type { World } from '../systems/World';
+import { tickWarrior, cleave, whirlwind, groundSlam, bladestorm, ironSkin } from './warrior';
+import { fireball } from './fireball';
+import { frostAura } from './frostAura';
+import { chainLightning } from './chainLightning';
+import { meteor } from './meteor';
+import { arcaneShield } from './arcaneShield';
+const activate = { fireball, frost: frostAura, lightning: chainLightning, meteor, shield: arcaneShield, cleave, whirlwind, slam: groundSlam, blades: bladestorm, iron: ironSkin };
+export function tickAbilities(w: World) {
+  for (const def of w.abilityDefinitions) {
+    const state = w.abilities[def.id];
+    if (state.level > 0 && w.elapsed >= state.readyAt && activate[def.id](w)) state.readyAt = w.elapsed + def.cooldown * w.stats.cooldown;
+  }
+  if(w.character === 'warrior')tickWarrior(w);
+}

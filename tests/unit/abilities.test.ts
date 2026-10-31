@@ -1,0 +1,16 @@
+import { expect, it } from 'vitest';
+import { World } from '../../src/game/systems/World';
+import { tickAbilities } from '../../src/game/abilities/tickAbilities';
+import { chainTargets, chainLightning } from '../../src/game/abilities/chainLightning';
+import { frostAura } from '../../src/game/abilities/frostAura';
+import { meteor } from '../../src/game/abilities/meteor';
+import { arcaneShield } from '../../src/game/abilities/arcaneShield';
+import { fireball } from '../../src/game/abilities/fireball';
+import { eligibleUpgrades, applyUpgrade } from '../../src/game/systems/UpgradeSystem';
+it('unlocks all skills through real eligible upgrades and resets on restart', () => { const w = new World(); for (const id of ['frost', 'lightning', 'meteor', 'shield'] as const) { expect(eligibleUpgrades(w).some(u => u.id === `rank-${id}`)).toBe(false); expect(applyUpgrade(w, `unlock-${id}`)).toBe(true); expect(w.abilities[id].level).toBe(1); expect(applyUpgrade(w, `unlock-${id}`)).toBe(false); expect(eligibleUpgrades(w).some(u => u.id === `rank-${id}`)).toBe(true); } expect(new World().abilities.frost.level).toBe(0); });
+it('does not repeat damage before ability cooldown', () => { const w = new World(); w.spawn('grunt', { x: 80, y: 0 }); tickAbilities(w); const count = w.projectiles.length; tickAbilities(w); expect(w.projectiles.length).toBe(count); expect(w.abilities.fireball.readyAt).toBeCloseTo(0.8); w.elapsed = 0.8; tickAbilities(w); expect(w.projectiles.length).toBe(count + 1); });
+it('chains to distinct targets and deals one hit per target', () => { const w = new World(); w.abilities.lightning.level = 1; for (let i = 0; i < 5; i++) w.spawn('grunt', { x: 40 + i * 20, y: 0 }); const targets = chainTargets(w.player, w.enemies, 3, 100); expect(new Set(targets).size).toBe(3); chainLightning(w); expect(w.kills).toBe(3); });
+it('frost damages, slows, then naturally expires', () => { const w = new World(); w.abilities.frost.level = 1; const e = w.spawn('grunt', { x: 50, y: 0 })!; e.hp = 1000; frostAura(w); expect(e.hp).toBe(984); expect(e.slowUntil).toBe(2.2); expect(e.slowFactor).toBe(0.55); w.abilities.fireball.level = 0; const start = e.x; w.step(0.05); const slowMovement = start - e.x; w.elapsed = 3; const before = e.x; w.step(0.05); expect(before - e.x).toBeGreaterThan(slowMovement); });
+it('telegraphs meteor before a bounded delayed area impact', () => { const w = new World(); w.abilities.meteor.level = 1; w.abilities.fireball.level = 0; const e = w.spawn('grunt', { x: 60, y: 0 })!; meteor(w); expect(w.impacts).toHaveLength(1); expect(e.hp).toBe(22); for (let i = 0; i < 18; i++) w.step(0.05); expect(w.kills).toBe(1); expect(w.impacts).toHaveLength(0); });
+it('shield absorbs a hit then requires cooldown', () => { const w = new World(); w.abilities.shield.level = 1; arcaneShield(w); w.damagePlayer(10); expect(w.player.hp).toBe(100); expect(w.shield.charges).toBe(0); w.elapsed = 1; w.damagePlayer(10); expect(w.player.hp).toBe(90); });
+it('capstone fireballs pierce and all projectile resources are capped', () => { const w = new World(); w.abilities.fireball.level = 5; w.upgrades.damage = 3; w.stats.projectiles = 4; w.spawn('grunt', { x: 50, y: 0 }); for (let i = 0; i < 40; i++) fireball(w); expect(w.projectiles.length).toBe(96); expect(w.projectiles.every(p => p.pierce === 1)).toBe(true); });

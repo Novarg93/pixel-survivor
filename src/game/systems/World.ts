@@ -1,0 +1,198 @@
+import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
+import { BALANCE } from '../config/gameBalance';
+import { ENEMIES, ENEMY_NAMES, isBossKind, type EnemyKind } from '../config/enemyDefinitions';
+import type { Enemy, Projectile, Effect, XpOrb, Impact, Zone, DamageSource } from '../entities/types';
+import { evolved, shieldPulse } from '../abilities/evolutions';
+import { SeededRandom } from '../utils/SeededRandom';
+import { direction, distance, nearest, segmentDistance, type Point } from '../utils/math';
+import { spawnPerimeter } from './SpawnSystem';
+import { receiveDamage } from './CombatSystem';
+import { ExperienceSystem, xpThreshold } from './ExperienceSystem';
+import { ObjectPool } from './ObjectPool';
+import { chooseUpgrades, applyUpgrade, type UpgradeDefinition } from './UpgradeSystem';
+import { initialAbilities, ABILITIES, abilitiesFor } from '../abilities/definitions';
+import { CHARACTERS, type CharacterId } from '../config/characters';
+import type { BiomeId } from '../config/biomes';
+import { tickAbilities } from '../abilities/tickAbilities';
+import { profileAt, pickEnemy, scalesAt } from './DifficultyDirector';
+import { EnemySystem } from './EnemySystem';
+import { BossScheduler, BOSS_CAP } from './BossSystem';
+import type { SoundCue } from '../services/AudioSystem';
+import { ScoreSystem } from './ScoreSystem';
+import { SpawnClock } from './SpawnClock';
+export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
+
+// Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
+export class World {
+  readonly rng: SeededRandom;
+  player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
+  status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
+  sounds: SoundCue[] = [];
+  sound(cue: SoundCue) { if (this.sounds.length < 16) this.sounds.push(cue); }
+  pause() { if (this.status === 'playing') this.status = 'paused'; }
+  resume() { if (this.status === 'paused') this.status = 'playing'; }
+  experience = new ExperienceSystem();
+  upgrades: Record<string, number> = {};
+  choices: UpgradeDefinition[] = [];
+  offerId = 0;
+  stats = { damage: 1, cooldown: 1, projectiles: 1, area: 1, pickup: 55 };
+  abilities = initialAbilities();
+  shield = { charges: 0, activeUntil: 0 };
+  warrior = { whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0 };
+  get character() { return this.options.character ?? 'mage'; }
+  get biome() { return this.options.biome ?? 'grove'; }
+  get abilityDefinitions() { return abilitiesFor(this.character); }
+  impacts: Impact[] = [];
+  zones: Zone[] = [];
+  addZone(at: Point, radius: number, damage: number, duration: number, source: DamageSource) {
+    if (this.zones.length + this.impacts.length >= 24) return false;
+    this.zones.push({ x: at.x, y: at.y, id: this.id(), radius, damage, expires: this.elapsed + Math.min(5, duration), nextTick: this.elapsed + 0.5, source }); return true;
+  }
+  orbs: XpOrb[] = [];
+  private orbPool = new ObjectPool<XpOrb>(BALANCE.orbCap);
+  private projectilePool = new ObjectPool<Projectile>(BALANCE.projectileCap);
+  private effectPool = new ObjectPool<Effect>(BALANCE.effectCap);
+  get allocations() { return { orbs: this.orbPool.allocated, projectiles: this.projectilePool.allocated, effects: this.effectPool.allocated }; }
+  private enemySystem = new EnemySystem();
+  readonly bossScheduler = new BossScheduler();
+  get bosses() { return this.enemies.filter(e => e.boss); }
+  enemies: Enemy[] = []; projectiles: Projectile[] = []; effects: Effect[] = [];
+  readonly runId = globalThis.crypto.randomUUID();
+  elapsed = 0;
+  private scoring = new ScoreSystem();
+  get kills() { return this.scoring.kills; }
+  get score() { return this.scoring.score; }
+  width = 640; height = 360;
+  spawnedRegular = 0;
+  private serial = 0; private spawnClock = new SpawnClock();
+  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
+  id() { return ++this.serial; }
+  spawn(kind: EnemyKind, at?: Point, elite = false): Enemy | undefined {
+    const boss = isBossKind(kind);
+    if (boss ? this.bosses.length >= BOSS_CAP : this.enemies.filter(e => !e.boss).length >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
+    const p = at ?? spawnPerimeter(this.player, this.width, this.height, this.rng), definition = ENEMIES[kind];
+    const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
+    const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + 2, shootingAt: 0, boss: boss ? { phase: 'approach', until: this.elapsed + 2, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
+    this.enemies.push(enemy); if (!boss) this.spawnedRegular++; return enemy;
+  }
+  effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
+    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y } }); if (effect) this.effects.push(effect); }
+  }
+  shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
+    if (this.projectiles.length >= BALANCE.projectileCap || (shot.hostile && this.projectiles.filter(p => p.hostile).length >= 48)) return;
+    const projectile = this.projectilePool.acquire({ ...shot, id: this.id(), expires: this.elapsed + 2.5, hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
+    if (projectile) this.projectiles.push(projectile);
+  }
+  damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown') {
+    if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
+    const before = enemy.hp;
+    enemy.hp = Math.max(0, enemy.hp - amount * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
+    this.scoring.recordDamage(source, before-enemy.hp);
+    this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
+    if (!enemy.boss) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
+    if (enemy.hp === 0) {
+      this.scoring.recordKill(enemy.kind, enemy.elite);
+      this.sound('kill');
+      this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
+      this.dropXp(enemy, enemy.xp);
+      if (enemy.boss) this.clearOwnedEffects(enemy.id);
+      this.enemies.splice(this.enemies.indexOf(enemy), 1); onSpecialDeath(this, enemy); return true;
+    }
+    return false;
+  }
+  private retainProjectiles(keep: (projectile: Projectile) => boolean) { this.projectiles = this.projectiles.filter(p => { if (keep(p)) return true; this.projectilePool.release(p); return false; }); }
+  private clearOwnedEffects(ownerId: number) { this.impacts = this.impacts.filter(i => i.ownerId !== ownerId); this.retainProjectiles(p => p.ownerId !== ownerId); }
+  dropXp(at: Point, value: number) {
+    const orb = this.orbPool.acquire({ x: at.x, y: at.y, id: this.id(), value, expires: this.elapsed + 50 });
+    if (orb) this.orbs.push(orb);
+    else { const old = nearest(at, this.orbs, Infinity); if (old) old.value += value; }
+  }
+  gainXp(amount: number) { const level = this.experience.level; this.experience.gain(amount); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
+  private openUpgrade() {
+    if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.offerId++; this.choices = chooseUpgrades(this); }
+  }
+  selectUpgrade(id: string, offer = this.offerId) {
+    if (offer !== this.offerId || this.status !== 'upgrade' || !this.choices.some(c => c.id === id) || !applyUpgrade(this, id)) return false;
+    this.experience.pending--; this.choices = []; this.status = 'playing'; this.openUpgrade(); return true;
+  }
+  collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + o.value, 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
+  damagePlayer(amount: number) {
+    if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || amount <= 0 || !Number.isFinite(amount)) return false;
+    if (this.shield.activeUntil > this.elapsed && this.shield.charges > 0) {
+      this.shield.charges--; this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability; this.effect('shield', this.player, 32, 0xa5c4ff); shieldPulse(this); return true;
+    }
+    const hit = receiveDamage(this.player, amount * (1 - CHARACTERS[this.character].armor) * (this.warrior.ironUntil > this.elapsed ? 0.5 : 1), this.elapsed);
+    if (hit) { this.sound('hurt'); this.effect('hit', this.player, 16, 0xff6f70); if (this.player.hp <= 0) this.status = 'over'; }
+    return hit;
+  }
+  step(rawDelta: number, input: Point = { x: 0, y: 0 }) {
+    if (this.status !== 'playing') return;
+    const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
+    const vector = direction(input.x, input.y); this.player.x += vector.x * this.player.speed * dt; this.player.y += vector.y * this.player.speed * dt;
+    const profile = profileAt(this.elapsed);
+    if (this.spawnClock.tick(dt, profile.interval / (this.options.spawnRate ?? 1.3))) { for (let i = 0; i < profile.burst; i++) this.spawn(pickEnemy(profile, this.rng), undefined, this.rng.next() < profile.elite); }
+    const dueBoss = this.bossScheduler.poll(this.elapsed, this.bosses.length); if (dueBoss) this.spawn(dueBoss);
+    this.enemySystem.update(this, dt);
+    if (this.status !== 'playing') return;
+    this.enemies = this.enemies.filter(e => { const keep = distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
+    tickAbilities(this);
+    for (const shot of [...this.projectiles]) {
+      if (this.status !== 'playing') break;
+      if (shot.ownerId !== undefined && !this.enemies.some(e => e.id === shot.ownerId)) continue;
+      const old = { x: shot.x, y: shot.y }; shot.x += shot.vx * dt; shot.y += shot.vy * dt;
+      if (shot.hostile) { if (segmentDistance(this.player, old, shot) < 12) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
+      const targets = this.enemies.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
+      for (const target of targets) {
+        this.damageEnemy(target, shot.damage, shot.source); shot.hits?.push(target.id);
+        if (shot.source === 'fireball' && evolved(this, 'fireball') && !shot.exploded) {
+          shot.exploded = true; const radius = 38 * this.stats.area;
+          for (const e of [...this.enemies]) if (e.id !== target.id && distance(e, target) < radius + e.radius) this.damageEnemy(e, shot.damage * 0.45, 'fireball');
+          this.effect('meteor', target, radius, 0xffa46c, 0.3);
+        }
+        if ((shot.pierce ?? 0) <= 0) { shot.expires = 0; break; } shot.pierce = (shot.pierce ?? 0) - 1;
+      }
+    }
+    if (this.status !== 'playing') return;
+    this.retainProjectiles(p => p.expires > this.elapsed && distance(p, this.player) < Math.max(700, Math.hypot(this.width, this.height)));
+    this.effects = this.effects.filter(e => { if (e.expires > this.elapsed) return true; this.effectPool.release(e); return false; });
+    for (const impact of this.impacts.filter(i => i.landAt <= this.elapsed)) {
+      if (this.status !== 'playing') break;
+      if (impact.ownerId !== undefined && !this.enemies.some(e => e.id === impact.ownerId)) continue;
+      if (impact.hostile) { if (distance(impact, this.player) < impact.radius + 9) this.damagePlayer(impact.damage); }
+      else { for (const enemy of [...this.enemies]) if (distance(impact, enemy) < impact.radius + enemy.radius) this.damageEnemy(enemy, impact.damage, impact.source);
+        if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage, 3, 'meteor'); }
+      this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5);
+    }
+    this.impacts = this.impacts.filter(i => i.landAt > this.elapsed);
+    this.zones = this.zones.filter(z => z.expires > this.elapsed);
+    for (const zone of this.zones) if (this.elapsed >= zone.nextTick) { zone.nextTick = this.elapsed + 0.5; for (const e of [...this.enemies]) if (distance(e, zone) < zone.radius + e.radius) this.damageEnemy(e, zone.damage, zone.source); }
+    if (this.status !== 'playing') return;
+    for (const orb of [...this.orbs]) {
+      const d = distance(orb, this.player);
+      if (d < 12 || orb.expires <= this.elapsed) {
+        this.orbs.splice(this.orbs.indexOf(orb), 1); const value = orb.value; this.orbPool.release(orb);
+        if (d < 12) { this.sound('pickup'); this.gainXp(value); }
+      } else if (d < this.stats.pickup) { const vector = direction(this.player.x - orb.x, this.player.y - orb.y); orb.x += vector.x * 230 * dt; orb.y += vector.y * 230 * dt; }
+    }
+  }
+  snapshot() {
+    const damageByAbility=this.abilityDefinitions.map(a=>({id:a.id,name:a.name,damage:this.scoring.damage[a.id]}));
+    const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
+    return {
+      regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
+      runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
+      hp: this.player.hp, maxHp: this.player.maxHp, kills: this.kills, score: this.score,
+      killsByKind: { ...this.scoring.byKind }, enemies: this.enemies.filter(e => !e.boss).length,
+      level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),
+      offerId: this.offerId, pending: this.experience.pending,
+      choices: this.choices.map(c => {
+        const ability = ABILITIES.find(a => 'rank-' + a.id === c.id);
+        return { id: c.id, name: c.name, description: c.description, tier: ability ? this.abilities[ability.id].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
+      }),
+      abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
+      bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase })),
+      wave: profileAt(this.elapsed).name,
+    };
+  }
+}
+export type Snapshot = ReturnType<World['snapshot']>;

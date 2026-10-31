@@ -1,0 +1,8 @@
+import { expect, it } from 'vitest';
+import { World } from '../../src/game/systems/World';
+import { receiveDamage } from '../../src/game/systems/CombatSystem';
+it('protects against simultaneous contacts and expires i-frames', () => { const hp = { hp: 100, maxHp: 100, invulnerableUntil: 0 }; expect(receiveDamage(hp, 10, 0)).toBe(true); for (let i = 0; i < 100; i++) receiveDamage(hp, 10, 0.1); expect(hp.hp).toBe(90); expect(receiveDamage(hp, 10, 0.85)).toBe(true); expect(hp.hp).toBe(80); });
+it('has one terminal death and stops the simulation', () => { const w = new World(); w.damagePlayer(100); expect(w.status).toBe('over'); expect(w.damagePlayer(100)).toBe(false); w.step(0.05, { x: 1, y: 0 }); expect(w.player.x).toBe(0); expect(w.elapsed).toBe(0); });
+it('starts fresh in three independent restarts', () => { for (let i = 0; i < 3; i++) { const w = new World(i); w.spawn('grunt'); w.damagePlayer(100); expect(w.status).toBe('over'); const fresh = new World(i + 1); expect(fresh.snapshot()).toMatchObject({ hp: 100, score: 0, kills: 0, elapsed: 0, status: 'playing', enemies: 0 }); } });
+it('prevents a fast shot tunneling through an enemy', () => { const w = new World(); const e = w.spawn('grunt', { x: 20, y: 0 })!; w.projectiles.push({ id: w.id(), x: 0, y: 0, vx: 2000, vy: 0, damage: 99, expires: 1, hostile: false }); w.step(0.05); expect(w.enemies).not.toContain(e); expect(w.kills).toBe(1); expect(w.projectiles.every(p => p.vx !== 2000)).toBe(true); });
+it('adds small regular knockback but preserves boss telegraphs', () => { const w = new World(); const grunt = w.spawn('grunt', { x: 50, y: 0 })!, boss = w.spawn('charger', { x: 200, y: 0 })!; w.damageEnemy(grunt, 1); w.damageEnemy(boss, 1); expect(grunt.x).toBe(55); expect(boss.x).toBe(200); });

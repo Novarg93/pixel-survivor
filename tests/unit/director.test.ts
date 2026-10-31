@@ -1,0 +1,13 @@
+import { expect, it } from 'vitest';
+import { World } from '../../src/game/systems/World';
+import { WAVES, profileAt, pickEnemy, scalesAt } from '../../src/game/systems/DifficultyDirector';
+import { SeededRandom } from '../../src/game/utils/SeededRandom';
+import { SpatialGrid } from '../../src/game/systems/SpatialGrid';
+it('uses exact time boundaries with a gentle 45-second start', () => { expect(profileAt(44.99)).toBe(WAVES[0]); expect(profileAt(45)).toBe(WAVES[1]); expect(profileAt(180)).toBe(WAVES[2]); expect(profileAt(1200).cap).toBe(150); expect(profileAt(999999).cap).toBe(150); });
+it('weighted composition includes six archetypes in midgame, no early tanks', () => { const rng = new SeededRandom(4); const early = new Set(Array.from({ length: 200 }, () => pickEnemy(profileAt(0), rng))); const late = new Set(Array.from({ length: 200 }, () => pickEnemy(profileAt(500), rng))); expect(early.size).toBe(2); expect(early.has('tank')).toBe(false); expect(late.size).toBe(6); });
+it('clamps peak mob and hostile projectile budgets', () => { const w = new World(); w.elapsed = 1300; for (let i = 0; i < 300; i++) w.spawn('tank'); expect(w.enemies.length).toBe(150); for (let i = 0; i < 200; i++) w.shoot({ x: 100, y: 100, vx: 1, vy: 1, damage: 1, hostile: true }); expect(w.projectiles.length).toBe(48); });
+it('scales modestly and bounds endless health/damage', () => { expect(scalesAt(0)).toEqual({ hp: 1, damage: 1 }); expect(scalesAt(1200).hp).toBeCloseTo(1.9); expect(scalesAt(999999).hp).toBe(2.35); });
+it('telegraphs ranged attacks before firing with a limited cadence', () => { const w = new World(); w.abilities.fireball.level = 0; const e = w.spawn('caster', { x: 190, y: 0 })!; w.elapsed = 2; w.step(0.01); expect(e.aim).toBeDefined(); expect(w.projectiles).toHaveLength(0); w.elapsed = 2.8; w.step(0.01); expect(w.projectiles.filter(p => p.hostile)).toHaveLength(1); w.step(0.01); expect(w.projectiles.filter(p => p.hostile)).toHaveLength(1); });
+it('despawns without kills, points or XP', () => { const w = new World(); w.spawn('grunt', { x: 5000, y: 5000 }); w.step(0.01); expect(w.enemies.length).toBe(0); expect(w.score).toBe(0); expect(w.orbs.length).toBe(0); });
+it('returns only a bounded number of separation neighbours', () => { const grid = new SpatialGrid<{ x: number; y: number }>(); grid.rebuild(Array.from({ length: 150 }, () => ({ x: 0, y: 0 }))); expect(grid.nearby({ x: 0, y: 0 }, 20, 10)).toHaveLength(10); });
+it('awards triple points for visibly marked elites', () => { const w = new World(); const e = w.spawn('runner', { x: 40, y: 0 }, true)!; expect(e.elite).toBe(true); expect(e.speed).toBeGreaterThan(68); w.damageEnemy(e, 999); expect(w.score).toBe(45); });

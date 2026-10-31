@@ -1,0 +1,21 @@
+import { test, expect } from '@playwright/test';
+for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page }) => {
+  const errors: string[] = [], external: string[] = [];
+  page.on('pageerror', error => errors.push(error.message)); page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
+  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4173') && !request.url().startsWith('data:')) external.push(request.url()); });
+  await page.goto('/?test=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
+  await page.getByRole('button',{name:new RegExp('^'+hero)}).click(); await page.getByRole('button',{name:biome==='dark'?'Dark Forest':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
+  expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
+  await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
+  await page.getByRole('button', { name: 'Начать забег' }).click();
+  await expect.poll(async () => Number((await page.locator('.run-score b').textContent())?.replace(/\D/g, '') ?? 0), { timeout: 20000 }).toBeGreaterThan(0);
+  await page.keyboard.down('d'); await page.waitForTimeout(250); await page.keyboard.up('d');
+  await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-desktop.png` });
+  await page.getByRole('button', { name: 'Пауза', exact: true }).click(); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Продолжить' }).click();
+  await page.setViewportSize({ width: 390, height: 844 }); await page.waitForTimeout(150);
+  await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
+  await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
+});

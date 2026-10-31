@@ -1,0 +1,7 @@
+import { expect, it } from 'vitest';
+import { World } from '../../src/game/systems/World';
+import { DEFAULT_SETTINGS, loadSettings, saveSettings, type StoragePort } from '../../src/game/services/storage';
+it('pauses all game time and gates input, then resumes', () => { const w = new World(); w.pause(); w.step(999, { x: 1, y: 1 }); expect(w.elapsed).toBe(0); expect(w.player.x).toBe(0); w.resume(); w.step(0.01, { x: 1, y: 0 }); expect(w.player.x).toBeGreaterThan(0); });
+it('does not let pause/resume dismiss an upgrade', () => { const w = new World(); w.gainXp(20); w.pause(); w.resume(); expect(w.status).toBe('upgrade'); expect(w.experience.pending).toBe(1); });
+it('clamps suspension delta', () => { const w = new World(); w.step(600, { x: 1, y: 0 }); expect(w.elapsed).toBe(0.05); expect(w.player.x).toBe(6.75); });
+it('validates versioned settings and survives corrupt/unavailable storage', () => { let value = '{invalid'; const storage: StoragePort = { getItem: () => value, setItem: (_key, text) => { value = text; } }; expect(loadSettings(storage)).toEqual(DEFAULT_SETTINGS); saveSettings({ volume: 0.7, muted: true, pixelScale: 3 }, storage); expect(loadSettings(storage)).toEqual({ volume: 0.7, muted: true, pixelScale: 3 }); value = JSON.stringify({ version: 1, settings: { volume: 12, muted: true, pixelScale: 2 } }); expect(loadSettings(storage)).toEqual(DEFAULT_SETTINGS); expect(() => saveSettings(DEFAULT_SETTINGS, { getItem: () => null, setItem: () => { throw new Error('quota'); } })).not.toThrow(); });
