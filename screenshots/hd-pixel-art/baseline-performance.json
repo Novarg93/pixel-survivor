@@ -1,0 +1,112 @@
+{
+  "baseline": true,
+  "measuredAt": "2026-11-01T08:00:54.572Z",
+  "browser": "156.0.8078.4",
+  "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+  "logicalCores": 12,
+  "ramGiB": 31.603504180908203,
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "setup": "Same test harness: DPR 1, 1s warm-up + 6s RAF sample, live 150 grunts (2 elites) + guardian + haste pickup + chest + extended visual Cleave. Test-only invulnerability, disabled autoattacks and natural spawning. No movement pilot; not a phone or long soak test.",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "seconds": 6.013400000011921,
+      "frames": 361,
+      "fps": 59.99999999999991,
+      "frameMsP95": 16.799999999999727,
+      "updateMsP95": 0.7999999821186066,
+      "minMobs": 150,
+      "maxMobs": 150,
+      "minGuardians": 1,
+      "metrics": {
+        "fps": 59.43804931640625,
+        "updateMs": 0.3999999761581421,
+        "enemies": 150,
+        "projectiles": 0,
+        "orbs": 0,
+        "effects": 1,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 153,
+        "pooledSprites": 0,
+        "guardians": 1,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 37,
+          "markers": 153,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 1,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 1
+        },
+        "allocations": {
+          "orbs": 0,
+          "projectiles": 0,
+          "effects": 1
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seconds": 6.0139999999821185,
+      "frames": 361,
+      "fps": 59.99900001666638,
+      "frameMsP95": 16.799999999999727,
+      "updateMsP95": 0.800000011920929,
+      "minMobs": 150,
+      "maxMobs": 150,
+      "minGuardians": 1,
+      "metrics": {
+        "fps": 60.2391357421875,
+        "updateMs": 0.5,
+        "enemies": 150,
+        "projectiles": 0,
+        "orbs": 0,
+        "effects": 1,
+        "bosses": 0,
+        "chunks": 24,
+        "sprites": 153,
+        "pooledSprites": 0,
+        "guardians": 1,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 38,
+          "markers": 153,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 1,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 1
+        },
+        "allocations": {
+          "orbs": 0,
+          "projectiles": 0,
+          "effects": 1
+        }
+      }
+    }
+  ],
+  "assetRequests": [],
+  "errors": []
+}

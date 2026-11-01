@@ -1,7 +1,7 @@
 ﻿import { spawn } from 'node:child_process';
 import process from 'node:process';
 import { setTimeout } from 'node:timers';
-const production = process.argv.includes('--preview'), port = production ? '4173' : '5173';
+const production = process.argv.includes('--preview'), port = process.env.PIXEL_E2E_PORT ?? (production ? '4173' : '5173');
 const base = `http://127.0.0.1:${port}`;
 async function existing() {
   try { const r=await globalThis.fetch(base,{signal:globalThis.AbortSignal.timeout(700)}); return r.ok ? await r.text() : null; } catch { return null; }

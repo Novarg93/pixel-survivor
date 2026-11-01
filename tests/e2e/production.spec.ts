@@ -1,10 +1,11 @@
 import { test, expect } from '@playwright/test';
-for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page }) => {
-  const errors: string[] = [], external: string[] = [];
+for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
+  const errors: string[] = [], external: string[] = [], artRequests: string[] = [];
   page.on('pageerror', error => errors.push(error.message)); page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
-  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4173') && !request.url().startsWith('data:')) external.push(request.url()); });
-  await page.goto('/?test=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
+  page.on('request', request => { const url = new URL(request.url()); if (url.protocol !== 'data:' && url.origin !== new URL(baseURL!).origin) external.push(request.url()); if (url.pathname.startsWith('/assets/') && /\.(?:json|png|webp|jpe?g|gif|svg)$/.test(url.pathname)) artRequests.push(url.pathname); });
+  await page.goto('/?test=1&visual=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
+  await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
   await page.getByRole('button',{name:new RegExp('^'+hero)}).click(); await page.getByRole('button',{name:biome==='dark'?'Dark Forest':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
   expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
@@ -18,4 +19,5 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
+  expect(artRequests.sort()).toEqual(['/assets/hd/core.json', '/assets/hd/core.png']);
 });
