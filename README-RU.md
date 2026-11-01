@@ -42,3 +42,19 @@ npm run build
 
 ## Что НЕ входит
 Laravel, авторизация, глобальный рейтинг, золото, монетизация, реальные платежи, сезонная система. Это следующая отдельная итерация после проверки основного геймплея.
+
+## HD Pixel Art
+
+В `feature/hd-pixel-art` выбранный стиль B используется по умолчанию, включая production.
+Подключены Warrior, росток и его элита, Dark Forest, Cleave, тени и анимации.
+Остальные ассеты продолжают работать в исходном виде до отдельных художественных задач.
+Переключателя A/B/C нет. Материалы эксперимента сохранены в `experiment/visual-styles`.
+
+Направление и размеры: [ART_STYLE_GUIDE.md](docs/ART_STYLE_GUIDE.md).
+Очередь переработки: [ART_ROADMAP.md](docs/ART_ROADMAP.md).
+Результаты и сравнение FPS: [HD_INTEGRATION_REPORT.md](docs/HD_INTEGRATION_REPORT.md).
+Единый каталог: `src/game/art/assetRegistry.ts`. PNG и кадры: `public/assets/hd/core.*`.
+
+На Windows используй `npm.cmd run check`, если execution policy блокирует `npm.ps1`.
+Проверки этой рабочей копии можно изолировать: `$env:PIXEL_E2E_PORT='5185'`, затем
+`npm.cmd run test:e2e`. Для production используй свободный порт, например `5186`.

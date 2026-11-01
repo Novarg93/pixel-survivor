@@ -1,0 +1,14 @@
+import { execFileSync } from 'node:child_process';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import process from 'node:process';
+import { hdCoreLayout } from '../src/game/art/hdCoreLayout.ts';
+const ref = process.argv[2] ?? 'experiment/visual-styles';
+const png = execFileSync('git', ['show', `${ref}:screenshots/visual-experiment/hd-pixel-atlas.png`]);
+const layout = hdCoreLayout();
+if (png.readUInt32BE(16) !== layout.width || png.readUInt32BE(20) !== layout.height) throw new Error('Approved PNG does not match the B layout');
+const frames = Object.fromEntries(layout.frames.map(({ name, ...frame }) => [name, { frame, rotated: false, trimmed: false }]));
+mkdirSync('public/assets/hd', { recursive: true });
+writeFileSync('public/assets/hd/core.png', png);
+writeFileSync('public/assets/hd/core.json', JSON.stringify({ frames, meta: { image: 'core.png', size: { w: layout.width, h: layout.height }, source: `${ref}:hd-pixel-atlas`, sha256: createHash('sha256').update(png).digest('hex') } }, null, 2) + '\n');
+globalThis.console.log(`Imported ${layout.frames.length} approved HD frames; SHA256 ${createHash('sha256').update(png).digest('hex')}`);

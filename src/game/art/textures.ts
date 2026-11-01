@@ -10,7 +10,7 @@ const CREATURES: Record<string, string[]> = {
  sorcerer: ['......bPPb......','.....bPPPPb.....','....bPPppPPb....','...bPPppppPPb...','..bPPPPPPPPPPb..','.oooooooooooooo.','....oppppppo....','....opXppXpo....','.P..oppppppo..P.','PXPooPPPPPPooPXP','.P.oPppbbppPo.P.','...oPpbPPbpPo...','...oPPpbPPPPo...','..oPPppbpppPPo..','.oPPPppppppPPPo.','.oooooooooooooo.'],
 };
 import { LOOT_PALETTE, LOOT_PIXELS } from './lootPixels';
-export function createTextures(scene: Phaser.Scene) {
+export function createTextures(scene: Phaser.Scene, replaced: ReadonlySet<string> = new Set()) {
  const lootGraphics = scene.make.graphics({ x: 0, y: 0 });
  for (const [kind, rows] of Object.entries(LOOT_PIXELS)) if (!scene.textures.exists(`loot-${kind}`)) {
   rows.forEach((row, y) => [...row].forEach((color, x) => { if (LOOT_PALETTE[color] !== undefined) lootGraphics.fillStyle(LOOT_PALETTE[color]).fillRect(x, y, 1, 1); }));
@@ -24,6 +24,7 @@ export function createTextures(scene: Phaser.Scene) {
  const g = scene.make.graphics({ x: 0, y: 0 });
  const draw = (rows: string[], scale = 1) => { rows.forEach((row, y) => [...row].forEach((color, x) => { if (PALETTE[color] !== undefined) g.fillStyle(PALETTE[color]).fillRect(x * scale, y * scale, scale, scale); })); };
  for (const hero of ['mage', 'warrior']) for (const facing of ['down', 'up', 'side']) for (let frame = 0; frame < 3; frame++) {
+  if (replaced.has(hero)) continue;
   const rows = [...MAGE];
   if (facing === 'up') { rows[7] = '.....ohhhho..g..'; rows[8] = '.....ohhhho.gGg.'; rows[9] = '.....occcco..g..'; }
   if (facing === 'side') { rows[7] = '.....ohfffo..g..'; rows[8] = '.....ohfsfo.gGg.'; }
@@ -34,6 +35,7 @@ export function createTextures(scene: Phaser.Scene) {
   draw(rows); g.generateTexture(`${hero}-${facing}-${frame}`, 16, 20); if (hero === 'mage' && facing === 'down' && frame === 0) g.generateTexture('mage', 16, 20); g.clear();
  }
  for (const [name, rows] of Object.entries(CREATURES)) for (let frame = 0; frame < 2; frame++) {
+  if (replaced.has(name)) continue;
   const size = name === 'charger' || name === 'sorcerer' || name === 'eclipse' ? 2 : 1, art = [...rows];
   if (frame === 1) { art[14] = art[14].slice(1) + '.'; art[15] = '.' + art[15].slice(0, -1); }
   draw(art, size); if (size === 2) g.fillStyle(name === 'charger' ? 0xe2c98b : 0xf3d2ff).fillRect(11, 11, 2, 2).fillRect(21, 11, 2, 2);

@@ -14,9 +14,11 @@ export class CombatFeedback {
     for (const z of w.zones) { g.fillStyle(0xf68d57, intensity * 0.12).fillCircle(z.x, z.y, z.radius).lineStyle(1, 0xffb76b, intensity * 0.6).strokeCircle(z.x, z.y, z.radius); for (let i = 0; i < 6; i++) g.fillRect(z.x + Math.cos(i * 4) * z.radius * 0.7, z.y + Math.sin(i * 4) * z.radius * 0.7 - Math.sin(w.elapsed * 7 + i) * 4, 3, 4); }
     for (const p of w.projectiles) if (!p.hostile) g.lineStyle(2, 0xfdb06c, intensity * 0.5).lineBetween(p.x, p.y, p.x - p.vx * 0.045, p.y - p.vy * 0.045);
     for (const e of w.effects) {
+      if (e.kind === 'cleave') continue; // HD crescent is drawn by GameArt.
       const t = Math.min(1, (w.elapsed - e.started) / e.duration), fade = (1 - t) * intensity;
       g.fillStyle(e.color, fade).lineStyle(2, e.color, fade);
-      if(e.kind === 'cleave' || e.kind === 'whirlwind'){const aim=e.target?Math.atan2(e.target.y-e.y,e.target.x-e.x):w.elapsed*8;g.beginPath().arc(e.x,e.y,e.radius*(0.75+t*0.25),aim-1.7,aim+1.7,false).strokePath();}
+      if (e.kind === 'hit') { g.lineStyle(1.2, 0xffefcd, fade); for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2 + Math.PI / 4, r = 3 + t * 9; g.lineBetween(e.x + Math.cos(a) * r, e.y + Math.sin(a) * r, e.x + Math.cos(a) * (r + 3 * (1 - t)), e.y + Math.sin(a) * (r + 3 * (1 - t))); } }
+      else if(e.kind === 'whirlwind'){const aim=e.target?Math.atan2(e.target.y-e.y,e.target.x-e.x):w.elapsed*8;g.beginPath().arc(e.x,e.y,e.radius*(0.75+t*0.25),aim-1.7,aim+1.7,false).strokePath();}
       else if (e.kind === 'lightning' && e.target) { const a = e.target; g.beginPath().moveTo(e.x, e.y).lineTo((e.x + a.x) / 2 + 7, (e.y + a.y) / 2 - 6).lineTo(a.x, a.y).strokePath(); g.lineStyle(1, 0xffffff, fade).lineBetween(e.x, e.y, a.x, a.y); }
       else if (e.kind === 'frost' || e.kind === 'shield') { const radius = e.radius * (0.65 + t * 0.35); g.strokeCircle(e.x, e.y, radius); for (let i = 0; i < 8; i++) g.fillRect(e.x + Math.cos(i * Math.PI / 4) * radius - 2, e.y + Math.sin(i * Math.PI / 4) * radius - 2, 4, 4); }
       else { const count = intensity < 0.4 ? 4 : 8; for (let i = 0; i < count; i++) { const r = e.radius * (0.2 + t * 1.5), size = Math.max(1, (e.kind === 'meteor' ? 9 : 4) * (1 - t)); g.fillRect(e.x + Math.cos(i * 4 + e.id) * r, e.y + Math.sin(i * 4 + e.id) * r - t * 8, size, size); } }

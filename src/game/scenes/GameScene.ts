@@ -9,6 +9,8 @@ import { snapshots, commands, metrics, radarFrames, type Metrics } from '../even
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import { AudioSystem } from '../services/AudioSystem';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
+import { GameArt, preloadGameArt, entityVisual, applyVisual } from '../art/GameArt';
+import { REPLACED_LEGACY_TEXTURES, type Facing } from '../art/assetRegistry';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -17,19 +19,22 @@ export class GameScene extends Phaser.Scene {
   private lootPresentation!: LootPresentation;
   private radar!: RadarPublisher;
   private effects!: Phaser.GameObjects.Graphics;
+  private art!: GameArt;
   private sprites = new Map<number, Phaser.GameObjects.Sprite>();
   private spareSprites: Phaser.GameObjects.Sprite[] = [];
   private measured: Metrics = { fps: 0, updateMs: 0, enemies: 0, projectiles: 0, orbs: 0, effects: 0, bosses: 0, chunks: 0, sprites: 0, pooledSprites: 0, guardians: 0, artifacts: { items: 0, allocated: 0 }, radar: { updates: 0, markers: 0, listeners: 0 }, loot: { items: 0, chests: 0, buffs: 0, trail: 0, allocatedItems: 0, allocatedChests: 0 }, allocations: { orbs: 0, projectiles: 0, effects: 0 } };
   private keys: Record<string, Phaser.Input.Keyboard.Key> = {};
   private publishAt = 0;
   private runOptions: RunOptions = {};
-  private facing = 'down';
+  private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
   private audio = new AudioSystem();
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
+  preload() { preloadGameArt(this); }
   create() {
-    createTextures(this);
+    createTextures(this, REPLACED_LEGACY_TEXTURES);
     createGuardianArt(this);
+    this.art = new GameArt(this);
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
     this.world = new World(); this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
     this.world.status = 'menu'; this.audio.settings(this.preferences.volume, this.preferences.muted);
@@ -53,9 +58,9 @@ export class GameScene extends Phaser.Scene {
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
-      window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); } };
+      window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics() };
     }
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
   update(_time: number, delta: number) {
     const started = performance.now();
@@ -67,10 +72,10 @@ export class GameScene extends Phaser.Scene {
     for (const cue of this.world.sounds.splice(0)) this.audio.play(cue);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
     if (moving) { this.facing = input.x !== 0 ? 'side' : input.y < 0 ? 'up' : 'down'; if (input.x !== 0) this.mage.setFlipX(input.x < 0); else this.mage.setFlipX(false); }
-    this.mage.setTexture(`${this.world.character}-${this.facing}-${moving ? 1 + Math.floor(this.world.elapsed * 7) % 2 : 0}`);
+    this.art.hero(this.mage, this.world, this.facing, moving, this.world.status === 'menu' && this.scale.width > 600 ? 2 : 1);
     this.mage.setPosition(this.world.player.x, this.world.player.y);
-    if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); this.mage.setScale(3); }
-    else { this.cameras.main.startFollow(this.mage, true, 1, 1); this.mage.setScale(1.5); }
+    if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
+    else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
     this.mage.setAlpha(this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
     this.chunks.setBiome(this.world.biome);
     this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.world.width, this.world.height);
@@ -78,16 +83,15 @@ export class GameScene extends Phaser.Scene {
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
       active.add(entity.id); let sprite = this.sprites.get(entity.id);
       const pickup = 'lootKind' in entity || 'lootPool' in entity || 'artifact' in entity;
-      if (!sprite) { const texture = 'kind' in entity ? entity.kind : 'value' in entity ? 'xp' : 'lootKind' in entity ? `loot-${entity.lootKind}` : 'lootPool' in entity ? 'loot-chest' : 'artifact' in entity ? 'artifact' : entity.hostile ? 'hostile' : 'fireball'; sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, texture); sprite.setTexture(texture).setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
-      if ('kind' in entity) sprite.setTexture(entity.kind + (entity.kind !== 'guardian' && Math.floor(this.world.elapsed * 5 + entity.id) % 2 ? '-walk' : ''));
-      sprite.setScale('value' in entity ? 1 : 'boss' in entity && entity.boss ? 1.8 : 'kind' in entity && entity.kind === 'tank' ? 1.6 : 'elite' in entity && entity.elite ? 1.4 : 1);
-      if ('kind' in entity && entity.kind === 'guardian') sprite.setScale(1.4);
-      if (pickup) sprite.setScale(('lootPool' in entity ? 1.25 : 'artifact' in entity ? 1.15 : 1) * Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4));
+      const visual = entityVisual(entity, this.world.elapsed);
+      if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
+      applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.FILL); else sprite.clearTint();
       sprite.setAlpha('hitUntil' in entity && entity.hitUntil > this.world.elapsed ? 0.5 : 1);
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
+    this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7);
     this.feedback.update(this.world, this.preferences);
     this.lootPresentation.update(this.world, this.preferences);
     this.radar.update(this.world);
