@@ -1,4 +1,39 @@
-# Прогресс — HD Pixel Art Integration
+# Прогресс — Runner Art Pack 01
+
+2026-11-01. Текущий пакет реализован на feature/hd-pixel-art поверх b2cd57c.
+
+- Оригинальный Runner 64×64: idle3/walk6/hurt3/death6 на двух сторонах,
+  36 кадров в public/assets/hd/runner.png + runner.json; редактируемый источник в scripts.
+- runnerPack.ts задаёт точные clips/rates/layout; assetRegistry.ts фиксирует HD,
+  16×16, elite1.4 и отключает старые runner/runner-walk.
+- RunnerAnimation.ts наблюдает движение/hitUntil/реальное удаление hp=0,
+  ограничивает corpse pool24, не меняет World/AI/combat/balance/loot.
+- GameArt.ts и две точки GameScene подключают наблюдение, показ/очистку тела.
+- Pixel QA всех36 кадров прошёл; новая геометрия не обрезается, alpha0/255,
+  фиксированный pivot0.5/0.5. Ранние обрезанные death-позы исправлены в исходнике.
+- npm.cmd run check: TypeScript/lint/build и **121 unit / 24 файла** — успешно.
+- npm.cmd run test:e2e: **45/45**, около 3.3 min.
+- npm.cmd run test:e2e:production: **4/4**, 29.4 s.
+- Проверены реальные walk/hurt/death, все6 death-фаз в живой сцене; XP/loot/kill
+  доступны до создания визуального тела. Проверены pause, despawn и смена runId.
+- 150 обычных Runner до/после: около60 FPS, p95 кадра ~16.8ms;
+  источники текстур +833536B, TextureManager −1 texture, GameObjects без роста
+  в живой нагрузке. Десять рестартов и отдельно десять burst150/pool24 прошли.
+- PNG смешанных сцен Forest/Grove на1280×720 и390×844, hurt/death, до/после150,
+  JSON производительности и анимаций: screenshots/runner-pack-01/.
+- Старые свидетельства HD-интеграции сохранены, другие виды/карты не перерисованы.
+- Пользователь дополнительно запросил локальные commit/merge в main по указанному
+  пути. Состояние целевого main проверено: чистый, 23e832a, HD уже интегрирован.
+
+Техническая часть завершена. Git-сохранение и слияние выполняются по уточнению
+пользователя; точные хэши и состояние удалённой ветки сообщаются в финальном ответе.
+Затем остановиться для художественной приёмки Runner; Tank/Caster/Mage автоматически не начинать.
+Детали и ограничения — RUNNER_ART_PACK_01.md. Ни одного номерного done-маркера:
+это художественный пакет01, не task01 из отсутствующего каталога tasks.
+
+---
+
+# История — HD Pixel Art Integration
 
 2026-11-01, `feature/hd-pixel-art`, база `main@accf6d5`.
 Работа продолжается в изолированном `PixelSurvivorVisual`.

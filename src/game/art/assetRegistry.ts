@@ -3,6 +3,7 @@ import type { EnemyKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
 import type { LootKind } from '../loot/types';
 import { HD_CORE_TEXTURE } from './hdCoreLayout';
+import { RUNNER_TEXTURE, RUNNER_CLIPS, runnerFrame, type RunnerPlayback } from './runnerPack';
 
 export interface AssetSpec {
   status: 'hd-integrated' | 'legacy';
@@ -29,7 +30,8 @@ export const ASSET_REGISTRY = {
   warrior: { ...hd(16, 20, 1.5, 'actor', { idle: 2, walk: 4, hurt: 2, death: 0 }), origin: { x: 0.5, y: 0.75 } },
   grunt: hd(16, 16, 1, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
   gruntElite: hd(16, 16, 1.4, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
-  runner: texture('runner', 16, 16), tank: texture('tank', 16, 16, 1.6), caster: texture('caster', 16, 16),
+  runner: { ...hd(16, 16, 1, 'actor'), source: { kind: 'atlas', key: RUNNER_TEXTURE, width: 64, height: 64 }, clips: { idle: RUNNER_CLIPS.idle.frames, walk: RUNNER_CLIPS.walk.frames, hurt: RUNNER_CLIPS.hurt.frames, death: RUNNER_CLIPS.death.frames } },
+  tank: texture('tank', 16, 16, 1.6), caster: texture('caster', 16, 16),
   rusher: texture('rusher', 16, 16), splitter: texture('splitter', 16, 16), guardian: texture('guardian', 24, 28, 1.4, 'actor', 0),
   charger: texture('charger', 32, 32, 1.8), sorcerer: texture('sorcerer', 32, 32, 1.8), eclipse: texture('eclipse', 32, 32, 1.8),
   fireball: texture('fireball', 8, 8, 1, 'projectile', 0), hostile: texture('hostile', 8, 8, 1, 'projectile', 0),
@@ -52,7 +54,7 @@ export const CHARACTER_ART: Record<CharacterId, AssetId> = { mage: 'mage', warri
 export const ENEMY_ART: Record<EnemyKind, AssetId> = { grunt: 'grunt', runner: 'runner', tank: 'tank', caster: 'caster', rusher: 'rusher', splitter: 'splitter', guardian: 'guardian', charger: 'charger', sorcerer: 'sorcerer', eclipse: 'eclipse' };
 export const LOOT_ART: Record<LootKind, AssetId> = { healing: 'healing', haste: 'haste', fury: 'fury', magnet: 'magnet' };
 export const ABILITY_ART: Record<AbilityId, AssetId> = { fireball: 'fireball', frost: 'frost', lightning: 'lightning', meteor: 'meteor', shield: 'shield', cleave: 'cleave', whirlwind: 'whirlwind', slam: 'slam', blades: 'blades', iron: 'iron' };
-export const REPLACED_LEGACY_TEXTURES: ReadonlySet<string> = new Set(['warrior', 'grunt']);
+export const REPLACED_LEGACY_TEXTURES: ReadonlySet<string> = new Set(['warrior', 'grunt', 'runner']);
 export type Facing = 'down' | 'up' | 'side';
 export interface VisualSelection { asset: AssetId; texture: string; frame?: string; scale: number }
 export function selectAsset(asset: AssetId, frame?: string, scale = ASSET_REGISTRY[asset].worldScale): VisualSelection { return { asset, texture: ASSET_REGISTRY[asset].source.key, frame, scale }; }
@@ -61,9 +63,10 @@ export function heroVisual(character: CharacterId, facing: Facing, moving: boole
   const pose = hurt ? 'hurt' : moving ? 'walk' : 'idle', clip = ASSET_REGISTRY.warrior.clips[pose], rate = pose === 'walk' ? 9 : pose === 'hurt' ? 12 : 2;
   return selectAsset('warrior', `warrior-${facing}-${pose}-${Math.floor(elapsed * rate) % clip}`);
 }
-export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number): VisualSelection {
+export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number, playback?: RunnerPlayback): VisualSelection {
   const asset = kind === 'grunt' && elite ? 'gruntElite' : ENEMY_ART[kind], spec = ASSET_REGISTRY[asset];
   if (kind === 'grunt') return selectAsset(asset, `grunt-${elite ? 'elite' : 'normal'}-${Math.floor(elapsed * 7 + id) % 4}`);
+  if (kind === 'runner') return selectAsset('runner', runnerFrame(playback?.pose ?? 'walk', playback?.facing ?? 'right', elapsed - (playback?.started ?? 0)), elite ? 1.4 : 1);
   return { ...selectAsset(asset, undefined, spec.worldScale === 1 && elite ? 1.4 : spec.worldScale), texture: kind + (spec.clips.walk && Math.floor(elapsed * 5 + id) % 2 ? '-walk' : '') };
 }
 export function visualDimensions(selection: VisualSelection, multiplier = 1) {

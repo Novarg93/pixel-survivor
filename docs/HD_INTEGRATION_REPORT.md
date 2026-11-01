@@ -1,5 +1,8 @@
 # HD Pixel Art — интеграция и проверка
 
+Исторический отчёт интеграции `b2cd57c`, до Runner Pack 01. Текущий состав
+атласов и новые результаты: [RUNNER_ART_PACK_01.md](RUNNER_ART_PACK_01.md).
+
 Дата: 2026-11-01. Ветка `feature/hd-pixel-art`, база main `accf6d5`.
 Материалы эксперимента сохранены в `experiment/visual-styles`, checkpoint `01aa758`.
 Автоматический merge эксперимента не выполнялся; main не изменён, push отсутствует.

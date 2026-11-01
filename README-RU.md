@@ -54,6 +54,9 @@ Laravel, авторизация, глобальный рейтинг, золот
 Очередь переработки: [ART_ROADMAP.md](docs/ART_ROADMAP.md).
 Результаты и сравнение FPS: [HD_INTEGRATION_REPORT.md](docs/HD_INTEGRATION_REPORT.md).
 Единый каталог: `src/game/art/assetRegistry.ts`. PNG и кадры: `public/assets/hd/core.*`.
+Runner Pack 01 добавляет `public/assets/hd/runner.*`: 3 idle / 6 walk / 3 hurt /
+6 death, две стороны, рамка 64×64 и прежний мировой размер 16×16.
+[Отчёт Runner и скриншоты](docs/RUNNER_ART_PACK_01.md). Другие виды в этом пакете не перерисовывались.
 
 На Windows используй `npm.cmd run check`, если execution policy блокирует `npm.ps1`.
 Проверки этой рабочей копии можно изолировать: `$env:PIXEL_E2E_PORT='5185'`, затем
