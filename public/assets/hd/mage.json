@@ -1,0 +1,614 @@
+{
+  "frames": {
+    "mage-down-idle-0": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-idle-1": {
+      "frame": {
+        "x": 70,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-idle-2": {
+      "frame": {
+        "x": 138,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-0": {
+      "frame": {
+        "x": 206,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-1": {
+      "frame": {
+        "x": 274,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-2": {
+      "frame": {
+        "x": 342,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-3": {
+      "frame": {
+        "x": 410,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-4": {
+      "frame": {
+        "x": 478,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-walk-5": {
+      "frame": {
+        "x": 546,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-hurt-0": {
+      "frame": {
+        "x": 614,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-hurt-1": {
+      "frame": {
+        "x": 682,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-hurt-2": {
+      "frame": {
+        "x": 750,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-0": {
+      "frame": {
+        "x": 818,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-1": {
+      "frame": {
+        "x": 886,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-2": {
+      "frame": {
+        "x": 954,
+        "y": 2,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-3": {
+      "frame": {
+        "x": 2,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-4": {
+      "frame": {
+        "x": 70,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-down-death-5": {
+      "frame": {
+        "x": 138,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-idle-0": {
+      "frame": {
+        "x": 206,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-idle-1": {
+      "frame": {
+        "x": 274,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-idle-2": {
+      "frame": {
+        "x": 342,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-0": {
+      "frame": {
+        "x": 410,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-1": {
+      "frame": {
+        "x": 478,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-2": {
+      "frame": {
+        "x": 546,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-3": {
+      "frame": {
+        "x": 614,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-4": {
+      "frame": {
+        "x": 682,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-walk-5": {
+      "frame": {
+        "x": 750,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-hurt-0": {
+      "frame": {
+        "x": 818,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-hurt-1": {
+      "frame": {
+        "x": 886,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-hurt-2": {
+      "frame": {
+        "x": 954,
+        "y": 86,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-0": {
+      "frame": {
+        "x": 2,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-1": {
+      "frame": {
+        "x": 70,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-2": {
+      "frame": {
+        "x": 138,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-3": {
+      "frame": {
+        "x": 206,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-4": {
+      "frame": {
+        "x": 274,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-up-death-5": {
+      "frame": {
+        "x": 342,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-idle-0": {
+      "frame": {
+        "x": 410,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-idle-1": {
+      "frame": {
+        "x": 478,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-idle-2": {
+      "frame": {
+        "x": 546,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-0": {
+      "frame": {
+        "x": 614,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-1": {
+      "frame": {
+        "x": 682,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-2": {
+      "frame": {
+        "x": 750,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-3": {
+      "frame": {
+        "x": 818,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-4": {
+      "frame": {
+        "x": 886,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-walk-5": {
+      "frame": {
+        "x": 954,
+        "y": 170,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-hurt-0": {
+      "frame": {
+        "x": 2,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-hurt-1": {
+      "frame": {
+        "x": 70,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-hurt-2": {
+      "frame": {
+        "x": 138,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-0": {
+      "frame": {
+        "x": 206,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-1": {
+      "frame": {
+        "x": 274,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-2": {
+      "frame": {
+        "x": 342,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-3": {
+      "frame": {
+        "x": 410,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-4": {
+      "frame": {
+        "x": 478,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "mage-side-death-5": {
+      "frame": {
+        "x": 546,
+        "y": 254,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "fireball-0": {
+      "frame": {
+        "x": 2,
+        "y": 338,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "fireball-1": {
+      "frame": {
+        "x": 38,
+        "y": 338,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "fireball-2": {
+      "frame": {
+        "x": 74,
+        "y": 338,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "fireball-3": {
+      "frame": {
+        "x": 110,
+        "y": 338,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false
+    }
+  },
+  "meta": {
+    "image": "mage.png",
+    "size": {
+      "w": 1024,
+      "h": 372
+    },
+    "clips": {
+      "idle": {
+        "frames": 3,
+        "fps": 3,
+        "loop": true
+      },
+      "walk": {
+        "frames": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "hurt": {
+        "frames": 3,
+        "fps": 12,
+        "loop": false
+      },
+      "death": {
+        "frames": 6,
+        "fps": 10,
+        "loop": false
+      }
+    },
+    "authoring": "scripts/mage-art-source.mjs"
+  }
+}

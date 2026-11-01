@@ -3,14 +3,29 @@ import type { World } from '../systems/World';
 import type { Enemy, Projectile, XpOrb } from '../entities/types';
 import type { LootItem, Chest } from '../loot/types';
 import type { ArtifactDrop } from '../loot/ArtifactSystem';
-import { ASSET_REGISTRY, LOOT_ART, heroVisual, enemyVisual, selectAsset, visualDimensions, type Facing, type VisualSelection } from './assetRegistry';
+import { ASSET_REGISTRY, LOOT_ART, ARTIFACT_ART, heroVisual, enemyVisual, selectAsset, visualDimensions, type Facing, type VisualSelection } from './assetRegistry';
 import { HD_CORE_TEXTURE, HD_CORE_URLS } from './hdCoreLayout';
 import { RUNNER_TEXTURE, RUNNER_URLS, RUNNER_CLIPS, runnerFrame } from './runnerPack';
 import { RunnerAnimation } from './RunnerAnimation';
+import { MAGE_TEXTURE, MAGE_URLS, mageFrame } from './magePack';
+import { ENEMY_TEXTURE, ENEMY_URLS, isHdEnemy, packedEnemyFrame } from './enemyPack';
+import { EnemyAnimation } from './EnemyAnimation';
+import { GUARDIAN_TEXTURE, GUARDIAN_URLS, guardianFrame } from './guardianPack';
+import { GuardianAnimation } from './GuardianAnimation';
+import { EliteAdornment } from './EliteAdornment';
+import { BOSS_TEXTURE, BOSS_URLS, isHdBoss, bossFrame } from './bossPack';
+import { BossAnimation } from './BossAnimation';
+import { LOOT_TEXTURE, LOOT_URLS, ARTIFACT_KEYS, lootFrame } from './lootPack';
+import { PickupAnimation } from './PickupAnimation';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
   if (!scene.textures.exists(HD_CORE_TEXTURE)) scene.load.atlas(HD_CORE_TEXTURE, import.meta.env.BASE_URL + HD_CORE_URLS.image, import.meta.env.BASE_URL + HD_CORE_URLS.data);
   if (!scene.textures.exists(RUNNER_TEXTURE)) scene.load.atlas(RUNNER_TEXTURE, import.meta.env.BASE_URL + RUNNER_URLS.image, import.meta.env.BASE_URL + RUNNER_URLS.data);
+  if (!scene.textures.exists(MAGE_TEXTURE)) scene.load.atlas(MAGE_TEXTURE, import.meta.env.BASE_URL + MAGE_URLS.image, import.meta.env.BASE_URL + MAGE_URLS.data);
+  if (!scene.textures.exists(ENEMY_TEXTURE)) scene.load.atlas(ENEMY_TEXTURE, import.meta.env.BASE_URL + ENEMY_URLS.image, import.meta.env.BASE_URL + ENEMY_URLS.data);
+  if (!scene.textures.exists(GUARDIAN_TEXTURE)) scene.load.atlas(GUARDIAN_TEXTURE, import.meta.env.BASE_URL + GUARDIAN_URLS.image, import.meta.env.BASE_URL + GUARDIAN_URLS.data);
+  if (!scene.textures.exists(BOSS_TEXTURE)) scene.load.atlas(BOSS_TEXTURE, import.meta.env.BASE_URL + BOSS_URLS.image, import.meta.env.BASE_URL + BOSS_URLS.data);
+  if (!scene.textures.exists(LOOT_TEXTURE)) scene.load.atlas(LOOT_TEXTURE, import.meta.env.BASE_URL + LOOT_URLS.image, import.meta.env.BASE_URL + LOOT_URLS.data);
 }
 export function applyVisual(sprite: Phaser.GameObjects.Sprite, selection: VisualSelection, multiplier = 1) {
   const spec = ASSET_REGISTRY[selection.asset], size = visualDimensions(selection, multiplier);
@@ -18,11 +33,11 @@ export function applyVisual(sprite: Phaser.GameObjects.Sprite, selection: Visual
 }
 export function entityVisual(entity: RenderEntity, elapsed: number): VisualSelection {
   if ('kind' in entity) return enemyVisual(entity.kind, entity.elite, elapsed, entity.id);
-  if ('value' in entity) return selectAsset('xp');
-  if ('lootKind' in entity) return selectAsset(LOOT_ART[entity.lootKind]);
-  if ('lootPool' in entity) return selectAsset('chest');
-  if ('artifact' in entity) return selectAsset('artifact');
-  return selectAsset(entity.hostile ? 'hostile' : 'fireball');
+  if ('value' in entity) return selectAsset('xp', lootFrame('xp', elapsed));
+  if ('lootKind' in entity) return selectAsset(LOOT_ART[entity.lootKind], lootFrame(entity.lootKind, elapsed));
+  if ('lootPool' in entity) return selectAsset('chest', lootFrame('chest', elapsed));
+  if ('artifact' in entity) return selectAsset(ARTIFACT_ART[entity.artifact], lootFrame(ARTIFACT_KEYS[entity.artifact], elapsed));
+  return entity.hostile ? selectAsset('hostile', `hostile-${Math.floor(elapsed * 12) % 4}`) : selectAsset('fireball', `fireball-${Math.floor(elapsed * 12) % 4}`);
 }
 // Reads simulation state; no timers, inputs, damage, collision bodies or RNG.
 export class GameArt {
@@ -30,21 +45,72 @@ export class GameArt {
   private cleaves: Phaser.GameObjects.Image[] = [];
   private runner = new RunnerAnimation();
   private runnerCorpses: Phaser.GameObjects.Image[] = [];
+  private packed = new EnemyAnimation();
+  private packedCorpses: Phaser.GameObjects.Image[] = [];
+  private guardian = new GuardianAnimation();
+  private guardianCorpse?: Phaser.GameObjects.Image;
+  private elites: EliteAdornment;
+  private bosses = new BossAnimation();
+  private bossCorpses: Phaser.GameObjects.Image[] = [];
+  private pickups = new PickupAnimation();
+  private pickupImages: Phaser.GameObjects.Image[] = [];
   private worldTime = 0;
+  private heroDeathAge = 0;
+  private heroRunId = '';
+  private heroHitUntil = 0;
+  private heroHurtStarted = -Infinity;
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
-  prepare(world: World) { this.runner.prepare(world); }
+  constructor(private scene: Phaser.Scene) { this.elites = new EliteAdornment(scene); for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  prepare(world: World) { this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
+    if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
+    if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world); return selectAsset(entity.kind, bossFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started, p.stage)); }
+    if ('kind' in entity && isHdEnemy(entity.kind)) { const p = this.packed.view(entity, world), visual = enemyVisual(entity.kind, entity.elite, world.elapsed, entity.id); return { ...visual, frame: packedEnemyFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started) }; }
     return entityVisual(entity, world.elapsed);
   }
   hero(sprite: Phaser.GameObjects.Sprite, world: World, facing: Facing, moving: boolean, multiplier = 1) {
-    const visual = heroVisual(world.character, facing, moving, world.player.invulnerableUntil > world.elapsed, world.elapsed);
+    if (this.heroRunId !== world.runId) { this.heroHitUntil = 0; this.heroHurtStarted = -Infinity; }
+    if (this.heroRunId !== world.runId || world.status !== 'over') this.heroDeathAge = 0;
+    this.heroRunId = world.runId;
+    if (world.player.invulnerableUntil > this.heroHitUntil) { this.heroHitUntil = world.player.invulnerableUntil; this.heroHurtStarted = world.elapsed; }
+    if (world.status === 'over') this.heroDeathAge += Math.min(.05, this.scene.game.loop.delta / 1000);
+    const visual = world.character === 'mage' && world.status === 'over' ? selectAsset('mage', mageFrame(facing, 'death', this.heroDeathAge)) : world.character === 'mage' && world.elapsed - this.heroHurtStarted < .25 ? selectAsset('mage', mageFrame(facing, 'hurt', world.elapsed - this.heroHurtStarted)) : heroVisual(world.character, facing, moving, world.character !== 'mage' && world.player.invulnerableUntil > world.elapsed, world.elapsed);
     this.heroFrame = visual.frame ?? visual.texture; applyVisual(sprite, visual, multiplier);
   }
   update(world: World, intensity: number) {
     this.worldTime = world.elapsed;
+    this.pickups.update(world);
+    for (const [i, p] of this.pickups.bursts.entries()) {
+      const age = world.elapsed - p.started, t = age / .5, image = this.pickupImages[i] ?? this.scene.add.image(0, 0, LOOT_TEXTURE, lootFrame(p.key, 0)); this.pickupImages[i] = image;
+      const size = p.open ? 20 : p.key === 'xp' ? 6 : p.key.startsWith('artifact-') ? 18.4 : 16;
+      image.setTexture(LOOT_TEXTURE, lootFrame(p.key, age, p.open)).setPosition(p.x, p.y - (p.open ? 0 : t * 15)).setDisplaySize(size * (p.open ? 1 : 1 - t * .25), size * (p.open ? 1 : 1 - t * .25)).setDepth(3).setAlpha(1 - t * t).setVisible(true).setActive(true);
+    }
+    for (let i = this.pickups.bursts.length; i < this.pickupImages.length; i++) this.pickupImages[i].setVisible(false).setActive(false);
     this.runner.finish(world);
+    this.packed.finish(world);
+    this.guardian.finish(world); this.elites.update(world);
+    this.bosses.finish(world);
+    for (let i = 0; i < this.bosses.corpses.length; i++) {
+      const c = this.bosses.corpses[i]; if (!c.active) { this.bossCorpses[i]?.setVisible(false).setActive(false); continue; }
+      const age = world.elapsed - c.started, size = visualDimensions(selectAsset(c.kind)), image = this.bossCorpses[i] ?? this.scene.add.image(0, 0, BOSS_TEXTURE, bossFrame(c.kind, c.facing, 'death', 0, c.stage)); this.bossCorpses[i] = image;
+      image.setTexture(BOSS_TEXTURE, bossFrame(c.kind, c.facing, 'death', age, c.stage)).setPosition(c.x, c.y).setOrigin(.5).setDisplaySize(size.width, size.height).setDepth(c.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
+    }
+    for (let i = this.bosses.corpses.length; i < this.bossCorpses.length; i++) this.bossCorpses[i].setVisible(false).setActive(false);
+    const guardianCorpse = this.guardian.corpse;
+    if (guardianCorpse) {
+      const image = this.guardianCorpse ?? this.scene.add.image(0, 0, GUARDIAN_TEXTURE, 'guardian-death-0'); this.guardianCorpse = image;
+      const age = world.elapsed - guardianCorpse.started, size = visualDimensions(selectAsset('guardian'));
+      image.setTexture(GUARDIAN_TEXTURE, guardianFrame('death', age)).setPosition(guardianCorpse.x, guardianCorpse.y).setDisplaySize(size.width, size.height).setDepth(guardianCorpse.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
+    } else this.guardianCorpse?.setVisible(false).setActive(false);
+    for (let i = 0; i < this.packed.corpses.length; i++) {
+      const c = this.packed.corpses[i];
+      if (!c.active) { this.packedCorpses[i]?.setVisible(false).setActive(false); continue; }
+      const visual = enemyVisual(c.kind, c.elite, world.elapsed, c.id), size = visualDimensions(visual), age = world.elapsed - c.started;
+      const image = this.packedCorpses[i] ?? this.scene.add.image(0, 0, ENEMY_TEXTURE, packedEnemyFrame(c.kind, c.facing, 'death', 0)); this.packedCorpses[i] = image;
+      image.setTexture(ENEMY_TEXTURE, packedEnemyFrame(c.kind, c.facing, 'death', age)).setOrigin(.5).setPosition(c.x, c.y).setDisplaySize(size.width, size.height).setDepth(c.y / 10000 - .02).setAlpha(1 - (age / .5) ** 2).setVisible(true).setActive(true);
+    }
+    for (let i = this.packed.corpses.length; i < this.packedCorpses.length; i++) this.packedCorpses[i].setVisible(false).setActive(false);
     for (let i = 0; i < this.runner.corpses.length; i++) {
       const corpse = this.runner.corpses[i];
       if (!corpse.active) { this.runnerCorpses[i]?.setVisible(false).setActive(false); continue; }
@@ -61,7 +127,7 @@ export class GameArt {
       image.setPosition(x, y).setDisplaySize(size.width * scale, size.height * scale).setVisible(true);
     };
     shadow(world.player.x, world.player.y + 6, 1.3);
-    for (const e of world.enemies) shadow(Math.round(e.x), Math.round(e.y + 6), e.boss ? 2.5 : e.kind === 'tank' ? 1.6 : e.elite ? 1.4 : 1);
+    for (const e of world.enemies) shadow(Math.round(e.x), Math.round(e.y + (e.boss ? 23 : 6)), e.boss ? 2.5 : e.kind === 'tank' ? 1.6 : e.elite ? 1.4 : 1);
     for (let i = count; i < this.shadows.length; i++) this.shadows[i].setVisible(false);
     count = 0;
     for (const e of world.effects) if (e.kind === 'cleave') {
@@ -79,10 +145,14 @@ export class GameArt {
     const clock = ['_active', '_pendingInsertion', '_pendingRemoval'].map(key => { const value: unknown = Reflect.get(this.scene.time, key); return Array.isArray(value) ? value.length : null; });
     return { heroFrame: this.heroFrame, atlasFrames: atlas.frameTotal - 1, runner: { atlasFrames: this.scene.textures.get(RUNNER_TEXTURE).frameTotal - 1, tracked: this.runner.tracked, activeDeaths: this.runner.corpses.filter(c => c.active).length, allocatedDeaths: this.runnerCorpses.filter(Boolean).length, replaced: this.runner.replaced, corpses: this.runner.corpses.flatMap((c, i) => c.active ? [{ ...c, frame: runnerFrame('death', c.facing, this.worldTime - c.started), width: this.runnerCorpses[i]?.displayWidth ?? 0, height: this.runnerCorpses[i]?.displayHeight ?? 0 }] : []) }, textures, chunks: textures.filter(t => t.startsWith('chunk-')).length,
       textureBytes: textures.reduce((n, key) => { const source = this.scene.textures.get(key).getSourceImage() as HTMLCanvasElement; return n + source.width * source.height * 4; }, 0),
-      shadows: this.shadows.length, cleaves: this.cleaves.length, objects: this.scene.children.length, tweens: this.scene.tweens.getTweens().length, clock,
+      loot: { tracked: this.pickups.tracked, active: this.pickups.bursts.length, allocated: this.pickupImages.length, frames: this.pickups.bursts.map(p => lootFrame(p.key, this.worldTime - p.started, p.open)) },
+      packed: { tracked: this.packed.tracked, activeDeaths: this.packed.corpses.filter(c => c.active).length, allocatedDeaths: this.packedCorpses.length, replaced: this.packed.replaced, corpses: this.packed.corpses.filter(c => c.active).map(c => ({ ...c, frame: packedEnemyFrame(c.kind, c.facing, 'death', this.worldTime - c.started) })) },
+      guardian: { activeDeaths: this.guardian.corpse ? 1 : 0, allocatedDeaths: this.guardianCorpse ? 1 : 0, frame: this.guardian.corpse ? guardianFrame('death', this.worldTime - this.guardian.corpse.started) : null }, eliteAdornments: this.elites.count,
+      bosses: { tracked: this.bosses.tracked, activeDeaths: this.bosses.corpses.filter(c => c.active).length, allocatedDeaths: this.bossCorpses.length, corpses: this.bosses.corpses.filter(c => c.active).map(c => ({ ...c, frame: bossFrame(c.kind, c.facing, 'death', this.worldTime - c.started, c.stage) })) },
+      shadows: this.shadows.length, cleaves: this.cleaves.length, objects: this.scene.children.length, layers: this.scene.children.getAll().filter(o => o.name === 'friendly-feedback' || o.name === 'hostile-tells').map(o => ({ name: o.name, depth: (o as Phaser.GameObjects.Graphics).depth })), tweens: this.scene.tweens.getTweens().length, clock,
       blurListeners: this.scene.game.events.listenerCount(Phaser.Core.Events.BLUR),
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y }; }),
     };
   }
-  destroy() { for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses]) image.destroy(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.runner.destroy(); }
+  destroy() { for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); this.guardianCorpse?.destroy(); this.guardianCorpse = undefined; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

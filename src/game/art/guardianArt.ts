@@ -16,9 +16,9 @@ const RELIC = [
   '...GwwBGGBwwG...', '....GwwBBwwG....', '.....GwwwwG.....', '......GwwG......',
   '.......GG.......', '................', '................', '................',
 ];
-export function createGuardianArt(scene: Phaser.Scene) {
+export function createGuardianArt(scene: Phaser.Scene, replaced: ReadonlySet<string> = new Set()) {
   const g = scene.make.graphics({ x: 0, y: 0 });
-  for (const [name, rows, width, height] of [['guardian', GUARDIAN, 24, 28], ['artifact', RELIC, 16, 16]] as const) if (!scene.textures.exists(name)) {
+  for (const [name, rows, width, height] of [['guardian', GUARDIAN, 24, 28], ['artifact', RELIC, 16, 16]] as const) if (!replaced.has(name) && !scene.textures.exists(name)) {
     rows.forEach((row, y) => [...row].forEach((c, x) => { if (COLORS[c] !== undefined) g.fillStyle(COLORS[c]).fillRect(x, y, 1, 1); }));
     g.generateTexture(name, width, height); g.clear();
   }

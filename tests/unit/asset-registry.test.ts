@@ -24,8 +24,8 @@ it('preserves the approved B PNG and all 37 in-bounds nonoverlapping frames', ()
 it('catalogs every current hero, enemy, consumable and ability with explicit migration status', () => {
   expect(Object.keys(ENEMY_ART).sort()).toEqual(Object.keys(ENEMIES).sort()); expect(Object.keys(CHARACTER_ART).sort()).toEqual(Object.keys(CHARACTERS).sort());
   expect(Object.keys(LOOT_ART).sort()).toEqual(Object.keys(LOOT_PIXELS).filter(k => k !== 'chest').sort()); expect(Object.keys(ABILITY_ART).sort()).toEqual(ABILITIES.map(a => a.id).sort());
-  expect(new Set(Object.values(ASSET_REGISTRY).filter(a => a.source.kind === 'atlas').map(a => a.source.key))).toEqual(new Set(['hd-core', 'hd-runner']));
-  expect(ASSET_REGISTRY.guardian.status).toBe('legacy'); expect(ASSET_REGISTRY.darkForest.status).toBe('hd-integrated');
+  expect(new Set(Object.values(ASSET_REGISTRY).filter(a => a.source.kind === 'atlas').map(a => a.source.key))).toEqual(new Set(['hd-core', 'hd-runner', 'hd-mage', 'hd-enemies', 'hd-guardian', 'hd-bosses', 'hd-loot']));
+  expect(ASSET_REGISTRY.guardian.status).toBe('hd-integrated'); expect(ASSET_REGISTRY.darkForest.status).toBe('hd-integrated');
 });
 it('preserves world footprints and existing elite/tank/boss scale precedence', () => {
   expect(visualDimensions(heroVisual('warrior', 'down', false, false, 0))).toEqual({ width: 24, height: 30 });
@@ -34,6 +34,11 @@ it('preserves world footprints and existing elite/tank/boss scale precedence', (
   expect(visualDimensions(enemyVisual('tank', true, 0, 1)).width).toBeCloseTo(25.6);
   expect(visualDimensions(enemyVisual('charger', false, 0, 1)).width).toBeCloseTo(57.6);
   expect(visualDimensions(enemyVisual('guardian', false, 0, 1)).height).toBeCloseTo(39.2);
+});
+it('leaves only explicitly justified runtime threat Graphics, with all visible art migrated', () => {
+  const legacy = Object.entries(ASSET_REGISTRY).filter(([, a]) => a.status === 'legacy');
+  expect(legacy.map(([id]) => id).sort()).toEqual(['bossTell', 'guardianTell']);
+  for (const [, a] of legacy) { const reason = 'retainedReason' in a ? a.retainedReason : undefined; expect(a.source.kind).toBe('graphics'); expect(typeof reason === 'string' && reason.length > 30).toBe(true); }
 });
 it('resolves every HD animation pose to a frame while leaving simulation and radii untouched', () => {
   const w = new World(42, { character: 'warrior', biome: 'dark-forest' }); const e = w.spawn('grunt', { x: 40, y: 0 }, true)!; const before = JSON.stringify(w);

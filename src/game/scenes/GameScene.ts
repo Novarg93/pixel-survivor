@@ -1,16 +1,14 @@
 ﻿import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
-import { createGuardianArt } from '../art/guardianArt';
 import { RadarPublisher } from '../radar/RadarPublisher';
-import { createTextures } from '../art/textures';
 import { World, type RunOptions } from '../systems/World';
 import { snapshots, commands, metrics, radarFrames, type Metrics } from '../events/bridge';
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import { AudioSystem } from '../services/AudioSystem';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
-import { REPLACED_LEGACY_TEXTURES, type Facing } from '../art/assetRegistry';
+import { type Facing } from '../art/assetRegistry';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -32,17 +30,15 @@ export class GameScene extends Phaser.Scene {
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
   preload() { preloadGameArt(this); }
   create() {
-    createTextures(this, REPLACED_LEGACY_TEXTURES);
-    createGuardianArt(this);
     this.art = new GameArt(this);
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
     this.world = new World(); this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
     this.world.status = 'menu'; this.audio.settings(this.preferences.volume, this.preferences.muted);
     this.chunks = new WorldChunkSystem(this);
-    this.mage = this.add.sprite(0, 0, 'mage').setScale(1.5).setOrigin(0.5, 0.75).setDepth(10);
+    this.mage = this.add.sprite(0, 0, 'hd-mage', 'mage-down-idle-0').setOrigin(0.5, 0.75).setDepth(10);
     this.feedback = new CombatFeedback(this);
     this.lootPresentation = new LootPresentation(this);
-    this.effects = this.add.graphics().setDepth(20);
+    this.effects = this.add.graphics().setName('hostile-tells').setDepth(20);
     this.cameras.main.setZoom(2).startFollow(this.mage, true, 1, 1);
     this.keys = this.input.keyboard?.addKeys('W,A,S,D,UP,LEFT,DOWN,RIGHT') as Record<string, Phaser.Input.Keyboard.Key>;
     const off = commands.on(command => {
@@ -69,6 +65,7 @@ export class GameScene extends Phaser.Scene {
     this.world.width = this.scale.width / zoom; this.world.height = this.scale.height / zoom;
     const input = { x: Math.max(down('D'), down('RIGHT')) - Math.max(down('A'), down('LEFT')) + this.touch.x, y: Math.max(down('S'), down('DOWN')) - Math.max(down('W'), down('UP')) + this.touch.y };
     this.art.prepare(this.world);
+    this.feedback.prepare(this.world);
     this.world.step(delta / 1000, input);
     for (const cue of this.world.sounds.splice(0)) this.audio.play(cue);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
@@ -87,9 +84,10 @@ export class GameScene extends Phaser.Scene {
       const visual = this.art.entityVisual(entity, this.world);
       if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
+      sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
-      if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.FILL); else sprite.clearTint();
-      sprite.setAlpha('hitUntil' in entity && entity.hitUntil > this.world.elapsed ? 0.5 : 1);
+      if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY); else sprite.clearTint();
+      sprite.setAlpha('hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
     this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7);
@@ -113,8 +111,7 @@ export class GameScene extends Phaser.Scene {
         this.effects.fillStyle(0xffaf8b).fillTriangle(x + Math.cos(angle) * 6, y + Math.sin(angle) * 6, x + Math.cos(angle + 2.4) * 5, y + Math.sin(angle + 2.4) * 5, x + Math.cos(angle - 2.4) * 5, y + Math.sin(angle - 2.4) * 5);
       }
     }
-    for (const impact of this.world.impacts) this.effects.fillStyle(impact.hostile ? 0xff749e : 0xffb26f, 0.14).fillCircle(impact.x, impact.y, impact.radius).lineStyle(2, impact.hostile ? 0xff749e : 0xffb26f, 0.8).strokeCircle(impact.x, impact.y, impact.radius).lineBetween(impact.x - 6, impact.y, impact.x + 6, impact.y).lineBetween(impact.x, impact.y - 6, impact.x, impact.y + 6);
-    if (this.world.shield.activeUntil > this.world.elapsed && this.world.shield.charges > 0) this.effects.lineStyle(2, 0xa5c4ff, 0.8).strokeCircle(this.mage.x, this.mage.y, 22);
+    for (const impact of this.world.impacts) if (impact.hostile || impact.source !== 'meteor' && impact.source !== 'slam') this.effects.fillStyle(impact.hostile ? 0xff749e : 0xffb26f, 0.14).fillCircle(impact.x, impact.y, impact.radius).lineStyle(2, impact.hostile ? 0xff749e : 0xffb26f, 0.8).strokeCircle(impact.x, impact.y, impact.radius).lineBetween(impact.x - 6, impact.y, impact.x + 6, impact.y).lineBetween(impact.x, impact.y - 6, impact.x, impact.y + 6);
     this.measured = { fps: this.game.loop.actualFps, updateMs: performance.now() - started, enemies: this.world.regularCount, projectiles: this.world.projectiles.length, orbs: this.world.orbs.length, effects: this.world.effects.length, bosses: this.world.bosses.length, chunks: this.chunks.count, sprites: this.sprites.size, pooledSprites: this.spareSprites.length, guardians: this.world.rareGuardian ? 1 : 0, artifacts: { items: this.world.artifacts.items.length, allocated: this.world.artifacts.allocated }, radar: { updates: this.radar.updates, markers: this.radar.frame?.markers.length ?? 0, listeners: radarFrames.size }, loot: { items: this.world.loot.items.length, chests: this.world.loot.chests.length, buffs: this.world.buffs.snapshot(this.world.elapsed).length, trail: this.lootPresentation.trailCount, allocatedItems: this.world.loot.allocations.items, allocatedChests: this.world.loot.allocations.chests }, allocations: this.world.allocations };
     if (this.time.now >= this.publishAt) { this.publishAt = this.time.now + 100; snapshots.emit(this.world.snapshot()); if (import.meta.env.DEV) metrics.emit(this.measured); }
   }

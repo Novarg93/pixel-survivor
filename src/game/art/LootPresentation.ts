@@ -22,11 +22,18 @@ export class LootPresentation {
       this.lastTrailAt = w.elapsed; if (this.trail.length >= C.trailCap) this.trail.shift(); this.trail.push({ x: w.player.x, y: w.player.y, born: w.elapsed });
     }
     this.previous = { x: w.player.x, y: w.player.y };
-    for (const p of this.trail) { const fade = (1 - (w.elapsed - p.born) / C.trailLifetime) * intensity * 0.4; g.fillStyle(0xffcf65, fade).fillRect(Math.round(p.x - 6), Math.round(p.y + 1), 3, 3).fillRect(Math.round(p.x + 3), Math.round(p.y - 1), 3, 3); }
-    if (w.buffs.active('fury', w.elapsed)) g.fillStyle(0xf55b69, intensity * (0.08 + Math.sin(w.elapsed * 5) * 0.02)).fillCircle(w.player.x, w.player.y - 5, 22).lineStyle(1, 0xff8d80, intensity * 0.4).strokeCircle(w.player.x, w.player.y - 5, 17);
-    for (const item of w.loot.items) g.fillStyle(LOOT_COLORS[item.lootKind], intensity * 0.12).fillCircle(item.x, item.y, 13).lineStyle(1, LOOT_COLORS[item.lootKind], intensity * 0.3).strokeEllipse(item.x, item.y + 6, 17, 5);
-    for (const chest of w.loot.chests) g.fillStyle(0xffcf65, intensity * 0.1).fillCircle(chest.x, chest.y, 18).lineStyle(1, 0xffcf65, intensity * 0.3).strokeEllipse(chest.x, chest.y + 7, 24, 7);
-    for (const item of w.artifacts.items) g.fillStyle(0xffd77c, intensity * 0.16).fillCircle(item.x, item.y, 18).lineStyle(1, 0xffe9b2, intensity * 0.65).strokeEllipse(item.x, item.y + 7, 23, 7);
+    for (const p of this.trail) { const fade = (1 - (w.elapsed - p.born) / C.trailLifetime) * intensity * .4; for (const side of [-1, 1]) { const x = Math.round(p.x + side * 5), y = Math.round(p.y + 2); g.fillStyle(0xd8b476, fade).fillTriangle(x, y - 3, x + side * 3, y, x, y + 2).lineStyle(1, 0xffefc6, fade).lineBetween(x, y - 3, x, y + 2); } }
+    if (w.buffs.active('fury', w.elapsed)) for (const side of [-1, 1]) { const x = w.player.x + side * 17, y = w.player.y - 3, pulse = Math.sin(w.elapsed * 5) * 2; g.fillStyle(0xa94761, intensity * .25).fillTriangle(x, y + 9, x + side * 4, y - 4, x, y - 12 - pulse).lineStyle(1, 0xffb39a, intensity * .4).lineBetween(x, y + 5, x, y - 9 - pulse); }
+    const seal = (x: number, y: number, r: number, color: number, born: number, rare = false) => {
+      const age = Math.max(0, w.elapsed - born), radius = r * Math.min(1, .5 + age * 2), yy = y + 7;
+      g.lineStyle(1, color, intensity * (rare ? .65 : .4)).beginPath();
+      for (let i = 0; i <= 8; i++) { const a = i * Math.PI / 4, px = Math.round(x + Math.cos(a) * radius), py = Math.round(yy + Math.sin(a) * radius * .3); if (i) g.lineTo(px, py); else g.moveTo(px, py); } g.strokePath();
+      if (rare) { g.lineStyle(1, 0xffefd0, intensity * .5).lineBetween(x - r - 2, yy, x - r + 1, yy).lineBetween(x + r - 1, yy, x + r + 2, yy); g.fillStyle(0xffd77c, intensity * .1).fillRect(x - 1, y - 18, 2, 20); }
+      if (age < .35) g.lineStyle(1, color, intensity * (1 - age / .35)).strokeRect(x - r * age * 3, y - r * age * 3, r * age * 6, r * age * 6);
+    };
+    for (const item of w.loot.items) seal(item.x, item.y, 10, LOOT_COLORS[item.lootKind], item.born);
+    for (const chest of w.loot.chests) seal(chest.x, chest.y, 13, 0xd8b476, chest.born, true);
+    for (const item of w.artifacts.items) seal(item.x, item.y, 12, 0xffd77c, item.born, true);
     const guardian = w.rareGuardian;
     if (guardian) {
       g.fillStyle(0xffd77c, intensity * (0.1 + Math.sin(w.elapsed * 2) * 0.025)).fillCircle(guardian.x, guardian.y, 32).lineStyle(1, 0xffd77c, intensity * 0.55).strokeEllipse(guardian.x, guardian.y + 15, 50, 15);

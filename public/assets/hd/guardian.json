@@ -1,0 +1,146 @@
+{
+  "frames": {
+    "guardian-idle-0": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-idle-1": {
+      "frame": {
+        "x": 102,
+        "y": 2,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-idle-2": {
+      "frame": {
+        "x": 202,
+        "y": 2,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-hurt-0": {
+      "frame": {
+        "x": 302,
+        "y": 2,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-hurt-1": {
+      "frame": {
+        "x": 402,
+        "y": 2,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-hurt-2": {
+      "frame": {
+        "x": 2,
+        "y": 118,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-0": {
+      "frame": {
+        "x": 102,
+        "y": 118,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-1": {
+      "frame": {
+        "x": 202,
+        "y": 118,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-2": {
+      "frame": {
+        "x": 302,
+        "y": 118,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-3": {
+      "frame": {
+        "x": 402,
+        "y": 118,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-4": {
+      "frame": {
+        "x": 2,
+        "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-5": {
+      "frame": {
+        "x": 102,
+        "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    }
+  },
+  "meta": {
+    "image": "guardian.png",
+    "size": {
+      "w": 502,
+      "h": 350
+    },
+    "clips": {
+      "idle": {
+        "frames": 3,
+        "fps": 3
+      },
+      "hurt": {
+        "frames": 3,
+        "fps": 14
+      },
+      "death": {
+        "frames": 6,
+        "fps": 10
+      }
+    },
+    "authoring": "scripts/guardian-art-source.mjs"
+  }
+}

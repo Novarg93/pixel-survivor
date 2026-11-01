@@ -1,3 +1,73 @@
+# Main и локальные скриншоты — 2026-11-01
+
+Пользователь запросил исключить screenshots из индекса и отправить весь итоговый
+HD-пакет в main. Для публикации подготовлен единый снимок поверх origin/main
+2a3bfde: весь код, ассеты, тесты и отчёты пакетов 02–08. Промежуточная feature-история
+с новыми скриншотами сохраняется локально и не входит в родителей main-коммита.
+
+- `.gitignore`: добавлено `/screenshots/`; из индекса исключены 1059 файлов.
+  Все 1059 PNG/JSON сохранены на диске, совпадение SHA256 с исходными файлами проверено.
+- `docs/DECISIONS.md`: записаны разрешение на push, способ переноса и дальнейшая
+  работа в main. Старые ссылки на screenshots указывают на локальные свидетельства.
+- `npm.cmd run check`: TypeScript, ESLint, **141 unit / 30 файлов**, build — успешно.
+- `PIXEL_E2E_PORT=4187 npm.cmd run test:e2e:production`: **4/4**, 28.7 s;
+  Mage/Warrior, обе карты, старт/атаки/пауза, desktop/mobile, без внешних ресурсов.
+  Свежие браузерные PNG: `docs/screenshots/19-production-*.png`, локально.
+- Проверены отсутствие screenshots в индексе, правило ignore и diff без ошибок
+  пробелов. Блокеров проверок нет. Push выполняется обычным обновлением main,
+  без force push и без изменения файлов соседних worktree.
+
+Следующий этап — художественная приёмка; новые feature-ветки автоматически не создавать.
+Ниже сохранена история до переноса в main.
+
+# HD-переработка 02–08 — все семь пакетов проверены
+
+Пакет08 завершён: единый Vue UI, XP pickup FX, полный registry audit.
+TypeScript/lint/build, **141 unit / 30 файлов, 76 dev E2E, 4 production E2E**
+прошли. Усиленные travel и UI проверки: ещё6/6, затем TS/lint/diff успешны.
+Реальные Canvas и UI PNG лично просмотрены; матрица обоих героев и карт,
+двух viewport и реального Settings scale3 пройдена. Живой стресс с автоатаками
+и десять рестартов/перемещений не показали роста проверяемых ресурсов.
+Все пакеты02–08 verified, локальные коммиты в feature/hd-art-rework-02-08.
+Main, gameplay/balance/AI/loot/radar не менялись; push/merge/deploy нет.
+Следующий шаг — **художественная приёмка**, автономная реализация остановлена.
+Полный отчёт: [FINAL_REPORT.md](hd-rework/FINAL_REPORT.md).
+Android/highDPR/длительный VRAM/heap soak не проверены; ограничения указаны в отчёте.
+
+---
+
+## История выполнения02–07
+
+2026-11-01, текущая папка `PixelSurvivor`, `main@2a3bfde`.
+Пользователь разрешил входные материалы, блокер B3.2 снят. Создана
+`feature/hd-art-rework-02-08` от main2a3bfde, checkpoint03ae07a.
+Пакет02: оригинальный Mage54frames+fireball4, Grove2×, пять Mage FX;
+World/abilities/config/entities/loot/radar не изменены. check123unit/25files,
+dev48/48+дополнительный walk/hurt1/1, production4/4, diff check успешны.
+Canvas PNG лично просмотрены, сравнение150mixed и10рестартов сохранено.
+Пакет03: WarriorMagic, типизированный Slam observer, мягкий hit tint и
+bounded death shards. check124unit/26files, dev50/50+расширенный crowd2/2,
+production4/4; Canvas150crowd обеих карт просмотрен, ресурсы без роста.
+Пакет04: Tank/Caster/Rusher/Splitter176frames64×64, отдельный bounded observer,
+immediate rewards и реальные2детей Splitter. check129unit/27files,
+dev57/57, production4/4, mixed150death/10restarts, PNG просмотрены.
+Benchmark02–04 уточнён с seed12345 на исторических срезах внутри .tmp;
+протокол hd-rework/BENCHMARK.md. Пакет02 сохранён12dfd70,03 —93bd8ff;
+Пакет05: индивидуальные HD накладки элит, Guardian12frames96×112,
+mobile notice. check131unit/28files, dev59/59, production4/4; PNG просмотрены,
+immediate artifact/pickup/cleanup подтверждены. Пакет06:3босса204frames128²,
+Eclipse2стадии,hostile4frames,deathpool3. Check136unit/29files,dev66/66,
+production4/4,targeted7/7+уточнённыеракурсы3/3; PNG лично просмотрены,
+immediate3chests/owner cleanup/10restarts подтверждены. Пакет07:39lootframes,
+пять разныхartifact иexactHUDcrops,open/pickuppool24,согласованнаяHUDrail.
+Check139unit/30files,dev70/70,production4/4,targeted6+expanded4 успешны;
+CanvasPNG лично просмотрены,13simultaneouspickups/10restarts пройдены.
+Следующий пакет08
+выполняется автоматически. Полное состояние:
+[BLOCKERS.md](hd-rework/BLOCKERS.md), [PROGRESS.md](hd-rework/PROGRESS.md).
+
+---
+
 # Прогресс — Runner Art Pack 01
 
 2026-11-01. Текущий пакет реализован на feature/hd-pixel-art поверх b2cd57c.

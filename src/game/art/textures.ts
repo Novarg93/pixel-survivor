@@ -17,7 +17,7 @@ export function createTextures(scene: Phaser.Scene, replaced: ReadonlySet<string
   lootGraphics.generateTexture(`loot-${kind}`, 16, 16); lootGraphics.clear();
  }
  lootGraphics.destroy();
- if (scene.textures.exists('mage')) return;
+ if (scene.textures.exists('xp')) return;
  CREATURES.rusher = ['..bb........bb..','..bRr......rRb..','...rRRrrrrRRr...','..rRRRRRRRRRRr..','..rRoRRRRoRRRr..','..rRXRRRRXRRRr..','...rRRRRRRRRr...','....rrRRRRrr....','...rRrRRRRrRr...','..rRr.rRRr.rRr..','..rr..rRRr..rr..','.....rRRRRr.....','....rRRrrRRr....','...rRr....rRr...','...ooo....ooo...','................'];
  CREATURES.eclipse = ['...b........b...','..bgGg....gGgb..','.bgGg......gGgb.','bgGg..gggg..gGgb','bgGg.gTTTTg.gGgb','.bgGgTTXXTTgGgb.','..bgTTTXXTTTgb..','...gTTTTTTTTg...','...gTTbbbbTTg...','..gTTbggggbTTg..','..gTTbgGGgbTTg..','...gTTbggbTTg...','....gTTbbTTg....','...gTTTggTTTg...','..gTTgg..ggTTg..','..ooo......ooo..'];
  CREATURES.splitter = ['......gggg......','....ggAAAggg....','...gAAAAAAAAg...','..gAAAggAAAAAg..','..gAAXggXAAAAg..','..gAAAggAAAAAg..','...gAAggAAAAg...','....gggggggg....','..ggAAg.gAAg....','.gAAAAg.gAAAAg..','.gAAAgg.ggAAAg..','..gggg...gggg...','...gg.....gg....','..ggg.....ggg...','..ooo.....ooo...','................'];
@@ -41,7 +41,7 @@ export function createTextures(scene: Phaser.Scene, replaced: ReadonlySet<string
   draw(art, size); if (size === 2) g.fillStyle(name === 'charger' ? 0xe2c98b : 0xf3d2ff).fillRect(11, 11, 2, 2).fillRect(21, 11, 2, 2);
   g.generateTexture(frame === 0 ? name : `${name}-walk`, 16 * size, 16 * size); g.clear();
  }
- g.fillStyle(0xad5b45).fillRect(0, 2, 8, 4); g.fillStyle(0xf3a567).fillRect(2, 1, 6, 6); g.fillStyle(0xffefbd).fillRect(3, 2, 4, 3); g.generateTexture('fireball', 8, 8); g.clear();
+ if (!replaced.has('fireball')) { g.fillStyle(0xad5b45).fillRect(0, 2, 8, 4); g.fillStyle(0xf3a567).fillRect(2, 1, 6, 6); g.fillStyle(0xffefbd).fillRect(3, 2, 4, 3); g.generateTexture('fireball', 8, 8); g.clear(); }
  g.fillStyle(0x214d59).fillRect(0, 2, 6, 4); g.fillStyle(0x70d9cf).fillRect(1, 1, 4, 4).fillRect(2, 0, 2, 6); g.fillStyle(0xe9ffdb).fillRect(2, 1, 2, 2); g.generateTexture('xp', 6, 6); g.clear();
- g.fillStyle(0x572d58).fillRect(0, 1, 8, 6); g.fillStyle(0xff809a).fillRect(1, 2, 6, 4).fillRect(3, 0, 2, 8); g.fillStyle(0xffe1b6).fillRect(3, 2, 2, 3); g.generateTexture('hostile', 8, 8); g.destroy();
+ if (!replaced.has('hostile')) { g.fillStyle(0x572d58).fillRect(0, 1, 8, 6); g.fillStyle(0xff809a).fillRect(1, 2, 6, 4).fillRect(3, 0, 2, 8); g.fillStyle(0xffe1b6).fillRect(3, 2, 2, 3); g.generateTexture('hostile', 8, 8); } g.destroy();
 }
