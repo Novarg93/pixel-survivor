@@ -9,7 +9,7 @@ import { snapshots, commands, metrics, radarFrames, type Metrics } from '../even
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import { AudioSystem } from '../services/AudioSystem';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
-import { GameArt, preloadGameArt, entityVisual, applyVisual } from '../art/GameArt';
+import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { REPLACED_LEGACY_TEXTURES, type Facing } from '../art/assetRegistry';
 export class GameScene extends Phaser.Scene {
   world = new World();
@@ -68,6 +68,7 @@ export class GameScene extends Phaser.Scene {
     const zoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640)); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / zoom; this.world.height = this.scale.height / zoom;
     const input = { x: Math.max(down('D'), down('RIGHT')) - Math.max(down('A'), down('LEFT')) + this.touch.x, y: Math.max(down('S'), down('DOWN')) - Math.max(down('W'), down('UP')) + this.touch.y };
+    this.art.prepare(this.world);
     this.world.step(delta / 1000, input);
     for (const cue of this.world.sounds.splice(0)) this.audio.play(cue);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
@@ -83,7 +84,7 @@ export class GameScene extends Phaser.Scene {
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
       active.add(entity.id); let sprite = this.sprites.get(entity.id);
       const pickup = 'lootKind' in entity || 'lootPool' in entity || 'artifact' in entity;
-      const visual = entityVisual(entity, this.world.elapsed);
+      const visual = this.art.entityVisual(entity, this.world);
       if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);

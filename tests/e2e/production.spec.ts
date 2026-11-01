@@ -19,5 +19,5 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
-  expect(artRequests.sort()).toEqual(['/assets/hd/core.json', '/assets/hd/core.png']);
+  expect(artRequests.sort()).toEqual(['/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/runner.json', '/assets/hd/runner.png']);
 });

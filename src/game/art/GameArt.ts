@@ -5,9 +5,12 @@ import type { LootItem, Chest } from '../loot/types';
 import type { ArtifactDrop } from '../loot/ArtifactSystem';
 import { ASSET_REGISTRY, LOOT_ART, heroVisual, enemyVisual, selectAsset, visualDimensions, type Facing, type VisualSelection } from './assetRegistry';
 import { HD_CORE_TEXTURE, HD_CORE_URLS } from './hdCoreLayout';
+import { RUNNER_TEXTURE, RUNNER_URLS, RUNNER_CLIPS, runnerFrame } from './runnerPack';
+import { RunnerAnimation } from './RunnerAnimation';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
   if (!scene.textures.exists(HD_CORE_TEXTURE)) scene.load.atlas(HD_CORE_TEXTURE, import.meta.env.BASE_URL + HD_CORE_URLS.image, import.meta.env.BASE_URL + HD_CORE_URLS.data);
+  if (!scene.textures.exists(RUNNER_TEXTURE)) scene.load.atlas(RUNNER_TEXTURE, import.meta.env.BASE_URL + RUNNER_URLS.image, import.meta.env.BASE_URL + RUNNER_URLS.data);
 }
 export function applyVisual(sprite: Phaser.GameObjects.Sprite, selection: VisualSelection, multiplier = 1) {
   const spec = ASSET_REGISTRY[selection.asset], size = visualDimensions(selection, multiplier);
@@ -25,13 +28,32 @@ export function entityVisual(entity: RenderEntity, elapsed: number): VisualSelec
 export class GameArt {
   private shadows: Phaser.GameObjects.Image[] = [];
   private cleaves: Phaser.GameObjects.Image[] = [];
+  private runner = new RunnerAnimation();
+  private runnerCorpses: Phaser.GameObjects.Image[] = [];
+  private worldTime = 0;
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { scene.textures.get(HD_CORE_TEXTURE).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  prepare(world: World) { this.runner.prepare(world); }
+  entityVisual(entity: RenderEntity, world: World): VisualSelection {
+    if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
+    return entityVisual(entity, world.elapsed);
+  }
   hero(sprite: Phaser.GameObjects.Sprite, world: World, facing: Facing, moving: boolean, multiplier = 1) {
     const visual = heroVisual(world.character, facing, moving, world.player.invulnerableUntil > world.elapsed, world.elapsed);
     this.heroFrame = visual.frame ?? visual.texture; applyVisual(sprite, visual, multiplier);
   }
   update(world: World, intensity: number) {
+    this.worldTime = world.elapsed;
+    this.runner.finish(world);
+    for (let i = 0; i < this.runner.corpses.length; i++) {
+      const corpse = this.runner.corpses[i];
+      if (!corpse.active) { this.runnerCorpses[i]?.setVisible(false).setActive(false); continue; }
+      const image = this.runnerCorpses[i] ?? this.scene.add.image(0, 0, RUNNER_TEXTURE, 'runner-right-death-0'); this.runnerCorpses[i] = image;
+      const age = Math.max(0, world.elapsed - corpse.started), t = age / (RUNNER_CLIPS.death.frames / RUNNER_CLIPS.death.fps), size = visualDimensions(selectAsset('runner', undefined, corpse.elite ? 1.4 : 1));
+      image.setTexture(RUNNER_TEXTURE, runnerFrame('death', corpse.facing, age)).setPosition(corpse.x, corpse.y).setOrigin(0.5).setDisplaySize(size.width, size.height)
+        .setDepth(corpse.y / 10000 - 0.02).setAlpha(1 - t * t).setVisible(true).setActive(true);
+    }
+    for (let i = this.runner.corpses.length; i < this.runnerCorpses.length; i++) this.runnerCorpses[i].setVisible(false).setActive(false);
     let count = 0;
     const shadow = (x: number, y: number, scale: number) => {
       const image = this.shadows[count] ?? this.scene.add.image(0, 0, HD_CORE_TEXTURE, 'shadow').setDepth(-2); this.shadows[count++] = image;
@@ -55,12 +77,12 @@ export class GameArt {
     const textures = this.scene.textures.getTextureKeys(), atlas = this.scene.textures.get(HD_CORE_TEXTURE);
     // Diagnostic reads only, pinned Phaser 4.2.1. Never used by gameplay.
     const clock = ['_active', '_pendingInsertion', '_pendingRemoval'].map(key => { const value: unknown = Reflect.get(this.scene.time, key); return Array.isArray(value) ? value.length : null; });
-    return { heroFrame: this.heroFrame, atlasFrames: atlas.frameTotal - 1, textures, chunks: textures.filter(t => t.startsWith('chunk-')).length,
+    return { heroFrame: this.heroFrame, atlasFrames: atlas.frameTotal - 1, runner: { atlasFrames: this.scene.textures.get(RUNNER_TEXTURE).frameTotal - 1, tracked: this.runner.tracked, activeDeaths: this.runner.corpses.filter(c => c.active).length, allocatedDeaths: this.runnerCorpses.filter(Boolean).length, replaced: this.runner.replaced, corpses: this.runner.corpses.flatMap((c, i) => c.active ? [{ ...c, frame: runnerFrame('death', c.facing, this.worldTime - c.started), width: this.runnerCorpses[i]?.displayWidth ?? 0, height: this.runnerCorpses[i]?.displayHeight ?? 0 }] : []) }, textures, chunks: textures.filter(t => t.startsWith('chunk-')).length,
       textureBytes: textures.reduce((n, key) => { const source = this.scene.textures.get(key).getSourceImage() as HTMLCanvasElement; return n + source.width * source.height * 4; }, 0),
       shadows: this.shadows.length, cleaves: this.cleaves.length, objects: this.scene.children.length, tweens: this.scene.tweens.getTweens().length, clock,
       blurListeners: this.scene.game.events.listenerCount(Phaser.Core.Events.BLUR),
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y }; }),
     };
   }
-  destroy() { for (const image of [...this.shadows, ...this.cleaves]) image.destroy(); this.shadows = []; this.cleaves = []; }
+  destroy() { for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses]) image.destroy(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.runner.destroy(); }
 }
