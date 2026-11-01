@@ -1,0 +1,214 @@
+{
+  "seed": 12345,
+  "seconds": 600,
+  "fixture": "invulnerable circular pilot, first eligible upgrade, 20Hz simulation",
+  "peak": 52,
+  "bosses": [
+    {
+      "kind": "charger",
+      "at": 360
+    },
+    {
+      "kind": "sorcerer",
+      "at": 600
+    }
+  ],
+  "guardians": [
+    239.4,
+    446.1
+  ],
+  "minutes": [
+    {
+      "minute": 1,
+      "wave": "Шорох в траве",
+      "interval": 0.95,
+      "burst": 1,
+      "cap": 55,
+      "elite": 0,
+      "spawned": 59,
+      "alive": 5,
+      "kills": 32,
+      "level": 1,
+      "kinds": {
+        "grunt": 1,
+        "runner": 4
+      }
+    },
+    {
+      "minute": 2,
+      "wave": "Шорох в траве",
+      "interval": 0.95,
+      "burst": 1,
+      "cap": 55,
+      "elite": 0,
+      "spawned": 82,
+      "alive": 8,
+      "kills": 76,
+      "level": 3,
+      "kinds": {
+        "grunt": 4,
+        "runner": 4
+      }
+    },
+    {
+      "minute": 3,
+      "wave": "Пробуждение рощи",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 85,
+      "elite": 0.05,
+      "spawned": 82,
+      "alive": 4,
+      "kills": 132,
+      "level": 4,
+      "kinds": {
+        "grunt": 4,
+        "runner": 0,
+        "tank": 0,
+        "caster": 0,
+        "rusher": 0,
+        "splitter": 0
+      }
+    },
+    {
+      "minute": 4,
+      "wave": "Пробуждение рощи",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 85,
+      "elite": 0.05,
+      "spawned": 190,
+      "alive": 21,
+      "kills": 194,
+      "level": 7,
+      "kinds": {
+        "grunt": 9,
+        "runner": 6,
+        "tank": 2,
+        "caster": 2,
+        "rusher": 2,
+        "splitter": 0
+      }
+    },
+    {
+      "minute": 5,
+      "wave": "Пробуждение рощи",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 85,
+      "elite": 0.05,
+      "spawned": 190,
+      "alive": 22,
+      "kills": 249,
+      "level": 9,
+      "kinds": {
+        "grunt": 8,
+        "runner": 7,
+        "tank": 3,
+        "caster": 3,
+        "rusher": 0,
+        "splitter": 1
+      }
+    },
+    {
+      "minute": 6,
+      "wave": "Пробуждение рощи",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 85,
+      "elite": 0.05,
+      "spawned": 186,
+      "alive": 21,
+      "kills": 302,
+      "level": 11,
+      "kinds": {
+        "grunt": 5,
+        "runner": 6,
+        "tank": 7,
+        "caster": 1,
+        "rusher": 2,
+        "splitter": 0
+      }
+    },
+    {
+      "minute": 7,
+      "wave": "Пробуждение рощи",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 85,
+      "elite": 0.05,
+      "spawned": 186,
+      "alive": 17,
+      "kills": 364,
+      "level": 13,
+      "kinds": {
+        "grunt": 4,
+        "runner": 1,
+        "tank": 7,
+        "caster": 3,
+        "rusher": 0,
+        "splitter": 2
+      }
+    },
+    {
+      "minute": 8,
+      "wave": "Рунная буря",
+      "interval": 0.7,
+      "burst": 3,
+      "cap": 120,
+      "elite": 0.12,
+      "spawned": 186,
+      "alive": 23,
+      "kills": 429,
+      "level": 14,
+      "kinds": {
+        "grunt": 6,
+        "runner": 6,
+        "tank": 9,
+        "caster": 2,
+        "rusher": 0,
+        "splitter": 0
+      }
+    },
+    {
+      "minute": 9,
+      "wave": "Рунная буря",
+      "interval": 0.7,
+      "burst": 3,
+      "cap": 120,
+      "elite": 0.12,
+      "spawned": 340,
+      "alive": 33,
+      "kills": 519,
+      "level": 16,
+      "kinds": {
+        "grunt": 5,
+        "runner": 6,
+        "tank": 8,
+        "caster": 4,
+        "rusher": 7,
+        "splitter": 3
+      }
+    },
+    {
+      "minute": 10,
+      "wave": "Рунная буря",
+      "interval": 0.7,
+      "burst": 3,
+      "cap": 120,
+      "elite": 0.12,
+      "spawned": 339,
+      "alive": 40,
+      "kills": 611,
+      "level": 18,
+      "kinds": {
+        "grunt": 5,
+        "runner": 18,
+        "tank": 3,
+        "caster": 7,
+        "rusher": 4,
+        "splitter": 3
+      }
+    }
+  ]
+}

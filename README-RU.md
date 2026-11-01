@@ -1,5 +1,10 @@
 # Pixel Survivor — пакет для автономной разработки с Codex
 
+Текущая игра после HD Rework 02–08: [Gameplay Pacing / Guardian / Mobility](docs/gameplay/REPORT.md).
+Для ручной проверки: `npm.cmd run dev`. WASD/стрелки и Space: Dash у Warrior,
+Blink у Mage; на touch-экране манёвр доступен отдельной кнопкой.
+Документация ниже сохраняет историю первоначального runner-пакета.
+
 ## Перед запуском
 1. Создай НОВУЮ пустую папку, например `C:\Users\Novarg\Desktop\PixelSurvivor`. Не распаковывай пакет в работающий Laravel-проект (`133-date` и другие).
 2. Распакуй сюда содержимое ZIP, так чтобы `run-stages.ps1`, `PLAN.md`, `AGENTS.md`, `tasks/` и `docs/` находились в корне.

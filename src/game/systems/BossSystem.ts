@@ -3,14 +3,17 @@ import type { Enemy } from '../entities/types';
 import type { World } from './World';
 import { direction, distance } from '../utils/math';
 import { updateEclipse } from './EclipseBoss';
+import { BOSS_PACING } from '../config/pacing';
 export const BOSS_CAP = 3;
 export class BossScheduler {
-  nextAt = 360; private index = 0;
-  poll(now: number, active: number): BossKind | undefined {
-    if (now < this.nextAt) return;
+  nextAt: number = BOSS_PACING.firstAt; private index = 0;
+  lastAt = -Infinity;
+  poll(now: number, active: number, guardianActive = false): BossKind | undefined {
+    if (now < this.nextAt || guardianActive) return;
     const kind = (['charger', 'sorcerer', 'eclipse'] as const)[this.index % 3];
-    this.nextAt = Math.max(this.nextAt + (this.index === 0 ? 240 : 180), now + 45); this.index++;
-    return active < BOSS_CAP ? kind : undefined;
+    this.nextAt = Math.max(this.nextAt + BOSS_PACING.interval, now + BOSS_PACING.catchUpGap); this.index++;
+    if (active >= BOSS_CAP) return;
+    this.lastAt = now; return kind;
   }
 }
 export function updateBoss(w: World, e: Enemy, dt: number) {

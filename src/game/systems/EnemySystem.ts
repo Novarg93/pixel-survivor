@@ -1,4 +1,5 @@
-import { updateRusher, frenzySpeed } from './SpecialEnemies';
+import { updateRusher } from './SpecialEnemies';
+import { regularMoveSpeed } from './DifficultyDirector';
 import type { World } from './World';
 import type { Enemy } from '../entities/types';
 import { direction, distance } from '../utils/math';
@@ -10,7 +11,7 @@ export class EnemySystem {
     this.grid.rebuild(w.enemies);
     for (const e of w.enemies) {
       if (w.status !== 'playing') break;
-      if (e.kind === 'guardian') { if (distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }
+      if (e.kind === 'guardian') { if (w.guardianSystem.encounter?.ownerId === e.id && distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }
       if ((e.freezeUntil ?? 0) > w.elapsed) continue;
       if (e.boss) { updateBoss(w, e, dt); continue; }
       if (e.rush) { updateRusher(w, e, dt); continue; }
@@ -28,7 +29,7 @@ export class EnemySystem {
         const between = distance(e, other); if (between < e.radius + other.radius) { const v = between === 0 ? direction(e.id % 2 ? 1 : -1, e.id % 3 - 1) : direction(e.x - other.x, e.y - other.y); sx += v.x * 0.35; sy += v.y * 0.35; }
       }
       const length = Math.max(1, Math.hypot(toward.x + sx, toward.y + sy));
-      const speed = e.speed * frenzySpeed(e, w.elapsed) * (e.slowUntil > w.elapsed ? e.slowFactor : 1);
+      const speed = regularMoveSpeed(e, w.elapsed);
       e.x += (toward.x + sx) / length * speed * dt; e.y += (toward.y + sy) / length * speed * dt;
       if (distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage);
     }

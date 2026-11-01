@@ -1,3 +1,36 @@
+# Gameplay Pacing / Guardian / Mobility — готово к ручной проверке
+
+Работа по новому прямому запросу в `feature/gameplay-pacing-guardian-mobility`
+от актуального main@0c1a50e; первоначальное рабочее дерево чистое. Main/push/deploy
+не затрагиваются. Реализованы:
+
+- `config/pacing.ts`, DifficultyDirector/BossSystem/EnemySystem: поминутные волны,
+  боссы3/6/9, накопительная скорость5% с общим/быстрыми/абсолютными caps, cap150.
+- `GuardianEncounter.ts`, RareGuardianSystem/World: пассивный Guardian до удара,
+  неподвижный луч/три метеора/паузы, разведение встреч и owner cleanup.
+- `MobilitySystem.ts`, GameScene/bridge/MobilityControl: Dash/Blink, Space без
+  repeat, настоящий multitouch с удержанием джойстика, защита, HUD cooldown.
+- `abilityVisual.ts`, MageMagic/WarriorMagic/GameArt: все10 навыков rankI/V,
+  ограниченные декоративные параметры и существующие Graphics batches.
+- Новые unit/E2E сценарии и seed12345 replay600 s. Старые accessibility-тесты
+  Mage/Warrior сохранены. Пик в replay71; bosses180/360/540; Guardian overlaps0.
+
+Baseline: check141unit, dev76/76, production4/4. Финальный check:186unit/36files,
+TS/lint/build успешно. Полный dev E2E94/94 (9.9min), production4/4 (26.7s).
+После точечной правки ориентации стрелки луча Guardian6/6 повторены успешно;
+геометрический unit проверяет4 квадранта. Keyboard/touch mobility также прошли.
+Реальные PNG в screenshots/gameplay/ получены Playwright, парыI/V и опасные
+области лично просмотрены. Скриншоты локальны/ignored. Найденные по Canvas
+перекрытие notice/mobility и дублированная HP-полоса исправлены.
+
+Отчёт, таблица темпа и сырые данные: [REPORT.md](gameplay/REPORT.md).
+Блокеров нет. При150 высоко-HP врагах/Guardian/rankV на этой машине измерены
+59.4–59.7 median FPS, .8–1.1ms p95 update. Физические Android/iOS, highDPR и
+длительный heap/VRAM soak не проверены. Автоматический replay использует
+неуязвимость и не доказывает выживаемость обычного игрока10 минут.
+Следующий шаг: ручная оценка баланса пользователем. Реализация остановлена;
+push, merge в main и deploy не выполнялись. Номерные done-маркеры не создавались.
+
 # Main и локальные скриншоты — 2026-11-01
 
 Пользователь запросил исключить screenshots из индекса и отправить весь итоговый

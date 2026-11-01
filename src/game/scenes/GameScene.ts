@@ -9,6 +9,7 @@ import { AudioSystem } from '../services/AudioSystem';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { type Facing } from '../art/assetRegistry';
+import { drawGuardianDanger } from '../art/EncounterArt';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -26,6 +27,7 @@ export class GameScene extends Phaser.Scene {
   private runOptions: RunOptions = {};
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
+  private mobilityRequested = false;
   private audio = new AudioSystem();
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
   preload() { preloadGameArt(this); }
@@ -41,22 +43,28 @@ export class GameScene extends Phaser.Scene {
     this.effects = this.add.graphics().setName('hostile-tells').setDepth(20);
     this.cameras.main.setZoom(2).startFollow(this.mage, true, 1, 1);
     this.keys = this.input.keyboard?.addKeys('W,A,S,D,UP,LEFT,DOWN,RIGHT') as Record<string, Phaser.Input.Keyboard.Key>;
+    const mobilityKey = (event: KeyboardEvent) => {
+      if (event.repeat || this.world.status !== 'playing' || event.target instanceof Element && event.target.closest('button,input,select,textarea,[role="dialog"]')) return;
+      event.preventDefault(); this.mobilityRequested = true;
+    };
+    this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
+      if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { if(command.character)this.runOptions.character=command.character; if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; else this.audio.unlock(); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
       else if (command.type === 'resume') { this.world.resume(); this.audio.unlock(); }
       else if (command.type === 'settings') { this.preferences = { ...command.value }; this.audio.settings(this.preferences.volume, this.preferences.muted); this.audio.unlock(); }
-      this.touch = { x: 0, y: 0 }; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot());
+      this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot());
     });
-    const blur = () => { this.world.pause(); this.touch = { x: 0, y: 0 }; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot()); };
+    const blur = () => { this.world.pause(); this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot()); };
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
       window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics() };
     }
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
   update(_time: number, delta: number) {
     const started = performance.now();
@@ -66,6 +74,7 @@ export class GameScene extends Phaser.Scene {
     const input = { x: Math.max(down('D'), down('RIGHT')) - Math.max(down('A'), down('LEFT')) + this.touch.x, y: Math.max(down('S'), down('DOWN')) - Math.max(down('W'), down('UP')) + this.touch.y };
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
+    if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, input); }
     this.world.step(delta / 1000, input);
     for (const cue of this.world.sounds.splice(0)) this.audio.play(cue);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
@@ -95,6 +104,7 @@ export class GameScene extends Phaser.Scene {
     this.lootPresentation.update(this.world, this.preferences);
     this.radar.update(this.world);
     this.effects.clear();
+    drawGuardianDanger(this.effects, this.world, this.world.guardianSystem.encounter);
     for (const enemy of this.world.enemies) {
       if (enemy.kind === 'eclipse' && enemy.boss?.phase === 'windup') { this.effects.lineStyle(2, enemy.boss.stage === 2 ? 0xe3a2ff : 0x9ae5e3).strokeCircle(enemy.x, enemy.y, 40); for(let i=0;i<12;i++)if(i!==0&&i!==6){const a=Math.atan2(this.mage.y-enemy.y,this.mage.x-enemy.x)-Math.PI/12+i*Math.PI/6;this.effects.lineBetween(enemy.x+Math.cos(a)*28,enemy.y+Math.sin(a)*28,enemy.x+Math.cos(a)*47,enemy.y+Math.sin(a)*47);} }
       if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.lineStyle(2, 0x9ccbf5, 0.9).strokeCircle(enemy.x, enemy.y, enemy.radius + 7);

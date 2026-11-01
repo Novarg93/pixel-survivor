@@ -17,6 +17,7 @@ import { BOSS_TEXTURE, BOSS_URLS, isHdBoss, bossFrame } from './bossPack';
 import { BossAnimation } from './BossAnimation';
 import { LOOT_TEXTURE, LOOT_URLS, ARTIFACT_KEYS, lootFrame } from './lootPack';
 import { PickupAnimation } from './PickupAnimation';
+import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
   if (!scene.textures.exists(HD_CORE_TEXTURE)) scene.load.atlas(HD_CORE_TEXTURE, import.meta.env.BASE_URL + HD_CORE_URLS.image, import.meta.env.BASE_URL + HD_CORE_URLS.data);
@@ -131,11 +132,13 @@ export class GameArt {
     for (let i = count; i < this.shadows.length; i++) this.shadows[i].setVisible(false);
     count = 0;
     for (const e of world.effects) if (e.kind === 'cleave') {
+      const rank = abilityVisual(world.abilities.cleave.level);
       const t = Math.min(1, Math.max(0, (world.elapsed - e.started) / e.duration));
       const image = this.cleaves[count] ?? this.scene.add.image(0, 0, HD_CORE_TEXTURE, 'cleave-0').setDepth(14); this.cleaves[count++] = image;
       const displaySize = e.radius * 48 / 21 * (0.75 + t * 0.25);
       image.setTexture(HD_CORE_TEXTURE, `cleave-${Math.min(3, Math.floor(t * 4))}`).setPosition(e.x, e.y)
-        .setRotation(e.target ? Math.atan2(e.target.y - e.y, e.target.x - e.x) : 0).setDisplaySize(displaySize, displaySize).setAlpha((1 - t) * intensity).setVisible(true);
+        .setRotation(e.target ? Math.atan2(e.target.y - e.y, e.target.x - e.x) : 0).setDisplaySize(displaySize, displaySize).setAlpha((1 - t) * intensity * rank.brightness).setVisible(true);
+      if (rank.capstone) image.setTint(0xffe5b4); else image.clearTint();
     }
     for (let i = count; i < this.cleaves.length; i++) this.cleaves[i].setVisible(false);
   }

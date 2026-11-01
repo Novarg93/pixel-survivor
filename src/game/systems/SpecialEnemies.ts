@@ -1,11 +1,12 @@
 import type { World } from './World';
 import type { Enemy } from '../entities/types';
 import { direction, distance } from '../utils/math';
+import { regularMoveSpeed } from './DifficultyDirector';
 export function enemyShielded(e: Enemy, now: number) { return e.modifier === 'shielded' && (now - e.born) % 7 < 2; }
-export function frenzySpeed(e: Enemy, now: number) { const t = (now - e.born) % 7; return e.modifier === 'frenzy' && t >= 0.4 && t < 2 ? 1.65 : 1; }
+export { frenzySpeed } from './DifficultyDirector';
 export function updateRusher(w: World, e: Enemy, dt: number) {
   const b = e.rush; if (!b) return;
-  if (b.phase === 'approach') { const v = direction(w.player.x-e.x,w.player.y-e.y); const speed=e.speed*frenzySpeed(e,w.elapsed)*(e.slowUntil>w.elapsed?e.slowFactor:1); e.x += v.x * speed * dt; e.y += v.y * speed * dt;
+  if (b.phase === 'approach') { const v = direction(w.player.x-e.x,w.player.y-e.y); const speed=regularMoveSpeed(e,w.elapsed); e.x += v.x * speed * dt; e.y += v.y * speed * dt;
     if (w.elapsed >= b.until && distance(e,w.player)<240) { b.phase='windup'; b.until=w.elapsed+0.85; b.direction=v; b.aim={x:e.x+v.x*180,y:e.y+v.y*180}; }
   } else if (b.phase==='windup' && w.elapsed>=b.until) { b.phase='charge'; b.until=w.elapsed+0.45; }
   else if (b.phase==='charge') { e.x+=b.direction.x*400*dt; e.y+=b.direction.y*400*dt; if(w.elapsed>=b.until){b.phase='recover';b.until=w.elapsed+1.2;} }

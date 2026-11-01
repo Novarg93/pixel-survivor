@@ -37,6 +37,6 @@ for (const dark of [false, true]) test('Warrior five live skills, warning layers
   expect(await page.evaluate(() => window.__PIXEL__!.world.warrior.ironUntil < window.__PIXEL__!.world.elapsed)).toBe(true);
   await page.evaluate(() => { for (const style of document.querySelectorAll('style')) if (style.textContent === '.overlay{display:none!important}') style.remove(); });
   await page.keyboard.press('Escape'); await page.getByRole('button', { name: 'Настройки', exact: true }).click();
-  await page.getByLabel('Интенсивность эффектов').focus(); await page.getByLabel('Интенсивность эффектов').press('Home'); await page.getByRole('button', { name: 'Готово' }).click();
+  await page.getByLabel('Интенсивность эффектов').focus(); await page.getByLabel('Интенсивность эффектов').press('Home'); await page.getByRole('button', { name: 'Готово', exact: true }).click();
   expect(errors).toEqual([]);
 });

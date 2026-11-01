@@ -3,7 +3,7 @@ import { World } from '../../src/game/systems/World';
 import { WAVES, profileAt, pickEnemy, scalesAt } from '../../src/game/systems/DifficultyDirector';
 import { SeededRandom } from '../../src/game/utils/SeededRandom';
 import { SpatialGrid } from '../../src/game/systems/SpatialGrid';
-it('uses exact time boundaries with a gentle 45-second start', () => { expect(profileAt(44.99)).toBe(WAVES[0]); expect(profileAt(45)).toBe(WAVES[1]); expect(profileAt(180)).toBe(WAVES[2]); expect(profileAt(1200).cap).toBe(150); expect(profileAt(999999).cap).toBe(150); });
+it('uses exact time boundaries with a gentle 45-second start', () => { expect(profileAt(44.99)).toBe(WAVES[0]); expect(profileAt(45)).toBe(WAVES[1]); expect(profileAt(180).from).toBe(180); expect(profileAt(1200).cap).toBe(150); expect(profileAt(999999).cap).toBe(150); });
 it('weighted composition includes six archetypes in midgame, no early tanks', () => { const rng = new SeededRandom(4); const early = new Set(Array.from({ length: 200 }, () => pickEnemy(profileAt(0), rng))); const late = new Set(Array.from({ length: 200 }, () => pickEnemy(profileAt(500), rng))); expect(early.size).toBe(2); expect(early.has('tank')).toBe(false); expect(late.size).toBe(6); });
 it('clamps peak mob and hostile projectile budgets', () => { const w = new World(); w.elapsed = 1300; for (let i = 0; i < 300; i++) w.spawn('tank'); expect(w.enemies.length).toBe(150); for (let i = 0; i < 200; i++) w.shoot({ x: 100, y: 100, vx: 1, vy: 1, damage: 1, hostile: true }); expect(w.projectiles.length).toBe(48); });
 it('scales modestly and bounds endless health/damage', () => { expect(scalesAt(0)).toEqual({ hp: 1, damage: 1 }); expect(scalesAt(1200).hp).toBeCloseTo(1.9); expect(scalesAt(999999).hp).toBe(2.35); });
