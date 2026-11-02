@@ -25,6 +25,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <GameRadar />
   <MobilityControl :state="state" @activate="commands.emit({ type: 'mobility' })" />
   <div class="skill-dock" role="list" aria-label="Способности">
+    <MobilityControl :state="state" inline />
     <div v-for="ability in state.abilities" :key="ability.id" role="listitem" :aria-label="`${ability.name} · ${ability.level ? 'Ранг ' + ability.level : 'Открой при повышении уровня'}${ability.level && ability.readyIn > 0 ? ' · ' + Math.ceil(ability.readyIn) + ' секунд' : ''}`" :class="['skill-slot', ability.id, { locked: ability.level === 0 }]" :title="`${ability.name} · ${ability.level ? 'Ранг ' + ability.level : 'Открой при повышении уровня'}`">
       <span>{{ ability.icon }}</span><b>{{ ability.level ? ability.level : '·' }}</b><small v-if="ability.level && ability.readyIn > 0">{{ Math.ceil(ability.readyIn) }}с</small><i v-if="ability.level === 0">◇</i>
     </div>
@@ -35,5 +36,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 .run-extras{position:absolute;left:24px;top:112px;width:225px;display:flex;flex-direction:column;gap:9px;pointer-events:none}
 .run-extras :deep(.buff-dock),.run-extras :deep(.artifact-dock),.run-extras :deep(.run-notice){position:static;transform:none;width:100%;max-width:100%}
 .run-extras :deep(.artifact-dock){order:0}.run-extras :deep(.buff-dock){order:1}.run-extras :deep(.run-notice){order:2}
+@media(max-width:1050px) and (min-width:601px){.control-hint{display:none}}
 @media(max-width:600px){.run-extras{left:auto;top:auto;right:15px;bottom:142px;width:225px;gap:7px}.run-extras :deep(.run-notice){font-size:9px;line-height:1.45}.run-extras :deep(.artifact-list){margin-top:4px}.run-extras :deep(.artifact-bonus){min-width:0;flex:0 0 calc(50% - 2px)}}
+@media(max-width:600px){.skill-dock{gap:3px;right:12px}.skill-dock :deep(.skill-slot){width:34px;height:43px}}
 </style>

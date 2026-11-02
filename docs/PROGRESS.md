@@ -1,3 +1,55 @@
+# Публикация Combat Balance 2.0 в main — 2026-11-02
+
+Пользователь прямо запросил «пуш в мейн» после завершения разработки.
+Для публикации подготовлен весь пакет Combat Balance 2.0 из feature/combat-balance-2:
+код, тесты, решения, baseline/after/TTK/survival/performance и итоговый отчёт.
+После fetch origin/main совпала с базой a089c62; перенос возможен fast-forward.
+Повторный npm run check:222 unit/39files, TS/lint/build успешно. Gameplay-код
+после предыдущих browser-проверок не менялся; их результаты сохранены ниже.
+Screenshots остаётся локальной/ignored. Разрешение на push действует только
+для этой публикации; deploy не выполняется. Следующий шаг — пользовательский тест.
+
+---
+
+# Combat Balance 2.0 — готово к пользовательскому тесту
+
+2026-11-02, `feature/combat-balance-2`, база чистый `main@a089c62`.
+Реализованы HP боссов/Guardian x3, агрессивный laser/recovery и прогресс-зависимый
+timeout Guardian; общий CDR Dash/Blink, шесть взаимоисключающих специализацийIII,
+HUD slot слева от пяти auto-skills и прежняя touch-кнопка; поздние скорость,
+каденс, Caster strafe/first shot, состав/направления волн и очистка mob-индикаторов.
+Основные файлы: config/{enemyDefinitions,encounters,pacing,mobilityUpgrades},
+systems/{Cooldown,EndgamePressure,MobilitySystem,GuardianEncounter,World,
+RareGuardianSystem,EnemySystem,SpecialEnemies,UpgradeSystem}, GameScene,
+EncounterArt, GameHUD, MobilityControl. Баланс auto-skills/обычного HP/cap150 сохранён.
+
+Baseline: check186unit и10 реальных E2E, PNG; исходники сохранены в локальном
+git archive. Затем одинаковая финальная fixture проверена на исходной версии:
+5 baseline diagnosis/реальных survival E2E прошли. Финальный check:222unit/39files,
+TS/lint/build — успешно; production4/4. Полная dev-матрица:110/111 за15.8min,
+единственный сбой performance-fixture из-за реального level-up исправлен явным
+удержанием исходных rankIII в нагрузочном тесте. Повтор28/28 включает этот stress,
+восемь сочетаний и10 рестартов. Последний контроль Frost Blink/Aura, карточек,
+Canvas и150mob со всеми auto-skills V/mobilityIII:ещё16/16. Все111 сценариев
+проверены с указанными повторами; ни один тест не отключён. Подробный отчёт и JSON:
+[combat-balance-2/REPORT.md](combat-balance-2/REPORT.md).
+
+AFK пока нельзя объявлять универсально исправленным: desktop baseline тоже
+погибал, и одни веса/скорости иногда увеличивали его время жизни. Это привело к
+проверенной правке Caster AI. В финальном реальном Phaser-тесте Mage39 без
+неуязвимости:AFK погиб за53.9s desktop/53.8s mobile, движение+Blink120s/180HP
+на обоих. Baseline AFK:34.4/62.8s; исходный пользовательский AFK не воспроизведён
+полностью. Прогресс давления неодинаков между условиями, это явно отражено в отчёте.
+Последний150mob stress:59.4–59.7 medianFPS,1.0–1.9ms p95 update, caps соблюдены.
+Canvas PNG лично просмотрены; пути в REPORT, файлы локальны/ignored. Новые FX
+без дополнительных GameObjects/timers; cleanup/clock/listeners/restart проверены.
+Остались ручная оценка точного билда/seed, Guardian fairness, слабых билдов,
+физических телефонов/highDPR и длительного heap/VRAM. Технических блокеров нет.
+Номерные done-маркеры не создаются. Push/merge/deploy нет. Работа остановлена
+для пользовательского тестирования; все изменения в feature-ветке.
+
+---
+
 # Публикация Gameplay Rework в main
 
 После завершения реализации пользователь прямо запросил push в main.

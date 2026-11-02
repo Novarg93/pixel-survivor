@@ -24,7 +24,7 @@ export class RareGuardianSystem {
   }
   spawned(w: World) { this.nextAt = w.elapsed + this.interval(); this.notice = { text: 'Редкий хранитель дремлет · ищите золотую звезду на радаре', until: w.elapsed + C.noticeDuration }; }
   awaken(w: World, e: Enemy) {
-    if (this.encounter?.ownerId === e.id) return;
+    if (this.encounter?.ownerId === e.id) { this.encounter.lastDamageAt = w.elapsed; return; }
     this.encounter = beginGuardianEncounter(w, e);
     this.notice = { text: 'Хранитель пробуждён! Следите за лучом и розовыми метками', until: w.elapsed + 3 };
   }
@@ -39,7 +39,7 @@ export class RareGuardianSystem {
     const current = w.rareGuardian;
     if (current && guardianVisible(w, current)) current.discovered = true;
     if (!current && this.encounter) this.complete(w, this.encounter.ownerId);
-    if (current && (w.elapsed - current.born >= C.lifetime || distance(current, w.player) > radarRadius(w.width, w.height) * C.abandonRadiusMultiplier || this.encounter && guardianExpired(w, current, this.encounter))) {
+    if (current && (!this.encounter && w.elapsed - current.born >= C.lifetime || distance(current, w.player) > radarRadius(w.width, w.height) * C.abandonRadiusMultiplier || this.encounter && guardianExpired(w, current, this.encounter))) {
       this.dismiss(w); return;
     }
     if (current && this.encounter) updateGuardianEncounter(w, current, this.encounter, dt);

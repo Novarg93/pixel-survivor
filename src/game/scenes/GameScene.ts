@@ -10,6 +10,7 @@ import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { type Facing } from '../art/assetRegistry';
 import { drawGuardianDanger } from '../art/EncounterArt';
+import { pressureAt } from '../systems/EndgamePressure';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -107,13 +108,15 @@ export class GameScene extends Phaser.Scene {
     drawGuardianDanger(this.effects, this.world, this.world.guardianSystem.encounter);
     for (const enemy of this.world.enemies) {
       if (enemy.kind === 'eclipse' && enemy.boss?.phase === 'windup') { this.effects.lineStyle(2, enemy.boss.stage === 2 ? 0xe3a2ff : 0x9ae5e3).strokeCircle(enemy.x, enemy.y, 40); for(let i=0;i<12;i++)if(i!==0&&i!==6){const a=Math.atan2(this.mage.y-enemy.y,this.mage.x-enemy.x)-Math.PI/12+i*Math.PI/6;this.effects.lineBetween(enemy.x+Math.cos(a)*28,enemy.y+Math.sin(a)*28,enemy.x+Math.cos(a)*47,enemy.y+Math.sin(a)*47);} }
-      if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.lineStyle(2, 0x9ccbf5, 0.9).strokeCircle(enemy.x, enemy.y, enemy.radius + 7);
-      if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 4, enemy.y - 16, enemy.x + 4, enemy.y - 16);
-      if (enemy.modifier === 'volatile') this.effects.lineStyle(1, 0xff83aa).strokeCircle(enemy.x, enemy.y, enemy.radius + 3);
+      if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.fillStyle(0x9ccbf5).fillRect(enemy.x - 3, enemy.y - 18, 6, 2).fillRect(enemy.x - 2, enemy.y - 16, 4, 3);
+      if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % pressureAt(this.world.elapsed).frenzyCycle < .4) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 3, enemy.y - 17, enemy.x + 3, enemy.y - 17);
+      if (enemy.modifier === 'volatile') this.effects.fillStyle(0xff83aa).fillRect(enemy.x - 2, enemy.y - 18, 4, 3);
       if (enemy.rush?.phase === 'windup') this.effects.lineStyle(18, 0xffa970, 0.18).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y).lineStyle(1, 0xffd896).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y);
-      if ((enemy.freezeUntil ?? 0) > this.world.elapsed) this.effects.lineStyle(2, 0xa9f2e5).strokeRect(enemy.x - 12, enemy.y - 15, 24, 28);
-      if (enemy.elite) this.effects.lineStyle(1, 0xffd68b, 1).strokeRect(enemy.x - enemy.radius - 3, enemy.y - enemy.radius - 8, enemy.radius * 2 + 6, enemy.radius * 2 + 8);
-      if (enemy.aim) this.effects.lineStyle(1, 0xff8ba7, 0.7).lineBetween(enemy.x, enemy.y, enemy.aim.x, enemy.aim.y).strokeCircle(enemy.x, enemy.y, 19);
+      if ((enemy.freezeUntil ?? 0) > this.world.elapsed) this.effects.fillStyle(0xa9f2e5).fillRect(enemy.x - 9, enemy.y + 3, 2, 5).fillRect(enemy.x + 7, enemy.y - 4, 2, 5);
+      if (enemy.aim) {
+        const a = Math.atan2(enemy.aim.y - enemy.y, enemy.aim.x - enemy.x), x = enemy.x + Math.cos(a) * 15, y = enemy.y + Math.sin(a) * 15;
+        this.effects.lineStyle(2, 0xffb1b7).lineBetween(enemy.x + Math.cos(a) * 7, enemy.y + Math.sin(a) * 7, x, y).fillStyle(0xffe1c4).fillRect(Math.round(x) - 1, Math.round(y) - 1, 3, 3);
+      }
       if (enemy.kind === 'charger' && enemy.boss?.phase === 'windup') { this.effects.lineStyle(46, 0xff906d, 0.2).lineBetween(enemy.x, enemy.y, enemy.boss.aim.x, enemy.boss.aim.y).lineStyle(2, 0xffd2a0, 0.9).lineBetween(enemy.x, enemy.y, enemy.boss.aim.x, enemy.boss.aim.y); }
       if (enemy.boss && (Math.abs(enemy.x - this.mage.x) > this.world.width / 2 - 20 || Math.abs(enemy.y - this.mage.y) > this.world.height / 2 - 20)) {
         const angle = Math.atan2(enemy.y - this.mage.y, enemy.x - this.mage.x), r = Math.min((this.world.width / 2 - 18) / Math.max(0.01, Math.abs(Math.cos(angle))), (this.world.height / 2 - 18) / Math.max(0.01, Math.abs(Math.sin(angle))));

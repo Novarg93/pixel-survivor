@@ -1,0 +1,523 @@
+{
+  "fixture": "Causal ablations in actual browser, fixed20Hz simulation, stationary enhanced Mage39, no test invulnerability. Deliberate single-system removals are diagnostic fixtures, not proposed nerfs.",
+  "result": [
+    {
+      "width": 640,
+      "probe": "normal",
+      "seconds": 58.35,
+      "hp": 0,
+      "hits": 10,
+      "blocked": 8,
+      "shots": 30,
+      "kills": 436,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 18754.048912499784
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 357.7113999999971
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 7167.287477499909
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 3813.963722499941
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "no-knockback",
+      "seconds": 41.85,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 5,
+      "shots": 27,
+      "kills": 314,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 13251.100869999904
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 181.0459999999993
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 6068.72662749994
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 2635.961614999969
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "no-frost",
+      "seconds": 30.7,
+      "hp": 0,
+      "hits": 10,
+      "blocked": 4,
+      "shots": 24,
+      "kills": 215,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 10030.372879999946
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 0
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 4020.672414999971
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 1457.0621049999884
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "single-fireball",
+      "seconds": 24.2,
+      "hp": 0,
+      "hits": 12,
+      "blocked": 3,
+      "shots": 30,
+      "kills": 148,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 3425.2636099999854
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 478.0128749999965
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 4810.233739999973
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 2051.5229749999908
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "no-caster-attacks",
+      "seconds": 120,
+      "hp": 162,
+      "hits": 1,
+      "blocked": 2,
+      "shots": 81,
+      "kills": 932,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 39232.84162499899
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 946.0254249999689
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 17708.836709999512
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 8398.524752499758
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "no-rusher-charges",
+      "seconds": 38.05,
+      "hp": 0,
+      "hits": 12,
+      "blocked": 5,
+      "shots": 22,
+      "kills": 281,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 11349.767842499916
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 91.37839999999969
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 5236.169404999952
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 3149.4655149999735
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "probe": "no-shield",
+      "seconds": 26.35,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 0,
+      "shots": 15,
+      "kills": 181,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 7647.988594999963
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 57.514999999999226
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 4139.798027499973
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 1477.816939999991
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "normal",
+      "seconds": 61.4,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 8,
+      "shots": 22,
+      "kills": 461,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 19954.658992499746
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 604.2423749999892
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 8095.878439999892
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 3468.817239999946
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "no-knockback",
+      "seconds": 53.95,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 8,
+      "shots": 19,
+      "kills": 414,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 17762.435159999815
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 701.528924999986
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 7957.3076149999
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 2517.7359749999673
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "no-frost",
+      "seconds": 49.2,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 6,
+      "shots": 20,
+      "kills": 371,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 17037.36159749984
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 0
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 5740.933937499939
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 2947.082189999961
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "single-fireball",
+      "seconds": 19.85,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 3,
+      "shots": 25,
+      "kills": 134,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 2588.2228849999897
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 785.4910749999982
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 3969.6241749999804
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 2112.8840774999917
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "no-caster-attacks",
+      "seconds": 120,
+      "hp": 163.15,
+      "hits": 1,
+      "blocked": 8,
+      "shots": 66,
+      "kills": 930,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 41068.88830499892
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 1756.0723999999739
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 17339.88945749952
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 6064.405012499821
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "no-rusher-charges",
+      "seconds": 74.85,
+      "hp": 0,
+      "hits": 11,
+      "blocked": 10,
+      "shots": 31,
+      "kills": 582,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 25823.434409999547
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 920.4014249999858
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 11295.838149999805
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 3386.388564999949
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "probe": "no-shield",
+      "seconds": 27.55,
+      "hp": 0,
+      "hits": 10,
+      "blocked": 0,
+      "shots": 10,
+      "kills": 198,
+      "damage": [
+        {
+          "id": "fireball",
+          "name": "Огненный шар",
+          "damage": 8297.62961249995
+        },
+        {
+          "id": "frost",
+          "name": "Морозный круг",
+          "damage": 255.93199999999717
+        },
+        {
+          "id": "lightning",
+          "name": "Цепная молния",
+          "damage": 4231.954112499977
+        },
+        {
+          "id": "meteor",
+          "name": "Метеор",
+          "damage": 1699.3861624999902
+        },
+        {
+          "id": "shield",
+          "name": "Тайный щит",
+          "damage": 0
+        }
+      ]
+    }
+  ]
+}

@@ -20,16 +20,23 @@ test('final live scale3 stress: eight class/map/viewport cases with attacks on, 
     });
     await page.waitForTimeout(500);
     const sampling = page.evaluate(async () => {
-      const frames: number[] = [], updates: number[] = [], start = performance.now(); let last = start, replenished = 0, maxProjectiles = 0, maxEffects = 0, maxOrbs = 0, minMobs = 150, maxObjects = 0;
+      const frames: number[] = [], updates: number[] = [], start = performance.now(); let last = start, replenished = 0, maxProjectiles = 0, maxEffects = 0, maxOrbs = 0, minMobs = 150, maxObjects = 0, heldUpgrades = 0;
       await new Promise<void>(resolve => { const tick = (now: number) => {
         const w = window.__PIXEL__!.world;
+        // Fixed-loadout performance fixture: real kills may now reach another
+        // XP threshold. Validate the offer, then hold the same five rankIII skills
+        // instead of measuring a paused picker or silently changing the workload.
+        if (w.status === 'upgrade') {
+          if (w.choices.length !== 3 || w.player.hp <= 0) throw new Error('Invalid stress upgrade transition');
+          w.experience.pending = 0; w.choices = []; w.status = 'playing'; heldUpgrades++;
+        }
         // Test-only refill keeps the real combat renderer at its150mob cap after kills.
         while (w.regularCount < 150) { const i = replenished++, a = i * 2.4; w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: w.player.x + Math.cos(a) * 160, y: w.player.y + Math.sin(a) * 160 }, i % 13 === 0); }
         frames.push(now - last); last = now; updates.push(window.__PIXEL__!.metrics().updateMs); minMobs = Math.min(minMobs, w.regularCount); maxProjectiles = Math.max(maxProjectiles, w.projectiles.length); maxEffects = Math.max(maxEffects, w.effects.length); maxOrbs = Math.max(maxOrbs, w.orbs.length); maxObjects = Math.max(maxObjects, window.__PIXEL__!.art().objects);
         if (now - start < 6000) requestAnimationFrame(tick); else resolve();
       }; requestAnimationFrame(tick); });
       const f = frames.slice(1).sort((a, b) => a - b), u = updates.sort((a, b) => a - b), { actors, ...art } = window.__PIXEL__!.art();
-      return { fps: f.length * 1000 / f.reduce((a, b) => a + b, 0), frameMsP95: f[Math.floor(f.length * .95)], updateMsP95: u[Math.floor(u.length * .95)], minMobs, maxProjectiles, maxEffects, maxOrbs, maxObjects, replenished, kills: window.__PIXEL__!.world.kills, playing: window.__PIXEL__!.world.status, abilities: window.__PIXEL__!.world.snapshot().abilities.map(a => ({ id: a.id, level: a.level, readyIn: a.readyIn })), actors: actors.length, art };
+      return { fps: f.length * 1000 / f.reduce((a, b) => a + b, 0), frameMsP95: f[Math.floor(f.length * .95)], updateMsP95: u[Math.floor(u.length * .95)], minMobs, maxProjectiles, maxEffects, maxOrbs, maxObjects, replenished, heldUpgrades, kills: window.__PIXEL__!.world.kills, playing: window.__PIXEL__!.world.status, abilities: window.__PIXEL__!.world.snapshot().abilities.map(a => ({ id: a.id, level: a.level, readyIn: a.readyIn })), actors: actors.length, art };
     });
     for (const key of ['d', 's', 'a', 'w']) { await page.keyboard.down(key); await page.waitForTimeout(1250); await page.keyboard.up(key); }
     const result = await sampling; expect(result.minMobs).toBe(150); expect(result.playing).toBe('playing'); expect(result.kills).toBeGreaterThan(0); expect(result.maxProjectiles).toBeLessThanOrEqual(96); expect(result.maxEffects).toBeLessThanOrEqual(96); expect(result.maxOrbs).toBeLessThanOrEqual(240); expect(result.abilities).toHaveLength(5); expect(result.abilities.every(a => a.level === 3)).toBe(true);

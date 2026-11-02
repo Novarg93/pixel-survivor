@@ -5,6 +5,7 @@ import type { Enemy } from '../entities/types';
 import { direction, distance } from '../utils/math';
 import { SpatialGrid } from './SpatialGrid';
 import { updateBoss } from './BossSystem';
+import { pressureAt } from './EndgamePressure';
 export class EnemySystem {
   private grid = new SpatialGrid<Enemy>();
   update(w: World, dt: number) {
@@ -17,11 +18,13 @@ export class EnemySystem {
       if (e.rush) { updateRusher(w, e, dt); continue; }
       const d = distance(e, w.player); let toward = direction(w.player.x - e.x, w.player.y - e.y);
       if (e.kind === 'caster') {
+        const pressure = pressureAt(w.elapsed), forward = toward;
         const multiplier = d < 150 ? -0.75 : d > 205 ? 1 : 0;
-        toward = { x: toward.x * multiplier, y: toward.y * multiplier };
-        if (d < 310 && w.elapsed >= e.shootAt && !e.aim) { e.aim = { x: w.player.x, y: w.player.y }; e.shootingAt = w.elapsed + 0.75; e.shootAt = w.elapsed + (e.elite ? 2.8 : 3.8); }
+        const strafe = d < 310 ? pressure.casterStrafe * (e.id % 2 ? 1 : -1) : 0;
+        toward = { x: forward.x * multiplier - forward.y * strafe, y: forward.y * multiplier + forward.x * strafe };
+        if (d < 310 && w.elapsed >= e.shootAt && !e.aim) { e.aim = { x: w.player.x, y: w.player.y }; e.shootingAt = w.elapsed + pressure.casterWarning; e.shootAt = w.elapsed + (e.elite ? pressure.eliteCasterCooldown : pressure.casterCooldown); }
         if (e.aim && w.elapsed >= e.shootingAt) {
-          const aim = direction(e.aim.x - e.x, e.aim.y - e.y); w.shoot({ x: e.x, y: e.y, vx: aim.x * 105, vy: aim.y * 105, damage: e.damage, hostile: true }); e.aim = undefined;
+          const aim = direction(e.aim.x - e.x, e.aim.y - e.y); w.shoot({ x: e.x, y: e.y, vx: aim.x * pressure.projectileSpeed, vy: aim.y * pressure.projectileSpeed, damage: e.damage, hostile: true }); e.aim = undefined;
         }
       }
       let sx = 0, sy = 0;

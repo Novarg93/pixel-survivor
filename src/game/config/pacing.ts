@@ -13,8 +13,12 @@ export const WAVES: readonly SpawnProfile[] = [
   { from: 420, name: 'Охота элит', interval: .7, burst: 3, cap: 140, elite: .16, weights: { grunt: 20, runner: 24, tank: 17, caster: 18, rusher: 11, splitter: 10 } },
   { from: 480, name: 'Сходятся угрозы', interval: .65, burst: 3, cap: 150, elite: .18, weights: { grunt: 18, runner: 22, tank: 18, caster: 20, rusher: 12, splitter: 10 } },
   { from: 540, name: 'Час затмения', interval: .62, burst: 3, cap: 150, elite: .2, weights: { grunt: 15, runner: 22, tank: 20, caster: 20, rusher: 12, splitter: 11 } },
-  { from: 600, name: 'Ночь осколков', interval: .6, burst: 3, cap: 150, elite: .22, weights: { grunt: 15, runner: 20, tank: 20, caster: 20, rusher: 13, splitter: 12 } },
+  { from: 600, name: 'Survival Overdrive', interval: .6, burst: 3, cap: 150, elite: .22, weights: { grunt: 8, runner: 25, tank: 12, caster: 25, rusher: 20, splitter: 10 } },
+  { from: 660, name: 'Перекрёстный огонь', interval: .6, burst: 3, cap: 150, elite: .23, weights: { grunt: 6, runner: 22, tank: 10, caster: 30, rusher: 20, splitter: 12 } },
+  { from: 720, name: 'Бегущие руны', interval: .6, burst: 3, cap: 150, elite: .24, weights: { grunt: 5, runner: 30, tank: 8, caster: 22, rusher: 25, splitter: 10 } },
+  { from: 840, name: 'Кольцо охоты', interval: .6, burst: 3, cap: 150, elite: .26, weights: { grunt: 5, runner: 24, tank: 12, caster: 25, rusher: 22, splitter: 12 } },
+  { from: 960, name: 'Рунный натиск', interval: .6, burst: 3, cap: 150, elite: .28, weights: { grunt: 5, runner: 24, tank: 10, caster: 27, rusher: 22, splitter: 12 } },
   { from: 1200, name: 'Бесконечная чаща', interval: .5, burst: 4, cap: 150, elite: .28, weights: { grunt: 10, runner: 30, tank: 20, caster: 20, rusher: 10, splitter: 10 } },
 ];
-export const SPEED_PACING = { perMinute: 1.05, cap: 1.45, runnerCap: 1.25, rusherCap: 1.3, maxSpeed: 118, runnerMaxSpeed: 100, rusherMaxSpeed: 88 } as const;
+export const SPEED_PACING = { perMinute: 1.05, cap: 2.25, runnerCap: 2.15, rusherCap: 2.2, maxSpeed: 128, runnerMaxSpeed: 148, rusherMaxSpeed: 138, lateFrom: 480, latePerMinute: .1, runnerLatePerMinute: .125 } as const;
 export const BOSS_PACING = { firstAt: 180, interval: 180, catchUpGap: 45, guardianSafetyWindow: 25 } as const;

@@ -7,6 +7,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`n
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.elapsed = 600; w.experience.level = 30; w.player.invulnerableUntil = 1e6; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
     for (const a of w.abilityDefinitions) w.abilities[a.id].level = 5;
+    for (let i = 0; i < 3; i++) w.mobility.upgrade(w, w.character === 'mage' ? 'shockwave' : 'impact-dash');
     for (let i = 0; i < 150; i++) { const e = w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 25, y: (Math.floor(i / 15) - 4) * 25 }, i % 11 === 0)!; e.hp = e.maxHp = 1e6; }
     const e = w.spawn('guardian', { x: 45, y: 0 })!; e.hp = e.maxHp = 1e6; w.damageEnemy(e, 1); w.mobility.activate(w, { x: 1, y: 0 });
   });

@@ -21,10 +21,10 @@ it('is passive until real damage, stays immobile and displays awakening once', (
 it('locks a visible beam warning, rotates at a bounded speed and permits a normal-speed dodge', () => {
   const { w, e } = setup(); w.damageEnemy(e, 1); phase(w, 'beam-warning');
   const s = w.guardianSystem.encounter!, angle = s.angle;
-  advance(w, .8, { x: 0, y: 1 }); expect(s.phase).toBe('beam-warning'); expect(s.angle).toBe(angle);
+  advance(w, .35, { x: 0, y: 1 }); expect(s.phase).toBe('beam-warning'); expect(s.angle).toBe(angle);
   phase(w, 'beam'); advance(w, C.beamDuration + .1);
   expect(s.phase).toBe('recovery'); expect(w.player.hp).toBe(100); expect(e.x).toBe(80);
-  expect(s.angle - angle).toBeLessThan(1.7);
+  expect(s.angle - angle).toBeCloseTo(C.beamTurnSpeed * C.beamDuration, 0);
 });
 it('telegraphs three fixed meteor areas with a route out on desktop and mobile', () => {
   for (const width of [640, 195, 130]) {
