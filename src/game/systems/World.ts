@@ -49,7 +49,14 @@ export class World {
   get rareGuardian() { return this.guardians[0]; }
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
-  clearTemporaryState() { for (const e of this.enemies) { e.mobilitySlowUntil = 0; if(e.boss){e.boss.phase='recover';e.boss.until=Infinity;e.boss.charge=undefined;e.shootingAt=0;} } this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
+  clearTemporaryState() {
+    for (const e of this.enemies) {
+      e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
+      if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.shootingAt = 0; }
+    }
+    this.effects = this.effects.filter(e => { if (e.kind !== 'frost' && e.kind !== 'meteor') return true; this.effectPool.release(e); return false; });
+    this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp);
+  }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   sounds: SoundCue[] = [];
@@ -206,7 +213,7 @@ export class World {
       if (impact.ownerId !== undefined && !this.enemies.some(e => e.id === impact.ownerId)) continue;
       if (impact.hostile) { if (distance(impact, this.player) < impact.radius + 9) this.damagePlayer(impact.damage); }
       else { for (const enemy of [...this.enemies]) if (distance(impact, enemy) < impact.radius + enemy.radius) this.damageEnemy(enemy, impact.damage, impact.source);
-        if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage, 3, 'meteor'); }
+        if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage * (impact.damageScale ?? 1), 3, 'meteor'); }
       this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5);
     }
     this.impacts = this.impacts.filter(i => i.landAt > this.elapsed);

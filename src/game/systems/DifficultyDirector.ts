@@ -20,6 +20,7 @@ export function speedMultiplierAt(seconds: number, kind: RegularKind) {
 }
 export function regularMoveSpeed(e: Enemy, now: number) {
   if (isBossKind(e.kind) || e.kind === 'guardian') return e.speed;
+  if ((e.freezeUntil ?? 0) > now) return 0;
   const p = pressureAt(now).progress;
   const limit = e.kind === 'runner' ? 100 + (S.runnerMaxSpeed - 100) * p : e.kind === 'rusher' ? 88 + (S.rusherMaxSpeed - 88) * p : 118 + (S.maxSpeed - 118) * p;
   const slow = Math.min(e.slowUntil > now ? e.slowFactor : 1, (e.mobilitySlowUntil ?? 0) > now ? MOBILITY_SPECIALIZATIONS.wallSlow : 1);

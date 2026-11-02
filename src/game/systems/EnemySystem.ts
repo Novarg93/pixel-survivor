@@ -6,6 +6,7 @@ import { direction, distance } from '../utils/math';
 import { SpatialGrid } from './SpatialGrid';
 import { updateBoss } from './BossSystem';
 import { pressureAt } from './EndgamePressure';
+import { novaMovementFactor } from './FrostControl';
 export class EnemySystem {
   private grid = new SpatialGrid<Enemy>();
   update(w: World, dt: number) {
@@ -13,8 +14,7 @@ export class EnemySystem {
     for (const e of w.enemies) {
       if (w.status !== 'playing') break;
       if (e.kind === 'guardian') { if (w.guardianSystem.encounters.has(e.id) && distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }
-      if ((e.freezeUntil ?? 0) > w.elapsed) continue;
-      if (e.boss) { updateBoss(w, e, dt); continue; }
+      if (e.boss) { updateBoss(w, e, dt * novaMovementFactor(e, w.elapsed)); continue; }
       if (e.rush) { updateRusher(w, e, dt); continue; }
       const d = distance(e, w.player); let toward = direction(w.player.x - e.x, w.player.y - e.y);
       if (e.kind === 'caster') {

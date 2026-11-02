@@ -115,7 +115,6 @@ export class GameScene extends Phaser.Scene {
       if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % pressureAt(this.world.elapsed).frenzyCycle < .4) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 3, enemy.y - 17, enemy.x + 3, enemy.y - 17);
       if (enemy.modifier === 'volatile') this.effects.fillStyle(0xff83aa).fillRect(enemy.x - 2, enemy.y - 18, 4, 3);
       if (enemy.rush?.phase === 'windup') this.effects.lineStyle(18, 0xffa970, 0.18).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y).lineStyle(1, 0xffd896).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y);
-      if ((enemy.freezeUntil ?? 0) > this.world.elapsed) this.effects.fillStyle(0xa9f2e5).fillRect(enemy.x - 9, enemy.y + 3, 2, 5).fillRect(enemy.x + 7, enemy.y - 4, 2, 5);
       if (enemy.aim) {
         const a = Math.atan2(enemy.aim.y - enemy.y, enemy.aim.x - enemy.x), x = enemy.x + Math.cos(a) * 15, y = enemy.y + Math.sin(a) * 15;
         this.effects.lineStyle(2, 0xffb1b7).lineBetween(enemy.x + Math.cos(a) * 7, enemy.y + Math.sin(a) * 7, x, y).fillStyle(0xffe1c4).fillRect(Math.round(x) - 1, Math.round(y) - 1, 3, 3);

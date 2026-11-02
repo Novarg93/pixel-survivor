@@ -2,6 +2,7 @@ import { GUARDIAN_ENCOUNTER as C } from '../config/encounters';
 import type { Enemy } from '../entities/types';
 import { distance, segmentDistance } from '../utils/math';
 import type { World } from './World';
+import { novaMovementFactor } from './FrostControl';
 
 export interface GuardianEncounter {
   ownerId: number; phase: 'awakening' | 'beam-warning' | 'beam' | 'recovery' | 'meteor-warning';
@@ -20,7 +21,7 @@ export function guardianLeash(w: World) {
 export function updateGuardianEncounter(w: World, e: Enemy, state: GuardianEncounter, dt: number) {
   if (w.status !== 'playing') return;
   if (state.phase === 'beam') {
-    state.angle += C.beamTurnSpeed * dt;
+    state.angle += C.beamTurnSpeed * dt * novaMovementFactor(e, w.elapsed);
     if (w.elapsed < state.until && w.elapsed >= state.nextDamageAt) {
       state.nextDamageAt = w.elapsed + C.damageInterval;
       if (segmentDistance(w.player, e, guardianBeamEnd(e, state)) < C.beamWidth / 2 + 9) w.damagePlayer(C.beamDamage);

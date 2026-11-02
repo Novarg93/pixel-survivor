@@ -1,5 +1,60 @@
 # Решения — интеграция HD Pixel Art
 
+## Frost Nova / Armageddon — 2026-11-02
+
+Ветка feature/frost-nova-armageddon от текущего ba00925, включая Balance Hotfix.
+До правок выполнен armageddon-benchmark:30одинаковых seeded сценариев,
+1/3группы по5целей, ranksI–V,3seed. JSON сохранён в docs/frost-armageddon.
+Прочитаны AGENTS/PLAN/tasks04,10, текущие abilities/targeting/CC/modifiers,
+upgrade pool, HD render и unit/E2E. HP, mob balance и Encounter Director не меняются.
+
+Нова: baseRadius73, ранги×[1,1.2,1.2,1.2,1.44], затем один общий stats.area.
+Вторые+20% считаются относительно улучшенного радиуса. Root1.2/1.2/1.2/1.7/2s.
+RankIII уменьшает именно baseCooldown2.8→2.38 до применения shared CDR/floor.35.
+16/22/28/34/40damage и прежний V+areaIII capstone×1.3 сохранены. Нова ищет
+дистанционную группу и не расходует cooldown при отсутствии допустимой цели.
+
+Существующий freezeUntil теперь означает root движения: EnemySystem продолжает
+caster AI/shots; regularMoveSpeed даёт0, Rusher charge не перемещается, но фазы
+и deadlines идут. Внешний knockback других способностей сохранён. После каждого
+root гарантирован gap2s; попадания не обновляют активный root/иммунитет.
+Прежняя эволюция Frost адаптирована: два попадания за4s дают+0.75s следующему
+разрешённому root, не чаще6s; общий gap2s остаётся после усиленного root.
+Это сохраняет смысл купленной эволюции, не возвращая отдельный stun, блокирующий AI.
+
+Боссы:20% movement slow на1s, затем2s resistance, без root; attack deadlines
+не меняются. Guardian неподвижен, поэтому ограниченный slow применяется к вращению
+луча1.4→1.12rad/s на1s, не к его урону, частоте ticks, warning, метеорам или фазам.
+Вне этого временного эффекта характеристики/AI прежние. Все параметры в mageAbilities.ts.
+
+Общий ground targeting: центр в310px и внутри viewport относительно игрока;
+мир не имеет конечных границ, AoE может пересекать край экрана. Проверяются все
+допустимые акторы<=156 (поиск только при cast), а не первые16. При равной плотности
+Meteor предпочитает группу с большим числом rooted целей. Стабильный порядокID,
+существующий seeded World.rng для равных кандидатов и смещения<=8px.
+Новые группы выбираются среди ещё не покрытых целей; если плотных групп больше
+нет, повторяется первая область с малым допустимым смещением.
+
+Meteor:1/1/2/2/3impact, каждый launchAt/landAt разнесён на.15s, первый летит.85s.
+Дополнительные удары×.75; evolution burn дополнительных ударов тоже×.75,
+чтобы не выдавать скрытый полный урон огня. Первый урон/radius/cooldown и общие
+damage modifiers сохранены. Старые24 hazard slots общие: используются только
+свободные, при нехватке последовательность укорачивается без очереди/удаления tells.
+Все координаты фиксируются при cast. Cooldown обеих способностей независим.
+
+HD: stepped ice ring/crystals и ножные ice cages в прежнем friendly Graphics14,
+ниже hostile tells20; отдельные камни/пиксельные хвосты Meteor и короткая вспышка.
+Renderer не расходует RNG, не создаёт новых GameObjects/textures/timers.
+Frost и meteor effect records явно возвращаются в pool при завершении/teardown,
+поскольку World.elapsed на GameOver останавливается и их expiry иначе не наступит.
+Пауза сохраняет игровые сроки. Сброс очищает root/slow/stacks/иммунитет и impacts.
+Итоговый check331unit/47files, TS/lint/build прошёл. Полный dev149passed/1failed:
+устаревшее ожидание slowUntil заменено на active root. Повтор final-qa и всех
+новых кейсов13/13 прошёл; production4/4. Одного полного150/150green не заявляем,
+все150уникальных сценариев в сумме прошли. Gameplay между полным и повтором
+не менялся. Финальные42PNG/Canvas просмотрены;24инвариантных файла свереныSHA.
+Результат сохранён локальным feature-коммитом для ручной проверки, без публикации.
+
 ## Balance Hotfix: HP / Blink walls — 2026-11-02
 
 Отдельная feature/balance-hp-blink-walls от main e9934b0. До правок сохранены

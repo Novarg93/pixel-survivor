@@ -11,7 +11,7 @@ export function updateRusher(w: World, e: Enemy, dt: number) {
   if (b.phase === 'approach') { const v = direction(w.player.x-e.x,w.player.y-e.y); const speed=regularMoveSpeed(e,w.elapsed); e.x += v.x * speed * dt; e.y += v.y * speed * dt;
     if (w.elapsed >= b.until && distance(e,w.player)<pressure.rusherRange) { b.phase='windup'; b.until=w.elapsed+pressure.rusherWarning; b.direction=v; b.aim={x:e.x+v.x*180,y:e.y+v.y*180}; }
   } else if (b.phase==='windup' && w.elapsed>=b.until) { b.phase='charge'; b.until=w.elapsed+0.45; }
-  else if (b.phase==='charge') { const slow=(e.mobilitySlowUntil??0)>w.elapsed?MOBILITY_SPECIALIZATIONS.wallSlow:1; e.x+=b.direction.x*400*slow*dt; e.y+=b.direction.y*400*slow*dt; if(w.elapsed>=b.until){b.phase='recover';b.until=w.elapsed+pressure.rusherRecovery;} }
+  else if (b.phase==='charge') { const slow=(e.freezeUntil??0)>w.elapsed?0:(e.mobilitySlowUntil??0)>w.elapsed?MOBILITY_SPECIALIZATIONS.wallSlow:1; e.x+=b.direction.x*400*slow*dt; e.y+=b.direction.y*400*slow*dt; if(w.elapsed>=b.until){b.phase='recover';b.until=w.elapsed+pressure.rusherRecovery;} }
   else if(b.phase==='recover' && w.elapsed>=b.until){b.phase='approach';b.until=w.elapsed+pressure.rusherApproach;}
   if(distance(e,w.player)<e.radius+9)w.damagePlayer(e.damage);
 }

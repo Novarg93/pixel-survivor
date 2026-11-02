@@ -1,3 +1,32 @@
+# Frost Nova / Armageddon — готово к ручному тесту
+
+2026-11-02, feature/frost-nova-armageddon отba00925.
+Frost Nova вместо ауры, shared ground targeting, movement-only root и bounded
+boss/Guardian slow. Armageddon1/1/2/2/3 со stagger.15s и75%extra damage.
+Файлы: config/mageAbilities, abilities/frostNova/targeting/meteor/tickAbilities,
+systems/FrostControl/EnemySystem/DifficultyDirector/SpecialEnemies/GuardianEncounter,
+World cleanup/burn scaling, MageMagic, definitions/UpgradeSystem, enemy types.
+Все параметры и решения: docs/DECISIONS.md; исходный Meteor baseline сохранён.
+Итоговый check331unit/47files,TS/lint/build прошёл. Новые unit26 +benchmark30сценариев.
+Полный dev:149passed/1failed за27.6min. Единственный fail — старый final-qa
+ожидал slowUntil от ауры; проверка обновлена на root. Повтор всего final-qa
+и новых10E2E:13/13 за1.4min. Таким образом все150уникальных сценариев проверены,
+но одного зелёного полного150/150 запуска не заявляем. Gameplay после полного
+прогона не менялся. Production4/4,30.1s. git diff --check чисто.
+Реальные Canvas ranksI/III/V1280×720/390×844, shooting подroot, expiry,
+sequential impacts/паузы/death/cleanup и5scene restarts прошли. Финальные PNG
+просмотрены: screenshots/frost-armageddon (42PNG), raw+SHA в docs/frost-armageddon.
+Stress150+3+3, всеMageV+эволюции,3активныхGuardian:58.9/59.3FPS,
+p95update2.4/1.5ms, cap96effects/24hazards соблюдён. Restarts:55/31objects
+наdesktop/mobile без роста за5циклов, textures/listeners/timers стабильны.
+24файла HP/пейсинга/Encounter/других умений/CDR/мобильности совпали сba00925.
+Средний урон Meteor за одинаковыйcast: I–II прежний, III–IV+75%, V+150%.
+HP, волны, другие умения/мобильность и расписание сохранены. Push/merge/deploy нет.
+Блокеров нет. Следующий шаг — пользовательский тест контроля и MeteorV;
+http://127.0.0.1:5194/ . Разработка остановлена, push/merge/deploy не выполнялись.
+
+---
+
 # Balance Hotfix: Boss HP / Blink Walls — готово к ручному тесту
 
 2026-11-02, feature/balance-hp-blink-walls от main e9934b0.
