@@ -36,7 +36,7 @@ export class MobilitySystem {
       if (walls.length >= S.wallCap) w.zones = w.zones.filter(z => z.id !== walls[0].id);
       if (w.impacts.length + w.zones.length >= 24) return;
       w.zones.push({ id: w.id(), x: (this.from.x + this.arrival.x) / 2, y: (this.from.y + this.arrival.y) / 2, radius: 0,
-        damage: this.variant === 'flame-trail' ? S.flameDamage[rank] * w.stats.damage : 0, source: 'mobility', expires: w.elapsed + S.wallDuration, nextTick: w.elapsed,
+        damage: this.variant === 'flame-trail' ? S.flameDamage[rank] * w.stats.damage : 0, source: 'mobility', expires: w.elapsed + S.wallDuration[rank], nextTick: w.elapsed,
         wall: { variant: this.variant, from: { ...this.from }, to: { ...this.arrival }, width: this.variant === 'flame-trail' ? S.flameWidth[rank] : S.slowingWidth[rank], nextHit: new Map() } });
     } else if (this.variant === 'arcane-sprint') w.buffs.refresh('arcane-sprint', w.elapsed, S.sprintDuration, { speed: S.sprintSpeed[rank] });
     else if (this.variant === 'absorb-shield') { this.absorb = w.effectiveMaxHp * S.absorbFraction[rank]; this.absorbUntil = w.elapsed + S.absorbDuration; }

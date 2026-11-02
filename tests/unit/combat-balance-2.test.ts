@@ -18,10 +18,10 @@ function quiet(character: 'mage' | 'warrior' = 'mage') {
 }
 function advance(w: World, seconds: number, input = { x: 0, y: 0 }) { for (let i = 0; i < Math.round(seconds * 20); i++) w.step(.05, input); }
 
-it.each([0, 180, 480, 600, 720, 1800])('triples exactly boss/Guardian base HP, preserves regular HP formula at %ss', seconds => {
+it.each([0, 180, 480, 600, 720, 1800])('applies the boss/Guardian HP hotfix once, preserves regular HP formula at %ss', seconds => {
   const w = quiet(); w.elapsed = seconds;
   for (const [kind, previous] of [['charger', 1500], ['sorcerer', 1900], ['eclipse', 2400], ['guardian', 1800]] as const) {
-    expect(w.spawn(kind)!.maxHp).toBeCloseTo(previous * 3 * scalesAt(seconds).hp);
+    expect(w.spawn(kind)!.maxHp).toBeCloseTo(previous * 3 * .7 * scalesAt(seconds).hp);
   }
   for (const kind of ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const) {
     expect(w.spawn(kind, undefined, true)!.maxHp).toBeCloseTo(ENEMIES[kind].hp * (1 + Math.min(3, seconds / 600) * .45) * 2);

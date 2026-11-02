@@ -1,3 +1,30 @@
+# Balance Hotfix: Boss HP / Blink Walls — готово к ручному тесту
+
+2026-11-02, feature/balance-hp-blink-walls от main e9934b0.
+В config/enemyDefinitions уменьшены только базыHP четырёх целей на30%.
+В mobilityUpgrades/MobilitySystem обе стены используют lifetime3/3.5/4s
+по рангу, обновлены описания. PlayerHealthBar: внутренняя высота6→5px,
+остальная геометрия/Absorb прежние. Добавлены16 детерминированных тестов
+balance-hotfix (runtimeHP3/5/7/9/10, timer/rewardGuardian, полныеticks,
+slow/VFXexpiry/pause/death/overlap), обновлены прежние ожидания текущего баланса.
+Новые реальные E2E balance-hotfix:4/4,12условий variant×rank×viewport.
+Screenshots/Canvas/rawJSON: screenshots/balance-hotfix; визуально просмотрены
+desktop/mobile и очистка. Отчёт/до-послеJSON/TTK: docs/balance-hotfix.
+Итоговый check304unit/45files,TS/lint/build прошёл. Полный dev E2E140/140
+одним запуском26.7min; production4/4,34.2s. git diff --check чисто.
+Просмотрены новые HP/Absorb PNG приzoom2/3 и продлённые стены на обоих viewport.
+Standard stress150+3+3:59.1–59.3FPS,p951.3–1.6ms. Повторные Space приCDRfloor
+для6специализаций:57.7–58.9FPS,p951.2–2.5ms,3–4cast/6s, максимум2стены.
+16 gameplay/config/render файлов совпадают сbaseline поLF SHA256.
+Два реальных seeded movingMage39 сценария10–12min выдержали120s без
+тестовой неуязвимости, stationary погибли17.3/18.8s; это ограниченный контроль,
+не гарантия любого билда. Данные сохранены в BROWSER_QA.json и INVARIANTS.json.
+Никаких изменений AI/волн/частот/урона/CDR, main/push/merge/deploy.
+Блокеров нет. Локально http://127.0.0.1:5194/ . Разработка остановлена;
+следующий шаг — пользовательский тест новых HP и урона/длительности Blink.
+
+---
+
 # Публикация текущего состояния в main — 2026-11-02
 
 Пользователь прямо запросил «пуш в мейн». Разрешение относится к текущему

@@ -2,7 +2,7 @@ import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 
 // Above the hero (10), below projectiles (12), friendly magic (14) and tells (20).
-export const PLAYER_HEALTH_BAR = { width: 34, height: 6, offsetY: -33, depth: 11, hpColor: 0x77cf8a, absorbColor: 0xb9eeff } as const;
+export const PLAYER_HEALTH_BAR = { width: 34, height: 5, offsetY: -33, depth: 11, hpColor: 0x77cf8a, absorbColor: 0xb9eeff } as const;
 export function playerHealthLayout(w: Pick<World, 'player' | 'effectiveMaxHp' | 'elapsed' | 'mobility' | 'status'>) {
   const c = PLAYER_HEALTH_BAR;
   return { x: w.player.x - c.width / 2, y: w.player.y + c.offsetY, width: c.width, height: c.height,
@@ -19,7 +19,7 @@ export class PlayerHealthBar {
     g.fillStyle(0x263d3b, 1).fillRect(p.x, p.y, p.width, p.height);
     g.fillStyle(c.hpColor, 1).fillRect(p.x, p.y, p.width * p.hp, p.height);
     if (p.absorb > 0) {
-      // Only the upper half is overlaid; the green HP portion stays visible.
+      // Only the upper two pixels are overlaid; green HP stays visible below.
       g.fillStyle(c.absorbColor, .75).fillRect(p.x, p.y, p.width * p.absorb, 2);
       g.fillStyle(0xe4faff, 1).fillRect(p.x, p.y, p.width * p.absorb, 1);
     }

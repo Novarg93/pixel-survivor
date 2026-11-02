@@ -60,7 +60,7 @@ it('uses the actual viewport-limited Blink segment, with no damage beyond A/B or
   w.mobility.tick(w); expect(inside.hp).toBe(9988);
   for (const e of [beforeA, afterB, lateral]) expect(e.hp).toBe(10000);
 });
-it('ticks each target at most once per0.5s, handles reentry, expires at2s and applies damage modifiers once', () => {
+it('ticks each target at most once per0.5s, handles reentry, expires at3s and applies damage modifiers once', () => {
   const w = setup('flame-trail'); w.stats.damage = 2; w.artifacts.grant(w, 'damage'); w.buffs.activate('fury', w.elapsed);
   const a = durable(w, 40), b = durable(w, 70); w.mobility.activate(w, { x: 1, y: 0 });
   w.mobility.tick(w); const damage = 12 * 2 * 1.08 * 1.5;
@@ -68,7 +68,7 @@ it('ticks each target at most once per0.5s, handles reentry, expires at2s and ap
   for (let i = 0; i < 100; i++) w.mobility.tick(w); expect(10000 - a.hp).toBeCloseTo(damage);
   a.y = 100; w.elapsed = .5; w.mobility.tick(w); expect(10000 - a.hp).toBeCloseTo(damage); expect(10000 - b.hp).toBeCloseTo(damage * 2);
   a.y = 0; w.mobility.tick(w); expect(10000 - a.hp).toBeCloseTo(damage * 2);
-  w.elapsed = 2; const hp = b.hp; w.mobility.tick(w); expect(b.hp).toBe(hp);
+  w.elapsed = 3; const hp = b.hp; w.mobility.tick(w); expect(b.hp).toBe(hp);
 });
 it('slows by40% without stacking or permanent speed changes, and respects Frost/control immunity', () => {
   const w = setup('slowing-flame', 3), e = durable(w, 40), speed = e.speed = 30;
@@ -76,8 +76,8 @@ it('slows by40% without stacking or permanent speed changes, and respects Frost/
   for (let i = 0; i < 50; i++) w.mobility.tick(w);
   expect(regularMoveSpeed(e, .05)).toBeCloseTo(speed * .6); expect(e.speed).toBe(speed); expect(boss.mobilitySlowUntil).toBeUndefined();
   e.slowUntil = 1; e.slowFactor = .4; expect(regularMoveSpeed(e, .05)).toBeCloseTo(speed * .4);
-  w.elapsed = 1.99; w.mobility.tick(w); expect(e.mobilitySlowUntil).toBe(2);
-  expect(regularMoveSpeed(e, 2)).toBe(speed); expect(e.speed).toBe(speed);
+  w.elapsed = 3.99; w.mobility.tick(w); expect(e.mobilitySlowUntil).toBe(4);
+  expect(regularMoveSpeed(e, 4)).toBe(speed); expect(e.speed).toBe(speed);
 });
 it('Slowing Flame also reduces an ordinary Rusher charge while leaving its base speed and deadlines intact', () => {
   const w = setup('slowing-flame'), e = w.spawn('rusher', { x: 40, y: 0 })!;

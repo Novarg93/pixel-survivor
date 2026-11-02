@@ -6,7 +6,7 @@
 
 Mobility Specializations/HUD,2026-11-02: основные vitals теперь в Phaser над
 героем, anchor(player.x,player.y-33). HP#77CF8A, Absorb#B9EEFF с alpha.75
-в верхней части полосы34x6 world pixels; зелёный остаётся видим. Это заменяет
+в верхней части полосы34x5 world pixels (Balance Hotfix: высота6→5); зелёный остаётся видим. Это заменяет
 основной розовый HP HUD Rework08, boss bars сохраняют прежний цвет. Depth11
 ниже projectile12/friendly14/tells20, один Graphics без новых текстур/timers.
 В Vue остаются character/level/XP% и доступное зеркало vitals, длинная XP-row
