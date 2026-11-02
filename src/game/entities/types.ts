@@ -9,4 +9,5 @@ export interface Projectile extends Point { id: number; vx: number; vy: number; 
 export interface Effect extends Point { id: number; kind: 'hit' | 'death' | 'frost' | 'lightning' | 'meteor' | 'shield' | 'cleave' | 'whirlwind'; radius: number; expires: number; color: number; target?: Point; started: number; duration: number; amount?: number }
 export interface XpOrb extends Point { id: number; value: number; expires: number }
 export interface Impact extends Point { id: number; radius: number; damage: number; landAt: number; hostile: boolean; ownerId?: number; source?: DamageSource }
-export interface Zone extends Point { id: number; radius: number; damage: number; expires: number; nextTick: number; source: DamageSource; ownerId?: number }
+export interface MobilityWall { variant: 'flame-trail' | 'slowing-flame'; from: Point; to: Point; width: number; nextHit: Map<number, number> }
+export interface Zone extends Point { id: number; radius: number; damage: number; expires: number; nextTick: number; source: DamageSource; ownerId?: number; wall?: MobilityWall }

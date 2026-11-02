@@ -3,7 +3,7 @@ import type { SeededRandom } from '../utils/SeededRandom';
 import type { Enemy } from '../entities/types';
 import { WAVES, SPEED_PACING as S, type SpawnProfile } from '../config/pacing';
 import { pressureAt } from './EndgamePressure';
-import { MOBILITY_FROST_SLOW } from '../config/mobilityUpgrades';
+import { MOBILITY_SPECIALIZATIONS } from '../config/mobilityUpgrades';
 export { WAVES, type SpawnProfile } from '../config/pacing';
 export function profileAt(seconds: number) { return [...WAVES].reverse().find(p => seconds >= p.from) ?? WAVES[0]; }
 export function pickEnemy(profile: SpawnProfile, rng: SeededRandom): RegularKind {
@@ -22,7 +22,7 @@ export function regularMoveSpeed(e: Enemy, now: number) {
   if (isBossKind(e.kind) || e.kind === 'guardian') return e.speed;
   const p = pressureAt(now).progress;
   const limit = e.kind === 'runner' ? 100 + (S.runnerMaxSpeed - 100) * p : e.kind === 'rusher' ? 88 + (S.rusherMaxSpeed - 88) * p : 118 + (S.maxSpeed - 118) * p;
-  const slow = Math.min(e.slowUntil > now ? e.slowFactor : 1, (e.mobilitySlowUntil ?? 0) > now ? MOBILITY_FROST_SLOW : 1);
+  const slow = Math.min(e.slowUntil > now ? e.slowFactor : 1, (e.mobilitySlowUntil ?? 0) > now ? MOBILITY_SPECIALIZATIONS.wallSlow : 1);
   return Math.min(limit, e.speed * speedMultiplierAt(now, e.kind) * frenzySpeed(e, now)) * slow;
 }
 export function frenzySpeed(e: Enemy, now: number) { const t = (now - e.born) % pressureAt(now).frenzyCycle; return e.modifier === 'frenzy' && t >= .4 && t < 2 ? 1.65 : 1; }

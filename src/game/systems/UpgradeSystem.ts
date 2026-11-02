@@ -1,7 +1,7 @@
 import type { World } from './World';
 import { ABILITIES } from '../abilities/definitions';
 import { distance } from '../utils/math';
-import { MOBILITY_MAX_RANK, MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
+import { MOBILITY_MAX_RANK, MOBILITY_SPECIALIZATION_LEVEL, MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
 const RANK_TEXT = {
   fireball: '+20% базового урона огня. V + Жар III: дополнительный пробивающий шар.',
   frost: '+6 урона и +8px радиуса. V + Широкий круг III: ледяная эволюция.',
@@ -16,7 +16,7 @@ const RANK_TEXT = {
 };
 export interface UpgradeDefinition { id: string; name: string; description: string; max: number; apply: (world: World) => void; eligible?: (world: World) => boolean }
 export const UPGRADES: UpgradeDefinition[] = [
-  ...MOBILITY_UPGRADES.map(u => ({ id: `mobility-${u.id}`, name: u.name, description: u.description + ' Одно направление мобильности за забег.', max: MOBILITY_MAX_RANK, eligible: (w: World) => w.character === u.character && (!w.mobility.variant || w.mobility.variant === u.id) && w.mobility.rank < MOBILITY_MAX_RANK, apply: (w: World) => { w.mobility.upgrade(w, u.id); } })),
+  ...MOBILITY_UPGRADES.map(u => ({ id: `mobility-${u.id}`, name: u.name, description: u.description + ' Одна специализация за забег.', max: MOBILITY_MAX_RANK, eligible: (w: World) => (w.status === 'playing' || w.status === 'upgrade') && w.character === u.character && w.experience.level >= MOBILITY_SPECIALIZATION_LEVEL && (w.mobility.variant ? w.mobility.variant === u.id : w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) && w.mobility.rank < MOBILITY_MAX_RANK, apply: (w: World) => { w.mobility.upgrade(w, u.id); } })),
   { id: 'damage', name: 'Жар углей', description: '+25% к урону способностей.', max: 5, apply: w => { w.stats.damage += 0.25; } },
   { id: 'cooldown', name: 'Быстрый ритуал', description: 'Перезарядка способностей быстрее на 10%.', max: 5, apply: w => { w.stats.cooldown *= 0.9; } },
   { id: 'projectiles', name: 'Двойная искра', description: '+1 огненный шар за атаку (до 4).', max: 3, apply: w => { w.stats.projectiles++; } },
@@ -36,6 +36,7 @@ export const SUPPLIES: UpgradeDefinition[] = [
 export function eligibleUpgrades(w: World) { return UPGRADES.filter(u => (u.id !== 'projectiles' || w.character === 'mage') && (w.upgrades[u.id] ?? 0) < u.max && (!u.eligible || u.eligible(w))); }
 export function chooseUpgrades(w: World) {
   const eligible = eligibleUpgrades(w);
+  if (!w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) return eligible.filter(u => u.id.startsWith('mobility-'));
   const pool = eligible.length >= 3 ? [...eligible] : [...eligible, ...SUPPLIES];
   const result: UpgradeDefinition[] = [];
   while (result.length < 3 && pool.length) result.push(pool.splice(w.rng.int(pool.length), 1)[0]);

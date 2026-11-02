@@ -51,23 +51,30 @@ export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility:
   }
 }
 
-// Small stepped pixels in the existing friendly-FX batch; no emitters or timers.
+// Bounded pixel clusters, drawn in the existing friendly batch below hostile tells.
 export function drawMobilityUpgrade(g: Phaser.GameObjects.Graphics, w: World, m: MobilitySystem, intensity: number) {
   if (w.status === 'over' || !m.variant) return;
-  const age = w.elapsed - m.upgradeStarted, t = age / .5;
-  const color = m.variant === 'frost-blink' ? 0xa7eee9 : m.variant === 'impact-dash' ? 0xffda9c : 0xd9baff;
-  if (t >= 0 && t < 1) {
-    const radius = (38 + m.rank * 8) * (.25 + .75 * t);
-    for (let i = 0; i < 24; i++) {
-      const a = i * Math.PI / 12, x = Math.round(m.arrival.x + Math.cos(a) * radius), y = Math.round(m.arrival.y + Math.sin(a) * radius);
-      g.fillStyle(0x37435d, (1 - t) * intensity).fillRect(x - 2, y - 2, 5, 5);
-      g.fillStyle(color, (1 - t) * intensity).fillRect(x - 1, y - 1, 3, 3);
-      if (i % 3 === 0) g.fillStyle(0xfff0d3, (1 - t) * intensity).fillRect(x, y - 3, 1, 2);
+  for (const zone of w.zones) if (zone.wall && zone.expires > w.elapsed) {
+    const wall = zone.wall, dx = wall.to.x-wall.from.x, dy = wall.to.y-wall.from.y, length = Math.hypot(dx,dy), steps = Math.max(1,Math.ceil(length/5));
+    const nx = -dy/length, ny = dx/length, cold = wall.variant === 'slowing-flame';
+    const fade = Math.min(1,(zone.expires-w.elapsed)*4)*Math.max(.35,intensity);
+    for(let i=0;i<=steps;i++)for(const side of [-1,0,1]){
+      const t=i/steps,x=Math.round(wall.from.x+dx*t+nx*side*wall.width*.28),y=Math.round(wall.from.y+dy*t+ny*side*wall.width*.28);
+      const rise=3+((Math.floor(w.elapsed*9+i*1.7+side*.9)%4+4)%4)*2;
+      g.fillStyle(cold?0x568f9d:0xb95743,fade*.8).fillRect(x-2,y-rise,4,rise+2);
+      g.fillStyle(cold?0x9bdfe5:0xf59e46,fade).fillRect(x-1,y-rise,2,rise);
+      g.fillStyle(cold?0xd9f3f7:0xffe2a3,fade).fillRect(x,y-rise+1,1,2);
     }
   }
-  const buff = Math.max(m.sprintUntil, m.armorUntil, m.momentumUntil);
-  if (buff > w.elapsed) for (let i = 0; i < 6; i++) {
-    const a = i * Math.PI / 3 + age * 2, r = m.armorUntil > w.elapsed ? 14 : 18;
-    g.fillStyle(m.armorUntil > w.elapsed ? 0xc8dce8 : color, .7 * intensity).fillRect(Math.round(w.player.x + Math.cos(a) * r), Math.round(w.player.y + Math.sin(a) * r), 2, 3);
+  const sprint=w.buffs.remaining('arcane-sprint',w.elapsed)>0,berserk=w.buffs.remaining('berserk',w.elapsed)>0,absorb=m.absorbValue(w.elapsed)>0;
+  if(absorb)for(const side of [-1,1])g.fillStyle(0xb9eeff,.65*intensity).fillRect(w.player.x+side*12-1,w.player.y-10,2,13).fillRect(w.player.x+side*10-1,w.player.y-13,3,3);
+  if(sprint||berserk)for(let i=0;i<6;i++){
+    const a=i*Math.PI/3+w.elapsed*3,r=sprint?16:13;
+    g.fillStyle(sprint?0xb58cfa:0xf5a76b,.85*intensity).fillRect(Math.round(w.player.x+Math.cos(a)*r),Math.round(w.player.y+Math.sin(a)*r),2,3);
+  }
+  const age=w.elapsed-m.upgradeStarted;
+  if(m.variant==='cleaving-dash' && age>=0&&age<.3)for(let i=0;i<10;i++){
+    const t=i/9,x=m.from.x+(m.arrival.x-m.from.x)*t,y=m.from.y+(m.arrival.y-m.from.y)*t;
+    g.fillStyle(0xffe0a5,(1-age/.3)*intensity).fillRect(Math.round(x)-1,Math.round(y)-3,2,6);
   }
 }

@@ -20,6 +20,7 @@ import { BOSS_CAP } from './BossSystem';
 import { EncounterDirector } from './EncounterDirector';
 import { bossAggressionAt } from '../config/encounterDirector';
 import { CHARGE_BOSS } from '../config/chargeBoss';
+import { MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
 import type { SoundCue } from '../services/AudioSystem';
 import { ScoreSystem } from './ScoreSystem';
 import { SpawnClock } from './SpawnClock';
@@ -40,9 +41,9 @@ export class World {
   readonly guardianSystem: RareGuardianSystem;
   readonly mobility = new MobilitySystem();
   facing = { x: 0, y: 1 };
-  get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed) * this.mobility.speedMultiplier(this.elapsed); }
-  get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed); }
-  get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown'); }
+  get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed) * this.buffs.modifier('speed', this.elapsed); }
+  get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
+  get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown') * this.buffs.modifier('cooldown', this.elapsed); }
   get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
   get guardians() { return this.enemies.filter(e => e.kind === 'guardian'); }
   get rareGuardian() { return this.guardians[0]; }
@@ -56,6 +57,7 @@ export class World {
   pause() { if (this.status === 'playing') this.status = 'paused'; }
   resume() { if (this.status === 'paused') this.status = 'playing'; }
   experience = new ExperienceSystem();
+  get upgradeLevel() { return this.experience.pending > 0 ? this.experience.level - this.experience.pending + 1 : this.experience.level; }
   upgrades: Record<string, number> = {};
   choices: UpgradeDefinition[] = [];
   offerId = 0;
@@ -114,7 +116,7 @@ export class World {
     if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
     if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
     const before = enemy.hp;
-    enemy.hp = Math.max(0, enemy.hp - amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
+    enemy.hp = Math.max(0, enemy.hp - amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
     if (!enemy.boss && enemy.kind !== 'guardian') { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
@@ -151,9 +153,13 @@ export class World {
     if (this.shield.activeUntil > this.elapsed && this.shield.charges > 0) {
       this.shield.charges--; this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability; this.effect('shield', this.player, 32, 0xa5c4ff); shieldPulse(this); return true;
     }
-    const mitigation = Math.min(this.warrior.ironUntil > this.elapsed ? 0.5 : 1, this.mobility.damageMultiplier(this.elapsed));
-    const hit = receiveDamage(this.player, amount * (1 - CHARACTERS[this.character].armor) * mitigation, this.elapsed);
-    if (hit) { this.sound('hurt'); this.effect('hit', this.player, 16, 0xff6f70); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
+    const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
+    const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
+    const absorbed = this.mobility.absorbDamage(this.elapsed, incoming);
+    const hpHit = receiveDamage(this.player, incoming - absorbed, this.elapsed);
+    const hit = hpHit || absorbed > 0;
+    if (absorbed > 0 && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
+    if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
   step(rawDelta: number, input: Point = { x: 0, y: 0 }) {
@@ -173,6 +179,7 @@ export class World {
     this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     if (this.status !== 'playing') return;
+    this.mobility.tick(this);
     this.enemies = this.enemies.filter(e => { const keep = e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
@@ -204,7 +211,7 @@ export class World {
     }
     this.impacts = this.impacts.filter(i => i.landAt > this.elapsed);
     this.zones = this.zones.filter(z => z.expires > this.elapsed);
-    for (const zone of this.zones) if (this.elapsed >= zone.nextTick) { zone.nextTick = this.elapsed + 0.5; for (const e of [...this.enemies]) if (distance(e, zone) < zone.radius + e.radius) this.damageEnemy(e, zone.damage, zone.source); }
+    for (const zone of this.zones) if (!zone.wall && this.elapsed >= zone.nextTick) { zone.nextTick = this.elapsed + 0.5; for (const e of [...this.enemies]) if (distance(e, zone) < zone.radius + e.radius) this.damageEnemy(e, zone.damage, zone.source); }
     if (this.status !== 'playing') return;
     for (const orb of [...this.orbs]) {
       const d = distance(orb, this.player);
@@ -227,13 +234,13 @@ export class World {
       mobility: this.mobility.snapshot(this), guardianPhase: this.guardianSystem.encounter?.phase ?? null,
       buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
       artifacts: this.artifacts.snapshot(), runNotice: this.guardianSystem.notice?.text ?? this.artifacts.notice?.text ?? null, guardianKills: this.scoring.guardianKills,
-      hp: this.player.hp, maxHp: this.effectiveMaxHp, kills: this.kills, score: this.score,
+      hp: this.player.hp, maxHp: this.effectiveMaxHp, absorb: this.mobility.absorbValue(this.elapsed), kills: this.kills, score: this.score,
       killsByKind: { ...this.scoring.byKind }, enemies: this.regularCount,
       level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),
       offerId: this.offerId, pending: this.experience.pending,
       choices: this.choices.map(c => {
         const ability = ABILITIES.find(a => 'rank-' + a.id === c.id);
-        return { id: c.id, name: c.name, description: c.description, tier: ability ? this.abilities[ability.id].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
+        return { id: c.id, name: c.name, description: c.description, category: MOBILITY_UPGRADES.find(u => `mobility-${u.id}` === c.id)?.category ?? null, tier: ability ? this.abilities[ability.id].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
       }),
       abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
       bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase })),

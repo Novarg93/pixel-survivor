@@ -33,7 +33,7 @@ for(const hero of ['Mage','Warrior'])for(const width of [1280,390])test(`150 reg
   test.setTimeout(40000);mkdirSync(directory,{recursive:true});const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:new RegExp('^'+hero)}).click();await page.getByRole('button',{name:'Начать забег'}).click();
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.elapsed=720;w.experience.level=39;w.player.invulnerableUntil=1e6;w.encounterDirector.nextAt=720;w.encounterDirector.update(w);w.encounterDirector.nextAt=1e6;
-    for(const a of w.abilityDefinitions)w.abilities[a.id].level=5;for(let i=0;i<3;i++)w.mobility.upgrade(w,w.character==='mage'?'shockwave':'impact-dash');
+    for(const a of w.abilityDefinitions)w.abilities[a.id].level=5;for(let i=0;i<3;i++)w.mobility.upgrade(w,w.character==='mage'?'flame-trail':'cleaving-dash');
     for(let i=0;i<150;i++)w.spawn((['grunt','runner','tank','caster','rusher','splitter'] as const)[i%6],{x:(i%15-7)*24,y:(Math.floor(i/15)-4)*24},i%11===0);
     w.guardians.forEach((g,i)=>{g.x=i===1?65:-20;g.y=(i-1)*165;g.discovered=true;w.damageEnemy(g,1);});for(const e of w.enemies)e.hp=e.maxHp=1e6;w.mobility.activate(w,{x:1,y:0});
   });

@@ -1,4 +1,5 @@
 import type { AbilityId } from '../game/abilities/types';
+import { MOBILITY_UPGRADES } from '../game/config/mobilityUpgrades';
 
 // Presentation only. Eligibility, tiers, RNG and effects remain in UpgradeSystem.
 export const SKILL_CARD_COLORS: Record<AbilityId, string> = {
@@ -11,6 +12,6 @@ export function upgradeIdentity(id: string) {
   if (/^(unlock|rank|evolve)-/.test(id) && Object.hasOwn(SKILL_CARD_COLORS, skill)) {
     return { family: skill, color: SKILL_CARD_COLORS[skill as AbilityId] };
   }
-  if (id.startsWith('mobility-')) return { family: 'mobility', color: '#9BCBC5' };
+  if (id.startsWith('mobility-')) return { family: 'mobility', color: MOBILITY_UPGRADES.find(u => `mobility-${u.id}` === id)?.color ?? '#9BCBC5' };
   return { family: 'general', color: '#A5B4C3' };
 }

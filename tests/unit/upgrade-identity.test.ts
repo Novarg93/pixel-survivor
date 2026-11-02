@@ -1,6 +1,7 @@
 import { expect, it } from 'vitest';
 import { SKILL_CARD_COLORS, upgradeIdentity } from '../../src/ui/upgradeIdentity';
 import { World } from '../../src/game/systems/World';
+import { MOBILITY_UPGRADES } from '../../src/game/config/mobilityUpgrades';
 import { chooseUpgrades, eligibleUpgrades } from '../../src/game/systems/UpgradeSystem';
 
 it('uses the exact Mage palette and the five distinct Warrior material colors for all skill card kinds', () => {
@@ -12,7 +13,7 @@ it('uses the exact Mage palette and the five distinct Warrior material colors fo
 });
 it('keeps general stats/supplies neutral and all mobility paths in a separate family', () => {
   for (const id of ['damage', 'cooldown', 'health', 'speed', 'projectiles', 'area', 'pickup', 'restore', 'nova', 'magnet']) expect(upgradeIdentity(id).family).toBe('general');
-  for (const id of ['shockwave', 'frost-blink', 'arcane-sprint', 'impact-dash', 'iron-charge', 'battle-momentum']) expect(upgradeIdentity(`mobility-${id}`)).toEqual({ family: 'mobility', color: '#9BCBC5' });
+  for (const u of MOBILITY_UPGRADES) expect(upgradeIdentity(`mobility-${u.id}`)).toEqual({ family: 'mobility', color: u.color });
 });
 it('presentation leaves seeded three-choice offers, eligibility and all gameplay state unchanged', () => {
   for (const character of ['mage', 'warrior'] as const) for (const seed of [1, 7, 12345]) {

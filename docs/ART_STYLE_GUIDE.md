@@ -4,6 +4,16 @@
 Версия 1, 2026-11-01. Этот документ закрепляет направление и контракт ресурсов;
 не означает, что все игровые объекты уже перерисованы.
 
+Mobility Specializations/HUD,2026-11-02: основные vitals теперь в Phaser над
+героем, anchor(player.x,player.y-33). HP#77CF8A, Absorb#B9EEFF с alpha.75
+в верхней части полосы34x6 world pixels; зелёный остаётся видим. Это заменяет
+основной розовый HP HUD Rework08, boss bars сохраняют прежний цвет. Depth11
+ниже projectile12/friendly14/tells20, один Graphics без новых текстур/timers.
+В Vue остаются character/level/XP% и доступное зеркало vitals, длинная XP-row
+удалена. Карточки mobility: Offensive#F59E46, Defensive#9BCBC5, Utility#B58CFA.
+Flame Trail рисуется ступенчатыми тёплыми языками пламени вдоль фактическогоAB,
+Slowing Flame — холодными голубыми; sprite emitters не используются.
+
 Upgrade Identity / Charge, 2026-11-02: рамки карточек3px определяются навыком,
 включая unlock/rank/evolve. Mage: Fireball#F05252, Frost#D9F3F7,
 Lightning#458FFF, Meteor#F59E46, Shield#B58CFA. Warrior использует материалы

@@ -12,7 +12,7 @@ import { GUARDIAN_ENCOUNTER as G } from '../../src/game/config/encounters';
 
 function quiet(character: 'mage' | 'warrior' = 'mage') {
   const w = new World(12345, { character, spawnRate: 0 });
-  w.encounterDirector.nextAt = 1e6;
+  w.encounterDirector.nextAt = 1e6; w.experience.level = 10;
   for (const a of Object.values(w.abilities)) a.level = 0;
   return w;
 }
@@ -59,62 +59,63 @@ it.each(MOBILITY_UPGRADES)('$id has no effects during pause, failed cooldown, di
   w.mobility.activate(w); advance(w, .2); const state = JSON.stringify(w.mobility);
   expect(w.mobility.activate(w)).toBe(false); expect(JSON.stringify(w.mobility)).toBe(state);
   w.clearTemporaryState(); expect(w.mobility.snapshot(w)).toMatchObject({ rank: 0, variant: null, readyIn: 0 });
-  expect(w.mobility.sprintUntil + w.mobility.armorUntil + w.mobility.momentumUntil).toBe(0); expect(w.mobility.upgradeStarted).toBe(-Infinity);
+  expect(w.buffs.modifier('speed', w.elapsed) + w.buffs.modifier('damage', w.elapsed) + w.mobility.absorbValue(w.elapsed)).toBe(2); expect(w.mobility.upgradeStarted).toBe(-Infinity);
   expect(quiet(definition.character).mobility.snapshot(w)).toMatchObject({ rank: 0, variant: null, readyIn: 0, sequence: 0 });
 });
 
-it.each(['shockwave', 'impact-dash'] as const)('%s damages only at successful arrival, once; pause/cooldown/death cannot retrigger', variant => {
-  const w = quiet(variant === 'shockwave' ? 'mage' : 'warrior'); applyUpgrade(w, 'mobility-' + variant);
-  const end = variant === 'shockwave' ? 112 : 96, e = w.spawn('tank', { x: end, y: 0 })!, before = e.hp;
+it.each(['flame-trail', 'cleaving-dash'] as const)('%s needs a successful cast; pause/cooldown/death cannot retrigger', variant => {
+  const w = quiet(variant === 'flame-trail' ? 'mage' : 'warrior'); applyUpgrade(w, 'mobility-' + variant);
+  const end = variant === 'flame-trail' ? 112 : 96, e = w.spawn('tank', { x: end, y: 0 })!, before = e.hp;
   w.pause(); expect(w.mobility.activate(w, { x: 1, y: 0 })).toBe(false); w.resume();
   expect(w.mobility.activate(w, { x: 1, y: 0 })).toBe(true);
-  if (variant === 'impact-dash') { expect(e.hp).toBe(before); w.pause(); w.mobility.update(w, 1); expect(e.hp).toBe(before); w.resume(); }
-  advance(w, .2); expect(before - e.hp).toBe(36);
-  expect(w.mobility.activate(w)).toBe(false); advance(w, .2); expect(before - e.hp).toBe(36);
+  if (variant === 'cleaving-dash') { expect(e.hp).toBe(before); w.pause(); w.mobility.update(w, 1); expect(e.hp).toBe(before); w.resume(); }
+  const damage = variant === 'flame-trail' ? 12 : 36;
+  advance(w, .2); expect(before - e.hp).toBe(damage);
+  expect(w.mobility.activate(w)).toBe(false); advance(w, .2); expect(before - e.hp).toBe(damage);
   w.player.invulnerableUntil = 0; w.damagePlayer(1e6); w.mobility.update(w, 1); expect(w.mobility.variant).toBeNull();
 });
 
 it('an interrupted Dash and a zero-length Blink produce no specialization effect', () => {
-  const w = quiet('warrior'); applyUpgrade(w, 'mobility-impact-dash'); const e = w.spawn('tank', { x: 96, y: 0 })!;
+  const w = quiet('warrior'); applyUpgrade(w, 'mobility-cleaving-dash'); const e = w.spawn('tank', { x: 96, y: 0 })!;
   w.mobility.activate(w, { x: 1, y: 0 }); w.mobility.update(w, .05); const hp = e.hp;
   w.mobility.protectedUntil = 0; w.damagePlayer(1e6); w.mobility.update(w, 1); expect(e.hp).toBe(hp);
-  const mage = quiet(); applyUpgrade(mage, 'mobility-shockwave'); mage.facing = { x: 0, y: 0 };
+  const mage = quiet(); applyUpgrade(mage, 'mobility-flame-trail'); mage.facing = { x: 0, y: 0 };
   expect(mage.mobility.activate(mage)).toBe(false); expect(mage.mobility.upgradeStarted).toBe(-Infinity);
 });
 
-it('Frost Blink slows nearby regulars briefly without freezing bosses or changing shield mechanics', () => {
-  const w = quiet(); applyUpgrade(w, 'mobility-frost-blink');
+it('Slowing Flame slows the actual segment without freezing bosses or changing shields', () => {
+  const w = quiet(); applyUpgrade(w, 'mobility-slowing-flame');
   const e = w.spawn('tank', { x: 112, y: 0 })!, far = w.spawn('tank', { x: 280, y: 0 })!, boss = w.spawn('charger', { x: 112, y: 0 })!;
-  w.mobility.activate(w, { x: 1, y: 0 }); expect(e.mobilitySlowUntil).toBe(1); expect(far.mobilitySlowUntil).toBeUndefined(); expect(boss.mobilitySlowUntil).toBeUndefined();
-  expect(regularMoveSpeed(e, .5)).toBeCloseTo(e.speed * .35); expect(regularMoveSpeed(e, 1.01)).toBe(e.speed);
+  w.mobility.activate(w, { x: 1, y: 0 }); w.mobility.tick(w); expect(e.mobilitySlowUntil).toBe(.15); expect(far.mobilitySlowUntil).toBeUndefined(); expect(boss.mobilitySlowUntil).toBeUndefined();
+  expect(regularMoveSpeed(e, .05)).toBeCloseTo(e.speed * .6); expect(regularMoveSpeed(e, .16)).toBe(e.speed);
 });
 
-it('Frost Blink and Frost Aura have independent deadlines and use the stronger slow without stacking', () => {
-  const w = quiet(); applyUpgrade(w, 'mobility-frost-blink'); const e = w.spawn('tank', { x: 112, y: 0 })!;
-  e.slowUntil = 5; e.slowFactor = .55; w.mobility.activate(w, { x: 1, y: 0 });
-  expect(regularMoveSpeed(e, .5)).toBeCloseTo(e.speed * .35);
-  expect(regularMoveSpeed(e, 1.1)).toBeCloseTo(e.speed * .55); expect(e.slowUntil).toBe(5);
-  e.slowFactor = .3; expect(regularMoveSpeed(e, .5)).toBeCloseTo(e.speed * .3);
+it('Slowing Flame and Frost Aura have independent deadlines and use the stronger slow without stacking', () => {
+  const w = quiet(); applyUpgrade(w, 'mobility-slowing-flame'); const e = w.spawn('tank', { x: 112, y: 0 })!;
+  e.slowUntil = 5; e.slowFactor = .8; w.mobility.activate(w, { x: 1, y: 0 }); w.mobility.tick(w);
+  expect(regularMoveSpeed(e, .05)).toBeCloseTo(e.speed * .6);
+  expect(regularMoveSpeed(e, .2)).toBeCloseTo(e.speed * .8); expect(e.slowUntil).toBe(5);
+  e.slowFactor = .3; expect(regularMoveSpeed(e, .05)).toBeCloseTo(e.speed * .3);
   expect(regularMoveSpeed(e, 5.1)).toBe(e.speed);
   w.clearTemporaryState(); expect(e.mobilitySlowUntil).toBe(0);
 });
 
-it('Sprint refreshes a bounded 2s buff and freezes on pause; Iron Charge uses strongest mitigation, no multiplication', () => {
+it('Sprint refreshes a bounded 2s buff; Absorb is consumed after armor and Iron Skin', () => {
   const w = quiet(); applyUpgrade(w, 'mobility-arcane-sprint'); const speed = w.effectiveSpeed;
-  w.mobility.activate(w); expect(w.effectiveSpeed).toBeCloseTo(speed * 1.2); w.pause(); advance(w, 3); expect(w.effectiveSpeed).toBeCloseTo(speed * 1.2);
+  w.mobility.activate(w); expect(w.effectiveSpeed).toBeCloseTo(speed * 1.3); w.pause(); advance(w, 3); expect(w.effectiveSpeed).toBeCloseTo(speed * 1.3);
   w.resume(); w.elapsed = 2; expect(w.effectiveSpeed).toBe(speed);
-  const iron = quiet('warrior'); applyUpgrade(iron, 'mobility-iron-charge'); iron.mobility.activate(iron); advance(iron, .2);
-  iron.elapsed = .3; const hp = iron.player.hp; iron.damagePlayer(20); expect(hp - iron.player.hp).toBeCloseTo(20 * .82 * .8);
-  iron.player.invulnerableUntil = 0; iron.warrior.ironUntil = 4; const hp2 = iron.player.hp; iron.damagePlayer(20); expect(hp2 - iron.player.hp).toBeCloseTo(20 * .82 * .5);
-  iron.elapsed = 1.5; expect(iron.mobility.damageMultiplier(iron.elapsed)).toBe(1);
+  const iron = quiet('warrior'); applyUpgrade(iron, 'mobility-absorb-shield'); iron.mobility.activate(iron); advance(iron, .2);
+  iron.elapsed = .3; const hp = iron.player.hp; iron.damagePlayer(20); expect(iron.player.hp).toBe(hp); expect(iron.mobility.absorbValue(iron.elapsed)).toBeCloseTo(37.5 - 20 * .82);
+  iron.player.invulnerableUntil = 0; iron.warrior.ironUntil = 4; iron.damagePlayer(20); expect(iron.player.hp).toBe(hp); expect(iron.mobility.absorbValue(iron.elapsed)).toBeCloseTo(37.5 - 20 * .82 - 20 * .82 * .5);
+  iron.elapsed = 3.3; expect(iron.mobility.absorbValue(iron.elapsed)).toBe(0);
 });
 
-it('Battle Momentum consumes exactly one Cleave, does not consume on failed target search, and expires', () => {
-  const w = quiet('warrior'); w.abilities.cleave.level = 1; applyUpgrade(w, 'mobility-battle-momentum');
-  w.mobility.activate(w, { x: 1, y: 0 }); advance(w, .2); expect(cleave(w)).toBe(false); expect(w.mobility.momentumUntil).toBeGreaterThan(w.elapsed);
-  const e = w.spawn('tank', { x: w.player.x + 40, y: 0 })!; cleave(w); expect(e.maxHp - e.hp).toBeCloseTo(34 * 1.25);
-  const hp = e.hp; cleave(w); expect(hp - e.hp).toBeCloseTo(34); expect(w.mobility.momentumUntil).toBe(0);
-  w.mobility.momentumUntil = 1; expect(w.mobility.consumeMomentum(2)).toBe(1);
+it('Berserk strengthens repeated Cleaves for2s and expires without altering base damage', () => {
+  const w = quiet('warrior'); w.abilities.cleave.level = 1; applyUpgrade(w, 'mobility-berserk');
+  w.mobility.activate(w, { x: 1, y: 0 }); advance(w, .2); expect(cleave(w)).toBe(false); expect(w.buffs.remaining('berserk',w.elapsed)).toBeGreaterThan(0);
+  const e = w.spawn('tank', { x: w.player.x + 40, y: 0 })!; e.hp=e.maxHp=1000; cleave(w); expect(e.maxHp - e.hp).toBeCloseTo(34 * 1.25);
+  const hp = e.hp; cleave(w); expect(hp - e.hp).toBeCloseTo(34 * 1.25);
+  w.elapsed=2.3; const after=e.hp; cleave(w); expect(after-e.hp).toBeCloseTo(34); expect(w.stats.damage).toBe(1);
 });
 
 it('late speeds and pressure continue growing at 8/10/12/16min with hard readable floors and fixed HP scaling', () => {

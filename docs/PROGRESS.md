@@ -1,3 +1,52 @@
+# Публикация текущего состояния в main — 2026-11-02
+
+Пользователь прямо запросил «пуш в мейн». Разрешение относится к текущему
+подготовленному проекту: Encounter Director2.0 (c7ff2b5), Upgrade Card Identity /
+Aggressive Charge (406a688) и Mobility Specializations / HUD. Предыдущие запреты
+push/merge для этих этапов заменены этим запросом; deploy не запрашивался.
+Fetch подтвердил origin/main57eb439, совпадающий с базой локального main;
+перенос возможен fast-forward. Повторный npm run check:288unit/44files,
+TypeScript/lint/build прошли, git diff --check чист. Gameplay-код после
+описанных ниже browser E2E не менялся; результаты и ограничения сохранены.
+Screenshots остаются локальными/ignored. Следующий шаг — пользовательский тест.
+
+---
+
+# Mobility Specializations / HUD — готово к ручному тесту
+
+2026-11-02, feature/mobility-specializations-hud от локального406a688.
+Реализованы6 специализаций в config/mobilityUpgrades, гарантированный выбор
+уровня10 в обычном LevelUpModal и ranksI–III только выбранного пути.
+MobilitySystem: segment walls/per-target ticks/slow, swept Cleaving Dash,
+Absorb, refresh Sprint/Berserk через BuffSystem. World: общий CDR/damage modifiers,
+раздельный порядок Arcane Shield и Absorb. Базовые Dash/Blink и5 auto skills сохранены.
+PlayerHealthBar/GameArt: один Graphics над героем, HP+частичный Absorb overlay,
+depth11 под снарядами/предупреждениями. GameHUD: level+XP%, без длинной XP-row.
+Все параметры/лимиты вынесены в конфиг, нет новых глобальных intervals.
+
+check:288 unit/44files, TS/lint/build прошли. Все6 вариантов пройдены в реальном
+UI на1280x720/390x844, HUD8/8 приzoom2/3 и3рестартах наусловие. Скриншоты
+лично просмотрены. Исправлена некорректная проверка total textures: чанки
+динамичны, постоянные атласы сравниваются отдельно, chunk cap48 сохранён.
+Production E2E4/4 (32.3s) прошёл. Полный dev134passed/1failed (23.7min): старый
+forced-death fixture Mage получил Arcane Shield и поглотил контрольныйhit.
+Fixture исправлен явной очисткой charges, игровая Shield-логика сохранена.
+Повтор всего gameplay-mobility и отдельный stress прошли5/5 (1.6min), включая
+12условий всех6специализаций/2viewport с многократными Space и150+3+3.
+Всего136уникальных dev-сценариев проверены успешно; одного зелёного полного
+135/135 запуска не заявляем. После полного прогона gameplay-код не менялся.
+11 файлов волн/врагов/боссов/base mobility/XP совпадают с baseline по LF SHA256.
+Данные/отчёт: docs/mobility-specializations-hud; PNG/raw: screenshots/
+mobility-specializations-hud. Standard stress59.5–59.8FPS/p95.9–1.1ms;
+повторные6специализаций при syntheticCDRfloor:58.3–58.8FPS/p95 1.1–2.5ms,
+3–4успешныхSpace за6s наусловие, все caps соблюдены.
+JSON, ссылки, PNG dimensions и базовые SHA проверены. Отчёт/измерения сохранены,
+локальная игра http://127.0.0.1:5194/ . Разработка остановлена для ручной проверки
+читаемости HP/пламени в плотных встречах, силы ролей/рангов и физических телефонов.
+Main не менялся, push/merge/deploy не выполнялись.
+
+---
+
 # Upgrade Card Identity / Aggressive Charge — готово к ручному тесту
 
 2026-11-02, feature/upgrade-identity-charge от c7ff2b5 (локально сохранённый

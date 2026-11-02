@@ -29,7 +29,7 @@ for (const hero of ['Mage', 'Warrior']) test(`${hero} Space is a single edge, re
   await page.keyboard.press('Space'); expect(await page.evaluate(() => window.__PIXEL__!.world.mobility.sequence)).toBe(2);
   await page.getByRole('dialog', { name: 'Новый уровень' }).getByRole('button').first().focus(); await page.keyboard.press('1');
   await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toHaveCount(0);
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = Math.max(w.elapsed, w.mobility.protectedUntil + .01); w.player.invulnerableUntil = 0; w.damagePlayer(1e6); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = Math.max(w.elapsed, w.mobility.protectedUntil + .01); w.player.invulnerableUntil = 0; w.shield.charges = 0; w.damagePlayer(1e6); });
   await page.keyboard.press('Space'); expect(await page.evaluate(() => window.__PIXEL__!.world.mobility.remaining)).toBe(0);
   await page.getByRole('button', { name: 'Начать заново' }).click(); expect(await page.evaluate(() => window.__PIXEL__!.world.snapshot().mobility)).toMatchObject({ readyIn: 0, sequence: 0 });
   expect(await page.evaluate(() => window.__PIXEL__!.listeners())).toEqual({ commands: 1, snapshots: 1, metrics: 1 }); expect(errors).toEqual([]);

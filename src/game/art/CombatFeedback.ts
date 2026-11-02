@@ -17,7 +17,7 @@ export class CombatFeedback {
     drawMageMagic(g, w, intensity, e => this.slams.owns(e));
     drawWarriorMagic(g, w, intensity, this.slams.bursts);
     drawMobility(g, w, w.mobility, intensity);
-    for (const z of w.zones) { g.fillStyle(0xf68d57, intensity * 0.12).fillCircle(z.x, z.y, z.radius).lineStyle(1, 0xffb76b, intensity * 0.6).strokeCircle(z.x, z.y, z.radius); for (let i = 0; i < 6; i++) g.fillRect(z.x + Math.cos(i * 4) * z.radius * 0.7, z.y + Math.sin(i * 4) * z.radius * 0.7 - Math.sin(w.elapsed * 7 + i) * 4, 3, 4); }
+    for (const z of w.zones) { if(z.wall)continue; g.fillStyle(0xf68d57, intensity * 0.12).fillCircle(z.x, z.y, z.radius).lineStyle(1, 0xffb76b, intensity * 0.6).strokeCircle(z.x, z.y, z.radius); for (let i = 0; i < 6; i++) g.fillRect(z.x + Math.cos(i * 4) * z.radius * 0.7, z.y + Math.sin(i * 4) * z.radius * 0.7 - Math.sin(w.elapsed * 7 + i) * 4, 3, 4); }
     for (const e of w.effects) {
       if (e.kind === 'cleave') continue; // HD crescent is drawn by GameArt.
       if (e.kind === 'frost' || e.kind === 'shield' || e.kind === 'lightning' || e.kind === 'meteor' && e.color !== 0xff829d) continue;

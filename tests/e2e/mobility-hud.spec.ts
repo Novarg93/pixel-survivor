@@ -1,0 +1,53 @@
+import { expect, test } from '@playwright/test';
+import { mkdirSync, writeFileSync } from 'node:fs';
+
+const directory = 'screenshots/mobility-specializations-hud';
+test.use({ hasTouch: true });
+for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) for (const zoom of [2, 3]) test(`world HP/Absorb, compact XP, level10 choice, zoom and clean restarts ${hero}/${width}/zoom${zoom}`, async ({ page }) => {
+  test.setTimeout(40000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
+  await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: `${zoom}×`, exact: true }).click(); await page.getByRole('button', { name: 'Готово' }).click();
+  await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; w.experience.level = 9; w.gainXp(w.snapshot().xpNext); });
+  const modal = page.getByRole('dialog', { name: 'Новый уровень' }); await expect(modal).toBeVisible(); await expect(modal.locator('.choice')).toHaveCount(3); await expect(modal).toContainText('Space · Специализация');
+  await page.screenshot({ path: `${directory}/guaranteed-${hero}-${width}-zoom${zoom}.png` });
+  const index = hero === 'Warrior' ? 1 : 2;
+  if (width === 390) await modal.locator('.choice').nth(index).tap(); else await page.keyboard.press(String(index + 1));
+  await expect(modal).toHaveCount(0);
+  expect(await page.evaluate(() => window.__PIXEL__!.world.mobility.variant)).toBe(hero === 'Warrior' ? 'absorb-shield' : 'arcane-sprint');
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.hp = w.effectiveMaxHp * .6; w.experience.xp = w.snapshot().xpNext * .25; });
+  await page.keyboard.down('d');
+  if (width === 390) await page.locator('.mobility-control').tap(); else await page.keyboard.press('Space');
+  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.mobility.sequence)).toBe(1);
+  await page.waitForFunction(() => window.__PIXEL__!.world.mobility.remaining === 0); await page.keyboard.up('d');
+  await expect(page.locator('.xp-compact')).toHaveText('25%'); await expect(page.locator('.xp-row,.hud progress')).toHaveCount(0);
+  await expect(page.getByRole('list', { name: 'Способности' }).getByRole('listitem')).toHaveCount(6);
+  await expect(page.getByRole('progressbar', { name: 'Здоровье', exact: true })).toHaveAttribute('aria-valuenow', hero === 'Warrior' ? '90' : '60');
+  const before = await page.evaluate(() => { const w = window.__PIXEL__!.world; return { bar: window.__PIXEL__!.art().playerHealth, player: { ...w.player }, absorb: w.mobility.absorbValue(w.elapsed), textures: window.__PIXEL__!.art().textures.filter(t => !t.startsWith('chunk-')) }; });
+  expect(before.bar.objects).toBe(1); expect(before.bar.depth).toBe(11); expect(before.bar.x! + before.bar.width! / 2).toBeCloseTo(before.player.x); expect(before.bar.y! - before.player.y).toBe(-33);
+  expect(before.bar.hp).toBeCloseTo(.6); expect(before.bar.absorb).toBe(hero === 'Warrior' ? .25 : 0);
+  if (hero === 'Warrior') await expect(page.getByRole('progressbar', { name: 'Absorb', exact: true })).toHaveAttribute('aria-valuenow', '37.5');
+  await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(80);
+  await page.screenshot({ path: `${directory}/hud-${hero}-${width}-zoom${zoom}.png` }); await page.locator('canvas').screenshot({ path: `${directory}/hud-canvas-${hero}-${width}-zoom${zoom}.png` });
+  const frozen = await page.evaluate(() => ({ bar: window.__PIXEL__!.art().playerHealth, time: window.__PIXEL__!.world.elapsed, absorb: window.__PIXEL__!.world.mobility.absorbValue(window.__PIXEL__!.world.elapsed) }));
+  await page.waitForTimeout(150); expect(await page.evaluate(() => ({ bar: window.__PIXEL__!.art().playerHealth, time: window.__PIXEL__!.world.elapsed, absorb: window.__PIXEL__!.world.mobility.absorbValue(window.__PIXEL__!.world.elapsed) }))).toEqual(frozen);
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.resume(); w.player.maxHp *= 2; });
+  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().playerHealth.hp)).toBeCloseTo(.3);
+  if (hero === 'Warrior') await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().playerHealth.absorb)).toBeCloseTo(.125);
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.invulnerableUntil = w.mobility.protectedUntil = 0; w.damagePlayer(1e9); });
+  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().playerHealth.visible)).toBe(false);
+  expect(await page.evaluate(() => { const w = window.__PIXEL__!.world; return [w.mobility.absorbValue(w.elapsed), w.zones.length, w.buffs.snapshot(w.elapsed).length]; })).toEqual([0, 0, 0]);
+  await page.evaluate(() => { for (const s of document.querySelectorAll('style')) if (s.textContent === '.overlay{display:none!important}') s.remove(); });
+  const cycles = [];
+  for (let i = 0; i < 3; i++) {
+    await page.evaluate(() => window.__PIXEL__!.restartScene()); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
+    await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.waitForFunction(() => window.__PIXEL__!.world.elapsed > .1);
+    const current = await page.evaluate(() => ({ listeners: window.__PIXEL__!.listeners(), art: window.__PIXEL__!.art(), mobility: window.__PIXEL__!.world.mobility.snapshot(window.__PIXEL__!.world) }));
+    expect(current.art.playerHealth.objects).toBe(1); expect(current.art.textures.filter(t => !t.startsWith('chunk-'))).toEqual(before.textures); expect(current.art.chunks).toBeLessThanOrEqual(48); expect(current.art.clock).toEqual([0, 0, 0]); expect(current.art.tweens).toBe(0);
+    expect(current.listeners).toEqual({ commands: 1, snapshots: 1, metrics: 1 }); expect(current.mobility).toMatchObject({ rank: 0, variant: null, absorb: 0 }); cycles.push({ objects: current.art.objects, healthObjects: current.art.playerHealth.objects });
+  }
+  expect(cycles[2].objects).toBe(cycles[0].objects); expect(errors).toEqual([]);
+  writeFileSync(`${directory}/hud-${hero}-${width}-zoom${zoom}.json`, JSON.stringify({ before, cycles, errors }, null, 2));
+});

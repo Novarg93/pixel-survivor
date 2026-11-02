@@ -2,12 +2,15 @@ import { expect, it } from 'vitest';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { World } from '../../src/game/systems/World';
 import { profileAt, speedMultiplierAt } from '../../src/game/systems/DifficultyDirector';
+import { isBossKind } from '../../src/game/config/enemyDefinitions';
 
 // Structural ten-minute replay. Invulnerability isolates pacing from pilot skill;
 // this is not evidence that an ordinary player can survive the balance.
 export function simulateTenMinutes() {
   const w = new World(12345), seen = new Set<number>(), bosses: { kind: string; at: number }[] = [], guardians: number[] = [];
   const minutes = [];
+  const attempts: { at: number; before: number; spawned: boolean }[] = [], spawn = w.spawn.bind(w);
+  w.spawn = (...args: Parameters<World['spawn']>) => { const before = w.bosses.length, e = spawn(...args); if (isBossKind(args[0])) attempts.push({ at: +w.elapsed.toFixed(2), before, spawned: !!e }); return e; };
   w.player.invulnerableUntil = 1e6;
   let peak = 0, lastSpawned = 0, encounterOverlaps = 0, peakGuardians = 0, peakBosses = 0;
   for (let tick = 0; tick < 12000; tick++) {
@@ -27,7 +30,7 @@ export function simulateTenMinutes() {
       lastSpawned = w.spawnedRegular;
     }
   }
-  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, peakGuardians, peakBosses, encounterOverlaps, bosses, guardians, events:w.encounterDirector.history, minutes };
+  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, peakGuardians, peakBosses, encounterOverlaps, bosses, guardians, attempts, events:w.encounterDirector.history, minutes };
 }
 
 it('replays ten minutes with a fixed seed deterministically and keeps the regular budget', () => {
@@ -36,9 +39,11 @@ it('replays ten minutes with a fixed seed deterministically and keeps the regula
   expect(result.peak).toBeLessThanOrEqual(150);
   expect(result.minutes).toHaveLength(10);
   expect(result.peakBosses).toBeLessThanOrEqual(3); expect(result.peakGuardians).toBeLessThanOrEqual(3);
-  expect(result.bosses.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600]);
-  expect(result.events.at(-1)).toMatchObject({minute:10,requestedBosses:3,skippedBosses:1});
-  expect(result.events.at(-1)!.bosses).toHaveLength(2);
+  expect(result.attempts.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600, 600]);
+  for (const attempt of result.attempts) expect(attempt.spawned).toBe(attempt.before < 3);
+  expect(result.bosses.map(b => b.at)).toEqual(result.attempts.filter(b => b.spawned).map(b => b.at));
+  expect(result.events.at(-1)).toMatchObject({minute:10,requestedBosses:3});
+  for (const event of result.events) expect(event.bosses.length + event.skippedBosses).toBe(event.requestedBosses);
   mkdirSync('.tmp/pacing', { recursive: true });
   writeFileSync(`.tmp/pacing/${process.env.PIXEL_PACING_PHASE ?? 'after'}.json`, JSON.stringify(result, null, 2));
 }, 60000);

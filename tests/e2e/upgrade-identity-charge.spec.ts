@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { SKILL_CARD_COLORS } from '../../src/ui/upgradeIdentity';
+import { upgradeIdentity } from '../../src/ui/upgradeIdentity';
 
 const directory = 'screenshots/upgrade-identity-charge';
 async function quiet(page: Page, hero = 'Mage') {
@@ -11,6 +11,7 @@ async function quiet(page: Page, hero = 'Mage') {
 async function offer(page: Page, ids: string[]) {
   await page.evaluate(async ids => {
     const w = window.__PIXEL__!.world, path = '/src/game/systems/UpgradeSystem.ts', { eligibleUpgrades } = await import(path);
+    w.experience.level = Math.max(10, w.experience.level);
     for (const a of w.abilityDefinitions) w.abilities[a.id].level = Math.max(4, w.abilities[a.id].level);
     w.gainXp(w.snapshot().xpNext - w.experience.xp + .001); w.experience.pending = 1;
     const pool = eligibleUpgrades(w); w.choices = ids.map(id => { const choice = pool.find((u: { id: string }) => u.id === id); if (!choice) throw new Error('Ineligible fixture: ' + id); return choice; });
@@ -24,7 +25,7 @@ for (const width of [1280, 390]) for (const hero of ['Mage', 'Warrior']) test(`s
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   try {
     await quiet(page, hero);
-    const groups = hero === 'Mage' ? [['rank-fireball', 'rank-frost', 'rank-lightning'], ['evolve-fireball', 'evolve-frost', 'evolve-lightning'], ['rank-meteor', 'rank-shield', 'damage'], ['evolve-meteor', 'evolve-shield', 'mobility-shockwave']] : [['rank-cleave', 'rank-whirlwind', 'rank-slam'], ['rank-blades', 'rank-iron', 'mobility-impact-dash']];
+    const groups = hero === 'Mage' ? [['rank-fireball', 'rank-frost', 'rank-lightning'], ['evolve-fireball', 'evolve-frost', 'evolve-lightning'], ['rank-meteor', 'rank-shield', 'damage'], ['evolve-meteor', 'evolve-shield', 'mobility-flame-trail']] : [['rank-cleave', 'rank-whirlwind', 'rank-slam'], ['rank-blades', 'rank-iron', 'mobility-cleaving-dash']];
     const evidence = [];
     for (const [group, ids] of groups.entries()) {
       await offer(page, ids); const cards = page.locator('.choice');
@@ -34,7 +35,7 @@ for (const width of [1280, 390]) for (const hero of ['Mage', 'Warrior']) test(`s
         const foreground = luminance(getComputedStyle(n.querySelector('small')!).color), background = luminance(s.backgroundColor);
         return { family: n.getAttribute('data-family'), color: s.borderTopColor, widths: [s.borderTopWidth, s.borderRightWidth, s.borderBottomWidth, s.borderLeftWidth], glow: s.boxShadow, rankContrast: (Math.max(foreground, background) + .05) / (Math.min(foreground, background) + .05) };
       }));
-      for (const row of colors) { const hex = SKILL_CARD_COLORS[row.family as keyof typeof SKILL_CARD_COLORS] ?? (row.family === 'mobility' ? '#9BCBC5' : '#A5B4C3'); const rgb = hex.match(/\w{2}/g)!.map(c => parseInt(c, 16)); expect(row.color).toBe(`rgb(${rgb.join(', ')})`); expect(row.widths).toEqual(['3px', '3px', '3px', '3px']); }
+      for (const [i, row] of colors.entries()) { const hex = upgradeIdentity(ids[i]).color; const rgb = hex.match(/\w{2}/g)!.map(c => parseInt(c, 16)); expect(row.color).toBe(`rgb(${rgb.join(', ')})`); expect(row.widths).toEqual(['3px', '3px', '3px', '3px']); }
       for (const row of colors) expect(row.rankContrast).toBeGreaterThanOrEqual(4.5);
       await cards.first().focus(); await expect(cards.first()).toBeFocused();
       await page.keyboard.press('Shift+Tab'); await expect(cards.last()).toBeFocused(); await page.keyboard.press('Tab'); await expect(cards.first()).toBeFocused();

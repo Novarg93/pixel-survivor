@@ -2,8 +2,8 @@ import type { World } from '../systems/World';
 import { distance, nearest } from '../utils/math';
 export function cleave(w: World) {
   const target=nearest(w.player,w.combatTargets,82*w.stats.area); if(!target)return false;
-  const angle=Math.atan2(target.y-w.player.y,target.x-w.player.x),level=w.abilities.cleave.level, momentum=w.mobility.consumeMomentum(w.elapsed);
-  for(const e of [...w.combatTargets])if(distance(e,w.player)<82*w.stats.area+e.radius && Math.cos(Math.atan2(e.y-w.player.y,e.x-w.player.x)-angle)>-0.2)w.damageEnemy(e,(26+level*8)*w.stats.damage*momentum,'cleave');
+  const angle=Math.atan2(target.y-w.player.y,target.x-w.player.x),level=w.abilities.cleave.level;
+  for(const e of [...w.combatTargets])if(distance(e,w.player)<82*w.stats.area+e.radius && Math.cos(Math.atan2(e.y-w.player.y,e.x-w.player.x)-angle)>-0.2)w.damageEnemy(e,(26+level*8)*w.stats.damage,'cleave');
   w.effect('cleave',w.player,82*w.stats.area,0xf4d2a0,0.25,{x:w.player.x+Math.cos(angle)*82,y:w.player.y+Math.sin(angle)*82}); w.sound('cast');return true;
 }
 export function whirlwind(w: World){w.warrior.whirlwindUntil=w.elapsed+1.2;w.warrior.whirlwindTick=w.elapsed;return true;}

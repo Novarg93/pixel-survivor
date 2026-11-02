@@ -6,20 +6,22 @@ import GameRadar from './GameRadar.vue';
 import RunArtifacts from './RunArtifacts.vue';
 import MobilityControl from './MobilityControl.vue';
 import { commands } from '../../game/events/bridge';
+import { xpPercent } from '../hudStatus';
 defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 </script>
 <template>
   <header class="hud">
     <div class="vitals">
-      <div class="health-label"><b>✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b><span>{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span></div>
-      <progress :value="state.hp" :max="state.maxHp" aria-label="Здоровье"></progress><small>УРОВЕНЬ {{ state.level }}</small>
+      <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b>
+      <div class="level-line"><small>УРОВЕНЬ {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Опыт" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ xpPercent(state.xp, state.xpNext) }}%</span></div>
+      <span class="health-accessibility" role="progressbar" aria-label="Здоровье" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
+      <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>
     <div class="run-clock"><b>{{ formatTime(state.elapsed) }}</b><small>{{ state.wave }}</small></div>
     <div class="run-score">
       <div><b>{{ state.score.toLocaleString('ru-RU') }}</b><small>ОЧКИ · {{ state.kills }} УБИЙСТВ</small></div>
       <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ</button>
     </div>
-    <div class="xp-row"><span>XP</span><progress :value="state.xp" :max="state.xpNext" aria-label="Опыт"></progress><small>{{ state.xp.toLocaleString('ru-RU', { maximumFractionDigits: 1 }) }} / {{ state.xpNext.toLocaleString('ru-RU') }}</small></div>
   </header>
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
   <GameRadar />
@@ -33,6 +35,8 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <div class="control-hint">W A S D <span>движение</span> <kbd>SPACE</kbd> <span>{{ state.mobility.name }}</span> <kbd>ESC</kbd> <span>пауза</span></div>
 </template>
 <style scoped>
+.hero-name{font:700 11px monospace;color:#f1e5cb}.level-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}.level-line small{margin:0;color:#d8e5e4;font:10px monospace}.xp-compact{font:700 11px monospace;color:#85d4cd;border-left:1px solid #819cae66;padding-left:8px}.health-accessibility{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+@media(max-width:600px){.hero-name{font-size:8px}.level-line{gap:4px;margin-top:7px}.level-line small{font-size:8px}.xp-compact{font-size:9px;padding-left:5px}}
 .run-extras{position:absolute;left:24px;top:112px;width:225px;display:flex;flex-direction:column;gap:9px;pointer-events:none}
 .run-extras :deep(.buff-dock),.run-extras :deep(.artifact-dock),.run-extras :deep(.run-notice){position:static;transform:none;width:100%;max-width:100%}
 .run-extras :deep(.artifact-dock){order:0}.run-extras :deep(.buff-dock){order:1}.run-extras :deep(.run-notice){order:2}
