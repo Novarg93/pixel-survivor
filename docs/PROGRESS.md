@@ -1,3 +1,41 @@
+# Encounter Director 2.0 — готово к ручному тесту
+
+feature/encounter-director-2 от main@57eb439,2026-11-02. Реализованы
+config/encounterDirector.ts и systems/EncounterDirector.ts — единое расписание
+3–12+ минут, свободные слоты, ограниченная история и отсутствие отложенной очереди.
+BossSystem/EclipseBoss применяют множители ходьбы/cooldown/recovery без накопления
+и изменения HP/телеграфов. RareGuardianSystem/GuardianEncounter/World поддерживают
+3 независимых Guardian, безопасные позиции, proximity wake, групповой артефакт
+и независимую очистку. GameArt/GuardianAnimation/EncounterArt/LootPresentation,
+RunArtifacts и radar/metrics отображают все3 цели. При сложных встречах временно
+снижаются spawn frequency обычных мобов и декоративный шум; cap150 сохранён.
+
+240 unit/41files, TypeScript/lint/build прошли. Новые6 реальных E2E прошли:
+три луча/9 метеорных зон, общая награда,5 рестартов на viewport и150+3+3 stress
+для Mage/Warrior на1280x720 и390x844. PNG получены и лично просмотрены.
+Детерминированный Mage39 без тестовой неуязвимости: стоящий19–23s до смерти,
+позиционирующийся с Blink переживает120s, получая настоящие попадания.
+Реальные Phaser RAF survival E2E4/4: стоящий15.8–18.4s до смерти,
+движущийся120s на обоих viewport,3/1 HP hits и28/31 Blink. Боссов убито6/4;
+Guardian-волну естественным боем пилот не завершил. Это явно ограничивает выводы.
+Production4/4 (28.6s), отдельный HD UI5/5 (23.9s). Обнаруженное перекрытие
+героя вспомогательной колонкой исправлено компактными артефактами и ограничением
+высоты со scroll. Полный повторный dev regression117/117 (16.7min) прошёл
+на окончательном коде; вместе с отдельным survival4/4 выполнен весь dev-набор121.
+Stress150+3+3:59.6–60.0FPS, p95 update.7–.9ms, все caps соблюдены; это Windows/
+Chromium/Ryzen7500F/32GiB, физические телефоны не измерялись.
+Таблица фактических событий и параметры AI: docs/encounter-director-2/*.json.
+Решения/ограничения наград записаны в DECISIONS. Push/merge/deploy нет.
+Полный отчёт: docs/encounter-director-2/REPORT.md; реальные Canvas PNG и raw
+Playwright samples: screenshots/encounter-director-2. Проверены JSON, ссылки,
+размеры1280x720/390x844 и измеренные лимиты. Main остаётся57eb439.
+Остаются ручные TTK/читаемость группы Guardian, естественная прокачка0–10min,
+другие seed/сборки, Warrior endgame, физические телефоны и длительный soak.
+Локальная игра для теста: http://127.0.0.1:5194/ . Разработка остановлена;
+push/merge/deploy не выполнялись. Следующий шаг — пользовательский игровой тест.
+
+---
+
 # Публикация Combat Balance 2.0 в main — 2026-11-02
 
 Пользователь прямо запросил «пуш в мейн» после завершения разработки.

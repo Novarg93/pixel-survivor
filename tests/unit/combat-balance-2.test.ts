@@ -12,7 +12,7 @@ import { GUARDIAN_ENCOUNTER as G } from '../../src/game/config/encounters';
 
 function quiet(character: 'mage' | 'warrior' = 'mage') {
   const w = new World(12345, { character, spawnRate: 0 });
-  w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+  w.encounterDirector.nextAt = 1e6;
   for (const a of Object.values(w.abilities)) a.level = 0;
   return w;
 }
@@ -159,7 +159,7 @@ it('Guardian never times out a progressing fight or a nearly finished kill, even
   const w = quiet(), e = w.spawn('guardian', { x: 80, y: 0 })!; w.elapsed = 470; w.damageEnemy(e, 1);
   w.elapsed += G.maxDuration + 1; e.hp = e.maxHp * .1; w.damageEnemy(e, 1); w.guardianSystem.update(w); expect(w.rareGuardian).toBe(e);
   w.elapsed += G.finishingGrace - 1; w.guardianSystem.update(w); expect(w.rareGuardian).toBe(e);
-  w.damageEnemy(e, e.hp); expect(w.rareGuardian).toBeUndefined(); expect(w.artifacts.items).toHaveLength(1);
+  w.damageEnemy(e, e.hp); expect(w.rareGuardian).toBeUndefined(); expect(w.artifacts.snapshot()).toHaveLength(1);
 });
 
 it.each(['mage', 'warrior'] as const)('%s can evade the faster Guardian beam with mobility, without test invulnerability', hero => {

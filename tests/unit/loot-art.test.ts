@@ -34,7 +34,7 @@ it('bounds visual bursts at24 and never represents distant cap replacement as pi
 });
 it('XP contact has a bounded six-unit echo and never delays XP or reacts to expiry', () => {
   const w = new World(4, { spawnRate: 0 }), art = new PickupAnimation(); w.experience.level = 30;
-  for (const a of Object.values(w.abilities)) a.level = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+  for (const a of Object.values(w.abilities)) a.level = 0; w.encounterDirector.nextAt = 1e6;
   for (let i = 0; i < 240; i++) w.dropXp(w.player, 1); art.prepare(w); w.step(.01); const after = JSON.stringify(w); art.update(w);
   expect(w.experience.xp).toBe(240); expect(w.orbs).toHaveLength(0); expect(art.bursts).toHaveLength(24); expect(art.bursts.every(p => p.key === 'xp')).toBe(true); expect(JSON.stringify(w)).toBe(after);
   art.clear(); w.dropXp(w.player, 1); art.prepare(w); w.elapsed = w.orbs[0].expires; w.step(.01); art.update(w); expect(art.bursts).toHaveLength(0);

@@ -14,7 +14,7 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
   for (const hero of ['Warrior', 'Mage']) for (const size of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(size); await start(page, hero); await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
     await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.options.spawnRate = 0; w.bossScheduler.nextAt = 100000;
+      const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.options.spawnRate = 0; w.encounterDirector.nextAt = 100000;
       for (const a of Object.values(w.abilities)) a.level = 0;
       w.spawn('grunt', { x: 38, y: -13 }, true)!.modifier = 'shielded'; w.spawn('grunt', { x: -38, y: 7 });
       w.spawn('grunt', { x: 70, y: 55 }); w.spawn('guardian', { x: -78, y: -55 });

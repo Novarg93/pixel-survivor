@@ -1,27 +1,16 @@
-import type { BossKind } from '../config/enemyDefinitions';
 import type { Enemy } from '../entities/types';
 import type { World } from './World';
 import { direction, distance } from '../utils/math';
 import { updateEclipse } from './EclipseBoss';
-import { BOSS_PACING } from '../config/pacing';
-export const BOSS_CAP = 3;
-export class BossScheduler {
-  nextAt: number = BOSS_PACING.firstAt; private index = 0;
-  lastAt = -Infinity;
-  poll(now: number, active: number, guardianActive = false): BossKind | undefined {
-    if (now < this.nextAt || guardianActive) return;
-    const kind = (['charger', 'sorcerer', 'eclipse'] as const)[this.index % 3];
-    this.nextAt = Math.max(this.nextAt + BOSS_PACING.interval, now + BOSS_PACING.catchUpGap); this.index++;
-    if (active >= BOSS_CAP) return;
-    this.lastAt = now; return kind;
-  }
-}
+import { ENCOUNTER_DIRECTOR } from '../config/encounterDirector';
+export const BOSS_CAP = ENCOUNTER_DIRECTOR.bossCap;
 export function updateBoss(w: World, e: Enemy, dt: number) {
   if (e.kind === 'eclipse') { updateEclipse(w, e, dt); return; }
   const b = e.boss; if (!b) return;
+  const movement = b.aggression?.movement ?? 1, frequency = b.aggression?.frequency ?? 1;
   if (b.phase === 'approach') {
     const toward = direction(w.player.x - e.x, w.player.y - e.y), d = distance(e, w.player);
-    if (d > (e.kind === 'charger' ? 150 : 220)) { e.x += toward.x * e.speed * dt; e.y += toward.y * e.speed * dt; }
+    if (d > (e.kind === 'charger' ? 150 : 220)) { e.x += toward.x * e.speed * movement * dt; e.y += toward.y * e.speed * movement * dt; }
     if (w.elapsed >= b.until && d < 360) {
       b.phase = 'windup'; b.until = w.elapsed + 1.1; b.direction = toward;
       b.aim = e.kind === 'charger' ? { x: e.x + toward.x * 260, y: e.y + toward.y * 260 } : { x: w.player.x, y: w.player.y };
@@ -34,11 +23,11 @@ export function updateBoss(w: World, e: Enemy, dt: number) {
     else {
       const aim = Math.atan2(b.aim.y - e.y, b.aim.x - e.x);
       for (let i = -2; i <= 2; i++) w.shoot({ x: e.x, y: e.y, vx: Math.cos(aim + i * 0.25) * 100, vy: Math.sin(aim + i * 0.25) * 100, damage: e.damage, hostile: true, ownerId: e.id });
-      b.phase = 'recover'; b.until = w.elapsed + 1.8;
+      b.phase = 'recover'; b.until = w.elapsed + 1.8 / frequency;
     }
   } else if (b.phase === 'charge') {
     e.x += b.direction.x * 400 * dt; e.y += b.direction.y * 400 * dt;
-    if (w.elapsed >= b.until) { b.phase = 'recover'; b.until = w.elapsed + 1.6; }
-  } else if (b.phase === 'recover' && w.elapsed >= b.until) { b.phase = 'approach'; b.until = w.elapsed + 2.6; }
+    if (w.elapsed >= b.until) { b.phase = 'recover'; b.until = w.elapsed + 1.6 / frequency; }
+  } else if (b.phase === 'recover' && w.elapsed >= b.until) { b.phase = 'approach'; b.until = w.elapsed + 2.6 / frequency; }
   if (distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage * (b.phase === 'charge' ? 1.25 : 1));
 }

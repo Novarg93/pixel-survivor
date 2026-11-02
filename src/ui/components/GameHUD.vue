@@ -39,4 +39,5 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 @media(max-width:1050px) and (min-width:601px){.control-hint{display:none}}
 @media(max-width:600px){.run-extras{left:auto;top:auto;right:15px;bottom:142px;width:225px;gap:7px}.run-extras :deep(.run-notice){font-size:9px;line-height:1.45}.run-extras :deep(.artifact-list){margin-top:4px}.run-extras :deep(.artifact-bonus){min-width:0;flex:0 0 calc(50% - 2px)}}
 @media(max-width:600px){.skill-dock{gap:3px;right:12px}.skill-dock :deep(.skill-slot){width:34px;height:43px}}
+@media(max-width:600px){.run-extras.run-extras{max-height:calc(50dvh - 190px);overflow-y:auto;overscroll-behavior:contain;pointer-events:auto;scrollbar-width:thin}}
 </style>

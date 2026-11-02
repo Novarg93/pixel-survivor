@@ -8,7 +8,7 @@ for (const width of [1280, 390]) for (const variant of MOBILITY_UPGRADES) test(`
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
   await page.getByRole('button', { name: new RegExp('^' + (variant.character === 'mage' ? 'Mage' : 'Warrior')) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(async () => {
-    const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+    const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6;
     for (const a of Object.values(w.abilities)) a.level = 0;
     const module = '/src/game/systems/UpgradeSystem.ts', { eligibleUpgrades } = await import(module);
     w.gainXp(20); w.choices = eligibleUpgrades(w).filter((u: { id: string }) => u.id.startsWith('mobility-'));

@@ -15,7 +15,7 @@ it('benchmarks boss TTK for two legal level39 builds at near and medium range', 
       for (const [id, count] of Object.entries(choices)) for (let i = 0; i < count; i++) expect(applyUpgrade(w, id)).toBe(true);
       expect(Object.values(w.upgrades).reduce((a, b) => a + b, 0)).toBe(38); w.experience.level = 39;
     }
-    w.elapsed = 600; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+    w.elapsed = 600; w.encounterDirector.nextAt = 1e6;
     const e = w.spawn(kind, { x: range, y: 0 })!, hp = e.hp;
     // Isolated sustained-DPS measurement only, explicitly not survival evidence.
     w.damagePlayer = () => false;
@@ -23,6 +23,6 @@ it('benchmarks boss TTK for two legal level39 builds at near and medium range', 
     result.push({ kind, strong, range, hp, seconds: +(w.elapsed - 600).toFixed(2), killed: e.hp === 0 });
     expect(e.hp).toBe(0);
   }
-  mkdirSync('docs/combat-balance-2', { recursive: true });
-  writeFileSync(`docs/combat-balance-2/${process.env.PIXEL_BALANCE_PHASE ?? 'after'}-ttk.json`, JSON.stringify({ fixture: 'Both builds have38 legal choices, level39. Strong: FireballV/FrostI/LightningIV/MeteorII/ShieldI, damageV/CDRV/projectilesIII/areaIII/speedIII/healthIV/pickupIII. Defensive: FireballI/FrostV/LightningI/MeteorIII/ShieldV, damageI/CDRV/areaIV/speedIV/healthV/pickupV. No artifacts. Targets held at65/180px, incoming damage disabled only for this DPS benchmark; no evasion or target competition.', result }, null, 2));
+  mkdirSync('.tmp/combat-balance-2', { recursive: true });
+  writeFileSync(`.tmp/combat-balance-2/${process.env.PIXEL_BALANCE_PHASE ?? 'after'}-ttk.json`, JSON.stringify({ fixture: 'Both builds have38 legal choices, level39. Strong: FireballV/FrostI/LightningIV/MeteorII/ShieldI, damageV/CDRV/projectilesIII/areaIII/speedIII/healthIV/pickupIII. Defensive: FireballI/FrostV/LightningI/MeteorIII/ShieldV, damageI/CDRV/areaIV/speedIV/healthV/pickupV. No artifacts. Targets held at65/180px, incoming damage disabled only for this DPS benchmark; no evasion or target competition.', result }, null, 2));
 });

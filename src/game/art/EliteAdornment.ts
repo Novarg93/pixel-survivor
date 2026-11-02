@@ -10,6 +10,7 @@ export class EliteAdornment {
   constructor(scene: Phaser.Scene) { this.graphics = scene.add.graphics().setName('elite-adornment').setDepth(2); }
   update(w: World) {
     const g = this.graphics.clear(); this.count = 0;
+    if (w.encounterDirector.crowded(w)) return;
     for (const e of w.enemies) {
       const asset = ELITE_ART[e.kind as RegularKind]; if (!e.elite || !asset) continue; this.count++;
       const scale = ASSET_REGISTRY[asset].worldScale, x = Math.round(e.x), y = Math.round(e.y), alpha = e.hitUntil > w.elapsed ? .85 : 1;

@@ -15,7 +15,7 @@ test('HD integration: comparable live 150-mob render benchmark', async ({ page, 
     await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => {
       const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.player.x = w.player.y = 0;
-      w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.bossScheduler.nextAt = 100000;
+      w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.encounterDirector.nextAt = 100000;
       for (const a of Object.values(w.abilities)) a.level = 0;
       for (let i = 0; i < 150; i++) { const e = w.spawn('grunt', { x: (i % 15 - 7) * 27, y: (Math.floor(i / 15) - 4.5) * 27 }, i < 2)!; if (e.elite) e.modifier = 'shielded'; }
       w.spawn('guardian', { x: 135, y: -70 });

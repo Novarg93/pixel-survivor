@@ -1,7 +1,11 @@
 import { expect, it } from 'vitest';
 import { World } from '../../src/game/systems/World';
-import { BossScheduler, updateBoss } from '../../src/game/systems/BossSystem';
-it('schedules bosses at three, six and nine minutes with paced catch-up', () => { const b = new BossScheduler(); expect(b.poll(179.99, 0)).toBeUndefined(); expect(b.poll(180, 0)).toBe('charger'); expect(b.poll(359.99, 0)).toBeUndefined(); expect(b.poll(360, 1)).toBe('sorcerer'); expect(b.poll(540, 2)).toBe('eclipse'); expect(b.poll(720, 3)).toBeUndefined(); expect(b.poll(721, 0)).toBeUndefined(); });
+import { updateBoss } from '../../src/game/systems/BossSystem';
+it('central director assigns the first boss at3min and the second at5min', () => {
+  const w=new World();w.elapsed=179.99;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(0);
+  w.elapsed=180;w.encounterDirector.update(w);expect(w.bosses[0].kind).toBe('charger');
+  w.elapsed=300;w.encounterDirector.update(w);expect(w.bosses.map(e=>e.kind)).toEqual(['charger','sorcerer']);
+});
 it('allows three bosses separately from 150 regular mobs', () => { const w = new World(); w.elapsed = 1300; for (let i = 0; i < 150; i++) w.spawn('grunt'); for (let i = 0; i < 5; i++) w.spawn('charger'); expect(w.bosses).toHaveLength(3); expect(w.enemies).toHaveLength(153); });
 it('charge is telegraphed, locks direction and has a recovery window', () => { const w = new World(); const e = w.spawn('charger', { x: 200, y: 0 })!; w.elapsed = 2; updateBoss(w, e, 0.01); expect(e.boss!.phase).toBe('windup'); const dir = { ...e.boss!.direction }; w.player.y = 100; w.elapsed = 3.2; updateBoss(w, e, 0.01); expect(e.boss!.phase).toBe('charge'); updateBoss(w, e, 0.1); expect(e.boss!.direction).toEqual(dir); expect(e.y).toBe(0); w.elapsed = 4; updateBoss(w, e, 0.01); expect(e.boss!.phase).toBe('recover'); const hp = e.hp; w.damageEnemy(e, 100); expect(hp - e.hp).toBe(125); });
 it('rune caster telegraphs dodgeable floor attacks then fires volley', () => { const w = new World(); const e = w.spawn('sorcerer', { x: 200, y: 0 })!; w.elapsed = 2; updateBoss(w, e, 0.01); expect(w.impacts).toHaveLength(3); expect(w.impacts.every(i => i.landAt >= w.elapsed + 1)).toBe(true); w.elapsed = 3.2; updateBoss(w, e, 0.01); expect(w.projectiles).toHaveLength(5); expect(e.boss!.phase).toBe('recover'); });

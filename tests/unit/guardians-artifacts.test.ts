@@ -10,48 +10,52 @@ import { meteor } from '../../src/game/abilities/meteor';
 import { fireball } from '../../src/game/abilities/fireball';
 import { chainLightning } from '../../src/game/abilities/chainLightning';
 
-function quiet(seed = 17) { const w = new World(seed); for (const a of Object.values(w.abilities)) a.level = 0; w.bossScheduler.nextAt = 100000; w.player.invulnerableUntil = 100000; return w; }
+function quiet(seed = 17) { const w = new World(seed); for (const a of Object.values(w.abilities)) a.level = 0; w.encounterDirector.nextAt = 100000; w.player.invulnerableUntil = 100000; return w; }
 const away = { x: 100, y: 100 };
 describe('rare guardian', () => {
-  it('requires a real visit before any ability, including the global Meteor, can target or damage it', () => {
-    const w = quiet(); w.elapsed = w.guardianSystem.nextAt; w.guardianSystem.update(w); const e = w.rareGuardian!, hp = e.hp;
-    w.abilities.fireball.level = w.abilities.meteor.level = w.abilities.lightning.level = 1;
-    expect(meteor(w)).toBe(false); expect(fireball(w)).toBe(false); expect(chainLightning(w)).toBe(false); expect(w.damageEnemy(e, 999999)).toBe(false); expect(e.hp).toBe(hp);
-    expect(radarFrame(w).markers.some(m => m.kind === 'guardian')).toBe(true);
-    w.player.x = e.x - 70; w.player.y = e.y; w.guardianSystem.update(w); expect(e.discovered).toBe(true); expect(fireball(w)).toBe(true); expect(meteor(w)).toBe(true); expect(chainLightning(w)).toBe(true); expect(e.hp).toBeLessThan(hp);
+  it('requires a real visit before distant global attacks can hit; radar still detects it', () => {
+    const w=quiet(), e=w.spawn('guardian')!, hp=e.hp;
+    w.abilities.fireball.level=w.abilities.meteor.level=w.abilities.lightning.level=1;
+    expect(meteor(w)).toBe(false); expect(fireball(w)).toBe(false); expect(chainLightning(w)).toBe(false);
+    expect(w.damageEnemy(e,999999)).toBe(false); expect(e.hp).toBe(hp); expect(radarFrame(w).markers.some(m=>m.id===e.id)).toBe(true);
+    w.player.x=e.x-70;w.player.y=e.y;w.guardianSystem.update(w);expect(e.discovered).toBe(true);
+    expect(fireball(w)).toBe(true);expect(meteor(w)).toBe(true);expect(chainLightning(w)).toBe(true);expect(e.hp).toBeLessThan(hp);
   });
-  it('appears on schedule deterministically outside the viewport inside radar, with an independent RNG', () => {
-    const w = quiet(), b = quiet(); w.elapsed = b.elapsed = w.guardianSystem.nextAt - 0.1; w.guardianSystem.update(w); expect(w.rareGuardian).toBeUndefined();
-    w.elapsed = b.elapsed = w.guardianSystem.nextAt; w.guardianSystem.update(w); b.guardianSystem.update(b);
-    const e = w.rareGuardian!; expect(e).toBeDefined(); expect({ x: e.x, y: e.y }).toEqual({ x: b.rareGuardian!.x, y: b.rareGuardian!.y });
-    expect(Math.abs(e.x - w.player.x) > w.width / 2 + e.radius || Math.abs(e.y - w.player.y) > w.height / 2 + e.radius).toBe(true);
-    expect(worldToRadar(e, w.player, radarRadius(w.width, w.height))).toBeDefined(); expect(e.hp).toBeGreaterThan(w.spawn('tank', away)!.hp * 10);
-    expect(w.guardianSystem.notice?.text).toContain('хранитель'); expect(w.rng.next()).toBe(b.rng.next());
+  it('uses the central minute4 schedule and deterministic safe spawn positions inside radar', () => {
+    const w=quiet(),b=quiet();w.encounterDirector.nextAt=b.encounterDirector.nextAt=240;
+    w.elapsed=b.elapsed=239.9;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(0);
+    w.elapsed=b.elapsed=240;w.encounterDirector.update(w);b.encounterDirector.update(b);
+    const e=w.rareGuardian!;expect({x:e.x,y:e.y}).toEqual({x:b.rareGuardian!.x,y:b.rareGuardian!.y});
+    expect(Math.abs(e.x)>w.width/2+e.radius||Math.abs(e.y)>w.height/2+e.radius).toBe(true);
+    expect(worldToRadar(e,w.player,radarRadius(w.width,w.height))).toBeDefined();expect(w.rng.next()).toBe(b.rng.next());
+    expect(w.encounterDirector.history[0].requestedGuardians).toBe(1);
   });
-  it('stays fixed despite movement, separation and damage; enforces cap independently of 150 mobs/3 bosses', () => {
-    const w = quiet(); w.elapsed = 1200; for (let i = 0; i < 150; i++) w.spawn('tank', { x: 90, y: 80 });
-    w.spawn('eclipse'); w.spawn('charger'); w.spawn('sorcerer'); const e = w.spawn('guardian', away)!;
-    expect(w.spawn('guardian', away)).toBeUndefined(); expect(w.regularCount).toBe(150); expect(w.bosses).toHaveLength(3); expect(w.enemies).toHaveLength(154);
-    w.damageEnemy(e, 1); for (let i = 0; i < 10; i++) w.step(0.05, { x: -1, y: 0 }); expect({ x: e.x, y: e.y }).toEqual(away);
-    expect(e.elite).toBe(false); expect(e.boss).toBeNull(); expect(w.spawnedRegular).toBe(150);
+  it('keeps three Guardians immobile with independent slots beside150 mobs and3 bosses', () => {
+    const w=quiet();w.elapsed=1200;for(let i=0;i<150;i++)w.spawn('tank',{x:90,y:80});
+    w.spawn('eclipse');w.spawn('charger');w.spawn('sorcerer');const e=w.spawn('guardian',away)!;
+    w.spawn('guardian',{x:260,y:100});w.spawn('guardian',{x:-100,y:160});expect(w.spawn('guardian',away)).toBeUndefined();
+    expect(w.regularCount).toBe(150);expect(w.bosses).toHaveLength(3);expect(w.enemies).toHaveLength(156);
+    w.damageEnemy(e,1);for(let i=0;i<10;i++)w.step(.05,{x:-1,y:0});expect({x:e.x,y:e.y}).toEqual(away);
+    expect(e.elite).toBe(false);expect(e.boss).toBeNull();expect(w.spawnedRegular).toBe(150);
   });
-  it('expires abandoned guardians without XP/score/drop or accumulating new enemies', () => {
-    const w = quiet(); const e = w.spawn('guardian', away)!; w.player.x = radarRadius(w.width, w.height) * G.abandonRadiusMultiplier + 200;
-    w.guardianSystem.update(w); expect(w.rareGuardian).toBeUndefined(); expect(w.score).toBe(0); expect(w.artifacts.items).toEqual([]); expect(w.orbs).toEqual([]);
-    w.player.x = 0; w.elapsed = w.guardianSystem.nextAt; w.guardianSystem.update(w); expect(w.rareGuardian).toBeDefined();
-    w.elapsed += G.lifetime; w.guardianSystem.update(w); expect(w.enemies.includes(e)).toBe(false); expect(w.rareGuardian).toBeUndefined();
+  it('abandons or expires an individual without score, XP, artifact or an automatic replacement', () => {
+    const w=quiet(),e=w.spawn('guardian',away)!;w.player.x=radarRadius(w.width,w.height)*G.abandonRadiusMultiplier+200;
+    w.guardianSystem.update(w);expect(w.guardians).toHaveLength(0);expect(w.score).toBe(0);expect(w.artifacts.snapshot()).toEqual([]);expect(w.orbs).toEqual([]);
+    w.player.x=0;w.elapsed=360;w.encounterDirector.nextAt=360;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(1);
+    w.elapsed+=G.lifetime;w.guardianSystem.update(w);expect(w.enemies.includes(e)).toBe(false);expect(w.guardians).toHaveLength(0);
   });
-  it('freezes the schedule during pause/upgrade and never catches up with multiple guardians', () => {
-    const w = quiet(); const due = w.guardianSystem.nextAt; w.elapsed = due - 1; w.pause(); w.step(100); w.guardianSystem.update(w); expect(w.rareGuardian).toBeUndefined();
-    w.resume(); w.gainXp(20); w.step(100); expect(w.elapsed).toBe(due - 1);
-    w.selectUpgrade(w.choices[0].id); w.elapsed += G.intervalMax * 10; w.guardianSystem.update(w); expect(w.enemies.filter(e => e.kind === 'guardian')).toHaveLength(1);
-    w.guardianSystem.update(w); expect(w.enemies.filter(e => e.kind === 'guardian')).toHaveLength(1); expect(w.guardianSystem.nextAt - w.elapsed).toBeGreaterThanOrEqual(G.intervalMin); expect(w.guardianSystem.nextAt - w.elapsed).toBeLessThanOrEqual(G.intervalMax);
+  it('freezes during pause/upgrade and coalesces skipped time windows instead of replaying a queue', () => {
+    const w=quiet();w.encounterDirector.nextAt=240;w.elapsed=239;w.pause();w.step(100);w.encounterDirector.update(w);expect(w.guardians).toHaveLength(0);
+    w.resume();w.gainXp(20);w.step(100);expect(w.elapsed).toBe(239);w.selectUpgrade(w.choices[0].id);
+    w.elapsed=720;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(3);expect(w.bosses).toHaveLength(3);
+    const ids=w.enemies.map(e=>e.id);w.encounterDirector.update(w);expect(w.enemies.map(e=>e.id)).toEqual(ids);expect(w.encounterDirector.nextAt).toBe(780);
+    expect(w.encounterDirector.history).toHaveLength(1);expect(w.encounterDirector.history[0].missedMinutes).toBe(8);
   });
-  it('drops exactly one physical artifact at death and no duplicate chest/consumable, never grants automatically', () => {
-    const w = quiet(); const e = w.spawn('guardian', away)!; w.damageEnemy(e, 999999, 'fireball'); w.damageEnemy(e, 999999);
-    expect(w.artifacts.items).toHaveLength(1); expect(w.artifacts.items[0]).toMatchObject(away); expect(w.artifacts.snapshot()).toEqual([]);
-    expect(w.loot.items).toEqual([]); expect(w.loot.chests).toEqual([]); expect(w.snapshot()).toMatchObject({ guardianKills: 1, regularKills: 0, eliteKills: 0, bossKills: 0 });
-    Object.assign(w.player, away); w.artifacts.update(w); expect(w.artifacts.items).toEqual([]); expect(w.artifacts.snapshot()).toHaveLength(1); w.artifacts.update(w); expect(w.artifacts.snapshot()[0].stacks).toBe(1);
+  it('awards one automatic artifact for a completed singleton wave and never duplicates any reward', () => {
+    const w=quiet(),e=w.spawn('guardian',away)!;w.artifacts.rng.next=()=>0;
+    w.damageEnemy(e,999999,'fireball');w.damageEnemy(e,999999);expect(w.artifacts.items).toHaveLength(0);
+    expect(w.artifacts.snapshot()).toHaveLength(1);expect(w.artifacts.snapshot()[0].stacks).toBe(1);expect(w.guardianSystem.completedWaves).toBe(1);
+    expect(w.loot.items).toEqual([]);expect(w.loot.chests).toEqual([]);expect(w.snapshot()).toMatchObject({guardianKills:1,regularKills:0,eliteKills:0,bossKills:0});
   });
 });
 
@@ -59,7 +63,7 @@ describe('permanent run artifacts', () => {
   it('derives modifiers independently, caps three stacks and excludes capped/reserved rewards', () => {
     const w = quiet(); for (const id of Object.keys(ARTIFACTS) as ArtifactId[]) { for (let i = 0; i < A.maxStacks; i++) expect(w.artifacts.grant(w, id)).toBe(true); expect(w.artifacts.grant(w, id)).toBe(false); }
     expect(w.effectiveMaxHp).toBe(130); expect(w.effectiveDamage).toBeCloseTo(1.24); expect(w.effectiveSpeed).toBeCloseTo(135 * 1.21); expect(w.effectiveCooldown).toBeCloseTo(0.82);
-    expect(w.artifacts.multiplier('experience')).toBeCloseTo(1.45); expect(w.artifacts.canDrop()).toBe(false); expect(w.spawn('guardian')).toBeUndefined();
+    expect(w.artifacts.multiplier('experience')).toBeCloseTo(1.45); expect(w.artifacts.canDrop()).toBe(false); expect(w.spawn('guardian')).toBeDefined();
     expect(w.player.maxHp).toBe(100); expect(w.stats.damage).toBe(1); expect(w.player.speed).toBe(135); expect(w.stats.cooldown).toBe(1);
     const b = quiet(); for (let i = 0; i < 3; i++) b.artifacts.drop(b, away, [{ artifact: 'health', weight: 1 }]); expect(b.artifacts.eligible().some(e => e.artifact === 'health')).toBe(false);
   });

@@ -21,4 +21,3 @@ export const WAVES: readonly SpawnProfile[] = [
   { from: 1200, name: 'Бесконечная чаща', interval: .5, burst: 4, cap: 150, elite: .28, weights: { grunt: 10, runner: 30, tank: 20, caster: 20, rusher: 10, splitter: 10 } },
 ];
 export const SPEED_PACING = { perMinute: 1.05, cap: 2.25, runnerCap: 2.15, rusherCap: 2.2, maxSpeed: 128, runnerMaxSpeed: 148, rusherMaxSpeed: 138, lateFrom: 480, latePerMinute: .1, runnerLatePerMinute: .125 } as const;
-export const BOSS_PACING = { firstAt: 180, interval: 180, catchUpGap: 45, guardianSafetyWindow: 25 } as const;

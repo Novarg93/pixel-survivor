@@ -75,7 +75,7 @@ test('death callback uses elite odds, caps six drops and the real scene removes 
 
 test('boss chests replace timed map chests and open on approach and reset all loot on repeated death and scene teardown', async ({ page }) => {
   const errors = errorsIn(page); await start(page);
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 180; w.bossScheduler.nextAt = 10000; w.damageEnemy(w.spawn('eclipse', { x: 60, y: 0 })!, 99999); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 180; w.encounterDirector.nextAt = 10000; w.damageEnemy(w.spawn('eclipse', { x: 60, y: 0 })!, 99999); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.loot.chests.length)).toBe(1);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.collectAllOrbs(); });
   while (await page.evaluate(() => window.__PIXEL__!.world.status === 'upgrade')) await page.getByRole('dialog', { name: 'Новый уровень' }).getByRole('button').first().click();
@@ -97,11 +97,11 @@ test('boss chests replace timed map chests and open on approach and reset all lo
 
 test('loot pools stay bounded at 150 mobs with both buffs and repeated allocations', async ({ page, browser }) => {
   test.setTimeout(30000); const errors = errorsIn(page); await start(page, 'Warrior', 'Dark Forest');
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.guardianSystem.nextAt = 100000; w.experience.level = 30; w.bossScheduler.nextAt = 10000; for (let i = 0; i < 150; i++) w.spawn('tank'); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.encounterDirector.nextAt = 100000; w.experience.level = 30; w.encounterDirector.nextAt = 10000; for (let i = 0; i < 150; i++) w.spawn('tank'); });
   const samples: Metrics[] = [];
   await page.keyboard.down('d');
   for (let i = 0; i < 20; i++) {
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.loot.clear(); w.guardianSystem.nextAt = 100000; w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury'); for (let j = 0; j < 12; j++) w.loot.drop(w, 'fury', { x: w.player.x + 80, y: w.player.y + 45 }); for (let j = 0; j < 8; j++) w.loot.spawnChest(w, { x: w.player.x - 60, y: w.player.y + 45 }, 'timed'); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.loot.clear(); w.encounterDirector.nextAt = 100000; w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury'); for (let j = 0; j < 12; j++) w.loot.drop(w, 'fury', { x: w.player.x + 80, y: w.player.y + 45 }); for (let j = 0; j < 8; j++) w.loot.spawnChest(w, { x: w.player.x - 60, y: w.player.y + 45 }, 'timed'); });
     await page.waitForTimeout(500); const m = await page.evaluate(() => window.__PIXEL__!.metrics()); samples.push(m);
     expect(m.enemies).toBeLessThanOrEqual(150); expect(m.loot.items).toBeLessThanOrEqual(6); expect(m.loot.chests).toBeLessThanOrEqual(4); expect(m.loot.buffs).toBe(2); expect(m.loot.trail).toBeLessThanOrEqual(12);
     expect(m.loot.allocatedItems).toBe(6); expect(m.loot.allocatedChests).toBe(4); expect(m.pooledSprites).toBeLessThanOrEqual(128); expect(m.sprites).toBeLessThanOrEqual(150 + 6 + 4);

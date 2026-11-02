@@ -9,7 +9,7 @@ test('causal stationary-build probes: control, knockback, fireball concentration
     const { World: Constructor } = await import(worldPath), { strongMage } = await import(fixturePath), { applyUpgrade } = await import(upgradePath);
     return [640, 195].flatMap(width => ['normal', 'no-knockback', 'no-frost', 'single-fireball', 'no-caster-attacks', 'no-rusher-charges', 'no-shield'].map(probe => {
       const w: World = new Constructor(12345); strongMage(w); w.upgrades.pickup--; w.stats.pickup -= 20; applyUpgrade(w, 'evolve-fireball'); for (let i = 0; i < 3; i++) w.artifacts.grant(w, 'damage');
-      w.elapsed = 600; w.width = width; w.height = width === 195 ? 422 : 360; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+      w.elapsed = 600; w.width = width; w.height = width === 195 ? 422 : 360; w.encounterDirector.nextAt = 1e6;
       let hits = 0, blocked = 0, shots = 0;
       const damage = w.damagePlayer.bind(w), damageEnemy = w.damageEnemy.bind(w), shoot = w.shoot.bind(w), spawn = w.spawn.bind(w);
       w.damagePlayer = amount => { const hp = w.player.hp, shield = w.shield.charges, ok = damage(amount); if (hp > w.player.hp) hits++; if (shield > w.shield.charges) blocked++; return ok; };
@@ -26,6 +26,6 @@ test('causal stationary-build probes: control, knockback, fireball concentration
       return { width, probe, seconds: +(w.elapsed - 600).toFixed(2), hp: +w.player.hp.toFixed(2), hits, blocked, shots, kills: w.kills, damage: w.snapshot().damageByAbility };
     }));
   });
-  expect(result).toHaveLength(14); mkdirSync('docs/combat-balance-2', { recursive: true });
-  writeFileSync(`docs/combat-balance-2/${process.env.PIXEL_BALANCE_PHASE ?? 'after'}-diagnosis.json`, JSON.stringify({ fixture: 'Causal ablations in actual browser, fixed20Hz simulation, stationary enhanced Mage39, no test invulnerability. Deliberate single-system removals are diagnostic fixtures, not proposed nerfs.', result }, null, 2));
+  expect(result).toHaveLength(14); mkdirSync('.tmp/combat-balance-2', { recursive: true });
+  writeFileSync(`.tmp/combat-balance-2/${process.env.PIXEL_BALANCE_PHASE ?? 'after'}-diagnosis.json`, JSON.stringify({ fixture: 'Causal ablations in actual browser, fixed20Hz simulation, stationary enhanced Mage39, no test invulnerability. Deliberate single-system removals are diagnostic fixtures, not proposed nerfs.', result }, null, 2));
 });

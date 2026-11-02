@@ -33,7 +33,7 @@ test('both bosses telegraph, take damage, die and render on desktop/mobile', asy
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await start(page);
   await page.evaluate(() => {
-    const w = window.__PIXEL__!.world; w.elapsed = 500; w.bossScheduler.nextAt = 600;
+    const w = window.__PIXEL__!.world; w.elapsed = 500; w.encounterDirector.nextAt = 600;
     for (const ability of Object.values(w.abilities)) ability.level = 3;
     for (let i = 0; i < 12; i++) w.spawn((['grunt', 'runner', 'tank', 'caster'] as const)[i % 4], { x: Math.cos(i * 0.7) * 130, y: Math.sin(i * 0.7) * 100 }, i % 3 === 0);
     const a = w.spawn('charger', { x: -200, y: -45 })!, b = w.spawn('sorcerer', { x: 170, y: 65 })!;

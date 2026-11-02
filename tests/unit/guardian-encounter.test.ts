@@ -5,13 +5,13 @@ import { guardianBeamEnd } from '../../src/game/systems/GuardianEncounter';
 function setup() {
   const w = new World(12345, { spawnRate: 0 });
   for (const a of Object.values(w.abilities)) a.level = 0;
-  w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+  w.encounterDirector.nextAt = 1e6;
   const e = w.spawn('guardian', { x: 80, y: 0 })!; return { w, e };
 }
 function advance(w: World, seconds: number, input = { x: 0, y: 0 }) { for (let i = 0; i < Math.round(seconds / .05); i++) w.step(.05, input); }
 function phase(w: World, name: string) { for (let i = 0; i < 500 && w.guardianSystem.encounter?.phase !== name; i++) w.step(.05); expect(w.guardianSystem.encounter?.phase).toBe(name); }
 it('is passive until real damage, stays immobile and displays awakening once', () => {
-  const { w, e } = setup(); w.player.x = e.x; w.player.y = e.y; advance(w, 5);
+  const { w, e } = setup(); advance(w, 5);
   expect(w.player.hp).toBe(100); expect(w.guardianSystem.encounter).toBeNull();
   w.player.x = 0; w.artifacts.grant(w, 'damage'); w.damageEnemy(e, 1); const activated = w.guardianSystem.encounter!.activatedAt;
   expect(w.artifacts.notice).not.toBeNull(); expect(w.snapshot().runNotice).toContain('пробуждён');
@@ -53,7 +53,7 @@ it.each(['kill', 'death', 'leave', 'timeout', 'dispose'] as const)('cleans owner
   else if (reason === 'timeout') { w.elapsed = C.maxDuration + 1; w.step(.05); }
   else w.clearTemporaryState();
   expect(w.guardianSystem.encounter).toBeNull(); expect(w.rareGuardian).toBeUndefined(); expect(w.impacts.filter(i => i.ownerId === e.id)).toHaveLength(0);
-  expect(w.artifacts.items).toHaveLength(reason === 'kill' ? 1 : 0);
+  expect(w.artifacts.snapshot()).toHaveLength(reason === 'kill' ? 1 : 0);
 });
 it('freezes all encounter deadlines during pause and upgrades and bounds repeated cycles', () => {
   const { w, e } = setup(); w.player.invulnerableUntil = 1e6; w.damageEnemy(e, 1); phase(w, 'beam-warning');

@@ -9,11 +9,12 @@ export function simulateTenMinutes() {
   const w = new World(12345), seen = new Set<number>(), bosses: { kind: string; at: number }[] = [], guardians: number[] = [];
   const minutes = [];
   w.player.invulnerableUntil = 1e6;
-  let peak = 0, lastSpawned = 0, encounterOverlaps = 0;
+  let peak = 0, lastSpawned = 0, encounterOverlaps = 0, peakGuardians = 0, peakBosses = 0;
   for (let tick = 0; tick < 12000; tick++) {
     while (w.status === 'upgrade') w.selectUpgrade(w.choices[0].id);
     w.step(.05, { x: Math.cos(w.elapsed * .07), y: Math.sin(w.elapsed * .07) });
     peak = Math.max(peak, w.regularCount);
+    peakGuardians = Math.max(peakGuardians, w.guardians.length); peakBosses = Math.max(peakBosses, w.bosses.length);
     if (w.rareGuardian && w.bosses.length) encounterOverlaps++;
     for (const e of w.enemies) if (!seen.has(e.id)) {
       seen.add(e.id);
@@ -26,7 +27,7 @@ export function simulateTenMinutes() {
       lastSpawned = w.spawnedRegular;
     }
   }
-  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, encounterOverlaps, bosses, guardians, minutes };
+  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, peakGuardians, peakBosses, encounterOverlaps, bosses, guardians, minutes };
 }
 
 it('replays ten minutes with a fixed seed deterministically and keeps the regular budget', () => {
@@ -34,8 +35,8 @@ it('replays ten minutes with a fixed seed deterministically and keeps the regula
   expect(result).toEqual(simulateTenMinutes());
   expect(result.peak).toBeLessThanOrEqual(150);
   expect(result.minutes).toHaveLength(10);
-  expect(result.encounterOverlaps).toBe(0);
-  expect(result.bosses.map(b => b.at)).toEqual([180, 360, 540]);
+  expect(result.peakBosses).toBeLessThanOrEqual(3); expect(result.peakGuardians).toBeLessThanOrEqual(3);
+  expect(result.bosses.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600, 600]);
   mkdirSync('.tmp/pacing', { recursive: true });
   writeFileSync(`.tmp/pacing/${process.env.PIXEL_PACING_PHASE ?? 'after'}.json`, JSON.stringify(result, null, 2));
 }, 60000);

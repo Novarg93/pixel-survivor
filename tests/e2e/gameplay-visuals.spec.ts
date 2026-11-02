@@ -11,7 +11,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`$
     const hashes = [];
     for (const rank of [1, 5]) {
       const actual = await page.evaluate(({ id, rank }) => {
-        const w = window.__PIXEL__!.world; w.resume(); w.elapsed = Math.ceil(Math.max(40, w.elapsed)) + 2; w.player.x = w.player.y = 0; w.player.invulnerableUntil = 1e6; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+        const w = window.__PIXEL__!.world; w.resume(); w.elapsed = Math.ceil(Math.max(40, w.elapsed)) + 2; w.player.x = w.player.y = 0; w.player.invulnerableUntil = 1e6; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6;
         w.enemies = []; w.effects = []; w.impacts = []; w.projectiles = []; w.zones = []; w.shield.charges = 0; w.shield.activeUntil = 0; w.warrior.bladesUntil = w.warrior.ironUntil = w.warrior.whirlwindUntil = 0;
         for (const a of Object.values(w.abilities)) { a.level = 0; a.readyAt = 0; }
         w.abilities[id].level = rank;

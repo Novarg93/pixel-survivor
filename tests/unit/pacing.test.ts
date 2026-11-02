@@ -22,27 +22,18 @@ it('updates already-living enemies and limits fast elites including frenzy witho
   e.slowUntil = 1300; e.slowFactor = .5; expect(regularMoveSpeed(e, 1201)).toBe(S.runnerMaxSpeed * .5);
   const boss = w.spawn('charger')!; expect(regularMoveSpeed(boss, 1e5)).toBe(boss.speed);
 });
-it('runs the real scheduler through ten minutes at 3/6/9 without simultaneous scheduled Guardian', () => {
-  const w = new World(12345, { spawnRate: 0 }), events: number[] = []; w.player.invulnerableUntil = 1e6;
-  for (const a of Object.values(w.abilities)) a.level = 0;
-  w.guardianSystem.nextAt = 1e6;
-  for (let i = 0; i < 12000; i++) {
-    w.step(.05);
-    for (const e of [...w.bosses]) { events.push(w.elapsed); w.damageEnemy(e, 1e9); }
-  }
-  expect(events).toHaveLength(3);
-  for (let i = 0; i < 3; i++) expect(events[i]).toBeCloseTo((i + 1) * 180, 0);
+it('runs the central minute schedule through ten minutes without removing previous Guardians', () => {
+  const w=new World(12345,{spawnRate:0});w.player.invulnerableUntil=1e6;for(const a of Object.values(w.abilities))a.level=0;
+  for(let i=0;i<12001;i++){w.step(.05);for(const e of [...w.bosses])w.damageEnemy(e,1e9);}
+  expect(w.encounterDirector.history.map(e=>e.minute)).toEqual([3,4,5,6,7,8,9,10]);
+  expect(w.encounterDirector.history.map(e=>e.requestedBosses)).toEqual([1,0,1,0,2,0,3,3]);
+  expect(w.guardians.length).toBeLessThanOrEqual(3);
 });
-it('defers Guardian near a boss and yields a passive Guardian without reward at boss arrival', () => {
-  const w = new World(1, { spawnRate: 0 }); w.elapsed = 160; w.guardianSystem.nextAt = 160; w.guardianSystem.update(w);
-  expect(w.rareGuardian).toBeUndefined(); expect(w.guardianSystem.nextAt).toBe(165);
-  w.spawn('guardian', { x: 100, y: 0 }); w.elapsed = 179.99; w.step(.05);
-  expect(w.bosses).toHaveLength(1); expect(w.rareGuardian).toBeUndefined(); expect(w.artifacts.items).toHaveLength(0);
-  w.guardianSystem.nextAt = w.elapsed; w.guardianSystem.update(w); expect(w.rareGuardian).toBeUndefined();
+it('retains a passive Guardian when a scheduled boss arrives, without awarding a reward', () => {
+  const w=new World(1,{spawnRate:0}),g=w.spawn('guardian',{x:100,y:0})!;w.elapsed=179.99;w.step(.05);
+  expect(w.bosses).toHaveLength(1);expect(w.guardians).toContain(g);expect(w.artifacts.snapshot()).toHaveLength(0);
 });
-it('retains a due boss during an active Guardian and spawns it after the encounter ends', () => {
-  const w = new World(1, { spawnRate: 0 }); w.elapsed = 179; const e = w.spawn('guardian', { x: 100, y: 0 })!;
-  w.damageEnemy(e, 1); w.elapsed = 180; w.step(.05);
-  expect(w.bosses).toHaveLength(0); expect(w.bossScheduler.nextAt).toBe(180);
-  w.damageEnemy(e, 1e9); w.step(.05); expect(w.bosses[0].kind).toBe('charger'); expect(w.bossScheduler.nextAt).toBe(360);
+it('permits scheduled boss attacks alongside an active Guardian and never defers its event', () => {
+  const w=new World(1,{spawnRate:0}),g=w.spawn('guardian',{x:100,y:0})!;w.damageEnemy(g,1);w.elapsed=179.99;w.step(.05);
+  expect(w.bosses).toHaveLength(1);expect(w.guardianSystem.encounters.has(g.id)).toBe(true);expect(w.encounterDirector.nextAt).toBe(240);
 });

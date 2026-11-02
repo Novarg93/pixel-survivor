@@ -12,7 +12,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
     await page.screenshot({ path: `${prefix}-settings.png` }); await page.getByRole('button', { name: 'Готово' }).click(); await page.screenshot({ path: `${prefix}-menu.png` });
     await page.getByRole('button', { name: 'Начать забег' }).click();
     const initial = await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
+      const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
       for (const a of Object.values(w.abilities)) a.level = 5;
       for (const artifact of ['health', 'damage', 'speed', 'cooldown', 'experience'] as const) w.artifacts.grant(w, artifact);
       w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury');

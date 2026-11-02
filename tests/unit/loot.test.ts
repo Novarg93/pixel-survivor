@@ -8,7 +8,7 @@ import { applyUpgrade } from '../../src/game/systems/UpgradeSystem';
 import { fireball } from '../../src/game/abilities/fireball';
 
 const away = { x: 100, y: 0 };
-function quiet(w = new World(42)) { for (const a of Object.values(w.abilities)) a.level = 0; w.bossScheduler.nextAt = 10000; return w; }
+function quiet(w = new World(42)) { for (const a of Object.values(w.abilities)) a.level = 0; w.encounterDirector.nextAt = 10000; return w; }
 function step(w: World, seconds: number) { for (let i = 0; i < Math.round(seconds * 20); i++) w.step(0.05); }
 
 describe('seeded loot', () => {

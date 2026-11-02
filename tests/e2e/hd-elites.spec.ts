@@ -19,7 +19,7 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
     expect(await page.evaluate(() => window.__PIXEL__!.world.enemies.length)).toBe(18);
     if (phase !== 'before') expect(await page.evaluate(() => window.__PIXEL__!.art().eliteAdornments)).toBe(18);
     await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.spawn('guardian', { x: -65, y: -55 }); w.pause(); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed=240; w.encounterDirector.nextAt=240; w.encounterDirector.update(w); w.pause(); });
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
     await expect(page.locator('.run-notice')).toBeVisible();
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(100); await page.screenshot({ path: `${directory}/${phase}-guardian-${dark ? 'forest' : 'grove'}-${width}.png` }); }
@@ -48,7 +48,7 @@ test('Guardian12 authored frames and live hurt/death keep immediate artifact and
   await page.waitForTimeout(80); await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 1); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith('guardian-hurt-'))), { intervals: [10] }).toBe(true);
   await page.locator('canvas').screenshot({ path: `${directory}/guardian-hurt.png` });
-  const reward = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 999999); return { artifacts: w.artifacts.items.length, kills: w.snapshot().guardianKills, chests: w.loot.chests.length }; });
+  const reward = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 999999); return { artifacts: w.artifacts.snapshot().reduce((n,a)=>n+a.stacks,0), kills: w.snapshot().guardianKills, chests: w.loot.chests.length }; });
   expect(reward).toEqual({ artifacts: 1, kills: 1, chests: 0 });
   const frames = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { const frame = window.__PIXEL__!.art().guardian.frame; if (frame) frames.push(frame); if (performance.now() - start < 670) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
   expect(frames).toHaveLength(6); expect(await page.evaluate(() => window.__PIXEL__!.art().guardian.activeDeaths)).toBe(0);

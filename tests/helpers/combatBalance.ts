@@ -14,7 +14,7 @@ export function survivalTrial(seed: number, moving: boolean, start = 600, durati
   w.width = width; w.height = height;
   if (enhanced) { w.upgrades.pickup--; w.stats.pickup -= 20; applyUpgrade(w, 'evolve-fireball'); for (let i = 0; i < 3; i++) w.artifacts.grant(w, 'damage'); }
   // Isolate regular-wave pressure. Boss/Guardian TTK and evasion are separate trials.
-  w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+  w.encounterDirector.nextAt = 1e6;
   let hits = 0, blocked = 0, attempts = 0, shots = 0, rushes = 0, peak = 0;
   const damage = w.damagePlayer.bind(w), shoot = w.shoot.bind(w), rushing = new Set<number>();
   w.damagePlayer = amount => { attempts++; const hp = w.player.hp, charges = w.shield.charges, result = damage(amount); if (w.player.hp < hp) hits++; if (charges > w.shield.charges) blocked++; return result; };
@@ -35,7 +35,7 @@ export function ttkTrial(kind: EnemyKind, strong: boolean) {
   const w = new World(12345, { spawnRate: 0 });
   if (strong) strongMage(w);
   else { applyUpgrade(w, 'unlock-frost'); applyUpgrade(w, 'unlock-lightning'); applyUpgrade(w, 'damage'); }
-  w.elapsed = 600; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+  w.elapsed = 600; w.encounterDirector.nextAt = 1e6;
   const e = w.spawn(kind, { x: 65, y: 0 })!, hp = e.hp;
   w.damagePlayer = () => false;
   for (let i = 0; i < 12000 && w.enemies.includes(e); i++) {

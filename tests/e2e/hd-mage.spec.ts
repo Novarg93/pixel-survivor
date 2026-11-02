@@ -63,7 +63,7 @@ test('Mage live five abilities, paused FX phases and death do not delay game ove
   mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => {
-    const w = window.__PIXEL__!.world; w.elapsed = 1200; w.options.spawnRate = 0; w.guardianSystem.nextAt = w.bossScheduler.nextAt = 1e6;
+    const w = window.__PIXEL__!.world; w.elapsed = 1200; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6;
     w.player.invulnerableUntil = 1e6;
     for (const a of w.abilityDefinitions) { w.abilities[a.id].level = 3; w.abilities[a.id].readyAt = 0; }
     for (let i = 0; i < 8; i++) { const e = w.spawn('tank', { x: 60 + i % 3 * 14, y: i * 10 - 35 })!; e.hp = e.maxHp = 1e5; e.speed = 0; }

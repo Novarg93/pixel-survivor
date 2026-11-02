@@ -8,7 +8,7 @@ test('loot and five artifact ground/HUD matrix on both maps and viewports', asyn
   for (const dark of [false, true]) for (const group of [0, 1]) {
     await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(group => {
-      const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
+      const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
       for (const id of ['health', 'damage', 'speed', 'cooldown', 'experience'] as const) w.artifacts.grant(w, id);
       w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury');
       for (const [i, kind] of (['healing', 'haste', 'fury', 'magnet'] as const).entries()) w.loot.drop(w, kind, { x: (i - 1.5) * 34, y: 35 });
@@ -32,7 +32,7 @@ test('thirteen simultaneous pickups retain caps and clear presentation through t
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   for (let i = 0; i < 10; i++) {
     await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
+      const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
       for (let j = 0; j < 6; j++) w.loot.drop(w, (['healing', 'haste', 'fury', 'magnet'] as const)[j % 4], { x: 40, y: 0 });
       for (let j = 0; j < 4; j++) w.loot.spawnChest(w, { x: 40, y: 0 }, 'boss');
       for (const artifact of ['health', 'damage', 'speed'] as const) w.artifacts.drop(w, { x: 40, y: 0 }, [{ artifact, weight: 1 }]); w.pause();
@@ -72,7 +72,7 @@ test('loot atlas uses hard alpha, distinct sheen/open poses and exact shared HUD
 
 test('real chest contact plays six opening frames, freezes and grants once; five artifacts stay distinct', async ({ page }) => {
   mkdirSync(directory, { recursive: true }); await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6; w.player.invulnerableUntil = 1e6; w.player.hp = 20; w.loot.rng.next = () => 0; for (const a of Object.values(w.abilities)) a.level = 0; w.loot.spawnChest(w, { x: 40, y: 0 }, 'boss'); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; w.player.hp = 20; w.loot.rng.next = () => 0; for (const a of Object.values(w.abilities)) a.level = 0; w.loot.spawnChest(w, { x: 40, y: 0 }, 'boss'); });
   await page.keyboard.down('d');
   const frames = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { frames.push(...window.__PIXEL__!.art().loot.frames.filter(f => f.startsWith('chest-open-'))); if (performance.now() - start < 760) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
   await page.keyboard.up('d'); expect(frames).toHaveLength(6); expect(await page.evaluate(() => window.__PIXEL__!.world.player.hp)).toBe(50); expect(await page.evaluate(() => window.__PIXEL__!.world.loot.chests.length)).toBe(0);

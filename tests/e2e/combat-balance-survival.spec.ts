@@ -13,7 +13,7 @@ for (const width of [1280, 390]) for (const moving of [false, true]) test(`Mage3
     // Enhanced variant: the user killed three Guardians. Allow three legal damage artifacts.
     const upgradePath = '/src/game/systems/UpgradeSystem.ts', { applyUpgrade } = await import(upgradePath);
     w.upgrades.pickup--; w.stats.pickup -= 20; applyUpgrade(w, 'evolve-fireball'); for (let i = 0; i < 3; i++) w.artifacts.grant(w, 'damage');
-    w.elapsed = 600; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+    w.elapsed = 600; w.encounterDirector.nextAt = 1e6;
     const state = { hits: 0, blocked: 0, attempts: 0, shots: 0, rushWindups: 0, peak: 0, projectiles: 0, effects: 0, seconds: 0, hp: w.player.hp, score: 0, kills: 0, status: 'playing', mobilityUses: 0 };
     const damage = w.damagePlayer.bind(w), shoot = w.shoot.bind(w), step = w.step.bind(w), windups = new Set<number>();
     w.damagePlayer = amount => { state.attempts++; const before = w.player.hp, shield = w.shield.charges, accepted = damage(amount); if (w.player.hp < before) state.hits++; if (w.shield.charges < shield) state.blocked++; return accepted; };

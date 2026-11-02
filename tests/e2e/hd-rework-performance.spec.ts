@@ -15,7 +15,7 @@ async function start(page: Page, hero: string, dark: boolean) {
     const random = new SeededRandom(12345);
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.elapsed = 1200.08;
     w.rng.next = () => random.next();
-    w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6;
+    w.encounterDirector.nextAt = 1e6;
     w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
   });
 }

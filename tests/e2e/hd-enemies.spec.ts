@@ -23,7 +23,7 @@ test('new enemy atlas has hard alpha, transparent margins and distinct authored 
 for (const kind of HD_ENEMY_KINDS) test(kind + ' live motion, hurt and six death phases preserve rewards and both-map readability', async ({ page }) => {
   mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.options.spawnRate = 0; w.guardianSystem.nextAt = w.bossScheduler.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; });
   const id = await page.evaluate(kind => window.__PIXEL__!.world.spawn(kind, { x: 85, y: 25 })!.id, kind);
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => a.texture === 'hd-enemies' && String(a.frame).includes('-walk-')))).toBe(true);
   if (kind === 'caster') {

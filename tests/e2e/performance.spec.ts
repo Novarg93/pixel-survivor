@@ -25,7 +25,7 @@ test('60-second real browser peak-wave smoke measures FPS and budgets', async ({
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   await page.goto('/?test=1&debug=1'); await page.getByRole('button',{name:'Настройки',exact:true}).click(); await page.getByLabel('Цифры урона').check(); await page.getByRole('button',{name:'Готово'}).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => {
-    const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.bossScheduler.nextAt = 10000; w.player.invulnerableUntil = 100000;
+    const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.encounterDirector.nextAt = 10000; w.player.invulnerableUntil = 100000;
     for (const a of Object.values(w.abilities)) a.level = 3; w.stats.projectiles = 3; w.stats.damage = 1.75; w.stats.area = 1.3;
     for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], undefined, i % 5 === 0);
     for(const a of w.abilityDefinitions)w.upgrades['evolve-'+a.id]=1;

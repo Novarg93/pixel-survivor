@@ -15,7 +15,7 @@ test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scen
   for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport); await start(page);
     await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.bossScheduler.nextAt = 100000; w.guardianSystem.nextAt = 100000;
+      const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.encounterDirector.nextAt = 100000; w.encounterDirector.nextAt = 100000;
       for (const a of Object.values(w.abilities)) a.level = 0;
       for (let i = 0; i < 150; i++) w.spawn('runner', { x: (i % 15 - 7) * 27, y: (Math.floor(i / 15) - 4.5) * 27 });
     });

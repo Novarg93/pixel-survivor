@@ -16,7 +16,9 @@ import type { BiomeId } from '../config/biomes';
 import { tickAbilities } from '../abilities/tickAbilities';
 import { profileAt, pickEnemy, scalesAt } from './DifficultyDirector';
 import { EnemySystem } from './EnemySystem';
-import { BossScheduler, BOSS_CAP } from './BossSystem';
+import { BOSS_CAP } from './BossSystem';
+import { EncounterDirector } from './EncounterDirector';
+import { bossAggressionAt } from '../config/encounterDirector';
 import type { SoundCue } from '../services/AudioSystem';
 import { ScoreSystem } from './ScoreSystem';
 import { SpawnClock } from './SpawnClock';
@@ -41,10 +43,11 @@ export class World {
   get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed); }
   get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown'); }
   get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
-  get rareGuardian() { return this.enemies.find(e => e.kind === 'guardian'); }
+  get guardians() { return this.enemies.filter(e => e.kind === 'guardian'); }
+  get rareGuardian() { return this.guardians[0]; }
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
-  clearTemporaryState() { for (const e of this.enemies) e.mobilitySlowUntil = 0; this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
+  clearTemporaryState() { for (const e of this.enemies) { e.mobilitySlowUntil = 0; if(e.boss){e.boss.phase='recover';e.boss.until=Infinity;e.shootingAt=0;} } this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   sounds: SoundCue[] = [];
@@ -74,7 +77,7 @@ export class World {
   private effectPool = new ObjectPool<Effect>(BALANCE.effectCap);
   get allocations() { return { orbs: this.orbPool.allocated, projectiles: this.projectilePool.allocated, effects: this.effectPool.allocated }; }
   private enemySystem = new EnemySystem();
-  readonly bossScheduler = new BossScheduler();
+  readonly encounterDirector = new EncounterDirector();
   get bosses() { return this.enemies.filter(e => e.boss); }
   enemies: Enemy[] = []; projectiles: Projectile[] = []; effects: Effect[] = [];
   readonly runId = globalThis.crypto.randomUUID();
@@ -87,14 +90,16 @@ export class World {
   private serial = 0; private spawnClock = new SpawnClock();
   constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
   id() { return ++this.serial; }
-  spawn(kind: EnemyKind, at?: Point, elite = false): Enemy | undefined {
+  spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
     const boss = isBossKind(kind);
-    if (kind === 'guardian' ? this.enemies.filter(e => e.kind === 'guardian').length >= GUARDIAN_BALANCE.cap || !this.artifacts.canDrop(this.elapsed) : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
+    if (kind === 'guardian' ? this.guardians.length >= GUARDIAN_BALANCE.cap : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
     if (kind === 'guardian') elite = false;
     const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng)), definition = ENEMIES[kind];
+    if (!p) return;
+    const aggression = bossAggressionAt(Math.floor(this.elapsed / 60));
     const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
-    const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { phase: 'approach', until: this.elapsed + 2, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
-    this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this); else if (!boss) this.spawnedRegular++; return enemy;
+    const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + 2 / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
+    this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
     if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y } }); if (effect) this.effects.push(effect); }
@@ -157,14 +162,13 @@ export class World {
     if (!this.mobility.update(this, dt)) { this.player.x += vector.x * this.effectiveSpeed * dt; this.player.y += vector.y * this.effectiveSpeed * dt; }
     if (vector.x || vector.y) this.facing = vector;
     const profile = profileAt(this.elapsed);
-    if (this.spawnClock.tick(dt, profile.interval / (this.options.spawnRate ?? 1.3))) {
+    if (this.spawnClock.tick(dt, profile.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
       for (let i = 0; i < profile.burst; i++) {
         const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
         this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
       }
     }
-    const dueBoss = this.bossScheduler.poll(this.elapsed, this.bosses.length, !!this.guardianSystem.encounter);
-    if (dueBoss) { if (this.rareGuardian) this.guardianSystem.dismiss(this); this.spawn(dueBoss); }
+    this.encounterDirector.update(this);
     this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     if (this.status !== 'playing') return;
@@ -217,9 +221,11 @@ export class World {
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
+      encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
+      guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
       mobility: this.mobility.snapshot(this), guardianPhase: this.guardianSystem.encounter?.phase ?? null,
       buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
-      artifacts: this.artifacts.snapshot(), runNotice: (this.guardianSystem.encounter ? this.guardianSystem.notice?.text : null) ?? this.artifacts.notice?.text ?? this.guardianSystem.notice?.text ?? null, guardianKills: this.scoring.guardianKills,
+      artifacts: this.artifacts.snapshot(), runNotice: this.guardianSystem.notice?.text ?? this.artifacts.notice?.text ?? null, guardianKills: this.scoring.guardianKills,
       hp: this.player.hp, maxHp: this.effectiveMaxHp, kills: this.kills, score: this.score,
       killsByKind: { ...this.scoring.byKind }, enemies: this.regularCount,
       level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),

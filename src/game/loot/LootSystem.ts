@@ -33,7 +33,7 @@ export class LootSystem {
     if (chest) this.chests.push(chest); return chest;
   }
   onEnemyDeath(world: World, enemy: Enemy) {
-    if (enemy.kind === 'guardian') { world.artifacts.drop(world, enemy); return; }
+    if (enemy.kind === 'guardian') return; // Wave completion owns its one artifact reward.
     if (enemy.boss) { this.spawnChest(world, enemy, 'boss'); return; }
     if (shouldDrop(enemy.elite, this.rng)) { const kind = rollLoot(ITEM_LOOT_POOL, this.rng, world); if (kind) this.drop(world, kind, enemy); }
   }

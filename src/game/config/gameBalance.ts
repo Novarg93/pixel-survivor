@@ -1,3 +1,4 @@
+import { ENCOUNTER_DIRECTOR } from './encounterDirector';
 export const BALANCE = {
   playerSpeed: 135, playerHp: 100, regularCap: 150, projectileCap: 96, effectCap: 96, orbCap: 240,
   fireballDamage: 24, fireballCooldown: 0.8, fireballSpeed: 270, fireballRange: 310,
@@ -14,8 +15,7 @@ export const LOOT_BALANCE = {
 } as const;
 
 export const GUARDIAN_BALANCE = {
-  intervalMin: 120, intervalMax: 240, cap: 1, retry: 5, spawnPadding: 56,
-  radarDistanceMin: 0.6, radarDistanceMax: 0.85,
+  cap: ENCOUNTER_DIRECTOR.guardianCap, spawnPadding: 56,
   lifetime: 8 * 60, abandonRadiusMultiplier: 2.5, noticeDuration: 5,
 } as const;
 export const ARTIFACT_BALANCE = {

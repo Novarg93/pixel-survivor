@@ -37,8 +37,15 @@ export class ArtifactSystem {
     const item = this.pool.acquire({ id: world.id(), x: at.x, y: at.y, artifact: reward.artifact, born: world.elapsed, expires: world.elapsed + C.lifetime });
     if (item) this.items.push(item); return item;
   }
-  grant(world: World, artifact: ArtifactId) {
-    if (world.status !== 'playing' || this.stacks[artifact] >= C.maxStacks || world.player.hp <= 0) return false;
+  awardWave(world: World): ArtifactId | undefined {
+    const eligible = GUARDIAN_ARTIFACT_POOL.filter(e => this.count(e.artifact) < C.maxStacks);
+    if (!eligible.length) return;
+    let roll = this.rng.next() * eligible.reduce((sum, e) => sum + e.weight, 0);
+    const reward = eligible.find(e => { roll -= e.weight; return roll < 0; }) ?? eligible[eligible.length - 1];
+    return this.grant(world, reward.artifact, true) ? reward.artifact : undefined;
+  }
+  grant(world: World, artifact: ArtifactId, waveReward = false) {
+    if (world.status !== 'playing' && !(waveReward && world.status === 'upgrade') || this.stacks[artifact] >= C.maxStacks || world.player.hp <= 0) return false;
     const oldMax = world.effectiveMaxHp; this.stacks[artifact]++;
     // Add the newly gained HP capacity once, preserving the existing amount of missing HP.
     if (artifact === 'health') world.player.hp = Math.min(world.effectiveMaxHp, world.player.hp + world.effectiveMaxHp - oldMax);

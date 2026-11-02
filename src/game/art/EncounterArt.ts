@@ -5,8 +5,8 @@ import type { MobilitySystem } from '../systems/MobilitySystem';
 import type { World } from '../systems/World';
 
 // Enemy danger belongs to the existing depth-20 batch and ignores cosmetic intensity.
-export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, state: GuardianEncounter | null) {
-  const e = w.rareGuardian; if (!e) return;
+export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, state: GuardianEncounter | null, owner = state?.ownerId) {
+  const e = owner === undefined ? w.rareGuardian : w.guardians.find(e => e.id === owner); if (!e) return;
   g.lineStyle(1, state ? 0xffcc83 : 0xb29c65, .9).strokeCircle(e.x, e.y, e.radius + 5);
   if (!state || state.ownerId !== e.id) return;
   if (state.phase === 'beam-warning' || state.phase === 'beam') {

@@ -20,7 +20,7 @@ it('Guardian has exact frames, fixed pivot/footprint and immediate artifact inde
   expect(ASSET_REGISTRY.guardian.origin).toEqual({ x: .5, y: .5 });
   const w = new World(), art = new GuardianAnimation(), e = w.spawn('guardian', { x: 60, y: 0 })!;
   art.prepare(w); w.damageEnemy(e, 1); expect(art.frame(e, w)).toBe('guardian-hurt-0'); expect(e.x).toBe(60);
-  w.damageEnemy(e, 999999); expect(w.artifacts.items).toHaveLength(1); expect(w.loot.chests).toHaveLength(0); expect(w.snapshot().guardianKills).toBe(1);
+  w.damageEnemy(e, 999999); expect(w.artifacts.snapshot()).toHaveLength(1); expect(w.loot.chests).toHaveLength(0); expect(w.snapshot().guardianKills).toBe(1);
   const state = JSON.stringify(w); art.finish(w); expect(art.corpse).toMatchObject({ x: 60, y: 0 }); expect(JSON.stringify(w)).toBe(state);
   const frames = Array.from({ length: 6 }, (_, i) => guardianFrame('death', i / 10)); expect(new Set(frames).size).toBe(6);
   w.elapsed += .6; art.finish(w); expect(art.corpse).toBeNull();

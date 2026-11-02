@@ -11,7 +11,7 @@ test('final live scale3 stress: eight class/map/viewport cases with attacks on, 
     await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(async () => {
       const url = '/src/game/utils/SeededRandom.ts', { SeededRandom } = await import(/* @vite-ignore */ url), rng = new SeededRandom(12345);
-      const w = window.__PIXEL__!.world; w.rng.next = () => rng.next(); w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.bossScheduler.nextAt = w.guardianSystem.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
+      const w = window.__PIXEL__!.world; w.rng.next = () => rng.next(); w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
       for (const a of Object.values(w.abilities)) a.level = 3; for (const id of ['health', 'damage', 'speed', 'cooldown', 'experience'] as const) w.artifacts.grant(w, id);
       w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury');
       for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 24, y: (Math.floor(i / 15) - 4.5) * 24 }, i % 13 === 0);
