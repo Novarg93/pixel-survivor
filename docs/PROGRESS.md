@@ -1,3 +1,36 @@
+# Upgrade Card Identity / Aggressive Charge — готово к ручному тесту
+
+2026-11-02, feature/upgrade-identity-charge от c7ff2b5 (локально сохранённый
+Encounter Director). Main57eb439 не менялся, push/merge/deploy не выполнялись.
+Прочитаны AGENTS, PLAN, задачи03/06/08/14/17, ART_STYLE_GUIDE, UpgradeSystem,
+LevelUpModal/HD theme, BossSystem/Animation/EncounterArt и Encounter Director.
+
+UI upgradeIdentity задаёт10 фиксированных цветов, включая Mage exact hex и
+Warrior steel/gold palette; рамка3px, мягкий hover/focus, selected240ms и
+безопасная отмена timer/repeated input. UpgradeSystem не изменён (LF SHA baseline).
+ChargeBoss/config заменяет только Charger: pursuit48→76.8, charge144→230.4px/s,
+warning.5s, cooldown5/f от конца, recovery.6/f, cap240px, конец-prep direction lock,
+swept one-contact collision. Убрана path geometry, сохранены windup sprites,
+добавлены локальные sparks/flash и AudioSystem cue. HP/damage и прочие боссы прежние.
+
+check:259 unit/43files, TS/lint/build прошли; целевые18 E2E прошли (1.1min),
+финальный production4/4 (33.9s). Реальные Canvas/UI на1280x720/390x844 просмотрены:
+нет траектории, видны windup/flash, skill colors и selected. Реальные dodge trials
+walk/Blink/Dash сохранили полное HP на обоих viewport без test invulnerability.
+Полный dev E2E:126 passed/1 failed (23.2min). Исправлена гонка в старом тесте
+сундуков: ожидание завершения выбранной карты и смены offerId. Затем19/19
+прошли за1.6min (все loot, HD UI и новые сценарии). Все127 сценариев покрыты
+успешными прогонами; одного полного зелёного127/127 запуска не заявляем.
+После полного прогона gameplay-код не менялся: мелкая подпись ранга осветлена
+до#DBE4E8 (красный4.24:1 оставлен в рамке); добавлена проверка контраста>=4.5:1.
+FPS150+3+3:59.3–60.0, p95update.7–.9ms, все caps соблюдены. git diff --check чист.
+Отчёт/исходные измерения: docs/upgrade-identity-charge; PNG/raw: screenshots/
+upgrade-identity-charge. JSON/ссылки/размеры Canvas проверены. Локальный сервер:
+http://127.0.0.1:5194/ . Разработка остановлена. Следующий шаг — ручная оценка
+близких уклонений/плотных встреч/палитры на физическом телефоне; push/merge/deploy нет.
+
+---
+
 # Encounter Director 2.0 — готово к ручному тесту
 
 feature/encounter-director-2 от main@57eb439,2026-11-02. Реализованы

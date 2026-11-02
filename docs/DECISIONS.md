@@ -1,5 +1,56 @@
 # Решения — интеграция HD Pixel Art
 
+## Upgrade Card Identity / Aggressive Charge — 2026-11-02
+
+Предыдущий полностью проверенный Encounter Director сохранён локальным коммитом
+c7ff2b5 на feature/encounter-director-2. Новая feature/upgrade-identity-charge
+создана от него; main57eb439 не меняется. Push/merge/deploy запрещены текущим
+запросом. AGENTS, PLAN, задачи03/06/08/14/17 и художественное руководство прочитаны.
+Прямое требование пользователя отменяет старую геометрическую подсказку задачи06.
+
+«34px» интерпретировано как3–4px: постоянная рамка3px, selected имеет ещё
+внутренний кант1px без изменения layout. Палитра хранится в чистой UI-функции
+upgradeIdentity, определяется только ability ID. Unlock/rank/evolve единообразны;
+характеристики/supplies нейтральны, mobility имеет отдельный мятный акцент.
+Warrior следует материалам Rework03 и палитре Cleave. UpgradeSystem, eligibility,
+stats и RNG не менялись; SHA256 исходника с нормализованными LF сохранён в BASELINE.json.
+Мелкая подпись ранга светлая#DBE4E8: контраст точного красного Fireball был4.24:1,
+поэтому заданный skill color остаётся в рамке/свечении, а текст читается отдельно.
+
+Selected показывается240ms перед отправкой прежней команды с offer ID. Мир уже
+стоит на upgrade-паузе. Повторные выборы/keydown-repeat блокируются, timeout
+отменяется при unmount/смене offer. Сохраняются Tab trap, native Enter/Space,
+1/2/3 и touch. aria-pressed/aria-busy описывают состояние, остальные кнопки
+в этот короткий момент disabled. Reduced-motion отключает CSS transitions.
+
+Charger вынесен из общей ветки BossSystem в отдельный updateChargeBoss. Базовая
+скорость Enemy24 остаётся; конфиг даёт pursuit×2=48px/s и charge×3=144px/s.
+Это сокращает прежний огромный разрыв charge400/pursuit24 и позволяет читать
+атаку без линии. Между атаками босс продолжает преследовать до16px вместо150px.
+Director умножает обе скорости на movement (до1.6), cooldown/recovery делятся
+на frequency (до2). HP4500, damage28, прежние time scaling и charge damage×1.25
+сохранены. Sorcerer/Eclipse не меняются.
+
+Следующая попытка windup — через5/frequency после конца Charge; recovery.6/f
+входит в эти5/f, не добавляется сверху. Первый wait2/f. Windup.5s не ускоряется.
+Направление отслеживает цель до окончания подготовки, затем фиксировано.
+Рывок длится до1.2s, ограничен240px; на поздней скорости срабатывает distance cap.
+В бесконечном мире нет стен арены: предел относится к перемещению за один Charge.
+Урон проверяется по swept segment, один контакт за Charge, включая поглощённый
+Shield/мобильностью/i-frames. Обычный контакт вне Charge сохраняет общий cooldown.
+Большой raw World delta остаётся ограничен50ms, изолированный AI не воспроизводит
+очередь пропущенных атак. Смерть/teardown удаляют charge state, пауза его замораживает.
+Звук charge использует существующий AudioSystem и собственный rate limiter.
+
+Исторические Encounter Director JSON не перезаписываются новой балансировкой:
+unit benchmarks направлены в .tmp, актуальная выборка скопирована в новый отчёт.
+Структурный ten-minute replay теперь назначает в10:00 два новых босса: одно место
+занято выжившим прежним. Проверка дополнена requested3/skipped1, cap3 сохранён.
+Полный dev-прогон126/127 выявил один старый while-click race: повторное нажатие
+на selected-карту во время240ms перехода. Loot E2E теперь ждёт сброса aria-pressed
+и реальной смены offerId, а не пытается закрывать уже исчезнувший dialog.
+Повтор всех затронутых UI/loot/new тестов19/19 прошёл; assertions не удалялись.
+
 ## Encounter Director 2.0 — 2026-11-02
 
 Новая работа в feature/encounter-director-2 от чистого main@57eb439. Разовое

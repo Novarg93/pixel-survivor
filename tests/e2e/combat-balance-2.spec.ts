@@ -16,6 +16,7 @@ for (const width of [1280, 390]) for (const variant of MOBILITY_UPGRADES) test(`
   await expect(page.locator('.choice')).toHaveCount(3); await expect(page.getByRole('dialog')).toContainText('Одно направление');
   await page.screenshot({ path: `${directory}/${variant.id}-choices-${width}.png` });
   await page.locator('.choice').filter({ hasText: variant.name }).click();
+  await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toHaveCount(0);
   for (let rank = 2; rank <= 3; rank++) {
     await page.evaluate(async id => {
       const w = window.__PIXEL__!.world, module = '/src/game/systems/UpgradeSystem.ts', { eligibleUpgrades } = await import(module);

@@ -3,6 +3,18 @@ import { GUARDIAN_ENCOUNTER as C, MOBILITY } from '../config/encounters';
 import { guardianBeamEnd, type GuardianEncounter } from '../systems/GuardianEncounter';
 import type { MobilitySystem } from '../systems/MobilitySystem';
 import type { World } from '../systems/World';
+import type { Enemy } from '../entities/types';
+import { CHARGE_BOSS } from '../config/chargeBoss';
+
+export function drawChargePreparation(g: Phaser.GameObjects.Graphics, w: World, e: Enemy) {
+  if (w.status === 'over' || e.hp <= 0 || e.kind !== 'charger' || e.boss?.phase !== 'windup') return;
+  const flash = e.boss.until - w.elapsed <= CHARGE_BOSS.flashDuration;
+  // Local stepped sparks around the raised arms. No target/path geometry.
+  for (const side of [-1, 1]) for (let i = 0; i < 4; i++) {
+    const x = Math.round(e.x + side * (10 + i * 3)), y = Math.round(e.y - 12 - (i % 2) * 4);
+    g.fillStyle(flash ? 0xffeed3 : 0xf0ac79, flash ? 1 : .75).fillRect(x, y, i % 2 ? 2 : 3, 2);
+  }
+}
 
 // Enemy danger belongs to the existing depth-20 batch and ignores cosmetic intensity.
 export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, state: GuardianEncounter | null, owner = state?.ownerId) {

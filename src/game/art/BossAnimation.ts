@@ -20,7 +20,7 @@ export class BossAnimation {
     if (hit) { t.hit = e.hitUntil; t.hurt = w.elapsed; }
     if (w.elapsed !== t.time || hit) {
       if (t.phase === 'windup' && phase === 'recover' || t.shootingAt > 0 && e.shootingAt === 0) t.attack = w.elapsed;
-      const hurting = w.elapsed - t.hurt < 3 / 14;
+      const hurting = w.elapsed - t.hurt < 3 / 14 && !(e.kind === 'charger' && phase === 'windup');
       if (!hurting) { const direction = phase === 'windup' || phase === 'charge' ? e.boss?.direction.x ?? dx : dx; if (Math.abs(direction) > .001) t.playback.facing = direction < 0 ? 'left' : 'right'; }
       const pose: BossPose = hurting ? 'hurt' : phase === 'windup' ? 'windup' : phase === 'charge' || w.elapsed - t.attack < 4 / 12 ? 'attack' : phase === 'recover' ? 'recover' : dx * dx + dy * dy > .0001 ? 'walk' : 'idle';
       if (pose !== t.playback.pose || hit) t.playback = { pose, facing: t.playback.facing, started: pose === 'hurt' ? t.hurt : w.elapsed, stage: e.boss?.stage ?? 1 };

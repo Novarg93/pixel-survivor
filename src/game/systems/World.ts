@@ -19,6 +19,7 @@ import { EnemySystem } from './EnemySystem';
 import { BOSS_CAP } from './BossSystem';
 import { EncounterDirector } from './EncounterDirector';
 import { bossAggressionAt } from '../config/encounterDirector';
+import { CHARGE_BOSS } from '../config/chargeBoss';
 import type { SoundCue } from '../services/AudioSystem';
 import { ScoreSystem } from './ScoreSystem';
 import { SpawnClock } from './SpawnClock';
@@ -47,7 +48,7 @@ export class World {
   get rareGuardian() { return this.guardians[0]; }
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
-  clearTemporaryState() { for (const e of this.enemies) { e.mobilitySlowUntil = 0; if(e.boss){e.boss.phase='recover';e.boss.until=Infinity;e.shootingAt=0;} } this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
+  clearTemporaryState() { for (const e of this.enemies) { e.mobilitySlowUntil = 0; if(e.boss){e.boss.phase='recover';e.boss.until=Infinity;e.boss.charge=undefined;e.shootingAt=0;} } this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp); }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   sounds: SoundCue[] = [];
@@ -98,7 +99,7 @@ export class World {
     if (!p) return;
     const aggression = bossAggressionAt(Math.floor(this.elapsed / 60));
     const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
-    const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + 2 / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
+    const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + (kind === 'charger' ? CHARGE_BOSS.initialDelay : 2) / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
@@ -123,7 +124,7 @@ export class World {
       this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
       this.dropXp(enemy, enemy.xp);
       this.loot.onEnemyDeath(this, enemy);
-      if (enemy.boss) this.clearOwnedEffects(enemy.id);
+      if (enemy.boss) { this.clearOwnedEffects(enemy.id); enemy.boss.charge = undefined; }
       if (enemy.kind === 'guardian') this.guardianSystem.complete(this, enemy.id);
       this.enemies.splice(this.enemies.indexOf(enemy), 1); onSpecialDeath(this, enemy); return true;
     }

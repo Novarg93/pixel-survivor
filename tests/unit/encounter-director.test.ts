@@ -25,7 +25,7 @@ it('executes the exact3-12min assignments deterministically when slots are free'
   const result=replay();expect(result).toEqual(replay());
   expect(result.map(e=>[e.minute,e.bosses.length,e.guardians.length])).toEqual([[3,1,0],[4,0,1],[5,1,0],[6,0,1],[7,2,0],[8,0,2],[9,3,0],[10,3,0],[11,3,3],[12,3,3]]);
   expect(result.every(e=>e.skippedBosses===0&&e.skippedGuardians===0)).toBe(true);
-  mkdirSync('docs/encounter-director-2',{recursive:true});writeFileSync('docs/encounter-director-2/EVENTS.json',JSON.stringify({fixture:'seed12345, actual central director; all assigned participants killed between minute windows; no AI survival claim',result},null,2));
+  mkdirSync('.tmp/encounter-director-2',{recursive:true});writeFileSync('.tmp/encounter-director-2/EVENTS.json',JSON.stringify({fixture:'seed12345, actual central director; all assigned participants killed between minute windows; no AI survival claim',result},null,2));
 });
 it('retains living owners, fills only free slots at the next minute and never queues skipped participants',()=>{
   const w=quiet();w.elapsed=600;for(let i=0;i<3;i++){w.spawn('charger');w.spawn('guardian',{x:200+i*170,y:0});}
@@ -35,7 +35,7 @@ it('retains living owners, fills only free slots at the next minute and never qu
   w.elapsed=720;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(3);expect(w.guardians).toHaveLength(3);
   expect(w.encounterDirector.history[1]).toMatchObject({skippedBosses:2,skippedGuardians:2});
   expect(w.bosses.every(e=>e.boss?.aggression?.movement===1.6&&e.boss.aggression.frequency===2)).toBe(true);
-  writeFileSync('docs/encounter-director-2/OCCUPIED_SLOTS.json',JSON.stringify({fixture:'all6 slots occupied at11min; one boss and one Guardian killed before12min; no automatic AI survival claim',events:w.encounterDirector.history},null,2));
+  writeFileSync('.tmp/encounter-director-2/OCCUPIED_SLOTS.json',JSON.stringify({fixture:'all6 slots occupied at11min; one boss and one Guardian killed before12min; no automatic AI survival claim',events:w.encounterDirector.history},null,2));
 });
 it('coalesces clock jumps to one current event, bounds history, and freezes deadlines during pause/upgrade',()=>{
   const w=quiet();w.encounterDirector.nextAt=180;w.elapsed=720;w.pause();w.encounterDirector.update(w);expect(w.enemies).toHaveLength(0);
@@ -51,7 +51,7 @@ it('uses the target wave multipliers from base values, with no cumulative scalin
   expect(e.speed).toBe(speed);expect(e.maxHp).toBe(hp);expect(e.boss!.aggression).toEqual(bossAggressionAt(12));
 });
 function measure(kind:'charger'|'sorcerer'|'eclipse',minute:number) {
-  const w=quiet();w.elapsed=minute*60;const e=w.spawn(kind,{x:400,y:0})!,initialWait=e.boss!.until-w.elapsed;e.boss!.until=Infinity;
+  const w=quiet();w.player.invulnerableUntil=1e6;w.elapsed=minute*60;const e=w.spawn(kind,{x:400,y:0})!,initialWait=e.boss!.until-w.elapsed;e.boss!.until=Infinity;
   const at={x:e.x,y:e.y};updateBoss(w,e,.05);const movement=distance(at,e)/.05;
   e.boss!.phase='approach';e.boss!.until=w.elapsed;let attacks=0,warning=0,recovery=0,cooldown=0;
   for(let i=0;i<1200;i++){e.x=190;e.y=0;const before=phaseOf(w);updateBoss(w,e,.05);if(before!=='windup'&&phaseOf(w)==='windup'){attacks++;warning=e.boss!.until-w.elapsed;}if(before!=='recover'&&phaseOf(w)==='recover')recovery=e.boss!.until-w.elapsed;if(before!=='approach'&&phaseOf(w)==='approach')cooldown=e.boss!.until-w.elapsed;w.clearOwnedEffects(e.id);w.elapsed+=.05;}
@@ -59,8 +59,8 @@ function measure(kind:'charger'|'sorcerer'|'eclipse',minute:number) {
 }
 it('all three real AIs move faster and attack more often while retaining full warning time',()=>{
   const result=(['charger','sorcerer','eclipse'] as const).flatMap(kind=>[3,5,7,9,10].map(minute=>measure(kind,minute)));
-  for(const kind of ['charger','sorcerer','eclipse']){const rows=result.filter(r=>r.kind===kind);expect(rows[4].movement/rows[0].movement).toBeCloseTo(1.6);expect(rows[4].attacks).toBeGreaterThan(rows[0].attacks);expect(rows.every(r=>Math.abs(r.warning-(kind==='eclipse'?1.25:1.1))<1e-6)).toBe(true);}
-  writeFileSync('docs/encounter-director-2/BOSS_MEASUREMENTS.json',JSON.stringify({fixture:'real updateBoss,60s each, targets held190px; movement sampled at400px; no survival claim',result},null,2));
+  for(const kind of ['charger','sorcerer','eclipse']){const rows=result.filter(r=>r.kind===kind);expect(rows[4].movement/rows[0].movement).toBeCloseTo(1.6);expect(rows[4].attacks).toBeGreaterThan(rows[0].attacks);expect(rows.every(r=>Math.abs(r.warning-(kind==='eclipse'?1.25:kind==='charger'?.5:1.1))<1e-6)).toBe(true);}
+  writeFileSync('.tmp/encounter-director-2/BOSS_MEASUREMENTS.json',JSON.stringify({fixture:'real updateBoss,60s each, targets held190px; movement sampled at400px; no survival claim',result},null,2));
 });
 it.each([ [640,360],[195,422],[130,281] ])('places three Guardians safely and separately at %ix%i', (width,height)=>{
   const w=quiet();w.width=width;w.height=height;w.guardianSystem.spawnWave(w,3,11);

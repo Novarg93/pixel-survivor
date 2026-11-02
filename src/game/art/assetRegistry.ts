@@ -61,7 +61,7 @@ export const ASSET_REGISTRY = {
   hostileImpact: { ...drawn('CombatFeedback:hostileImpact'), status: 'hd-integrated' },
   lootGlow: { ...drawn('LootPresentation:pickups'), status: 'hd-integrated' },
   guardianTell: { ...drawn('LootPresentation:guardian'), retainedReason: 'Exact runtime Guardian HP/seal geometry retained for threat readability; actor is hd-guardian.' },
-  bossTell: { ...drawn('GameScene:boss'), retainedReason: 'Exact runtime attack paths/rings/radii, modifier marks and offscreen pointers retained; actors are hd-bosses.' },
+  bossTell: { ...drawn('GameScene:boss'), retainedReason: 'Sorcerer/Eclipse rings and radii, modifier marks and offscreen pointers retained; Charger uses local windup sparks and actor flash without a path. Actors are hd-bosses.' },
   hud: { ...drawn('GameHUD/BossBars/GameRadar/BuffDock/RunArtifacts+hd-theme.css', 'ui'), status: 'hd-integrated' }, menu: { ...drawn('MainMenu/SettingsPanel+hd-theme.css', 'ui'), status: 'hd-integrated' },
   upgradeUI: { ...drawn('LevelUpModal+hd-theme.css', 'ui'), status: 'hd-integrated' }, deathUI: { ...drawn('RunStatistics/GameOver/LocalRecords+hd-theme.css', 'ui'), status: 'hd-integrated' },
 } satisfies Record<string, AssetSpec>;

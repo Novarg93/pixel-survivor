@@ -78,7 +78,13 @@ test('boss chests replace timed map chests and open on approach and reset all lo
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 180; w.encounterDirector.nextAt = 10000; w.damageEnemy(w.spawn('eclipse', { x: 60, y: 0 })!, 99999); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.loot.chests.length)).toBe(1);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.collectAllOrbs(); });
-  while (await page.evaluate(() => window.__PIXEL__!.world.status === 'upgrade')) await page.getByRole('dialog', { name: 'Новый уровень' }).getByRole('button').first().click();
+  while (await page.evaluate(() => window.__PIXEL__!.world.status === 'upgrade')) {
+    const card = page.getByRole('dialog', { name: 'Новый уровень' }).getByRole('button').first();
+    await expect(card).toHaveAttribute('aria-pressed', 'false');
+    const offer = await page.evaluate(() => window.__PIXEL__!.world.offerId);
+    await card.click();
+    await page.waitForFunction(offer => { const w = window.__PIXEL__!.world; return w.status !== 'upgrade' || w.offerId !== offer; }, offer);
+  }
   await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toHaveCount(0);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; const c = w.loot.chests.find(c => c.source === 'boss')!; w.player.x = c.x - 32; w.player.y = c.y; });
   await page.keyboard.down('d'); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.loot.chests.some(c => c.source === 'boss'))).toBe(false); await page.keyboard.up('d');

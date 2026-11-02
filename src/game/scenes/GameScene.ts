@@ -9,7 +9,8 @@ import { AudioSystem } from '../services/AudioSystem';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { type Facing } from '../art/assetRegistry';
-import { drawGuardianDanger } from '../art/EncounterArt';
+import { drawChargePreparation, drawGuardianDanger } from '../art/EncounterArt';
+import { CHARGE_BOSS } from '../config/chargeBoss';
 import { pressureAt } from '../systems/EndgamePressure';
 export class GameScene extends Phaser.Scene {
   world = new World();
@@ -96,8 +97,10 @@ export class GameScene extends Phaser.Scene {
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
-      if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY); else sprite.clearTint();
-      sprite.setAlpha('hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
+      const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
+      if (preparingCharge && entity.boss!.until - this.world.elapsed <= CHARGE_BOSS.flashDuration) sprite.setTint(0xffe6b8).setTintMode(Phaser.TintModes.FILL);
+      else if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY); else sprite.clearTint();
+      sprite.setAlpha(!preparingCharge && 'hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
     this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7);
@@ -117,7 +120,7 @@ export class GameScene extends Phaser.Scene {
         const a = Math.atan2(enemy.aim.y - enemy.y, enemy.aim.x - enemy.x), x = enemy.x + Math.cos(a) * 15, y = enemy.y + Math.sin(a) * 15;
         this.effects.lineStyle(2, 0xffb1b7).lineBetween(enemy.x + Math.cos(a) * 7, enemy.y + Math.sin(a) * 7, x, y).fillStyle(0xffe1c4).fillRect(Math.round(x) - 1, Math.round(y) - 1, 3, 3);
       }
-      if (enemy.kind === 'charger' && enemy.boss?.phase === 'windup') { this.effects.lineStyle(46, 0xff906d, 0.2).lineBetween(enemy.x, enemy.y, enemy.boss.aim.x, enemy.boss.aim.y).lineStyle(2, 0xffd2a0, 0.9).lineBetween(enemy.x, enemy.y, enemy.boss.aim.x, enemy.boss.aim.y); }
+      drawChargePreparation(this.effects, this.world, enemy);
       if (enemy.boss && (Math.abs(enemy.x - this.mage.x) > this.world.width / 2 - 20 || Math.abs(enemy.y - this.mage.y) > this.world.height / 2 - 20)) {
         const angle = Math.atan2(enemy.y - this.mage.y, enemy.x - this.mage.x), r = Math.min((this.world.width / 2 - 18) / Math.max(0.01, Math.abs(Math.cos(angle))), (this.world.height / 2 - 18) / Math.max(0.01, Math.abs(Math.sin(angle))));
         const x = this.mage.x + Math.cos(angle) * r, y = this.mage.y + Math.sin(angle) * r;

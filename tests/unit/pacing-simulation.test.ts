@@ -27,7 +27,7 @@ export function simulateTenMinutes() {
       lastSpawned = w.spawnedRegular;
     }
   }
-  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, peakGuardians, peakBosses, encounterOverlaps, bosses, guardians, minutes };
+  return { seed: 12345, seconds: 600, fixture: 'invulnerable circular pilot, first eligible upgrade, 20Hz simulation', peak, peakGuardians, peakBosses, encounterOverlaps, bosses, guardians, events:w.encounterDirector.history, minutes };
 }
 
 it('replays ten minutes with a fixed seed deterministically and keeps the regular budget', () => {
@@ -36,7 +36,9 @@ it('replays ten minutes with a fixed seed deterministically and keeps the regula
   expect(result.peak).toBeLessThanOrEqual(150);
   expect(result.minutes).toHaveLength(10);
   expect(result.peakBosses).toBeLessThanOrEqual(3); expect(result.peakGuardians).toBeLessThanOrEqual(3);
-  expect(result.bosses.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600, 600]);
+  expect(result.bosses.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600]);
+  expect(result.events.at(-1)).toMatchObject({minute:10,requestedBosses:3,skippedBosses:1});
+  expect(result.events.at(-1)!.bosses).toHaveLength(2);
   mkdirSync('.tmp/pacing', { recursive: true });
   writeFileSync(`.tmp/pacing/${process.env.PIXEL_PACING_PHASE ?? 'after'}.json`, JSON.stringify(result, null, 2));
 }, 60000);

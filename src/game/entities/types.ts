@@ -2,7 +2,7 @@ import type { EnemyKind } from '../config/enemyDefinitions';
 import type { Point } from '../utils/math';
 import type { AbilityId } from '../abilities/types';
 export type DamageSource = AbilityId | 'nova' | 'unknown' | 'mobility';
-export interface BossState { aggression?: { wave: number; movement: number; frequency: number }; stage?: number; phase: 'approach' | 'windup' | 'charge' | 'recover'; until: number; direction: Point; aim: Point }
+export interface BossState { charge?: { nextAt: number; speed: number; remaining: number; started: number; updatedAt: number; hit: boolean }; aggression?: { wave: number; movement: number; frequency: number }; stage?: number; phase: 'approach' | 'windup' | 'charge' | 'recover'; until: number; direction: Point; aim: Point }
 export type EliteModifier = 'frenzy' | 'shielded' | 'volatile';
 export interface Enemy extends Point { discovered?: boolean; id: number; kind: EnemyKind; hp: number; maxHp: number; radius: number; hitUntil: number; slowUntil: number; slowFactor: number; mobilitySlowUntil?: number; elite: boolean; speed: number; damage: number; score: number; xp: number; shootAt: number; shootingAt: number; aim?: Point; frostStacks?: number; frostUntil?: number; freezeUntil?: number; freezeImmuneUntil?: number; born: number; modifier?: EliteModifier; rush?: BossState; offspring?: boolean; boss: BossState | null }
 export interface Projectile extends Point { id: number; vx: number; vy: number; damage: number; expires: number; hostile: boolean; pierce?: number; hits?: number[]; ownerId?: number; source?: DamageSource; exploded?: boolean }
