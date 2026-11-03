@@ -6,7 +6,7 @@ import { distance, type Point } from '../utils/math';
 import type { World } from './World';
 import type { Enemy } from '../entities/types';
 import { ARTIFACTS } from '../loot/ArtifactSystem';
-import { beginGuardianEncounter, guardianExpired, updateGuardianEncounter, type GuardianEncounter } from './GuardianEncounter';
+import { beginGuardianEncounter, guardianExpired, guardianLeash, updateGuardianEncounter, type GuardianEncounter } from './GuardianEncounter';
 import { GUARDIAN_ORBS } from '../config/guardianOrbs';
 export function guardianVisible(w: Pick<World, 'player' | 'width' | 'height'>, at: Point) { return Math.abs(at.x - w.player.x) <= Math.max(0, w.width / 2 - 17) && Math.abs(at.y - w.player.y) <= Math.max(0, w.height / 2 - 20); }
 interface GuardianWave { id: number; minute: number; total: number; killed: number; remaining: Set<number>; failed: boolean }
@@ -17,6 +17,7 @@ export class RareGuardianSystem {
   private owners = new Map<number, number>();
   notice: { text: string; until: number } | null = null;
   completedWaves = 0;
+  successfulSpawns = 0;
   // Single-target diagnostics; runtime always addresses states by ownerId.
   get encounter() { return this.encounters.values().next().value ?? null; }
   constructor(seed: number) { this.rng = new SeededRandom(seed ^ 0x31c5e7); }
@@ -36,12 +37,20 @@ export class RareGuardianSystem {
     this.waves.set(id, wave);
     const members: number[] = [];
     for (let i = 0; i < Math.min(count, D.guardianCap); i++) { const e = w.spawn('guardian', undefined, false, id); if (e) members.push(e.id); }
+    this.finalizePlacement(w,members);
     if (!members.length) this.waves.delete(id);
     return members;
   }
+  finalizePlacement(w:World,ids:readonly number[]){
+    // Complete the area of a newly placed batch once; owner state never shrinks
+    // when another member dies or abandons the encounter.
+    const leash=guardianLeash(w);for(const id of ids){const s=this.encounters.get(id);if(s)s.leash=Math.max(s.leash,leash);}
+  }
   spawned(w: World, e: Enemy, waveId?: number) {
     const id = waveId ?? w.id(), wave = this.waves.get(id) ?? { id, minute: Math.floor(w.elapsed / 60), total: 0, killed: 0, remaining: new Set<number>(), failed: false };
-    wave.total++; wave.remaining.add(e.id); this.waves.set(id, wave); this.owners.set(e.id, id);
+    const index=++this.successfulSpawns,factor=Math.min(2,1+.1*(index-1)),speed=w.player.speed*w.artifacts.multiplier('speed');
+    e.guardianProfile={index,factor,slow:Math.min(GUARDIAN_ORBS.slow.maxSpeed,Math.max(GUARDIAN_ORBS.slow.minSpeed,speed*GUARDIAN_ORBS.slow.speedFraction))*factor,fast:Math.min(GUARDIAN_ORBS.fast.maxSpeed,Math.max(GUARDIAN_ORBS.fast.minSpeed,speed*GUARDIAN_ORBS.fast.speedFraction))*factor,turn:factor,lifetime:factor};e.discovered=true;
+    wave.total++; wave.remaining.add(e.id); this.waves.set(id, wave); this.owners.set(e.id, id);this.awaken(w,e);
   }
   awaken(w: World, e: Enemy) {
     if (w.status !== 'playing' && w.status !== 'upgrade') return;

@@ -13,14 +13,7 @@ import { chainLightning } from '../../src/game/abilities/chainLightning';
 function quiet(seed = 17) { const w = new World(seed); for (const a of Object.values(w.abilities)) a.level = 0; w.encounterDirector.nextAt = 100000; w.player.invulnerableUntil = 100000; return w; }
 const away = { x: 100, y: 100 };
 describe('rare guardian', () => {
-  it('requires a real visit before distant global attacks can hit; radar still detects it', () => {
-    const w=quiet(), e=w.spawn('guardian')!, hp=e.hp;
-    w.abilities.fireball.level=w.abilities.meteor.level=w.abilities.lightning.level=1;
-    expect(meteor(w)).toBe(false); expect(fireball(w)).toBe(false); expect(chainLightning(w)).toBe(false);
-    expect(w.damageEnemy(e,999999)).toBe(false); expect(e.hp).toBe(hp); expect(radarFrame(w).markers.some(m=>m.id===e.id)).toBe(true);
-    w.player.x=e.x-70;w.player.y=e.y;w.guardianSystem.update(w);expect(e.discovered).toBe(true);
-    expect(fireball(w)).toBe(true);expect(meteor(w)).toBe(true);expect(chainLightning(w)).toBe(true);expect(e.hp).toBeLessThan(hp);
-  });
+  it('is discovered, targetable and active immediately; radar detects the owner',()=>{const w=quiet(),e=w.spawn('guardian')!,hp=e.hp;expect(e.discovered).toBe(true);expect(w.guardianSystem.encounters.has(e.id)).toBe(true);expect(radarFrame(w).markers.some(m=>m.id===e.id)).toBe(true);w.damageEnemy(e,1);expect(e.hp).toBe(hp-1);w.player.x=e.x-70;w.player.y=e.y;w.abilities.fireball.level=w.abilities.meteor.level=w.abilities.lightning.level=1;expect(fireball(w)).toBe(true);expect(meteor(w)).toBe(true);expect(chainLightning(w)).toBe(true);expect(e.hp).toBeLessThan(hp);});
   it('uses the central minute4 schedule and deterministic safe spawn positions inside radar', () => {
     const w=quiet(),b=quiet();w.encounterDirector.nextAt=b.encounterDirector.nextAt=240;
     w.elapsed=b.elapsed=239.9;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(0);

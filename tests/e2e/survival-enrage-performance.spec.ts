@@ -12,6 +12,7 @@ for (const width of [1280, 390]) test(`Mage40 Enrage performance and bounded sce
     for (const [i, kind] of (['charger','sorcerer','eclipse'] as const).entries()) w.spawn(kind, { x: 90 * (i - 1), y: -85 });
     for (let i = 0; i < 3; i++) w.spawn('guardian', { x: i === 1 ? 80 : -30, y: (i - 1) * 150 });
     w.guardians.forEach((g, i) => { g.x = i === 1 ? 80 : -30; g.y = (i - 1) * 150; g.discovered = true; w.damageEnemy(g, 1); });
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
     for (const e of w.enemies) e.hp = e.maxHp = 1e6;
   });
   const samples = [];

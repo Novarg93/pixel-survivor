@@ -1,3 +1,4 @@
+import {ENDGAME} from '../config/endgame';
 import { CHARGE_BOSS as C } from '../config/chargeBoss';
 import type { Enemy } from '../entities/types';
 import { direction, distance, segmentDistance } from '../utils/math';
@@ -24,7 +25,7 @@ export function updateChargeBoss(w: World, e: Enemy, dt: number) {
     if (w.elapsed >= b.until) {
       // Lock the current target once. A late frame starts a visible charge now,
       // without replaying unobserved attacks from the skipped interval.
-      c.speed = pursuit * C.speedMultiplier;
+      c.speed = Math.min(b.late?ENDGAME.chargeMax:Infinity,pursuit * C.speedMultiplier);
       c.remaining = Math.min(C.maxDistance, c.speed * C.duration); c.hit = false;
       c.started = c.updatedAt = w.elapsed;
       b.phase = 'charge'; b.until = w.elapsed + c.remaining / c.speed;
@@ -41,8 +42,8 @@ export function updateChargeBoss(w: World, e: Enemy, dt: number) {
     }
     if (w.status !== 'playing' || e.hp <= 0) return;
     if (c.remaining < 1e-6 || w.elapsed >= b.until) {
-      c.remaining = 0; c.nextAt = w.elapsed + C.cooldown / frequency;
-      b.phase = 'recover'; b.until = w.elapsed + C.recovery / frequency;
+      c.remaining = 0; c.nextAt = w.elapsed + Math.max(b.late?.75:0,C.cooldown / frequency);
+      b.phase = 'recover'; b.until = w.elapsed + Math.max(b.late?.12:0,C.recovery / frequency);
     }
     return;
   } else if (w.elapsed >= b.until) { b.phase = 'approach'; b.until = c.nextAt; }

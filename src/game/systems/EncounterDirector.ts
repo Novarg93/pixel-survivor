@@ -9,6 +9,7 @@ export interface EncounterEvent {
 }
 export class EncounterDirector {
   enrageSpawns = 0;
+  endgameSpawns = 0;
   nextAt: number = C.firstMinute * C.interval;
   readonly history: EncounterEvent[] = [];
   notice: { text: string; until: number } | null = null;

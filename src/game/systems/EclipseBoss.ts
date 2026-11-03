@@ -2,6 +2,8 @@ import type { World } from './World';
 import type { Enemy } from '../entities/types';
 import { direction, distance } from '../utils/math';
 import {fireBossVolley} from './BossMagic';
+import {ENDGAME} from '../config/endgame';
+import {bossFloor,bossTell} from './BossMagic';
 import {BOSS_MAGIC,MAGIC_ATTACKS} from '../config/bossEnrage';
 function ring(w: World,e: Enemy) {
   if(e.boss?.enrageIndex){fireBossVolley(w,e);return;}
@@ -15,11 +17,11 @@ export function updateEclipse(w: World,e: Enemy,dt: number) {
   if(b.phase==='approach') {
     const d=distance(e,w.player),v=direction(w.player.x-e.x,w.player.y-e.y), radial=d>190?1:d<140?-1:0;
     e.x+=(v.x*radial-v.y*0.6)*e.speed*movement*dt; e.y+=(v.y*radial+v.x*0.6)*e.speed*movement*dt;
-    if(w.elapsed>=b.until && d<360){ b.phase='windup'; b.until=w.elapsed+(b.enrageIndex?MAGIC_ATTACKS.eclipse.windup:1.25);
+    if(w.elapsed>=b.until && d<360){ b.phase='windup'; b.until=w.elapsed+(b.enrageIndex?bossTell(e,MAGIC_ATTACKS.eclipse.windup):1.25);
       if(b.enrageIndex)b.aim={x:w.player.x,y:w.player.y};
       if(b.stage===2)for(let i=0;i<4 && w.impacts.length+w.zones.length<24;i++)w.impacts.push({id:w.id(),x:w.player.x+(i-1.5)*55,y:w.player.y,radius:27,damage:e.damage,landAt:b.until,hostile:true,ownerId:e.id});
     }
-  }else if(b.phase==='windup' && w.elapsed>=b.until){ring(w,e); if(b.stage===2)e.shootingAt=w.elapsed+0.6; b.phase='recover'; b.until=w.elapsed+(b.enrageIndex?Math.max(BOSS_MAGIC.minRecovery,MAGIC_ATTACKS.eclipse.recovery/frequency):2/frequency);}
-  else if(b.phase==='recover' && w.elapsed>=b.until){b.phase='approach';b.until=w.elapsed+(b.enrageIndex?Math.max(BOSS_MAGIC.minApproach,(b.stage===2?MAGIC_ATTACKS.eclipse.stageCooldown:MAGIC_ATTACKS.eclipse.cooldown)/frequency):(b.stage===2?1.5:3)/frequency);}
+  }else if(b.phase==='windup' && w.elapsed>=b.until){ring(w,e); if(b.stage===2)e.shootingAt=w.elapsed+bossTell(e,.6); b.phase='recover'; b.until=w.elapsed+(b.enrageIndex?Math.max(bossFloor(e,BOSS_MAGIC.minRecovery,ENDGAME.recoveryMin),MAGIC_ATTACKS.eclipse.recovery/frequency):2/frequency);}
+  else if(b.phase==='recover' && w.elapsed>=b.until){b.phase='approach';b.until=w.elapsed+(b.enrageIndex?Math.max(bossFloor(e,BOSS_MAGIC.minApproach,ENDGAME.approachMin),(b.stage===2?MAGIC_ATTACKS.eclipse.stageCooldown:MAGIC_ATTACKS.eclipse.cooldown)/frequency):(b.stage===2?1.5:3)/frequency);}
   if(w.elapsed>=(b.contactSafeUntil??0)&&distance(e,w.player)<e.radius+9)w.damagePlayer(e.damage);
 }

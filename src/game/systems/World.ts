@@ -17,6 +17,7 @@ import { tickAbilities } from '../abilities/tickAbilities';
 import { profileAt, pickEnemy, scalesAt, spawnCadenceAt } from './DifficultyDirector';
 import { enrageAt } from '../config/survivalEnrage';
 import { AbsorbPool } from './AbsorbPool';
+import {ENDGAME,lateBossProfile} from '../config/endgame';
 import {GUARDIAN_ORBS} from '../config/guardianOrbs';
 import {steerGuardianOrb} from './GuardianOrbs';
 import { EnemySystem } from './EnemySystem';
@@ -121,9 +122,10 @@ export class World {
     if (!p || !Number.isFinite(p.x+p.y)) return;
     const enrageIndex=boss&&this.elapsed>=BOSS_MAGIC.from?this.encounterDirector.enrageSpawns+1:0;
     const aggression = bossBirthAggression(this.elapsed / 60,kind,enrageIndex);
-    const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
+    const scale = scalesAt(this.elapsed), hp = definition.hp * (boss||kind==='guardian'?scale.hp:scalesAt(Math.min(this.elapsed,ENDGAME.from)).hp) * (elite ? 2 : 1);
     const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + (kind === 'charger' ? CHARGE_BOSS.initialDelay : 2) / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
     if(boss&&enrageIndex){this.encounterDirector.enrageSpawns++;enemy.boss!.enrageIndex=enrageIndex;if(kind!=='charger')enemy.boss!.magic={nextAt:this.elapsed+BOSS_MAGIC.initialTeleport,teleports:0};}
+    if(boss&&this.elapsed>=ENDGAME.from){const late=lateBossProfile(this.elapsed,++this.encounterDirector.endgameSpawns,kind==='charger');enemy.boss!.late=late;enemy.boss!.aggression={...aggression,movement:aggression.movement*late.movement,frequency:aggression.frequency*late.frequency};}
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
@@ -132,7 +134,7 @@ export class World {
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
     if (this.projectiles.length >= BALANCE.projectileCap || (shot.hostile && this.hostileProjectileSlots===0)) return;
-    const projectile = this.projectilePool.acquire({ ...shot, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?GUARDIAN_ORBS[shot.homing.variant].lifetime:2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
+    const projectile = this.projectilePool.acquire({ ...shot, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown') {

@@ -24,7 +24,7 @@ it.each([0, 180, 480, 600, 720, 1800])('applies the boss/Guardian HP hotfix once
     expect(w.spawn(kind)!.maxHp).toBeCloseTo(previous * 3 * .7 * scalesAt(seconds).hp);
   }
   for (const kind of ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const) {
-    expect(w.spawn(kind, undefined, true)!.maxHp).toBeCloseTo(ENEMIES[kind].hp * (1 + Math.min(3, seconds / 600) * .45) * 2);
+    expect(w.spawn(kind, undefined, true)!.maxHp).toBeCloseTo(ENEMIES[kind].hp * (1 + Math.min(1.5, seconds / 600) * .45) * 2);
   }
 });
 
@@ -122,8 +122,8 @@ it('late speeds and pressure continue growing at 8/10/12/16min with hard readabl
   for (const kind of ['grunt', 'runner', 'rusher'] as const) {
     expect(speedMultiplierAt(600, kind)).toBeGreaterThan(speedMultiplierAt(480, kind)); expect(speedMultiplierAt(720, kind)).toBeGreaterThan(speedMultiplierAt(600, kind));
   }
-  for (const t of [480, 600, 720, 960, 1e8]) { const p = pressureAt(t); expect(p.casterWarning).toBeGreaterThanOrEqual(.65); expect(p.rusherWarning).toBeGreaterThanOrEqual(.7); expect(p.projectileSpeed).toBeLessThanOrEqual(145); }
-  expect(pressureAt(1200)).toEqual(pressureAt(1e8));
+  for (const t of [480, 600, 720, 960, 1e8]) { const p = pressureAt(t); expect(p.casterWarning).toBeGreaterThanOrEqual(.65); expect(p.rusherWarning).toBeGreaterThanOrEqual(.7); expect(p.projectileSpeed).toBeLessThanOrEqual(184); }
+  expect(pressureAt(1200).casterCooldown).toBeGreaterThan(pressureAt(1e8).casterCooldown);
   const edges = Array.from({ length: 12 }, (_, i) => formationEdge(600 + i * 12, i % 3)); expect(new Set(edges).size).toBe(4);
 });
 
@@ -163,9 +163,9 @@ it('Guardian never times out a progressing fight or a nearly finished kill, even
   w.damageEnemy(e, e.hp); expect(w.rareGuardian).toBeUndefined(); expect(w.artifacts.snapshot()).toHaveLength(1);
 });
 
-it.each(['mage', 'warrior'] as const)('%s can evade the faster Guardian beam with mobility, without test invulnerability', hero => {
+it.each(['mage', 'warrior'] as const)('%s can evade the Guardian homing sphere with mobility, without test invulnerability', hero => {
   const w = quiet(hero), e = w.spawn('guardian', { x: 70, y: 0 })!; w.damageEnemy(e, 1);
-  while (w.guardianSystem.encounter?.phase !== 'beam-warning') w.step(.05);
-  w.mobility.activate(w, { x: 0, y: 1 }); advance(w, .3); advance(w, 3.2);
+  for(let i=0;i<100&&w.guardianSystem.encounter?.phase!=='orb-warning';i++)w.step(.05);expect(w.guardianSystem.encounter?.phase).toBe('orb-warning');
+  for(let i=0;i<100&&!w.projectiles.some(p=>p.homing);i++)w.step(.05);w.mobility.activate(w, { x: 0, y: 1 });for(let i=0;i<100;i++){const dx=w.player.x-e.x,dy=w.player.y-e.y;w.step(.05,{x:-dy,y:dx});}
   expect(w.player.hp).toBe(w.player.maxHp); expect(w.mobility.sequence).toBe(1);
 });

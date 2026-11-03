@@ -68,13 +68,10 @@ it.each([ [640,360],[195,422],[130,281] ])('places three Guardians safely and se
   expect(w.guardians).toHaveLength(3);for(const a of w.guardians){expect(distance(a,w.player)).toBeGreaterThanOrEqual(240);for(const b of w.guardians)if(a!==b)expect(distance(a,b)).toBeGreaterThanOrEqual(160);}
   expect(radarFrame(w).markers.filter(m=>m.kind==='guardian')).toHaveLength(3);
 });
-it('keeps three simultaneous laser states and meteor sets independent; killing one clears only its hazards',()=>{
+it('keeps three simultaneous orb states and owned projectiles independent; killing one clears only its hazards',()=>{
   const w=quiet();w.guardianSystem.spawnWave(w,3,11);for(const e of w.guardians){e.discovered=true;w.damageEnemy(e,1);}
   expect(w.guardianSystem.encounters.size).toBe(3);expect(new Set([...w.guardianSystem.encounters.values()].map(s=>s.until)).size).toBe(3);
-  for(const e of w.guardians){const s=w.guardianSystem.encounters.get(e.id)!;s.phase='recovery';s.next='meteors';s.until=w.elapsed;w.guardianSystem.update(w);}
-  expect(w.impacts).toHaveLength(9);const id=w.guardians[0].id;kill(w,id);
-  expect(w.guardianSystem.encounters.size).toBe(2);expect(w.impacts).toHaveLength(6);expect(w.impacts.every(i=>i.ownerId!==id)).toBe(true);expect(w.artifacts.snapshot()).toHaveLength(0);
-  for(const e of [...w.guardians])kill(w,e.id);expect(w.guardianSystem.encounters.size).toBe(0);expect(w.impacts).toHaveLength(0);
+  w.elapsed=3;for(const s of w.guardianSystem.encounters.values()){s.phase='orb-warning';s.until=w.elapsed;}w.guardianSystem.update(w);expect(w.projectiles.filter(p=>p.homing)).toHaveLength(3);const id=w.guardians[0].id;kill(w,id);expect(w.guardianSystem.encounters.size).toBe(2);expect(w.projectiles).toHaveLength(2);expect(w.projectiles.every(p=>p.ownerId!==id)).toBe(true);expect(w.artifacts.snapshot()).toHaveLength(0);for(const e of [...w.guardians])kill(w,e.id);expect(w.guardianSystem.encounters.size).toBe(0);expect(w.projectiles).toHaveLength(0);
   expect(w.artifacts.snapshot().reduce((n,a)=>n+a.stacks,0)).toBe(1);expect(w.guardianSystem.completedWaves).toBe(1);w.guardianSystem.complete(w,id);expect(w.guardianSystem.completedWaves).toBe(1);expect(w.snapshot().guardianKills).toBe(3);
 });
 it('does not accept a false completion and cancels only the affected wave on abandonment',()=>{

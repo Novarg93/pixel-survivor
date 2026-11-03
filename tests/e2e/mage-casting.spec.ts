@@ -15,6 +15,7 @@ async function record(page: Page, spell: MageSpell | null, duration: number, lat
     const before={...window.__PIXEL__!.art().casting.requested};
     if(spell){for(let i=0;i<3;i++){const e=w.spawn('tank',{x:w.player.x+80+i*12,y:w.player.y-20+i*18})!;e.speed=0;e.hp=e.maxHp=1e6;}w.abilities[spell].level=5;w.abilities[spell].readyAt=0;}
     if(late){w.elapsed=600;w.experience.level=45;w.stats.cooldown=.01;for(const d of w.abilityDefinitions){w.abilities[d.id].level=5;w.abilities[d.id].readyAt=0;}for(let i=0;i<150;i++)w.spawn((['tank','grunt','caster','runner','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:80,y:-70});for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:(i-1)*80,y:-80})!;e.discovered=true;}for(const e of w.guardians)w.damageEnemy(e,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;}
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
     type Casting=ReturnType<NonNullable<Window['__PIXEL__']>['art']>['casting'];
     const frames:{at:number;elapsed:number;player:{x:number;y:number};status:string;body:string;casting:Casting;png:string}[]=[];let full='',previous=-Infinity,blocked=false;const begin=performance.now(),worldStart=w.elapsed;
     await new Promise<void>(resolve=>{const capture=()=>{

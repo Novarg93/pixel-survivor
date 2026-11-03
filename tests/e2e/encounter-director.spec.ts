@@ -6,7 +6,7 @@ for(const width of [1280,390])test(`three independent Guardians, minute notice, 
   await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
   const ids=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;for(const a of Object.values(w.abilities))a.level=0;w.player.invulnerableUntil=1e6;w.experience.level=39;w.elapsed=660;w.encounterDirector.nextAt=660;w.encounterDirector.update(w);w.encounterDirector.nextAt=1e6;
     // Reposition only for the Canvas inspection; safe automatic spawn is covered separately.
-    w.guardians.forEach((g,i)=>{g.x=i===1?65:-20;g.y=(i-1)*165;g.discovered=true;w.damageEnemy(g,1);});return w.guardians.map(g=>g.id);});
+    w.guardians.forEach((g,i)=>{g.x=i===1?65:-20;g.y=(i-1)*165;g.discovered=true;w.damageEnemy(g,1);});w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));return w.guardians.map(g=>g.id);});
   await expect(page.locator('[data-marker="guardian"]')).toHaveCount(3);await expect(page.locator('.run-notice')).toContainText('Endgame Encounter');
   await expect(page.getByLabel('Волны Guardian')).toContainText('1 АРТЕФАКТ ЗА ВОЛНУ');
   expect(await page.evaluate(()=>window.__PIXEL__!.world.bosses.length)).toBe(1);
@@ -40,6 +40,7 @@ for(const hero of ['Mage','Warrior'])for(const width of [1280,390])test(`150 reg
     for(const a of w.abilityDefinitions)w.abilities[a.id].level=5;for(let i=0;i<3;i++)w.mobility.upgrade(w,w.character==='mage'?'flame-trail':'cleaving-dash');
     for(let i=0;i<150;i++)w.spawn((['grunt','runner','tank','caster','rusher','splitter'] as const)[i%6],{x:(i%15-7)*24,y:(Math.floor(i/15)-4)*24},i%11===0);
     w.guardians.forEach((g,i)=>{g.x=i===1?65:-20;g.y=(i-1)*165;g.discovered=true;w.damageEnemy(g,1);});for(const e of w.enemies)e.hp=e.maxHp=1e6;w.mobility.activate(w,{x:1,y:0});
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
   });
   const samples=[];
   for(let i=0;i<12;i++){const key=['d','s','a','w'][i%4];await page.keyboard.down(key);await page.waitForTimeout(1000);await page.keyboard.up(key);

@@ -9,7 +9,7 @@ export interface EncounterPlan { minute: number; bosses: readonly BossKind[]; gu
 const ALL_BOSSES = ['charger', 'sorcerer', 'eclipse'] as const;
 export function encounterPlan(minute: number): EncounterPlan {
   const tick=enrageAt(minute*60).tick;
-  const bosses: readonly BossKind[] = minute>=10 ? tick>0?[ALL_BOSSES[(tick-1)%ALL_BOSSES.length]]:[] : minute === 3 ? ['charger'] : minute === 5 ? ['sorcerer'] : minute === 7 ? ['charger', 'eclipse'] : minute >= 9 ? ALL_BOSSES : [];
+  const bosses: readonly BossKind[] = minute>=15 ? Array.from({length:3},(_,i)=>ALL_BOSSES[(tick+i)%3]) : minute>=10 ? tick>0?[ALL_BOSSES[(tick-1)%ALL_BOSSES.length]]:[] : minute === 3 ? ['charger'] : minute === 5 ? ['sorcerer'] : minute === 7 ? ['charger', 'eclipse'] : minute >= 9 ? ALL_BOSSES : [];
   const guardians = minute === 4 || minute === 6 ? 1 : minute === 8 ? 2 : minute > 10&&Number.isInteger(minute) ? 3 : 0;
   return { minute, bosses, guardians, label: minute===10?'Survival Enrage':minute > 10 ? 'Endgame Encounter' : bosses.length > 1 ? 'Multi-Boss Encounter' : bosses.length ? 'Boss Encounter' : 'Guardian Encounter' };
 }

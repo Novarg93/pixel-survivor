@@ -14,9 +14,9 @@ export function updateGuardianOrbs(w:World,e:Enemy,s:GuardianEncounter){
   }
   if(w.elapsed+1e-7<s.until)return;
   const variant=(s.orbIndex??0)%2?'fast':'slow',c=C[variant],v=direction(w.player.x-e.x,w.player.y-e.y),normalSpeed=w.player.speed*w.artifacts.multiplier('speed');
-  const speed=Math.min(c.maxSpeed,Math.max(c.minSpeed,normalSpeed*c.speedFraction));
+  const profile=e.guardianProfile,speed=profile?.[variant]??Math.min(c.maxSpeed,Math.max(c.minSpeed,normalSpeed*c.speedFraction));
   if(w.projectiles.filter(p=>p.ownerId===e.id&&p.homing&&p.expires>w.elapsed).length<C.perOwner&&w.hostileProjectileSlots>0){
-    const n=w.projectiles.length;w.shoot({x:e.x+v.x*(e.radius+c.radius+4),y:e.y+v.y*(e.radius+c.radius+4),vx:v.x*speed,vy:v.y*speed,damage:e.damage*c.damageMultiplier,hostile:true,ownerId:e.id,homing:{variant,speed,turnRate:c.turnRate,travelled:0,maxDistance:s.leash}});
+    const n=w.projectiles.length;w.shoot({x:e.x+v.x*(e.radius+c.radius+4),y:e.y+v.y*(e.radius+c.radius+4),vx:v.x*speed,vy:v.y*speed,damage:e.damage*c.damageMultiplier,hostile:true,ownerId:e.id,homing:{variant,speed,turnRate:c.turnRate*(profile?.turn??1),lifetime:c.lifetime*(profile?.lifetime??1),travelled:0,maxDistance:s.leash}});
     if(w.projectiles.length>n)s.orbIndex=(s.orbIndex??0)+1;
   }
   s.phase='orbs';s.nextOrbAt=w.elapsed+C.interval;s.until=s.nextOrbAt-C.warning;

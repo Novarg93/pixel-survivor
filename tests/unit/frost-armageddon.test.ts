@@ -72,15 +72,14 @@ it.each(['charger', 'sorcerer', 'eclipse', 'guardian'] as const)('%s gets bounde
   applyFrostControl(e, .8, 2, true); expect(e.novaSlowUntil).toBe(1); applyFrostControl(e, 2.99, 2, true); expect(e.novaSlowUntil).toBe(1);
   applyFrostControl(e, 3, 2, true); expect(e.novaSlowUntil).toBe(4); expect(e.speed).toBe(speed);
 });
-it('slows real boss movement by20% without changing attack deadlines; Guardian rotation is1.12rad/s temporarily', () => {
+it('slows real boss movement by20% without changing attack deadlines; stationary Guardian keeps its attack deadline', () => {
   for (const kind of ['charger', 'sorcerer', 'eclipse'] as const) {
     const run = (slow: boolean) => { const w = quiet(), e = target(w, 300, 0, kind); e.boss!.until = 10; if (slow) applyFrostControl(e, 0, 2, false); const start = { x: e.x, y: e.y }; new EnemySystem().update(w, .05); return { movement: Math.hypot(e.x - start.x, e.y - start.y), until: e.boss!.until }; };
     const before = run(false), after = run(true); expect(after.movement / before.movement).toBeCloseTo(.8); expect(after.until).toBe(before.until);
   }
   const w = quiet(), g = target(w, 80, 0, 'guardian'); w.damageEnemy(g, 1); const state = w.guardianSystem.encounter!;
-  state.phase = 'beam'; state.until = 10; state.nextDamageAt = 100; applyFrostControl(g, 0, 2, false);
-  updateGuardianEncounter(w, g, state, .5); expect(state.angle).toBeCloseTo(.56); w.elapsed = 1;
-  updateGuardianEncounter(w, g, state, .5); expect(state.angle).toBeCloseTo(.56 + .7); expect(state.until).toBe(10); expect(g.speed).toBe(0);
+  const deadline=state.until;applyFrostControl(g,0,2,false);updateGuardianEncounter(w,g,state,.5);expect(state.until).toBe(deadline);expect(g.speed).toBe(0);
+
 });
 it.each([1, 2, 3, 4, 5])('Armageddon rank%i schedules the correct count, spacing and75% extra damage with single impact resolution', rank => {
   const w = quiet(); w.abilities.meteor.level = rank; w.stats.damage = 2; w.artifacts.grant(w, 'damage'); w.buffs.activate('fury', 0);

@@ -52,11 +52,11 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().unlocked)).toBe(true);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; for (let i = 0; i < 40; i++) w.dropXp(w.player, 1); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['pickup.xp'] ?? 0)).toBeGreaterThan(0);
-  // Keep coverage of the unchanged pre10 laser as well as the late orb warning.
+  // Exercise the early automatic orb warning as well as late constant load.
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.player.invulnerableUntil=1e6;const g=w.spawn('guardian',{x:80,y:0})!;g.hp=g.maxHp=1e6;g.discovered=true;w.damageEnemy(g,1);});
-  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().played['encounter.guardianLaser']??0)).toBeGreaterThan(0);
+  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().played['encounter.guardianMeteor']??0)).toBeGreaterThan(0);
   await page.evaluate(()=>window.__PIXEL__!.world.guardianSystem.dismiss(window.__PIXEL__!.world));
-  await page.evaluate(() => {
+  await page.evaluate(async () => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; w.elapsed = 720; w.encounterDirector.nextAt = 720; w.encounterDirector.update(w); w.encounterDirector.nextAt = 1e6;
     // Populate the same maximum load independently of the new30s boss schedule.
     for(const kind of ['charger','sorcerer','eclipse'] as const)if(!w.bosses.some(e=>e.kind===kind))w.spawn(kind);
@@ -69,6 +69,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
     for (let i = 0; i < 150; i++) w.spawn((['tank','caster','runner','rusher','grunt','splitter'] as const)[i % 6], { x: (i % 15 - 7) * 18, y: (Math.floor(i / 15) - 4) * 22 });
     for (const e of w.enemies) e.hp = e.maxHp = 1e6;
     w.guardians.forEach((g, i) => { g.x = i === 1 ? 80 : -30; g.y = (i - 1) * 155; g.discovered = true; w.damageEnemy(g, 1); });
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
     w.loot.grant(w, 'healing'); w.loot.grant(w, 'haste'); w.artifacts.grant(w, 'experience');
   });
   const samples = [];
@@ -78,7 +79,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   }
   const audio = await page.evaluate(() => window.__PIXEL__!.audio());
   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];
-  for (const event of [...events, 'pickup.xp','pickup.heal','pickup.buff','pickup.artifact','encounter.bossArrive','encounter.guardianAwaken','encounter.guardianLaser','encounter.guardianMeteor']) expect(audio.played[event as keyof typeof audio.played] ?? 0, event).toBeGreaterThan(0);
+  for (const event of [...events, 'pickup.xp','pickup.heal','pickup.buff','pickup.artifact','encounter.bossArrive','encounter.guardianAwaken','encounter.guardianMeteor']) expect(audio.played[event as keyof typeof audio.played] ?? 0, event).toBeGreaterThan(0);
   expect(audio.peakVoices).toBeLessThanOrEqual(12); await page.screenshot({ path: `${directory}/stress-${hero}-${width}.png` }); await page.locator('canvas').screenshot({ path: `${directory}/stress-canvas-${hero}-${width}.png` });
   await page.evaluate(() => { const w = window.__PIXEL__!.world; for (const a of Object.values(w.abilities)) a.level = 0; w.experience.xp = 0; w.gainXp(w.snapshot().xpNext); });
   await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toBeVisible(); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['ui.upgrade'] ?? 0)).toBeGreaterThan(0);

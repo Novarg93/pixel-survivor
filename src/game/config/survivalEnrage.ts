@@ -1,3 +1,4 @@
+import {endgameAt,ENDGAME} from './endgame';
 export const SURVIVAL_ENRAGE = {
   from:600, interval:30, noticeDuration:5,
   spawnPerTick:.08, speedPerTick:.03, attackPerTick:.04,
@@ -8,5 +9,6 @@ export const SURVIVAL_ENRAGE = {
 export function enrageAt(seconds:number) {
   const c=SURVIVAL_ENRAGE, active=Number.isFinite(seconds)&&seconds>=c.from;
   const tick=active?Math.max(0,Math.floor((seconds-c.from+1e-7)/c.interval)):0;
-  return {active,tick,spawn:Math.min(c.spawnCap,1+c.spawnPerTick*tick),speed:Math.min(c.speedCap,1+c.speedPerTick*tick),attack:Math.min(c.attackCap,1+c.attackPerTick*tick),notice:active&&seconds<c.from+c.noticeDuration};
+  const baseTick=Math.min(tick,(ENDGAME.from-c.from)/c.interval),late=endgameAt(seconds);
+  return {active,tick,spawn:Math.min(c.spawnCap,1+c.spawnPerTick*baseTick)*late.spawn,speed:Math.min(c.speedCap,1+c.speedPerTick*baseTick)*late.speed,attack:Math.min(c.attackCap,1+c.attackPerTick*baseTick)*late.attack,notice:active&&seconds<c.from+c.noticeDuration};
 }

@@ -21,6 +21,7 @@ test('all six specializations sustain repeated real cooldown casts at150+3+3 on 
       for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 23, y: (Math.floor(i / 15) - 4) * 23 }, i % 11 === 0);
       for (const e of w.enemies) e.hp = e.maxHp = 1e9;
       w.guardians.forEach((g, i) => { g.x = i === 1 ? 100 : 0; g.y = (i - 1) * 130; g.discovered = true; w.damageEnemy(g, 1); });
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
       for (let rank = 0; rank < 3; rank++) if (!w.mobility.upgrade(w, variant.id)) throw new Error('Invalid stress specialization');
     }, variant);
     const samples = [];

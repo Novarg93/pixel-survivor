@@ -1,0 +1,16 @@
+import {test,expect} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+for(const width of [1280,390])test(`PhaseII25min load and frame timings ${width}`,async({page})=>{
+  test.setTimeout(45000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1500;w.options.spawnRate=0;w.encounterDirector.nextAt=1e6;w.player.invulnerableUntil=1e6;w.stats.cooldown=.01;for(const d of w.abilityDefinitions)w.abilities[d.id].level=5;
+    for(let i=0;i<30;i++){w.spawn('charger',{x:180,y:0});w.enemies=[];}
+    for(let i=0;i<10;i++){const g=w.spawn('guardian',{x:100,y:0})!;w.guardianSystem.dismiss(w,g.id);}
+    for(let i=0;i<150;i++)w.spawn((['grunt','runner','tank','caster','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const [i,kind] of (['charger','sorcerer','eclipse'] as const).entries())w.spawn(kind,{x:90*(i-1),y:-85});for(let i=0;i<3;i++)w.spawn('guardian',{x:i===1?80:-30,y:(i-1)*130});for(const g of w.guardians)w.damageEnemy(g,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
+  });
+  const timing=await page.evaluateHandle(()=>{const data={frames:[] as number[],updates:[] as number[]};let last=performance.now();const sample=(now:number)=>{if(data.frames.length<1800){data.frames.push(now-last);data.updates.push(window.__PIXEL__!.metrics().updateMs);}last=now;requestAnimationFrame(sample);};requestAnimationFrame(sample);return data;});
+  const samples=[];for(let i=0;i<15;i++){const key=['d','s','a','w'][i%4];await page.keyboard.down(key);await page.waitForTimeout(1000);await page.keyboard.up(key);const s=await page.evaluate(()=>({metrics:window.__PIXEL__!.metrics(),art:window.__PIXEL__!.art(),homing:window.__PIXEL__!.world.projectiles.filter(p=>p.homing).length}));expect(s.metrics.enemies).toBe(150);expect(s.metrics.bosses).toBe(3);expect(s.metrics.guardians).toBe(3);expect(s.metrics.projectiles).toBeLessThanOrEqual(96);expect(s.homing).toBeLessThanOrEqual(6);samples.push(s);}
+  const frames=await timing.evaluate(x=>x),percentile=(a:number[],p:number)=>[...a].sort((a,b)=>a-b)[Math.floor((a.length-1)*p)];
+  mkdirSync('screenshots/enrage2',{recursive:true});await page.screenshot({path:`screenshots/enrage2/load-${width}.png`});const restarts=[];for(let i=0;i<5;i++){await page.evaluate(()=>window.__PIXEL__!.restartScene());await expect(page.getByRole('button',{name:'Начать забег'})).toBeVisible();restarts.push(await page.evaluate(()=>{const a=window.__PIXEL__!.art();return{objects:a.objects,textures:a.textures.length,clock:a.clock,tweens:a.tweens,blur:a.blurListeners,bridge:window.__PIXEL__!.listeners()};}));}for(const r of restarts)expect(r).toEqual(restarts[0]);expect(errors).toEqual([]);
+  mkdirSync('docs/enrage2',{recursive:true});writeFileSync(`docs/enrage2/${process.env.PIXEL_E2_PHASE??'after'}-performance-${width}.json`,JSON.stringify({medianFps:percentile(samples.slice(2).map(s=>s.metrics.fps),.5),p95Frame:percentile(frames.frames.slice(120),.95),p95SceneUpdate:percentile(frames.updates.slice(120),.95),frames,samples,restarts,errors},null,2));
+});

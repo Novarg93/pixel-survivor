@@ -10,6 +10,7 @@ for(const width of [1280,390])test(`boss teleport, volleys and Guardian orbs150+
     for(const [i,kind] of (['charger','sorcerer','eclipse'] as const).entries())w.spawn(kind,{x:90*(i-1),y:-85});
     for(let i=0;i<3;i++)w.spawn('guardian',{x:i===1?80:-30,y:(i-1)*130});
     for(const g of w.guardians){g.discovered=true;w.damageEnemy(g,1);}for(const e of w.enemies)e.hp=e.maxHp=1e6;
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
   });
   const samples=[];
   for(let i=0;i<15;i++){const key=['d','s','a','w'][i%4];await page.keyboard.down(key);await page.waitForTimeout(1000);await page.keyboard.up(key);

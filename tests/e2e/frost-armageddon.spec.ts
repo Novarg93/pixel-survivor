@@ -107,6 +107,7 @@ for (const width of [1280, 390]) test(`Nova/Armageddon bounded150+3+3 stress and
     for (let i = 0; i < 150; i++) w.spawn((['tank', 'caster', 'rusher', 'runner', 'grunt', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 18, y: (Math.floor(i / 15) - 4) * 22 });
     for (const e of w.enemies) e.hp = e.maxHp = 1e6;
     w.guardians.forEach((g, i) => { g.x = i === 1 ? 80 : -30; g.y = (i - 1) * 155; g.discovered = true; w.damageEnemy(g, 1); });
+      w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
   });
   const samples = [];
   for (let i = 0; i < 12; i++) {
