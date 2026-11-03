@@ -90,7 +90,7 @@ test('boss chests replace timed map chests and open on approach and reset all lo
   await page.keyboard.down('d'); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.loot.chests.some(c => c.source === 'boss'))).toBe(false); await page.keyboard.up('d');
   await expect(page.locator('.loot-notice')).toBeVisible();
   for (let i = 0; i < 5; i++) {
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.loot.grant(w, 'fury'); w.loot.grant(w, 'haste'); for (let j = 0; j < 6; j++) w.loot.drop(w, 'haste', { x: 100, y: 0 }); w.loot.spawnChest(w, { x: 150, y: 0 }, 'boss'); w.shield.charges = 0; w.player.invulnerableUntil = 0; w.damagePlayer(99999); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.loot.grant(w, 'fury'); w.loot.grant(w, 'haste'); for (let j = 0; j < 6; j++) w.loot.drop(w, 'haste', { x: 100, y: 0 }); w.loot.spawnChest(w, { x: 150, y: 0 }, 'boss'); w.shield.clearAbsorb(); w.player.invulnerableUntil = 0; w.damagePlayer(99999); });
     await expect(page.getByRole('dialog', { name: 'Игра окончена' })).toBeVisible();
     expect(await page.evaluate(() => { const w = window.__PIXEL__!.world; return [w.loot.items.length, w.loot.chests.length, w.snapshot().buffs.length]; })).toEqual([0, 0, 0]);
     await page.getByRole('button', { name: 'Начать заново' }).click(); await expect(page.locator('[data-buff]')).toHaveCount(0);

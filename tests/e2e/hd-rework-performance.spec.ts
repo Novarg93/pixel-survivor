@@ -62,7 +62,7 @@ test('HD rework: identical mixed150 fixture, two viewports, maps and ten restart
       w.effect('frost', w.player, 73, 0x91e4dc, 1);
       w.effect('lightning', { x: -40, y: 40 }, 1, 0xdab5ff, 1, { x: 45, y: 30 });
       w.shoot({ x: 25, y: 8, vx: 180, vy: 0, damage: 1, hostile: false, source: 'fireball' });
-      w.shield.charges = 1; w.shield.activeUntil = w.elapsed + 5;
+      w.shield.refreshAbsorb(15,w.elapsed+5);
       w.impacts.push({ id: w.id(), x: 48, y: -65, radius: 55, damage: 1, landAt: w.elapsed + .3, hostile: false, source: 'meteor' });
     });
     await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(120);

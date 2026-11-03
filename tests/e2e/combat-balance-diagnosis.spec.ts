@@ -12,7 +12,7 @@ test('causal stationary-build probes: control, knockback, fireball concentration
       w.elapsed = 600; w.width = width; w.height = width === 195 ? 422 : 360; w.encounterDirector.nextAt = 1e6;
       let hits = 0, blocked = 0, shots = 0;
       const damage = w.damagePlayer.bind(w), damageEnemy = w.damageEnemy.bind(w), shoot = w.shoot.bind(w), spawn = w.spawn.bind(w);
-      w.damagePlayer = amount => { const hp = w.player.hp, shield = w.shield.charges, ok = damage(amount); if (hp > w.player.hp) hits++; if (shield > w.shield.charges) blocked++; return ok; };
+      w.damagePlayer = amount => { const hp = w.player.hp, shield = w.shield.absorbValue(w.elapsed), ok = damage(amount); if (hp > w.player.hp) hits++; if (shield > w.shield.absorbValue(w.elapsed)) blocked++; return ok; };
       if (probe === 'no-knockback') w.damageEnemy = (e, amount, source) => { const at = { x: e.x, y: e.y }, killed = damageEnemy(e, amount, source); if (!killed) { e.x = at.x; e.y = at.y; } return killed; };
       if (probe === 'no-frost') w.abilities.frost.level = 0;
       if (probe === 'single-fireball') { w.stats.projectiles = 1; w.upgrades.damage = 0; }

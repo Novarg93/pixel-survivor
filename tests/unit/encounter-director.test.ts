@@ -23,29 +23,29 @@ function replay() {
 }
 it('executes the exact3-12min assignments deterministically when slots are free',()=>{
   const result=replay();expect(result).toEqual(replay());
-  expect(result.map(e=>[e.minute,e.bosses.length,e.guardians.length])).toEqual([[3,1,0],[4,0,1],[5,1,0],[6,0,1],[7,2,0],[8,0,2],[9,3,0],[10,3,0],[11,3,3],[12,3,3]]);
+  expect(result.map(e=>[e.minute,e.bosses.length,e.guardians.length])).toEqual([[3,1,0],[4,0,1],[5,1,0],[6,0,1],[7,2,0],[8,0,2],[9,3,0],[10,0,0],[11,1,3],[12,1,3]]);
   expect(result.every(e=>e.skippedBosses===0&&e.skippedGuardians===0)).toBe(true);
   mkdirSync('.tmp/encounter-director-2',{recursive:true});writeFileSync('.tmp/encounter-director-2/EVENTS.json',JSON.stringify({fixture:'seed12345, actual central director; all assigned participants killed between minute windows; no AI survival claim',result},null,2));
 });
 it('retains living owners, fills only free slots at the next minute and never queues skipped participants',()=>{
   const w=quiet();w.elapsed=600;for(let i=0;i<3;i++){w.spawn('charger');w.spawn('guardian',{x:200+i*170,y:0});}
   const ids=w.enemies.map(e=>e.id);w.encounterDirector.nextAt=660;w.elapsed=660;w.encounterDirector.update(w);
-  expect(w.enemies.map(e=>e.id)).toEqual(ids);expect(w.encounterDirector.history[0]).toMatchObject({skippedBosses:3,skippedGuardians:3});
+  expect(w.enemies.map(e=>e.id)).toEqual(ids);expect(w.encounterDirector.history[0]).toMatchObject({skippedBosses:1,skippedGuardians:3});
   kill(w,w.bosses[0].id);kill(w,w.guardians[0].id);w.elapsed=661;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(2);expect(w.guardians).toHaveLength(2);
   w.elapsed=720;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(3);expect(w.guardians).toHaveLength(3);
-  expect(w.encounterDirector.history[1]).toMatchObject({skippedBosses:2,skippedGuardians:2});
-  expect(w.bosses.every(e=>e.boss?.aggression?.movement===1.6&&e.boss.aggression.frequency===2)).toBe(true);
+  expect(w.encounterDirector.history[1]).toMatchObject({skippedBosses:0,skippedGuardians:2});
+  for(const e of w.bosses)expect(e.boss!.aggression).toEqual(bossAggressionAt(12));
   writeFileSync('.tmp/encounter-director-2/OCCUPIED_SLOTS.json',JSON.stringify({fixture:'all6 slots occupied at11min; one boss and one Guardian killed before12min; no automatic AI survival claim',events:w.encounterDirector.history},null,2));
 });
 it('coalesces clock jumps to one current event, bounds history, and freezes deadlines during pause/upgrade',()=>{
   const w=quiet();w.encounterDirector.nextAt=180;w.elapsed=720;w.pause();w.encounterDirector.update(w);expect(w.enemies).toHaveLength(0);
   w.resume();w.status='upgrade';w.encounterDirector.update(w);expect(w.encounterDirector.nextAt).toBe(180);w.status='playing';
-  w.encounterDirector.update(w);expect(w.encounterDirector.history[0].missedMinutes).toBe(9);expect(w.enemies).toHaveLength(6);expect(w.encounterDirector.nextAt).toBe(780);
+  w.encounterDirector.update(w);expect(w.encounterDirector.history[0].missedMinutes).toBe(9);expect(w.enemies).toHaveLength(4);expect(w.encounterDirector.nextAt).toBe(750);
   for(let minute=13;minute<1000;minute++){w.elapsed=minute*60;w.encounterDirector.update(w);}
   expect(w.encounterDirector.history).toHaveLength(C.historyCap);expect(w.enemies).toHaveLength(6);expect(w.guardianSystem.waves.size).toBeLessThanOrEqual(3);
 });
 it('uses the target wave multipliers from base values, with no cumulative scaling or HP changes',()=>{
-  expect([3,5,7,9,10,12].map(m=>{const a=bossAggressionAt(m);return[+a.movement.toFixed(2),a.frequency];})).toEqual([[1,1],[1.15,1.25],[1.3,1.5],[1.45,1.75],[1.6,2],[1.6,2]]);
+  expect([3,5,7,9,10,12].map(m=>{const a=bossAggressionAt(m);return[+a.movement.toFixed(2),a.frequency];})).toEqual([[1,1],[1.15,1.25],[1.3,1.5],[1.45,1.75],[1.6,2],[1.79,2.32]]);
   const w=quiet();w.elapsed=180;const e=w.spawn('charger')!,hp=e.maxHp,speed=e.speed;
   for(const minute of [5,7,9,10,11,12]){w.encounterDirector.nextAt=minute*60;w.elapsed=minute*60;w.encounterDirector.update(w);}
   expect(e.speed).toBe(speed);expect(e.maxHp).toBe(hp);expect(e.boss!.aggression).toEqual(bossAggressionAt(12));
@@ -112,7 +112,7 @@ it('uses independent hurt/death presentation for three Guardian IDs without chan
 it('temporarily softens ordinary spawn frequency for8s and then restores it with heavy enemies still alive',()=>{
   const w=quiet();w.elapsed=660;w.encounterDirector.nextAt=660;w.encounterDirector.update(w);
   expect(w.encounterDirector.regularSpawnFactor(660)).toBe(.75);expect(w.encounterDirector.regularSpawnFactor(668)).toBe(1);
-  expect(w.bosses.length+w.guardians.length).toBe(6);expect(regularMoveSpeed(w.spawn('runner',{x:400,y:0})!,660)).toBeGreaterThan(68);
+  expect(w.bosses.length+w.guardians.length).toBe(4);expect(regularMoveSpeed(w.spawn('runner',{x:400,y:0})!,660)).toBeGreaterThan(68);
 });
 it('keeps Guardian threats spawning after all artifact stacks are capped, without exceeding the artifact cap',()=>{
   const w=quiet();for(const id of ['health','damage','speed','cooldown','experience'] as const)for(let i=0;i<3;i++)w.artifacts.grant(w,id);

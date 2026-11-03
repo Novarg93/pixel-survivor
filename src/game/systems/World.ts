@@ -14,7 +14,9 @@ import { initialAbilities, ABILITIES, abilitiesFor } from '../abilities/definiti
 import { CHARACTERS, type CharacterId } from '../config/characters';
 import type { BiomeId } from '../config/biomes';
 import { tickAbilities } from '../abilities/tickAbilities';
-import { profileAt, pickEnemy, scalesAt } from './DifficultyDirector';
+import { profileAt, pickEnemy, scalesAt, spawnCadenceAt } from './DifficultyDirector';
+import { enrageAt } from '../config/survivalEnrage';
+import { AbsorbPool } from './AbsorbPool';
 import { EnemySystem } from './EnemySystem';
 import { BOSS_CAP } from './BossSystem';
 import { EncounterDirector } from './EncounterDirector';
@@ -45,12 +47,13 @@ export class World {
   get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
   get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown') * this.buffs.modifier('cooldown', this.elapsed); }
   get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
+  get absorb(){return this.shield.absorbValue(this.elapsed)+this.mobility.absorbValue(this.elapsed);}
   get guardians() { return this.enemies.filter(e => e.kind === 'guardian'); }
   get rareGuardian() { return this.guardians[0]; }
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
   clearTemporaryState() {
-    this.feedbackEvents = []; this.sounds = [];
+    this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb();
     for (const e of this.enemies) {
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.shootingAt = 0; }
@@ -77,7 +80,7 @@ export class World {
   offerId = 0;
   stats = { damage: 1, cooldown: 1, projectiles: 1, area: 1, pickup: 55 };
   abilities = initialAbilities();
-  shield = { charges: 0, activeUntil: 0 };
+  readonly shield = new AbsorbPool();
   warrior = { whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0 };
   get character() { return this.options.character ?? 'mage'; }
   get biome() { return this.options.biome ?? 'grove'; }
@@ -113,7 +116,7 @@ export class World {
     if (kind === 'guardian') elite = false;
     const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng)), definition = ENEMIES[kind];
     if (!p) return;
-    const aggression = bossAggressionAt(Math.floor(this.elapsed / 60));
+    const aggression = bossAggressionAt(this.elapsed / 60);
     const scale = scalesAt(this.elapsed), hp = definition.hp * scale.hp * (elite ? 2 : 1);
     const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + (kind === 'charger' ? CHARGE_BOSS.initialDelay : 2) / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
@@ -165,15 +168,14 @@ export class World {
   collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + (o.expires > this.elapsed ? o.value : 0), 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
   damagePlayer(amount: number) {
     if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || amount <= 0 || !Number.isFinite(amount)) return false;
-    if (this.shield.activeUntil > this.elapsed && this.shield.charges > 0) {
-      this.shield.charges--; this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability; this.effect('shield', this.player, 32, 0xa5c4ff); shieldPulse(this); return true;
-    }
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
     const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
-    const absorbed = this.mobility.absorbDamage(this.elapsed, incoming);
+    const arcane=this.shield.absorbDamage(this.elapsed,incoming);
+    const mobility=this.mobility.absorbDamage(this.elapsed,incoming-arcane),absorbed=arcane+mobility;
+    if(arcane>0){this.feedback({type:'impact',source:'shield',strength:arcane});if(this.shield.absorbValue(this.elapsed)===0)shieldPulse(this);}
     const hpHit = receiveDamage(this.player, incoming - absorbed, this.elapsed);
     const hit = hpHit || absorbed > 0;
-    if (absorbed > 0 && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
+    if (mobility > 0 && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
     if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
@@ -184,8 +186,9 @@ export class World {
     if (!this.mobility.update(this, dt)) { this.player.x += vector.x * this.effectiveSpeed * dt; this.player.y += vector.y * this.effectiveSpeed * dt; }
     if (vector.x || vector.y) this.facing = vector;
     const profile = profileAt(this.elapsed);
-    if (this.spawnClock.tick(dt, profile.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
-      for (let i = 0; i < profile.burst; i++) {
+    const cadence=spawnCadenceAt(this.elapsed);
+    if (this.spawnClock.tick(dt, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
+      for (let i = 0; i < cadence.burst; i++) {
         const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
         this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
       }
@@ -250,7 +253,8 @@ export class World {
       mobility: this.mobility.snapshot(this), guardianPhase: this.guardianSystem.encounter?.phase ?? null,
       buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
       artifacts: this.artifacts.snapshot(), runNotice: this.guardianSystem.notice?.text ?? this.artifacts.notice?.text ?? null, guardianKills: this.scoring.guardianKills,
-      hp: this.player.hp, maxHp: this.effectiveMaxHp, absorb: this.mobility.absorbValue(this.elapsed), kills: this.kills, score: this.score,
+      hp: this.player.hp, maxHp: this.effectiveMaxHp, absorb: this.absorb, kills: this.kills, score: this.score,
+      enrage:enrageAt(this.elapsed),
       killsByKind: { ...this.scoring.byKind }, enemies: this.regularCount,
       level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),
       offerId: this.offerId, pending: this.experience.pending,

@@ -64,7 +64,7 @@ it('freezes the arm phase on pause and repositions no gameplay state when Blink 
   c.observe(new World(10));expect(c.view(0).mode).toBe('idle');expect(c.view(0).pending).toBe(0);
 });
 it('reacts to real shield absorption without introducing invulnerability or fake health damage', () => {
-  const w=new World(),c=new MageCastingController();w.shield.charges=3;w.shield.activeUntil=10;c.observe(w);w.damagePlayer(10);const before=JSON.stringify(w);c.observe(w);expect(c.view(0).active).toMatchObject({ability:'shield',impact:true});expect(w.player.hp).toBe(100);expect(JSON.stringify(w)).toBe(before);
+  const w=new World(),c=new MageCastingController();w.abilities.shield.level=1;w.shield.refreshAbsorb(15,10);c.observe(w);w.damagePlayer(10);const before=JSON.stringify(w);c.observe(w);expect(c.view(0).active).toMatchObject({ability:'shield',impact:true});expect(w.player.hp).toBe(100);expect(w.shield.absorbValue(0)).toBe(5);expect(JSON.stringify(w)).toBe(before);
 });
 it('retains exact distant cast targets even when the bounded FX pool has no free slot', () => {
   const w=new World(71,{spawnRate:0});for(const a of Object.values(w.abilities))a.level=0;w.abilities.frost.level=1;w.spawn('tank',{x:150,y:-60})!.hp=1e6;

@@ -16,7 +16,7 @@ for (const width of [1280, 390]) for (const moving of [false, true]) test(`Mage3
     w.elapsed = 600; w.encounterDirector.nextAt = 1e6;
     const state = { hits: 0, blocked: 0, attempts: 0, shots: 0, rushWindups: 0, peak: 0, projectiles: 0, effects: 0, seconds: 0, hp: w.player.hp, score: 0, kills: 0, status: 'playing', mobilityUses: 0 };
     const damage = w.damagePlayer.bind(w), shoot = w.shoot.bind(w), step = w.step.bind(w), windups = new Set<number>();
-    w.damagePlayer = amount => { state.attempts++; const before = w.player.hp, shield = w.shield.charges, accepted = damage(amount); if (w.player.hp < before) state.hits++; if (w.shield.charges < shield) state.blocked++; return accepted; };
+    w.damagePlayer = amount => { state.attempts++; const before = w.player.hp, shield = w.shield.absorbValue(w.elapsed), accepted = damage(amount); if (w.player.hp < before) state.hits++; if (w.shield.absorbValue(w.elapsed) < shield) state.blocked++; return accepted; };
     w.shoot = p => { if (p.hostile) state.shots++; shoot(p); };
     w.step = dt => {
       if (w.status === 'upgrade') { w.status = 'playing'; w.experience.pending = 0; w.experience.level = 39; w.choices = []; }

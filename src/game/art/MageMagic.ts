@@ -40,6 +40,10 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
         g.fillStyle(0xf0fcff, alpha).fillRect(x - 1, y - h - 3, 2, Math.max(2, h * .6));
       }
     } else if (e.kind === 'shield') {
+      if (w.status === 'over' || e.expires <= w.elapsed) continue;
+      // A spent cast must not leave a protective shell. The large evolution
+      // pulse remains visible as damage feedback while the player is alive.
+      if (w.character === 'mage' && w.shield.absorbValue(w.elapsed) <= 0 && e.radius <= 32) continue;
       const r = e.radius * (.65 + t * .35), color = 0xa5c4ff;
       const v = abilityVisual(w.abilities[w.character === 'warrior' ? 'iron' : 'shield'].level);
       ring(g, e.x, e.y, r, 0x263e53, fade, 0, 32); ring(g, e.x, e.y, r - 1, color, fade);
@@ -100,11 +104,10 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
       g.lineStyle(1, 0xd9f3f7, alpha).lineBetween(e.x - 9, e.y + 7, e.x + 9, e.y + 7);
     } else if ((e.novaSlowUntil ?? 0) > w.elapsed) for (const side of [-1, 1]) g.fillStyle(0xb8e4f3, Math.max(.4, intensity)).fillRect(Math.round(e.x + side * (e.radius + 2)), Math.round(e.y + 3), 2, 4);
   }
-  if (w.shield.charges > 0 && w.shield.activeUntil > w.elapsed) {
+  if (w.shield.absorbValue(w.elapsed)>0) {
     const v = abilityVisual(w.abilities.shield.level);
     const pulse = .65 + Math.sin(w.elapsed * 3) * .12;
     ring(g, w.player.x, w.player.y, 22, 0xa5c4ff, Math.max(.25, intensity) * pulse, 0, 16);
     for (let n = 1; n < v.rings; n++) ring(g, w.player.x, w.player.y, 22 - n * 3, v.capstone ? 0xece5ff : 0xbcb9ee, intensity * pulse * .6, w.elapsed * .2, 8 + v.rank * 2, v.lineWidth);
-    for (let i = 0; i < Math.min(4, w.shield.charges); i++) { const x = w.player.x - 4 + i * 3; g.fillStyle(0xe6f1ff, pulse).fillRect(x, w.player.y - 24, 2, 2); }
   }
 }

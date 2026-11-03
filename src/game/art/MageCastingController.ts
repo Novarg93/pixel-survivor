@@ -18,7 +18,7 @@ export class MageCastingController {
   private pending?: Pending;
   private block?: { mode: 'hurt' | 'blink' | 'death'; until: number };
   private accents: Pending[] = [];
-  private run = ''; private hp = 0; private mobility = 0; private charges = 0;
+  private run = ''; private hp = 0; private mobility = 0;
   requested: Record<MageSpell, number> = { fireball: 0, frost: 0, lightning: 0, meteor: 0, shield: 0 };
   started = 0; coalesced = 0; interrupted = 0; dropped = 0; maxPending = 0;
   lastInput?: Pending;
@@ -56,9 +56,9 @@ export class MageCastingController {
     this.maxPending = Math.max(this.maxPending, this.pending ? 1 : 0);
   }
   observe(w: World) {
-    if (this.run !== w.runId) { this.clear(); this.run = w.runId; this.hp = w.player.hp; this.mobility = w.mobility.sequence; this.charges = w.shield.charges; }
-    const hurt = this.hp - w.player.hp >= 8, blink = this.mobility !== w.mobility.sequence, shield = this.charges > w.shield.charges;
-    this.hp = w.player.hp; this.mobility = w.mobility.sequence; this.charges = w.shield.charges;
+    if (this.run !== w.runId) { this.clear(); this.run = w.runId; this.hp = w.player.hp; this.mobility = w.mobility.sequence; }
+    const hurt = this.hp - w.player.hp >= 8, blink = this.mobility !== w.mobility.sequence;
+    this.hp = w.player.hp; this.mobility = w.mobility.sequence;
     if (w.character !== 'mage') { this.clear(); return; }
     if (w.status === 'over') { this.interrupt('death', w.elapsed); return; }
     if (w.status !== 'playing') return;
@@ -67,12 +67,12 @@ export class MageCastingController {
     const signals: CastSignal[] = [];
     for (const event of w.feedbackEvents) {
       if (event.type === 'ability' && isMageSpell(event.ability)) signals.push(this.resolve(w, event.ability, event));
+      else if(event.type==='impact'&&event.source==='shield')signals.push({ability:'shield',rank:w.abilities.shield.level,target:this.aim(w),impact:true});
       else if (event.type === 'impact' && event.source === 'meteor') {
         const impact = w.effects.find(e => e.kind === 'meteor' && e.color === 0xffae65 && e.started === w.elapsed);
         signals.push({ ability: 'meteor', rank: w.abilities.meteor.level, target: event.target ? { ...event.target } : impact ? { x: impact.x, y: impact.y } : this.aim(w), impact: true });
       }
     }
-    if (shield) signals.push({ ability: 'shield', rank: w.abilities.shield.level, target: this.aim(w), impact: true });
     signals.sort((a, b) => priority(b) - priority(a));
     for (const signal of signals) this.request({ ...signal, origin: { x: w.player.x, y: w.player.y } }, w.elapsed);
   }

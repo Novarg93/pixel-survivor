@@ -6,7 +6,7 @@ export const ABILITIES: AbilityDefinition[] = [
   { id: 'frost', name: 'Морозная нова', cooldown: FROST_NOVA.cooldown, color: 0x91e4dc, icon: '❄', description: 'Ледяное кольцо по плотной группе в пределах 310px и экрана. Root 1.2с не мешает стрелкам атаковать; после root иммунитет 2с. Боссы и Guardian: ограниченный slow.' },
   { id: 'lightning', name: 'Цепная молния', cooldown: 3.4, color: 0xdab5ff, icon: 'ϟ' },
   { id: 'meteor', name: 'Армагеддон', cooldown: ARMAGEDDON.cooldown, color: 0xffc078, icon: '☄', description: 'Автоматический метеор по плотной группе в пределах 310px и экрана. Падение через 0.85с; на III/V рангах 2/3 удара с интервалом 0.15с.' },
-  { id: 'shield', name: 'Тайный щит', cooldown: 12, color: 0xa5c4ff, icon: '◇' },
+  { id: 'shield', name: 'Тайный щит', cooldown: 12, color: 0xa5c4ff, icon: '◇', description:'Absorb 15/20/25/30/35% maxHP на 6–10с. Излишек урона проходит в HP. Повторное применение заменяет остаток, не складывает щиты.' },
   { id: 'cleave', name: 'Cleave', cooldown: 0.85, color: 0xf4d2a0, icon: '⚔', character: 'warrior', description: 'Автоматический широкий удар по ближайшим врагам.' },
   { id: 'whirlwind', name: 'Whirlwind', cooldown: 3.6, color: 0xd7e8bd, icon: '◎', character: 'warrior', description: 'Серия круговых ударов в течение 1.2с.' },
   { id: 'slam', name: 'Ground Slam', cooldown: 4.8, color: 0xe5c48a, icon: '⌁', character: 'warrior', description: 'Размеченный удар по области после задержки 0.65с.' },

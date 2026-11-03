@@ -123,7 +123,7 @@ it('late speeds and pressure continue growing at 8/10/12/16min with hard readabl
     expect(speedMultiplierAt(600, kind)).toBeGreaterThan(speedMultiplierAt(480, kind)); expect(speedMultiplierAt(720, kind)).toBeGreaterThan(speedMultiplierAt(600, kind));
   }
   for (const t of [480, 600, 720, 960, 1e8]) { const p = pressureAt(t); expect(p.casterWarning).toBeGreaterThanOrEqual(.65); expect(p.rusherWarning).toBeGreaterThanOrEqual(.7); expect(p.projectileSpeed).toBeLessThanOrEqual(145); }
-  expect(pressureAt(960)).toEqual(pressureAt(1e8));
+  expect(pressureAt(1200)).toEqual(pressureAt(1e8));
   const edges = Array.from({ length: 12 }, (_, i) => formationEdge(600 + i * 12, i % 3)); expect(new Set(edges).size).toBe(4);
 });
 

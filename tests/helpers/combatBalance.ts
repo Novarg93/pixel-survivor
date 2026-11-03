@@ -17,7 +17,7 @@ export function survivalTrial(seed: number, moving: boolean, start = 600, durati
   w.encounterDirector.nextAt = 1e6;
   let hits = 0, blocked = 0, attempts = 0, shots = 0, rushes = 0, peak = 0;
   const damage = w.damagePlayer.bind(w), shoot = w.shoot.bind(w), rushing = new Set<number>();
-  w.damagePlayer = amount => { attempts++; const hp = w.player.hp, charges = w.shield.charges, result = damage(amount); if (w.player.hp < hp) hits++; if (charges > w.shield.charges) blocked++; return result; };
+  w.damagePlayer = amount => { attempts++; const hp = w.player.hp, charges = w.shield.absorbValue(w.elapsed), result = damage(amount); if (w.player.hp < hp) hits++; if (charges > w.shield.absorbValue(w.elapsed)) blocked++; return result; };
   w.shoot = shot => { if (shot.hostile) shots++; shoot(shot); };
   for (let tick = 0; tick < duration * 20 && w.status !== 'over'; tick++) {
     // Hold the fixed level-39 loadout while still processing real XP, loot and shields.

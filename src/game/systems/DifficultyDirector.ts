@@ -4,6 +4,7 @@ import type { Enemy } from '../entities/types';
 import { WAVES, SPEED_PACING as S, type SpawnProfile } from '../config/pacing';
 import { pressureAt } from './EndgamePressure';
 import { MOBILITY_SPECIALIZATIONS } from '../config/mobilityUpgrades';
+import { enrageAt, SURVIVAL_ENRAGE as E } from '../config/survivalEnrage';
 export { WAVES, type SpawnProfile } from '../config/pacing';
 export function profileAt(seconds: number) { return [...WAVES].reverse().find(p => seconds >= p.from) ?? WAVES[0]; }
 export function pickEnemy(profile: SpawnProfile, rng: SeededRandom): RegularKind {
@@ -12,6 +13,11 @@ export function pickEnemy(profile: SpawnProfile, rng: SeededRandom): RegularKind
 }
 export function scalesAt(seconds: number) { return { hp: 1 + Math.min(3, seconds / 600) * 0.45, damage: 1 + Math.min(2, seconds / 900) * 0.3 }; }
 export function speedMultiplierAt(seconds: number, kind: RegularKind) {
+  return legacySpeedMultiplierAt(Math.min(seconds,E.from),kind)*enrageSpeedAt(seconds,kind);
+}
+export function enrageSpeedAt(seconds:number,kind:RegularKind){return Math.min(kind==='runner'?E.runnerSpeedCap:kind==='rusher'?E.rusherSpeedCap:E.speedCap,enrageAt(seconds).speed);}
+export function spawnCadenceAt(seconds:number){const p=profileAt(Math.min(seconds,E.from));return{interval:p.interval/enrageAt(seconds).spawn,burst:p.burst};}
+function legacySpeedMultiplierAt(seconds:number,kind:RegularKind) {
   const cap = kind === 'runner' ? S.runnerCap : kind === 'rusher' ? S.rusherCap : S.cap;
   const earlyCap = kind === 'runner' ? 1.25 : kind === 'rusher' ? 1.3 : 1.45;
   const early = Math.min(earlyCap, S.perMinute ** Math.min(8, Math.max(0, Math.floor(seconds / 60))));
@@ -22,7 +28,9 @@ export function regularMoveSpeed(e: Enemy, now: number) {
   if (isBossKind(e.kind) || e.kind === 'guardian') return e.speed;
   if ((e.freezeUntil ?? 0) > now) return 0;
   const p = pressureAt(now).progress;
-  const limit = e.kind === 'runner' ? 100 + (S.runnerMaxSpeed - 100) * p : e.kind === 'rusher' ? 88 + (S.rusherMaxSpeed - 88) * p : 118 + (S.maxSpeed - 118) * p;
+  const absolute=e.kind==='runner'?S.runnerMaxSpeed:e.kind==='rusher'?S.rusherMaxSpeed:S.maxSpeed;
+  const baseLimit = e.kind === 'runner' ? 100 + (S.runnerMaxSpeed - 100) * p : e.kind === 'rusher' ? 88 + (S.rusherMaxSpeed - 88) * p : 118 + (S.maxSpeed - 118) * p;
+  const limit=Math.min(absolute,baseLimit*enrageSpeedAt(now,e.kind));
   const slow = Math.min(e.slowUntil > now ? e.slowFactor : 1, (e.mobilitySlowUntil ?? 0) > now ? MOBILITY_SPECIALIZATIONS.wallSlow : 1);
   return Math.min(limit, e.speed * speedMultiplierAt(now, e.kind) * frenzySpeed(e, now)) * slow;
 }

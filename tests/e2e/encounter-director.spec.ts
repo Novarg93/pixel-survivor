@@ -9,7 +9,7 @@ for(const width of [1280,390])test(`three independent Guardians, minute notice, 
     w.guardians.forEach((g,i)=>{g.x=i===1?65:-20;g.y=(i-1)*165;g.discovered=true;w.damageEnemy(g,1);});return w.guardians.map(g=>g.id);});
   await expect(page.locator('[data-marker="guardian"]')).toHaveCount(3);await expect(page.locator('.run-notice')).toContainText('Endgame Encounter');
   await expect(page.getByLabel('Волны Guardian')).toContainText('1 АРТЕФАКТ ЗА ВОЛНУ');
-  expect(await page.evaluate(()=>window.__PIXEL__!.world.bosses.length)).toBe(3);
+  expect(await page.evaluate(()=>window.__PIXEL__!.world.bosses.length)).toBe(1);
   await page.waitForFunction(()=>[...window.__PIXEL__!.world.guardianSystem.encounters.values()].filter(s=>s.phase==='beam').length===3);
   await page.evaluate(()=>window.__PIXEL__!.world.pause());await page.addStyleTag({content:'.overlay{display:none!important}'});await page.waitForTimeout(100);
   await page.screenshot({path:`${directory}/three-beams-${width}.png`});await page.locator('canvas').screenshot({path:`${directory}/three-beams-canvas-${width}.png`});
@@ -33,6 +33,7 @@ for(const hero of ['Mage','Warrior'])for(const width of [1280,390])test(`150 reg
   test.setTimeout(40000);mkdirSync(directory,{recursive:true});const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:new RegExp('^'+hero)}).click();await page.getByRole('button',{name:'Начать забег'}).click();
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.elapsed=720;w.experience.level=39;w.player.invulnerableUntil=1e6;w.encounterDirector.nextAt=720;w.encounterDirector.update(w);w.encounterDirector.nextAt=1e6;
+    for(const kind of ['charger','sorcerer','eclipse'] as const)if(!w.bosses.some(e=>e.kind===kind))w.spawn(kind);
     // Constant-load fixture: safe-position search may legally skip a random slot.
     for(let i=w.guardians.length;i<3;i++)w.spawn('guardian',{x:-20,y:(i-1)*165});
     for(const a of w.abilityDefinitions)w.abilities[a.id].level=5;for(let i=0;i<3;i++)w.mobility.upgrade(w,w.character==='mage'?'flame-trail':'cleaving-dash');

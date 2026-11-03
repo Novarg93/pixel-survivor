@@ -12,6 +12,8 @@ test('all six specializations sustain repeated real cooldown casts at150+3+3 on 
     await page.evaluate(variant => {
       const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; w.elapsed = 720;
       w.encounterDirector.nextAt = 720; w.encounterDirector.update(w); w.encounterDirector.nextAt = 1e6;
+      // Constant load: populate all three boss families independently of the new30s schedule.
+      for(const kind of ['charger','sorcerer','eclipse'] as const)if(!w.bosses.some(e=>e.kind===kind))w.spawn(kind);
       // The benchmark asserts a fixed3-Guardian load, not safe-placement success.
       for(let i=w.guardians.length;i<3;i++)w.spawn('guardian',{x:0,y:(i-1)*130});
       for (const a of w.abilityDefinitions) w.abilities[a.id].level = 5;

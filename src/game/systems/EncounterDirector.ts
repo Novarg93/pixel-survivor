@@ -1,6 +1,7 @@
 import { ENCOUNTER_DIRECTOR as C, encounterPlan, bossAggressionAt } from '../config/encounterDirector';
 import type { BossKind } from '../config/enemyDefinitions';
 import type { World } from './World';
+import { SURVIVAL_ENRAGE } from '../config/survivalEnrage';
 export interface EncounterEvent {
   minute: number; at: number; label: string; requestedBosses: number; requestedGuardians: number;
   bosses: { id: number; kind: BossKind }[]; guardians: number[]; skippedBosses: number; skippedGuardians: number;
@@ -14,11 +15,13 @@ export class EncounterDirector {
   update(w: World) {
     if (w.status !== 'playing') return;
     if (this.notice && w.elapsed >= this.notice.until) this.notice = null;
-    if (w.elapsed + 1e-7 < this.nextAt) return;
-    const minute = Math.max(C.firstMinute, Math.floor((w.elapsed + 1e-7) / C.interval)), plan = encounterPlan(minute);
-    const missedMinutes = Math.max(0, minute - Math.round(this.nextAt / C.interval));
+    const now=w.elapsed+1e-7;
+    if (now < this.nextAt) return;
+    const interval=now>=SURVIVAL_ENRAGE.from?SURVIVAL_ENRAGE.interval:C.interval;
+    const at=Math.max(C.firstMinute*C.interval,Math.floor(now/interval)*interval), minute=at/60, plan=encounterPlan(minute);
+    const missedMinutes = Math.max(0, Math.floor((at-this.nextAt)/60));
     // Consume the current window once; no backlog or catch-up burst.
-    this.nextAt = (minute + 1) * C.interval;
+    this.nextAt = at + interval;
     const aggression = bossAggressionAt(minute);
     for (const e of w.bosses) e.boss!.aggression = { ...aggression };
     const bosses: EncounterEvent['bosses'] = [];
@@ -28,7 +31,8 @@ export class EncounterDirector {
       bosses, guardians, skippedBosses: plan.bosses.length - bosses.length, skippedGuardians: plan.guardians - guardians.length, aggression, missedMinutes };
     this.history.push(event); if (this.history.length > C.historyCap) this.history.shift();
     const skipped = event.skippedBosses + event.skippedGuardians;
-    this.notice = { text: `${plan.label} · ${minute}:00 · боссы ${bosses.length}/${plan.bosses.length} · Guardian ${guardians.length}/${plan.guardians}${skipped ? ' · занятые слоты пропущены' : ''}`, until: w.elapsed + C.noticeDuration };
+    const clock=`${Math.floor(minute)}:${Number.isInteger(minute)?'00':'30'}`;
+    this.notice = { text: `${plan.label} · ${clock} · боссы ${bosses.length}/${plan.bosses.length} · Guardian ${guardians.length}/${plan.guardians}${skipped ? ' · занятые слоты пропущены' : ''}`, until: w.elapsed + C.noticeDuration };
     if (w.bosses.length + w.guardians.length >= 4) this.reliefUntil = w.elapsed + C.reliefDuration;
   }
   crowded(w: World) { return w.bosses.length + w.guardianSystem.encounters.size >= 3; }

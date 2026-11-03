@@ -64,7 +64,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
 test('five restarts and scene recreation clear artifacts, radar data and subscriptions', async ({ page }) => {
   const errors = captureErrors(page); await start(page);
   for (let i = 0; i < 5; i++) {
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.artifacts.grant(w, 'damage'); w.artifacts.drop(w, { x: 200, y: 0 }); w.spawn('guardian'); w.player.invulnerableUntil = 0; w.shield.charges = 0; w.damagePlayer(999999); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.artifacts.grant(w, 'damage'); w.artifacts.drop(w, { x: 200, y: 0 }); w.spawn('guardian'); w.player.invulnerableUntil = 0; w.shield.clearAbsorb(); w.damagePlayer(999999); });
     await expect(page.getByRole('dialog', { name: 'Игра окончена' })).toBeVisible(); await expect(page.locator('.radar')).toHaveCount(0); await expect(page.locator('[data-artifact]')).toHaveCount(0);
     expect(await page.evaluate(() => { const w = window.__PIXEL__!.world; return { guardian: !!w.rareGuardian, items: w.artifacts.items.length, bonus: w.effectiveDamage }; })).toEqual({ guardian: false, items: 0, bonus: 1 });
     await page.getByRole('button', { name: 'Начать заново' }).click(); await expect(page.locator('.radar')).toBeVisible(); expect(await page.evaluate(() => window.__PIXEL__!.metrics().radar.listeners)).toBe(1); await expect(page.locator('canvas')).toHaveCount(1);

@@ -9,7 +9,7 @@ export function setupEncounterTrial(w:World,width:number,height:number,moving:bo
   const pilot:PilotState={target:0,blinks:0};
   const state={seconds:0,hp:w.player.hp,maxHp:w.effectiveMaxHp,hits:0,blocked:0,attempts:0,score:0,kills:0,bossKills:0,guardianKills:0,completedWaves:0,mobilityUses:0,moved:0,peakBosses:0,peakGuardians:0,peakRegular:0,peakActiveGuardians:0,status:'playing',invalidInvulnerability:false};
   const damage=w.damagePlayer.bind(w),step=w.step.bind(w);
-  w.damagePlayer=amount=>{state.attempts++;const hp=w.player.hp,shield=w.shield.charges,result=damage(amount);if(hp>w.player.hp)state.hits++;if(shield>w.shield.charges)state.blocked++;return result;};
+  w.damagePlayer=amount=>{state.attempts++;const hp=w.player.hp,shield=w.shield.absorbValue(w.elapsed),result=damage(amount);if(hp>w.player.hp)state.hits++;if(shield>w.shield.absorbValue(w.elapsed))state.blocked++;return result;};
   w.step=dt=>{
     if(w.status==='upgrade'){w.status='playing';w.experience.pending=0;w.experience.level=39;w.choices=[];}
     const input=moving?encounterPilot(w,pilot):{x:0,y:0},old={x:w.player.x,y:w.player.y};step(dt,input);

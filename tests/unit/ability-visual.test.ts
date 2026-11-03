@@ -18,7 +18,7 @@ it.each<AbilityId>(['fireball', 'frost', 'lightning', 'meteor', 'shield', 'cleav
     if (id === 'fireball') w.shoot({ x: 30, y: 0, vx: 100, vy: 0, damage: 1, hostile: false, source: 'fireball' });
     if (id === 'frost' || id === 'lightning' || id === 'meteor' || id === 'cleave' || id === 'whirlwind') w.effect(id, { x: 0, y: 0 }, 60, 0xffffff, 1, { x: 70, y: 10 });
     if (id === 'meteor' || id === 'slam') w.impacts.push({ x: 50, y: 20, id: w.id(), damage: 10, radius: 60, hostile: false, landAt: .5, source: id });
-    if (id === 'shield') { w.shield.charges = 1; w.shield.activeUntil = 10; }
+    if (id === 'shield') w.shield.refreshAbsorb(15,10);
     if (id === 'blades') w.warrior.bladesUntil = 10;
     if (id === 'iron') w.warrior.ironUntil = 10;
     const calls: unknown[] = [];

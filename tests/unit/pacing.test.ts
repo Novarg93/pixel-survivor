@@ -13,7 +13,7 @@ it('keeps every endless profile and speed multiplier bounded', () => {
   for (const p of WAVES) { expect(p.cap).toBeLessThanOrEqual(150); expect(p.elite).toBeLessThanOrEqual(.28); expect(p.burst / p.interval * 1.3).toBeLessThanOrEqual(10.4); }
   expect(speedMultiplierAt(59.99, 'grunt')).toBe(1); expect(speedMultiplierAt(60, 'grunt')).toBe(1.05);
   expect(speedMultiplierAt(120, 'grunt')).toBeCloseTo(1.1025);
-  expect(speedMultiplierAt(1e12, 'grunt')).toBe(S.cap); expect(speedMultiplierAt(1e12, 'runner')).toBe(S.runnerCap); expect(speedMultiplierAt(1e12, 'rusher')).toBe(S.rusherCap);
+  expect(speedMultiplierAt(1e12, 'grunt')).toBeCloseTo(1.65*1.6); expect(speedMultiplierAt(1e12, 'runner')).toBeCloseTo(1.5*1.35); expect(speedMultiplierAt(1e12, 'rusher')).toBeCloseTo(1.5*1.5);
 });
 it('updates already-living enemies and limits fast elites including frenzy without speeding telegraphs', () => {
   const w = new World(), e = w.spawn('runner', { x: 200, y: 0 }, true)!;
@@ -26,7 +26,7 @@ it('runs the central minute schedule through ten minutes without removing previo
   const w=new World(12345,{spawnRate:0});w.player.invulnerableUntil=1e6;for(const a of Object.values(w.abilities))a.level=0;
   for(let i=0;i<12001;i++){w.step(.05);for(const e of [...w.bosses])w.damageEnemy(e,1e9);}
   expect(w.encounterDirector.history.map(e=>e.minute)).toEqual([3,4,5,6,7,8,9,10]);
-  expect(w.encounterDirector.history.map(e=>e.requestedBosses)).toEqual([1,0,1,0,2,0,3,3]);
+  expect(w.encounterDirector.history.map(e=>e.requestedBosses)).toEqual([1,0,1,0,2,0,3,0]);
   expect(w.guardians.length).toBeLessThanOrEqual(3);
 });
 it('retains a passive Guardian when a scheduled boss arrives, without awarding a reward', () => {

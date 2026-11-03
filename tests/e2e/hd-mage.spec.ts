@@ -69,7 +69,7 @@ test('Mage live five abilities, paused FX phases and death do not delay game ove
     for (let i = 0; i < 8; i++) { const e = w.spawn('tank', { x: 60 + i % 3 * 14, y: i * 10 - 35 })!; e.hp = e.maxHp = 1e5; e.speed = 0; }
   });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.snapshot().damageByAbility.filter(a => a.damage > 0).length)).toBe(4);
-  expect(await page.evaluate(() => window.__PIXEL__!.world.shield.charges)).toBeGreaterThan(0);
+  expect(await page.evaluate(() => {const w=window.__PIXEL__!.world;return w.shield.absorbValue(w.elapsed);})).toBeGreaterThan(0);
   await page.evaluate(() => window.__PIXEL__!.world.pause());
   await page.addStyleTag({ content: '.overlay{display:none!important}' });
   const before = await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world));
@@ -79,7 +79,7 @@ test('Mage live five abilities, paused FX phases and death do not delay game ove
     await page.waitForTimeout(50);
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(80); await page.locator('canvas').screenshot({ path: `${directory}/magic-${phase}-${width}.png` }); }
   }
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.resume(); w.player.invulnerableUntil = 0; w.shield.charges = 0; w.damagePlayer(99999); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.resume(); w.player.invulnerableUntil = 0; w.shield.clearAbsorb(); w.damagePlayer(99999); });
   expect(await page.evaluate(() => window.__PIXEL__!.world.status)).toBe('over');
   const frames = await page.evaluate(async () => { const frames: string[] = [], begin = performance.now(); await new Promise<void>(resolve => { const tick = () => { frames.push(window.__PIXEL__!.art().heroFrame); if (performance.now() - begin < 650) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
   expect(frames.filter(f => f.includes('-death-')).length).toBe(6);

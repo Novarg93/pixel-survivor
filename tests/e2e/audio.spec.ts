@@ -54,6 +54,8 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['pickup.xp'] ?? 0)).toBeGreaterThan(0);
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; w.elapsed = 720; w.encounterDirector.nextAt = 720; w.encounterDirector.update(w); w.encounterDirector.nextAt = 1e6;
+    // Populate the same maximum load independently of the new30s boss schedule.
+    for(const kind of ['charger','sorcerer','eclipse'] as const)if(!w.bosses.some(e=>e.kind===kind))w.spawn(kind);
     // The real director may legally skip a random safe-position attempt. This
     // benchmark requires exactly3 Guardians, so fill only missing fixture slots.
     // Keep the production director and its safe-spawn rules unchanged.
@@ -77,9 +79,9 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   await page.evaluate(() => { const w = window.__PIXEL__!.world; for (const a of Object.values(w.abilities)) a.level = 0; w.experience.xp = 0; w.gainXp(w.snapshot().xpNext); });
   await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toBeVisible(); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['ui.upgrade'] ?? 0)).toBeGreaterThan(0);
   await page.keyboard.press('1'); await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toHaveCount(0);
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.shield.charges = 0; w.warrior.ironUntil = 0; w.mobility.protectedUntil = w.player.invulnerableUntil = 0; w.damagePlayer(1); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.shield.clearAbsorb(); w.warrior.ironUntil = 0; w.mobility.protectedUntil = w.player.invulnerableUntil = 0; w.damagePlayer(1); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['player.hurt'] ?? 0)).toBeGreaterThan(0);
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.shield.charges = 0; w.mobility.protectedUntil = w.player.invulnerableUntil = 0; w.damagePlayer(1e6); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.shield.clearAbsorb(); w.mobility.protectedUntil = w.player.invulnerableUntil = 0; w.damagePlayer(1e6); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['player.death'] ?? 0)).toBe(1);
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().sources)).toBe(0);
   expect(errors).toEqual([]); const fps = samples.slice(2).map(s => s.fps).sort((a,b) => a-b), ms = samples.slice(2).map(s => s.updateMs).sort((a,b) => a-b);

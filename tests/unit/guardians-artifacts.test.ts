@@ -47,8 +47,8 @@ describe('rare guardian', () => {
   it('freezes during pause/upgrade and coalesces skipped time windows instead of replaying a queue', () => {
     const w=quiet();w.encounterDirector.nextAt=240;w.elapsed=239;w.pause();w.step(100);w.encounterDirector.update(w);expect(w.guardians).toHaveLength(0);
     w.resume();w.gainXp(20);w.step(100);expect(w.elapsed).toBe(239);w.selectUpgrade(w.choices[0].id);
-    w.elapsed=720;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(3);expect(w.bosses).toHaveLength(3);
-    const ids=w.enemies.map(e=>e.id);w.encounterDirector.update(w);expect(w.enemies.map(e=>e.id)).toEqual(ids);expect(w.encounterDirector.nextAt).toBe(780);
+    w.elapsed=720;w.encounterDirector.update(w);expect(w.guardians).toHaveLength(3);expect(w.bosses).toHaveLength(1);
+    const ids=w.enemies.map(e=>e.id);w.encounterDirector.update(w);expect(w.enemies.map(e=>e.id)).toEqual(ids);expect(w.encounterDirector.nextAt).toBe(750);
     expect(w.encounterDirector.history).toHaveLength(1);expect(w.encounterDirector.history[0].missedMinutes).toBe(8);
   });
   it('awards one automatic artifact for a completed singleton wave and never duplicates any reward', () => {

@@ -39,10 +39,10 @@ it('replays ten minutes with a fixed seed deterministically and keeps the regula
   expect(result.peak).toBeLessThanOrEqual(150);
   expect(result.minutes).toHaveLength(10);
   expect(result.peakBosses).toBeLessThanOrEqual(3); expect(result.peakGuardians).toBeLessThanOrEqual(3);
-  expect(result.attempts.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540, 600, 600, 600]);
+  expect(result.attempts.map(b => b.at)).toEqual([180, 300, 420, 420, 540, 540, 540]);
   for (const attempt of result.attempts) expect(attempt.spawned).toBe(attempt.before < 3);
   expect(result.bosses.map(b => b.at)).toEqual(result.attempts.filter(b => b.spawned).map(b => b.at));
-  expect(result.events.at(-1)).toMatchObject({minute:10,requestedBosses:3});
+  expect(result.events.at(-1)).toMatchObject({minute:10,requestedBosses:0});
   for (const event of result.events) expect(event.bosses.length + event.skippedBosses).toBe(event.requestedBosses);
   mkdirSync('.tmp/pacing', { recursive: true });
   writeFileSync(`.tmp/pacing/${process.env.PIXEL_PACING_PHASE ?? 'after'}.json`, JSON.stringify(result, null, 2));

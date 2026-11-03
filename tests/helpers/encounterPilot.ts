@@ -5,7 +5,7 @@ import { guardianBeamEnd } from '../../src/game/systems/GuardianEncounter';
 export interface PilotState { target: number; blinks: number }
 // Test-only positioning pilot. It reads visible simulation hazards and uses the
 // same movement/mobility methods as Phaser; it never grants HP or invulnerability.
-export function encounterPilot(w: World, state: PilotState) {
+export function encounterPilot(w: World, state: PilotState, allowBlink = true) {
   let target = w.enemies.find(e => e.id === state.target && (e.boss || e.kind === 'guardian'));
   if (!target) {
     target = [...w.guardians, ...w.bosses].sort((a,b)=>distance(a,w.player)-distance(b,w.player))[0];
@@ -24,6 +24,6 @@ export function encounterPilot(w: World, state: PilotState) {
   for(const p of w.projectiles)if(p.hostile)avoidSegment(p,{x:p.x+p.vx*.35,y:p.y+p.vy*.35},30);
   for(const e of w.enemies)repel(e,e.radius+26,5);
   const input=direction(x,y);
-  if(danger>.3&&w.mobility.activate(w,input))state.blinks++;
+  if(allowBlink&&danger>.3&&w.mobility.activate(w,input))state.blinks++;
   return input;
 }

@@ -14,7 +14,7 @@ async function record(page: Page, spell: MageSpell | null, duration: number, lat
     const w=window.__PIXEL__!.world,canvas=document.querySelector('canvas')!,crop=document.createElement('canvas');crop.width=160;crop.height=180;const g=crop.getContext('2d')!;
     const before={...window.__PIXEL__!.art().casting.requested};
     if(spell){for(let i=0;i<3;i++){const e=w.spawn('tank',{x:w.player.x+80+i*12,y:w.player.y-20+i*18})!;e.speed=0;e.hp=e.maxHp=1e6;}w.abilities[spell].level=5;w.abilities[spell].readyAt=0;}
-    if(late){w.elapsed=600;w.experience.level=45;w.stats.cooldown=.01;for(const d of w.abilityDefinitions){w.abilities[d.id].level=5;w.abilities[d.id].readyAt=0;}for(let i=0;i<150;i++)w.spawn((['tank','grunt','caster','runner','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:80,y:-70});for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:(i-1)*80,y:-80})!;e.discovered=true;w.damageEnemy(e,1);}for(const e of w.enemies)e.hp=e.maxHp=1e6;}
+    if(late){w.elapsed=600;w.experience.level=45;w.stats.cooldown=.01;for(const d of w.abilityDefinitions){w.abilities[d.id].level=5;w.abilities[d.id].readyAt=0;}for(let i=0;i<150;i++)w.spawn((['tank','grunt','caster','runner','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:80,y:-70});for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:(i-1)*80,y:-80})!;e.discovered=true;}for(const e of w.guardians)w.damageEnemy(e,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;}
     type Casting=ReturnType<NonNullable<Window['__PIXEL__']>['art']>['casting'];
     const frames:{at:number;elapsed:number;player:{x:number;y:number};status:string;body:string;casting:Casting;png:string}[]=[];let full='',previous=-Infinity,blocked=false;const begin=performance.now(),worldStart=w.elapsed;
     await new Promise<void>(resolve=>{const capture=()=>{
@@ -41,10 +41,12 @@ for(const width of [1280,390])test(`Mage conductor real Canvas sequences, all sp
     ];
     const evidence=[];
     for(const scenario of cases){
-      await reset(page);if(scenario.moving)await page.keyboard.down('d');
+      await reset(page);if(scenario.moving){await page.keyboard.down('d');await page.waitForFunction(()=>window.__PIXEL__!.world.player.x>0&&window.__PIXEL__!.art().heroFrame.includes('-walk-'));}
       const recording=record(page,scenario.spell,scenario.ms,scenario.late);
       if(scenario.name==='blink'){await page.waitForTimeout(130);await page.keyboard.press('Space');}
-      if(scenario.late){let previous='d';for(const key of ['s','a','w','d']){await page.waitForTimeout(750);await page.keyboard.up(previous);await page.keyboard.down(key);previous=key;}}
+      // Keep a movement key held across direction changes: a key-up/key-down
+      // gap legitimately renders idle and is not part of this continuous-walk case.
+      if(scenario.late){let previous='d';for(const key of ['s','a','w','d']){await page.waitForTimeout(750);await page.keyboard.down(key);await page.keyboard.up(previous);previous=key;}}
       const result=await recording;if(scenario.moving)await page.keyboard.up('d');
       const active=result.frames.filter(f=>f.casting.visible),motion=result.frames.at(-1)!.player.x-result.frames[0].player.x;
       if(scenario.moving){expect(motion).toBeGreaterThan(10);expect(new Set(result.frames.map(f=>f.body)).size).toBeGreaterThan(3);for(const frame of active)expect(frame.body).toContain('-walk-');}
@@ -73,7 +75,7 @@ test('pause freezes walking and arms; damage/death win and ten scene restarts re
   await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.visible),{intervals:[10]}).toBe(true);
   await page.evaluate(()=>window.__PIXEL__!.world.pause());await page.waitForTimeout(40);const frozen=await page.evaluate(()=>({body:window.__PIXEL__!.art().heroFrame,casting:window.__PIXEL__!.art().casting,player:{...window.__PIXEL__!.world.player}}));
   await page.waitForTimeout(180);expect(await page.evaluate(()=>({body:window.__PIXEL__!.art().heroFrame,casting:window.__PIXEL__!.art().casting,player:{...window.__PIXEL__!.world.player}}))).toEqual(frozen);await page.keyboard.up('d');
-  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.resume();w.mobility.protectedUntil=w.player.invulnerableUntil=0;w.shield.charges=0;w.damagePlayer(20);});
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.resume();w.mobility.protectedUntil=w.player.invulnerableUntil=0;w.shield.clearAbsorb();w.damagePlayer(20);});
   await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.mode),{intervals:[10]}).toBe('hurt');expect(await page.evaluate(()=>window.__PIXEL__!.art().casting.visible)).toBe(false);
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.player.invulnerableUntil=0;w.damagePlayer(99999);});await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.mode)).toBe('death');expect(await page.evaluate(()=>window.__PIXEL__!.art().casting.visible)).toBe(false);
   const cycles=[];

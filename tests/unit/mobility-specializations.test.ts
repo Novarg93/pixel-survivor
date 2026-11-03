@@ -113,11 +113,12 @@ it('Absorb is granted after successful arrival, consumes after mitigation, overf
   w.damagePlayer(100); expect(w.mobility.absorbValue(w.elapsed)).toBe(0); expect(w.player.hp).toBeCloseTo(100 - (100 * .82 - 37.5));
   const hp = w.player.hp; expect(w.damagePlayer(100)).toBe(false); expect(w.player.hp).toBe(hp);
 });
-it('keeps Arcane Shield charges ahead of Absorb, with separate capacities and ordinary i-frames', () => {
-  const w = setup('absorb-shield'); w.mobility.activate(w); finishDash(w); w.shield = { charges: 1, activeUntil: 10 };
-  const shield = w.mobility.absorbValue(w.elapsed); w.damagePlayer(100); expect(w.shield.charges).toBe(0); expect(w.mobility.absorbValue(w.elapsed)).toBe(shield); expect(w.player.hp).toBe(150);
+it('uses finite Arcane then Dash Absorb after mitigation, and overflows to ordinary HP i-frames', () => {
+  const w = setup('absorb-shield'); w.mobility.activate(w); finishDash(w); w.shield.refreshAbsorb(10,10);
+  const shield = w.mobility.absorbValue(w.elapsed); w.damagePlayer(100); expect(w.shield.absorbValue(w.elapsed)).toBe(0); expect(w.mobility.absorbValue(w.elapsed)).toBe(0); expect(w.player.hp).toBeCloseTo(150-(100*.82-10-shield));
+  const hp=w.player.hp;w.mobility.refreshAbsorb(shield,w.elapsed+3);
   w.player.invulnerableUntil = 0; w.warrior.ironUntil = 10; w.damagePlayer(20);
-  expect(w.mobility.absorbValue(w.elapsed)).toBeCloseTo(shield - 20 * .82 * .5); expect(w.player.hp).toBe(150);
+  expect(w.mobility.absorbValue(w.elapsed)).toBeCloseTo(shield - 20 * .82 * .5); expect(w.player.hp).toBe(hp);
   w.elapsed = w.mobility.absorbUntil; expect(w.mobility.absorbValue(w.elapsed)).toBe(0);
 });
 it('refreshes shield capacity/duration and Sprint without unlimited stacking', () => {

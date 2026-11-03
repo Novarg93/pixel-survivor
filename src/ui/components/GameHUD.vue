@@ -17,7 +17,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
       <span class="health-accessibility" role="progressbar" aria-label="Здоровье" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>
-    <div class="run-clock"><b>{{ formatTime(state.elapsed) }}</b><small>{{ state.wave }}</small></div>
+    <div class="run-clock"><b>{{ formatTime(state.elapsed) }}</b><small v-if="state.enrage.active" class="enrage-indicator" :aria-label="`Survival Enrage, интенсивность ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.wave }}</small><span v-if="state.enrage.notice" class="enrage-start" role="status">SURVIVAL ENRAGE<br>Давление нарастает</span></div>
     <div class="run-score">
       <div><b>{{ state.score.toLocaleString('ru-RU') }}</b><small>ОЧКИ · {{ state.kills }} УБИЙСТВ</small></div>
       <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ</button>
@@ -35,6 +35,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <div class="control-hint">W A S D <span>движение</span> <kbd>SPACE</kbd> <span>{{ state.mobility.name }}</span> <kbd>ESC</kbd> <span>пауза</span></div>
 </template>
 <style scoped>
+.enrage-indicator{color:#efb18b!important;letter-spacing:.08em}.enrage-start{display:block;margin-top:6px;color:#f3ce9b;font:700 9px/1.3 monospace;text-shadow:0 2px #10262c;pointer-events:none}@media(max-width:600px){.enrage-start{font-size:7px;margin-top:5px}}
 .hero-name{font:700 11px monospace;color:#f1e5cb}.level-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}.level-line small{margin:0;color:#d8e5e4;font:10px monospace}.xp-compact{font:700 11px monospace;color:#85d4cd;border-left:1px solid #819cae66;padding-left:8px}.health-accessibility{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
 @media(max-width:600px){.hero-name{font-size:8px}.level-line{gap:4px;margin-top:7px}.level-line small{font-size:8px}.xp-compact{font-size:9px;padding-left:5px}}
 .run-extras{position:absolute;left:24px;top:112px;width:225px;display:flex;flex-direction:column;gap:9px;pointer-events:none}

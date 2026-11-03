@@ -7,7 +7,7 @@ const RANK_TEXT = {
   frost: 'I: root 1.2с. II: радиус +20%. III: базовый cooldown −15%. IV: root 1.7с. V: root 2с и ещё +20% радиуса. Урон +6 за ранг; V + Широкий круг III сохраняет +30% урона.',
   lightning: '+9 урона и +1 цель в цепи (до 7 целей).',
   meteor: '+25 урона и +7px радиуса. I–V: 1/1/2/2/3 метеорита. Интервал 0.15с; дополнительные удары наносят 75% урона. При равной плотности приоритет у целей под root.',
-  shield: '+1с действия. На II и IV ранге: +1 поглощаемый удар.',
+  shield: 'Absorb I–V: 15/20/25/30/35% maxHP. +1с действия за ранг. Повторный каст обновляет запас без накопления.',
   cleave: '+8 базового урона широкого удара.',
   whirlwind: '+4 урона каждому из круговых импульсов.',
   slam: '+15 урона и +5px радиуса удара.',
@@ -26,7 +26,7 @@ export const UPGRADES: UpgradeDefinition[] = [
   { id: 'area', name: 'Широкий круг', description: '+15% к радиусу площадной магии.', max: 4, apply: w => { w.stats.area += 0.15; } },
   ...ABILITIES.filter(a => a.id !== 'fireball' && a.id !== 'cleave').map(a => ({ id: `unlock-${a.id}`, name: a.name, description: a.description ?? `Открыть: ${a.id === 'lightning' ? 'молния прыгает между врагами' : 'периодический щит поглощает удары'}.`, max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level === 0, apply: (w: World) => { w.abilities[a.id].level = 1; } })),
   ...ABILITIES.map(a => ({ id: `rank-${a.id}`, name: `${a.name} +`, description: RANK_TEXT[a.id], max: 4, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level > 0 && w.abilities[a.id].level < 5, apply: (w: World) => { w.abilities[a.id].level++; } })),
-  ...ABILITIES.filter(a => !a.character).map(a => ({ id: `evolve-${a.id}`, name: `${a.name}: эволюция`, description: ({ fireball: 'Первое попадание шара: взрыв 45% урона в радиусе 38px.', frost: 'Два попадания за 4с: +0.75с следующему разрешённому root, не чаще раза в 6с. Не продлевает активный root и не обходит иммунитет после него.', lightning: 'Два вторичных разряда по новым целям с 35% уроном.', meteor: 'Каждый удар оставляет огонь на 3с с периодом 0.5с. Огонь дополнительных метеоритов тоже наносит 75% урона.', shield: 'Поглощение удара вызывает защитный импульс 90px.' })[a.id as 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield'], max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level >= 3, apply: () => undefined })),
+  ...ABILITIES.filter(a => !a.character).map(a => ({ id: `evolve-${a.id}`, name: `${a.name}: эволюция`, description: ({ fireball: 'Первое попадание шара: взрыв 45% урона в радиусе 38px.', frost: 'Два попадания за 4с: +0.75с следующему разрешённому root, не чаще раза в 6с. Не продлевает активный root и не обходит иммунитет после него.', lightning: 'Два вторичных разряда по новым целям с 35% уроном.', meteor: 'Каждый удар оставляет огонь на 3с с периодом 0.5с. Огонь дополнительных метеоритов тоже наносит 75% урона.', shield: 'Разрушение Absorb вызывает один защитный импульс 90px за активацию щита.' })[a.id as 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield'], max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level >= 3, apply: () => undefined })),
 ];
 export const SUPPLIES: UpgradeDefinition[] = [
   { id: 'restore', name: 'Глоток жизни', description: 'Восстановить 40 HP.', max: Infinity, apply: w => { w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 40); } },

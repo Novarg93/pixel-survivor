@@ -1,0 +1,11 @@
+import { register } from 'node:module';
+import process from 'node:process';
+import { mkdirSync,writeFileSync } from 'node:fs';
+register('./ts-art-loader.mjs',import.meta.url);
+const {survivalTrial,pressureMeasurements}=await import('../tests/helpers/survivalEnrage.ts');
+const phase=process.argv[2]??'after',trials=[];
+for(const seed of [12345,67890,77])for(const mode of ['afk','move','blink'])trials.push(survivalTrial(seed,mode));
+const regularOnly=[12345,67890,77].map(seed=>survivalTrial(seed,'afk',720,180,640,360,false));
+mkdirSync('docs/survival-enrage',{recursive:true});
+writeFileSync(`docs/survival-enrage/${phase}.json`,JSON.stringify({phase,fixture:'Mage40,39 legal choices,FireballV/FrostII/LightningV/MeteorV/ShieldI;180HP,speed175.5,damage2.25,CDR.59049,4projectiles,area1.3;actual seeded World dt.05 for180s from12:00 just after current encounter cleared without rewards, future schedule runs normally; fixed build bypasses offers only, real XP/loot/damage, no test invulnerability; movement uses shared hazard-aware pilot with/without legal Blink',pressureProbe:'30s actual World per enemy kind, position held190px and invulnerability in cadence probe ONLY; no survival claim for isolated probes',table:pressureMeasurements(),trials,regularOnly},null,2)+'\n');
+globalThis.console.log(JSON.stringify(trials));

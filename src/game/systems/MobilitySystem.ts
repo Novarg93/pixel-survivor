@@ -4,6 +4,7 @@ import type { World } from './World';
 import { effectiveCooldown } from './Cooldown';
 import { MOBILITY_MAX_RANK, MOBILITY_SPECIALIZATION_LEVEL, MOBILITY_SPECIALIZATIONS as S, MOBILITY_UPGRADES, type MobilityVariant } from '../config/mobilityUpgrades';
 import type { MobilityWall } from '../entities/types';
+import { AbsorbPool } from './AbsorbPool';
 
 export function insideMobilityWall(target: Point & { radius: number }, wall: MobilityWall) {
   const dx = wall.to.x - wall.from.x, dy = wall.to.y - wall.from.y, length2 = dx * dx + dy * dy;
@@ -11,13 +12,12 @@ export function insideMobilityWall(target: Point & { radius: number }, wall: Mob
   const t = ((target.x - wall.from.x) * dx + (target.y - wall.from.y) * dy) / length2;
   return t >= 0 && t <= 1 && segmentDistance(target, wall.from, wall.to) <= wall.width / 2 + target.radius;
 }
-export class MobilitySystem {
+export class MobilitySystem extends AbsorbPool {
   readyAt = 0; protectedUntil = 0; remaining = 0; distance = 0; sequence = 0;
   started = -Infinity; upgradeStarted = -Infinity; castCooldown = 0;
   variant: MobilityVariant | null = null; rank = 0;
   from: Point = { x: 0, y: 0 }; to: Point = { x: 0, y: 0 }; arrival: Point = { x: 0, y: 0 };
   direction: Point = { x: 0, y: 1 };
-  absorb = 0; absorbUntil = 0;
   private dashHits = new Set<number>();
   private arrivedSequence = 0;
   upgrade(w: World, variant: MobilityVariant) {
@@ -25,8 +25,6 @@ export class MobilitySystem {
     if (!definition || w.experience.level < MOBILITY_SPECIALIZATION_LEVEL || !['playing', 'upgrade'].includes(w.status) || definition.character !== w.character || this.variant && this.variant !== variant || this.rank >= MOBILITY_MAX_RANK) return false;
     this.variant = variant; this.rank++; return true;
   }
-  absorbValue(now: number) { return now < this.absorbUntil ? this.absorb : 0; }
-  absorbDamage(now: number, amount: number) { const used = Math.min(this.absorbValue(now), amount); this.absorb = Math.max(0, this.absorbValue(now) - used); return used; }
   private arrive(w: World) {
     if (w.status !== 'playing' || this.arrivedSequence === this.sequence || distance(this.from, w.player) < 1 || !this.variant) return;
     this.arrivedSequence = this.sequence; this.arrival = { x: w.player.x, y: w.player.y }; this.upgradeStarted = w.elapsed;
@@ -39,7 +37,7 @@ export class MobilitySystem {
         damage: this.variant === 'flame-trail' ? S.flameDamage[rank] * w.stats.damage : 0, source: 'mobility', expires: w.elapsed + S.wallDuration[rank], nextTick: w.elapsed,
         wall: { variant: this.variant, from: { ...this.from }, to: { ...this.arrival }, width: this.variant === 'flame-trail' ? S.flameWidth[rank] : S.slowingWidth[rank], nextHit: new Map() } });
     } else if (this.variant === 'arcane-sprint') w.buffs.refresh('arcane-sprint', w.elapsed, S.sprintDuration, { speed: S.sprintSpeed[rank] });
-    else if (this.variant === 'absorb-shield') { this.absorb = w.effectiveMaxHp * S.absorbFraction[rank]; this.absorbUntil = w.elapsed + S.absorbDuration; }
+    else if (this.variant === 'absorb-shield') this.refreshAbsorb(w.effectiveMaxHp * S.absorbFraction[rank],w.elapsed + S.absorbDuration);
     else if (this.variant === 'berserk') w.buffs.refresh('berserk', w.elapsed, S.berserkDuration, { damage: S.berserkDamage[rank], cooldown: S.berserkCooldown[rank] });
   }
   activate(w: World, input: Point = { x: 0, y: 0 }) {
