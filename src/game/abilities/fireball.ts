@@ -12,5 +12,6 @@ export function fireball(w: World) {
     const angle = aim + (i - (count - 1) / 2) * 0.13;
     w.shoot({ x: w.player.x, y: w.player.y, vx: Math.cos(angle) * BALANCE.fireballSpeed, vy: Math.sin(angle) * BALANCE.fireballSpeed, damage: BALANCE.fireballDamage * (1 + (level - 1) * 0.2) * w.stats.damage, hostile: false, source: 'fireball', pierce: evolved ? 1 : 0 });
   }
+  w.feedback({ type: 'ability', ability: 'fireball', target: { x: target.x, y: target.y } });
   return true;
 }

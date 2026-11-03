@@ -16,5 +16,6 @@ export function frostNova(w: World) {
   w.effect('frost', group.center, stats.radius, 0xd9f3f7, duration);
   const capstone = rank >= 5 && (w.upgrades.area ?? 0) >= 3 ? C.capstoneDamage : 1;
   for (const e of targets) w.damageEnemy(e, stats.damage * w.stats.damage * capstone, 'frost');
+  w.feedback({ type: 'ability', ability: 'frost', target: { ...group.center } });
   return true;
 }

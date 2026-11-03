@@ -12,6 +12,7 @@ import GameHUD from './ui/components/GameHUD.vue';
 import DialogFrame from './ui/components/DialogFrame.vue';
 import VirtualJoystick from './ui/components/VirtualJoystick.vue';
 import { formatTime } from './ui/format';
+import { installUpgradeSpaceGuard } from './ui/upgradeInput';
 import RunStatistics from './ui/components/RunStatistics.vue';
 import LocalRecords from './ui/components/LocalRecords.vue';
 import type { BiomeId } from './game/config/biomes';
@@ -27,6 +28,7 @@ const offMetrics = metrics.on(value => { if (debug) debugState.value = value; })
 const profile = ref(loadProfile()), previousBest = ref(profile.value.records[0]?.score ?? 0), storageFailed = ref(false);
 const settings = ref(profile.value.settings), screen = ref<'game' | 'settings' | 'help' | 'records'>('game');
 let game: ReturnType<typeof createGame> | undefined;
+let offUpgradeSpace: (() => void) | undefined;
 let recordedId = '';
 const off = snapshots.on(value => {
   state.value = value;
@@ -39,8 +41,8 @@ function key(event: KeyboardEvent) {
   if (screen.value !== 'game' || event.repeat) return;
   if (event.key === 'Escape' || event.key.toLowerCase() === 'p') { event.preventDefault(); if (state.value?.status === 'playing') commands.emit({ type: 'pause' }); else if (state.value?.status === 'paused') commands.emit({ type: 'resume' }); }
 }
-onMounted(() => { if (mount.value) game = createGame(mount.value, settings.value); window.addEventListener('keydown', key); });
-onUnmounted(() => { off(); offMetrics(); window.removeEventListener('keydown', key); game?.destroy(true); });
+onMounted(() => { offUpgradeSpace = installUpgradeSpaceGuard(window, () => state.value?.status === 'upgrade'); if (mount.value) game = createGame(mount.value, settings.value); window.addEventListener('keydown', key); });
+onUnmounted(() => { off(); offMetrics(); offUpgradeSpace?.(); window.removeEventListener('keydown', key); game?.destroy(true); });
 </script>
 <template>
  <main>

@@ -1,7 +1,7 @@
 import { expect, it, vi } from 'vitest';
 import type Phaser from 'phaser';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import baseline from '../../docs/balance-hotfix/baseline.json';
+import baseline from '../fixtures/balance-hotfix-baseline.json';
 import { World } from '../../src/game/systems/World';
 import { ENEMIES } from '../../src/game/config/enemyDefinitions';
 import { GUARDIAN_ENCOUNTER as G } from '../../src/game/config/encounters';

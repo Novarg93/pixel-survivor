@@ -21,7 +21,7 @@ import { EncounterDirector } from './EncounterDirector';
 import { bossAggressionAt } from '../config/encounterDirector';
 import { CHARGE_BOSS } from '../config/chargeBoss';
 import { MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
-import type { SoundCue } from '../services/AudioSystem';
+import type { LegacyCue, GameFeedback } from '../events/gameFeedback';
 import { ScoreSystem } from './ScoreSystem';
 import { SpawnClock } from './SpawnClock';
 import { BuffSystem } from '../loot/BuffSystem';
@@ -50,6 +50,7 @@ export class World {
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
   clearTemporaryState() {
+    this.feedbackEvents = []; this.sounds = [];
     for (const e of this.enemies) {
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.shootingAt = 0; }
@@ -59,8 +60,14 @@ export class World {
   }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
-  sounds: SoundCue[] = [];
-  sound(cue: SoundCue) { if (this.sounds.length < 16) this.sounds.push(cue); }
+  sounds: LegacyCue[] = [];
+  feedbackEvents: GameFeedback[] = [];
+  feedback(event: GameFeedback) {
+    if (this.feedbackEvents.length >= 32) return;
+    const key = (e: GameFeedback) => e.type === 'ability' ? e.type + e.ability : e.type === 'impact' ? e.type + e.source : e.type + e.kind;
+    if (!this.feedbackEvents.some(e => key(e) === key(event))) this.feedbackEvents.push(event);
+  }
+  sound(cue: LegacyCue) { if (this.sounds.length < 16) this.sounds.push(cue); }
   pause() { if (this.status === 'playing') this.status = 'paused'; }
   resume() { if (this.status === 'paused') this.status = 'playing'; }
   experience = new ExperienceSystem();
@@ -123,6 +130,7 @@ export class World {
     if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
     if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
     const before = enemy.hp;
+    if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
     enemy.hp = Math.max(0, enemy.hp - amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
@@ -214,6 +222,7 @@ export class World {
       if (impact.hostile) { if (distance(impact, this.player) < impact.radius + 9) this.damagePlayer(impact.damage); }
       else { for (const enemy of [...this.enemies]) if (distance(impact, enemy) < impact.radius + enemy.radius) this.damageEnemy(enemy, impact.damage, impact.source);
         if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage * (impact.damageScale ?? 1), 3, 'meteor'); }
+      if (!impact.hostile && (impact.source === 'meteor' || impact.source === 'slam')) this.feedback({ type: 'impact', source: impact.source, strength: impact.damageScale ?? 1, target: { x: impact.x, y: impact.y } });
       this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5);
     }
     this.impacts = this.impacts.filter(i => i.landAt > this.elapsed);
@@ -224,7 +233,7 @@ export class World {
       const d = distance(orb, this.player);
       if (d < 12 || orb.expires <= this.elapsed) {
         this.orbs.splice(this.orbs.indexOf(orb), 1); const value = orb.value; this.orbPool.release(orb);
-        if (d < 12 && orb.expires > this.elapsed) { this.sound('pickup'); this.gainXp(value); if (this.status !== 'playing') break; }
+        if (d < 12 && orb.expires > this.elapsed) { this.sound('pickup'); this.feedback({ type: 'pickup', kind: 'xp' }); this.gainXp(value); if (this.status !== 'playing') break; }
       } else if (d < this.stats.pickup) { const vector = direction(this.player.x - orb.x, this.player.y - orb.y); orb.x += vector.x * 230 * dt; orb.y += vector.y * 230 * dt; }
     }
     if (this.status === 'playing') this.loot.update(this);

@@ -42,6 +42,7 @@ export class LootSystem {
     if (kind === 'healing') world.player.hp = Math.min(world.effectiveMaxHp, world.player.hp + world.effectiveMaxHp * C.healFraction);
     else if (kind === 'magnet') world.collectAllOrbs();
     else world.buffs.activate(kind, world.elapsed);
+    world.feedback({ type: 'pickup', kind: kind === 'healing' ? 'heal' : 'buff' });
     this.notice = { kind, name: LOOT_NAMES[kind], expires: world.elapsed + C.pickupNoticeDuration };
     world.effect('shield', world.player, 20, LOOT_COLORS[kind], 0.3); world.sound('pickup'); return true;
   }

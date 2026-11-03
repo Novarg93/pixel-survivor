@@ -46,7 +46,7 @@ export class ArtifactSystem {
   }
   grant(world: World, artifact: ArtifactId, waveReward = false) {
     if (world.status !== 'playing' && !(waveReward && world.status === 'upgrade') || this.stacks[artifact] >= C.maxStacks || world.player.hp <= 0) return false;
-    const oldMax = world.effectiveMaxHp; this.stacks[artifact]++;
+    const oldMax = world.effectiveMaxHp; this.stacks[artifact]++; world.feedback({ type: 'pickup', kind: 'artifact' });
     // Add the newly gained HP capacity once, preserving the existing amount of missing HP.
     if (artifact === 'health') world.player.hp = Math.min(world.effectiveMaxHp, world.player.hp + world.effectiveMaxHp - oldMax);
     this.notice = { text: `${ARTIFACTS[artifact].name} · ${ARTIFACTS[artifact].effect} (${this.stacks[artifact]}/${C.maxStacks})`, until: world.elapsed + C.noticeDuration };

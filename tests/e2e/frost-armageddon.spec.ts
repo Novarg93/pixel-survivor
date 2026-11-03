@@ -97,6 +97,8 @@ for (const width of [1280, 390]) test(`Nova/Armageddon bounded150+3+3 stress and
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.elapsed = 720; w.encounterDirector.nextAt = 720; w.encounterDirector.update(w); w.encounterDirector.nextAt = 1e6;
+    // Hold the specified benchmark load even if random safe placement skipped a slot.
+    for(let i=w.guardians.length;i<3;i++)w.spawn('guardian',{x:-30,y:(i-1)*155});
     w.experience.level = 39; w.player.invulnerableUntil = 1e6; // Constant performance load only.
     for (const def of w.abilityDefinitions) w.abilities[def.id].level = 5;
     w.upgrades['evolve-frost'] = w.upgrades['evolve-meteor'] = 1; w.stats.cooldown = .35;

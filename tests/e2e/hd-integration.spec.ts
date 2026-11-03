@@ -27,7 +27,7 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
     const before = await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world)); await page.waitForTimeout(150);
     expect(await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world))).toBe(before);
     const art = await page.evaluate(() => window.__PIXEL__!.art());
-    expect(art.atlasFrames).toBe(37); expect(art.runner.atlasFrames).toBe(36); expect(art.textures.filter(t => t.startsWith('hd-')).sort()).toEqual(['hd-bosses', 'hd-core', 'hd-enemies', 'hd-guardian', 'hd-loot', 'hd-mage', 'hd-runner']);
+    expect(art.atlasFrames).toBe(37); expect(art.runner.atlasFrames).toBe(36); expect(art.textures.filter(t => t.startsWith('hd-')).sort()).toEqual(['hd-bosses', 'hd-core', 'hd-enemies', 'hd-guardian', 'hd-loot', 'hd-mage', 'hd-mage-casting', 'hd-runner']);
     expect(art.textures.some(t => /visual-study|pixel-plus|painted|^warrior-|^grunt(?:$|-)/.test(t))).toBe(false);
     const player = art.actors.find(a => a.texture === (hero === 'Warrior' ? 'hd-core' : 'hd-mage') && String(a.frame).startsWith(hero.toLowerCase() + '-'))!;
     expect(player.width).toBe(24); expect(player.height).toBe(30);
@@ -37,7 +37,7 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(size.width);
     await page.screenshot({ path: `${directory}/${hero.toLowerCase()}-${size.width}x${size.height}.png` });
   }
-  expect(new Set(requests)).toEqual(new Set(['/assets/hd/core.png', '/assets/hd/core.json', '/assets/hd/runner.png', '/assets/hd/runner.json', '/assets/hd/mage.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/enemies.png', '/assets/hd/enemies.json', '/assets/hd/guardian.png', '/assets/hd/guardian.json', '/assets/hd/bosses.png', '/assets/hd/bosses.json'])); expect(errors).toEqual([]);
+  expect(new Set(requests)).toEqual(new Set(['/assets/hd/core.png', '/assets/hd/core.json', '/assets/hd/runner.png', '/assets/hd/runner.json', '/assets/hd/mage.png', '/assets/hd/mage-casting.png', '/assets/hd/mage-casting.json', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/enemies.png', '/assets/hd/enemies.json', '/assets/hd/guardian.png', '/assets/hd/guardian.json', '/assets/hd/bosses.png', '/assets/hd/bosses.json'])); expect(errors).toEqual([]);
 });
 
 test('HD movement, hurt, real contact radius and automatic Cleave retain gameplay behavior', async ({ page }) => {
@@ -75,5 +75,5 @@ test('HD textures, shadows, timers and listeners stay bounded across travel and 
     expect(await page.evaluate(() => window.__PIXEL__!.art().shadows)).toBe(1);
     await page.getByRole('button', { name: 'Начать забег' }).click();
   }
-  expect(loads).toHaveLength(14); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
+  expect(loads).toHaveLength(16); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
 });

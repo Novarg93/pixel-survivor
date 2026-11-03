@@ -1,6 +1,20 @@
 import { test, expect } from '@playwright/test';
 for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
   const errors: string[] = [], external: string[] = [], artRequests: string[] = [];
+  // Observe the real output without shipping a production test hook.
+  await page.addInitScript(() => {
+    const analysers: AnalyserNode[] = [];
+    const create = AudioContext.prototype.createAnalyser;
+    AudioContext.prototype.createAnalyser = function() { const node = create.call(this); analysers.push(node); return node; };
+    Object.defineProperty(window, '__AUDIO_OUTPUT_RMS__', { value: () => {
+      let peak = 0;
+      for (const analyser of analysers) {
+        const data = new Float32Array(analyser.fftSize); analyser.getFloatTimeDomainData(data);
+        peak = Math.max(peak, Math.sqrt(data.reduce((sum, value) => sum + value * value, 0) / data.length));
+      }
+      return peak;
+    } });
+  });
   page.on('pageerror', error => errors.push(error.message)); page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   page.on('request', request => { const url = new URL(request.url()); if (url.protocol !== 'data:' && url.origin !== new URL(baseURL!).origin) external.push(request.url()); if (url.pathname.startsWith('/assets/') && /\.(?:json|png|webp|jpe?g|gif|svg)$/.test(url.pathname)) artRequests.push(url.pathname); });
@@ -10,14 +24,20 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
   await page.getByRole('button', { name: 'Начать забег' }).click();
+  await expect.poll(() => page.evaluate(() => {
+    const rms = Object.getOwnPropertyDescriptor(window, '__AUDIO_OUTPUT_RMS__')!.value as () => number; return rms();
+  })).toBeGreaterThan(.0001);
   await expect.poll(async () => Number((await page.locator('.run-score b').textContent())?.replace(/\D/g, '') ?? 0), { timeout: 20000 }).toBeGreaterThan(0);
   await page.keyboard.down('d'); await page.waitForTimeout(250); await page.keyboard.up('d');
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-desktop.png` });
   await page.getByRole('button', { name: 'Пауза', exact: true }).click(); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => {
+    const rms = Object.getOwnPropertyDescriptor(window, '__AUDIO_OUTPUT_RMS__')!.value as () => number; return rms();
+  })).toBeLessThan(.00001);
   await page.getByRole('button', { name: 'Продолжить' }).click();
   await page.setViewportSize({ width: 390, height: 844 }); await page.waitForTimeout(150);
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
-  expect(artRequests.sort()).toEqual(['/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png']);
+  expect(artRequests.sort()).toEqual(['/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage-casting.json', '/assets/hd/mage-casting.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png']);
 });

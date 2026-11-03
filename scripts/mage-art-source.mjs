@@ -26,13 +26,17 @@ export function drawMageAtlas(layout) {
       path(`M8.5 15.5 L10.2 15.3 L${10.4 - swing} 18.6 L${7.9 - swing} 18.6 L${8.3 - swing} 17.6Z`, '#765247');
       line(`M${4.8 + swing} 18 L${6.5 + swing} 18 M${8.5 - swing} 18 L${10 - swing} 18`, '#e3bc8b', .25);
       g.translate(0, bob);
+      if (entry.torsoLean) { g.save(); g.translate(entry.torsoLean, 0); }
       const cloth = grad(['#a6b3b9', '#5c7288', '#3f4b69', '#303347']);
       path('M5.3 9.5 L9.6 9.2 L11.3 12 L10.2 14.3 L11.5 17.1 L8.2 17.6 L5.9 17.3 L3.8 17.5 L5 13.3 L4.5 11Z', cloth);
-      path(`M5.1 10 L3.1 ${12.1 - swing * .3} L3.9 14.2 L5.2 13.7 L5.7 11.8Z`, '#627e90');
-      path('M8.8 9.5 L10.3 10.1 L12.2 12.3 L13.1 11.6 L13.6 12.6 L12 13.5 L9.8 12.4Z', cloth);
+      if (entry.layer !== 'body') {
+        path(`M5.1 10 L3.1 ${12.1 - swing * .3} L3.9 14.2 L5.2 13.7 L5.7 11.8Z`, '#627e90');
+        path('M8.8 9.5 L10.3 10.1 L12.2 12.3 L13.1 11.6 L13.6 12.6 L12 13.5 L9.8 12.4Z', cloth);
+      }
       line('M5.8 13.3 L5 16.8 M7.7 13.2 L7.2 17 M9.1 14 L10 16.8', '#b1b9c1', .2);
       path('M5.4 12.8 L9.7 12.5 L9.9 13.2 L5.3 13.6Z', '#9f744d');
       path('M7.2 12.7 L8.5 12.6 L8.5 13.4 L7.3 13.6Z', '#f4d69e', '#6b4f48', .16);
+      if (entry.torsoLean) g.restore();
       // Split ivory collar separates the face from both pale Grove and cold Forest.
       path('M5.2 9 L8.3 9.4 L10.1 9.1 L9.2 10.7 L8.4 11.4 L7.7 10.1 L6 10.7Z', '#d8c6a7');
       if (facing !== 'up') {
@@ -47,15 +51,24 @@ export function drawMageAtlas(layout) {
       path('M7 4.5 L7.7 4.2 L8.3 4.8 L7.8 5.4 L7.2 5.2Z', '#ffe0a4', '#b18a61', .12);
       line('M6 3.5 L7.2 1.9 L8.1 2 M3.7 5.8 L6 5.5', '#d3d1d5', .23);
       // Angular lantern, no orb silhouette shared with XP pickups.
+      if (entry.layer !== 'body') {
       const lantern = pose === 'idle' ? [0, .18, -.1][f] : swing * .22 + stride * .35;
       path(`M12.6 5.6 L13.4 5.8 L13.1 18 L12.6 18Z`, '#815c52');
       line('M12.8 7.5 L12.8 17.5', '#d6a777', .22);
       path(`M12.4 ${4.2 + lantern} L13.1 ${3.6 + lantern} L14 ${4.3 + lantern} L14 ${6.2 + lantern} L13.2 ${7 + lantern} L12.2 ${6.2 + lantern}Z`, '#a67c55', '#3b3546', .25);
       path(`M12.65 ${4.7 + lantern} L13.5 ${4.65 + lantern} L13.6 ${5.95 + lantern} L12.6 ${5.9 + lantern}Z`, '#d9f7e5', '#77bebd', .18);
       line(`M13.1 ${4.5 + lantern} L13.1 ${6.1 + lantern}`, '#fff5d5', .22);
+      }
     }
     const data = g.getImageData(0, 0, c.width, c.height);
     for (let i = 0; i < data.data.length; i += 4) { data.data[i + 3] = data.data[i + 3] < 128 ? 0 : 255; if (data.data[i + 3]) for (let k = 0; k < 3; k++) data.data[i + k] = Math.min(255, Math.round(data.data[i + k] / 8) * 8); }
+    if (entry.torsoLean) {
+      // Recompose the fixed head and boot layers over the moving cloth. This
+      // also preserves single edge pixels at the collar during the tiny recoil.
+      const base = layout.frames.find(f => f.layer === 'body' && !f.torsoLean && f.facing === facing && f.pose === pose && f.index === entry.index);
+      const stable = target.getImageData(base.frame.x, base.frame.y, 64, 80).data;
+      for (let y = 0; y < 80; y++) if (y < 36 || y >= 72) for (let x = 0; x < 64; x++) for (let k = 0; k < 4; k++) data.data[(y * 64 + x) * 4 + k] = stable[(y * 64 + x) * 4 + k];
+    }
     g.putImageData(data, 0, 0); target.drawImage(c, entry.frame.x, entry.frame.y);
   }
   return atlas.toDataURL('image/png');

@@ -12,7 +12,7 @@ export function tickAbilities(w: World) {
   if (w.status !== 'playing') return;
   for (const def of w.abilityDefinitions) {
     const state = w.abilities[def.id];
-    if (state.level > 0 && w.elapsed >= state.readyAt && activate[def.id](w)) state.readyAt = w.elapsed + effectiveCooldown(def.id === 'frost' ? frostNovaStats(state.level).cooldown : def.cooldown, w.effectiveCooldown);
+    if (state.level > 0 && w.elapsed >= state.readyAt && activate[def.id](w)) { state.readyAt = w.elapsed + effectiveCooldown(def.id === 'frost' ? frostNovaStats(state.level).cooldown : def.cooldown, w.effectiveCooldown); if (w.character !== 'mage') w.feedback({ type: 'ability', ability: def.id }); }
   }
   if(w.character === 'warrior')tickWarrior(w);
 }

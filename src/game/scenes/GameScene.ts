@@ -5,7 +5,10 @@ import { RadarPublisher } from '../radar/RadarPublisher';
 import { World, type RunOptions } from '../systems/World';
 import { snapshots, commands, metrics, radarFrames, type Metrics } from '../events/bridge';
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
-import { AudioSystem } from '../services/AudioSystem';
+import { AudioController } from '../audio/AudioController';
+import { AudioPresentation } from '../audio/AudioPresentation';
+import { PhaserAudioBackend } from '../audio/PhaserAudioBackend';
+import { SeededRandom } from '../utils/SeededRandom';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { type Facing } from '../art/assetRegistry';
@@ -30,14 +33,18 @@ export class GameScene extends Phaser.Scene {
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
   private mobilityRequested = false;
-  private audio = new AudioSystem();
+  private audio!: AudioController;
+  private audioPresentation!: AudioPresentation;
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
   preload() { preloadGameArt(this); }
   create() {
+    const audioRng = new SeededRandom(0xa07d);
+    this.audio = new AudioController(new PhaserAudioBackend(this.sound, this.cache.audio), () => audioRng.next());
+    this.audio.settings(this.preferences); this.audioPresentation = new AudioPresentation(this.audio);
     this.art = new GameArt(this);
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
     this.world = new World(); this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
-    this.world.status = 'menu'; this.audio.settings(this.preferences.volume, this.preferences.muted);
+    this.world.status = 'menu'; this.audioPresentation.observe(this.world);
     this.chunks = new WorldChunkSystem(this);
     this.mage = this.add.sprite(0, 0, 'hd-mage', 'mage-down-idle-0').setOrigin(0.5, 0.75).setDepth(10);
     this.feedback = new CombatFeedback(this);
@@ -53,20 +60,26 @@ export class GameScene extends Phaser.Scene {
     const off = commands.on(command => {
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' ? command.input : { x: 0, y: 0 }; return; }
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { if(command.character)this.runOptions.character=command.character; if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; else this.audio.unlock(); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
+      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { if(command.character)this.runOptions.character=command.character; if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
-      else if (command.type === 'resume') { this.world.resume(); this.audio.unlock(); }
-      else if (command.type === 'settings') { this.preferences = { ...command.value }; this.audio.settings(this.preferences.volume, this.preferences.muted); this.audio.unlock(); }
+      else if (command.type === 'resume') this.world.resume();
+      else if (command.type === 'settings') { this.preferences = { ...command.value }; this.audio.settings(this.preferences); }
+      this.audioPresentation.observe(this.world);
+      this.audio.ui(command.type === 'restart' ? 'ui.start' : command.type === 'pause' ? 'ui.pause' : 'ui.select'); lastUiCommand = performance.now();
       this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot());
     });
-    const blur = () => { this.world.pause(); this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot()); };
+    let lastUiCommand = -Infinity;
+    const gesture = (event: Event) => { if (event.isTrusted) this.audio.gesture(); };
+    const uiClick = (event: Event) => { if (event.isTrusted && event.target instanceof Element && event.target.closest('button') && !event.target.closest('[data-upgrade]') && performance.now() - lastUiCommand > 30) this.audio.ui('ui.select'); };
+    document.addEventListener('pointerdown', gesture, true); document.addEventListener('keydown', gesture, true); document.addEventListener('click', uiClick);
+    const blur = () => { this.world.pause(); this.audioPresentation.observe(this.world); this.audio.stop(); this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot()); };
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
-      window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics() };
+      window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics(), audio: () => this.audio.diagnostics() };
     }
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
   update(_time: number, delta: number) {
     const started = performance.now();
@@ -78,7 +91,8 @@ export class GameScene extends Phaser.Scene {
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, input); }
     this.world.step(delta / 1000, input);
-    for (const cue of this.world.sounds.splice(0)) this.audio.play(cue);
+    this.art.observeCasts(this.world);
+    this.audioPresentation.observe(this.world);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
     if (moving) { this.facing = input.x !== 0 ? 'side' : input.y < 0 ? 'up' : 'down'; if (input.x !== 0) this.mage.setFlipX(input.x < 0); else this.mage.setFlipX(false); }
     this.art.hero(this.mage, this.world, this.facing, moving, this.world.status === 'menu' && this.scale.width > 600 ? 2 : 1);

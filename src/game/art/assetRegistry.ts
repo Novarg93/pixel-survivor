@@ -5,6 +5,7 @@ import type { LootKind } from '../loot/types';
 import { HD_CORE_TEXTURE } from './hdCoreLayout';
 import { RUNNER_TEXTURE, RUNNER_CLIPS, runnerFrame, type RunnerPlayback } from './runnerPack';
 import { MAGE_TEXTURE, MAGE_CLIPS, mageFrame } from './magePack';
+import { MAGE_CAST_TEXTURE } from './mageCastingPack';
 import { ENEMY_TEXTURE, ENEMY_CLIPS, isHdEnemy, packedEnemyFrame } from './enemyPack';
 import { GUARDIAN_TEXTURE, guardianFrame } from './guardianPack';
 import { BOSS_TEXTURE, BOSS_CLIPS, isHdBoss, bossFrame } from './bossPack';
@@ -38,6 +39,7 @@ function lootAsset(size = 16, scale = 1): AssetSpec { return { ...hd(size, size,
 // One catalog: integrated art and explicit legacy fallbacks. No gameplay radii.
 export const ASSET_REGISTRY = {
   mage: { ...hd(16, 20, 1.5, 'actor'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 64, height: 80 }, origin: { x: 0.5, y: 0.75 }, clips: { idle: MAGE_CLIPS.idle.frames, walk: MAGE_CLIPS.walk.frames, hurt: MAGE_CLIPS.hurt.frames, death: MAGE_CLIPS.death.frames } },
+  mageCasting: { ...hd(16,20,1.5,'effect'), source:{kind:'atlas',key:MAGE_CAST_TEXTURE,width:64,height:80},origin:{x:.5,y:.75},clips:{idle:3,walk:6,hurt:0,death:0} },
   warrior: { ...hd(16, 20, 1.5, 'actor', { idle: 2, walk: 4, hurt: 2, death: 0 }), origin: { x: 0.5, y: 0.75 } },
   grunt: hd(16, 16, 1, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
   gruntElite: hd(16, 16, 1.4, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),

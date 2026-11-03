@@ -25,5 +25,6 @@ export function meteor(w: World) {
     w.impacts.push({ id: w.id(), ...at, radius, damage: (C.damageBase + rank * C.damagePerRank) * w.stats.damage * damageScale,
       launchAt, landAt: launchAt + C.delay, damageScale, hostile: false, source: 'meteor' });
   }
+  w.feedback({ type: 'ability', ability: 'meteor', target: { ...first.center }, endsAt: w.impacts.at(-1)!.landAt });
   return true;
 }
