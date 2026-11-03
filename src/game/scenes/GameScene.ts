@@ -15,6 +15,7 @@ import { type Facing } from '../art/assetRegistry';
 import { drawChargePreparation, drawGuardianDanger, drawEnrageDanger } from '../art/EncounterArt';
 import { CHARGE_BOSS } from '../config/chargeBoss';
 import { pressureAt } from '../systems/EndgamePressure';
+import { HeldInputTracker } from '../input/HeldInputTracker';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -27,7 +28,8 @@ export class GameScene extends Phaser.Scene {
   private sprites = new Map<number, Phaser.GameObjects.Sprite>();
   private spareSprites: Phaser.GameObjects.Sprite[] = [];
   private measured: Metrics = { fps: 0, updateMs: 0, enemies: 0, projectiles: 0, orbs: 0, effects: 0, bosses: 0, chunks: 0, sprites: 0, pooledSprites: 0, guardians: 0, artifacts: { items: 0, allocated: 0 }, radar: { updates: 0, markers: 0, listeners: 0 }, loot: { items: 0, chests: 0, buffs: 0, trail: 0, allocatedItems: 0, allocatedChests: 0 }, allocations: { orbs: 0, projectiles: 0, effects: 0 } };
-  private keys: Record<string, Phaser.Input.Keyboard.Key> = {};
+  private heldInput!: HeldInputTracker;
+  private inputStatus: World['status'] = 'menu';
   private publishAt = 0;
   private runOptions: RunOptions = {};
   private facing: Facing = 'down';
@@ -51,7 +53,10 @@ export class GameScene extends Phaser.Scene {
     this.lootPresentation = new LootPresentation(this);
     this.effects = this.add.graphics().setName('hostile-tells').setDepth(20);
     this.cameras.main.setZoom(2).startFollow(this.mage, true, 1, 1);
-    this.keys = this.input.keyboard?.addKeys('W,A,S,D,UP,LEFT,DOWN,RIGHT') as Record<string, Phaser.Input.Keyboard.Key>;
+    this.inputStatus = this.world.status;
+    const heldInput = this.heldInput = new HeldInputTracker(window, () => this.world.status === 'playing' || this.world.status === 'upgrade');
+    const destroyHeldInput = () => heldInput.destroy();
+    this.events.once(Phaser.Scenes.Events.DESTROY, destroyHeldInput);
     const mobilityKey = (event: KeyboardEvent) => {
       if (event.repeat || this.world.status !== 'playing' || event.target instanceof Element && event.target.closest('button,input,select,textarea,[role="dialog"]')) return;
       event.preventDefault(); this.mobilityRequested = true;
@@ -67,30 +72,41 @@ export class GameScene extends Phaser.Scene {
       else if (command.type === 'settings') { this.preferences = { ...command.value }; this.audio.settings(this.preferences); }
       this.audioPresentation.observe(this.world);
       this.audio.ui(command.type === 'restart' ? 'ui.start' : command.type === 'pause' ? 'ui.pause' : 'ui.select'); lastUiCommand = performance.now();
-      this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot());
+      this.resetInput(command.type === 'upgrade'); snapshots.emit(this.world.snapshot());
     });
     let lastUiCommand = -Infinity;
     const gesture = (event: Event) => { if (event.isTrusted) this.audio.gesture(); };
     const uiClick = (event: Event) => { if (event.isTrusted && event.target instanceof Element && event.target.closest('button') && !event.target.closest('[data-upgrade]') && performance.now() - lastUiCommand > 30) this.audio.ui('ui.select'); };
     document.addEventListener('pointerdown', gesture, true); document.addEventListener('keydown', gesture, true); document.addEventListener('click', uiClick);
-    const blur = () => { this.world.pause(); this.audioPresentation.observe(this.world); this.audio.stop(); this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.input.keyboard?.resetKeys(); snapshots.emit(this.world.snapshot()); };
+    const blur = () => { this.world.pause(); this.audioPresentation.observe(this.world); this.audio.stop(); this.resetInput(); snapshots.emit(this.world.snapshot()); };
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
       window.__PIXEL__ = { world: this.world, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics(), audio: () => this.audio.diagnostics() };
     }
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.events.off(Phaser.Scenes.Events.DESTROY, destroyHeldInput); destroyHeldInput(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+  }
+  private resetInput(preserveMovement = false) {
+    if (!preserveMovement) this.heldInput.clear();
+    this.touch = { x: 0, y: 0 }; this.mobilityRequested = false;
+    this.input.keyboard?.resetKeys(); // Keep action-key cleanup, including Space.
+    this.inputStatus = this.world.status;
+  }
+  private syncInputState() {
+    if (this.world.status !== this.inputStatus && this.world.status !== 'playing' && this.world.status !== 'upgrade') this.resetInput();
+    this.inputStatus = this.world.status;
   }
   update(_time: number, delta: number) {
     const started = performance.now();
-    const down = (key: string) => this.keys[key]?.isDown ? 1 : 0;
+    this.syncInputState();
     const zoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640)); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / zoom; this.world.height = this.scale.height / zoom;
-    const input = { x: Math.max(down('D'), down('RIGHT')) - Math.max(down('A'), down('LEFT')) + this.touch.x, y: Math.max(down('S'), down('DOWN')) - Math.max(down('W'), down('UP')) + this.touch.y };
+    const held = this.heldInput.input(), input = { x: held.x + this.touch.x, y: held.y + this.touch.y };
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, input); }
     this.world.step(delta / 1000, input);
+    this.syncInputState();
     this.art.observeCasts(this.world);
     this.audioPresentation.observe(this.world);
     const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
