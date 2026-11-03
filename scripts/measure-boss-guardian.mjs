@@ -1,0 +1,12 @@
+import {register} from 'node:module';
+import {writeFileSync,mkdirSync} from 'node:fs';
+import process from 'node:process';
+register('./ts-art-loader.mjs',import.meta.url);
+const {bossCadence,bossGuardianTrial}=await import('../tests/helpers/bossGuardian.ts');
+const phase=process.argv[2]??'after';
+const table=[570,600,630,720,900].flatMap(t=>bossCadence(t));
+const cohorts=[1,2,3,4,5,6].flatMap(i=>bossCadence(900,i));
+const trials=[12345,67890,77].flatMap(seed=>['afk','move','blink'].map(mode=>bossGuardianTrial(seed,mode)));
+const late=['afk','move','blink'].map(mode=>bossGuardianTrial(12345,mode,900));
+mkdirSync('docs/boss-guardian',{recursive:true});writeFileSync(`docs/boss-guardian/${phase}.json`,JSON.stringify({phase,fixture:'Legal55choices Mage56,5skillsV/5evolutions,8artifacts damage3/CDR3/health2,initial240HP,speed189,180s real World fixed dt.05; no test invulnerability; offers bypassed to hold build; reconstructs all successful30s births from630 through start, clearing encounters without rewards; then actual schedule',table,cohorts,trials,late},null,2));
+globalThis.console.log(JSON.stringify(trials));

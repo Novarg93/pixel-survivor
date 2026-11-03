@@ -7,6 +7,7 @@ import type { World } from './World';
 import type { Enemy } from '../entities/types';
 import { ARTIFACTS } from '../loot/ArtifactSystem';
 import { beginGuardianEncounter, guardianExpired, updateGuardianEncounter, type GuardianEncounter } from './GuardianEncounter';
+import { GUARDIAN_ORBS } from '../config/guardianOrbs';
 export function guardianVisible(w: Pick<World, 'player' | 'width' | 'height'>, at: Point) { return Math.abs(at.x - w.player.x) <= Math.max(0, w.width / 2 - 17) && Math.abs(at.y - w.player.y) <= Math.max(0, w.height / 2 - 20); }
 interface GuardianWave { id: number; minute: number; total: number; killed: number; remaining: Set<number>; failed: boolean }
 export class RareGuardianSystem {
@@ -48,7 +49,7 @@ export class RareGuardianSystem {
     const state = beginGuardianEncounter(w, e);
     state.until += Math.max(0, w.guardians.findIndex(g => g.id === e.id)) * D.guardianStagger;
     this.encounters.set(e.id, state);
-    this.notice = { text: 'Хранитель пробуждён! Следите за лучами и розовыми метками', until: w.elapsed + 3 };
+    this.notice = { text: w.elapsed >= GUARDIAN_ORBS.from ? 'Хранитель пробуждён! Уклоняйтесь от магических сфер' : 'Хранитель пробуждён! Следите за лучами и розовыми метками', until: w.elapsed + 3 };
   }
   private resolve(w: World, ownerId: number, killed: boolean) {
     w.clearOwnedEffects(ownerId); this.encounters.delete(ownerId);

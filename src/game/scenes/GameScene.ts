@@ -12,7 +12,7 @@ import { SeededRandom } from '../utils/SeededRandom';
 import { DEFAULT_SETTINGS, type Settings } from '../services/storage';
 import { GameArt, preloadGameArt, applyVisual } from '../art/GameArt';
 import { type Facing } from '../art/assetRegistry';
-import { drawChargePreparation, drawGuardianDanger } from '../art/EncounterArt';
+import { drawChargePreparation, drawGuardianDanger, drawEnrageDanger } from '../art/EncounterArt';
 import { CHARGE_BOSS } from '../config/chargeBoss';
 import { pressureAt } from '../systems/EndgamePressure';
 export class GameScene extends Phaser.Scene {
@@ -109,6 +109,7 @@ export class GameScene extends Phaser.Scene {
       const visual = this.art.entityVisual(entity, this.world);
       if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
+      sprite.setVisible(!('homing'in entity&&entity.homing));
       sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
@@ -122,9 +123,10 @@ export class GameScene extends Phaser.Scene {
     this.lootPresentation.update(this.world, this.preferences);
     this.radar.update(this.world);
     this.effects.clear();
+    drawEnrageDanger(this.effects,this.world);
     for (const e of this.world.guardians) drawGuardianDanger(this.effects, this.world, this.world.guardianSystem.encounters.get(e.id) ?? null, e.id);
     for (const enemy of this.world.enemies) {
-      if (enemy.kind === 'eclipse' && enemy.boss?.phase === 'windup') { this.effects.lineStyle(2, enemy.boss.stage === 2 ? 0xe3a2ff : 0x9ae5e3).strokeCircle(enemy.x, enemy.y, 40); for(let i=0;i<12;i++)if(i!==0&&i!==6){const a=Math.atan2(this.mage.y-enemy.y,this.mage.x-enemy.x)-Math.PI/12+i*Math.PI/6;this.effects.lineBetween(enemy.x+Math.cos(a)*28,enemy.y+Math.sin(a)*28,enemy.x+Math.cos(a)*47,enemy.y+Math.sin(a)*47);} }
+      if (enemy.kind === 'eclipse' && enemy.boss?.phase === 'windup' && !enemy.boss.enrageIndex) { this.effects.lineStyle(2, enemy.boss.stage === 2 ? 0xe3a2ff : 0x9ae5e3).strokeCircle(enemy.x, enemy.y, 40); for(let i=0;i<12;i++)if(i!==0&&i!==6){const a=Math.atan2(this.mage.y-enemy.y,this.mage.x-enemy.x)-Math.PI/12+i*Math.PI/6;this.effects.lineBetween(enemy.x+Math.cos(a)*28,enemy.y+Math.sin(a)*28,enemy.x+Math.cos(a)*47,enemy.y+Math.sin(a)*47);} }
       if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.fillStyle(0x9ccbf5).fillRect(enemy.x - 3, enemy.y - 18, 6, 2).fillRect(enemy.x - 2, enemy.y - 16, 4, 3);
       if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % pressureAt(this.world.elapsed).frenzyCycle < .4) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 3, enemy.y - 17, enemy.x + 3, enemy.y - 17);
       if (enemy.modifier === 'volatile') this.effects.fillStyle(0xff83aa).fillRect(enemy.x - 2, enemy.y - 18, 4, 3);

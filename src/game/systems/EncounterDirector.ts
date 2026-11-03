@@ -8,6 +8,7 @@ export interface EncounterEvent {
   aggression: ReturnType<typeof bossAggressionAt>; missedMinutes: number;
 }
 export class EncounterDirector {
+  enrageSpawns = 0;
   nextAt: number = C.firstMinute * C.interval;
   readonly history: EncounterEvent[] = [];
   notice: { text: string; until: number } | null = null;
@@ -23,7 +24,7 @@ export class EncounterDirector {
     // Consume the current window once; no backlog or catch-up burst.
     this.nextAt = at + interval;
     const aggression = bossAggressionAt(minute);
-    for (const e of w.bosses) e.boss!.aggression = { ...aggression };
+    if(now<=SURVIVAL_ENRAGE.from+1e-7)for (const e of w.bosses) if(!e.boss!.enrageIndex)e.boss!.aggression = { ...aggression };
     const bosses: EncounterEvent['bosses'] = [];
     for (const kind of plan.bosses) { const e = w.spawn(kind); if (e) bosses.push({ id: e.id, kind }); }
     const guardians = w.guardianSystem.spawnWave(w, plan.guardians, minute);

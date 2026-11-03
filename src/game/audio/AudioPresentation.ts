@@ -31,7 +31,7 @@ export class AudioPresentation {
     for (const event of w.encounterDirector.history) if (event.minute > this.encounter) { if (event.bosses.length) add('encounter.bossArrive'); this.encounter = event.minute; }
     for (const [id, state] of w.guardianSystem.encounters) {
       const before = this.guardians.get(id); if (before === undefined) add('encounter.guardianAwaken');
-      if (before !== state.phase) { if (state.phase === 'beam') add('encounter.guardianLaser'); else if (state.phase === 'meteor-warning') add('encounter.guardianMeteor'); }
+      if (before !== state.phase) { if (state.phase === 'beam') add('encounter.guardianLaser'); else if (state.phase === 'meteor-warning'||state.phase==='orb-warning') add('encounter.guardianMeteor'); }
       this.guardians.set(id, state.phase);
     }
     for (const id of this.guardians.keys()) if (!w.guardianSystem.encounters.has(id)) this.guardians.delete(id);

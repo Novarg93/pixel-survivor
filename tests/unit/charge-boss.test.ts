@@ -43,7 +43,7 @@ it.each([3, 5, 7, 9, 10])('uses base multipliers and completion-based cooldown/r
 it('sweeps a large delta once, caps charge distance and never replays a backlog of attacks', () => {
   const { w, e, advance, launch } = setup(10); launch(); const hp = w.player.hp;
   advance(20); expect(e.x).toBeCloseTo(C.maxDistance); expect(e.y).toBe(0); expect(w.player.hp).toBeLessThan(hp);
-  expect(e.boss!.phase).toBe('recover'); expect(e.boss!.charge!.nextAt).toBeCloseTo(w.elapsed + 2.5);
+  expect(e.boss!.phase).toBe('recover'); expect(e.boss!.charge!.nextAt).toBeCloseTo(w.elapsed + C.cooldown/e.boss!.aggression!.frequency);
   expect(w.sounds.filter(s => s === 'charge')).toHaveLength(1);
 });
 it('allows at most one contact per charge, including absorbed/protected contacts', () => {

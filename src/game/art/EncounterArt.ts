@@ -5,6 +5,8 @@ import type { MobilitySystem } from '../systems/MobilitySystem';
 import type { World } from '../systems/World';
 import type { Enemy } from '../entities/types';
 import { CHARGE_BOSS } from '../config/chargeBoss';
+import {GUARDIAN_ORBS} from '../config/guardianOrbs';
+import {bossVolleyAngles} from '../systems/BossMagic';
 
 export function drawChargePreparation(g: Phaser.GameObjects.Graphics, w: World, e: Enemy) {
   if (w.status === 'over' || e.hp <= 0 || e.kind !== 'charger' || e.boss?.phase !== 'windup') return;
@@ -21,6 +23,10 @@ export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, sta
   const e = owner === undefined ? w.rareGuardian : w.guardians.find(e => e.id === owner); if (!e) return;
   g.lineStyle(1, state ? 0xffcc83 : 0xb29c65, .9).strokeCircle(e.x, e.y, e.radius + 5);
   if (!state || state.ownerId !== e.id) return;
+  if(state.phase==='orb-warning'){
+    const color=GUARDIAN_ORBS[(state.orbIndex??0)%2?'fast':'slow'].color;
+    for(let i=0;i<8;i++){const a=i*Math.PI/4,r=e.radius+8+Math.sin(w.elapsed*8)*2;g.fillStyle(color,1).fillRect(Math.round(e.x+Math.cos(a)*r)-1,Math.round(e.y+Math.sin(a)*r)-1,3,3);}
+  }
   if (state.phase === 'beam-warning' || state.phase === 'beam') {
     const end = guardianBeamEnd(e, state), active = state.phase === 'beam';
     g.lineStyle(C.beamWidth + 2, 0x251f3a, .8).lineBetween(e.x, e.y, end.x, end.y);
@@ -31,6 +37,29 @@ export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, sta
     const x = e.x + Math.cos(tipAngle) * r, y = e.y + Math.sin(tipAngle) * r;
     const tx = -Math.sin(tipAngle), ty = Math.cos(tipAngle);
     g.fillStyle(0xffd698).fillTriangle(x + tx * 4, y + ty * 4, x - tx * 3 - ty * 3, y - ty * 3 + tx * 3, x - tx * 3 + ty * 3, y - ty * 3 - tx * 3);
+  }
+}
+export function drawEnrageDanger(g:Phaser.GameObjects.Graphics,w:World){
+  if(w.status==='over')return;
+  for(const e of w.bosses){
+    const b=e.boss!,m=b.magic;if(!b.enrageIndex||!m)continue;
+    const color=e.kind==='sorcerer'?0xc2a0ff:0x87e7e9;
+    if(m.phase&&m.target){
+      const p=m.phase==='signal'?m.target:e,r=e.radius+9;
+      g.lineStyle(3,0x172534,.9);if(e.kind==='sorcerer')g.strokeRect(p.x-r,p.y-r,r*2,r*2);else g.strokeCircle(p.x,p.y,r);
+      g.lineStyle(1,color,1);if(e.kind==='sorcerer')g.strokeRect(p.x-r,p.y-r,r*2,r*2);else g.beginPath().arc(p.x,p.y,r,.25,Math.PI*1.8).strokePath();
+      for(let i=0;i<Math.min(6,b.enrageIndex);i++){const a=i*Math.PI/3;g.fillStyle(color,1).fillRect(Math.round(p.x+Math.cos(a)*(r+4))-1,Math.round(p.y+Math.sin(a)*(r+4))-1,3,3);}
+      if(m.phase==='signal')g.fillStyle(color,.6).fillRect(e.x-5,e.y-18,10,3);
+    }
+    if(b.phase==='windup'&&m.phase!=='signal')for(const a of bossVolleyAngles(e))g.lineStyle(1,color,1).lineBetween(e.x+Math.cos(a)*27,e.y+Math.sin(a)*27,e.x+Math.cos(a)*42,e.y+Math.sin(a)*42);
+  }
+  for(const p of w.projectiles)if(p.homing&&p.expires>w.elapsed){
+    const c=GUARDIAN_ORBS[p.homing.variant],r=c.radius,x=Math.round(p.x),y=Math.round(p.y),speed=Math.hypot(p.vx,p.vy)||1;
+    for(let i=1;i<=4;i++)g.fillStyle(c.color,(1-i/5)*.7).fillRect(Math.round(x-p.vx/speed*i*4)-1,Math.round(y-p.vy/speed*i*4)-1,3,3);
+    g.fillStyle(0x132330,1).fillRect(x-r-2,y-r,2*r+4,2*r).fillRect(x-r,y-r-2,2*r,2*r+4);
+    g.fillStyle(c.color,1).fillRect(x-r,y-r+2,2*r,2*r-4).fillRect(x-r+2,y-r,2*r-4,2*r);
+    g.fillStyle(0xf2ffff,1).fillRect(x-1,y-2,3,4);
+    if(p.homing.variant==='fast')g.fillStyle(0xffe8a1,1).fillRect(x-r-3,y-1,2,2).fillRect(x+r+2,y-1,2,2);
   }
 }
 export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility: MobilitySystem, intensity: number) {

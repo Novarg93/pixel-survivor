@@ -52,6 +52,10 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().unlocked)).toBe(true);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; for (let i = 0; i < 40; i++) w.dropXp(w.player, 1); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['pickup.xp'] ?? 0)).toBeGreaterThan(0);
+  // Keep coverage of the unchanged pre10 laser as well as the late orb warning.
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.player.invulnerableUntil=1e6;const g=w.spawn('guardian',{x:80,y:0})!;g.hp=g.maxHp=1e6;g.discovered=true;w.damageEnemy(g,1);});
+  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().played['encounter.guardianLaser']??0)).toBeGreaterThan(0);
+  await page.evaluate(()=>window.__PIXEL__!.world.guardianSystem.dismiss(window.__PIXEL__!.world));
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; w.elapsed = 720; w.encounterDirector.nextAt = 720; w.encounterDirector.update(w); w.encounterDirector.nextAt = 1e6;
     // Populate the same maximum load independently of the new30s boss schedule.

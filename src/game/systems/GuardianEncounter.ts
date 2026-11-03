@@ -3,9 +3,11 @@ import type { Enemy } from '../entities/types';
 import { distance, segmentDistance } from '../utils/math';
 import type { World } from './World';
 import { novaMovementFactor } from './FrostControl';
+import {GUARDIAN_ORBS} from '../config/guardianOrbs';
+import {updateGuardianOrbs} from './GuardianOrbs';
 
 export interface GuardianEncounter {
-  ownerId: number; phase: 'awakening' | 'beam-warning' | 'beam' | 'recovery' | 'meteor-warning';
+  orbIndex?: number; nextOrbAt?: number; ownerId: number; phase: 'awakening' | 'beam-warning' | 'beam' | 'recovery' | 'meteor-warning' | 'orb-warning' | 'orbs';
   activatedAt: number; lastDamageAt: number; leash: number; until: number; angle: number; length: number; nextDamageAt: number; next: 'beam' | 'meteors';
 }
 export function beginGuardianEncounter(w: World, e: Enemy): GuardianEncounter {
@@ -20,6 +22,7 @@ export function guardianLeash(w: World) {
 
 export function updateGuardianEncounter(w: World, e: Enemy, state: GuardianEncounter, dt: number) {
   if (w.status !== 'playing') return;
+  if(w.elapsed>=GUARDIAN_ORBS.from){if(state.phase==='awakening'&&w.elapsed<state.until)return;updateGuardianOrbs(w,e,state);return;}
   if (state.phase === 'beam') {
     state.angle += C.beamTurnSpeed * dt * novaMovementFactor(e, w.elapsed);
     if (w.elapsed < state.until && w.elapsed >= state.nextDamageAt) {

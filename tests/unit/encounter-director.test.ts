@@ -2,6 +2,7 @@ import { expect, it } from 'vitest';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { World } from '../../src/game/systems/World';
 import { bossAggressionAt, ENCOUNTER_DIRECTOR as C } from '../../src/game/config/encounterDirector';
+import {bossBirthAggression,BOSS_MAGIC} from '../../src/game/config/bossEnrage';
 import { updateBoss } from '../../src/game/systems/BossSystem';
 import { radarFrame } from '../../src/game/radar/radar';
 import { regularMoveSpeed } from '../../src/game/systems/DifficultyDirector';
@@ -34,7 +35,7 @@ it('retains living owners, fills only free slots at the next minute and never qu
   kill(w,w.bosses[0].id);kill(w,w.guardians[0].id);w.elapsed=661;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(2);expect(w.guardians).toHaveLength(2);
   w.elapsed=720;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(3);expect(w.guardians).toHaveLength(3);
   expect(w.encounterDirector.history[1]).toMatchObject({skippedBosses:0,skippedGuardians:2});
-  for(const e of w.bosses)expect(e.boss!.aggression).toEqual(bossAggressionAt(12));
+  for(const e of w.bosses)expect(e.boss!.aggression).toEqual(bossBirthAggression(e.born/60,e.kind,e.boss!.enrageIndex??0));
   writeFileSync('.tmp/encounter-director-2/OCCUPIED_SLOTS.json',JSON.stringify({fixture:'all6 slots occupied at11min; one boss and one Guardian killed before12min; no automatic AI survival claim',events:w.encounterDirector.history},null,2));
 });
 it('coalesces clock jumps to one current event, bounds history, and freezes deadlines during pause/upgrade',()=>{
@@ -48,10 +49,10 @@ it('uses the target wave multipliers from base values, with no cumulative scalin
   expect([3,5,7,9,10,12].map(m=>{const a=bossAggressionAt(m);return[+a.movement.toFixed(2),a.frequency];})).toEqual([[1,1],[1.15,1.25],[1.3,1.5],[1.45,1.75],[1.6,2],[1.79,2.32]]);
   const w=quiet();w.elapsed=180;const e=w.spawn('charger')!,hp=e.maxHp,speed=e.speed;
   for(const minute of [5,7,9,10,11,12]){w.encounterDirector.nextAt=minute*60;w.elapsed=minute*60;w.encounterDirector.update(w);}
-  expect(e.speed).toBe(speed);expect(e.maxHp).toBe(hp);expect(e.boss!.aggression).toEqual(bossAggressionAt(12));
+  expect(e.speed).toBe(speed);expect(e.maxHp).toBe(hp);expect(e.boss!.aggression).toEqual(bossAggressionAt(10));
 });
 function measure(kind:'charger'|'sorcerer'|'eclipse',minute:number) {
-  const w=quiet();w.player.invulnerableUntil=1e6;w.elapsed=minute*60;const e=w.spawn(kind,{x:400,y:0})!,initialWait=e.boss!.until-w.elapsed;e.boss!.until=Infinity;
+  const w=quiet();w.player.invulnerableUntil=1e6;w.elapsed=minute*60;const e=w.spawn(kind,{x:400,y:0})!,initialWait=e.boss!.until-w.elapsed;e.boss!.until=Infinity;if(e.boss!.magic)e.boss!.magic.nextAt=Infinity;
   const at={x:e.x,y:e.y};updateBoss(w,e,.05);const movement=distance(at,e)/.05;
   e.boss!.phase='approach';e.boss!.until=w.elapsed;let attacks=0,warning=0,recovery=0,cooldown=0;
   for(let i=0;i<1200;i++){e.x=190;e.y=0;const before=phaseOf(w);updateBoss(w,e,.05);if(before!=='windup'&&phaseOf(w)==='windup'){attacks++;warning=e.boss!.until-w.elapsed;}if(before!=='recover'&&phaseOf(w)==='recover')recovery=e.boss!.until-w.elapsed;if(before!=='approach'&&phaseOf(w)==='approach')cooldown=e.boss!.until-w.elapsed;w.clearOwnedEffects(e.id);w.elapsed+=.05;}
@@ -59,7 +60,7 @@ function measure(kind:'charger'|'sorcerer'|'eclipse',minute:number) {
 }
 it('all three real AIs move faster and attack more often while retaining full warning time',()=>{
   const result=(['charger','sorcerer','eclipse'] as const).flatMap(kind=>[3,5,7,9,10].map(minute=>measure(kind,minute)));
-  for(const kind of ['charger','sorcerer','eclipse']){const rows=result.filter(r=>r.kind===kind);expect(rows[4].movement/rows[0].movement).toBeCloseTo(1.6);expect(rows[4].attacks).toBeGreaterThan(rows[0].attacks);expect(rows.every(r=>Math.abs(r.warning-(kind==='eclipse'?1.25:kind==='charger'?.5:1.1))<1e-6)).toBe(true);}
+  for(const kind of ['charger','sorcerer','eclipse']){const rows=result.filter(r=>r.kind===kind);expect(rows[4].movement/rows[0].movement).toBeCloseTo(1.76);expect(rows[4].attacks).toBeGreaterThan(rows[0].attacks);expect(rows.every(r=>Math.abs(r.warning-(kind==='eclipse'?1.25:kind==='charger'?.5:1.1))<1e-6)).toBe(true);}
   writeFileSync('.tmp/encounter-director-2/BOSS_MEASUREMENTS.json',JSON.stringify({fixture:'real updateBoss,60s each, targets held190px; movement sampled at400px; no survival claim',result},null,2));
 });
 it.each([ [640,360],[195,422],[130,281] ])('places three Guardians safely and separately at %ix%i', (width,height)=>{
@@ -101,8 +102,8 @@ it('keeps an active Guardian leash after its partner dies, then clears it on a r
 it('Eclipse stageII scales recovery and cooldown but preserves its1.25s warning and.6s double volley',()=>{
   const w=quiet();w.elapsed=600;const e=w.spawn('eclipse',{x:190,y:0})!;e.hp=e.maxHp*.4;e.boss!.until=w.elapsed;
   updateBoss(w,e,.01);expect(e.boss!.until-w.elapsed).toBeCloseTo(1.25);w.elapsed=e.boss!.until;updateBoss(w,e,.01);
-  expect(e.shootingAt-w.elapsed).toBeCloseTo(.6);expect(e.boss!.until-w.elapsed).toBeCloseTo(1);
-  w.elapsed=e.boss!.until;updateBoss(w,e,.01);expect(e.boss!.until-w.elapsed).toBeCloseTo(.75);
+  expect(e.shootingAt-w.elapsed).toBeCloseTo(.6);expect(e.boss!.until-w.elapsed).toBeCloseTo(Math.max(BOSS_MAGIC.minRecovery,2/e.boss!.aggression!.frequency));
+  w.elapsed=e.boss!.until;updateBoss(w,e,.01);expect(e.boss!.until-w.elapsed).toBeCloseTo(Math.max(BOSS_MAGIC.minApproach,1.5/e.boss!.aggression!.frequency));
 });
 it('uses independent hurt/death presentation for three Guardian IDs without changing the world',()=>{
   const w=quiet(),art=new GuardianAnimation();w.guardianSystem.spawnWave(w,3,11);art.prepare(w);const [a,b]=w.guardians;a.discovered=true;w.damageEnemy(a,1);

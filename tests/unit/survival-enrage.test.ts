@@ -3,7 +3,8 @@ import { enrageAt } from '../../src/game/config/survivalEnrage';
 import { World } from '../../src/game/systems/World';
 import { regularMoveSpeed,spawnCadenceAt,speedMultiplierAt } from '../../src/game/systems/DifficultyDirector';
 import { pressureAt } from '../../src/game/systems/EndgamePressure';
-import { bossAggressionAt } from '../../src/game/config/encounterDirector';
+import {bossBirthAggression} from '../../src/game/config/bossEnrage';
+import {bossCadence} from '../helpers/bossGuardian';
 import { updateBoss } from '../../src/game/systems/BossSystem';
 import { pressureMeasurements,survivalTrial } from '../helpers/survivalEnrage';
 import { earlyReplay } from '../helpers/earlyReplay';
@@ -35,7 +36,8 @@ it('increases real caster and Rusher attack starts, with no haste applied to the
   const rows=pressureMeasurements(),first=rows.find(r=>r.seconds===600)!,last=rows.at(-1)!;
   for(const row of rows)expect(row.spawn.spawned).toBe(Math.floor((29.95+1e-9)/row.cadence.interval*1.3)*row.cadence.burst);
   expect(last.spawn.spawned).toBeGreaterThan(first.spawn.spawned*1.9);
-  for(const kind of ['caster','rusher','charger','sorcerer','eclipse'])expect(last.attacks[kind].startsIn30s).toBeGreaterThan(first.attacks[kind].startsIn30s);
+  for(const kind of ['caster','rusher','charger'])expect(last.attacks[kind].startsIn30s).toBeGreaterThan(first.attacks[kind].startsIn30s);
+  const early=bossCadence(600,1),late=bossCadence(1200,6);for(const kind of ['sorcerer','eclipse'])expect(late.find(r=>r.kind===kind)!.shots).toBeGreaterThan(early.find(r=>r.kind===kind)!.shots);
   expect(last.attacks.caster.shotsIn30s).toBeGreaterThan(first.attacks.caster.shotsIn30s);
 });
 it('spawns exactly one boss every30s after10:00, preserves Guardian minute waves and skips occupied slots',()=>{
@@ -63,9 +65,9 @@ it('does not accumulate skipped spawn attempts or late encounter windows and bou
 });
 it('applies final boss aggression once without retiming a warning, HP or damage',()=>{
   const w=quiet();w.elapsed=600;const e=w.spawn('charger',{x:190,y:0})!,hp=e.hp,damage=e.damage,speed=e.speed;e.boss!.phase='windup';e.boss!.until=630.4;
-  w.encounterDirector.nextAt=630;w.elapsed=630;w.encounterDirector.update(w);expect(e.boss!.until).toBe(630.4);expect(e.boss!.aggression!.frequency).toBeCloseTo(2*1.04);
-  for(let i=0;i<100;i++)w.encounterDirector.update(w);expect(e.hp).toBe(hp);expect(e.damage).toBe(damage);expect(e.speed).toBe(speed);expect(e.boss!.aggression).toEqual(bossAggressionAt(10.5));
-  e.boss!.phase='approach';e.boss!.until=Infinity;const x=e.x;updateBoss(w,e,.05);expect((x-e.x)/.05).toBeCloseTo(speed*2*1.6*1.03);
+  w.encounterDirector.nextAt=630;w.elapsed=630;w.encounterDirector.update(w);expect(e.boss!.until).toBe(630.4);expect(e.boss!.aggression!.frequency).toBeCloseTo(2*1.15);
+  for(let i=0;i<100;i++)w.encounterDirector.update(w);expect(e.hp).toBe(hp);expect(e.damage).toBe(damage);expect(e.speed).toBe(speed);expect(e.boss!.aggression).toEqual(bossBirthAggression(10,'charger',1));
+  e.boss!.phase='approach';e.boss!.until=Infinity;const x=e.x;updateBoss(w,e,.05);expect((x-e.x)/.05).toBeCloseTo(speed*2*1.6*1.1);
 });
 it('freezes ticks, notices, deadlines and spawning on pause/upgrade; a new run resets them',()=>{
   const w=quiet();w.elapsed=599.99;w.encounterDirector.nextAt=600;w.pause();w.step(100);expect(w.elapsed).toBe(599.99);w.resume();w.step(.01);expect(w.snapshot().enrage.notice).toBe(true);
