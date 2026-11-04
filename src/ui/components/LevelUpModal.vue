@@ -5,6 +5,9 @@ import { trapTab } from '../focus';
 import { upgradeIdentity } from '../upgradeIdentity';
 import { UpgradeConfirmation } from '../UpgradeConfirmation';
 import { isSpace, upgradeShortcut } from '../upgradeInput';
+import { gamepadUi } from '../../game/events/bridge';
+import { useInputDevice } from '../inputDevice';
+const inputDevice = useInputDevice();
 const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number }>();
 const specializationChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.category && c.tier === 1));
 const emit = defineEmits<{ choose: [id: string, offer: number] }>();
@@ -18,7 +21,21 @@ function choose(id: string) {
   panel.value?.querySelector<HTMLButtonElement>(`[data-upgrade="${id}"]`)?.focus({ preventScroll: true });
 }
 function focus() { void nextTick(() => panel.value?.querySelector('button')?.focus()); }
-onMounted(focus); watch(() => props.offer, () => { cancelSelection(); focus(); }); onUnmounted(() => confirmation.dispose());
+const offGamepad = gamepadUi.on(({ scope, action }) => {
+  if (scope !== 'upgrade' || selected.value !== null) return;
+  const cards = [...panel.value?.querySelectorAll<HTMLButtonElement>('[data-upgrade]') ?? []];
+  if (!cards.length) return;
+  const focused = cards.findIndex(card => card === document.activeElement);
+  // A lost pointer/keyboard focus must never confirm an unseen fallback card.
+  if (focused < 0) { cards[0].focus({ preventScroll: true }); cards[0].scrollIntoView({ block: 'nearest' }); return; }
+  const index = focused;
+  if (action === 'confirm') { choose(props.choices[index].id); return; }
+  if (action !== 'left' && action !== 'right' && action !== 'previous' && action !== 'next') return;
+  const step = action === 'left' || action === 'previous' ? -1 : 1;
+  const card = cards[(index + step + cards.length) % cards.length];
+  card.focus({ preventScroll: true }); card.scrollIntoView({ block: 'nearest' });
+});
+onMounted(focus); watch(() => props.offer, () => { cancelSelection(); focus(); }); onUnmounted(() => { confirmation.dispose(); offGamepad(); });
 function key(event: KeyboardEvent) {
   event.stopPropagation();
   if (isSpace(event)) { event.preventDefault(); return; }
@@ -38,8 +55,8 @@ function key(event: KeyboardEvent) {
   <div class="overlay">
     <section ref="panel" class="panel upgrade-panel" role="dialog" aria-modal="true" aria-label="Новый уровень" :aria-busy="selected !== null" @keydown="key" @keyup="key">
       <small>УРОВЕНЬ {{ level }} · МИР НА ПАУЗЕ</small>
-      <h1 v-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>Space · Специализация</h1>
-      <p>Одно бесплатное улучшение. Клавиши 1 / 2 / 3.</p>
+      <h1 v-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Специализация</h1>
+      <p>Одно бесплатное улучшение. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — переключить · A — выбрать.' : 'Клавиши 1 / 2 / 3.' }}</p>
       <div class="choices">
         <button v-for="(choice, i) in choices" :key="`${offer}-${choice.id}`" class="choice"
           :data-upgrade="choice.id" :data-family="upgradeIdentity(choice.id).family" :data-rank="choice.tier"

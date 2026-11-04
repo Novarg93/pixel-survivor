@@ -7,6 +7,8 @@ import RunArtifacts from './RunArtifacts.vue';
 import MobilityControl from './MobilityControl.vue';
 import { commands } from '../../game/events/bridge';
 import { xpPercent } from '../hudStatus';
+import { useInputDevice } from '../inputDevice';
+const inputDevice = useInputDevice();
 defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 </script>
 <template>
@@ -20,7 +22,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
     <div class="run-clock"><b>{{ formatTime(state.elapsed) }}</b><small v-if="state.enrage.active" class="enrage-indicator" :aria-label="`Survival Enrage, интенсивность ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.wave }}</small><span v-if="state.enrage.notice" class="enrage-start" role="status">SURVIVAL ENRAGE<br>Давление нарастает</span></div>
     <div class="run-score">
       <div><b>{{ state.score.toLocaleString('ru-RU') }}</b><small>ОЧКИ · {{ state.kills }} УБИЙСТВ</small></div>
-      <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ</button>
+      <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ<small v-if="inputDevice === 'gamepad'" class="pause-key">START</small></button>
     </div>
   </header>
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
@@ -32,9 +34,10 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
       <span>{{ ability.icon }}</span><b>{{ ability.level ? ability.level : '·' }}</b><small v-if="ability.level && ability.readyIn > 0">{{ Math.ceil(ability.readyIn) }}с</small><i v-if="ability.level === 0">◇</i>
     </div>
   </div>
-  <div class="control-hint">W A S D <span>движение</span> <kbd>SPACE</kbd> <span>{{ state.mobility.name }}</span> <kbd>ESC</kbd> <span>пауза</span></div>
+  <div class="control-hint">{{ inputDevice === 'gamepad' ? 'ЛЕВЫЙ СТИК' : 'W A S D' }} <span>движение</span> <kbd>{{ inputDevice === 'gamepad' ? 'X' : 'SPACE' }}</kbd> <span>{{ state.mobility.name }}</span> <kbd>{{ inputDevice === 'gamepad' ? 'START' : 'ESC' }}</kbd> <span>пауза</span></div>
 </template>
 <style scoped>
+.pause-button .pause-key{display:block;font:7px/1 monospace;margin-top:3px;color:#f1e5cb;letter-spacing:0}
 .enrage-indicator{color:#efb18b!important;letter-spacing:.08em}.enrage-start{display:block;margin-top:6px;color:#f3ce9b;font:700 9px/1.3 monospace;text-shadow:0 2px #10262c;pointer-events:none}@media(max-width:600px){.enrage-start{font-size:7px;margin-top:5px}}
 .hero-name{font:700 11px monospace;color:#f1e5cb}.level-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}.level-line small{margin:0;color:#d8e5e4;font:10px monospace}.xp-compact{font:700 11px monospace;color:#85d4cd;border-left:1px solid #819cae66;padding-left:8px}.health-accessibility{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
 @media(max-width:600px){.hero-name{font-size:8px}.level-line{gap:4px;margin-top:7px}.level-line small{font-size:8px}.xp-compact{font-size:9px;padding-left:5px}}

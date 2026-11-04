@@ -3,7 +3,7 @@ import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
 import { RadarPublisher } from '../radar/RadarPublisher';
 import { World, type RunOptions } from '../systems/World';
-import { snapshots, commands, metrics, radarFrames, type Metrics } from '../events/bridge';
+import { snapshots, commands, metrics, radarFrames, gamepadUi, gamepadNotices, inputDevices, type UiScreen, type Metrics } from '../events/bridge';
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import { AudioController } from '../audio/AudioController';
 import { AudioPresentation } from '../audio/AudioPresentation';
@@ -16,6 +16,9 @@ import { drawChargePreparation, drawGuardianDanger, drawEnrageDanger } from '../
 import { CHARGE_BOSS } from '../config/chargeBoss';
 import { pressureAt } from '../systems/EndgamePressure';
 import { HeldInputTracker } from '../input/HeldInputTracker';
+import { GamepadInputController } from '../input/GamepadInputController';
+import { selectMovement } from '../input/movement';
+import type { Point } from '../utils/math';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -29,12 +32,15 @@ export class GameScene extends Phaser.Scene {
   private spareSprites: Phaser.GameObjects.Sprite[] = [];
   private measured: Metrics = { fps: 0, updateMs: 0, enemies: 0, projectiles: 0, orbs: 0, effects: 0, bosses: 0, chunks: 0, sprites: 0, pooledSprites: 0, guardians: 0, artifacts: { items: 0, allocated: 0 }, radar: { updates: 0, markers: 0, listeners: 0 }, loot: { items: 0, chests: 0, buffs: 0, trail: 0, allocatedItems: 0, allocatedChests: 0 }, allocations: { orbs: 0, projectiles: 0, effects: 0 } };
   private heldInput!: HeldInputTracker;
+  private gamepad!: GamepadInputController;
+  private uiScreen: UiScreen = 'game';
   private inputStatus: World['status'] = 'menu';
   private publishAt = 0;
   private runOptions: RunOptions = {};
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
   private mobilityRequested = false;
+  private mobilityDirection: Point | undefined;
   private audio!: AudioController;
   private audioPresentation!: AudioPresentation;
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
@@ -55,7 +61,17 @@ export class GameScene extends Phaser.Scene {
     this.cameras.main.setZoom(2).startFollow(this.mage, true, 1, 1);
     this.inputStatus = this.world.status;
     const heldInput = this.heldInput = new HeldInputTracker(window, () => this.world.status === 'playing' || this.world.status === 'upgrade');
-    const destroyHeldInput = () => heldInput.destroy();
+    this.uiScreen = 'game';
+    let gamepadAudioAttempted = false;
+    const gamepad = this.gamepad = new GamepadInputController({ target: window, visibilityTarget: document, hidden: () => document.hidden,
+      read: navigator.getGamepads ? () => navigator.getGamepads() : undefined,
+      notice: notice => gamepadNotices.emit(notice), activity: () => {
+        inputDevices.emit('gamepad');
+        // A denied resume may stay pending until a browser-authorized gesture.
+        // Do not queue another promise for every analog sample.
+        if (!gamepadAudioAttempted) { gamepadAudioAttempted = true; this.audio.gesture(); }
+      } });
+    const destroyHeldInput = () => { heldInput.destroy(); gamepad.destroy(); };
     this.events.once(Phaser.Scenes.Events.DESTROY, destroyHeldInput);
     const mobilityKey = (event: KeyboardEvent) => {
       if (event.repeat || this.world.status !== 'playing' || event.target instanceof Element && event.target.closest('button,input,select,textarea,[role="dialog"]')) return;
@@ -63,6 +79,7 @@ export class GameScene extends Phaser.Scene {
     };
     this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
+      if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { if(command.character)this.runOptions.character=command.character; if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
@@ -75,7 +92,7 @@ export class GameScene extends Phaser.Scene {
       this.resetInput(command.type === 'upgrade'); snapshots.emit(this.world.snapshot());
     });
     let lastUiCommand = -Infinity;
-    const gesture = (event: Event) => { if (event.isTrusted) this.audio.gesture(); };
+    const gesture = (event: Event) => { if (event.isTrusted) { this.audio.gesture(); inputDevices.emit(event instanceof PointerEvent && event.pointerType === 'touch' ? 'touch' : 'keyboard'); } };
     const uiClick = (event: Event) => { if (event.isTrusted && event.target instanceof Element && event.target.closest('button') && !event.target.closest('[data-upgrade]') && performance.now() - lastUiCommand > 30) this.audio.ui('ui.select'); };
     document.addEventListener('pointerdown', gesture, true); document.addEventListener('keydown', gesture, true); document.addEventListener('click', uiClick);
     const blur = () => { this.world.pause(); this.audioPresentation.observe(this.world); this.audio.stop(); this.resetInput(); snapshots.emit(this.world.snapshot()); };
@@ -88,7 +105,8 @@ export class GameScene extends Phaser.Scene {
   }
   private resetInput(preserveMovement = false) {
     if (!preserveMovement) this.heldInput.clear();
-    this.touch = { x: 0, y: 0 }; this.mobilityRequested = false;
+    this.gamepad.reset(preserveMovement);
+    this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.mobilityDirection = undefined;
     this.input.keyboard?.resetKeys(); // Keep action-key cleanup, including Space.
     this.inputStatus = this.world.status;
   }
@@ -99,12 +117,23 @@ export class GameScene extends Phaser.Scene {
   update(_time: number, delta: number) {
     const started = performance.now();
     this.syncInputState();
+    const context = () => `${this.uiScreen}:${this.world.runId}:${this.world.status}:${this.world.status === 'upgrade' ? this.world.offerId : ''}`;
+    const beforeInput = context(), pad = this.gamepad.poll(beforeInput);
+    if (pad.actions.includes('pause') && this.uiScreen === 'game') {
+      if (this.world.status === 'playing') commands.emit({ type: 'pause' });
+      else if (this.world.status === 'paused') commands.emit({ type: 'resume' });
+    } else if (this.world.status === 'playing' && pad.actions.includes('mobility')) {
+      this.mobilityRequested = true; this.mobilityDirection = pad.movement;
+    } else if (this.world.status !== 'playing') {
+      const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause');
+      if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
+    }
     const zoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640)); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / zoom; this.world.height = this.scale.height / zoom;
-    const held = this.heldInput.input(), input = { x: held.x + this.touch.x, y: held.y + this.touch.y };
+    const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
-    if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, input); }
+    if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, this.mobilityDirection ?? input); this.mobilityDirection = undefined; }
     this.world.step(delta / 1000, input);
     this.syncInputState();
     this.art.observeCasts(this.world);

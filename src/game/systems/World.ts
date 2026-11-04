@@ -35,6 +35,7 @@ import { ArtifactSystem } from '../loot/ArtifactSystem';
 import { RareGuardianSystem, guardianVisible } from './RareGuardianSystem';
 import { MobilitySystem } from './MobilitySystem';
 import { formationEdge, pressureAt } from './EndgamePressure';
+import type { MovementInput } from '../input/movement';
 export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
@@ -187,11 +188,12 @@ export class World {
     if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
-  step(rawDelta: number, input: Point = { x: 0, y: 0 }) {
+  step(rawDelta: number, input: MovementInput = { x: 0, y: 0 }) {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
     const vector = direction(input.x, input.y);
-    if (!this.mobility.update(this, dt)) { this.player.x += vector.x * this.effectiveSpeed * dt; this.player.y += vector.y * this.effectiveSpeed * dt; }
+    const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
+    if (!this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
     if (vector.x || vector.y) this.facing = vector;
     const profile = profileAt(this.elapsed);
     const cadence=spawnCadenceAt(this.elapsed);

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { mockGamepads, connectPad, pressPad, stick, padFocus } from '../helpers/gamepad';
 for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
   const errors: string[] = [], external: string[] = [], artRequests: string[] = [];
   // Observe the real output without shipping a production test hook.
@@ -40,4 +41,21 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
   expect(artRequests.sort()).toEqual(['/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage-casting.json', '/assets/hd/mage-casting.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png']);
+});
+
+for (const width of [1280, 390]) test(`built controller-only shell, movement, mobility and pause ${width}`, async ({ page }) => {
+  const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await mockGamepads(page); await page.goto('/');
+  await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible(); await connectPad(page);
+  await padFocus(page, page.getByRole('button', { name: /^Warrior/ })); await pressPad(page, 'confirm');
+  await padFocus(page, page.getByRole('button', { name: 'Начать забег' })); await pressPad(page, 'confirm');
+  await expect(page.locator('.hero-name')).toContainText('WARRIOR');
+  await stick(page, .6, -.4); await page.waitForTimeout(150); await pressPad(page, 'mobility'); await stick(page, 0, 0);
+  await expect(page.locator('.mobility-slot')).toHaveAttribute('aria-label', /Dash · X ·/);
+  await pressPad(page, 'pause'); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
+  await padFocus(page, page.getByRole('button', { name: 'Настройки', exact: true })); await pressPad(page, 'confirm');
+  await pressPad(page, 'right'); await padFocus(page, page.getByRole('button', { name: 'Готово' })); await pressPad(page, 'confirm');
+  await expect(page.getByRole('button', { name: 'Продолжить →' })).toBeFocused(); await pressPad(page, 'confirm');
+  await page.screenshot({ path: `screenshots/gamepad/${width}-production.png` });
+  expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined(); expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width); expect(errors).toEqual([]);
 });
