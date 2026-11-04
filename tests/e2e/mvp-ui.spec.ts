@@ -26,7 +26,7 @@ async function offer(p: Page, ids: string[]) {
 
 for (const width of [1280, 390]) {
   test(`public Mage-only menu accepts every Warrior attempt but never selects it ${width}`, async ({ page }) => {
-    await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await mockGamepads(page); await page.goto('/?test=1');
+    await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await mockGamepads(page); await page.goto('/?test=1');
     const warrior = page.getByRole('button', { name: /^Warrior/ }), mage = page.getByRole('button', { name: /^Mage/ });
     await expect(mage).toHaveAttribute('aria-pressed', 'true'); await expect(warrior).toHaveAttribute('aria-disabled', 'true'); await expect(warrior).not.toHaveAttribute('disabled');
     expect(await warrior.evaluate(n => getComputedStyle(n).filter)).toContain('grayscale(1)');
@@ -47,11 +47,11 @@ for (const width of [1280, 390]) {
     // A stale public command cannot resurrect a hidden character or old selection.
     await page.evaluate(async () => { const path = '/src/game/events/bridge.ts', { commands } = await import(path); commands.emit({ type: 'preview', character: 'warrior' }); commands.emit({ type: 'restart', character: 'warrior' }); });
     await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.character)).toBe('mage');
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width === 390 ? 844 : width);
   });
 
   test(`collectible cards, explicit identities, readable bonuses and stable 200ms confirmation ${width}`, async ({ page }) => {
-    await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.clock.install(); await start(page);
+    await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await page.clock.install(); await start(page);
     const groups = [['rank-fireball', 'rank-frost', 'rank-lightning'], ['projectiles', 'rank-meteor', 'rank-shield'], ['unlock-frost', 'evolve-fireball', 'evolve-shield'], ['evolve-frost', 'evolve-meteor', 'evolve-shield'], ['damage', 'health', 'cooldown'], ['speed', 'pickup', 'area'], ['mobility-flame-trail', 'mobility-slowing-flame', 'mobility-arcane-sprint']];
     for (const [index, ids] of groups.entries()) {
       await offer(page, ids);
@@ -71,11 +71,11 @@ for (const width of [1280, 390]) {
       expect(await page.evaluate(id => window.__PIXEL__!.world.upgrades[id], ids[1])).toBe(1);
       await page.clock.resume();
     }
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width === 390 ? 844 : width);
   });
 
   test(`planned timeline follows snapshots, caps, pause, Level Up and restart ${width}`, async ({ page }) => {
-    await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await start(page);
+    await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await start(page);
     for (const seconds of [390, 590, 600, 899, 900, 930]) {
       await page.evaluate(t => { const w = window.__PIXEL__!.world; w.elapsed = t; w.status = 'paused'; }, seconds);
       const expected = encounterTimeline(seconds);

@@ -6,7 +6,7 @@ const directory = 'screenshots/mobility-specializations-hud';
 test.use({ hasTouch: true });
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) for (const zoom of [2, 3]) test(`world HP/Absorb, compact XP, level10 choice, zoom and clean restarts ${hero}/${width}/zoom${zoom}`, async ({ page }) => {
   test.setTimeout(40000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
+  await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await page.goto('/?test=1');
   await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: `${zoom}×`, exact: true }).click(); await page.getByRole('button', { name: 'Готово' }).click();
   await page.getByRole('button', { name: 'Начать забег' }).click();
@@ -23,7 +23,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) for (co
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.mobility.sequence)).toBe(1);
   await page.waitForFunction(() => window.__PIXEL__!.world.mobility.remaining === 0); await page.keyboard.up('d');
   await expect(page.locator('.xp-compact')).toHaveText('25%'); await expect(page.locator('.xp-row,.hud progress')).toHaveCount(0);
-  await expect(page.getByRole('list', { name: 'Способности' }).getByRole('listitem')).toHaveCount(6);
+  await expect(page.getByRole('list', { name: 'Способности' }).getByRole('listitem')).toHaveCount(5);
   await expect(page.getByRole('progressbar', { name: 'Здоровье', exact: true })).toHaveAttribute('aria-valuenow', hero === 'Warrior' ? '90' : '60');
   const before = await page.evaluate(() => { const w = window.__PIXEL__!.world; return { bar: window.__PIXEL__!.art().playerHealth, player: { ...w.player }, absorb: w.mobility.absorbValue(w.elapsed), textures: window.__PIXEL__!.art().textures.filter(t => !t.startsWith('chunk-')) }; });
   expect(before.bar.objects).toBe(1); expect(before.bar.depth).toBe(11); expect(before.bar.x! + before.bar.width! / 2).toBeCloseTo(before.player.x); expect(before.bar.y! - before.player.y).toBe(-33);

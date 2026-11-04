@@ -10,10 +10,11 @@ export class WorldChunkSystem {
   private biome: BiomeId = 'grove';
   setBiome(biome: BiomeId) { if(this.biome!==biome){this.destroy();this.biome=biome;} }
   constructor(private scene: Phaser.Scene) {}
-  update(x: number, y: number, width: number, height: number) {
+  update(x: number, y: number, width: number, height: number, padding = 1) {
     const bounds = [Math.floor((x - width / 2) / 128), Math.floor((y - height / 2) / 128), Math.floor((x + width / 2) / 128), Math.floor((y + height / 2) / 128)].join(',');
-    if (bounds === this.lastBounds) return; this.lastBounds = bounds;
-    const required = chunkKeys(x, y, width, height), keys = new Set(required.map(c => c.key));
+    const cacheKey = bounds + ':' + padding;
+    if (cacheKey === this.lastBounds) return; this.lastBounds = cacheKey;
+    const required = chunkKeys(x, y, width, height, padding), keys = new Set(required.map(c => c.key));
     for (const [key, image] of this.chunks) if (!keys.has(key)) { image.destroy(); this.scene.textures.remove(key); this.chunks.delete(key); }
     for (const chunk of required) if (!this.chunks.has(chunk.key)) {
       {

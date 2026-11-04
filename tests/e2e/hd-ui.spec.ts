@@ -45,7 +45,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
 });
 
 test('touch emulation preserves settings, pause, free upgrade choice and real joystick movement', async ({ browser, baseURL }) => {
-  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: 390, height: 844 } }), page = await context.newPage();
+  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: 844, height: 390 } }), page = await context.newPage();
   try {
     await page.goto('/?test=1'); await page.getByRole('button', { name: 'Настройки', exact: true }).tap(); await page.getByRole('button', { name: '3×', exact: true }).tap(); await page.getByRole('button', { name: 'Готово' }).tap(); await page.getByRole('button', { name: 'Начать забег' }).tap();
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; for (const a of Object.values(w.abilities)) a.level = 0; });
@@ -54,6 +54,6 @@ test('touch emulation preserves settings, pause, free upgrade choice and real jo
     await session.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [point] }); await page.waitForTimeout(180); await session.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] }); expect(await page.evaluate(() => window.__PIXEL__!.world.player.x)).toBeGreaterThan(1); await session.detach();
     await page.getByRole('button', { name: 'Пауза', exact: true }).tap(); const time = await page.evaluate(() => window.__PIXEL__!.world.elapsed); await page.waitForTimeout(100); expect(await page.evaluate(() => window.__PIXEL__!.world.elapsed)).toBe(time); await page.getByRole('button', { name: 'Продолжить' }).tap();
     await page.evaluate(() => window.__PIXEL__!.world.gainXp(20)); const modal = page.getByRole('dialog', { name: 'Новый уровень' }); await expect(modal.getByRole('button')).toHaveCount(3); await modal.getByRole('button').last().tap(); await expect(modal).toHaveCount(0); expect(await page.evaluate(() => window.__PIXEL__!.world.status)).toBe('playing');
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); await page.screenshot({ path: `${directory}/touch-ui-390.png` });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(844); await page.screenshot({ path: `${directory}/touch-ui-390.png` });
   } finally { await context.close(); }
 });

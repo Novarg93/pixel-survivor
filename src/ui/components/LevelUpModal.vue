@@ -15,12 +15,28 @@ const specializationChoice = computed(() => props.choices.length === 3 && props.
 const emit = defineEmits<{ choose: [id: string, offer: number] }>();
 const panel = ref<HTMLElement>();
 const selected = ref<string | null>(null);
+let touchChoice: { id: string; pointerId: number; x: number; y: number } | undefined;
 const confirmation = new UpgradeConfirmation((id, offer) => emit('choose', id, offer));
 function cancelSelection() { confirmation.cancel(); selected.value = null; }
 function choose(id: string) {
   if (!props.choices.some(choice => choice.id === id) || !confirmation.choose(id, props.offer)) return;
   selected.value = id;
   panel.value?.querySelector<HTMLButtonElement>(`[data-upgrade="${id}"]`)?.focus({ preventScroll: true });
+}
+function beginTouch(event: PointerEvent, id: string) {
+  if (event.pointerType === 'touch') touchChoice = { id, pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+}
+function confirmTouch(event: PointerEvent, id: string) {
+  if (event.pointerId !== touchChoice?.pointerId) return;
+  const started = touchChoice;
+  touchChoice = undefined;
+  if (started.id !== id || Math.hypot(event.clientX - started.x, event.clientY - started.y) > 12) return;
+  // A secondary touch may not produce the compatibility click while the stick is held.
+  event.preventDefault();
+  choose(id);
+}
+function cancelTouch(event: PointerEvent) {
+  if (touchChoice?.pointerId === event.pointerId) touchChoice = undefined;
 }
 function focus() { void nextTick(() => panel.value?.querySelector('button')?.focus()); }
 const offGamepad = gamepadUi.on(({ scope, action }) => {
@@ -64,7 +80,8 @@ function key(event: KeyboardEvent) {
           :data-upgrade="choice.id" :data-family="upgradeIdentity(choice.id).family" :data-rank="choice.tier"
           :data-dimmed="selected !== null && selected !== choice.id"
           :style="{ '--skill-color': upgradeIdentity(choice.id).color }" :aria-pressed="selected === choice.id"
-          :disabled="selected !== null && selected !== choice.id" @click="choose(choice.id)">
+          :disabled="selected !== null && selected !== choice.id" @click="choose(choice.id)"
+          @pointerdown="beginTouch($event, choice.id)" @pointerup="confirmTouch($event, choice.id)" @pointercancel="cancelTouch">
           <small class="choice-rank">{{ choice.category ? choice.category + ' · ' : '' }}РАНГ {{ choice.tier }}</small>
           <span class="choice-key">0{{ i + 1 }}</span>
           <span class="emblem-socket"><UpgradeEmblem :icon="upgradeCard(choice).icon" /></span>

@@ -21,6 +21,7 @@ import { selectMovement } from '../input/movement';
 import type { Point } from '../utils/math';
 import { runCharacter } from '../bootstrap/publicCharacters';
 import type { CharacterId } from '../config/characters';
+import { mobileViewport } from '../../ui/mobileViewport';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -40,6 +41,7 @@ export class GameScene extends Phaser.Scene {
   private publishAt = 0;
   private runOptions: RunOptions = {};
   private testCharacter: CharacterId | undefined;
+  private orientationResume = false;
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
   private mobilityRequested = false;
@@ -54,7 +56,7 @@ export class GameScene extends Phaser.Scene {
     this.audio.settings(this.preferences); this.audioPresentation = new AudioPresentation(this.audio);
     this.art = new GameArt(this);
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
-    this.world = new World(); this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
+    this.world = new World(); this.orientationResume = false; this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
     this.world.status = 'menu'; this.audioPresentation.observe(this.world);
     this.chunks = new WorldChunkSystem(this);
     this.mage = this.add.sprite(0, 0, 'hd-mage', 'mage-down-idle-0').setOrigin(0.5, 0.75).setDepth(10);
@@ -82,9 +84,11 @@ export class GameScene extends Phaser.Scene {
     };
     this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
+      if (mobileViewport().blocked && ['restart', 'resume', 'mobility'].includes(command.type)) return;
       if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
-      if (command.type === 'move') { this.touch = this.world.status === 'playing' ? command.input : { x: 0, y: 0 }; return; }
+      if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
+      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') this.orientationResume = false;
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
@@ -109,7 +113,7 @@ export class GameScene extends Phaser.Scene {
   private resetInput(preserveMovement = false) {
     if (!preserveMovement) this.heldInput.clear();
     this.gamepad.reset(preserveMovement);
-    this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.mobilityDirection = undefined;
+    if (!preserveMovement) this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.mobilityDirection = undefined;
     this.input.keyboard?.resetKeys(); // Keep action-key cleanup, including Space.
     this.inputStatus = this.world.status;
   }
@@ -119,25 +123,29 @@ export class GameScene extends Phaser.Scene {
   }
   update(_time: number, delta: number) {
     const started = performance.now();
+    const viewport = mobileViewport();
+    if (viewport.blocked && this.world.status === 'playing') { this.orientationResume = true; this.world.pause(); this.resetInput(); }
+    if (!viewport.blocked && this.orientationResume) { this.orientationResume = false; if (!document.hidden && this.world.status === 'paused') this.world.resume(); }
     this.syncInputState();
     const context = () => `${this.uiScreen}:${this.world.runId}:${this.world.status}:${this.world.status === 'upgrade' ? this.world.offerId : ''}`;
     const beforeInput = context(), pad = this.gamepad.poll(beforeInput);
-    if (pad.actions.includes('pause') && this.uiScreen === 'game') {
+    if (!viewport.blocked && pad.actions.includes('pause') && this.uiScreen === 'game') {
       if (this.world.status === 'playing') commands.emit({ type: 'pause' });
       else if (this.world.status === 'paused') commands.emit({ type: 'resume' });
     } else if (this.world.status === 'playing' && pad.actions.includes('mobility')) {
       this.mobilityRequested = true; this.mobilityDirection = pad.movement;
-    } else if (this.world.status !== 'playing') {
+    } else if (!viewport.blocked && this.world.status !== 'playing') {
       const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause');
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
-    const zoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640)); this.cameras.main.setZoom(zoom);
-    this.world.width = this.scale.width / zoom; this.world.height = this.scale.height / zoom;
+    const baseZoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640));
+    const zoom = baseZoom * (viewport.touch ? .83 : 1); this.cameras.main.setZoom(zoom);
+    this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, this.mobilityDirection ?? input); this.mobilityDirection = undefined; }
-    this.world.step(delta / 1000, input);
+    if (!viewport.blocked) this.world.step(delta / 1000, input);
     this.syncInputState();
     this.art.observeCasts(this.world);
     this.audioPresentation.observe(this.world);
@@ -149,7 +157,7 @@ export class GameScene extends Phaser.Scene {
     else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
     this.mage.setAlpha(this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
     this.chunks.setBiome(this.world.biome);
-    this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.world.width, this.world.height);
+    this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.scale.width / zoom, this.scale.height / zoom, viewport.touch ? 0 : 1);
     const active = new Set<number>();
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
       active.add(entity.id); let sprite = this.sprites.get(entity.id);

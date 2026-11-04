@@ -64,7 +64,7 @@ test('first selection locks, real RAF stays paused until the 200ms commit and re
 });
 
 for (const width of [1280, 390]) test(`mouse/touch confirmation frames retain layout at ${width}`, async ({ browser, baseURL }) => {
-  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width, height: width === 390 ? 844 : 720 } }); const page = await context.newPage();
+  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 } }); const page = await context.newPage();
   try {
     await page.clock.install(); await start(page); await offer(page); await page.clock.pauseAt((await page.evaluate(() => Date.now())) + 30);
     mkdirSync(directory, { recursive: true }); const cards = page.locator('.choice'), boxes = await cards.evaluateAll(nodes => nodes.map(n => { const r = n.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; }));
@@ -86,7 +86,7 @@ for (const width of [1280, 390]) test(`mouse/touch confirmation frames retain la
     await page.keyboard.press('3'); await page.clock.runFor(29); expect((await state(page)).status).toBe('upgrade'); expect((await state(page)).elapsed).toBe(frozen);
     await page.clock.runFor(51); await expect(modal(page)).toHaveCount(0); expect((await state(page)).upgrades).toEqual({ [id]: 1 }); expect((await state(page)).status).toBe('playing');
     await page.screenshot({ path: `${directory}/after-${width}.png` }); await page.locator('canvas').screenshot({ path: `${directory}/canvas-after-${width}.png` });
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width === 390 ? 844 : width);
   } finally { await context.close(); }
 });
 

@@ -36,7 +36,7 @@ for (const hero of ['Mage', 'Warrior']) test(`${hero} Space is a single edge, re
   expect(await page.evaluate(() => window.__PIXEL__!.listeners())).toEqual({ commands: 1, snapshots: 1, metrics: 1 }); expect(errors).toEqual([]);
 });
 for (const hero of ['Mage', 'Warrior']) test(`${hero} real multi-touch joystick plus mobility on mobile`, async ({ browser, baseURL }) => {
-  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: 390, height: 844 } });
+  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: 844, height: 390 } });
   try {
     const page = await context.newPage(); await quiet(page, hero); const name = hero === 'Mage' ? 'Blink' : 'Dash';
     const button = page.getByRole('button', { name: new RegExp('^' + name) }), pad = await page.getByLabel('Сенсорный джойстик').boundingBox(), box = await button.boundingBox();
@@ -52,7 +52,7 @@ for (const hero of ['Mage', 'Warrior']) test(`${hero} real multi-touch joystick 
     await page.waitForTimeout(250); await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     const data = await page.evaluate(() => { const w = window.__PIXEL__!.world; return { distance: w.mobility.distance, width: w.width, direction: w.mobility.direction, x: w.player.x, cooldown: w.snapshot().mobility.readyIn }; });
     expect(data.direction).toEqual({ x: 1, y: 0 }); expect(data.distance).toBeLessThanOrEqual(data.width * .38); expect(data.x).toBeGreaterThan(data.distance); expect(data.cooldown).toBeGreaterThan(0);
-    await expect(button).toBeDisabled(); expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
+    await expect(button).toBeDisabled(); expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(844);
     await page.screenshot({ path: `${directory}/${hero}-touch-mobile.png` }); writeFileSync(`${directory}/${hero}-touch.json`, JSON.stringify(data, null, 2)); await cdp.detach();
   } finally { await context.close(); }
 });

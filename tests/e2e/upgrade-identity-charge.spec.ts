@@ -22,7 +22,7 @@ async function offer(page: Page, ids: string[]) {
 }
 for (const width of [1280, 390]) for (const hero of ['Mage', 'Warrior']) test(`skill card identity, real focus/selected/keyboard/touch and cancellation ${hero}/${width}`, async ({ browser, baseURL }) => {
   test.setTimeout(60000); mkdirSync(directory, { recursive: true });
-  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width, height: width === 390 ? 844 : 720 } }), page = await context.newPage();
+  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: { width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 } }), page = await context.newPage();
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   try {
     await quiet(page, hero);
@@ -66,7 +66,7 @@ for (const width of [1280, 390]) for (const hero of ['Mage', 'Warrior']) test(`s
 
 for (const width of [1280, 390]) test(`Charger visible preparation/flash without path, real dodges, pause and cleanup at${width}`, async ({ page }) => {
   test.setTimeout(60000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await quiet(page);
+  await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await quiet(page);
   await page.evaluate(() => { const w = window.__PIXEL__!.world, e = w.spawn('charger', { x: -45, y: -70 })!; e.boss!.until = w.elapsed; });
   await page.waitForFunction(() => { const w = window.__PIXEL__!.world, b = w.bosses[0]?.boss; return b?.phase === 'windup' && b.until - w.elapsed < .35; });
   await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(50);
