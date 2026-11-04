@@ -104,7 +104,7 @@ it('Eclipse stageII scales recovery and cooldown but preserves its1.25s warning 
 });
 it('uses independent hurt/death presentation for three Guardian IDs without changing the world',()=>{
   const w=quiet(),art=new GuardianAnimation();w.guardianSystem.spawnWave(w,3,11);art.prepare(w);const [a,b]=w.guardians;a.discovered=true;w.damageEnemy(a,1);
-  expect(art.frame(a,w)).toContain('hurt');expect(art.frame(b,w)).toContain('idle');for(const e of [...w.guardians])kill(w,e.id);art.finish(w);expect(art.corpses).toHaveLength(3);
+  expect(art.frame(a,w)).toContain('hurt');expect(art.frame(b,w)).toContain('cast');for(const e of [...w.guardians])kill(w,e.id);art.finish(w);expect(art.corpses).toHaveLength(3);
   w.elapsed+=.6;art.finish(w);expect(art.corpses).toHaveLength(0);art.clear();
 });
 it('temporarily softens ordinary spawn frequency for8s and then restores it with heavy enemies still alive',()=>{

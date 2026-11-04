@@ -17,7 +17,7 @@ export function drawBossAtlas(layout) {
       const grad = colors => { const a = g.createLinearGradient(left ? 29 : 3, 3, left ? 3 : 29, 30); colors.forEach((v, i) => a.addColorStop(i / (colors.length - 1), v)); return a; };
       const f = e.index, walk = e.pose === 'walk', dying = e.pose === 'death', attack = e.pose === 'attack';
       const swing = walk || attack ? Math.sin(f * Math.PI / 2) : 0, lift = walk || attack ? Math.cos(f * Math.PI / 2) : 0;
-      const bob = walk ? Math.abs(swing) * .3 : e.pose === 'idle' ? [0, -.18, .15][f] : 0;
+      const bob = walk ? [0, -.65, .6, -.2][f] : e.pose === 'idle' ? [0, -.18, .15][f] : 0;
       if (dying) { g.translate(16, 29.3); g.scale(1, [.98, .85, .65, .45, .25, .12][f]); g.translate(-16, -29.3); }
       if (e.pose === 'hurt') g.translate([-.7, -.3, .15][f], 0);
       if (e.pose === 'windup') g.translate(0, .5 + f * .4);
@@ -25,15 +25,21 @@ export function drawBossAtlas(layout) {
       if (e.pose === 'recover') g.translate(0, .8 - f * .25);
       const bark = grad(['#d4ac83', '#a07768', '#6c5059', '#3c3448']), bone = grad(['#fff0bd', '#dac39c', '#a38c7e', '#68596b']);
       if (e.kind === 'charger') {
+        const slam = e.pose === 'slam', crouch = slam ? [-.1, -.6, -1, 1.1, .6, .2][f] : 0;
+        g.translate(0, crouch);
+        if (attack) { g.translate(16, 25); g.transform(1, 0, .12, .94, 0, 0); g.translate(-16, -25); }
+        const armRaise = slam ? [0, 2.5, 5, -1.3, -.8, 0][f] : e.pose === 'windup' ? 3 + f * 3 : e.pose === 'recover' ? -1.3 + f * .65 : walk ? swing * .7 : 0;
         shape(`M10.2 21 L14.6 21.5 L${14.4 + swing * 1.2} ${28.8 - Math.max(0, lift)} L${8.4 + swing * 1.2} ${29 - Math.max(0, lift)} L8.8 26Z`, '#5b4555');
         shape(`M18.2 20.9 L22.6 20.2 L${24 - swing * 1.2} ${28.7 - Math.max(0, -lift)} L${17.6 - swing * 1.2} ${29 - Math.max(0, -lift)} L17.6 26Z`, bark);
         line(`M${9.4 + swing * 1.2} ${28 - Math.max(0, lift)} l3.8 -.1 M${18.6 - swing * 1.2} ${28 - Math.max(0, -lift)} l4.5 -.2`, '#e0c19b', .35);
         g.translate(0, bob);
         shape('M8.4 11 L14 8.3 L21.7 9.7 L25 15.1 L23.2 22.1 L17.5 25.1 L9.2 22.3 L6.7 16.8Z', bark);
+        g.save(); g.translate(0, -armRaise);
         shape('M5.1 12 L10.1 10.5 L12.3 14.7 L9.7 18.2 L4.1 17.7 L2.5 15.4Z', '#745c64');
         shape('M4.6 16.8 L9.4 17.7 L10.5 22.5 L7.4 25.3 L3 23.5 L2.8 20.2Z', bark);
         shape('M21.6 11 L26 12.1 L28 17 L25.6 19.8 L21.1 17.1 L19.5 13.8Z', bark);
         shape('M23.5 17 L28 17.2 L29.2 22.2 L26.8 25 L22.5 23.1 L21.2 20Z', '#8b6b68');
+        g.restore();
         // Long branched antlers form the boss's unmistakable top silhouette.
         g.save();
         const lean = e.pose === 'windup' ? .11 + f * .03 : attack ? .17 : 0;
@@ -58,7 +64,7 @@ export function drawBossAtlas(layout) {
         g.translate(0, bob);
         const cloth = grad(['#c2b2c5', '#98829f', '#665370', '#353648']);
         const trim = grad(['#ffdfba', '#c2a287', '#806b7d']);
-        const raise = e.pose === 'windup' ? 1 + f * .5 : attack ? 2 + Math.sin(f * Math.PI / 2) * .5 : 0;
+        const raise = e.pose === 'windup' ? 2 + f * 2 : attack ? [4, 1, .3, 0][f] : 0;
         const drift = swing * .65;
         shape(`M12 12 L20.4 12 L22 19 L${25 + drift} ${28.5 - Math.max(0, -lift) * 1.1} L20.4 29.5 L17.4 28.7 L14.5 29.6 L9.7 28.4 L6.8 ${29 - Math.max(0, lift) * 1.1} L9.8 20Z`, cloth);
         shape('M12 13 L9 12.5 L7.2 17.3 L9.3 21 L12.5 20Z', '#574b68');
@@ -89,7 +95,7 @@ export function drawBossAtlas(layout) {
         const second = e.stage === 2, glow = second ? '#e2c4ff' : '#b5f1df';
         const ice = grad(second ? ['#e6d5f1', '#b4a1c8', '#727492', '#384455'] : ['#d8eee1', '#9bc5c2', '#5b8d99', '#304a61']);
         const dark = grad(['#708994', '#456073', '#293f55']);
-        const raise = e.pose === 'windup' ? 1 + f * .4 : attack ? 2 + lift * .4 : 0;
+        const raise = e.pose === 'windup' ? 1.5 + f * 2 : attack ? [3.8, 1, .4, 0][f] : 0;
         // A hollow moon cage: broad crescents frame the face without a solid halo disk.
         shape('M10.7 13 L6.5 10 L4.4 5 L5.6 1.7 L6.8 5.6 L9.2 8.2 L12 8.8Z', ice);
         shape('M21.4 12.4 L25.5 9.2 L27.5 4.7 L26.5 1.9 L25.3 5.7 L22.7 8.3 L20.1 8.7Z', ice);

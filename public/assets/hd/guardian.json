@@ -30,7 +30,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-hurt-0": {
+    "guardian-cast-0": {
       "frame": {
         "x": 302,
         "y": 2,
@@ -40,7 +40,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-hurt-1": {
+    "guardian-cast-1": {
       "frame": {
         "x": 402,
         "y": 2,
@@ -50,7 +50,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-hurt-2": {
+    "guardian-cast-2": {
       "frame": {
         "x": 2,
         "y": 118,
@@ -60,7 +60,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-0": {
+    "guardian-cast-3": {
       "frame": {
         "x": 102,
         "y": 118,
@@ -70,7 +70,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-1": {
+    "guardian-release-0": {
       "frame": {
         "x": 202,
         "y": 118,
@@ -80,7 +80,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-2": {
+    "guardian-release-1": {
       "frame": {
         "x": 302,
         "y": 118,
@@ -90,7 +90,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-3": {
+    "guardian-release-2": {
       "frame": {
         "x": 402,
         "y": 118,
@@ -100,7 +100,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-4": {
+    "guardian-hurt-0": {
       "frame": {
         "x": 2,
         "y": 234,
@@ -110,10 +110,80 @@
       "rotated": false,
       "trimmed": false
     },
-    "guardian-death-5": {
+    "guardian-hurt-1": {
       "frame": {
         "x": 102,
         "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-hurt-2": {
+      "frame": {
+        "x": 202,
+        "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-0": {
+      "frame": {
+        "x": 302,
+        "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-1": {
+      "frame": {
+        "x": 402,
+        "y": 234,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-2": {
+      "frame": {
+        "x": 2,
+        "y": 350,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-3": {
+      "frame": {
+        "x": 102,
+        "y": 350,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-4": {
+      "frame": {
+        "x": 202,
+        "y": 350,
+        "w": 96,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "guardian-death-5": {
+      "frame": {
+        "x": 302,
+        "y": 350,
         "w": 96,
         "h": 112
       },
@@ -125,12 +195,20 @@
     "image": "guardian.png",
     "size": {
       "w": 502,
-      "h": 350
+      "h": 466
     },
     "clips": {
       "idle": {
         "frames": 3,
         "fps": 3
+      },
+      "cast": {
+        "frames": 4,
+        "fps": 8
+      },
+      "release": {
+        "frames": 3,
+        "fps": 12
       },
       "hurt": {
         "frames": 3,

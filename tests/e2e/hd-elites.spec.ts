@@ -28,7 +28,7 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
   expect(errors).toEqual([]);
 });
 
-test('Guardian12 authored frames and live hurt/death keep immediate artifact and clean teardown', async ({ page }) => {
+test('Guardian19 authored frames and live hurt/death keep immediate artifact and clean teardown', async ({ page }) => {
   mkdirSync(directory, { recursive: true });
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   const pixels = await page.evaluate(async () => {
@@ -42,7 +42,7 @@ test('Guardian12 authored frames and live hurt/death keep immediate artifact and
       return { name, border, soft, count, hash: hash >>> 0 };
     });
   });
-  expect(pixels).toHaveLength(12); expect(new Set(pixels.map(p => p.hash)).size).toBe(12);
+  expect(pixels).toHaveLength(19); expect(new Set(pixels.map(p => p.hash)).size).toBe(19);
   for (const p of pixels) { expect(p.border, p.name).toBe(0); expect(p.soft, p.name).toBe(0); expect(p.count, p.name).toBeGreaterThan(500); }
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 30; w.player.invulnerableUntil = 1e6; w.artifacts.rng.next = () => 0; for (const a of Object.values(w.abilities)) a.level = 0; w.spawn('guardian', { x: 60, y: -40 }); });
   await page.waitForTimeout(80); await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 1); });

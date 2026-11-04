@@ -220,9 +220,69 @@
       "rotated": false,
       "trimmed": false
     },
-    "charger-1-right-recover-0": {
+    "charger-1-right-slam-0": {
       "frame": {
         "x": 926,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-slam-1": {
+      "frame": {
+        "x": 1058,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-slam-2": {
+      "frame": {
+        "x": 1190,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-slam-3": {
+      "frame": {
+        "x": 1322,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-slam-4": {
+      "frame": {
+        "x": 1454,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-slam-5": {
+      "frame": {
+        "x": 1586,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-right-recover-0": {
+      "frame": {
+        "x": 1718,
         "y": 134,
         "w": 128,
         "h": 128
@@ -232,7 +292,7 @@
     },
     "charger-1-right-recover-1": {
       "frame": {
-        "x": 1058,
+        "x": 1850,
         "y": 134,
         "w": 128,
         "h": 128
@@ -242,8 +302,8 @@
     },
     "charger-1-right-recover-2": {
       "frame": {
-        "x": 1190,
-        "y": 134,
+        "x": 2,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -252,8 +312,8 @@
     },
     "charger-1-left-idle-0": {
       "frame": {
-        "x": 1322,
-        "y": 134,
+        "x": 134,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -262,8 +322,8 @@
     },
     "charger-1-left-idle-1": {
       "frame": {
-        "x": 1454,
-        "y": 134,
+        "x": 266,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -272,8 +332,8 @@
     },
     "charger-1-left-idle-2": {
       "frame": {
-        "x": 1586,
-        "y": 134,
+        "x": 398,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -282,8 +342,8 @@
     },
     "charger-1-left-walk-0": {
       "frame": {
-        "x": 1718,
-        "y": 134,
+        "x": 530,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -292,8 +352,8 @@
     },
     "charger-1-left-walk-1": {
       "frame": {
-        "x": 1850,
-        "y": 134,
+        "x": 662,
+        "y": 266,
         "w": 128,
         "h": 128
       },
@@ -302,7 +362,7 @@
     },
     "charger-1-left-walk-2": {
       "frame": {
-        "x": 2,
+        "x": 794,
         "y": 266,
         "w": 128,
         "h": 128
@@ -312,7 +372,7 @@
     },
     "charger-1-left-walk-3": {
       "frame": {
-        "x": 134,
+        "x": 926,
         "y": 266,
         "w": 128,
         "h": 128
@@ -322,7 +382,7 @@
     },
     "charger-1-left-hurt-0": {
       "frame": {
-        "x": 266,
+        "x": 1058,
         "y": 266,
         "w": 128,
         "h": 128
@@ -332,7 +392,7 @@
     },
     "charger-1-left-hurt-1": {
       "frame": {
-        "x": 398,
+        "x": 1190,
         "y": 266,
         "w": 128,
         "h": 128
@@ -342,7 +402,7 @@
     },
     "charger-1-left-hurt-2": {
       "frame": {
-        "x": 530,
+        "x": 1322,
         "y": 266,
         "w": 128,
         "h": 128
@@ -352,7 +412,7 @@
     },
     "charger-1-left-death-0": {
       "frame": {
-        "x": 662,
+        "x": 1454,
         "y": 266,
         "w": 128,
         "h": 128
@@ -362,7 +422,7 @@
     },
     "charger-1-left-death-1": {
       "frame": {
-        "x": 794,
+        "x": 1586,
         "y": 266,
         "w": 128,
         "h": 128
@@ -372,7 +432,7 @@
     },
     "charger-1-left-death-2": {
       "frame": {
-        "x": 926,
+        "x": 1718,
         "y": 266,
         "w": 128,
         "h": 128
@@ -382,7 +442,7 @@
     },
     "charger-1-left-death-3": {
       "frame": {
-        "x": 1058,
+        "x": 1850,
         "y": 266,
         "w": 128,
         "h": 128
@@ -392,8 +452,8 @@
     },
     "charger-1-left-death-4": {
       "frame": {
-        "x": 1190,
-        "y": 266,
+        "x": 2,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -402,8 +462,8 @@
     },
     "charger-1-left-death-5": {
       "frame": {
-        "x": 1322,
-        "y": 266,
+        "x": 134,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -412,8 +472,8 @@
     },
     "charger-1-left-windup-0": {
       "frame": {
-        "x": 1454,
-        "y": 266,
+        "x": 266,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -422,8 +482,8 @@
     },
     "charger-1-left-windup-1": {
       "frame": {
-        "x": 1586,
-        "y": 266,
+        "x": 398,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -432,8 +492,8 @@
     },
     "charger-1-left-attack-0": {
       "frame": {
-        "x": 1718,
-        "y": 266,
+        "x": 530,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -442,8 +502,8 @@
     },
     "charger-1-left-attack-1": {
       "frame": {
-        "x": 1850,
-        "y": 266,
+        "x": 662,
+        "y": 398,
         "w": 128,
         "h": 128
       },
@@ -452,7 +512,7 @@
     },
     "charger-1-left-attack-2": {
       "frame": {
-        "x": 2,
+        "x": 794,
         "y": 398,
         "w": 128,
         "h": 128
@@ -462,7 +522,67 @@
     },
     "charger-1-left-attack-3": {
       "frame": {
-        "x": 134,
+        "x": 926,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-0": {
+      "frame": {
+        "x": 1058,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-1": {
+      "frame": {
+        "x": 1190,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-2": {
+      "frame": {
+        "x": 1322,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-3": {
+      "frame": {
+        "x": 1454,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-4": {
+      "frame": {
+        "x": 1586,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "charger-1-left-slam-5": {
+      "frame": {
+        "x": 1718,
         "y": 398,
         "w": 128,
         "h": 128
@@ -472,7 +592,7 @@
     },
     "charger-1-left-recover-0": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 398,
         "w": 128,
         "h": 128
@@ -482,8 +602,8 @@
     },
     "charger-1-left-recover-1": {
       "frame": {
-        "x": 398,
-        "y": 398,
+        "x": 2,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -492,8 +612,8 @@
     },
     "charger-1-left-recover-2": {
       "frame": {
-        "x": 530,
-        "y": 398,
+        "x": 134,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -502,8 +622,8 @@
     },
     "sorcerer-1-right-idle-0": {
       "frame": {
-        "x": 662,
-        "y": 398,
+        "x": 266,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -512,8 +632,8 @@
     },
     "sorcerer-1-right-idle-1": {
       "frame": {
-        "x": 794,
-        "y": 398,
+        "x": 398,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -522,8 +642,8 @@
     },
     "sorcerer-1-right-idle-2": {
       "frame": {
-        "x": 926,
-        "y": 398,
+        "x": 530,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -532,8 +652,8 @@
     },
     "sorcerer-1-right-walk-0": {
       "frame": {
-        "x": 1058,
-        "y": 398,
+        "x": 662,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -542,8 +662,8 @@
     },
     "sorcerer-1-right-walk-1": {
       "frame": {
-        "x": 1190,
-        "y": 398,
+        "x": 794,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -552,8 +672,8 @@
     },
     "sorcerer-1-right-walk-2": {
       "frame": {
-        "x": 1322,
-        "y": 398,
+        "x": 926,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -562,8 +682,8 @@
     },
     "sorcerer-1-right-walk-3": {
       "frame": {
-        "x": 1454,
-        "y": 398,
+        "x": 1058,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -572,8 +692,8 @@
     },
     "sorcerer-1-right-hurt-0": {
       "frame": {
-        "x": 1586,
-        "y": 398,
+        "x": 1190,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -582,8 +702,8 @@
     },
     "sorcerer-1-right-hurt-1": {
       "frame": {
-        "x": 1718,
-        "y": 398,
+        "x": 1322,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -592,8 +712,8 @@
     },
     "sorcerer-1-right-hurt-2": {
       "frame": {
-        "x": 1850,
-        "y": 398,
+        "x": 1454,
+        "y": 530,
         "w": 128,
         "h": 128
       },
@@ -602,7 +722,7 @@
     },
     "sorcerer-1-right-death-0": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 530,
         "w": 128,
         "h": 128
@@ -612,7 +732,7 @@
     },
     "sorcerer-1-right-death-1": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 530,
         "w": 128,
         "h": 128
@@ -622,7 +742,7 @@
     },
     "sorcerer-1-right-death-2": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 530,
         "w": 128,
         "h": 128
@@ -632,8 +752,8 @@
     },
     "sorcerer-1-right-death-3": {
       "frame": {
-        "x": 398,
-        "y": 530,
+        "x": 2,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -642,8 +762,8 @@
     },
     "sorcerer-1-right-death-4": {
       "frame": {
-        "x": 530,
-        "y": 530,
+        "x": 134,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -652,8 +772,8 @@
     },
     "sorcerer-1-right-death-5": {
       "frame": {
-        "x": 662,
-        "y": 530,
+        "x": 266,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -662,8 +782,8 @@
     },
     "sorcerer-1-right-windup-0": {
       "frame": {
-        "x": 794,
-        "y": 530,
+        "x": 398,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -672,8 +792,8 @@
     },
     "sorcerer-1-right-windup-1": {
       "frame": {
-        "x": 926,
-        "y": 530,
+        "x": 530,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -682,8 +802,8 @@
     },
     "sorcerer-1-right-attack-0": {
       "frame": {
-        "x": 1058,
-        "y": 530,
+        "x": 662,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -692,8 +812,8 @@
     },
     "sorcerer-1-right-attack-1": {
       "frame": {
-        "x": 1190,
-        "y": 530,
+        "x": 794,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -702,8 +822,8 @@
     },
     "sorcerer-1-right-attack-2": {
       "frame": {
-        "x": 1322,
-        "y": 530,
+        "x": 926,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -712,8 +832,8 @@
     },
     "sorcerer-1-right-attack-3": {
       "frame": {
-        "x": 1454,
-        "y": 530,
+        "x": 1058,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -722,8 +842,8 @@
     },
     "sorcerer-1-right-recover-0": {
       "frame": {
-        "x": 1586,
-        "y": 530,
+        "x": 1190,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -732,8 +852,8 @@
     },
     "sorcerer-1-right-recover-1": {
       "frame": {
-        "x": 1718,
-        "y": 530,
+        "x": 1322,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -742,8 +862,8 @@
     },
     "sorcerer-1-right-recover-2": {
       "frame": {
-        "x": 1850,
-        "y": 530,
+        "x": 1454,
+        "y": 662,
         "w": 128,
         "h": 128
       },
@@ -752,7 +872,7 @@
     },
     "sorcerer-1-left-idle-0": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 662,
         "w": 128,
         "h": 128
@@ -762,7 +882,7 @@
     },
     "sorcerer-1-left-idle-1": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 662,
         "w": 128,
         "h": 128
@@ -772,7 +892,7 @@
     },
     "sorcerer-1-left-idle-2": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 662,
         "w": 128,
         "h": 128
@@ -782,8 +902,8 @@
     },
     "sorcerer-1-left-walk-0": {
       "frame": {
-        "x": 398,
-        "y": 662,
+        "x": 2,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -792,8 +912,8 @@
     },
     "sorcerer-1-left-walk-1": {
       "frame": {
-        "x": 530,
-        "y": 662,
+        "x": 134,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -802,8 +922,8 @@
     },
     "sorcerer-1-left-walk-2": {
       "frame": {
-        "x": 662,
-        "y": 662,
+        "x": 266,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -812,8 +932,8 @@
     },
     "sorcerer-1-left-walk-3": {
       "frame": {
-        "x": 794,
-        "y": 662,
+        "x": 398,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -822,8 +942,8 @@
     },
     "sorcerer-1-left-hurt-0": {
       "frame": {
-        "x": 926,
-        "y": 662,
+        "x": 530,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -832,8 +952,8 @@
     },
     "sorcerer-1-left-hurt-1": {
       "frame": {
-        "x": 1058,
-        "y": 662,
+        "x": 662,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -842,8 +962,8 @@
     },
     "sorcerer-1-left-hurt-2": {
       "frame": {
-        "x": 1190,
-        "y": 662,
+        "x": 794,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -852,8 +972,8 @@
     },
     "sorcerer-1-left-death-0": {
       "frame": {
-        "x": 1322,
-        "y": 662,
+        "x": 926,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -862,8 +982,8 @@
     },
     "sorcerer-1-left-death-1": {
       "frame": {
-        "x": 1454,
-        "y": 662,
+        "x": 1058,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -872,8 +992,8 @@
     },
     "sorcerer-1-left-death-2": {
       "frame": {
-        "x": 1586,
-        "y": 662,
+        "x": 1190,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -882,8 +1002,8 @@
     },
     "sorcerer-1-left-death-3": {
       "frame": {
-        "x": 1718,
-        "y": 662,
+        "x": 1322,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -892,8 +1012,8 @@
     },
     "sorcerer-1-left-death-4": {
       "frame": {
-        "x": 1850,
-        "y": 662,
+        "x": 1454,
+        "y": 794,
         "w": 128,
         "h": 128
       },
@@ -902,7 +1022,7 @@
     },
     "sorcerer-1-left-death-5": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 794,
         "w": 128,
         "h": 128
@@ -912,7 +1032,7 @@
     },
     "sorcerer-1-left-windup-0": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 794,
         "w": 128,
         "h": 128
@@ -922,7 +1042,7 @@
     },
     "sorcerer-1-left-windup-1": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 794,
         "w": 128,
         "h": 128
@@ -932,8 +1052,8 @@
     },
     "sorcerer-1-left-attack-0": {
       "frame": {
-        "x": 398,
-        "y": 794,
+        "x": 2,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -942,8 +1062,8 @@
     },
     "sorcerer-1-left-attack-1": {
       "frame": {
-        "x": 530,
-        "y": 794,
+        "x": 134,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -952,8 +1072,8 @@
     },
     "sorcerer-1-left-attack-2": {
       "frame": {
-        "x": 662,
-        "y": 794,
+        "x": 266,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -962,8 +1082,8 @@
     },
     "sorcerer-1-left-attack-3": {
       "frame": {
-        "x": 794,
-        "y": 794,
+        "x": 398,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -972,8 +1092,8 @@
     },
     "sorcerer-1-left-recover-0": {
       "frame": {
-        "x": 926,
-        "y": 794,
+        "x": 530,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -982,8 +1102,8 @@
     },
     "sorcerer-1-left-recover-1": {
       "frame": {
-        "x": 1058,
-        "y": 794,
+        "x": 662,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -992,8 +1112,8 @@
     },
     "sorcerer-1-left-recover-2": {
       "frame": {
-        "x": 1190,
-        "y": 794,
+        "x": 794,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1002,8 +1122,8 @@
     },
     "eclipse-1-right-idle-0": {
       "frame": {
-        "x": 1322,
-        "y": 794,
+        "x": 926,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1012,8 +1132,8 @@
     },
     "eclipse-1-right-idle-1": {
       "frame": {
-        "x": 1454,
-        "y": 794,
+        "x": 1058,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1022,8 +1142,8 @@
     },
     "eclipse-1-right-idle-2": {
       "frame": {
-        "x": 1586,
-        "y": 794,
+        "x": 1190,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1032,8 +1152,8 @@
     },
     "eclipse-1-right-walk-0": {
       "frame": {
-        "x": 1718,
-        "y": 794,
+        "x": 1322,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1042,8 +1162,8 @@
     },
     "eclipse-1-right-walk-1": {
       "frame": {
-        "x": 1850,
-        "y": 794,
+        "x": 1454,
+        "y": 926,
         "w": 128,
         "h": 128
       },
@@ -1052,7 +1172,7 @@
     },
     "eclipse-1-right-walk-2": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 926,
         "w": 128,
         "h": 128
@@ -1062,7 +1182,7 @@
     },
     "eclipse-1-right-walk-3": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 926,
         "w": 128,
         "h": 128
@@ -1072,7 +1192,7 @@
     },
     "eclipse-1-right-hurt-0": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 926,
         "w": 128,
         "h": 128
@@ -1082,8 +1202,8 @@
     },
     "eclipse-1-right-hurt-1": {
       "frame": {
-        "x": 398,
-        "y": 926,
+        "x": 2,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1092,8 +1212,8 @@
     },
     "eclipse-1-right-hurt-2": {
       "frame": {
-        "x": 530,
-        "y": 926,
+        "x": 134,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1102,8 +1222,8 @@
     },
     "eclipse-1-right-death-0": {
       "frame": {
-        "x": 662,
-        "y": 926,
+        "x": 266,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1112,8 +1232,8 @@
     },
     "eclipse-1-right-death-1": {
       "frame": {
-        "x": 794,
-        "y": 926,
+        "x": 398,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1122,8 +1242,8 @@
     },
     "eclipse-1-right-death-2": {
       "frame": {
-        "x": 926,
-        "y": 926,
+        "x": 530,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1132,8 +1252,8 @@
     },
     "eclipse-1-right-death-3": {
       "frame": {
-        "x": 1058,
-        "y": 926,
+        "x": 662,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1142,8 +1262,8 @@
     },
     "eclipse-1-right-death-4": {
       "frame": {
-        "x": 1190,
-        "y": 926,
+        "x": 794,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1152,8 +1272,8 @@
     },
     "eclipse-1-right-death-5": {
       "frame": {
-        "x": 1322,
-        "y": 926,
+        "x": 926,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1162,8 +1282,8 @@
     },
     "eclipse-1-right-windup-0": {
       "frame": {
-        "x": 1454,
-        "y": 926,
+        "x": 1058,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1172,8 +1292,8 @@
     },
     "eclipse-1-right-windup-1": {
       "frame": {
-        "x": 1586,
-        "y": 926,
+        "x": 1190,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1182,8 +1302,8 @@
     },
     "eclipse-1-right-attack-0": {
       "frame": {
-        "x": 1718,
-        "y": 926,
+        "x": 1322,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1192,8 +1312,8 @@
     },
     "eclipse-1-right-attack-1": {
       "frame": {
-        "x": 1850,
-        "y": 926,
+        "x": 1454,
+        "y": 1058,
         "w": 128,
         "h": 128
       },
@@ -1202,7 +1322,7 @@
     },
     "eclipse-1-right-attack-2": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 1058,
         "w": 128,
         "h": 128
@@ -1212,7 +1332,7 @@
     },
     "eclipse-1-right-attack-3": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 1058,
         "w": 128,
         "h": 128
@@ -1222,7 +1342,7 @@
     },
     "eclipse-1-right-recover-0": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 1058,
         "w": 128,
         "h": 128
@@ -1232,8 +1352,8 @@
     },
     "eclipse-1-right-recover-1": {
       "frame": {
-        "x": 398,
-        "y": 1058,
+        "x": 2,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1242,8 +1362,8 @@
     },
     "eclipse-1-right-recover-2": {
       "frame": {
-        "x": 530,
-        "y": 1058,
+        "x": 134,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1252,8 +1372,8 @@
     },
     "eclipse-1-left-idle-0": {
       "frame": {
-        "x": 662,
-        "y": 1058,
+        "x": 266,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1262,8 +1382,8 @@
     },
     "eclipse-1-left-idle-1": {
       "frame": {
-        "x": 794,
-        "y": 1058,
+        "x": 398,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1272,8 +1392,8 @@
     },
     "eclipse-1-left-idle-2": {
       "frame": {
-        "x": 926,
-        "y": 1058,
+        "x": 530,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1282,8 +1402,8 @@
     },
     "eclipse-1-left-walk-0": {
       "frame": {
-        "x": 1058,
-        "y": 1058,
+        "x": 662,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1292,8 +1412,8 @@
     },
     "eclipse-1-left-walk-1": {
       "frame": {
-        "x": 1190,
-        "y": 1058,
+        "x": 794,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1302,8 +1422,8 @@
     },
     "eclipse-1-left-walk-2": {
       "frame": {
-        "x": 1322,
-        "y": 1058,
+        "x": 926,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1312,8 +1432,8 @@
     },
     "eclipse-1-left-walk-3": {
       "frame": {
-        "x": 1454,
-        "y": 1058,
+        "x": 1058,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1322,8 +1442,8 @@
     },
     "eclipse-1-left-hurt-0": {
       "frame": {
-        "x": 1586,
-        "y": 1058,
+        "x": 1190,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1332,8 +1452,8 @@
     },
     "eclipse-1-left-hurt-1": {
       "frame": {
-        "x": 1718,
-        "y": 1058,
+        "x": 1322,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1342,8 +1462,8 @@
     },
     "eclipse-1-left-hurt-2": {
       "frame": {
-        "x": 1850,
-        "y": 1058,
+        "x": 1454,
+        "y": 1190,
         "w": 128,
         "h": 128
       },
@@ -1352,7 +1472,7 @@
     },
     "eclipse-1-left-death-0": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 1190,
         "w": 128,
         "h": 128
@@ -1362,7 +1482,7 @@
     },
     "eclipse-1-left-death-1": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 1190,
         "w": 128,
         "h": 128
@@ -1372,7 +1492,7 @@
     },
     "eclipse-1-left-death-2": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 1190,
         "w": 128,
         "h": 128
@@ -1382,8 +1502,8 @@
     },
     "eclipse-1-left-death-3": {
       "frame": {
-        "x": 398,
-        "y": 1190,
+        "x": 2,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1392,8 +1512,8 @@
     },
     "eclipse-1-left-death-4": {
       "frame": {
-        "x": 530,
-        "y": 1190,
+        "x": 134,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1402,8 +1522,8 @@
     },
     "eclipse-1-left-death-5": {
       "frame": {
-        "x": 662,
-        "y": 1190,
+        "x": 266,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1412,8 +1532,8 @@
     },
     "eclipse-1-left-windup-0": {
       "frame": {
-        "x": 794,
-        "y": 1190,
+        "x": 398,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1422,8 +1542,8 @@
     },
     "eclipse-1-left-windup-1": {
       "frame": {
-        "x": 926,
-        "y": 1190,
+        "x": 530,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1432,8 +1552,8 @@
     },
     "eclipse-1-left-attack-0": {
       "frame": {
-        "x": 1058,
-        "y": 1190,
+        "x": 662,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1442,8 +1562,8 @@
     },
     "eclipse-1-left-attack-1": {
       "frame": {
-        "x": 1190,
-        "y": 1190,
+        "x": 794,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1452,8 +1572,8 @@
     },
     "eclipse-1-left-attack-2": {
       "frame": {
-        "x": 1322,
-        "y": 1190,
+        "x": 926,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1462,8 +1582,8 @@
     },
     "eclipse-1-left-attack-3": {
       "frame": {
-        "x": 1454,
-        "y": 1190,
+        "x": 1058,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1472,8 +1592,8 @@
     },
     "eclipse-1-left-recover-0": {
       "frame": {
-        "x": 1586,
-        "y": 1190,
+        "x": 1190,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1482,8 +1602,8 @@
     },
     "eclipse-1-left-recover-1": {
       "frame": {
-        "x": 1718,
-        "y": 1190,
+        "x": 1322,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1492,8 +1612,8 @@
     },
     "eclipse-1-left-recover-2": {
       "frame": {
-        "x": 1850,
-        "y": 1190,
+        "x": 1454,
+        "y": 1322,
         "w": 128,
         "h": 128
       },
@@ -1502,7 +1622,7 @@
     },
     "eclipse-2-right-idle-0": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 1322,
         "w": 128,
         "h": 128
@@ -1512,7 +1632,7 @@
     },
     "eclipse-2-right-idle-1": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 1322,
         "w": 128,
         "h": 128
@@ -1522,7 +1642,7 @@
     },
     "eclipse-2-right-idle-2": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 1322,
         "w": 128,
         "h": 128
@@ -1532,8 +1652,8 @@
     },
     "eclipse-2-right-walk-0": {
       "frame": {
-        "x": 398,
-        "y": 1322,
+        "x": 2,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1542,8 +1662,8 @@
     },
     "eclipse-2-right-walk-1": {
       "frame": {
-        "x": 530,
-        "y": 1322,
+        "x": 134,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1552,8 +1672,8 @@
     },
     "eclipse-2-right-walk-2": {
       "frame": {
-        "x": 662,
-        "y": 1322,
+        "x": 266,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1562,8 +1682,8 @@
     },
     "eclipse-2-right-walk-3": {
       "frame": {
-        "x": 794,
-        "y": 1322,
+        "x": 398,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1572,8 +1692,8 @@
     },
     "eclipse-2-right-hurt-0": {
       "frame": {
-        "x": 926,
-        "y": 1322,
+        "x": 530,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1582,8 +1702,8 @@
     },
     "eclipse-2-right-hurt-1": {
       "frame": {
-        "x": 1058,
-        "y": 1322,
+        "x": 662,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1592,8 +1712,8 @@
     },
     "eclipse-2-right-hurt-2": {
       "frame": {
-        "x": 1190,
-        "y": 1322,
+        "x": 794,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1602,8 +1722,8 @@
     },
     "eclipse-2-right-death-0": {
       "frame": {
-        "x": 1322,
-        "y": 1322,
+        "x": 926,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1612,8 +1732,8 @@
     },
     "eclipse-2-right-death-1": {
       "frame": {
-        "x": 1454,
-        "y": 1322,
+        "x": 1058,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1622,8 +1742,8 @@
     },
     "eclipse-2-right-death-2": {
       "frame": {
-        "x": 1586,
-        "y": 1322,
+        "x": 1190,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1632,8 +1752,8 @@
     },
     "eclipse-2-right-death-3": {
       "frame": {
-        "x": 1718,
-        "y": 1322,
+        "x": 1322,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1642,8 +1762,8 @@
     },
     "eclipse-2-right-death-4": {
       "frame": {
-        "x": 1850,
-        "y": 1322,
+        "x": 1454,
+        "y": 1454,
         "w": 128,
         "h": 128
       },
@@ -1652,7 +1772,7 @@
     },
     "eclipse-2-right-death-5": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 1454,
         "w": 128,
         "h": 128
@@ -1662,7 +1782,7 @@
     },
     "eclipse-2-right-windup-0": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 1454,
         "w": 128,
         "h": 128
@@ -1672,7 +1792,7 @@
     },
     "eclipse-2-right-windup-1": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 1454,
         "w": 128,
         "h": 128
@@ -1682,8 +1802,8 @@
     },
     "eclipse-2-right-attack-0": {
       "frame": {
-        "x": 398,
-        "y": 1454,
+        "x": 2,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1692,8 +1812,8 @@
     },
     "eclipse-2-right-attack-1": {
       "frame": {
-        "x": 530,
-        "y": 1454,
+        "x": 134,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1702,8 +1822,8 @@
     },
     "eclipse-2-right-attack-2": {
       "frame": {
-        "x": 662,
-        "y": 1454,
+        "x": 266,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1712,8 +1832,8 @@
     },
     "eclipse-2-right-attack-3": {
       "frame": {
-        "x": 794,
-        "y": 1454,
+        "x": 398,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1722,8 +1842,8 @@
     },
     "eclipse-2-right-recover-0": {
       "frame": {
-        "x": 926,
-        "y": 1454,
+        "x": 530,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1732,8 +1852,8 @@
     },
     "eclipse-2-right-recover-1": {
       "frame": {
-        "x": 1058,
-        "y": 1454,
+        "x": 662,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1742,8 +1862,8 @@
     },
     "eclipse-2-right-recover-2": {
       "frame": {
-        "x": 1190,
-        "y": 1454,
+        "x": 794,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1752,8 +1872,8 @@
     },
     "eclipse-2-left-idle-0": {
       "frame": {
-        "x": 1322,
-        "y": 1454,
+        "x": 926,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1762,8 +1882,8 @@
     },
     "eclipse-2-left-idle-1": {
       "frame": {
-        "x": 1454,
-        "y": 1454,
+        "x": 1058,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1772,8 +1892,8 @@
     },
     "eclipse-2-left-idle-2": {
       "frame": {
-        "x": 1586,
-        "y": 1454,
+        "x": 1190,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1782,8 +1902,8 @@
     },
     "eclipse-2-left-walk-0": {
       "frame": {
-        "x": 1718,
-        "y": 1454,
+        "x": 1322,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1792,8 +1912,8 @@
     },
     "eclipse-2-left-walk-1": {
       "frame": {
-        "x": 1850,
-        "y": 1454,
+        "x": 1454,
+        "y": 1586,
         "w": 128,
         "h": 128
       },
@@ -1802,7 +1922,7 @@
     },
     "eclipse-2-left-walk-2": {
       "frame": {
-        "x": 2,
+        "x": 1586,
         "y": 1586,
         "w": 128,
         "h": 128
@@ -1812,7 +1932,7 @@
     },
     "eclipse-2-left-walk-3": {
       "frame": {
-        "x": 134,
+        "x": 1718,
         "y": 1586,
         "w": 128,
         "h": 128
@@ -1822,7 +1942,7 @@
     },
     "eclipse-2-left-hurt-0": {
       "frame": {
-        "x": 266,
+        "x": 1850,
         "y": 1586,
         "w": 128,
         "h": 128
@@ -1832,126 +1952,6 @@
     },
     "eclipse-2-left-hurt-1": {
       "frame": {
-        "x": 398,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-hurt-2": {
-      "frame": {
-        "x": 530,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-0": {
-      "frame": {
-        "x": 662,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-1": {
-      "frame": {
-        "x": 794,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-2": {
-      "frame": {
-        "x": 926,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-3": {
-      "frame": {
-        "x": 1058,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-4": {
-      "frame": {
-        "x": 1190,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-death-5": {
-      "frame": {
-        "x": 1322,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-windup-0": {
-      "frame": {
-        "x": 1454,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-windup-1": {
-      "frame": {
-        "x": 1586,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-attack-0": {
-      "frame": {
-        "x": 1718,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-attack-1": {
-      "frame": {
-        "x": 1850,
-        "y": 1586,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "eclipse-2-left-attack-2": {
-      "frame": {
         "x": 2,
         "y": 1718,
         "w": 128,
@@ -1960,7 +1960,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "eclipse-2-left-attack-3": {
+    "eclipse-2-left-hurt-2": {
       "frame": {
         "x": 134,
         "y": 1718,
@@ -1970,7 +1970,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "eclipse-2-left-recover-0": {
+    "eclipse-2-left-death-0": {
       "frame": {
         "x": 266,
         "y": 1718,
@@ -1980,7 +1980,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "eclipse-2-left-recover-1": {
+    "eclipse-2-left-death-1": {
       "frame": {
         "x": 398,
         "y": 1718,
@@ -1990,7 +1990,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "eclipse-2-left-recover-2": {
+    "eclipse-2-left-death-2": {
       "frame": {
         "x": 530,
         "y": 1718,
@@ -2000,10 +2000,130 @@
       "rotated": false,
       "trimmed": false
     },
-    "hostile-0": {
+    "eclipse-2-left-death-3": {
+      "frame": {
+        "x": 662,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-death-4": {
+      "frame": {
+        "x": 794,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-death-5": {
+      "frame": {
+        "x": 926,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-windup-0": {
+      "frame": {
+        "x": 1058,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-windup-1": {
+      "frame": {
+        "x": 1190,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-attack-0": {
+      "frame": {
+        "x": 1322,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-attack-1": {
+      "frame": {
+        "x": 1454,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-attack-2": {
+      "frame": {
+        "x": 1586,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-attack-3": {
+      "frame": {
+        "x": 1718,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-recover-0": {
+      "frame": {
+        "x": 1850,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-recover-1": {
       "frame": {
         "x": 2,
         "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "eclipse-2-left-recover-2": {
+      "frame": {
+        "x": 134,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "hostile-0": {
+      "frame": {
+        "x": 2,
+        "y": 1982,
         "w": 32,
         "h": 32
       },
@@ -2013,7 +2133,7 @@
     "hostile-1": {
       "frame": {
         "x": 38,
-        "y": 1850,
+        "y": 1982,
         "w": 32,
         "h": 32
       },
@@ -2023,7 +2143,7 @@
     "hostile-2": {
       "frame": {
         "x": 74,
-        "y": 1850,
+        "y": 1982,
         "w": 32,
         "h": 32
       },
@@ -2033,7 +2153,7 @@
     "hostile-3": {
       "frame": {
         "x": 110,
-        "y": 1850,
+        "y": 1982,
         "w": 32,
         "h": 32
       },
@@ -2045,7 +2165,7 @@
     "image": "bosses.png",
     "size": {
       "w": 2048,
-      "h": 1884
+      "h": 2016
     },
     "clips": {
       "idle": {
@@ -2077,6 +2197,11 @@
         "frames": 4,
         "fps": 12,
         "loop": true
+      },
+      "slam": {
+        "frames": 6,
+        "fps": 10,
+        "loop": false
       },
       "recover": {
         "frames": 3,
