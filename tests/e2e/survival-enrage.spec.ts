@@ -5,7 +5,8 @@ for(const width of [1280,390])test(`Enrage onset, finite Arcane HP layer, pause 
   test.setTimeout(45000);mkdirSync(directory,{recursive:true});const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=600;w.elapsed=599.95;for(const a of Object.values(w.abilities))a.level=0;});
-  await expect(page.locator('.enrage-start')).toBeVisible();expect(await page.evaluate(()=>window.__PIXEL__!.world.status)).toBe('playing');
+  await expect(page.locator('.timeline-event[data-at="600"] [data-kind="enrage"]')).toBeVisible();expect(await page.evaluate(()=>window.__PIXEL__!.world.status)).toBe('playing');
+  await expect(page.locator('.enrage-indicator')).toHaveText('ENRAGE · 0');
   const at=await page.evaluate(()=>window.__PIXEL__!.world.elapsed);await page.waitForTimeout(250);expect(await page.evaluate(()=>window.__PIXEL__!.world.elapsed)).toBeGreaterThan(at);
   const onset=await page.evaluate(()=>({clock:document.querySelector('.run-clock')!.getBoundingClientRect().bottom,boss:document.querySelector('.boss-bars')!.getBoundingClientRect().top}));expect(onset.clock).toBeLessThanOrEqual(onset.boss);
   await page.screenshot({path:`${directory}/enrage-start-${width}.png`});await page.locator('canvas').screenshot({path:`${directory}/enrage-start-canvas-${width}.png`});

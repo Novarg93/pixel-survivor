@@ -12,10 +12,11 @@
 Level Up показывает три карточки с оригинальными пиксельными эмблемами,
 цветами способностей, рангом и основным бонусом. `projectiles` относится
 к Fireball; общие бонусы имеют самостоятельные иконки и нейтральные темы.
-В HUD появилась шкала **запланированных** событий из Encounter Director:
-оставшееся время, количество боссов/Guardian и начало Enrage. Занятые слоты
-могут отменить появление. Шкала использует игровые snapshots и замирает
-на паузе/Level Up. [UI polish: проверки и скриншоты](docs/MVP_UI_QA.md).
+В HUD — компактная лента **запланированных** событий Encounter Director.
+Центр означает сейчас, слева последние 60 секунд, справа ближайшие 60 секунд.
+Пиксельные иконки обозначают боссов, Guardian, Enrage и Phase II; значки 2/3 —
+количество. Лента использует игровые snapshots, замирает на паузе/Level Up и
+не гарантирует появление при занятых слотах. [Карусель: проверки и PNG](docs/COMPACT_TIMELINE_QA.md).
 
 До 10:00 действует ранний Encounter Director: Charger на 3:00, Sorcerer на
 5:00, два босса на 7:00 и три на 9:00. С 10:00 Survival Enrage усиливает
@@ -104,7 +105,7 @@ npm run test:e2e
 
 На macOS/Linux: `PLAYWRIGHT_BROWSERS_PATH="$PWD/.browsers" npx playwright install chromium`, затем `npm run test:e2e`. Браузерные системные библиотеки должны уже присутствовать; установка с правами администратора не выполняется.
 
-E2E runner поднимает локальный Vite и завершает свой процесс. Если Pixel Survivor уже запущен на этом порту, runner использует его и оставляет работающим; другой сервис не завершает. Последний полный набор из 258 сценариев прошёл за 27,2 минуты с `--workers=2`; по умолчанию один worker, и время больше. Быстрый набор: `npm run test:e2e -- game.spec.ts`, MVP UI: `npm run test:e2e -- mvp-ui.spec.ts`. Отчёт по умолчанию — `playwright-report/index.html`; локальные результаты и PNG — [MVP UI QA](docs/MVP_UI_QA.md), `screenshots/mvp-ui/` и `docs/mvp-ui/`.
+E2E runner поднимает локальный Vite и завершает свой процесс. Если Pixel Survivor уже запущен на этом порту, runner использует его и оставляет работающим; другой сервис не завершает. Последний полный набор из 262 сценариев прошёл за 27,5 минуты с `--workers=2`; по умолчанию один worker, и время больше. Быстрый набор: `npm run test:e2e -- game.spec.ts`, компактная лента: `npm run test:e2e -- compact-timeline.spec.ts`. Отчёт по умолчанию — `playwright-report/index.html`; полный HTML, результаты и PNG — [Compact Timeline QA](docs/COMPACT_TIMELINE_QA.md), `screenshots/compact-timeline/` и `docs/compact-timeline/`.
 
 Отдельная проверка собранного релиза: `npm run build`, затем `npm run test:e2e:production` (порт 4173). Она проверяет реальную атаку, UI/resize, отсутствие тестового доступа и внешних/пропавших ресурсов. Именованная команда избегает перехвата npm флага `--production` в Windows PowerShell.
 

@@ -31,11 +31,41 @@ it('matches actual director requests and nextAt, even when all slots are occupie
   }
   expect(w.encounterDirector.history.some(e => e.skippedBosses > 0 || e.skippedGuardians > 0)).toBe(true);
 });
-it('computes progress from elapsed only, has no history, freezes with World and resets on a new run', () => {
+it('projects a fixed window from elapsed only, freezes with World and resets on a new run', () => {
   const w = new World(1, { spawnRate: 0 }); w.elapsed = 390;
-  const before = encounterTimeline(w.elapsed); expect(before.remaining).toBe(30); expect(before.progress).toBe(.5);
+  const before = encounterTimeline(w.elapsed); expect(before).toMatchObject({ start: 330, end: 450 });
+  expect(before.events.map(e => [e.at, e.position])).toEqual([[360, 25], [420, 75]]);
   w.pause(); w.step(.05); expect(encounterTimeline(w.elapsed)).toEqual(before);
   w.status = 'upgrade'; w.step(.05); expect(encounterTimeline(w.elapsed)).toEqual(before);
-  expect(encounterTimeline(new World().elapsed)).toMatchObject({ progress: 0, remaining: 180 });
+  w.status = 'over'; w.step(.05); expect(encounterTimeline(w.elapsed)).toEqual(before);
+  expect(encounterTimeline(new World().elapsed)).toEqual({ elapsed: 0, start: -60, end: 60, events: [] });
   for (let t = 0; t < 100000; t += 31) { const events = upcomingEncounters(t, 999); expect(events).toHaveLength(5); for (const e of events) expect(e.bosses).toEqual(encounterPlan(e.at / 60).bosses); }
+});
+
+it('moves the same scheduled event from future through the exact center into the past', () => {
+  const position = (t: number) => encounterTimeline(t).events.find(e => e.at === 180)?.position;
+  expect(position(120)).toBe(100); expect(position(150)).toBe(75);
+  expect(position(180)).toBe(50); expect(position(210)).toBe(25); expect(position(240)).toBe(0);
+  expect(position(119.999)).toBeUndefined(); expect(position(240.001)).toBeUndefined();
+});
+it('keeps upcoming strict by default and supports an inclusive carousel boundary', () => {
+  expect(upcomingEncounters(600, 1)[0].at).toBe(630);
+  expect(upcomingEncounters(600, 1, true)[0].at).toBe(600);
+  expect(upcomingEncounters(600.001, 1, true)[0].at).toBe(630);
+});
+it('keeps Enrage and Phase II plus simultaneous boss/Guardian counts from the actual plan', () => {
+  expect(encounterTimeline(600).events.find(e => e.at === 600)).toMatchObject({ position: 50, enrage: true, bosses: [], guardians: 0 });
+  expect(encounterTimeline(900).events.map(e => e.at)).toEqual([840, 870, 900, 930, 960]);
+  expect(encounterTimeline(900).events.find(e => e.at === 900)).toMatchObject({ position: 50, endgame: true, guardians: 3 });
+  expect(encounterTimeline(900).events.find(e => e.at === 900)!.bosses).toHaveLength(3);
+});
+it('does not accumulate history or include out-of-window events across long runs and time jumps', () => {
+  for (const t of [0, 119, 180, 240, 540, 599, 600, 660, 900, 36000, 60, NaN, Infinity, -100]) {
+    const result = encounterTimeline(t); expect(result.events.length).toBeLessThanOrEqual(5);
+    for (const e of result.events) {
+      expect(e.at).toBeGreaterThanOrEqual(result.start); expect(e.at).toBeLessThanOrEqual(result.end);
+      expect(e.position).toBeGreaterThanOrEqual(0); expect(e.position).toBeLessThanOrEqual(100);
+      expect(e.bosses).toEqual(encounterPlan(e.at / 60).bosses);
+    }
+  }
 });

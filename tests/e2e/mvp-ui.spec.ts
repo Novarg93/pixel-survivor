@@ -78,9 +78,11 @@ for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await start(page);
     for (const seconds of [390, 590, 600, 899, 900, 930]) {
       await page.evaluate(t => { const w = window.__PIXEL__!.world; w.elapsed = t; w.status = 'paused'; }, seconds);
-      const expected = encounterTimeline(seconds); await expect(timeline(page)).toHaveAttribute('data-next', String(expected.events[0].at));
-      await expect(page.locator('.timeline-event:visible')).toHaveCount(width === 390 ? 1 : 4);
-      await expect(page.getByRole('progressbar', { name: 'Прогресс до следующего запланированного события' })).toHaveAttribute('aria-valuenow', String(Math.round(expected.progress * 100)));
+      const expected = encounterTimeline(seconds);
+      await expect(timeline(page)).toHaveAttribute('data-elapsed', String(seconds));
+      await expect(page.locator('.timeline-event:visible')).toHaveCount(expected.events.length);
+      expect(await page.locator('.timeline-event').evaluateAll(ns => ns.map(n => Number(n.getAttribute('data-at'))))).toEqual(expected.events.map(e => e.at));
+      await expect(timeline(page).getByRole('img', { name: 'Сейчас', exact: true })).toBeVisible();
       const frozen = await timeline(page).getAttribute('data-elapsed'); await page.waitForTimeout(150); await expect(timeline(page)).toHaveAttribute('data-elapsed', frozen!);
       await page.getByRole('button', { name: 'Продолжить →' }).click(); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toHaveCount(0);
       if ([590, 600, 900].includes(seconds)) await shot(page, `timeline-${seconds}-${width}`);
@@ -89,14 +91,14 @@ for (const width of [1280, 390]) {
     }
     // Actual occupied-slot event, not a fabricated UI notification.
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.status = 'playing'; w.elapsed = 660; w.player.invulnerableUntil = 1e6; for (let i = 0; i < 3; i++) { w.spawn('charger'); w.spawn('guardian', { x: 240 + i * 160, y: 0 }); } w.guardianSystem.finalizePlacement(w, w.guardians.map(g => g.id)); w.encounterDirector.nextAt = 660; w.encounterDirector.update(w); w.pause(); });
-    await expect(page.locator('.timeline-skipped')).toContainText('СЛОТЫ ЗАНЯТЫ');
+    await expect(timeline(page)).not.toContainText('СЛОТЫ ЗАНЯТЫ');
     const event = await page.evaluate(() => window.__PIXEL__!.world.encounterDirector.history.at(-1)!);
     expect(event.bosses).toHaveLength(0); expect(event.guardians).toHaveLength(0); expect(event.skippedBosses + event.skippedGuardians).toBeGreaterThan(0);
-    await expect(timeline(page)).toHaveAttribute('title', /Запланировано.*свободных слотов/);
+    await expect(timeline(page).getByRole('listitem').first()).toHaveAttribute('aria-label', /Запланировано.*свободных слотах/);
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.status = 'playing'; w.gainXp(w.snapshot().xpNext); }); await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toBeVisible();
     const paused = await timeline(page).getAttribute('data-elapsed'); await page.waitForTimeout(200); await expect(timeline(page)).toHaveAttribute('data-elapsed', paused!);
     const listeners = await page.evaluate(() => window.__PIXEL__!.listeners());
-    for (let i = 0; i < 10; i++) { await page.evaluate(() => window.__PIXEL__!.restartScene()); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible(); await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(timeline(page)).toHaveAttribute('data-next', '180'); await expect(page.locator('.timeline-event')).toHaveCount(4); expect(await page.evaluate(() => window.__PIXEL__!.listeners())).toEqual(listeners); }
+    for (let i = 0; i < 10; i++) { await page.evaluate(() => window.__PIXEL__!.restartScene()); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible(); await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(timeline(page)).toHaveAttribute('data-elapsed', /^(0|1)(\.|$)/); await expect(page.locator('.timeline-event')).toHaveCount(0); expect(await page.evaluate(() => window.__PIXEL__!.listeners())).toEqual(listeners); }
   });
 }
 
