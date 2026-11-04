@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
@@ -6,7 +7,7 @@ test.use({ hasTouch: true });
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) for (const zoom of [2, 3]) test(`world HP/Absorb, compact XP, level10 choice, zoom and clean restarts ${hero}/${width}/zoom${zoom}`, async ({ page }) => {
   test.setTimeout(40000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
-  await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: `${zoom}×`, exact: true }).click(); await page.getByRole('button', { name: 'Готово' }).click();
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; w.experience.level = 9; w.gainXp(w.snapshot().xpNext); });

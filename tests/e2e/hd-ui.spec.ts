@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/hd-rework/pack-08', phase = process.env.PIXEL_HD_PHASE ?? 'after';
@@ -6,7 +7,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
   page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); }); page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); });
   for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
-    await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click();
+    await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click();
     await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: '3×', exact: true }).click();
     const prefix = `${directory}/${phase}-${hero}-${dark ? 'forest' : 'grove'}-${width}`;
     await page.screenshot({ path: `${prefix}-settings.png` }); await page.getByRole('button', { name: 'Готово' }).click(); await page.screenshot({ path: `${prefix}-menu.png` });
@@ -29,7 +30,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
       const rects = [...document.querySelectorAll('.hud,.boss-bars,.radar,.run-extras,.skill-dock')].map(n => ({ name: n.className, ...Object.fromEntries(['left', 'right', 'top', 'bottom'].map(k => [k, Reflect.get(n.getBoundingClientRect(), k)])) }));
       const overlaps = [...document.querySelectorAll('.hud,.boss-bars,.radar,.run-extras,.skill-dock')].filter(n => { const r = n.getBoundingClientRect(); return r.left < hero.right && r.right > hero.left && r.top < hero.bottom && r.bottom > hero.top; }).map(n => n.className);
       return { overflow: document.documentElement.scrollWidth > innerWidth, overlaps, rects };
-    }); expect(safe.overflow).toBe(false); expect(safe.overlaps).toEqual([]); records.push({ width, initial, safe });
+    }); expect(safe.overflow).toBe(false); expect(safe.overlaps, JSON.stringify(safe.rects)).toEqual([]); records.push({ width, initial, safe });
     await page.getByRole('button', { name: 'Пауза', exact: true }).click(); const pause = page.getByRole('dialog', { name: 'Пауза', exact: true }); await expect(pause).toBeVisible(); await page.screenshot({ path: `${prefix}-pause.png` }); await pause.getByRole('button', { name: 'Продолжить' }).click();
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.gainXp(w.snapshot().xpNext - w.experience.xp); });
     const modal = page.getByRole('dialog', { name: 'Новый уровень' }); await expect(modal).toBeVisible(); await expect(modal.getByRole('button')).toHaveCount(3);

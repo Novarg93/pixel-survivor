@@ -1,9 +1,10 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/gameplay';
 for (const seconds of [570,720]) for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`new encounter and rank V sustain 150 live mobs: ${hero}/${width}/${seconds<600?'early':'Enrage'}`, async ({ page }) => {
   test.setTimeout(60000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
   const guardianShots=await page.evaluateHandle(seconds => {
     const w = window.__PIXEL__!.world; w.elapsed = seconds; w.experience.level = 30; w.player.invulnerableUntil = 1e6; w.encounterDirector.nextAt = 1e6;
     const shots:string[]=[],shoot=w.shoot.bind(w);w.shoot=p=>{const n=w.projectiles.length;shoot(p);if(p.homing&&w.projectiles.length>n)shots.push(p.homing.variant);};

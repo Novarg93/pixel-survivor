@@ -1,10 +1,11 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/gameplay/ranks';
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`${hero} all five real casts rank I/V remain readable at ${width}`, async ({ page }) => {
   test.setTimeout(60000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.addStyleTag({ content: '.overlay{display:none!important}' });
   const ids = await page.evaluate(() => window.__PIXEL__!.world.abilityDefinitions.map(a => a.id)), records = [];
   for (const id of ids) {

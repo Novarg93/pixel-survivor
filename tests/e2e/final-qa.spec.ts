@@ -1,7 +1,8 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 for(const hero of ['Mage','Warrior'])test('all five '+hero+' skills unlock through three-choice UI and activate in the actual scene', async ({ page }) => {
   test.setTimeout(60000); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.goto('/?test=1'); await page.getByRole('button',{name:new RegExp('^'+hero)}).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
   const modal = page.getByRole('dialog', { name: 'Новый уровень' });
   for (let i = 0; i < 60; i++) {
     if (await page.evaluate(() => window.__PIXEL__!.world.snapshot().abilities.every(a => a.level > 0))) break;

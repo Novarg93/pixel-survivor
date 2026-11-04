@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 import { MOBILITY_UPGRADES } from '../../src/game/config/mobilityUpgrades';
@@ -6,7 +7,7 @@ const directory = 'screenshots/mobility-specializations-hud';
 for (const width of [1280, 390]) for (const variant of MOBILITY_UPGRADES) test(`${variant.name} three-card selection, ranks, real Space arrival and Canvas at ${width}`, async ({ page }) => {
   mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
-  await page.getByRole('button', { name: new RegExp('^' + (variant.character === 'mage' ? 'Mage' : 'Warrior')) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await selectTestCharacter(page, (variant.character === 'mage' ? 'Mage' : 'Warrior')); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(async () => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6;
     for (const a of Object.values(w.abilities)) a.level = 0;

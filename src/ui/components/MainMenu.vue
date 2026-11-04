@@ -5,6 +5,12 @@ import { useInputDevice } from '../inputDevice';
 const inputDevice = useInputDevice();
 import type { CharacterId } from '../../game/config/characters';
 import type { BiomeId } from '../../game/config/biomes';
+import { isPublicCharacter } from '../../game/bootstrap/publicCharacters';
+const unavailable = ref(false);
+function chooseCharacter(value: CharacterId) {
+  if (!isPublicCharacter(value)) { unavailable.value = true; return; }
+  unavailable.value = false; emit('character', value);
+}
 defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
 const emit = defineEmits<{ play: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
@@ -14,7 +20,8 @@ const emit = defineEmits<{ play: []; help: []; settings: []; records: []; charac
    <div class="eyebrow"><span class="spark">✦</span> ОДНА ИСКРА ПРОТИВ ЦЕЛОЙ ЧАЩИ</div>
    <h1 class="wordmark">PIXEL<br><span>SURVIVOR</span><i>✦</i></h1>
    <p class="menu-description">Чаща пробуждается.<br>Двигайся. Собирай магию. Продержись ещё минуту.</p>
-   <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="character === 'mage'" v-pad="() => emit('character','mage')" @click="emit('character','mage')">Mage <small>100 HP · магия</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => emit('character','warrior')" @click="emit('character','warrior')">Warrior <small>150 HP · ближний бой</small></button></div>
+   <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="true" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button class="coming-soon" aria-disabled="true" :aria-pressed="false" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>В разработке</small></button></div>
+   <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
    <div class="run-selection" aria-label="Локация"><button :aria-pressed="biome === 'grove'" v-pad="() => emit('biome','grove')" @click="emit('biome','grove')">Роща осколков</button><button :aria-pressed="biome === 'dark-forest'" v-pad="() => emit('biome','dark-forest')" @click="emit('biome','dark-forest')">Dark Forest</button></div>
    <button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
@@ -26,3 +33,9 @@ const emit = defineEmits<{ play: []; help: []; settings: []; records: []; charac
   <footer class="menu-footer"><span>ОДИНОЧНАЯ ИГРА · БЕЗ СЕРВЕРА</span><span>{{ inputDevice === 'gamepad' ? 'D-PAD · A ВЫБРАТЬ · ЛЕВЫЙ СТИК В ЗАБЕГЕ' : 'WASD / СТРЕЛКИ · АВТОМАТИЧЕСКАЯ МАГИЯ' }}</span></footer>
  </div>
 </template>
+<style scoped>
+.run-selection .coming-soon{filter:grayscale(1) brightness(.65);background:#181d25;border-color:#65717a;color:#c2c8ce}
+.run-selection .coming-soon:hover{filter:grayscale(1) brightness(.8)}
+.run-selection .coming-soon:focus{outline:2px solid #fff1c9;outline-offset:3px}
+.character-notice{font-size:12px;line-height:1.4;color:#d9c5a4;margin:-5px 0 12px}
+</style>

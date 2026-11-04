@@ -19,6 +19,7 @@ import type { BiomeId } from './game/config/biomes';
 import type { CharacterId } from './game/config/characters';
 import { navigateGamepad, vPad } from './ui/gamepadNavigation';
 import { INPUT_DEVICE } from './ui/inputDevice';
+import { isPublicCharacter, PUBLIC_CHARACTER } from './game/bootstrap/publicCharacters';
 const inputDevice = ref<InputDevice>('keyboard');
 provide(INPUT_DEVICE, inputDevice);
 const shell = ref<HTMLElement>(), controllerNotice = ref('');
@@ -32,7 +33,7 @@ const offNotice = gamepadNotices.on(notice => {
 const character = ref<CharacterId>('mage');
 const biome = ref<BiomeId>('grove');
 function chooseBiome(value: BiomeId) { biome.value=value; commands.emit({type:'preview',biome:value}); }
-function chooseCharacter(value: CharacterId) { character.value=value; commands.emit({type:'preview',character:value}); }
+function chooseCharacter(value: CharacterId) { character.value = isPublicCharacter(value) ? value : PUBLIC_CHARACTER; commands.emit({type:'preview',character:character.value}); }
 const mount = ref<HTMLElement>(), state = ref<Snapshot>();
 const debug = import.meta.env.DEV && new URLSearchParams(location.search).get('debug') === '1';
 const debugState = ref<Metrics>();
@@ -57,7 +58,7 @@ const off = snapshots.on(value => {
   state.value = value;
   if (value.status === 'over' && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; profile.value = withRun(profile.value, runRecord(value)); storageFailed.value = !saveProfile(profile.value); }
 });
-function start() { screen.value = 'game'; commands.emit({ type: 'restart', character: character.value, biome: biome.value }); }
+function start() { character.value = PUBLIC_CHARACTER; screen.value = 'game'; commands.emit({ type: 'restart', character: PUBLIC_CHARACTER, biome: biome.value }); }
 function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value); commands.emit({ type: 'settings', value }); }
 function openSettings() { commands.emit({ type: 'pause' }); screen.value = 'settings'; }
 function key(event: KeyboardEvent) {
@@ -82,6 +83,22 @@ onUnmounted(() => { off(); offMetrics(); offDevice(); offNotice(); offPadUi(); c
   </template>
   <SettingsPanel v-if="screen === 'settings'" :settings="settings" @change="updateSettings" @close="screen = 'game'" />
   <DialogFrame v-if="screen === 'records'" label="Локальные рекорды" @close="screen = 'game'"><small>ТВОЯ ИСТОРИЯ В ЭТОЙ ЧАЩЕ</small><h1>Личные рекорды</h1><LocalRecords :records="profile.records" /><p class="muted">Забегов: {{ profile.statistics.runs }} · Убийств: {{ profile.statistics.kills }}. Данные хранятся локально в этом браузере.</p><button v-pad="() => screen = 'game'" @click="screen = 'game'">Назад</button></DialogFrame>
-  <DialogFrame v-if="screen === 'help'" label="Как играть" @close="screen = 'game'"><small>ПЕРЕД ПЕРВОЙ ИСКРОЙ</small><h1>Как играть</h1><ol class="how-to"><li><b>Двигайся.</b> {{ inputDevice === 'gamepad' ? 'Левый стик.' : 'WASD, стрелки или сенсорный джойстик.' }} Магия целится сама.</li><li><b>Собирай кристаллы.</b> Подходи к поверженным врагам, чтобы получить опыт.</li><li><b>Расти.</b> На уровне выбери одно из трёх улучшений. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — переключить, A — выбрать.' : 'Клавиши 1/2/3 или Enter — выбрать.' }} Мир ждёт.</li><li><b>Уклоняйся.</b> {{ inputDevice === 'gamepad' ? 'X (Square)' : 'Space или кнопка Dash / Blink' }} — короткий манёвр с защитой. Розовые метки опасны. Боссы приходят примерно на 3-й, 6-й и 9-й минутах.</li><li><b>Вызывай хранителя.</b> Первый удар будит его. Уходи от луча и метеоров, атакуй в паузах. Победа оставляет артефакт до конца забега.</li></ol><p class="muted">{{ inputDevice === 'gamepad' ? 'Start' : 'Esc / P' }} — пауза. После 20 минут лес не заканчивается. Рекорды хранятся только в этом браузере.</p><button v-pad="() => screen = 'game'" @click="screen = 'game'">Понятно</button></DialogFrame>
+  <DialogFrame v-if="screen === 'help'" label="Как играть" @close="screen = 'game'">
+   <small>ПЕРЕД ПЕРВОЙ ИСКРОЙ</small><h1>Как играть</h1>
+   <p class="help-intro">Публичный MVP: доступен Mage. Warrior находится в разработке.</p>
+   <ol class="how-to mvp-help">
+    <li><b>Двигайся.</b> WASD, стрелки, сенсорный джойстик или левый стик. Магия целится и атакует сама.</li>
+    <li><b>Собирай XP.</b> Уровень ставит мир на паузу. Выбор: 1/2/3 или Tab/Enter; геймпад — D-Pad ←/→ / LB/RB и A (Cross). Space не выбирает карту.</li>
+    <li><b>Используй Blink.</b> Space или X (Square). Esc / P / Start (Options) — пауза. B (Circle) не назначена.</li>
+    <li><b>Guardian активен сразу.</b> Первый — на 4:00, неподвижен, отмечен звездой. Уклоняйся от медленных и быстрых самонаводящихся сфер. За полную волну — один артефакт; уход из зоны прерывает награду.</li>
+    <li><b>Следи за планом.</b> Enrage — с 10:00, события каждые 30с. С 15:00 — Phase II и запрос трёх боссов за окно. Лимит: 3 босса и 3 Guardian; занятые слоты пропускаются.</li>
+   </ol>
+   <p class="help-footer">Забег бесконечный. Рекорды хранятся только в этом браузере.</p>
+   <button v-pad="() => screen = 'game'" @click="screen = 'game'">Понятно</button>
+  </DialogFrame>
  </main>
 </template>
+
+<style scoped>
+.mvp-help{font-size:12px;line-height:1.5;margin:12px 0;padding-left:20px}.mvp-help li{margin:9px 0}.help-intro,.help-footer{font-size:12px!important;line-height:1.5!important;margin:10px 0}
+</style>

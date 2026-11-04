@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { MOBILITY_UPGRADES } from '../../src/game/config/mobilityUpgrades';
@@ -7,7 +8,7 @@ test('all six specializations sustain repeated real cooldown casts at150+3+3 on 
   const results = [], errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   for (const variant of MOBILITY_UPGRADES) for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
-    await page.getByRole('button', { name: new RegExp('^' + (variant.character === 'mage' ? 'Mage' : 'Warrior')) }).click();
+    await selectTestCharacter(page, (variant.character === 'mage' ? 'Mage' : 'Warrior'));
     await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(variant => {
       const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; w.elapsed = 720;

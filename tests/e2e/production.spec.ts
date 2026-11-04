@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockGamepads, connectPad, pressPad, stick, padFocus } from '../helpers/gamepad';
-for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built '+hero+' '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
+for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built public '+hero+' attempt '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
   const errors: string[] = [], external: string[] = [], artRequests: string[] = [];
   // Observe the real output without shipping a production test hook.
   await page.addInitScript(() => {
@@ -21,10 +21,10 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   page.on('request', request => { const url = new URL(request.url()); if (url.protocol !== 'data:' && url.origin !== new URL(baseURL!).origin) external.push(request.url()); if (url.pathname.startsWith('/assets/') && /\.(?:json|png|webp|jpe?g|gif|svg)$/.test(url.pathname)) artRequests.push(url.pathname); });
   await page.goto('/?test=1&visual=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
   await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
-  await page.getByRole('button',{name:new RegExp('^'+hero)}).click(); await page.getByRole('button',{name:biome==='dark'?'Dark Forest':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
+  await page.getByRole('button',{name:new RegExp('^'+hero)}).click({force:true}); if(hero==='Warrior'){await expect(page.getByText('Warrior находится в разработке',{exact:true})).toBeVisible(); await expect(page.getByRole('button',{name:/^Mage/})).toHaveAttribute('aria-pressed','true');} await page.getByRole('button',{name:biome==='dark'?'Dark Forest':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
   expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
-  await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(page.locator('.hero-name')).toContainText('MAGE');
   await expect.poll(() => page.evaluate(() => {
     const rms = Object.getOwnPropertyDescriptor(window, '__AUDIO_OUTPUT_RMS__')!.value as () => number; return rms();
   })).toBeGreaterThan(.0001);
@@ -47,11 +47,11 @@ for (const width of [1280, 390]) test(`built controller-only shell, movement, mo
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await mockGamepads(page); await page.goto('/');
   await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible(); await connectPad(page);
-  await padFocus(page, page.getByRole('button', { name: /^Warrior/ })); await pressPad(page, 'confirm');
+  await padFocus(page, page.getByRole('button', { name: /^Warrior/ })); await pressPad(page, 'confirm'); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible(); await expect(page.getByRole('button', { name: /^Warrior/ })).toHaveAttribute('aria-disabled', 'true');
   await padFocus(page, page.getByRole('button', { name: 'Начать забег' })); await pressPad(page, 'confirm');
-  await expect(page.locator('.hero-name')).toContainText('WARRIOR');
+  await expect(page.locator('.hero-name')).toContainText('MAGE');
   await stick(page, .6, -.4); await page.waitForTimeout(150); await pressPad(page, 'mobility'); await stick(page, 0, 0);
-  await expect(page.locator('.mobility-slot')).toHaveAttribute('aria-label', /Dash · X ·/);
+  await expect(page.locator('.mobility-slot')).toHaveAttribute('aria-label', /Blink · X ·/);
   await pressPad(page, 'pause'); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
   await padFocus(page, page.getByRole('button', { name: 'Настройки', exact: true })); await pressPad(page, 'confirm');
   await pressPad(page, 'right'); await padFocus(page, page.getByRole('button', { name: 'Готово' })); await pressPad(page, 'confirm');

@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory='screenshots/encounter-director-2';
@@ -32,7 +33,7 @@ for(const width of [1280,390])test(`three independent Guardians, minute notice, 
 });
 for(const hero of ['Mage','Warrior'])for(const width of [1280,390])test(`150 regulars plus3 bosses plus3 Guardians, all skills, ${hero}/${width}`,async({page})=>{
   test.setTimeout(40000);mkdirSync(directory,{recursive:true});const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
-  await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:new RegExp('^'+hero)}).click();await page.getByRole('button',{name:'Начать забег'}).click();
+  await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await selectTestCharacter(page, hero);await page.getByRole('button',{name:'Начать забег'}).click();
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.elapsed=720;w.experience.level=39;w.player.invulnerableUntil=1e6;w.encounterDirector.nextAt=720;w.encounterDirector.update(w);w.encounterDirector.nextAt=1e6;
     for(const kind of ['charger','sorcerer','eclipse'] as const)if(!w.bosses.some(e=>e.kind===kind))w.spawn(kind);
     // Constant-load fixture: safe-position search may legally skip a random slot.

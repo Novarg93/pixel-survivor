@@ -1,7 +1,8 @@
-import { ENCOUNTER_DIRECTOR as C, encounterPlan, bossAggressionAt } from '../config/encounterDirector';
+import { ENCOUNTER_DIRECTOR as C, bossAggressionAt } from '../config/encounterDirector';
 import type { BossKind } from '../config/enemyDefinitions';
 import type { World } from './World';
 import { SURVIVAL_ENRAGE } from '../config/survivalEnrage';
+import { encounterWindowAt } from './encounterSchedule';
 export interface EncounterEvent {
   minute: number; at: number; label: string; requestedBosses: number; requestedGuardians: number;
   bosses: { id: number; kind: BossKind }[]; guardians: number[]; skippedBosses: number; skippedGuardians: number;
@@ -19,11 +20,10 @@ export class EncounterDirector {
     if (this.notice && w.elapsed >= this.notice.until) this.notice = null;
     const now=w.elapsed+1e-7;
     if (now < this.nextAt) return;
-    const interval=now>=SURVIVAL_ENRAGE.from?SURVIVAL_ENRAGE.interval:C.interval;
-    const at=Math.max(C.firstMinute*C.interval,Math.floor(now/interval)*interval), minute=at/60, plan=encounterPlan(minute);
+    const window = encounterWindowAt(w.elapsed), at = window.at, minute = at / 60, plan = window.plan;
     const missedMinutes = Math.max(0, Math.floor((at-this.nextAt)/60));
     // Consume the current window once; no backlog or catch-up burst.
-    this.nextAt = at + interval;
+    this.nextAt = window.nextAt;
     const aggression = bossAggressionAt(minute);
     if(now<=SURVIVAL_ENRAGE.from+1e-7)for (const e of w.bosses) if(!e.boss!.enrageIndex)e.boss!.aggression = { ...aggression };
     const bosses: EncounterEvent['bosses'] = [];

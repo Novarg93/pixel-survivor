@@ -50,3 +50,8 @@ progress::-webkit-progress-bar{background:#0a1422;border-color:#67778666}progres
   .skill-dock{right:12px;bottom:19px;gap:4px}.skill-slot{width:35px;height:43px}.skill-slot>span{font-size:22px}.skill-slot>b{font-size:9px}.skill-slot>small{font-size:8px}.run-extras.run-extras{top:auto;right:12px;bottom:142px;width:225px;gap:7px}.run-extras .artifact-bonus{padding:4px 5px}.run-extras .artifact-bonus img{width:24px;height:24px}.run-extras .artifact-bonus i{font-size:10px}.run-extras .artifact-bonus small{font-size:8px}.run-extras .artifact-dock>small{font-size:8px}.run-extras .buff-slot img{width:25px;height:25px}.run-extras .buff-slot span{font-size:9px}.run-extras .buff-slot b{font-size:13px}.run-extras .run-notice{font:10px/1.45 system-ui,sans-serif;padding:7px 9px}
 }
 @media(prefers-reduced-motion:reduce){progress::-webkit-progress-value{transition:none}}
+
+/* The timeline occupies the strip between the main HUD and encounter panels. */
+.boss-bars{top:160px}.radar.radar{top:160px}
+@media(min-width:601px){.boss-bar{padding:3px 8px;margin-bottom:4px}}
+@media(max-width:600px){.boss-bars{top:114px}.radar.radar{top:114px}}

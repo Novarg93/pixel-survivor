@@ -1,10 +1,11 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { upgradeIdentity } from '../../src/ui/upgradeIdentity';
 
 const directory = 'screenshots/upgrade-identity-charge';
 async function quiet(page: Page, hero = 'Mage') {
-  await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; });
 }

@@ -1,10 +1,11 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cpus, totalmem } from 'node:os';
 
 export const RUNNER_EVIDENCE = 'screenshots/runner-pack-01';
 async function start(page: Page, dark = true) {
-  await page.goto('/?test=1'); await page.getByRole('button', { name: /^Warrior/ }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, 'Warrior');
   await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
 }
 test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scene restarts', async ({ page, browser }) => {

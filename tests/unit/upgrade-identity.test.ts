@@ -12,7 +12,8 @@ it('uses the exact Mage palette and the five distinct Warrior material colors fo
   }
 });
 it('keeps general stats/supplies neutral and all mobility paths in a separate family', () => {
-  for (const id of ['damage', 'cooldown', 'health', 'speed', 'projectiles', 'area', 'pickup', 'restore', 'nova', 'magnet']) expect(upgradeIdentity(id).family).toBe('general');
+  for (const id of ['damage', 'cooldown', 'health', 'speed', 'area', 'pickup', 'restore', 'nova', 'magnet']) expect(upgradeIdentity(id).family).toBe('general');
+  expect(upgradeIdentity('projectiles')).toEqual({ family: 'fireball', color: SKILL_CARD_COLORS.fireball });
   for (const u of MOBILITY_UPGRADES) expect(upgradeIdentity(`mobility-${u.id}`)).toEqual({ family: 'mobility', color: u.color });
 });
 it('presentation leaves seeded three-choice offers, eligibility and all gameplay state unchanged', () => {

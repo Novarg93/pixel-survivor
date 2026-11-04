@@ -7,6 +7,8 @@ import { UpgradeConfirmation } from '../UpgradeConfirmation';
 import { isSpace, upgradeShortcut } from '../upgradeInput';
 import { gamepadUi } from '../../game/events/bridge';
 import { useInputDevice } from '../inputDevice';
+import UpgradeEmblem from './UpgradeEmblem.vue';
+import { upgradeCard } from '../upgradeCards';
 const inputDevice = useInputDevice();
 const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number }>();
 const specializationChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.category && c.tier === 1));
@@ -63,9 +65,14 @@ function key(event: KeyboardEvent) {
           :data-dimmed="selected !== null && selected !== choice.id"
           :style="{ '--skill-color': upgradeIdentity(choice.id).color }" :aria-pressed="selected === choice.id"
           :disabled="selected !== null && selected !== choice.id" @click="choose(choice.id)">
-          <span class="choice-key">0{{ i + 1 }}</span><b>{{ choice.name }}</b>
-          <small>{{ choice.category ? choice.category + ' · ' : '' }}РАНГ {{ choice.tier }}</small>
-          <span>{{ choice.description }}</span><strong>{{ selected === choice.id ? 'Выбрано ✓' : 'Выбрать →' }}</strong>
+          <small class="choice-rank">{{ choice.category ? choice.category + ' · ' : '' }}РАНГ {{ choice.tier }}</small>
+          <span class="choice-key">0{{ i + 1 }}</span>
+          <span class="emblem-socket"><UpgradeEmblem :icon="upgradeCard(choice).icon" /></span>
+          <span class="choice-family">{{ upgradeCard(choice).label }}</span><b class="choice-title">{{ choice.name }}</b>
+          <span class="choice-bonus">{{ upgradeCard(choice).value }}<span class="bonus-caption">{{ upgradeCard(choice).caption }}</span></span>
+          <span class="choice-description" :title="choice.description">{{ upgradeCard(choice).summary }}</span>
+          <span class="choice-original">{{ choice.description }}</span>
+          <strong class="choice-confirm">{{ selected === choice.id ? 'Выбрано ✓' : inputDevice === 'gamepad' ? 'A · Выбрать' : 'Выбрать →' }}</strong>
         </button>
       </div>
     </section>
@@ -73,6 +80,37 @@ function key(event: KeyboardEvent) {
 </template>
 
 <style scoped>
+.upgrade-panel{width:min(990px,100%);padding:25px 28px 28px}
+.upgrade-panel>h1{margin:12px 0}.upgrade-panel>p{margin:10px 0}
+.choices{gap:18px;margin-top:20px;align-items:stretch}
+.choice.choice{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;min-height:405px;gap:0;padding:18px 18px 15px;background-color:#121d2e;background-image:radial-gradient(ellipse at 50% 18%,color-mix(in srgb,var(--skill-color) 13%,transparent),transparent 62%);border:3px solid var(--skill-color);isolation:isolate}
+.choice:before{content:'';position:absolute;inset:5px;border:1px solid color-mix(in srgb,var(--skill-color) 30%,transparent);pointer-events:none;z-index:-1}
+.choice .choice-rank{display:block;width:100%;font:10px/1.3 monospace;letter-spacing:.07em;color:#DBE4E8;padding-bottom:13px;border-bottom:1px solid #6c819344}
+.choice .choice-key{display:block;position:absolute;left:13px;top:15px;font:10px monospace;color:#c8d1d8}
+.emblem-socket{display:grid;place-items:center;width:100px;height:100px;padding:17px;margin:15px 0 10px;background:linear-gradient(135deg,#26364a,#0c1421);border:1px solid color-mix(in srgb,var(--skill-color) 65%,#152333);box-shadow:inset 0 0 0 4px #121d2e,0 0 20px color-mix(in srgb,var(--skill-color) 14%,transparent);clip-path:polygon(8% 0,92% 0,92% 8%,100% 8%,100% 92%,92% 92%,92% 100%,8% 100%,8% 92%,0 92%,0 8%,8% 8%)}
+.choice .choice-family{color:var(--skill-color);font:9px/1.4 monospace;text-transform:uppercase;letter-spacing:.08em}
+.choice .choice-title{display:block;font:600 21px/1.2 Georgia,serif;min-height:50px;margin:7px 0 8px;color:#f8ebd5;overflow-wrap:anywhere}
+.choice .choice-bonus{display:block;font:700 31px/1.1 Georgia,serif;color:var(--skill-color);margin:0 0 14px;letter-spacing:-.03em}
+.choice .bonus-caption{display:block;font:11px/1.4 system-ui,sans-serif;letter-spacing:0;color:#d0dbe1;margin-top:5px}
+.choice .choice-description{display:block;font:12px/1.5 system-ui,sans-serif;color:#bdcbd5;font-weight:400;margin:auto 0 13px}
+.choice .choice-original{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.choice .choice-confirm{display:block;width:100%;font:600 11px/1.4 system-ui,sans-serif;color:#edd2a0;border-top:1px solid #82929b44;padding-top:11px;margin:0}
+.choice:hover,.choice:focus{background-color:#1d2d40}
+.choice:focus{outline:2px solid #fff1c9;outline-offset:4px}
+.choice[aria-pressed="true"]{outline:3px solid #fff1c9;outline-offset:4px;background-color:#273548}
+@media(max-width:600px){
+ .upgrade-panel{padding:19px 17px 21px}.upgrade-panel>h1{font-size:25px;margin:9px 0}.upgrade-panel>p{font-size:11px;line-height:1.5;margin:8px 0}.choices{grid-template-columns:1fr;gap:12px;margin-top:16px}
+ .choice.choice{display:grid;grid-template-columns:62px minmax(0,1fr) auto;column-gap:12px;row-gap:5px;align-items:center;text-align:left;min-height:146px;padding:12px 13px}
+ .choice .choice-rank{grid-column:2/4;grid-row:1;border:0;padding:0;font-size:9px;text-align:right;min-width:0}
+ .choice .choice-key{position:static;grid-column:1;grid-row:1;font-size:9px}
+ .choice .emblem-socket{grid-column:1;grid-row:2/5;width:62px;height:74px;padding:10px;margin:0}
+ .choice .choice-family{grid-column:2/4;grid-row:2;font-size:8px}
+ .choice .choice-title{grid-column:2/4;grid-row:3;min-height:0;font-size:17px;line-height:1.15;margin:0}
+ .choice .choice-bonus{grid-column:2/4;grid-row:4;display:flex;align-items:center;gap:8px;font-size:24px;margin:0}
+ .choice .bonus-caption{display:block;max-width:115px;font-size:9px;line-height:1.25;margin:0}
+ .choice .choice-description{grid-column:1/4;grid-row:5;font-size:10px;line-height:1.4;margin:3px 0 0}
+ .choice .choice-confirm{grid-column:1/4;grid-row:6;font-size:9px;padding:5px 0 0;margin:1px 0 0}
+}
 .choice { transition: filter 160ms ease-out, box-shadow 120ms, background 120ms; }
 .choice[aria-pressed="true"] { outline-color: var(--skill-color); animation: selection-pulse 200ms ease-out; }
 .choice[data-dimmed="true"] { opacity: 1; filter: brightness(.35); }

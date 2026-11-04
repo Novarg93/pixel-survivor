@@ -1,8 +1,9 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/runner-pack-01';
 async function start(page: Page) {
-  await page.goto('/?test=1'); await page.getByRole('button', { name: /^Warrior/ }).click(); await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, 'Warrior'); await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; for (const a of Object.values(w.abilities)) a.level = 0; });
 }
 function errorsIn(page: Page) { const errors: string[] = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); }); return errors; }

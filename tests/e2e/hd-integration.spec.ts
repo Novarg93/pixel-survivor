@@ -1,8 +1,9 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/hd-pixel-art';
 async function start(page: Page, hero = 'Warrior') {
-  await page.goto('/?test=1&visual=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await page.goto('/?test=1&visual=1'); await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.waitForFunction(() => window.__PIXEL__?.world.status === 'playing');
 }

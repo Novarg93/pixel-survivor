@@ -1,10 +1,11 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import type { Metrics } from '../../src/game/events/bridge';
 
 async function start(page: Page, hero = 'Mage', biome = 'Роща осколков') {
   await page.goto('/?test=1');
-  await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: biome, exact: true }).click();
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.invulnerableUntil = 100000; for (const a of Object.values(w.abilities)) a.level = 0; });

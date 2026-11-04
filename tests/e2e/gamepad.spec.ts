@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { test, expect, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { mockGamepads, connectPad, button, pressPad, stick, padFocus } from '../helpers/gamepad';
@@ -34,10 +35,10 @@ async function screenshot(page: Page, name: string) {
 }
 
 for (const [hero, biome, width, height] of [['Mage', 'Роща осколков', 1280, 720], ['Warrior', 'Dark Forest', 390, 844]] as const) {
-  test(`${hero}: controller-only menus, settings, run, mobility, upgrade, pause, death and restart ${width}`, async ({ page }) => {
+  test(`${hero} (DEV character fixture): controller-only menus, settings, run, mobility, upgrade, pause, death and restart ${width}`, async ({ page }) => {
     test.setTimeout(60000);
     const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
-    await page.setViewportSize({ width, height }); await setup(page);
+    await page.setViewportSize({ width, height }); await setup(page); await selectTestCharacter(page, hero);
     await padFocus(page, page.getByRole('button', { name: new RegExp('^' + hero) })); await pressPad(page, 'confirm');
     await padFocus(page, page.getByRole('button', { name: biome, exact: true })); await pressPad(page, 'confirm');
     await padFocus(page, page.getByRole('button', { name: 'Настройки', exact: true })); await pressPad(page, 'confirm');
@@ -183,7 +184,7 @@ test('ten run and scene restarts keep listener/resource counts stable and discar
 
 test('mouse/keyboard focus and gamepad hints remain accessible when sources change', async ({ page }) => {
   await setup(page); await pressPad(page, 'down'); await expect(page.locator('.menu-footer')).toContainText('D-PAD');
-  await page.getByRole('button', { name: /^Warrior/ }).focus(); await pressPad(page, 'confirm'); await expect(page.getByRole('button', { name: /^Warrior/ })).toHaveAttribute('aria-pressed', 'true');
+  await page.getByRole('button', { name: /^Warrior/ }).focus(); await pressPad(page, 'confirm'); await expect(page.getByRole('button', { name: /^Warrior/ })).toHaveAttribute('aria-pressed', 'false'); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible();
   await page.keyboard.press('Tab'); const focused = await page.locator(':focus').textContent(); await pressPad(page, 'confirm'); expect(await page.locator(':focus').textContent()).toBe(focused);
   await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await expect(page.getByRole('slider', { name: 'Громкость', exact: true })).toBeFocused();
   await padFocus(page, page.getByRole('button', { name: 'Готово' })); await pressPad(page, 'confirm'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeFocused();

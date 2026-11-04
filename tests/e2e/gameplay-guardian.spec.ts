@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/gameplay';
@@ -35,7 +36,7 @@ for (const width of [1280, 390]) test(`Guardian complete encounter, danger reada
 });
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`${hero} dodges real Guardian homing attacks with ordinary keyboard movement at ${width}`, async ({ page }) => {
   test.setTimeout(25000); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
   const hp = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; const e = w.spawn('guardian', { x: 50, y: 0 })!; w.damageEnemy(e, 1); return w.player.hp; });
   await page.keyboard.down('s');await page.waitForTimeout(2500);await page.keyboard.up('s');
   await page.keyboard.down('a');await page.waitForTimeout(2500);await page.keyboard.up('a');

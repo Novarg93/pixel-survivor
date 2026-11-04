@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { HD_BOSS_KINDS } from '../../src/game/art/bossPack';
@@ -93,7 +94,7 @@ test('three boss deaths preserve immediate chests and bounded resources through 
 test('both classes fight three bosses beside150 mobs on both maps', async ({ page }) => {
   test.setTimeout(45000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) {
-    await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); await selectTestCharacter(page, hero); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     const initial = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 5; for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 30, y: (Math.floor(i / 15) - 4.5) * 30 }, i % 13 === 0); w.spawn('charger', { x: -65, y: 60 }); w.spawn('sorcerer', { x: 65, y: -35 }); w.spawn('eclipse', { x: -65, y: -65 }); return { regular: w.regularCount, bosses: w.bosses.length }; }); expect(initial).toEqual({ regular: 150, bosses: 3 });
     await page.waitForTimeout(1450); await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' });
     const layers = await page.evaluate(() => window.__PIXEL__!.art().layers); expect(layers.find(l => l.name === 'hostile-tells')!.depth).toBeGreaterThan(layers.find(l => l.name === 'friendly-feedback')!.depth);

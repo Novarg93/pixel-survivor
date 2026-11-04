@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cpus, totalmem } from 'node:os';
@@ -6,7 +7,7 @@ const pack = process.env.PIXEL_HD_PACK ?? '02', phase = process.env.PIXEL_HD_PHA
 const directory = `screenshots/hd-rework/pack-${pack}`;
 async function start(page: Page, hero: string, dark: boolean) {
   await page.goto('/?test=1');
-  await page.getByRole('button', { name: new RegExp('^' + hero) }).click();
+  await selectTestCharacter(page, hero);
   await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click();
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(async () => {

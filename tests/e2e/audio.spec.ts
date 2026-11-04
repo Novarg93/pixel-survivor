@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/audio-mvp';
@@ -48,7 +49,7 @@ for (const width of [1280, 390]) test(`audio gesture, persisted buses, blur and1
 
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`audio cues and150+3+3 voice budget ${hero}/${width}`, async ({ page }) => {
   test.setTimeout(50000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().unlocked)).toBe(true);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 39; for (let i = 0; i < 40; i++) w.dropXp(w.player, 1); });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().played['pickup.xp'] ?? 0)).toBeGreaterThan(0);

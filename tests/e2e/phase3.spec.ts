@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { cpus, totalmem } from 'node:os';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -5,7 +6,7 @@ import type { Metrics } from '../../src/game/events/bridge';
 
 function captureErrors(page: Page) { const errors: string[] = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); }); page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); }); return errors; }
 async function start(page: Page, hero = 'Mage', dark = false) {
-  await page.goto('/?test=1'); await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; w.encounterDirector.nextAt = 1e6; });
   await expect(page.getByRole('complementary', { name: 'Локальный радар' })).toBeVisible();
 }

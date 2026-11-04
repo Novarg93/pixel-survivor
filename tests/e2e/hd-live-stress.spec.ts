@@ -1,3 +1,4 @@
+import { selectTestCharacter } from '../helpers/character';
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cpus, totalmem } from 'node:os';
@@ -8,7 +9,7 @@ test('final live scale3 stress: eight class/map/viewport cases with attacks on, 
   for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
     await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: '3×', exact: true }).click(); await page.getByRole('button', { name: 'Готово' }).click();
-    await page.getByRole('button', { name: new RegExp('^' + hero) }).click(); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(async () => {
       const url = '/src/game/utils/SeededRandom.ts', { SeededRandom } = await import(/* @vite-ignore */ url), rng = new SeededRandom(12345);
       const w = window.__PIXEL__!.world; w.rng.next = () => rng.next(); w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
