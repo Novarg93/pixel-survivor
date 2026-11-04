@@ -139,7 +139,7 @@ export class GameScene extends Phaser.Scene {
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
     const baseZoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640));
-    const zoom = baseZoom * (viewport.touch ? .83 : 1); this.cameras.main.setZoom(zoom);
+    const zoom = baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
     this.art.prepare(this.world);

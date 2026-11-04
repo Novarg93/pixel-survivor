@@ -19,7 +19,6 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
     const v = abilityVisual(w.abilities.fireball.level), count = 4 + Math.round(v.power * 4);
     const length = Math.hypot(p.vx, p.vy) || 1, dx = p.vx / length, dy = p.vy / length;
     for (let i = 1; i <= count; i++) { const size = Math.max(1, 3 + v.power * 2 - i * .5); g.fillStyle(i < 3 ? 0xffd38b : 0xc76a44, intensity * (1 - i / (count + 1))).fillRect(Math.round(p.x - dx * i * 3) - size / 2, Math.round(p.y - dy * i * 3) - size / 2, size, size); }
-    if (v.rank >= 3) for (const side of [-1, 1]) g.lineStyle(v.lineWidth, v.capstone ? 0xfff0bd : 0xffae68, intensity * .7).lineBetween(p.x - dx * 4 - dy * 4 * side, p.y - dy * 4 + dx * 4 * side, p.x - dx * (10 + v.power * 8) - dy * 7 * side, p.y - dy * (10 + v.power * 8) + dx * 7 * side);
     if (v.capstone) ring(g, p.x, p.y, 5, 0xffe4a3, intensity * .65, w.elapsed * 5, 6);
   }
   for (const e of w.effects) {
