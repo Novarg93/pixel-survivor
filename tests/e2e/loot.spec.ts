@@ -104,7 +104,7 @@ test('boss chests replace timed map chests and open on approach and reset all lo
 
 test('loot pools stay bounded at 150 mobs with both buffs and repeated allocations', async ({ page, browser }) => {
   test.setTimeout(30000); const errors = errorsIn(page); await start(page, 'Warrior', 'Dark Forest');
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.encounterDirector.nextAt = 100000; w.experience.level = 30; w.encounterDirector.nextAt = 10000; for (let i = 0; i < 150; i++) w.spawn('tank'); });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.encounterDirector.nextAt = 100000; w.experience.level = 30; w.encounterDirector.nextAt = 10000; for (let i = 0; i < 150; i++) w.spawn('tank'); });
   const samples: Metrics[] = [];
   await page.keyboard.down('d');
   for (let i = 0; i < 20; i++) {

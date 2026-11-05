@@ -16,7 +16,7 @@ test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scen
   for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport); await start(page);
     await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.elapsed = 1200.08; w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.encounterDirector.nextAt = 100000; w.encounterDirector.nextAt = 100000;
+      const w = window.__PIXEL__!.world; w.elapsed = 1170.08; w.player.invulnerableUntil = 100000; w.options.spawnRate = 0; w.encounterDirector.nextAt = 100000; w.encounterDirector.nextAt = 100000;
       for (const a of Object.values(w.abilities)) a.level = 0;
       for (let i = 0; i < 150; i++) w.spawn('runner', { x: (i % 15 - 7) * 27, y: (Math.floor(i / 15) - 4.5) * 27 });
     });
@@ -34,7 +34,7 @@ test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scen
   for (let i = 0; i < 10; i++) {
     await page.evaluate(() => window.__PIXEL__!.restartScene()); await page.waitForFunction(() => window.__PIXEL__?.world.status === 'menu');
     await page.getByRole('button', { name: 'Начать забег' }).click();
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200.08; for (let i = 0; i < 150; i++) w.spawn('runner', { x: i % 15 * 27 - 189, y: Math.floor(i / 15) * 27 - 120 }); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170.08; for (let i = 0; i < 150; i++) w.spawn('runner', { x: i % 15 * 27 - 189, y: Math.floor(i / 15) * 27 - 120 }); });
     await page.waitForTimeout(100);
     const art = await page.evaluate(() => { const { actors, ...art } = window.__PIXEL__!.art(); return { ...art, actors: actors.length }; }); restarts.push(art);
     expect(art.actors).toBe(151); expect(art.clock).toEqual([0, 0, 0]); expect(art.tweens).toBe(0);
@@ -43,7 +43,7 @@ test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scen
   for (const art of restarts.slice(1)) { expect(art.textures).toEqual(restarts[0].textures); expect(art.textureBytes).toBe(restarts[0].textureBytes); expect(art.objects).toBe(restarts[0].objects); expect(art.blurListeners).toBe(restarts[0].blurListeners); }
   for (const dark of [true, false]) for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport); await start(page, dark);
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200.08; w.spawn('grunt', { x: -34, y: -18 }); w.spawn('runner', { x: 36, y: -12 }); w.spawn('runner', { x: 34, y: 45 }, true)!.modifier = 'shielded'; for (let i = 0; i < 6; i++) w.spawn(i % 2 ? 'runner' : 'grunt', { x: -72 + i * 28, y: -58 - i % 2 * 8 }); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170.08; w.spawn('grunt', { x: -34, y: -18 }); w.spawn('runner', { x: 36, y: -12 }); w.spawn('runner', { x: 34, y: 45 }, true)!.modifier = 'shielded'; for (let i = 0; i < 6; i++) w.spawn(i % 2 ? 'runner' : 'grunt', { x: -72 + i * 28, y: -58 - i % 2 * 8 }); });
     await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(150);
     await page.screenshot({ path: `${RUNNER_EVIDENCE}/${prefix}-mixed-${dark ? 'forest' : 'grove'}-${viewport.width}x${viewport.height}.png` });
   }

@@ -67,7 +67,7 @@ test('Runner live idle/walk/hurt/death preserve immediate rewards, pause, size a
 test('Runner150-death burst stays at24 corpses through ten scene restarts', async ({ page }) => {
   test.setTimeout(45000); const errors = errorsIn(page), records = []; await start(page);
   for (let iteration = 0; iteration < 10; iteration++) {
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200; w.loot.rng.next = () => 0.9999; for (let i = 0; i < 150; i++) w.spawn('runner', { x: 100 + i % 15 * 5, y: Math.floor(i / 15) * 5 }); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170; w.loot.rng.next = () => 0.9999; for (let i = 0; i < 150; i++) w.spawn('runner', { x: 100 + i % 15 * 5, y: Math.floor(i / 15) * 5 }); });
     await page.waitForTimeout(80);
     await page.evaluate(() => { const w = window.__PIXEL__!.world; for (const e of [...w.enemies]) w.damageEnemy(e, 99999); });
     await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().runner.activeDeaths)).toBe(24);

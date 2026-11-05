@@ -14,7 +14,7 @@ export class AudioPresentation {
     this.audio.update(w.status, w.biome,w.ultimate.selected==='frost'&&w.ultimate.frost.view(w.elapsed).active,w.ultimate.selected==='fire'&&w.ultimate.fire.active(w.elapsed));
     if(w.ultimate.selected!=='fire'||w.elapsed>=w.ultimate.activeUntil)this.audio.stopEvent('ultimate.embers');
     if(!w.ultimate.casting){this.audio.stopEvent('ultimate.charge');this.audio.stopEvent('ultimate.overload');}
-    if (w.status === 'over' && this.status !== 'over') { add('player.death'); add('ui.gameOver'); }
+    if (w.status === 'over' && this.status !== 'over') { if(w.outcome==='victory')add('ui.start');else{add('player.death'); add('ui.gameOver');} }
     if (w.status === 'upgrade' && w.offerId !== this.offer) add('ui.upgrade');
     if (w.status === 'playing' && w.mobility.sequence !== this.mobility) add(w.character === 'mage' ? 'player.blink' : 'player.dash');
     for (const event of w.feedbackEvents.splice(0)) {

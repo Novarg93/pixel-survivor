@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
 for(const width of [1280,390])test(`PhaseII25min load and frame timings ${width}`,async({page})=>{
   test.setTimeout(45000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
-  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1500;w.options.spawnRate=0;w.encounterDirector.nextAt=1e6;w.player.invulnerableUntil=1e6;w.stats.cooldown=.01;for(const d of w.abilityDefinitions)w.abilities[d.id].level=5;
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1170;w.options.spawnRate=0;w.encounterDirector.nextAt=1e6;w.player.invulnerableUntil=1e6;w.stats.cooldown=.01;for(const d of w.abilityDefinitions)w.abilities[d.id].level=5;
     for(let i=0;i<30;i++){w.spawn('charger',{x:180,y:0});w.enemies=[];}
     for(let i=0;i<10;i++){const g=w.spawn('guardian',{x:100,y:0})!;w.guardianSystem.dismiss(w,g.id);}
     for(let i=0;i<150;i++)w.spawn((['grunt','runner','tank','caster','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const [i,kind] of (['charger','sorcerer','eclipse'] as const).entries())w.spawn(kind,{x:90*(i-1),y:-85});for(let i=0;i<3;i++)w.spawn('guardian',{x:i===1?80:-30,y:(i-1)*130});for(const g of w.guardians)w.damageEnemy(g,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;

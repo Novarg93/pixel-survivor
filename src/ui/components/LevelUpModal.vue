@@ -77,7 +77,7 @@ function key(event: KeyboardEvent) {
       <h1 v-if="ultimateChoice">Выбери ультимейт</h1><h1 v-else-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Специализация</h1>
       <p>Одно бесплатное улучшение. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — переключить · A — выбрать.' : 'Клавиши 1 / 2 / 3.' }}</p>
       <div class="choices">
-        <button v-for="(choice, i) in choices" :key="`${offer}-${choice.id}`" class="choice"
+        <button v-for="(choice, i) in choices" :key="`${offer}-${choice.id}`" class="choice" :class="{'ultimate-choice':choice.id.startsWith('ultimate-')}"
           :data-upgrade="choice.id" :data-family="upgradeIdentity(choice.id).family" :data-rank="choice.tier"
           :data-dimmed="selected !== null && selected !== choice.id"
           :style="{ '--skill-color': upgradeIdentity(choice.id).color }" :aria-pressed="selected === choice.id"
@@ -137,4 +137,5 @@ function key(event: KeyboardEvent) {
   40% { box-shadow: inset 0 0 0 1px var(--skill-color), inset 0 0 0 4px #111d2d, 0 0 32px color-mix(in srgb, var(--skill-color) 80%, transparent); }
 }
 @media (prefers-reduced-motion: reduce) { .choice { transition: none; } .choice[aria-pressed="true"] { animation: none; } }
+.choice.ultimate-choice{box-shadow:0 0 0 2px #0b1320,0 0 0 4px #dcb96d,0 7px 28px #e2b34a55}.choice.ultimate-choice:before{border-color:#f4d895;inset:5px}.choice.ultimate-choice[aria-pressed="true"]{animation:none;box-shadow:0 0 0 2px #0b1320,0 0 0 4px #ffe3a1,0 7px 34px #e2b34a99}
 </style>

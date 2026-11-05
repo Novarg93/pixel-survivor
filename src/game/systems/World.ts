@@ -1,4 +1,5 @@
 import { UltimateSystem } from '../ultimates/UltimateSystem';
+import { RUN_LIMITS } from '../config/runLimits';
 import { advanceUltimateFreeze, ultimateFrozen } from './UltimateFreeze';
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
 import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
@@ -71,6 +72,7 @@ export class World {
   }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
+  outcome:'victory'|'defeat'|null=null;
   sounds: LegacyCue[] = [];
   feedbackEvents: GameFeedback[] = [];
   feedback(event: GameFeedback) {
@@ -173,7 +175,7 @@ export class World {
     if (orb) this.orbs.push(orb);
     else { const old = nearest(at, this.orbs, Infinity); if (old) old.value += value; }
   }
-  gainXp(amount: number) { const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
+  gainXp(amount: number) { if(this.status==='over'||this.status==='menu')return; const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
   private openUpgrade() {
     if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.offerId++; this.choices = chooseUpgrades(this); }
   }
@@ -192,12 +194,13 @@ export class World {
     const hpHit = receiveDamage(this.player, incoming - absorbed, this.elapsed);
     const hit = hpHit || absorbed > 0;
     if (mobility > 0 && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
-    if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.status = 'over'; this.clearTemporaryState(); } }
+    if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.outcome='defeat'; this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
   step(rawDelta: number, input: MovementInput = { x: 0, y: 0 }) {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
+    if(this.elapsed+1e-7>=RUN_LIMITS.victoryAt){this.elapsed=RUN_LIMITS.victoryAt;this.outcome='victory';this.status='over';this.choices=[];this.experience.pending=0;this.clearTemporaryState();return;}
     const vector = direction(input.x, input.y);
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
     if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
@@ -275,7 +278,7 @@ export class World {
     const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
-      runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
+      runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
       ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire']}} : {}),

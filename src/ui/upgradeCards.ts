@@ -4,7 +4,7 @@ import { FROST_NOVA, ARMAGEDDON } from '../game/config/mageAbilities';
 import { MOBILITY_SPECIALIZATIONS as M } from '../game/config/mobilityUpgrades';
 import { upgradeIdentity } from './upgradeIdentity';
 
-export type UpgradeEmblem = AbilityId | 'projectiles' | 'damage' | 'cooldown' | 'health' | 'speed' | 'pickup' | 'area' | 'nova' | 'rune';
+export type UpgradeEmblem = AbilityId | 'ultimate-lightning' | 'ultimate-frost' | 'ultimate-fire' | 'projectiles' | 'damage' | 'cooldown' | 'health' | 'speed' | 'pickup' | 'area' | 'nova' | 'rune';
 const general = {
   damage: ['+25%', 'урон способностей', 'damage'], cooldown: ['−10%', 'перезарядка', 'cooldown'],
   projectiles: ['+1', 'огненный шар', 'projectiles'], health: ['+20 HP', 'максимум здоровья', 'health'],
@@ -40,7 +40,7 @@ const rankBonuses: Record<AbilityId, (tier: number) => readonly [string, string]
   blades: () => ['+4', 'урон клинков'], iron: () => ['+0.5с', 'действие железной кожи'],
 };
 export function upgradeCard(choice: Pick<Snapshot['choices'][number], 'id' | 'tier' | 'description'>) {
-  if(choice.id.startsWith('ultimate-')) { const family=choice.id==='ultimate-fire'?'fireball':choice.id==='ultimate-frost'?'frost':'lightning'; return {...upgradeIdentity(choice.id),value:'10/10',caption:'первый заряд готов',icon:family as UpgradeEmblem,label:'ULTIMATE',summary:choice.description}; }
+  if(choice.id.startsWith('ultimate-')) { return {...upgradeIdentity(choice.id),value:'10/10',caption:'первый заряд готов',icon:choice.id as UpgradeEmblem,label:'ULTIMATE',summary:choice.description}; }
   const { id, tier } = choice, identity = upgradeIdentity(id), rank = Math.max(0, Math.min(2, tier - 1));
   let value = 'Усиление', caption = 'на этот забег', icon: UpgradeEmblem = 'rune', label = 'Общий бонус', summary = choice.description;
   if (Object.hasOwn(general, id)) [value, caption, icon] = general[id as keyof typeof general];

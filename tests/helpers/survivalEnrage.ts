@@ -7,7 +7,7 @@ import { pressureAt } from '../../src/game/systems/EndgamePressure';
 import { profileAt } from '../../src/game/systems/DifficultyDirector';
 import { bossAggressionAt } from '../../src/game/config/encounterDirector';
 
-export const SURVIVAL_TIMES = [570,600,630,660,720,900,1200];
+export const SURVIVAL_TIMES = [570,600,630,660,720,900,1170];
 export function survivalMage(w: World) {
   // Exactly39 legal upgrades -> level40. No artifacts, evolutions or protection.
   const choices = {'rank-fireball':4,'unlock-frost':1,'rank-frost':1,'unlock-lightning':1,'rank-lightning':4,'unlock-meteor':1,'rank-meteor':4,'unlock-shield':1,damage:5,cooldown:5,projectiles:3,health:4,speed:3,area:2};

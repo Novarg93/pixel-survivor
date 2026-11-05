@@ -51,7 +51,7 @@ test('Frost Y input, pause/upgrade guards, late entrant, mute and ten scene rest
 for(const [width,height]of [[1280,720],[844,390],[1024,768]])test(`Frost150+3+3 controlled render and owner clocks ${width}`,async({browser,baseURL})=>{
   const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width!==1280}),page=await context.newPage();await start(page);
   await page.evaluate(()=>{
-    const w=window.__PIXEL__!.world;w.enemies=[];w.elapsed=1200;w.stats.cooldown=.01;
+    const w=window.__PIXEL__!.world;w.enemies=[];w.elapsed=1170;w.stats.cooldown=.01;
     for(const a of Object.values(w.abilities)){a.level=5;a.readyAt=w.elapsed+.2;}
     for(let i=0;i<150;i++){const e=w.spawn((['grunt','runner','tank','caster','rusher','splitter']as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-5)*19})!;e.hp=e.maxHp=1e9;}
     for(const [i,kind]of (['charger','sorcerer','eclipse']as const).entries()){const e=w.spawn(kind,{x:160,y:(i-1)*70})!;e.hp=e.maxHp=1e9;e.boss!.until=w.elapsed+2;e.boss!.magic=undefined;}

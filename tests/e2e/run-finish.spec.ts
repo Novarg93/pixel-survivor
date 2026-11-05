@@ -1,0 +1,18 @@
+import { expect,test } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+for(const [width,height]of [[1280,720],[844,390],[1024,768]])test(`gold ultimate cards, level70 and victory persistence ${width}`,async({browser,baseURL})=>{
+  const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width!==1280}),page=await context.newPage();
+  await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));await page.goto('/?test=1');await page.locator('.play-button').click();
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.player.invulnerableUntil=1e9;w.elapsed=601;w.experience.level=39;w.gainXp(2000);});
+  const cards=page.locator('.ultimate-choice');await expect(cards).toHaveCount(3);expect(await cards.evaluateAll(cs=>new Set(cs.map(c=>c.querySelector('svg path')?.getAttribute('d'))).size)).toBe(3);
+  expect(await cards.first().evaluate(c=>getComputedStyle(c).boxShadow)).toContain('220, 185, 109');mkdirSync('screenshots/core-finish',{recursive:true});await page.screenshot({path:`screenshots/core-finish/cards-${width}.png`});
+  await page.locator('[data-upgrade="ultimate-fire"]').click();await page.waitForFunction(()=>window.__PIXEL__!.world.status==='playing');
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.experience.level=69;w.experience.xp=1999;w.gainXp(100000);});
+  await page.locator('[data-upgrade]').first().click();await page.waitForFunction(()=>window.__PIXEL__!.world.status==='playing');await page.evaluate(()=>window.__PIXEL__!.world.gainXp(100000));
+  expect(await page.evaluate(()=>({level:window.__PIXEL__!.world.experience.level,pending:window.__PIXEL__!.world.experience.pending}))).toEqual({level:70,pending:0});await expect(page.locator('.xp-compact')).toHaveText('MAX');
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1199.96;});await expect(page.getByRole('heading',{name:'Победа!',exact:true})).toBeVisible();
+  await page.screenshot({path:`screenshots/core-finish/victory-${width}.png`});
+  expect(await page.evaluate(()=>{const w=window.__PIXEL__!.world,p=JSON.parse(localStorage.getItem('pixel-survivor-v1')!);return{outcome:w.outcome,time:w.elapsed,hp:w.player.hp,runs:p.statistics.runs,result:p.records[0].outcome,level:p.records[0].level,death:window.__PIXEL__!.audio().played['player.death']??0};})).toEqual({outcome:'victory',time:1200,hp:100,runs:1,result:'victory',level:70,death:0});
+  await page.waitForTimeout(150);expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('pixel-survivor-v1')!).statistics.runs)).toBe(1);
+  await page.getByRole('button',{name:'Начать заново',exact:true}).click();await page.waitForFunction(()=>window.__PIXEL__!.world.status==='playing');expect(await page.evaluate(()=>window.__PIXEL__!.world.experience.level)).toBe(1);await context.close();
+});

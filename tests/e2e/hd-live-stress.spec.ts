@@ -12,7 +12,7 @@ test('final live scale3 stress: eight class/map/viewport cases with attacks on, 
     await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(async () => {
       const url = '/src/game/utils/SeededRandom.ts', { SeededRandom } = await import(/* @vite-ignore */ url), rng = new SeededRandom(12345);
-      const w = window.__PIXEL__!.world; w.rng.next = () => rng.next(); w.elapsed = 1200; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
+      const w = window.__PIXEL__!.world; w.rng.next = () => rng.next(); w.elapsed = 1170; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6;
       for (const a of Object.values(w.abilities)) a.level = 3; for (const id of ['health', 'damage', 'speed', 'cooldown', 'experience'] as const) w.artifacts.grant(w, id);
       w.loot.grant(w, 'haste'); w.loot.grant(w, 'fury');
       for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 24, y: (Math.floor(i / 15) - 4.5) * 24 }, i % 13 === 0);
@@ -45,7 +45,7 @@ test('final live scale3 stress: eight class/map/viewport cases with attacks on, 
   }
   for (let i = 0; i < 10; i++) {
     await page.evaluate(() => window.__PIXEL__!.restartScene()); await page.waitForFunction(() => window.__PIXEL__?.world.status === 'menu'); await page.getByRole('button', { name: 'Начать забег' }).click();
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.pause(); for (let i = 0; i < 150; i++) w.spawn('tank', { x: i % 15 * 20, y: Math.floor(i / 15) * 20 }); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.pause(); for (let i = 0; i < 150; i++) w.spawn('tank', { x: i % 15 * 20, y: Math.floor(i / 15) * 20 }); });
     expect(await page.evaluate(() => window.__PIXEL__!.world.regularCount)).toBe(150);
     for (const x of [50000, -50000, 0]) { await page.evaluate(x => { const w = window.__PIXEL__!.world; w.player.x = x; w.player.y = -x; }, x); await page.waitForTimeout(60); }
     const art = await page.evaluate(() => { const { actors, ...a } = window.__PIXEL__!.art(); return { ...a, actors: actors.length }; }); restarts.push(art); expect(art.actors).toBe(151); expect(art.shadows).toBe(151); expect(art.clock).toEqual([0, 0, 0]); expect(art.tweens).toBe(0); expect(art.loot.allocated).toBe(0); expect(art.bosses.allocatedDeaths).toBe(0); await expect(page.locator('canvas')).toHaveCount(1); expect(await page.evaluate(() => window.__PIXEL__!.listeners())).toEqual({ commands: 1, snapshots: 1, metrics: 1 });

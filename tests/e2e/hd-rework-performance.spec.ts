@@ -14,7 +14,7 @@ async function start(page: Page, hero: string, dark: boolean) {
     const moduleUrl = '/src/game/utils/SeededRandom.ts';
     const { SeededRandom } = await import(/* @vite-ignore */ moduleUrl);
     const random = new SeededRandom(12345);
-    const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.elapsed = 1200.08;
+    const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.elapsed = 1170.08;
     w.rng.next = () => random.next();
     w.encounterDirector.nextAt = 1e6;
     w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
@@ -74,7 +74,7 @@ test('HD rework: identical mixed150 fixture, two viewports, maps and ten restart
   for (let i = 0; i < 10; i++) {
     await page.evaluate(() => window.__PIXEL__!.restartScene()); await page.waitForFunction(() => window.__PIXEL__?.world.status === 'menu');
     await page.getByRole('button', { name: 'Начать забег' }).click();
-    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200.08; for (let i = 0; i < 150; i++) w.spawn('tank', { x: (i % 15 - 7) * 20, y: Math.floor(i / 15) * 20 - 90 }); });
+    await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170.08; for (let i = 0; i < 150; i++) w.spawn('tank', { x: (i % 15 - 7) * 20, y: Math.floor(i / 15) * 20 - 90 }); });
     await page.waitForTimeout(100);
     const art = await page.evaluate(() => { const { actors, ...art } = window.__PIXEL__!.art(); return { ...art, actors: actors.length }; }); restarts.push(art);
     expect(art.actors).toBe(151); expect(art.clock).toEqual([0, 0, 0]); expect(art.tweens).toBe(0);

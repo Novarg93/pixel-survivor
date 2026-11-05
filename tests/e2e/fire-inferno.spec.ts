@@ -58,7 +58,7 @@ test('Fire gamepad, pause guards, reduced effects, death and ten scene restarts 
 for(const [width,height]of [[1280,720],[844,390]])test(`Fire 150+3+3 stable density render budget ${width}`,async({browser,baseURL})=>{
   test.setTimeout(35000);const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width===844}),page=await context.newPage();await start(page);
   await page.evaluate(()=>{
-    const w=window.__PIXEL__!.world;w.elapsed=1200;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;
+    const w=window.__PIXEL__!.world;w.elapsed=1170;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;
     for(const a of Object.values(w.abilities)){a.level=5;a.readyAt=w.elapsed+.2;}
     for(let i=0;i<150;i++){const e=w.spawn((['grunt','runner','tank','caster','rusher','splitter']as const)[i%6],{x:(i%15-7)*14,y:(Math.floor(i/15)-5)*13})!;e.hp=e.maxHp=1e9;}
     for(const [i,kind]of (['charger','sorcerer','eclipse']as const).entries()){const e=w.spawn(kind,{x:85,y:(i-1)*55})!;e.hp=e.maxHp=1e9;}

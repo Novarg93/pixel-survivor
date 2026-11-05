@@ -23,7 +23,7 @@ test('new enemy atlas has hard alpha, transparent margins and distinct authored 
 for (const kind of HD_ENEMY_KINDS) test(kind + ' live motion, hurt and six death phases preserve rewards and both-map readability', async ({ page }) => {
   mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
-  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1200; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; });
+  await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; });
   const id = await page.evaluate(kind => window.__PIXEL__!.world.spawn(kind, { x: 85, y: 25 })!.id, kind);
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => a.texture === 'hd-enemies' && String(a.frame).includes('-walk-')))).toBe(true);
   if (kind === 'caster') {
@@ -58,7 +58,7 @@ for (const kind of HD_ENEMY_KINDS) test(kind + ' live motion, hurt and six death
   for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-death-${width}.png` }); }
   for (const dark of [false, true]) {
     await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
-    await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200; w.spawn(kind, { x: -42, y: -20 }); w.spawn(kind, { x: 45, y: 30 }, true)!.modifier = 'shielded'; w.spawn('grunt', { x: -45, y: 48 }); w.spawn('runner', { x: 45, y: -45 }); }, kind);
+    await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170; w.spawn(kind, { x: -42, y: -20 }); w.spawn(kind, { x: 45, y: 30 }, true)!.modifier = 'shielded'; w.spawn('grunt', { x: -45, y: 48 }); w.spawn('runner', { x: 45, y: -45 }); }, kind);
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(80); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-${dark ? 'forest' : 'grove'}-${width}.png` }); }
   }
@@ -69,7 +69,7 @@ test('mixed150 deaths reuse24 visual corpses and clear through ten scene restart
   test.setTimeout(45000); mkdirSync(directory, { recursive: true }); const records = [];
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   for (let run = 0; run < 10; run++) {
-    await page.evaluate(kinds => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200; w.loot.rng.next = () => .9999; for (let i = 0; i < 150; i++) w.spawn(kinds[i % kinds.length], { x: i % 15 * 7 + 50, y: Math.floor(i / 15) * 7 - 30 }); }, [...HD_ENEMY_KINDS]);
+    await page.evaluate(kinds => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170; w.loot.rng.next = () => .9999; for (let i = 0; i < 150; i++) w.spawn(kinds[i % kinds.length], { x: i % 15 * 7 + 50, y: Math.floor(i / 15) * 7 - 30 }); }, [...HD_ENEMY_KINDS]);
     await page.waitForTimeout(80); await page.evaluate(() => { const w = window.__PIXEL__!.world; for (const e of [...w.enemies]) w.damageEnemy(e, 999999); });
     await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().packed.activeDeaths)).toBe(24);
     const art = await page.evaluate(() => { const { actors, ...a } = window.__PIXEL__!.art(); return { ...a, actors: actors.length }; }); records.push(art);

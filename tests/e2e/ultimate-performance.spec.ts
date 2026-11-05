@@ -6,7 +6,7 @@ for(const [width,height]of [[1280,720],[844,390],[1024,768]])for(const id of ['l
   await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));
   await page.goto('/?test=1');await page.getByRole('button',{name:/^Начать забег/}).click();
   await page.evaluate(id=>{
-    const w=window.__PIXEL__!.world;w.elapsed=1200;w.experience.level=60;w.encounterDirector.nextAt=1e9;w.options.spawnRate=0;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;w.stats.damage=2.25;
+    const w=window.__PIXEL__!.world;w.elapsed=1170;w.experience.level=60;w.encounterDirector.nextAt=1e9;w.options.spawnRate=0;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;w.stats.damage=2.25;
     for(const a of w.abilityDefinitions){w.abilities[a.id].level=5;w.abilities[a.id].readyAt=w.elapsed+1.3;}
     w.ultimate.choose(w,id);w.ultimate.charge=10;w.facing={x:1,y:0};
     for(let i=0;i<150;i++){const e=w.spawn((['tank','grunt','runner','caster','rusher','splitter'] as const)[i%6],{x:30+i%15*15,y:(Math.floor(i/15)-5)*18})!;if(id!=='lightning')e.hp=e.maxHp=1e6;}

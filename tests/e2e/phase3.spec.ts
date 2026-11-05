@@ -79,7 +79,7 @@ test('five restarts and scene recreation clear artifacts, radar data and subscri
 test('radar stays bounded at maximum mobs plus guardian/bosses/loot and maintains its 5Hz budget', async ({ page, browser }) => {
   test.setTimeout(45000); const errors = captureErrors(page); await start(page);
   await page.evaluate(() => {
-    const w = window.__PIXEL__!.world; w.elapsed = 1200; w.experience.level = 30;
+    const w = window.__PIXEL__!.world; w.elapsed = 1170; w.experience.level = 30;
     for (const a of w.abilityDefinitions) { w.abilities[a.id].level = 3; w.upgrades['evolve-' + a.id] = 1; } w.stats.damage = 1.75; w.stats.projectiles = 3;
     for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], undefined, i % 5 === 0);
     w.guardianSystem.spawnWave(w,3,20); w.spawn('eclipse', { x: 0, y: -220 }); w.spawn('charger', { x: -220, y: 0 }); w.spawn('sorcerer', { x: 200, y: 170 });

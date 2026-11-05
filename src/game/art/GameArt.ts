@@ -109,7 +109,7 @@ export class GameArt {
     const cast = this.casting.view(world.elapsed);
     this.heroCasting = world.character === 'mage' && world.status !== 'menu' && world.status !== 'over' && !hurt && cast.mode === 'cast' && !!cast.active;
     const recoil = (cast.active?.ability === 'fireball' && cast.frame === 2 || cast.active?.ability === 'ultimate-lightning' && cast.frame === 4);
-    const visual = world.character === 'mage' && world.status === 'over' ? selectAsset('mage', mageFrame(facing, 'death', this.heroDeathAge)) : hurt ? selectAsset('mage', mageFrame(facing, 'hurt', world.elapsed - this.heroHurtStarted)) : this.heroCasting ? selectAsset('mageCasting',castingBodyFrame(facing,this.heroMoving,world.elapsed,recoil)) : heroVisual(world.character, facing, this.heroMoving, world.character !== 'mage' && world.player.invulnerableUntil > world.elapsed, world.elapsed);
+    const visual = world.character === 'mage' && world.status === 'over' && world.outcome!=='victory' ? selectAsset('mage', mageFrame(facing, 'death', this.heroDeathAge)) : hurt ? selectAsset('mage', mageFrame(facing, 'hurt', world.elapsed - this.heroHurtStarted)) : this.heroCasting ? selectAsset('mageCasting',castingBodyFrame(facing,this.heroMoving,world.elapsed,recoil)) : heroVisual(world.character, facing, this.heroMoving, world.character !== 'mage' && world.player.invulnerableUntil > world.elapsed, world.elapsed);
     this.heroFrame = visual.frame ?? visual.texture; applyVisual(sprite, visual, multiplier);
     sprite.setRotation(this.heroCasting&&cast.active?.ability==='ultimate-lightning'&&cast.frame===4?(world.ultimate.direction.x<0?.12:-.12):0);
   }

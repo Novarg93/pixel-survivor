@@ -8,7 +8,7 @@ it('creates about 30% more actual mobs with identical seed/time without saturati
   writeFileSync('docs/benchmarks/phase2-spawn-comparison.json',JSON.stringify({seed:71,seconds:120,baselineCreated:old,phase2Created:next,increasePercent:(next/old-1)*100,saturated:false},null,2));
 });
 it('consumes full-cap attempts and refills promptly without pause debt', () => {
-  const w = new World(); w.elapsed = 1300; w.encounterDirector.nextAt = 1e9; w.player.invulnerableUntil = 1e9; w.abilities.fireball.level = 0;
+  const w = new World(); w.elapsed = 1170; w.encounterDirector.nextAt = 1e9; w.player.invulnerableUntil = 1e9; w.abilities.fireball.level = 0;
   for (let i = 0; i < 150; i++) w.spawn('tank', { x: 200, y: 0 }); for (let i = 0; i < 100; i++) w.step(0.05);
   expect(w.regularCount).toBe(150); w.pause(); w.step(1000); w.enemies.splice(0, 10); w.resume(); w.step(0.05); expect(w.regularCount).toBeLessThanOrEqual(144);
   for (let i = 0; i < 8; i++) w.step(0.05); expect(w.regularCount).toBeGreaterThanOrEqual(144); expect(w.regularCount).toBeLessThanOrEqual(150);

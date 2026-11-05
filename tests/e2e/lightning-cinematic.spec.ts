@@ -110,7 +110,7 @@ test('restores actual Canvas background pixels and leaves HUD filters unchanged'
 for(const [width,height]of [[1280,720],[844,390]])test(`Lightning constant 150+3+3 frame comparison ${width}`,async({browser,baseURL})=>{
   const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width===844}),page=await context.newPage();await start(page);
   await page.evaluate(()=>{
-    const w=window.__PIXEL__!.world;w.enemies=[];w.elapsed=1200;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;
+    const w=window.__PIXEL__!.world;w.enemies=[];w.elapsed=1170;w.player.invulnerableUntil=1e9;w.stats.cooldown=.01;
     for(const a of Object.values(w.abilities)){a.level=5;a.readyAt=w.elapsed;}
     for(let i=0;i<150;i++)w.spawn((['tank','grunt','runner','caster','rusher','splitter'] as const)[i%6],{x:40+i%15*14,y:(Math.floor(i/15)-5)*17});
     for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:140,y:70});for(let i=0;i<3;i++)w.spawn('guardian',{x:220,y:(i-1)*100});

@@ -37,7 +37,7 @@ it('increases real caster and Rusher attack starts, with no haste applied to the
   for(const row of rows)expect(row.spawn.spawned).toBe(Math.floor((29.95+1e-9)/row.cadence.interval*1.3)*row.cadence.burst);
   expect(last.spawn.spawned).toBeGreaterThan(first.spawn.spawned*1.9);
   for(const kind of ['caster','rusher','charger'])expect(last.attacks[kind].startsIn30s).toBeGreaterThan(first.attacks[kind].startsIn30s);
-  const early=bossCadence(600,1),late=bossCadence(1200,6);for(const kind of ['sorcerer','eclipse'])expect(late.find(r=>r.kind===kind)!.shots).toBeGreaterThan(early.find(r=>r.kind===kind)!.shots);
+  const early=bossCadence(600,1),late=bossCadence(1170,6);for(const kind of ['sorcerer','eclipse'])expect(late.find(r=>r.kind===kind)!.shots).toBeGreaterThan(early.find(r=>r.kind===kind)!.shots);
   expect(last.attacks.caster.shotsIn30s).toBeGreaterThan(first.attacks.caster.shotsIn30s);
 });
 it('spawns exactly one boss every30s after10:00, preserves Guardian minute waves and skips occupied slots',()=>{
@@ -57,7 +57,7 @@ it('uses the same floating-clock tolerance for the10:00 transition and its30s de
   w.encounterDirector.update(w);expect(w.bosses).toHaveLength(1);
 });
 it('does not accumulate skipped spawn attempts or late encounter windows and bounds history',()=>{
-  const w=quiet();w.options.spawnRate=1.3;w.elapsed=1200;w.player.invulnerableUntil=1e6;for(let i=0;i<150;i++)w.spawn('tank',{x:300+i,y:0})!.speed=0;
+  const w=quiet();w.options.spawnRate=1.3;w.elapsed=1170;w.player.invulnerableUntil=1e6;for(let i=0;i<150;i++)w.spawn('tank',{x:300+i,y:0})!.speed=0;
   for(let i=0;i<100;i++)w.step(.05);expect(w.regularCount).toBe(150);w.enemies=[];w.step(.05);expect(w.regularCount).toBeLessThanOrEqual(3);for(let i=0;i<10;i++)w.step(.05);expect(w.regularCount).toBeLessThanOrEqual(9);
   w.enemies=[];w.encounterDirector.nextAt=180;w.elapsed=1200;w.encounterDirector.update(w);expect(w.bosses).toHaveLength(3);expect(w.encounterDirector.nextAt).toBe(1230);
   for(let i=0;i<100;i++)w.encounterDirector.update(w);expect(w.bosses).toHaveLength(3);

@@ -9,7 +9,7 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
   for (const dark of [false, true]) {
     await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => {
-      const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1200.08;
+      const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170.08;
       const kinds = ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const;
       for (let row = 0; row < 6; row++) for (let col = 0; col < 3; col++) w.spawn(kinds[row], { x: (col - 1) * 54, y: row * 35 - 90 }, true)!.modifier = (['frenzy', 'shielded', 'volatile'] as const)[col];
       w.effect('frost', w.player, 75, 0x91e4dc, 1);

@@ -20,7 +20,7 @@ async function positions(page: Page) {
 for (const width of [1280, 390]) {
   test(`compact carousel crosses now, clips its window and renders every event kind ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.clock.install(); await start(page);
-    await page.clock.pauseAt((await page.evaluate(() => Date.now())) + 20);
+    await page.clock.pauseAt((await page.evaluate(() => Date.now())) + 10000);
     mkdirSync(directory, { recursive: true }); await expect(page.locator('canvas')).toBeVisible();
     await expect(ribbon(page)).toBeVisible(); await expect(ribbon(page).getByRole('img', { name: 'Сейчас', exact: true })).toBeVisible();
     const box = (await ribbon(page).boundingBox())!; expect(box.height).toBeLessThanOrEqual(width === 390 ? 20 : 24);
@@ -45,10 +45,10 @@ for (const width of [1280, 390]) {
       await page.evaluate(t => { window.__PIXEL__!.world.elapsed = t; }, seconds); await page.clock.runFor(180);
       await expect(event(page, 180)).toHaveCount(0);
     }
-    for (const seconds of [590, 600, 900, 36000]) {
+    for (const seconds of [590, 600, 900, 1170]) {
       await page.evaluate(t => { window.__PIXEL__!.world.elapsed = t; }, seconds); await page.clock.runFor(180);
       const current = await positions(page); expect(current.events.length).toBeLessThanOrEqual(5);
-      for (const e of current.events) { expect(e.at).toBeGreaterThanOrEqual(current.elapsed - 60); expect(e.at).toBeLessThanOrEqual(current.elapsed + 60); }
+      for (const e of current.events) { expect(e.at).toBeLessThan(1200); expect(e.at).toBeGreaterThanOrEqual(current.elapsed - 60); expect(e.at).toBeLessThanOrEqual(current.elapsed + 60); }
       expect((await ribbon(page).innerText()).replace(/\s/g, '')).toMatch(/^[23]*$/);
       await expect(ribbon(page)).not.toContainText(/ПЛАН СОБЫТИЙ|%|через|Босс|Guardian|Enrage|СЛОТЫ|\d+:\d+/i);
       const overlap = await page.evaluate(() => { const a = document.querySelector('.event-timeline')!.getBoundingClientRect(); return [...document.querySelectorAll('.run-clock,.vitals,.radar,.skill-dock,.mobility-control,.joystick')].filter(n => { const b = n.getBoundingClientRect(); return b.width && b.height && a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top; }).map(n => n.className); });

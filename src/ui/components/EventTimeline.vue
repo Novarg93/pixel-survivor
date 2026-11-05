@@ -2,9 +2,10 @@
 import { computed } from 'vue';
 import type { Snapshot } from '../../game/systems/World';
 import { encounterTimeline } from '../../game/systems/encounterSchedule';
+import { RUN_LIMITS } from '../../game/config/runLimits';
 import { formatTime } from '../format';
 const props = defineProps<{ state: Snapshot }>();
-const timeline = computed(() => encounterTimeline(props.state.elapsed));
+const timeline = computed(() => {const timeline=encounterTimeline(props.state.elapsed);return {...timeline,events:timeline.events.filter(e=>e.at<RUN_LIMITS.victoryAt)};});
 // Original integer-grid silhouettes; color supplements distinct shapes.
 const icons = {
   boss: { label: 'Боссы', path: 'M2 1h3l9 9v3h-3L2 4zm9 0h3v3L5 13H2v-3zM1 12h4v3H1zm10 0h4v3h-4z' },
