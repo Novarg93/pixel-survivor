@@ -4,7 +4,7 @@ import type { Snapshot } from '../systems/World';
 import type { CharacterId } from '../config/characters';
 import type { BiomeId } from '../config/biomes';
 import type { AbilityId } from '../abilities/types';
-export interface Settings { volume: number; muted: boolean; musicVolume?: number; sfxVolume?: number; pixelScale: number; effectsIntensity?: number; damageNumbers?: boolean }
+export interface Settings { volume: number; muted: boolean; musicVolume?: number; sfxVolume?: number; pixelScale: number; effectsIntensity?: number; damageNumbers?: boolean; reducedMotion?: boolean; reducedFlash?: boolean }
 export const DEFAULT_SETTINGS: Settings = { volume: 0.3, muted: false, musicVolume: .32, sfxVolume: .8, pixelScale: 2 };
 export const STORAGE_KEY = 'pixel-survivor-v1';
 export interface StoragePort { getItem(key: string): string | null; setItem(key: string, value: string): void }
@@ -12,7 +12,7 @@ export function browserStorage(): StoragePort | undefined { try { return typeof 
 export function validSettings(value: unknown): value is Settings {
   if (!value || typeof value !== 'object') return false;
   const s = value as Partial<Settings>; const gain = (n: unknown) => n === undefined || typeof n === 'number' && Number.isFinite(n) && n >= 0 && n <= 1;
-  return typeof s.volume === 'number' && Number.isFinite(s.volume) && s.volume >= 0 && s.volume <= 1 && typeof s.muted === 'boolean' && gain(s.musicVolume) && gain(s.sfxVolume) && (s.pixelScale === 2 || s.pixelScale === 3) && gain(s.effectsIntensity) && (s.damageNumbers === undefined || typeof s.damageNumbers === 'boolean');
+  return typeof s.volume === 'number' && Number.isFinite(s.volume) && s.volume >= 0 && s.volume <= 1 && typeof s.muted === 'boolean' && gain(s.musicVolume) && gain(s.sfxVolume) && (s.pixelScale === 2 || s.pixelScale === 3) && gain(s.effectsIntensity) && (s.damageNumbers === undefined || typeof s.damageNumbers === 'boolean') && (s.reducedMotion === undefined || typeof s.reducedMotion === 'boolean') && (s.reducedFlash === undefined || typeof s.reducedFlash === 'boolean');
 }
 export interface RunDetails { character: CharacterId; biome: BiomeId; regularKills: number; eliteKills: number; bossKills: number; damage: {id:AbilityId;damage:number}[] }
 export interface RunRecord { id: string; score: number; kills: number; elapsed: number; level: number; finishedAt: string; abilities: string[]; byKind: Record<EnemyKind, number>; details?: RunDetails }

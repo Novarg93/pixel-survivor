@@ -53,6 +53,7 @@ export class MobilitySystem extends AbsorbPool {
     this.dashHits.clear(); w.facing = { ...this.direction };
     if (w.character === 'mage') { w.player.x = this.to.x; w.player.y = this.to.y; this.arrive(w); }
     else this.remaining = this.distance;
+    w.ultimate.onBlink(w);
     return true;
   }
   update(w: World, dt: number) {

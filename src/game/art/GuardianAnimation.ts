@@ -24,7 +24,7 @@ export class GuardianAnimation {
   finish(w: World) {
     for (let i = this.corpses.length - 1; i >= 0; i--) if (w.elapsed - this.corpses[i].started >= .6) this.corpses.splice(i, 1);
     for (const [id, state] of this.previous) if (!w.enemies.includes(state.enemy)) {
-      if (state.enemy.hp === 0 && this.corpses.length < 3) this.corpses.push({ x: state.enemy.x, y: state.enemy.y, started: w.elapsed });
+      if (state.enemy.hp === 0 && state.enemy.deathSource !== 'ultimate-lightning' && this.corpses.length < 3) this.corpses.push({ x: state.enemy.x, y: state.enemy.y, started: w.elapsed });
       this.previous.delete(id);
     }
   }

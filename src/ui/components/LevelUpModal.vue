@@ -12,6 +12,7 @@ import { upgradeCard } from '../upgradeCards';
 const inputDevice = useInputDevice();
 const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number }>();
 const specializationChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.category && c.tier === 1));
+const ultimateChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.id.startsWith('ultimate-')));
 const emit = defineEmits<{ choose: [id: string, offer: number] }>();
 const panel = ref<HTMLElement>();
 const selected = ref<string | null>(null);
@@ -73,7 +74,7 @@ function key(event: KeyboardEvent) {
   <div class="overlay">
     <section ref="panel" class="panel upgrade-panel" role="dialog" aria-modal="true" aria-label="Новый уровень" :aria-busy="selected !== null" @keydown="key" @keyup="key">
       <small>УРОВЕНЬ {{ level }} · МИР НА ПАУЗЕ</small>
-      <h1 v-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Специализация</h1>
+      <h1 v-if="ultimateChoice">Выбери ультимейт</h1><h1 v-else-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Специализация</h1>
       <p>Одно бесплатное улучшение. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — переключить · A — выбрать.' : 'Клавиши 1 / 2 / 3.' }}</p>
       <div class="choices">
         <button v-for="(choice, i) in choices" :key="`${offer}-${choice.id}`" class="choice"

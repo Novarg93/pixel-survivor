@@ -1,3 +1,4 @@
+import { UltimateSystem } from '../ultimates/UltimateSystem';
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
 import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
 import { ENEMIES, ENEMY_NAMES, isBossKind, type EnemyKind } from '../config/enemyDefinitions';
@@ -36,7 +37,7 @@ import { RareGuardianSystem, guardianVisible } from './RareGuardianSystem';
 import { MobilitySystem } from './MobilitySystem';
 import { formationEdge, pressureAt } from './EndgamePressure';
 import type { MovementInput } from '../input/movement';
-export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
+export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId; practice?: boolean }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
@@ -46,6 +47,7 @@ export class World {
   readonly artifacts: ArtifactSystem;
   readonly guardianSystem: RareGuardianSystem;
   readonly mobility = new MobilitySystem();
+  readonly ultimate = new UltimateSystem();
   facing = { x: 0, y: 1 };
   get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed) * this.buffs.modifier('speed', this.elapsed); }
   get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
@@ -57,7 +59,7 @@ export class World {
   get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
   clearTemporaryState() {
-    this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb();
+    this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb(); this.ultimate.clear();
     for (const e of this.enemies) {
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.boss.magic=undefined;e.boss.contactSafeUntil=undefined;e.shootingAt = 0; }
@@ -138,19 +140,20 @@ export class World {
     const projectile = this.projectilePool.acquire({ ...shot, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
-  damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown') {
+  damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity) {
     if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
     if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
     const before = enemy.hp;
     if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
-    enemy.hp = Math.max(0, enemy.hp - amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1)); enemy.hitUntil = this.elapsed + 0.12;
+    enemy.hp = Math.max(0, enemy.hp - Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1))); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
     if (!enemy.boss && enemy.kind !== 'guardian') { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
       this.scoring.recordKill(enemy.kind, enemy.elite);
       this.sound('kill');
-      this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
+      enemy.deathSource = source;
+      if (source !== 'ultimate-lightning') this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
       this.dropXp(enemy, enemy.xp);
       this.loot.onEnemyDeath(this, enemy);
       if (enemy.boss) { this.clearOwnedEffects(enemy.id); enemy.boss.charge = undefined; }
@@ -176,7 +179,7 @@ export class World {
   }
   collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + (o.expires > this.elapsed ? o.value : 0), 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
   damagePlayer(amount: number) {
-    if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || amount <= 0 || !Number.isFinite(amount)) return false;
+    if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
     const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
     const arcane=this.shield.absorbDamage(this.elapsed,incoming);
@@ -193,7 +196,7 @@ export class World {
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
     const vector = direction(input.x, input.y);
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
-    if (!this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
+    if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
     if (vector.x || vector.y) this.facing = vector;
     const profile = profileAt(this.elapsed);
     const cadence=spawnCadenceAt(this.elapsed);
@@ -204,10 +207,13 @@ export class World {
       }
     }
     this.encounterDirector.update(this);
+    // Resolve Lightning release before contact/Guardian damage at the cast boundary.
+    if (this.ultimate.selected === 'lightning') this.ultimate.update(this);
     this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     if (this.status !== 'playing') return;
     this.mobility.tick(this);
+    if (this.ultimate.selected !== 'lightning') this.ultimate.update(this);
     this.enemies = this.enemies.filter(e => { const keep = e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
@@ -258,9 +264,11 @@ export class World {
     const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
+      ...(this.options.practice ? {practice:true} : {}),
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
+      ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire']}} : {}),
       mobility: this.mobility.snapshot(this), guardianPhase: this.guardianSystem.encounter?.phase ?? null,
       buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
       artifacts: this.artifacts.snapshot(), runNotice: this.guardianSystem.notice?.text ?? this.artifacts.notice?.text ?? null, guardianKills: this.scoring.guardianKills,

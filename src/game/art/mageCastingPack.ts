@@ -1,11 +1,11 @@
 import { mageFrame, mageLayout } from './magePack';
-import type { MageSpell } from './MageCastingController';
+import type { MageGesture as MageSpell } from './MageCastingController';
 import { castingHands, CAST_COLORS, type CastDirection } from './mageCastingPoses';
 export type { CastDirection } from './mageCastingPoses';
 
 export const MAGE_CAST_TEXTURE = 'hd-mage-casting';
 export const MAGE_CAST_URLS = { image: 'assets/hd/mage-casting.png', data: 'assets/hd/mage-casting.json' } as const;
-export const CAST_VARIANTS = ['fireball', 'fireball-strong', 'frost', 'lightning', 'lightning-strong', 'meteor', 'shield'] as const;
+export const CAST_VARIANTS = ['fireball', 'fireball-strong', 'frost', 'lightning', 'lightning-strong', 'meteor', 'shield', 'ultimate-lightning', 'ultimate-frost', 'ultimate-fire'] as const;
 export function castingVariant(ability: MageSpell, rank: number) { return (ability === 'fireball' || ability === 'lightning') && rank >= 4 ? `${ability}-strong` : ability; }
 export function castingArmFrame(ability: MageSpell, rank: number, direction: CastDirection, frame: number) { return `arms-${castingVariant(ability, rank)}-${direction}-${Math.max(0, Math.min(5, frame))}`; }
 export function castingBodyFrame(facing: 'down' | 'up' | 'side', moving: boolean, elapsed: number, recoil = false) { return `body-${recoil ? 'lean-' : ''}${mageFrame(facing, moving ? 'walk' : 'idle', elapsed)}`; }

@@ -40,6 +40,7 @@ const rankBonuses: Record<AbilityId, (tier: number) => readonly [string, string]
   blades: () => ['+4', 'урон клинков'], iron: () => ['+0.5с', 'действие железной кожи'],
 };
 export function upgradeCard(choice: Pick<Snapshot['choices'][number], 'id' | 'tier' | 'description'>) {
+  if(choice.id.startsWith('ultimate-')) { const family=choice.id==='ultimate-fire'?'fireball':choice.id==='ultimate-frost'?'frost':'lightning'; return {...upgradeIdentity(choice.id),value:'10/10',caption:'первый заряд готов',icon:family as UpgradeEmblem,label:'ULTIMATE',summary:choice.description}; }
   const { id, tier } = choice, identity = upgradeIdentity(id), rank = Math.max(0, Math.min(2, tier - 1));
   let value = 'Усиление', caption = 'на этот забег', icon: UpgradeEmblem = 'rune', label = 'Общий бонус', summary = choice.description;
   if (Object.hasOwn(general, id)) [value, caption, icon] = general[id as keyof typeof general];

@@ -16,7 +16,8 @@ export async function drawMageCastingAtlas({ layout, body }) {
     const staffHand=entry.direction==='left'?{x:lx,y:ly}:{x:rx,y:ry};
     let shaft;
     const angles=Array.from({length:125},(_,i)=>(i-62)*.025).sort((a,b)=>Math.abs(a)-Math.abs(b));
-    for(const angle of angles){ const tip={x:staffHand.x+Math.sin(angle)*7.2,y:staffHand.y-Math.cos(angle)*7.2}, butt={x:staffHand.x-Math.sin(angle)*2.4,y:staffHand.y+Math.cos(angle)*2.4};
+    const shaftLength=entry.variant==='ultimate-lightning'&&f>=1&&f<=2?staffHand.y-1.5:7.2;
+    for(const angle of angles){ const tip={x:staffHand.x+Math.sin(angle)*shaftLength,y:staffHand.y-Math.cos(angle)*shaftLength}, butt={x:staffHand.x-Math.sin(angle)*2.4,y:staffHand.y+Math.cos(angle)*2.4};
       if(tip.x>=1.2&&tip.x<=14.8&&tip.y>=1.3&&tip.y<=17.7&&butt.x>=.6&&butt.x<=15.4&&butt.y>=.6&&butt.y<=18.8){shaft={tip,butt};break;} }
     if(!shaft)throw new Error('Unbounded staff pose '+entry.name);
     const {tip,butt}=shaft;

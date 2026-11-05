@@ -12,6 +12,8 @@ export class AudioPresentation {
     if (this.run !== w.runId) { this.audio.reset(); this.run = w.runId; this.status = 'menu'; this.offer = this.mobility = this.encounter = 0; this.guardians.clear(); }
     const pending = new Map<SoundEvent, number>(), add = (event: SoundEvent, strength = 1) => pending.set(event, Math.max(pending.get(event) ?? 0, strength));
     this.audio.update(w.status, w.biome);
+    if(w.ultimate.selected!=='fire'||w.elapsed>=w.ultimate.activeUntil)this.audio.stopEvent('ultimate.embers');
+    if(!w.ultimate.casting){this.audio.stopEvent('ultimate.charge');this.audio.stopEvent('ultimate.overload');}
     if (w.status === 'over' && this.status !== 'over') { add('player.death'); add('ui.gameOver'); }
     if (w.status === 'upgrade' && w.offerId !== this.offer) add('ui.upgrade');
     if (w.status === 'playing' && w.mobility.sequence !== this.mobility) add(w.character === 'mage' ? 'player.blink' : 'player.dash');
@@ -24,7 +26,14 @@ export class AudioPresentation {
       else if (event.source === 'cleave') add('cleave.impact');
     }
     for (const cue of w.sounds.splice(0)) {
-      if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
+      if(cue==='ultimate-charge')add('ultimate.charge');
+      else if(cue==='ultimate-sky'){this.audio.stopEvent('ultimate.charge');add('ultimate.sky');}
+      else if(cue==='ultimate-overload')add('ultimate.overload');
+      else if(cue==='ultimate-lightning')add('ultimate.lightning');
+      else if(cue==='ultimate-frost')add('ultimate.frost');
+      else if(cue==='ultimate-fire')add('ultimate.fire');
+      else if(cue==='ultimate-embers')add('ultimate.embers');
+      else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
       else if (cue === 'shield') add('arcaneShield.trigger');
       else if (cue === 'charge') add('encounter.charge');
     }

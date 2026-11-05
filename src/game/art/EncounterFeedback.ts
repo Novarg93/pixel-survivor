@@ -26,7 +26,7 @@ export class EncounterFeedback {
     for (const [id, t] of this.tracks) {
       const e = t.enemy, phase = this.phase(e, w), color = e.kind === 'charger' ? 0xe7bd8a : e.kind === 'sorcerer' ? 0xd4b4f3 : 0xa6e6dc;
       if (!live.has(id)) {
-        if (e.hp === 0) this.emit(w, e, 'death', e.kind === 'guardian' ? 0xffdf9b : color);
+        if (e.hp === 0 && e.deathSource !== 'ultimate-lightning') this.emit(w, e, 'death', e.kind === 'guardian' ? 0xffdf9b : color);
         else for (let i = this.bursts.length - 1; i >= 0; i--) if (this.bursts[i].owner === id) this.bursts.splice(i, 1);
         this.tracks.delete(id); continue;
       }

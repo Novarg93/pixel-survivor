@@ -1,15 +1,17 @@
 import type { World } from '../systems/World';
 import type { Point } from '../utils/math';
 import type { GameFeedback } from '../events/gameFeedback';
+import { ULTIMATE } from '../config/ultimates';
 
 export type MageSpell = 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield';
-export const CAST_PRIORITY: Record<MageSpell, number> = { fireball: 1, lightning: 2, shield: 3, frost: 4, meteor: 5 };
-export const CAST_DURATION: Record<MageSpell, number> = { fireball: .28, lightning: .3, shield: .34, frost: .48, meteor: 1.3 };
-export interface CastSignal { ability: MageSpell; rank: number; target: Point; origin?: Point; impact?: boolean; duration?: number }
+export type MageGesture = MageSpell | 'ultimate-lightning' | 'ultimate-frost' | 'ultimate-fire';
+export const CAST_PRIORITY: Record<MageGesture, number> = { 'ultimate-lightning':100,'ultimate-frost':100,'ultimate-fire':100, fireball: 1, lightning: 2, shield: 3, frost: 4, meteor: 5 };
+export const CAST_DURATION: Record<MageGesture, number> = { 'ultimate-lightning':.975,'ultimate-frost':.7,'ultimate-fire':.8, fireball: .28, lightning: .3, shield: .34, frost: .48, meteor: 1.3 };
+export interface CastSignal { ability: MageGesture; rank: number; target: Point; origin?: Point; impact?: boolean; duration?: number }
 interface Gesture extends CastSignal { started: number; duration: number; beats: number; lastBeat: number }
 interface Pending extends CastSignal { at: number }
 const priority = (signal: CastSignal) => signal.ability === 'shield' && signal.impact ? 6 : CAST_PRIORITY[signal.ability];
-export function isMageSpell(value: string): value is MageSpell { return Object.hasOwn(CAST_PRIORITY, value); }
+export function isMageSpell(value: string): value is MageSpell { return !value.startsWith('ultimate-') && Object.hasOwn(CAST_PRIORITY, value); }
 
 // Presentation only. One active gesture, one fresh pending gesture, two accents.
 // Uses World.elapsed, never RAF/timers/World.rng and never consumes domain events.
@@ -18,8 +20,9 @@ export class MageCastingController {
   private pending?: Pending;
   private block?: { mode: 'hurt' | 'blink' | 'death'; until: number };
   private accents: Pending[] = [];
+  private ultimateSequence=0;
   private run = ''; private hp = 0; private mobility = 0;
-  requested: Record<MageSpell, number> = { fireball: 0, frost: 0, lightning: 0, meteor: 0, shield: 0 };
+  requested: Record<MageSpell, number> & Partial<Record<Exclude<MageGesture,MageSpell>,number>> = { fireball: 0, frost: 0, lightning: 0, meteor: 0, shield: 0 };
   started = 0; coalesced = 0; interrupted = 0; dropped = 0; maxPending = 0;
   lastInput?: Pending;
   clear() { this.active = this.pending = this.block = undefined; this.accents.length = 0; this.lastInput = undefined; }
@@ -41,7 +44,7 @@ export class MageCastingController {
     }
   }
   request(signal: CastSignal, now: number) {
-    this.advance(now); this.requested[signal.ability]++; this.lastInput = { ...signal, target: { ...signal.target }, at: now };
+    this.advance(now); this.requested[signal.ability]=(this.requested[signal.ability]??0)+1; this.lastInput = { ...signal, target: { ...signal.target }, at: now };
     if (this.block) { this.dropped++; return; }
     this.accents.push(this.lastInput); if (this.accents.length > 2) this.accents.shift();
     if (this.active?.ability === signal.ability) {
@@ -56,7 +59,7 @@ export class MageCastingController {
     this.maxPending = Math.max(this.maxPending, this.pending ? 1 : 0);
   }
   observe(w: World) {
-    if (this.run !== w.runId) { this.clear(); this.run = w.runId; this.hp = w.player.hp; this.mobility = w.mobility.sequence; }
+    if (this.run !== w.runId) { this.clear(); this.run = w.runId; this.hp = w.player.hp; this.mobility = w.mobility.sequence; this.ultimateSequence=0; }
     const hurt = this.hp - w.player.hp >= 8, blink = this.mobility !== w.mobility.sequence;
     this.hp = w.player.hp; this.mobility = w.mobility.sequence;
     if (w.character !== 'mage') { this.clear(); return; }
@@ -64,6 +67,18 @@ export class MageCastingController {
     if (w.status !== 'playing') return;
     if (hurt) this.interrupt('hurt', w.elapsed); else if (blink) this.interrupt('blink', w.elapsed);
     this.advance(w.elapsed);
+    const u=w.ultimate;
+    if(u.selected && u.sequence>0 && w.elapsed<u.started+CAST_DURATION[`ultimate-${u.selected}`]){
+      const ability: MageGesture=`ultimate-${u.selected}`,fresh=u.sequence!==this.ultimateSequence;
+      if(fresh){this.ultimateSequence=u.sequence;this.requested[ability]=(this.requested[ability]??0)+1;}
+      // Blink is instantaneous; its cosmetic block must not swallow the ultimate
+      // earned by that Blink. Hurt/death still win; resume at the real cast age.
+      if(this.block?.mode==='blink')this.block=undefined;
+      if(!this.block && w.elapsed<u.started+CAST_DURATION[ability] && (fresh||this.active?.ability!==ability)){
+        if(this.active)this.interrupted++;this.pending=undefined;
+        this.begin({ability,rank:5,origin:{...u.origin},target:u.nodes[0]?.at??{x:u.origin.x+u.direction.x*80,y:u.origin.y+u.direction.y*80}},u.started);
+      }
+    }
     const signals: CastSignal[] = [];
     for (const event of w.feedbackEvents) {
       if (event.type === 'ability' && isMageSpell(event.ability)) signals.push(this.resolve(w, event.ability, event));
@@ -96,6 +111,7 @@ export class MageCastingController {
   view(now: number) {
     const a = this.active;
     let frame = a ? Math.min(5, Math.floor(Math.max(0, now - a.started) / a.duration * 6)) : 0;
+    if(a?.ability==='ultimate-lightning'){const age=now-a.started,c=ULTIMATE.lightning;frame=age<c.invocation?(age<.14?0:1):age<c.preparation?2:age<c.preparation+c.reveal?3:age<c.preparation+c.reveal+c.recoil?4:5;}
     if (a?.ability === 'meteor') {
       const age = now - a.started;
       frame = a.impact ? age < .16 ? 3 + a.beats % 2 : 5 : age < .18 ? 0 : age < .34 ? 1 : age < .72 ? 1 + Math.floor(age * 9) % 2 : 3;

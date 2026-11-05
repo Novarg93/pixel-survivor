@@ -2,7 +2,7 @@ import { radialStick } from './movement';
 import type { Point } from '../utils/math';
 
 // Positions in the browser's standard mapping, independent of device names.
-export const GAMEPAD_BUTTONS = { confirm: 0, mobility: 2, previous: 4, next: 5, pause: 9, up: 12, down: 13, left: 14, right: 15 } as const;
+export const GAMEPAD_BUTTONS = { confirm: 0, mobility: 2, ultimate: 3, previous: 4, next: 5, pause: 9, up: 12, down: 13, left: 14, right: 15 } as const;
 export type GamepadAction = keyof typeof GAMEPAD_BUTTONS;
 export type GamepadNotice = 'connected' | 'disconnected' | 'unsupported' | 'unavailable';
 export type GamepadState = Pick<Gamepad, 'index' | 'connected' | 'mapping' | 'axes' | 'buttons'>;
@@ -82,7 +82,7 @@ export class GamepadInputController {
     }
     const pressed = new Set(Object.values(GAMEPAD_BUTTONS).filter(i => pad.buttons[i].pressed || pad.buttons[i].value > .5));
     const actions = this.baseline || context !== this.context ? [] : (Object.keys(GAMEPAD_BUTTONS) as GamepadAction[])
-      .filter(action => pressed.has(GAMEPAD_BUTTONS[action]) && !this.previous.has(GAMEPAD_BUTTONS[action]));
+      .filter(action => (action !== 'ultimate' || context.split(':').includes('playing')) && pressed.has(GAMEPAD_BUTTONS[action]) && !this.previous.has(GAMEPAD_BUTTONS[action]));
     this.previous = pressed; this.context = context; this.baseline = false;
     const stick = radialStick(pad.axes[0], pad.axes[1]);
     if (!stick.x && !stick.y) this.needsNeutral = false;

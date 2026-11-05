@@ -1,5 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { mockGamepads, connectPad, pressPad, stick, padFocus } from '../helpers/gamepad';
+test('built menu excludes temporary DEV ultimate launchers',async({page})=>{
+  await page.goto('/');await expect(page.getByRole('button',{name:/^Начать забег/})).toBeVisible();await expect(page.locator('[data-dev-ultimate]')).toHaveCount(0);await expect(page.getByLabel('DEV — тест ультимейтов')).toHaveCount(0);
+});
 for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('built public '+hero+' attempt '+biome+' starts, attacks, pauses, resizes and needs no external resources', async ({ page, baseURL }) => {
   const errors: string[] = [], external: string[] = [], artRequests: string[] = [];
   // Observe the real output without shipping a production test hook.

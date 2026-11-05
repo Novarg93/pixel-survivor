@@ -75,7 +75,7 @@ it('retains exact distant cast targets even when the bounded FX pool has no free
 });
 it('keeps the authored layout, directional palms and existing 24x30 pivot contract consistent', () => {
   const layout=mageCastingLayout(),manifest=JSON.parse(readFileSync('public/assets/hd/mage-casting.json','utf8')) as {frames:Record<string,{frame:{x:number;y:number;w:number;h:number}}>;meta:{origin:{x:number;y:number};worldSize:{width:number;height:number}}};
-  expect(layout.frames).toHaveLength(222);expect(Object.keys(manifest.frames)).toHaveLength(222);expect(manifest.meta.origin).toEqual({x:.5,y:.75});expect(manifest.meta.worldSize).toEqual({width:24,height:30});
+  expect(layout.frames).toHaveLength(294);expect(Object.keys(manifest.frames)).toHaveLength(294);expect(manifest.meta.origin).toEqual({x:.5,y:.75});expect(manifest.meta.worldSize).toEqual({width:24,height:30});
   for(const frame of layout.frames)expect(manifest.frames[frame.name].frame).toEqual(frame.frame);
   expect(castingDirection(-1,0)).toBe('left');expect(castingDirection(0,-1)).toBe('up');expect(castingHands('lightning',5,'right',2)).not.toEqual(castingHands('lightning',1,'right',2));
 });

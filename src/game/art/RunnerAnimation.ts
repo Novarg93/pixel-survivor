@@ -43,7 +43,7 @@ export class RunnerAnimation {
     const duration = RUNNER_CLIPS.death.frames / RUNNER_CLIPS.death.fps;
     for (const corpse of this.corpses) if (w.elapsed - corpse.started >= duration) corpse.active = false;
     for (const [id, track] of this.tracks) if (!live.has(id)) {
-      if (track.enemy.hp === 0) {
+      if (track.enemy.hp === 0 && track.enemy.deathSource !== 'ultimate-lightning') {
         let slot = this.corpses.find(c => !c.active);
         if (!slot && this.corpses.length < RUNNER_CORPSE_CAP) { slot = { active: false, enemyId: 0, x: 0, y: 0, elite: false, facing: 'right', started: 0 }; this.corpses.push(slot); }
         if (!slot) { slot = this.corpses.reduce((a, b) => a.started <= b.started ? a : b); this.replaced++; }

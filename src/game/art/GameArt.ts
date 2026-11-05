@@ -1,3 +1,4 @@
+import { UltimateArt } from './UltimateArt';
 import { PlayerHealthBar } from './PlayerHealthBar';
 import Phaser from 'phaser';
 import type { World } from '../systems/World';
@@ -74,8 +75,9 @@ export class GameArt {
   private heroCasting = false;
   private casting = new MageCastingController();
   private castingArt: MageCastingArt;
+  private ultimateArt: UltimateArt;
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
@@ -96,12 +98,15 @@ export class GameArt {
     const hurt = world.character === 'mage' && world.elapsed - this.heroHurtStarted < .25;
     const cast = this.casting.view(world.elapsed);
     this.heroCasting = world.character === 'mage' && world.status !== 'menu' && world.status !== 'over' && !hurt && cast.mode === 'cast' && !!cast.active;
-    const recoil = cast.active?.ability === 'fireball' && cast.frame === 2;
+    const recoil = (cast.active?.ability === 'fireball' && cast.frame === 2 || cast.active?.ability === 'ultimate-lightning' && cast.frame === 4);
     const visual = world.character === 'mage' && world.status === 'over' ? selectAsset('mage', mageFrame(facing, 'death', this.heroDeathAge)) : hurt ? selectAsset('mage', mageFrame(facing, 'hurt', world.elapsed - this.heroHurtStarted)) : this.heroCasting ? selectAsset('mageCasting',castingBodyFrame(facing,this.heroMoving,world.elapsed,recoil)) : heroVisual(world.character, facing, this.heroMoving, world.character !== 'mage' && world.player.invulnerableUntil > world.elapsed, world.elapsed);
     this.heroFrame = visual.frame ?? visual.texture; applyVisual(sprite, visual, multiplier);
+    sprite.setRotation(this.heroCasting&&cast.active?.ability==='ultimate-lightning'&&cast.frame===4?(world.ultimate.direction.x<0?.12:-.12):0);
   }
-  update(world: World, intensity: number) {
+  update(world: World, intensity: number, reducedMotion=false, reducedFlash=false) {
+    if(reducedMotion&&world.ultimate.selected==='lightning')this.heroSprite?.setRotation(0);
     if(this.heroSprite)this.castingArt.render(this.heroSprite,world,this.heroMoving,this.heroCasting,intensity);
+    this.ultimateArt.render(world,intensity,this.castingArt.diagnostics().hands,reducedMotion,reducedFlash,this.heroSprite);
     this.playerHealth.update(world);
     this.worldTime = world.elapsed;
     this.pickups.update(world);
@@ -172,6 +177,7 @@ export class GameArt {
     // Diagnostic reads only, pinned Phaser 4.2.1. Never used by gameplay.
     const clock = ['_active', '_pendingInsertion', '_pendingRemoval'].map(key => { const value: unknown = Reflect.get(this.scene.time, key); return Array.isArray(value) ? value.length : null; });
     return { heroFrame: this.heroFrame, atlasFrames: atlas.frameTotal - 1, runner: { atlasFrames: this.scene.textures.get(RUNNER_TEXTURE).frameTotal - 1, tracked: this.runner.tracked, activeDeaths: this.runner.corpses.filter(c => c.active).length, allocatedDeaths: this.runnerCorpses.filter(Boolean).length, replaced: this.runner.replaced, corpses: this.runner.corpses.flatMap((c, i) => c.active ? [{ ...c, frame: runnerFrame('death', c.facing, this.worldTime - c.started), width: this.runnerCorpses[i]?.displayWidth ?? 0, height: this.runnerCorpses[i]?.displayHeight ?? 0 }] : []) }, textures, chunks: textures.filter(t => t.startsWith('chunk-')).length,
+      ultimate: this.ultimateArt.diagnostics(),
       casting: {...this.casting.view(this.worldTime),...this.castingArt.diagnostics(),bodyFrame:this.heroFrame},
       playerHealth: this.playerHealth.diagnostics(),
       textureBytes: textures.reduce((n, key) => { const source = this.scene.textures.get(key).getSourceImage() as HTMLCanvasElement; return n + source.width * source.height * 4; }, 0),
@@ -185,5 +191,5 @@ export class GameArt {
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y }; }),
     };
   }
-  destroy() { this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
+  destroy() { this.ultimateArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

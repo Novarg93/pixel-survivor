@@ -34,7 +34,7 @@ export class BossAnimation {
     for (const c of this.corpses) if (w.elapsed - c.started >= BOSS_CLIPS.death.frames / BOSS_CLIPS.death.fps) c.active = false;
     const live = new Set(w.bosses.map(e => e.id));
     for (const [id, t] of this.tracks) if (!live.has(id)) {
-      if (t.enemy.hp === 0 && isHdBoss(t.enemy.kind)) {
+      if (t.enemy.hp === 0 && t.enemy.deathSource !== 'ultimate-lightning' && isHdBoss(t.enemy.kind)) {
         let c = this.corpses.find(c => !c.active);
         if (!c && this.corpses.length < 3) { c = { active: false, kind: t.enemy.kind, x: 0, y: 0, started: 0, facing: 'right', stage: 1 }; this.corpses.push(c); }
         c ??= this.corpses.reduce((a, b) => a.started <= b.started ? a : b);

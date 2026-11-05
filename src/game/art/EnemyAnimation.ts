@@ -33,7 +33,7 @@ export class EnemyAnimation {
     for (const c of this.corpses) if (w.elapsed - c.started >= .5) c.active = false;
     const live = new Set(w.enemies.map(e => e.id));
     for (const [id, t] of this.tracks) if (!live.has(id)) {
-      if (t.enemy.hp === 0 && isHdEnemy(t.enemy.kind)) {
+      if (t.enemy.hp === 0 && t.enemy.deathSource !== 'ultimate-lightning' && isHdEnemy(t.enemy.kind)) {
         let c = this.corpses.find(c => !c.active);
         if (!c && this.corpses.length < 24) { c = { active: false, id, kind: t.enemy.kind, x: 0, y: 0, elite: false, facing: 'right', started: 0 }; this.corpses.push(c); }
         if (!c) { c = this.corpses.reduce((a, b) => a.started <= b.started ? a : b); this.replaced++; }

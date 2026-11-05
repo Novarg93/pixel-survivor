@@ -7,7 +7,20 @@ export function synthesize(id: AssetId, sampleRate: number = AUDIO_BUDGET.sample
   const noise = () => { seed = Math.imul(seed, 1664525) + 1013904223 | 0; return (seed >>> 0) / 0x80000000 - 1; };
   for (let i = 0; i < pcm.length; i++) {
     const t = i / sampleRate, tail = duration - t; let value: number;
-    if (id === 'frost') {
+    if(id==='stormCharge'||id==='stormTension'){
+      const progress=t/duration,from=id==='stormCharge'?180:1800,to=id==='stormCharge'?1800:3100;
+      phase+=2*Math.PI*from*(to/from)**progress/sampleRate;
+      const raw=noise();filtered+=(raw-filtered)*.2;
+      value=(Math.sin(phase)*.17+Math.sin(phase*2.013)*.07+filtered*.12)*progress**.7;
+    }else if(id==='skyStrike'){
+      const raw=noise();filtered+=(raw-filtered)*.3;
+      value=(raw*.5+Math.sin(2*Math.PI*(210*t-300*t*t))*.24+filtered*.3)*Math.exp(-t*28)*Math.min(1,t/.002);
+    }else if(id==='storm'){
+      const raw=noise();filtered+=(raw-filtered)*.06;
+      const crack=raw*Math.exp(-t*55)*.5,boom=Math.sin(2*Math.PI*(62*t-8*t*t))*Math.exp(-t*4)*.32;
+      const branches=raw*Math.exp(-t*15)*(Math.sin(t*321)>0?.3:.1);
+      value=(crack+boom+branches+filtered*Math.exp(-t*3)*.6)*Math.min(1,t/.004);
+    } else if (id === 'frost') {
       // Original cold impulse, inharmonic crystal fractures, rounded low body
       // and airy ice tail. Soft noise and an envelope keep fast CDR comfortable.
       const raw = noise(); filtered += (raw - filtered) * .32;

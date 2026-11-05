@@ -15,7 +15,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 <template>
   <header class="hud">
     <div class="vitals">
-      <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b>
+      <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}{{state.practice?' · DEV':''}}</b>
       <div class="level-line"><small>УРОВЕНЬ {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Опыт" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ xpPercent(state.xp, state.xpNext) }}%</span></div>
       <span class="health-accessibility" role="progressbar" aria-label="Здоровье" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>

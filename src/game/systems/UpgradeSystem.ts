@@ -1,3 +1,4 @@
+import { ULTIMATE_DEFINITIONS, isUltimateId } from '../config/ultimates';
 import type { World } from './World';
 import { ABILITIES } from '../abilities/definitions';
 import { distance } from '../utils/math';
@@ -35,6 +36,7 @@ export const SUPPLIES: UpgradeDefinition[] = [
 ];
 export function eligibleUpgrades(w: World) { return UPGRADES.filter(u => (u.id !== 'projectiles' || w.character === 'mage') && (w.upgrades[u.id] ?? 0) < u.max && (!u.eligible || u.eligible(w))); }
 export function chooseUpgrades(w: World) {
+  if(w.ultimate.eligible(w)) return ULTIMATE_DEFINITIONS.map(d=>({id:`ultimate-${d.id}`,name:d.name,description:d.description,max:1,apply:()=>undefined}));
   const eligible = eligibleUpgrades(w);
   if (!w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) return eligible.filter(u => u.id.startsWith('mobility-'));
   const pool = eligible.length >= 3 ? [...eligible] : [...eligible, ...SUPPLIES];
@@ -43,6 +45,8 @@ export function chooseUpgrades(w: World) {
   return result;
 }
 export function applyUpgrade(w: World, id: string) {
+  const ultimate = id.slice('ultimate-'.length);
+  if(id.startsWith('ultimate-') && isUltimateId(ultimate)) return w.ultimate.choose(w,ultimate);
   const upgrade = [...UPGRADES, ...SUPPLIES].find(u => u.id === id);
   if (!upgrade || (w.upgrades[id] ?? 0) >= upgrade.max || (upgrade.eligible && !upgrade.eligible(w))) return false;
   upgrade.apply(w); w.upgrades[id] = (w.upgrades[id] ?? 0) + 1; return true;

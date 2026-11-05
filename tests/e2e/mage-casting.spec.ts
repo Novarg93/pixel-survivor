@@ -100,7 +100,7 @@ test('original Mage head/feet stay pixel-identical in casting bodies and all arm
     });
   });
   mkdirSync('docs/mage-casting',{recursive:true});writeFileSync('docs/mage-casting/HEAD_FEET_QA.json',JSON.stringify(rows,null,2));
-  expect(rows).toHaveLength(222);for(const row of rows){expect(row.border,row.name).toBe(0);expect(row.soft,row.name).toBe(0);expect(row.different,row.name).toBe(0);}
+  expect(rows).toHaveLength(294);for(const row of rows){expect(row.border,row.name).toBe(0);expect(row.soft,row.name).toBe(0);expect(row.different,row.name).toBe(0);}
   for(const row of rows.filter(r=>r.name.endsWith('-0')&&r.name.startsWith('arms-'))){const stem=row.name.slice(0,-1),clip=rows.filter(r=>r.name.startsWith(stem));expect(clip).toHaveLength(6);expect(new Set(clip.map(r=>r.hash)).size,row.name).toBe(6);}
   mkdirSync('docs/mage-casting',{recursive:true});writeFileSync('docs/mage-casting/HEAD_FEET_QA.json',JSON.stringify(rows,null,2));
 });

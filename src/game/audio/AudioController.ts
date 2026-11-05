@@ -6,7 +6,7 @@ export class AudioController {
   private enabled = false; private dead = false; private generation = 0;
   private volumes = { master: .3, music: .32, sfx: .8, ui: .64, ambient: .176 }; private muted = false;
   private status = 'menu'; private last = new Map<string, number>(); private serial = 0;
-  private voices = new Map<number, { voice: AudioVoice; bus: 'sfx' | 'ui'; priority: number }>();
+  private voices = new Map<number, { voice: AudioVoice; bus: 'sfx' | 'ui'; priority: number; event: SoundEvent }>();
   private loops = new Map<AssetId, AudioVoice>();
   private requested: Partial<Record<SoundEvent, number>> = {}; private played: Partial<Record<SoundEvent, number>> = {};
   private rejected = { blocked: 0, muted: 0, throttled: 0, budget: 0, unavailable: 0 };
@@ -41,7 +41,7 @@ export class AudioController {
       const rate = 1 + (this.random() - .5) * .06, gain = c.gain * Math.max(.1, Math.min(1, strength)) * (1 + (this.random() - .5) * .08);
       const voice = this.backend.start(c.asset, c.bus, gain, rate, false, () => this.voices.delete(id));
       if (!voice) { this.rejected.unavailable++; return false; }
-      this.voices.set(id, { voice, bus: c.bus, priority: c.priority }); this.last.set(event, now); this.last.set(group, now); this.played[event] = (this.played[event] ?? 0) + 1;
+      this.voices.set(id, { voice, bus: c.bus, priority: c.priority, event }); this.last.set(event, now); this.last.set(group, now); this.played[event] = (this.played[event] ?? 0) + 1;
       this.peakVoices = Math.max(this.peakVoices, this.voices.size); return true;
     } catch { this.rejected.unavailable++; return false; }
   }
@@ -55,6 +55,7 @@ export class AudioController {
     }
     this.peakLoops = Math.max(this.peakLoops, this.backend.diagnostics().loops);
   }
+  stopEvent(event:SoundEvent){for(const [id,v]of this.voices)if(v.event===event){v.voice.stop(.05);this.voices.delete(id);}}
   stop(fade = 0) { if (!fade) this.backend.stopAll(); else { for (const { voice } of this.voices.values()) voice.stop(fade); for (const voice of this.loops.values()) voice.stop(fade); } this.voices.clear(); this.loops.clear(); }
   reset() { this.stop(); this.last.clear(); this.generation++; }
   diagnostics() { return { unlocked: this.enabled, supported: this.backend.supported, running: this.backend.running, status: this.status, voices: this.voices.size, tracks: this.loops.size, peakVoices: this.peakVoices, peakLoops: this.peakLoops, requested: { ...this.requested }, played: { ...this.played }, rejected: { ...this.rejected }, volumes: { ...this.volumes }, muted: this.muted, ...this.backend.diagnostics() }; }

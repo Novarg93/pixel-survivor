@@ -1,4 +1,5 @@
-﻿import { CombatFeedback } from '../art/CombatFeedback';
+import { createUltimatePractice } from '../bootstrap/ultimatePractice';
+import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
 import { RadarPublisher } from '../radar/RadarPublisher';
@@ -45,6 +46,7 @@ export class GameScene extends Phaser.Scene {
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
   private mobilityRequested = false;
+  private ultimateRequested = false;
   private mobilityDirection: Point | undefined;
   private audio!: AudioController;
   private audioPresentation!: AudioPresentation;
@@ -82,14 +84,17 @@ export class GameScene extends Phaser.Scene {
       if (event.repeat || this.world.status !== 'playing' || event.target instanceof Element && event.target.closest('button,input,select,textarea,[role="dialog"]')) return;
       event.preventDefault(); this.mobilityRequested = true;
     };
+    const ultimateKey = (event: KeyboardEvent) => { if(event.repeat || this.world.status !== 'playing' || event.target instanceof Element && event.target.closest('button,input,select,textarea,[role="dialog"]'))return;event.preventDefault();this.ultimateRequested=true; };
+    this.input.keyboard?.on('keydown-Q',ultimateKey);
     this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
-      if (mobileViewport().blocked && ['restart', 'resume', 'mobility'].includes(command.type)) return;
+      if (mobileViewport().blocked && ['restart', 'resume', 'mobility', 'ultimate'].includes(command.type)) return;
       if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
+      if (command.type === 'ultimate') { if(this.world.status === 'playing')this.ultimateRequested=true;return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') this.orientationResume = false;
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
+      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = import.meta.env.DEV && command.type === 'restart' && command.devUltimate ? createUltimatePractice(Date.now(),command.devUltimate,this.runOptions.biome) : new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
       else if (command.type === 'resume') this.world.resume();
@@ -108,11 +113,12 @@ export class GameScene extends Phaser.Scene {
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
       window.__PIXEL__ = { world: this.world, setTestCharacter: character => { if (character !== 'mage' && character !== 'warrior') throw new Error('Unknown test character'); this.testCharacter = character; commands.emit({ type: 'preview' }); }, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics(), audio: () => this.audio.diagnostics() };
     }
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.events.off(Phaser.Scenes.Events.DESTROY, destroyHeldInput); destroyHeldInput(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.events.off(Phaser.Scenes.Events.DESTROY, destroyHeldInput); destroyHeldInput(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.input.keyboard?.off('keydown-Q',ultimateKey); this.ultimateRequested=false; this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
   private resetInput(preserveMovement = false) {
     if (!preserveMovement) this.heldInput.clear();
     this.gamepad.reset(preserveMovement);
+    this.ultimateRequested=false;
     if (!preserveMovement) this.touch = { x: 0, y: 0 }; this.mobilityRequested = false; this.mobilityDirection = undefined;
     this.input.keyboard?.resetKeys(); // Keep action-key cleanup, including Space.
     this.inputStatus = this.world.status;
@@ -132,25 +138,29 @@ export class GameScene extends Phaser.Scene {
     if (!viewport.blocked && pad.actions.includes('pause') && this.uiScreen === 'game') {
       if (this.world.status === 'playing') commands.emit({ type: 'pause' });
       else if (this.world.status === 'paused') commands.emit({ type: 'resume' });
+    } else if (this.world.status === 'playing' && pad.actions.includes('ultimate')) { this.ultimateRequested=true;
     } else if (this.world.status === 'playing' && pad.actions.includes('mobility')) {
       this.mobilityRequested = true; this.mobilityDirection = pad.movement;
     } else if (!viewport.blocked && this.world.status !== 'playing') {
-      const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause');
+      const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause' && a !== 'ultimate');
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
     const baseZoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640));
     const zoom = baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
+    this.world.ultimate.viewport={width:this.scale.width/zoom,height:this.scale.height/zoom};
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, this.mobilityDirection ?? input); this.mobilityDirection = undefined; }
     if (!viewport.blocked) this.world.step(delta / 1000, input);
+    if(this.ultimateRequested){this.ultimateRequested=false;if(!viewport.blocked)this.world.ultimate.activate(this.world);}
     this.syncInputState();
     this.art.observeCasts(this.world);
     this.audioPresentation.observe(this.world);
-    const moving = this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
+    const moving = !this.world.ultimate.casting && this.world.status === 'playing' && (input.x !== 0 || input.y !== 0);
     if (moving) { this.facing = input.x !== 0 ? 'side' : input.y < 0 ? 'up' : 'down'; if (input.x !== 0) this.mage.setFlipX(input.x < 0); else this.mage.setFlipX(false); }
+    if(this.world.ultimate.casting){const u=this.world.ultimate,target=u.nodes[0]?.at??u.origin,dx=target.x-u.origin.x,dy=target.y-u.origin.y;this.facing=Math.abs(dx)>=Math.abs(dy)?'side':dy<0?'up':'down';this.mage.setFlipX(this.facing==='side'&&dx<0);}
     this.art.hero(this.mage, this.world, this.facing, moving, this.world.status === 'menu' && this.scale.width > 600 ? 2 : 1);
     this.mage.setPosition(this.world.player.x, this.world.player.y);
     if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
@@ -174,7 +184,7 @@ export class GameScene extends Phaser.Scene {
       sprite.setAlpha(!preparingCharge && 'hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
-    this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7);
+    this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7, this.preferences.reducedMotion || matchMedia('(prefers-reduced-motion: reduce)').matches, this.preferences.reducedFlash || matchMedia('(prefers-reduced-motion: reduce)').matches);
     this.feedback.update(this.world, this.preferences);
     this.lootPresentation.update(this.world, this.preferences);
     this.radar.update(this.world);
