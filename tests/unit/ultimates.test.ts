@@ -9,11 +9,11 @@ function setup(id:UltimateId='lightning'){
   w.ultimate.choose(w,id);return w;
 }
 it('guarantees the three choices only on the eligible queued level; keeps XP curve/ranks and consumes exactly one pending choice',()=>{
-  const w=new World();w.elapsed=599;w.experience.level=39;w.gainXp(2000);expect(w.choices.every(c=>!c.id.startsWith('ultimate-'))).toBe(true);
-  w.selectUpgrade(w.choices[0].id);w.elapsed=601;w.gainXp(2000);expect(w.choices.map(c=>c.id)).toEqual(['ultimate-lightning','ultimate-frost','ultimate-fire']);
+  const w=new World();w.elapsed=299;w.experience.level=29;w.gainXp(2000);expect(w.choices.every(c=>!c.id.startsWith('ultimate-'))).toBe(true);
+  w.selectUpgrade(w.choices[0].id);w.elapsed=300;w.gainXp(2000);expect(w.choices.map(c=>c.id)).toEqual(['ultimate-lightning','ultimate-frost','ultimate-fire']);
   const pending=w.experience.pending,rank=w.abilities.fireball.level;expect(w.selectUpgrade('ultimate-frost')).toBe(true);expect(w.experience.pending).toBe(pending-1);expect(w.abilities.fireball.level).toBe(rank);
   w.gainXp(6000);expect(w.choices.some(c=>c.id.startsWith('ultimate-'))).toBe(false);
-  const before=new World();before.elapsed=601;before.experience.level=38;before.gainXp(2000);expect(before.choices.some(c=>c.id.startsWith('ultimate-'))).toBe(false);
+  const before=new World();before.elapsed=300;before.experience.level=28;before.gainXp(1000);expect(before.choices.some(c=>c.id.startsWith('ultimate-'))).toBe(false);
 });
 it('charges only once per confirmed Blink, caps ten, rejects no-target/paused/upgrade activation and resets on death',()=>{
   const empty=setup();expect(empty.ultimate.charge).toBe(10);expect(empty.ultimate.activate(empty)).toBe(false);expect(empty.ultimate.charge).toBe(10);
@@ -31,10 +31,22 @@ it.each(['lightning','frost','fire'] as const)('gives %s its first full charge o
   w.mobility.readyAt=w.elapsed;w.mobility.activate(w);expect(w.ultimate.charge).toBe(1);expect(w.ultimate.choose(w,id)).toBe(false);expect(w.ultimate.charge).toBe(1);
 });
 
-it('uses exact 10-minute/level40 boundaries and never charges from Blink before the choice',()=>{
-  const w=new World();w.elapsed=599.99;w.experience.level=40;expect(w.ultimate.eligible(w)).toBe(false);
-  w.elapsed=600;w.experience.level=39;expect(w.ultimate.eligible(w)).toBe(false);w.experience.level=40;expect(w.ultimate.eligible(w)).toBe(true);
+it('uses exact 5-minute/level30 boundaries and never charges from Blink before the choice',()=>{
+  const w=new World();w.elapsed=299.99;w.experience.level=30;expect(w.ultimate.eligible(w)).toBe(false);
+  w.elapsed=300;w.experience.level=29;expect(w.ultimate.eligible(w)).toBe(false);w.experience.level=30;expect(w.ultimate.eligible(w)).toBe(true);
   w.mobility.activate(w);expect(w.ultimate.charge).toBe(0);w.ultimate.choose(w,'fire');expect(w.ultimate.charge).toBe(10);expect(w.ultimate.sequence).toBe(0);
+});
+it.each([[299.999, 30, false], [299.999, 70, false], [300, 29, false], [300, 30, true], [301, 30, true], [900, 29, false]] as const)('ultimate eligibility at %ss, level%s is %s', (elapsed, level, eligible) => {
+  const w = new World(); w.elapsed = elapsed; w.experience.level = level;
+  expect(w.ultimate.eligible(w)).toBe(eligible);
+});
+it('offers the ultimate on exactly the queued level30 even when XP earns several levels at once', () => {
+  const w = new World(); w.elapsed = 300; w.experience.level = 28; w.gainXp(6000);
+  expect(w.upgradeLevel).toBe(29); expect(w.choices.every(c => !c.id.startsWith('ultimate-'))).toBe(true);
+  w.selectUpgrade(w.choices[0].id);
+  expect(w.upgradeLevel).toBe(30); expect(w.choices.map(c => c.id)).toEqual(['ultimate-lightning', 'ultimate-frost', 'ultimate-fire']);
+  expect(w.selectUpgrade('ultimate-fire')).toBe(true); expect(w.ultimate.charge).toBe(10);
+  expect(w.choices.every(c => !c.id.startsWith('ultimate-'))).toBe(true);
 });
 it('builds parallel siblings with nearest neighbours, no cycles, gap or out-of-bound propagation',()=>{
   const w=setup();w.facing={x:1,y:0};const coords=[[30,0],[60,30],[60,-30],[90,0],[950,0],[1300,0]];
@@ -73,11 +85,11 @@ it('does not reach an out-of-area node through a bridge and never consumes RNG b
   const nodes=chainStorm(w.player,w.facing,w.enemies,640,360);
   expect(nodes.map(n=>n.at.x)).toEqual([300,450,600]);expect(w.rng.next()).toBe(other.rng.next());
 });
-it('defers early level40 until a later level-up after ten minutes, preserves queued offers and Warrior eligibility',()=>{
-  const w=new World();w.elapsed=599;w.experience.level=39;w.gainXp(2000);w.selectUpgrade(w.choices[0].id);
-  w.elapsed=601;expect(w.status).toBe('playing');expect(w.choices).toHaveLength(0);
+it('defers early level30 until a later level-up after five minutes, preserves queued offers and Warrior eligibility',()=>{
+  const w=new World();w.elapsed=299;w.experience.level=29;w.gainXp(2000);w.selectUpgrade(w.choices[0].id);
+  w.elapsed=300;expect(w.status).toBe('playing');expect(w.choices).toHaveLength(0);
   w.gainXp(6000);expect(w.choices).toHaveLength(3);expect(w.choices.every(c=>c.id.startsWith('ultimate-'))).toBe(true);
-  w.selectUpgrade('ultimate-lightning');expect(w.experience.pending).toBe(2);expect(w.status).toBe('upgrade');expect(w.choices.every(c=>!c.id.startsWith('ultimate-'))).toBe(true);
+  w.selectUpgrade('ultimate-lightning');expect(w.experience.pending).toBe(3);expect(w.status).toBe('upgrade');expect(w.choices.every(c=>!c.id.startsWith('ultimate-'))).toBe(true);
   const warrior=new World(1,{character:'warrior'});warrior.elapsed=1000;warrior.experience.level=60;expect(warrior.ultimate.eligible(warrior)).toBe(false);
 });
 it('ash is exclusive to ultimate kills and physics objects stay bounded through a 150 enemy atomic kill',()=>{

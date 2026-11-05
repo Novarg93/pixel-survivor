@@ -8,6 +8,13 @@ export class WorldChunkSystem {
   private chunks = new Map<string, Phaser.GameObjects.Image>();
   private lastBounds = '';
   private biome: BiomeId = 'grove';
+  private atmosphereTint = 0xffffff;
+  setAtmosphereTint(tint: number) {
+    if (tint === this.atmosphereTint) return;
+    this.atmosphereTint = tint;
+    for (const image of this.chunks.values()) image.setTint(tint).setTintMode(Phaser.TintModes.MULTIPLY);
+  }
+  atmosphereDiagnostics() { return [...this.chunks.values()].map(image => ({ key: image.texture.key, tint: image.tintTopLeft })); }
   setBiome(biome: BiomeId) { if(this.biome!==biome){this.destroy();this.biome=biome;} }
   constructor(private scene: Phaser.Scene) {}
   update(x: number, y: number, width: number, height: number, padding = 1) {
@@ -20,7 +27,7 @@ export class WorldChunkSystem {
       {
         this.scene.textures.addCanvas(chunk.key, this.biome === 'dark-forest' ? createHdForestChunk(chunk.x, chunk.y) : createHdGroveChunk(chunk.x, chunk.y))!.setFilter(Phaser.Textures.FilterMode.NEAREST);
         const size = ASSET_REGISTRY[this.biome === 'dark-forest' ? 'darkForest' : 'grove'].logicalSize!;
-        this.chunks.set(chunk.key, this.scene.add.image(chunk.x * size.width, chunk.y * size.height, chunk.key).setOrigin(0).setDisplaySize(size.width, size.height).setDepth(-30));
+        this.chunks.set(chunk.key, this.scene.add.image(chunk.x * size.width, chunk.y * size.height, chunk.key).setOrigin(0).setDisplaySize(size.width, size.height).setDepth(-30).setTint(this.atmosphereTint).setTintMode(Phaser.TintModes.MULTIPLY));
         continue;
       }
     }

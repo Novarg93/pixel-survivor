@@ -91,20 +91,28 @@ test('pause, reduced effects, held left stick, interruption and ten lit restarts
 });
 
 test('restores actual Canvas background pixels and leaves HUD filters unchanged',async({page})=>{
-  await start(page);await page.waitForTimeout(100);
+  await start(page);
+  // Compare the cinematic's own dim/recovery on a settled atmosphere, outside 10:00–10:02.5.
+  await page.evaluate(()=>{window.__PIXEL__!.world.elapsed=615;});await page.waitForTimeout(100);
   const result=await page.evaluate(async()=>{
     const w=window.__PIXEL__!.world,canvas=document.querySelector('canvas')!,copy=document.createElement('canvas');copy.width=80;copy.height=80;const g=copy.getContext('2d')!;
     const pixels=()=>{g.clearRect(0,0,80,80);g.drawImage(canvas,10,10,80,80,0,0,80,80);const p=g.getImageData(0,0,80,80).data;let sum=0;for(let i=0;i<p.length;i+=4)sum+=p[i]+p[i+1]+p[i+2];return sum/(p.length/4*3);};
     const filters=()=>{const values:string[]=[];for(let e=document.querySelector('.hud');e;e=e.parentElement)values.push(getComputedStyle(e).filter);return values;};
     let before=0,after=0,dark=0;const hudBefore=filters();let hudDuring:string[]=[];
+    // Match the environment clock for control/recovered pixels: even settled fog drifts.
+    // The cinematic itself still plays normally, with the default motion/flash settings.
+    const baselineAt=w.elapsed+2;w.pause();w.elapsed=baselineAt;
     // WebGL's drawing buffer is valid inside the rendered RAF, not an arbitrary evaluate.
-    await new Promise<void>(resolve=>requestAnimationFrame(()=>{before=pixels();w.ultimate.activate(w);resolve();}));
-    await new Promise<void>(resolve=>{const frame=()=>{const age=w.elapsed-w.ultimate.started;if(!dark&&age>=.26){dark=pixels();hudDuring=filters();}if(age<1.05)requestAnimationFrame(frame);else{after=pixels();resolve();}};requestAnimationFrame(frame);});
-    return{before,dark,after,hudBefore,hudDuring,state:window.__PIXEL__!.art().ultimate};
+    await new Promise<void>(resolve=>requestAnimationFrame(()=>{before=pixels();w.elapsed=baselineAt-2;w.resume();w.ultimate.activate(w);resolve();}));
+    await new Promise<void>(resolve=>{const frame=()=>{const age=w.elapsed-w.ultimate.started;if(!dark&&age>=.26){dark=pixels();hudDuring=filters();}if(w.elapsed<baselineAt)requestAnimationFrame(frame);else resolve();};requestAnimationFrame(frame);});
+    w.pause();w.elapsed=baselineAt;
+    await new Promise<void>(resolve=>requestAnimationFrame(()=>{after=pixels();resolve();}));
+    return{before,dark,after,baselineAt,recoveredAt:w.elapsed,hudBefore,hudDuring,state:window.__PIXEL__!.art().ultimate};
   });
   writeFileSync(`${report}/pixel-recovery.json`,JSON.stringify(result,null,2));
   expect(result.dark).toBeLessThan(result.before-1);expect(Math.abs(result.after-result.before)).toBeLessThan(.05);expect(result.hudDuring).toEqual(result.hudBefore);expect(result.hudDuring.every(f=>f==='none')).toBe(true);
   expect(result.state).toMatchObject({dim:0,flash:0,activeAura:0});
+  expect(result.recoveredAt).toBe(result.baselineAt);
 });
 
 for(const [width,height]of [[1280,720],[844,390]])test(`Lightning constant 150+3+3 frame comparison ${width}`,async({browser,baseURL})=>{

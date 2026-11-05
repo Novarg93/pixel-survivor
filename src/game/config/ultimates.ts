@@ -1,6 +1,6 @@
 export type UltimateId = 'lightning' | 'frost' | 'fire';
 export const ULTIMATE = {
-  level: 40, time: 600, charges: 10,
+  level: 30, time: 300, charges: 10,
   lightning: { damage: 480, bossFraction: .12, invocation: .34, skyStrike: .065, preparation: .52, reveal: .075, hold: .125, fade: .12, recovery: .4, recoil: .2, branches: 4, targetCap: 156, ashCap: 48, spawnQuiet: 2, spawnRecovery: .7, groundDuration: 2, groundMargin: 24 },
   frost: { invocation: .45, creation: .25, activation: .2, duration: 4, residual: 4, radiusDiagonalRatio: .25 },
   fire: { damage: 62, bossFraction: .24, duration: 10, interval: .5, radius: 164, trailWidth: 38, trailDuration: 2, trailCap: 12, trailStep: 18 },

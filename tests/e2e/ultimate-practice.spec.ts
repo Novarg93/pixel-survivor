@@ -10,9 +10,9 @@ for(const [width,height]of [[1280,720],[844,390],[1024,768]])test(`menu has no D
  await context.close();
 });
 
-test('natural level-up at 10:00 grants ready ultimate; next use requires successful Blink',async({page})=>{
+test('natural level-up at 05:00 on level30 grants ready ultimate; next use requires successful Blink',async({page})=>{
   await page.goto('/?test=1');await page.getByRole('button',{name:/^Начать забег/}).click();
-  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.elapsed=600;w.experience.level=39;w.player.invulnerableUntil=1e9;for(const a of Object.values(w.abilities))a.level=0;w.gainXp(2000);});
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.elapsed=300;w.experience.level=29;w.player.invulnerableUntil=1e9;for(const a of Object.values(w.abilities))a.level=0;w.gainXp(w.snapshot().xpNext);});
   await expect(page.locator('[data-upgrade^="ultimate-"]')).toHaveCount(3);await page.locator('[data-upgrade="ultimate-fire"]').click();await expect(page.locator('.ultimate-control')).toContainText('10/10');
   await page.keyboard.press('q');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.world.ultimate.sequence)).toBe(1);
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=w.ultimate.activeUntil;w.ultimate.update(w);});await page.keyboard.press('q');expect(await page.evaluate(()=>window.__PIXEL__!.world.ultimate.sequence)).toBe(1);
