@@ -2,12 +2,14 @@ import { ULTIMATE as C, ULTIMATE_DEFINITIONS, type UltimateId } from '../config/
 import type { World } from '../systems/World';
 import type { Enemy, DamageSource } from '../entities/types';
 import { FrostUltimate } from './FrostUltimate';
+import { FireUltimate } from './FireUltimate';
 import { distance, segmentDistance, type Point } from '../utils/math';
 import { chainStorm, type StormNode } from './chainStorm';
 export interface FireTrail { from: Point; to: Point; expires: number }
 export interface GroundDischarge { origin: Point; radius: number; started: number }
 export class UltimateSystem {
   readonly frost=new FrostUltimate();
+  readonly fire=new FireUltimate();
   selected: UltimateId | null = null; charge = 0; sequence = 0;
   started = -Infinity; released = -Infinity; activeUntil = 0;
   origin: Point = {x:0,y:0}; direction: Point = {x:0,y:1};
@@ -16,7 +18,7 @@ export class UltimateSystem {
   ashes: {id:number;at:Point;kind:Enemy['kind'];elite:boolean;started:number}[] = [];
   trails: FireTrail[] = []; private hits = new Set<number>();
   private nextHit = new Map<number,number>(); private spent = new Map<number,number>(); private lastTrail: Point = {x:0,y:0};
-  private blinkSequence = 0; private updated = 0; private fireSoundAt = 0;
+  private blinkSequence = 0; private updated = 0;
   private skyPlayed = false; private overloadPlayed = false;
   private spawnReliefStarted = -Infinity;
   regularSpawnFactor(now: number) {
@@ -45,6 +47,7 @@ export class UltimateSystem {
     this.released=this.selected==='lightning'?-Infinity:w.elapsed;
     this.activeUntil=w.elapsed+(this.selected==='lightning'?C.lightning.preparation+C.lightning.reveal+C.lightning.hold+C.lightning.fade+C.lightning.recovery:this.selected==='fire'?C.fire.duration:C.frost.invocation+C.frost.creation+C.frost.activation+C.frost.duration);
     if(this.selected==='frost')this.frost.start(w,this.viewport);else w.sound(this.selected==='lightning'?'ultimate-charge':'ultimate-fire');
+    if(this.selected==='fire')this.fire.start(w.elapsed,this.activeUntil);
     return true;
   }
   private hit(w: World,e: Enemy,damage:number,fraction:number,source:DamageSource,executeRegular=false) {
@@ -66,6 +69,7 @@ export class UltimateSystem {
     const now=w.elapsed;
     this.updated=now;
     if(this.selected==='frost')this.frost.update(w);
+    if(this.selected==='fire')this.fire.update(w);
     this.ashes=this.ashes.filter(a=>now-a.started<.85);
     if(this.ground&&now-this.ground.started>=C.lightning.groundDuration)this.ground=null;
     if(now>=this.activeUntil && !(this.selected==='frost' && this.updated<this.activeUntil)){if(this.casting)this.started=this.released=-Infinity;this.trails=[];this.nodes=[];this.nextHit.clear();this.spent.clear();return;}
@@ -90,12 +94,11 @@ export class UltimateSystem {
       if(distance(this.lastTrail,w.player)>=C.fire.trailStep)this.addTrail(w,this.lastTrail,w.player,now);
       const live=new Set(w.enemies.map(e=>e.id));for(const id of this.nextHit.keys())if(!live.has(id)){this.nextHit.delete(id);this.spent.delete(id);}
       for(const e of [...w.combatTargets])if(w.status==='playing'&&now+1e-7>=(this.nextHit.get(e.id)??0)&&(distance(w.player,e)<=C.fire.radius+e.radius||this.trails.some(t=>segmentDistance(e,t.from,t.to)<=C.fire.trailWidth/2+e.radius))){
-        this.nextHit.set(e.id,now+C.fire.interval);this.hit(w,e,C.fire.damage,C.fire.bossFraction,'ultimate-fire');
+        this.fire.ignite(e,now);this.nextHit.set(e.id,now+C.fire.interval);this.hit(w,e,C.fire.damage,C.fire.bossFraction,'ultimate-fire');
       }
-      if(now>=this.fireSoundAt){w.sound('ultimate-embers');this.fireSoundAt=now+1.2;}
     }
     this.updated=now;
   }
   snapshot(now:number){const d=ULTIMATE_DEFINITIONS.find(d=>d.id===this.selected);return{selected:this.selected,charge:this.charge,ready:this.charge===C.charges,name:d?.name??'',icon:d?.icon??'',color:d?.color??'',remaining:this.selected==='fire'?Math.max(0,this.activeUntil-now):0};}
-  clear(){this.frost.clear();this.selected=null;this.charge=0;this.sequence=0;this.nodes=[];this.ashes=[];this.trails=[];this.ground=null;this.hits.clear();this.nextHit.clear();this.spent.clear();this.activeUntil=0;this.started=this.released=this.spawnReliefStarted=-Infinity;this.fireSoundAt=0;this.blinkSequence=0;this.skyPlayed=this.overloadPlayed=false;}
+  clear(){this.frost.clear();this.fire.clear();this.selected=null;this.charge=0;this.sequence=0;this.nodes=[];this.ashes=[];this.trails=[];this.ground=null;this.hits.clear();this.nextHit.clear();this.spent.clear();this.activeUntil=0;this.started=this.released=this.spawnReliefStarted=-Infinity;this.blinkSequence=0;this.skyPlayed=this.overloadPlayed=false;}
 }

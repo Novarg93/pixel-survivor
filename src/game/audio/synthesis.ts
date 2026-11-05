@@ -7,7 +7,11 @@ export function synthesize(id: AssetId, sampleRate: number = AUDIO_BUDGET.sample
   const noise = () => { seed = Math.imul(seed, 1664525) + 1013904223 | 0; return (seed >>> 0) / 0x80000000 - 1; };
   for (let i = 0; i < pcm.length; i++) {
     const t = i / sampleRate, tail = duration - t; let value: number;
-    if(id==='frostCharge'||id==='frostImpact'||id==='frostSeal'||id==='frostAir'){
+    if(id==='inferno'||id==='embers'){
+      const raw=noise();filtered+=(raw-filtered)*.075;
+      if(id==='inferno')value=(filtered*.95+raw*.12+Math.sin(2*Math.PI*(110*t-48*t*t))*.28)*Math.exp(-t*7)*Math.min(1,t/.009);
+      else value=(filtered*.8+Math.sin(t*2*Math.PI*60)*.045)*(.8+.2*Math.sin(t*2*Math.PI/duration));
+    }else if(id==='frostCharge'||id==='frostImpact'||id==='frostSeal'||id==='frostAir'){
       const raw=noise();filtered+=(raw-filtered)*(id==='frostAir'?.025:.16);const p=t/duration;
       if(id==='frostCharge')value=(filtered*.5+Math.sin(t*2*Math.PI*(160+100*p))*.045)*(.2+.8*p);
       else if(id==='frostImpact')value=(Math.sin(2*Math.PI*(85*t-50*t*t))*.4+filtered*.55)*Math.exp(-t*15)*Math.min(1,t/.004);

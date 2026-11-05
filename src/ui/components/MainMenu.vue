@@ -6,15 +6,13 @@ const inputDevice = useInputDevice();
 import type { CharacterId } from '../../game/config/characters';
 import type { BiomeId } from '../../game/config/biomes';
 import { isPublicCharacter } from '../../game/bootstrap/publicCharacters';
-import { ULTIMATE_DEFINITIONS, type UltimateId } from '../../game/config/ultimates';
-const devPractice=import.meta.env.DEV;
 const unavailable = ref(false);
 function chooseCharacter(value: CharacterId) {
   if (!isPublicCharacter(value)) { unavailable.value = true; return; }
   unavailable.value = false; emit('character', value);
 }
 defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
-const emit = defineEmits<{ play: []; practice: [value:UltimateId]; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
+const emit = defineEmits<{ play: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
  <div class="menu-shell">
@@ -26,10 +24,6 @@ const emit = defineEmits<{ play: []; practice: [value:UltimateId]; help: []; set
    <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
    <div class="run-selection" aria-label="Локация"><button :aria-pressed="biome === 'grove'" v-pad="() => emit('biome','grove')" @click="emit('biome','grove')">Роща осколков</button><button :aria-pressed="biome === 'dark-forest'" v-pad="() => emit('biome','dark-forest')" @click="emit('biome','dark-forest')">Dark Forest</button></div>
    <button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
-   <div v-if="devPractice" class="ultimate-practice" aria-label="DEV — тест ультимейтов">
-    <small>DEV · 10:00 · УРОВЕНЬ 40 · СЛУЧАЙНАЯ ПРОКАЧКА · БЕЗ РЕКОРДОВ</small>
-    <div><button v-for="ultimate in ULTIMATE_DEFINITIONS" :key="ultimate.id" :data-dev-ultimate="ultimate.id" :style="{'--practice-color':ultimate.color}" v-pad="() => emit('practice',ultimate.id)" @click="emit('practice',ultimate.id)">{{ultimate.icon}} {{ultimate.name}}</button></div>
-   </div>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
    <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>
@@ -40,8 +34,6 @@ const emit = defineEmits<{ play: []; practice: [value:UltimateId]; help: []; set
  </div>
 </template>
 <style scoped>
-.ultimate-practice{margin:10px 0;max-width:500px}.ultimate-practice>small{display:block;font:8px/1.5 monospace;color:#b8cbd6;margin-bottom:5px}.ultimate-practice>div{display:flex;gap:5px;flex-wrap:wrap}.ultimate-practice button{flex:1;min-width:115px;min-height:36px;font-size:10px;padding:6px;border:1px solid var(--practice-color);color:var(--practice-color);background:#142235}.ultimate-practice button:focus-visible{outline:2px solid #fff1c9;outline-offset:2px}
-@media(max-height:500px){.ultimate-practice{margin:5px 0}.ultimate-practice button{min-height:32px;padding:4px}.ultimate-practice>small{font-size:7px}}
 .run-selection .coming-soon{filter:grayscale(1) brightness(.65);background:#181d25;border-color:#65717a;color:#c2c8ce}
 .run-selection .coming-soon:hover{filter:grayscale(1) brightness(.8)}
 .run-selection .coming-soon:focus{outline:2px solid #fff1c9;outline-offset:3px}

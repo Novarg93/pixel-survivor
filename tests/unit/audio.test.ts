@@ -23,6 +23,14 @@ class Backend implements AudioBackend {
   destroy() { this.stopAll(); }
 }
 async function setup() { const b = new Backend(), c = new AudioController(b, () => .5); c.settings(DEFAULT_SETTINGS); await c.gesture(); await Promise.resolve(); c.update('playing', 'grove'); return { b, c }; }
+it('keeps Fire roar quiet and singular, with existing pause/mute/SFX-zero/expiry cleanup',async()=>{
+  const {b,c}=await setup();for(let i=0;i<100;i++)c.update('playing','grove',false,true);
+  expect(b.calls.filter(call=>call.asset==='embers')).toEqual([{asset:'embers',gain:.11,rate:1,loop:true}]);expect(b.loops.size).toBe(3);
+  c.update('paused','grove',false,true);expect(b.active.size).toBe(0);c.update('playing','grove',false,true);expect(b.loops.size).toBe(3);
+  c.settings({...DEFAULT_SETTINGS,sfxVolume:0});c.update('playing','grove',false,true);expect(b.loops.size).toBe(2);
+  c.settings(DEFAULT_SETTINGS);c.update('playing','grove',false,true);c.update('playing','grove');expect(b.loops.size).toBe(2);
+  c.update('playing','grove',false,true);c.settings({...DEFAULT_SETTINGS,muted:true});expect(b.active.size).toBe(0);c.destroy();expect(b.active.size).toBe(0);
+});
 it('keeps the Frost field ambience as one quiet SFX loop and releases it on pause/mute/end',async()=>{
   const {b,c}=await setup();c.update('playing','grove',true);for(let i=0;i<20;i++)c.update('playing','grove',true);
   expect(b.calls.filter(call=>call.asset==='frostAir')).toHaveLength(1);expect(b.calls.find(call=>call.asset==='frostAir')).toMatchObject({gain:.09,loop:true});expect(b.loops.size).toBe(3);

@@ -11,7 +11,7 @@ export class AudioPresentation {
   observe(w: World) {
     if (this.run !== w.runId) { this.audio.reset(); this.run = w.runId; this.status = 'menu'; this.offer = this.mobility = this.encounter = 0; this.guardians.clear(); }
     const pending = new Map<SoundEvent, number>(), add = (event: SoundEvent, strength = 1) => pending.set(event, Math.max(pending.get(event) ?? 0, strength));
-    this.audio.update(w.status, w.biome,w.ultimate.selected==='frost'&&w.ultimate.frost.view(w.elapsed).active);
+    this.audio.update(w.status, w.biome,w.ultimate.selected==='frost'&&w.ultimate.frost.view(w.elapsed).active,w.ultimate.selected==='fire'&&w.ultimate.fire.active(w.elapsed));
     if(w.ultimate.selected!=='fire'||w.elapsed>=w.ultimate.activeUntil)this.audio.stopEvent('ultimate.embers');
     if(!w.ultimate.casting){this.audio.stopEvent('ultimate.charge');this.audio.stopEvent('ultimate.overload');}
     if (w.status === 'over' && this.status !== 'over') { add('player.death'); add('ui.gameOver'); }
@@ -35,6 +35,7 @@ export class AudioPresentation {
       else if(cue==='ultimate-frost-seal')add('ultimate.frostSeal');
       else if(cue==='ultimate-fire')add('ultimate.fire');
       else if(cue==='ultimate-embers')add('ultimate.embers');
+      else if(cue==='ultimate-singe')add('ultimate.singe');
       else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
       else if (cue === 'shield') add('arcaneShield.trigger');
       else if (cue === 'charge') add('encounter.charge');

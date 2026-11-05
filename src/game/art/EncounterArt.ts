@@ -1,5 +1,6 @@
 import type Phaser from 'phaser';
 import { GUARDIAN_ENCOUNTER as C, MOBILITY } from '../config/encounters';
+import { showPlayerShieldShell } from './playerShieldVisuals';
 import { guardianBeamEnd, type GuardianEncounter } from '../systems/GuardianEncounter';
 import type { MobilitySystem } from '../systems/MobilitySystem';
 import type { World } from '../systems/World';
@@ -96,7 +97,7 @@ export function drawMobilityUpgrade(g: Phaser.GameObjects.Graphics, w: World, m:
     }
   }
   const sprint=w.buffs.remaining('arcane-sprint',w.elapsed)>0,berserk=w.buffs.remaining('berserk',w.elapsed)>0,absorb=m.absorbValue(w.elapsed)>0;
-  if(absorb)for(const side of [-1,1])g.fillStyle(0xb9eeff,.65*intensity).fillRect(w.player.x+side*12-1,w.player.y-10,2,13).fillRect(w.player.x+side*10-1,w.player.y-13,3,3);
+  if(absorb&&showPlayerShieldShell(w))for(const side of [-1,1])g.fillStyle(0xb9eeff,.65*intensity).fillRect(w.player.x+side*12-1,w.player.y-10,2,13).fillRect(w.player.x+side*10-1,w.player.y-13,3,3);
   if(sprint||berserk)for(let i=0;i<6;i++){
     const a=i*Math.PI/3+w.elapsed*3,r=sprint?16:13;
     g.fillStyle(sprint?0xb58cfa:0xf5a76b,.85*intensity).fillRect(Math.round(w.player.x+Math.cos(a)*r),Math.round(w.player.y+Math.sin(a)*r),2,3);

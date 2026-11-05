@@ -3,6 +3,7 @@ import type { World } from '../systems/World';
 import type { Effect } from '../entities/types';
 import { abilityVisual } from './abilityVisual';
 import { ARMAGEDDON } from '../config/mageAbilities';
+import { showPlayerShieldShell } from './playerShieldVisuals';
 
 export function effectPhase(now: number, started: number, duration: number) { return Math.min(1, Math.max(0, (now - started) / Math.max(.001, duration))); }
 // Stepped rings and narrow bright cores. One existing Graphics batch, no particles/timers.
@@ -39,7 +40,7 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
         g.fillStyle(0xf0fcff, alpha).fillRect(x - 1, y - h - 3, 2, Math.max(2, h * .6));
       }
     } else if (e.kind === 'shield') {
-      if (w.status === 'over' || e.expires <= w.elapsed) continue;
+      if (w.status === 'over' || e.expires <= w.elapsed || !showPlayerShieldShell(w)) continue;
       // A spent cast must not leave a protective shell. The large evolution
       // pulse remains visible as damage feedback while the player is alive.
       if (w.character === 'mage' && w.shield.absorbValue(w.elapsed) <= 0 && e.radius <= 32) continue;
@@ -103,7 +104,7 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
       g.lineStyle(1, 0xd9f3f7, alpha).lineBetween(e.x - 9, e.y + 7, e.x + 9, e.y + 7);
     } else if ((e.novaSlowUntil ?? 0) > w.elapsed) for (const side of [-1, 1]) g.fillStyle(0xb8e4f3, Math.max(.4, intensity)).fillRect(Math.round(e.x + side * (e.radius + 2)), Math.round(e.y + 3), 2, 4);
   }
-  if (w.shield.absorbValue(w.elapsed)>0) {
+  if (w.shield.absorbValue(w.elapsed)>0 && showPlayerShieldShell(w)) {
     const v = abilityVisual(w.abilities.shield.level);
     const pulse = .65 + Math.sin(w.elapsed * 3) * .12;
     ring(g, w.player.x, w.player.y, 22, 0xa5c4ff, Math.max(.25, intensity) * pulse, 0, 16);

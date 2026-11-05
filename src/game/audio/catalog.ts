@@ -14,6 +14,7 @@ export type AssetId = PatchId | 'grove' | 'forest' | 'underscore';
 function cue(asset: PatchId, bus: 'ui' | 'sfx', priority: number, gap: number, gain = .55, group = asset) { return { asset, bus, priority, gap, gain, group }; }
 export const SOUND_CATALOG = {
   'ultimate.charge':cue('stormCharge','sfx',11,.3,.35), 'ultimate.sky':cue('skyStrike','sfx',11,.3,.8), 'ultimate.overload':cue('stormTension','sfx',11,.3,.26), 'ultimate.lightning':cue('storm','sfx',11,.5,.85), 'ultimate.frost':cue('frostCharge','sfx',11,.5,.35), 'ultimate.frostImpact':cue('frostImpact','sfx',11,.5,.65), 'ultimate.frostSeal':cue('frostSeal','sfx',11,.5,.5), 'ultimate.fire':cue('inferno','sfx',11,.5,.7), 'ultimate.embers':cue('embers','sfx',5,.9,.3),
+  'ultimate.singe':cue('fire','sfx',5,.16,.18),
   'ui.start': cue('chime', 'ui', 8, .25), 'ui.select': cue('click', 'ui', 3, .1, .35),
   'ui.upgrade': cue('relic', 'ui', 8, .3, .45), 'ui.pause': cue('click', 'ui', 8, .15, .4), 'ui.gameOver': cue('threat', 'ui', 9, 1, .3),
   'player.hurt': cue('hurt', 'sfx', 10, .2), 'player.death': cue('death', 'sfx', 12, 1, .65),

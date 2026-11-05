@@ -38,7 +38,7 @@ import { RareGuardianSystem, guardianVisible } from './RareGuardianSystem';
 import { MobilitySystem } from './MobilitySystem';
 import { formationEdge, pressureAt } from './EndgamePressure';
 import type { MovementInput } from '../input/movement';
-export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId; practice?: boolean }
+export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
@@ -230,6 +230,7 @@ export class World {
       if (shot.ownerId !== undefined && !this.enemies.some(e => e.id === shot.ownerId)) continue;
       if(shot.homing&&!steerGuardianOrb(this,shot,dt))continue;
       const old = { x: shot.x, y: shot.y }; shot.x += shot.vx * dt; shot.y += shot.vy * dt;
+      if(this.ultimate.selected==='fire'&&this.ultimate.fire.absorb(this,old,shot))continue;
       if (shot.hostile) { if (segmentDistance(this.player, old, shot) < (shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius+9:12)) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
       const targets = this.enemies.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
       for (const target of targets) {
@@ -274,7 +275,6 @@ export class World {
     const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
-      ...(this.options.practice ? {practice:true} : {}),
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),

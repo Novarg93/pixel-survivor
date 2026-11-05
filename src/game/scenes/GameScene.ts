@@ -1,4 +1,3 @@
-import { createUltimatePractice } from '../bootstrap/ultimatePractice';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
@@ -95,7 +94,7 @@ export class GameScene extends Phaser.Scene {
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') this.orientationResume = false;
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = import.meta.env.DEV && command.type === 'restart' && command.devUltimate ? createUltimatePractice(Date.now(),command.devUltimate,this.runOptions.biome) : new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
+      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
       else if (command.type === 'resume') this.world.resume();
