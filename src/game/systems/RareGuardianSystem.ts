@@ -8,6 +8,7 @@ import type { Enemy } from '../entities/types';
 import { ARTIFACTS } from '../loot/ArtifactSystem';
 import { beginGuardianEncounter, guardianExpired, guardianLeash, updateGuardianEncounter, type GuardianEncounter } from './GuardianEncounter';
 import { GUARDIAN_ORBS } from '../config/guardianOrbs';
+import { ultimateFrozen,unfrozenDelta } from './UltimateFreeze';
 export function guardianVisible(w: Pick<World, 'player' | 'width' | 'height'>, at: Point) { return Math.abs(at.x - w.player.x) <= Math.max(0, w.width / 2 - 17) && Math.abs(at.y - w.player.y) <= Math.max(0, w.height / 2 - 20); }
 interface GuardianWave { id: number; minute: number; total: number; killed: number; remaining: Set<number>; failed: boolean }
 export class RareGuardianSystem {
@@ -85,6 +86,7 @@ export class RareGuardianSystem {
     for (const id of [...this.owners.keys()]) if (!w.guardians.some(e => e.id === id)) this.resolve(w, id, false);
     for (const current of [...w.guardians]) {
       if (w.status !== 'playing') break;
+      if(ultimateFrozen(current,w.elapsed)||unfrozenDelta(current,w.elapsed,dt)<=0&&dt>0)continue;
       if (guardianVisible(w, current)) current.discovered = true;
       let state = this.encounters.get(current.id);
       if (!state && distance(current, w.player) <= D.activationRadius) { current.discovered = true; this.awaken(w, current); state = this.encounters.get(current.id); }

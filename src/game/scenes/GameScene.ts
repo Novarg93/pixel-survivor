@@ -1,4 +1,5 @@
 import { createUltimatePractice } from '../bootstrap/ultimatePractice';
+import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
@@ -179,7 +180,8 @@ export class GameScene extends Phaser.Scene {
       sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
-      if (preparingCharge && entity.boss!.until - this.world.elapsed <= CHARGE_BOSS.flashDuration) sprite.setTint(0xffe6b8).setTintMode(Phaser.TintModes.FILL);
+      if('kind' in entity&&ultimateFrozen(entity,this.world.elapsed))sprite.setTint(0x96d9ec).setTintMode(Phaser.TintModes.MULTIPLY);
+      else if (preparingCharge && entity.boss!.until - this.world.elapsed <= CHARGE_BOSS.flashDuration) sprite.setTint(0xffe6b8).setTintMode(Phaser.TintModes.FILL);
       else if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY); else sprite.clearTint();
       sprite.setAlpha(!preparingCharge && 'hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
     }

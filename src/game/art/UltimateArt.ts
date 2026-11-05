@@ -4,6 +4,8 @@ import type { Point } from '../utils/math';
 import { ULTIMATE as C } from '../config/ultimates';
 import { enemyVisual, visualDimensions } from './assetRegistry';
 import { lightningCinematic } from '../ultimates/lightningCinematic';
+import { LightningGroundArt } from './LightningGroundArt';
+import { FrostUltimateArt } from './FrostUltimateArt';
 
 // One batch and sixteen reusable ash silhouettes. No emitters, timers, tweens or gameplay writes.
 export class UltimateArt {
@@ -13,10 +15,14 @@ export class UltimateArt {
   private lighting: Phaser.GameObjects.Graphics;
   private glow: Phaser.GameObjects.Image[]=[];
   private state=lightningCinematic(0,-Infinity,-Infinity,false);
-  constructor(private scene:Phaser.Scene){this.g=scene.add.graphics().setName('ultimate-feedback').setDepth(14.2);this.lighting=scene.add.graphics().setName('lightning-world-light').setDepth(9);}
+  private ground:LightningGroundArt;
+  private frost:FrostUltimateArt;
+  constructor(private scene:Phaser.Scene){this.g=scene.add.graphics().setName('ultimate-feedback').setDepth(14.2);this.lighting=scene.add.graphics().setName('lightning-world-light').setDepth(9);this.ground=new LightningGroundArt(scene);this.frost=new FrostUltimateArt(scene);}
   render(w:World,intensity:number,hands:readonly Point[],reducedMotion:boolean,reducedFlash:boolean,hero?:Phaser.GameObjects.Sprite){
     const g=this.g.clear(),u=w.ultimate,now=w.elapsed,age=now-u.started, strength=Math.max(.35,intensity), live=w.status!=='over'&&!!u.selected;
     const state=this.state=lightningCinematic(now,u.started,u.released,live&&u.selected==='lightning',intensity,reducedMotion||reducedFlash);
+    this.ground.render(u.ground,now,live&&u.selected==='lightning',intensity,reducedMotion||reducedFlash);
+    this.frost.render(w,intensity,reducedMotion||reducedFlash);
     this.lighting.clear();
     if(state.dim>0||state.flash>0){
       const camera=this.scene.cameras.main,area=camera.worldView;
@@ -66,20 +72,6 @@ export class UltimateArt {
             }
           }
         }
-      }else if(u.selected==='frost'&&now<u.activeUntil){
-        const p=Math.max(0,Math.min(1,age/C.frost.duration)),length=Math.max(u.viewport.width,u.viewport.height)*C.frost.lengthScreens,front=length*p,width=Math.min(u.viewport.width,u.viewport.height)*C.frost.widthFraction, d=u.direction;
-        const at=(along:number,side:number)=>({x:u.origin.x+d.x*along-d.y*side,y:u.origin.y+d.y*along+d.x*side});
-        for(let band=0;band<4;band++){
-          const along=Math.max(0,front-band*14),a=at(along,-width/2),b=at(along,width/2);
-          g.lineStyle(band?8:3,band?0x93cad6:0xe3ffff,(band?.13:.9)*strength).lineBetween(a.x,a.y,b.x,b.y);
-        }
-        const count=reducedMotion?12:24;
-        for(let i=0;i<count;i++){
-          const side=(i/(count-1)-.5)*width,back=(i%3)*11,pnt=at(Math.max(0,front-back),side),h=8+(i%4)*4;
-          g.fillStyle(i%2?0x89cbdc:0xc1eff4,strength*.85).fillTriangle(Math.round(pnt.x-4),Math.round(pnt.y+3),Math.round(pnt.x+2),Math.round(pnt.y-h),Math.round(pnt.x+6),Math.round(pnt.y+3));
-          g.lineStyle(1,0xeaffff,strength).lineBetween(pnt.x+2,pnt.y-h,pnt.x+3,pnt.y);
-        }
-        for(let i=0;i<12;i++){const pnt=at(front*i/12,((i*17)%11-5)*width*.06);g.fillStyle(0x99d8e3,strength*.25*(1-p)).fillRect(Math.round(pnt.x)-3,Math.round(pnt.y)-1,6,2);}
       }else if(u.selected==='fire'&&age>=0&&now<u.activeUntil+.35){
         const fade=now<u.activeUntil?1:Math.max(0,1-(now-u.activeUntil)/.35),r=C.fire.radius;
         for(const t of u.trails){const alpha=Math.min(1,(t.expires-now)/.4)*strength;if(alpha<=0)continue;
@@ -113,6 +105,6 @@ export class UltimateArt {
   private flame(x:number,y:number,h:number,alpha:number,time:number,reduced:boolean){const g=this.g,rise=h+(reduced?0:Math.sin(time*10)*2);x=Math.round(x);y=Math.round(y);
     g.fillStyle(0xe76b48,alpha*.7).fillTriangle(x-4,y+2,x-2,y-rise,x+4,y);g.fillStyle(0xffb75d,alpha).fillTriangle(x-2,y,x+1,y-rise*.7,x+3,y);g.fillStyle(0xffe8ac,alpha*.8).fillRect(x,y-3,1,3);
   }
-  diagnostics(){return{batches:2,allocatedAsh:this.ash.length,activeAsh:this.ashCount,allocatedAura:this.glow.length,activeAura:this.glow.filter(i=>i.visible).length,...this.state};}
-  destroy(){this.g.destroy();this.lighting.destroy();for(const image of [...this.ash,...this.glow])image.destroy();this.ash=[];this.glow=[];}
+  diagnostics(){return{batches:5,ground:this.ground.diagnostics(),frost:this.frost.diagnostics(),allocatedAsh:this.ash.length,activeAsh:this.ashCount,allocatedAura:this.glow.length,activeAura:this.glow.filter(i=>i.visible).length,...this.state};}
+  destroy(){this.g.destroy();this.lighting.destroy();this.ground.destroy();this.frost.destroy();for(const image of [...this.ash,...this.glow])image.destroy();this.ash=[];this.glow=[];}
 }

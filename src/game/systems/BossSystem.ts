@@ -8,9 +8,10 @@ import {updateMagicTeleport,fireBossVolley} from './BossMagic';
 import {ENDGAME} from '../config/endgame';
 import {bossFloor,bossTell} from './BossMagic';
 import {BOSS_MAGIC,MAGIC_ATTACKS} from '../config/bossEnrage';
+import { ultimateFrozen } from './UltimateFreeze';
 export const BOSS_CAP = ENCOUNTER_DIRECTOR.bossCap;
 export function updateBoss(w: World, e: Enemy, dt: number) {
-  if(w.status!=='playing'||e.hp<=0||!w.enemies.includes(e))return;
+  if(w.status!=='playing'||e.hp<=0||!w.enemies.includes(e)||ultimateFrozen(e,w.elapsed))return;
   if (e.kind === 'charger') { updateChargeBoss(w, e, dt); return; }
   if(updateMagicTeleport(w,e))return;
   if (e.kind === 'eclipse') { updateEclipse(w, e, dt); return; }

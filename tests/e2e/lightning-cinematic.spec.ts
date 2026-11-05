@@ -19,7 +19,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Divine Storm real eight-
   const before=await page.locator('canvas').screenshot();writeFileSync(`${directory}/01-normal-${width}.png`,before);
   await page.evaluate(()=>{
     const w=window.__PIXEL__!.world,hits:{id:number;at:number}[]=[],original=w.damageEnemy.bind(w);
-    Object.assign(window,{lightningHits:hits});w.damageEnemy=(e,n,source,cap)=>{if(source==='ultimate-lightning')hits.push({id:e.id,at:w.elapsed});return original(e,n,source,cap);};
+    Object.assign(window,{lightningHits:hits});w.damageEnemy=(e,n,source,cap,execute)=>{if(source==='ultimate-lightning')hits.push({id:e.id,at:w.elapsed});return original(e,n,source,cap,execute);};
   });
   await page.keyboard.down('d');
   if(width===1280)await page.keyboard.press('q');else await page.locator('.ultimate-control').dispatchEvent('pointerdown',{pointerId:30,pointerType:'touch'});
@@ -66,13 +66,13 @@ test('pause, reduced effects, held left stick, interruption and ten lit restarts
   await page.evaluate(()=>window.__PIXEL__!.world.resume());await page.waitForFunction(()=>!window.__PIXEL__!.world.ultimate.casting);
   // Existing pause policy requires neutral. Then hold the same stick through a new cast.
   await page.evaluate(()=>window.__GAMEPAD_MOCK__.stick(0,0));await page.waitForTimeout(70);
-  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil;});
+  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil&&w.ultimate.regularSpawnFactor(w.elapsed)===1;});
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.ultimate.charge=10;w.spawn('tank',{x:w.player.x+70,y:w.player.y});window.__GAMEPAD_MOCK__.stick(.8,0);w.ultimate.activate(w);});
   await page.waitForFunction(()=>!window.__PIXEL__!.world.ultimate.casting);
   const releaseX=await page.evaluate(()=>window.__PIXEL__!.world.player.x);await page.waitForTimeout(150);expect(await page.evaluate(()=>window.__PIXEL__!.world.player.x)).toBeGreaterThan(releaseX);
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.waitForFunction(()=>window.__PIXEL__!.art().ultimate.dim===0);
-  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil;});
+  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil&&w.ultimate.regularSpawnFactor(w.elapsed)===1;});
   await page.evaluate(async()=>{
     window.__GAMEPAD_MOCK__.stick(0,0);const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:.3,muted:true,pixelScale:2,effectsIntensity:.3,reducedMotion:true,reducedFlash:true}});
     const w=window.__PIXEL__!.world;w.ultimate.charge=10;w.spawn('tank',{x:w.player.x+70,y:w.player.y});w.ultimate.activate(w);
@@ -121,12 +121,14 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Lightning constant 150+3
   const result=await page.evaluate(async()=>{
     const w=window.__PIXEL__!.world;
     const sample=async(ms:number)=>{const rows:{delta:number;update:number}[]=[];let before=performance.now();const start=before;await new Promise<void>(resolve=>{const frame=(now:number)=>{rows.push({delta:now-before,update:window.__PIXEL__!.metrics().updateMs});before=now;if(now-start<ms)requestAnimationFrame(frame);else resolve();};requestAnimationFrame(frame);});return rows.filter(r=>r.delta>0);};
-    await sample(300);const baseline=await sample(1000),start=performance.now();w.ultimate.activate(w);const activation=performance.now()-start,cast=await sample(1450);
+    // Include all five residual passes and their cleanup under constant enemy density.
+    await sample(300);const baseline=await sample(1000),start=performance.now();w.ultimate.activate(w);const activation=performance.now()-start,cast=await sample(2650);
     return{baseline,cast,activation,metrics:window.__PIXEL__!.metrics(),art:window.__PIXEL__!.art().ultimate,clock:window.__PIXEL__!.art().clock};
   });
   const percentile=(rows:{delta:number}[],p:number)=>rows.map(r=>r.delta).sort((a,b)=>a-b)[Math.floor(rows.length*p)];
   const before=percentile(result.baseline,.5),after=percentile(result.cast,.5),p95=percentile(result.cast,.95);
   expect(after).toBeLessThanOrEqual(before*1.2+1);expect(p95).toBeLessThanOrEqual(Math.max(34,percentile(result.baseline,.95)*1.5));expect(result.activation).toBeLessThan(20);
   expect(result.art).toMatchObject({allocatedAura:2,activeAura:0,dim:0,flash:0});expect(result.clock).toEqual([0,0,0]);expect(result.metrics.enemies).toBe(150);expect(result.metrics.bosses).toBe(3);expect(result.metrics.guardians).toBe(3);
+  expect(result.art.ground).toMatchObject({geometry:0,arcs:0,alpha:0});
   await page.screenshot({path:`${directory}/constant-stress-${width}.png`});writeFileSync(`${report}/constant-performance-${width}.json`,JSON.stringify({medianBeforeFps:1000/before,medianCastFps:1000/after,p95FrameMs:p95,...result},null,2));await context.close();
 });

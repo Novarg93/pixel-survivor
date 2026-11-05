@@ -3,6 +3,7 @@ import type { Enemy } from '../entities/types';
 import { distance } from '../utils/math';
 import type { World } from './World';
 import {updateGuardianOrbs} from './GuardianOrbs';
+import { ultimateFrozen } from './UltimateFreeze';
 
 export interface GuardianEncounter {
   orbIndex?: number; nextOrbAt?: number; ownerId: number; phase: 'awakening' | 'beam-warning' | 'beam' | 'recovery' | 'meteor-warning' | 'orb-warning' | 'orbs';
@@ -19,7 +20,7 @@ export function guardianLeash(w: World) {
 }
 
 export function updateGuardianEncounter(w:World,e:Enemy,state:GuardianEncounter,dt:number){
-  if(!Number.isFinite(dt)||dt<0||w.status!=='playing'||state.phase==='awakening'&&w.elapsed<state.until)return;
+  if(!Number.isFinite(dt)||dt<0||w.status!=='playing'||ultimateFrozen(e,w.elapsed)||state.phase==='awakening'&&w.elapsed<state.until)return;
   updateGuardianOrbs(w,e,state);
 }
 export function guardianExpired(w: World, e: Enemy, state: GuardianEncounter) {

@@ -23,6 +23,12 @@ class Backend implements AudioBackend {
   destroy() { this.stopAll(); }
 }
 async function setup() { const b = new Backend(), c = new AudioController(b, () => .5); c.settings(DEFAULT_SETTINGS); await c.gesture(); await Promise.resolve(); c.update('playing', 'grove'); return { b, c }; }
+it('keeps the Frost field ambience as one quiet SFX loop and releases it on pause/mute/end',async()=>{
+  const {b,c}=await setup();c.update('playing','grove',true);for(let i=0;i<20;i++)c.update('playing','grove',true);
+  expect(b.calls.filter(call=>call.asset==='frostAir')).toHaveLength(1);expect(b.calls.find(call=>call.asset==='frostAir')).toMatchObject({gain:.09,loop:true});expect(b.loops.size).toBe(3);
+  c.update('paused','grove',true);expect(b.loops.size).toBe(0);c.update('playing','grove',true);expect(b.loops.size).toBe(3);
+  c.update('playing','grove',false);expect(b.loops.size).toBe(2);c.settings({...DEFAULT_SETTINGS,muted:true});expect(b.active.size).toBe(0);
+});
 it('routes the new Frost Nova through existing gains, mute, rate limit and voice budget', async () => {
   const { b, c } = await setup();
   expect(SOUND_CATALOG['frostNova.cast']).toMatchObject({ asset: 'frost', bus: 'sfx', gain: .45, gap: .16 });

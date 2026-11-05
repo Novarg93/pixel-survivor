@@ -1,4 +1,5 @@
 import { UltimateArt } from './UltimateArt';
+import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { PlayerHealthBar } from './PlayerHealthBar';
 import Phaser from 'phaser';
 import type { World } from '../systems/World';
@@ -76,11 +77,20 @@ export class GameArt {
   private casting = new MageCastingController();
   private castingArt: MageCastingArt;
   private ultimateArt: UltimateArt;
+  private frozenVisuals=new Map<number,VisualSelection>();
+  private frozenRun='';
   heroFrame = '';
   constructor(private scene: Phaser.Scene) { this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
+    if(this.frozenRun!==world.runId){this.frozenRun=world.runId;this.frozenVisuals.clear();}
+    if('kind' in entity&&ultimateFrozen(entity,world.elapsed)){
+      let visual=this.frozenVisuals.get(entity.id);if(!visual){visual=this.liveEntityVisual(entity,world);this.frozenVisuals.set(entity.id,visual);}return visual;
+    }
+    this.frozenVisuals.delete(entity.id);return this.liveEntityVisual(entity,world);
+  }
+  private liveEntityVisual(entity: RenderEntity, world: World): VisualSelection {
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
     if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world); return selectAsset(entity.kind, bossFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started, p.stage)); }
@@ -104,6 +114,7 @@ export class GameArt {
     sprite.setRotation(this.heroCasting&&cast.active?.ability==='ultimate-lightning'&&cast.frame===4?(world.ultimate.direction.x<0?.12:-.12):0);
   }
   update(world: World, intensity: number, reducedMotion=false, reducedFlash=false) {
+    const liveIds=new Set(world.enemies.map(e=>e.id));for(const id of this.frozenVisuals.keys())if(!liveIds.has(id))this.frozenVisuals.delete(id);
     if(reducedMotion&&world.ultimate.selected==='lightning')this.heroSprite?.setRotation(0);
     if(this.heroSprite)this.castingArt.render(this.heroSprite,world,this.heroMoving,this.heroCasting,intensity);
     this.ultimateArt.render(world,intensity,this.castingArt.diagnostics().hands,reducedMotion,reducedFlash,this.heroSprite);
@@ -191,5 +202,5 @@ export class GameArt {
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y }; }),
     };
   }
-  destroy() { this.ultimateArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
+  destroy() { this.frozenVisuals.clear();this.ultimateArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

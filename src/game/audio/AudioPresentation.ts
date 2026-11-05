@@ -11,7 +11,7 @@ export class AudioPresentation {
   observe(w: World) {
     if (this.run !== w.runId) { this.audio.reset(); this.run = w.runId; this.status = 'menu'; this.offer = this.mobility = this.encounter = 0; this.guardians.clear(); }
     const pending = new Map<SoundEvent, number>(), add = (event: SoundEvent, strength = 1) => pending.set(event, Math.max(pending.get(event) ?? 0, strength));
-    this.audio.update(w.status, w.biome);
+    this.audio.update(w.status, w.biome,w.ultimate.selected==='frost'&&w.ultimate.frost.view(w.elapsed).active);
     if(w.ultimate.selected!=='fire'||w.elapsed>=w.ultimate.activeUntil)this.audio.stopEvent('ultimate.embers');
     if(!w.ultimate.casting){this.audio.stopEvent('ultimate.charge');this.audio.stopEvent('ultimate.overload');}
     if (w.status === 'over' && this.status !== 'over') { add('player.death'); add('ui.gameOver'); }
@@ -31,6 +31,8 @@ export class AudioPresentation {
       else if(cue==='ultimate-overload')add('ultimate.overload');
       else if(cue==='ultimate-lightning')add('ultimate.lightning');
       else if(cue==='ultimate-frost')add('ultimate.frost');
+      else if(cue==='ultimate-frost-impact')add('ultimate.frostImpact');
+      else if(cue==='ultimate-frost-seal')add('ultimate.frostSeal');
       else if(cue==='ultimate-fire')add('ultimate.fire');
       else if(cue==='ultimate-embers')add('ultimate.embers');
       else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');

@@ -1,6 +1,6 @@
 export type AudioBus = 'master' | 'music' | 'sfx' | 'ui' | 'ambient';
 export const PATCHES = {
-  stormCharge:[.34,180,1800,.7,.4], skyStrike:[.16,1800,120,.2,.85], stormTension:[.115,1800,3100,.5,.2], storm:[.85,85,32,.3,.8], avalanche:[1.1,2100,130,.7,.5], inferno:[.65,100,55,.2,.8], embers:[1.2,70,95,.1,.8],
+  stormCharge:[.34,180,1800,.7,.4], skyStrike:[.16,1800,120,.2,.85], stormTension:[.115,1800,3100,.5,.2], storm:[1.1,85,32,.3,.8], frostCharge:[.45,180,520,.3,.8], frostImpact:[.25,100,45,.2,.5], frostSeal:[.2,1300,2300,.7,.1], frostAir:[.2,80,90,.1,.9], inferno:[.65,100,55,.2,.8], embers:[1.2,70,95,.1,.8],
   click: [.07, 900, 500, 0, .05], chime: [.3, 520, 1040, .25, .02], xp: [.12, 1000, 1450, .1, .01],
   heal: [.38, 360, 720, .4, .02], relic: [.6, 390, 1170, .6, .02], hurt: [.18, 140, 55, 0, .35],
   death: [.8, 200, 35, .2, .25], wind: [.22, 250, 750, .1, .65], blink: [.25, 400, 1350, .4, .1],
@@ -13,7 +13,7 @@ export type PatchId = keyof typeof PATCHES;
 export type AssetId = PatchId | 'grove' | 'forest' | 'underscore';
 function cue(asset: PatchId, bus: 'ui' | 'sfx', priority: number, gap: number, gain = .55, group = asset) { return { asset, bus, priority, gap, gain, group }; }
 export const SOUND_CATALOG = {
-  'ultimate.charge':cue('stormCharge','sfx',11,.3,.35), 'ultimate.sky':cue('skyStrike','sfx',11,.3,.8), 'ultimate.overload':cue('stormTension','sfx',11,.3,.26), 'ultimate.lightning':cue('storm','sfx',11,.5,.85), 'ultimate.frost':cue('avalanche','sfx',11,.5,.7), 'ultimate.fire':cue('inferno','sfx',11,.5,.7), 'ultimate.embers':cue('embers','sfx',5,.9,.3),
+  'ultimate.charge':cue('stormCharge','sfx',11,.3,.35), 'ultimate.sky':cue('skyStrike','sfx',11,.3,.8), 'ultimate.overload':cue('stormTension','sfx',11,.3,.26), 'ultimate.lightning':cue('storm','sfx',11,.5,.85), 'ultimate.frost':cue('frostCharge','sfx',11,.5,.35), 'ultimate.frostImpact':cue('frostImpact','sfx',11,.5,.65), 'ultimate.frostSeal':cue('frostSeal','sfx',11,.5,.5), 'ultimate.fire':cue('inferno','sfx',11,.5,.7), 'ultimate.embers':cue('embers','sfx',5,.9,.3),
   'ui.start': cue('chime', 'ui', 8, .25), 'ui.select': cue('click', 'ui', 3, .1, .35),
   'ui.upgrade': cue('relic', 'ui', 8, .3, .45), 'ui.pause': cue('click', 'ui', 8, .15, .4), 'ui.gameOver': cue('threat', 'ui', 9, 1, .3),
   'player.hurt': cue('hurt', 'sfx', 10, .2), 'player.death': cue('death', 'sfx', 12, 1, .65),

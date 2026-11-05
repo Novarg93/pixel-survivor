@@ -45,17 +45,19 @@ it('builds parallel siblings with nearest neighbours, no cycles, gap or out-of-b
 });
 it('one atomic release survives dead graph nodes, applies multipliers once, respects boss caps, emits ash only on ultimate kills and resumes held movement',()=>{
   const w=setup();w.stats.damage=2;w.artifacts.grant(w,'damage');w.player.invulnerableUntil=1e9;w.facing={x:1,y:0};
-  const first=w.spawn('tank',{x:30,y:0})!,second=w.spawn('tank',{x:70,y:0})!,boss=w.spawn('charger',{x:100,y:0})!;boss.boss!.until=1e9;
+  const first=w.spawn('tank',{x:30,y:0})!,second=w.spawn('tank',{x:460,y:0})!,boss=w.spawn('charger',{x:100,y:0})!;boss.boss!.until=1e9;
+  for(const x of [170,310])w.spawn('tank',{x,y:0});
   second.hp=second.maxHp=1e6;const hp=second.hp,bhp=boss.hp;w.ultimate.charge=10;expect(w.ultimate.activate(w)).toBe(true);w.damageEnemy(first,1e9);
   for(let i=0;i<10;i++)w.step(.05,{x:1,y:0});expect(w.player.x).toBe(0);expect(second.hp).toBe(hp);
   w.step(.05,{x:1,y:0});expect(hp-second.hp).toBeCloseTo(C.lightning.damage*2*1.08);expect(bhp-boss.hp).toBeLessThanOrEqual(boss.maxHp*.12+1e-6);
   const after=second.hp;w.step(.05,{x:1,y:0});expect(second.hp).toBe(after);expect(w.player.x).toBeGreaterThan(0);expect(w.ultimate.ashes.some(a=>a.id===first.id)).toBe(false);expect(w.snapshot().ultimateDamage?.lightning).toBeGreaterThan(0);
 });
-it('Frost sweeps forward once, roots regulars, uses existing control resistance for bosses and Guardians',()=>{
-  const w=setup('frost');w.facing={x:1,y:0};const a=w.spawn('tank',{x:80,y:0})!,behind=w.spawn('tank',{x:-80,y:0})!,side=w.spawn('tank',{x:80,y:180})!,boss=w.spawn('charger',{x:100,y:0})!,guardian=w.spawn('guardian',{x:100,y:30})!;
+it('Frost seal controls all directions, bosses and Guardians with an independent shared thaw deadline and no damage',()=>{
+  const w=setup('frost');w.facing={x:1,y:0};const a=w.spawn('tank',{x:80,y:0})!,behind=w.spawn('tank',{x:-80,y:0})!,side=w.spawn('tank',{x:80,y:120})!,boss=w.spawn('charger',{x:100,y:0})!,guardian=w.spawn('guardian',{x:100,y:30})!;
   for(const e of w.enemies)e.hp=e.maxHp=1e6;w.ultimate.charge=10;w.ultimate.activate(w);w.elapsed+=.3;w.ultimate.update(w);
-  expect(a.freezeUntil).toBeGreaterThan(w.elapsed);expect(behind.hp).toBe(1e6);expect(side.hp).toBe(1e6);expect(boss.freezeUntil??0).toBe(0);expect(guardian.freezeUntil??0).toBe(0);expect(boss.novaSlowUntil).toBeGreaterThan(w.elapsed);
-  const hp=a.hp;w.elapsed+=.1;w.ultimate.update(w);expect(a.hp).toBe(hp);
+  expect(w.enemies.every(e=>!e.ultimateFreeze)).toBe(true);
+  w.elapsed=w.ultimate.frost.activeAt+C.frost.activation;w.ultimate.update(w);
+  for(const e of [a,behind,side,boss,guardian]){expect(e.ultimateFreeze?.until).toBe(w.ultimate.frost.thawsAt);expect(e.hp).toBe(1e6);expect(e.freezeUntil??0).toBe(0);expect(e.novaSlowUntil??0).toBe(0);}
 });
 it('Fire has a shared per-target gate, finite trails including real Blink paths, ten game seconds and no invulnerability',()=>{
   const w=setup('fire'),e=w.spawn('tank',{x:40,y:0})!;e.hp=e.maxHp=1e6;w.ultimate.charge=10;w.ultimate.activate(w);const end=w.ultimate.activeUntil;

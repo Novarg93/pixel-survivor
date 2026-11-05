@@ -1,4 +1,5 @@
 import { UltimateSystem } from '../ultimates/UltimateSystem';
+import { advanceUltimateFreeze, ultimateFrozen } from './UltimateFreeze';
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
 import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
 import { ENEMIES, ENEMY_NAMES, isBossKind, type EnemyKind } from '../config/enemyDefinitions';
@@ -61,6 +62,7 @@ export class World {
   clearTemporaryState() {
     this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb(); this.ultimate.clear();
     for (const e of this.enemies) {
+      delete e.ultimateFreeze;
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.boss.magic=undefined;e.boss.contactSafeUntil=undefined;e.shootingAt = 0; }
     }
@@ -119,6 +121,7 @@ export class World {
   id() { return ++this.serial; }
   spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
     const boss = isBossKind(kind);
+    if (!boss && kind !== 'guardian' && this.ultimate.regularSpawnFactor(this.elapsed) === 0) return;
     if (kind === 'guardian' ? this.guardians.length >= GUARDIAN_BALANCE.cap : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
     if (kind === 'guardian') elite = false;
     const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng)), definition = ENEMIES[kind];
@@ -140,15 +143,16 @@ export class World {
     const projectile = this.projectilePool.acquire({ ...shot, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
-  damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity) {
+  damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
     if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
     if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
     const before = enemy.hp;
     if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
-    enemy.hp = Math.max(0, enemy.hp - Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1))); enemy.hitUntil = this.elapsed + 0.12;
+    const devastation=executeRegular&&source==='ultimate-lightning'&&!enemy.boss&&enemy.kind!=='guardian';
+    enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1))); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
-    if (!enemy.boss && enemy.kind !== 'guardian') { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
+    if (!enemy.boss && enemy.kind !== 'guardian'&&!ultimateFrozen(enemy,this.elapsed)) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
       this.scoring.recordKill(enemy.kind, enemy.elite);
       this.sound('kill');
@@ -198,22 +202,27 @@ export class World {
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
     if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
     if (vector.x || vector.y) this.facing = vector;
+    // Release starts relief before this frame's spawns, including Splitter offspring.
+    if (this.ultimate.selected === 'lightning') this.ultimate.update(this);
+    if (this.status !== 'playing') return;
     const profile = profileAt(this.elapsed);
     const cadence=spawnCadenceAt(this.elapsed);
-    if (this.spawnClock.tick(dt, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
+    const spawnFactor=this.ultimate.regularSpawnFactor(this.elapsed);
+    if(spawnFactor===0)this.spawnClock.reset();
+    else if (this.spawnClock.tick(dt*spawnFactor, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
       for (let i = 0; i < cadence.burst; i++) {
         const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
         this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
       }
     }
     this.encounterDirector.update(this);
-    // Resolve Lightning release before contact/Guardian damage at the cast boundary.
-    if (this.ultimate.selected === 'lightning') this.ultimate.update(this);
+    if(this.ultimate.selected==='frost')this.ultimate.update(this);
+    advanceUltimateFreeze(this);
     this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     if (this.status !== 'playing') return;
     this.mobility.tick(this);
-    if (this.ultimate.selected !== 'lightning') this.ultimate.update(this);
+    if (this.ultimate.selected === 'fire') this.ultimate.update(this);
     this.enemies = this.enemies.filter(e => { const keep = e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
@@ -236,7 +245,8 @@ export class World {
     if (this.status !== 'playing') return;
     this.retainProjectiles(p => p.expires > this.elapsed && distance(p, this.player) < Math.max(700, Math.hypot(this.width, this.height)));
     this.effects = this.effects.filter(e => { if (e.expires > this.elapsed) return true; this.effectPool.release(e); return false; });
-    for (const impact of this.impacts.filter(i => i.landAt <= this.elapsed)) {
+    const frozenOwners=new Set(this.enemies.filter(e=>ultimateFrozen(e,this.elapsed)).map(e=>e.id));
+    for (const impact of this.impacts.filter(i => i.landAt <= this.elapsed&&!(i.hostile&&i.ownerId!==undefined&&frozenOwners.has(i.ownerId)))) {
       if (this.status !== 'playing') break;
       if (impact.ownerId !== undefined && !this.enemies.some(e => e.id === impact.ownerId)) continue;
       if (impact.hostile) { if (distance(impact, this.player) < impact.radius + 9) this.damagePlayer(impact.damage); }
@@ -245,7 +255,7 @@ export class World {
       if (!impact.hostile && (impact.source === 'meteor' || impact.source === 'slam')) this.feedback({ type: 'impact', source: impact.source, strength: impact.damageScale ?? 1, target: { x: impact.x, y: impact.y } });
       this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5);
     }
-    this.impacts = this.impacts.filter(i => i.landAt > this.elapsed);
+    this.impacts = this.impacts.filter(i => i.landAt > this.elapsed||i.hostile&&i.ownerId!==undefined&&frozenOwners.has(i.ownerId));
     this.zones = this.zones.filter(z => z.expires > this.elapsed);
     for (const zone of this.zones) if (!zone.wall && this.elapsed >= zone.nextTick) { zone.nextTick = this.elapsed + 0.5; for (const e of [...this.enemies]) if (distance(e, zone) < zone.radius + e.radius) this.damageEnemy(e, zone.damage, zone.source); }
     if (this.status !== 'playing') return;

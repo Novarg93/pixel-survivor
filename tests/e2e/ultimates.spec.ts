@@ -71,7 +71,7 @@ test('Y edge, no held replay, pause/upgrade block and reduced effects',async({pa
   await page.evaluate(()=>{const pad=Reflect.get(window,'ultimatePad') as {buttons:{pressed:boolean;value:number}[]};pad.buttons[3]={pressed:true,value:1};});
   await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.world.ultimate.sequence)).toBe(1);
   await page.waitForTimeout(700);expect(await page.evaluate(()=>window.__PIXEL__!.world.ultimate.sequence)).toBe(1);
-  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil;});
+  await page.waitForFunction(()=>{const w=window.__PIXEL__!.world;return w.elapsed>=w.ultimate.activeUntil&&w.ultimate.regularSpawnFactor(w.elapsed)===1;});
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.evaluate(async()=>{const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:.3,muted:false,pixelScale:2,reducedMotion:true,reducedFlash:true}});const w=window.__PIXEL__!.world;w.ultimate.charge=10;w.spawn('tank',{x:w.player.x+70,y:w.player.y});});
   await page.keyboard.press('q');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.world.ultimate.sequence)).toBe(2);await page.waitForTimeout(440);await page.screenshot({path:`${dir}/lightning-reduced.png`});
@@ -83,7 +83,7 @@ test('real RAF cast/release/recoil timeline has a single damage timestamp and im
     const w=window.__PIXEL__!.world;
     for(let i=0;i<50;i++)w.spawn('tank',{x:40+i%10*19,y:(Math.floor(i/10)-2)*23});
     const hits:{id:number;at:number}[]=[],original=w.damageEnemy.bind(w);
-    w.damageEnemy=(e,n,source,cap)=>{if(source==='ultimate-lightning')hits.push({id:e.id,at:w.elapsed});return original(e,n,source,cap);};
+    w.damageEnemy=(e,n,source,cap,execute)=>{if(source==='ultimate-lightning')hits.push({id:e.id,at:w.elapsed});return original(e,n,source,cap,execute);};
     w.ultimate.activate(w);const start=w.elapsed,frames:{age:number;pose:number;mode:string;kills:number;pixels:string}[]=[],canvas=document.querySelector('canvas')!;let beat=-1;
     await new Promise<void>(resolve=>{const frame=()=>{const age=w.elapsed-start,a=window.__PIXEL__!.art().casting,thresholds=[.1,.28,.405,.46,.55,.7,.9],index=thresholds.filter(t=>age>=t).length-1;if(index>beat){beat=index;frames.push({age,pose:a.frame,mode:a.mode,kills:w.kills,pixels:canvas.toDataURL('image/png')});}if(age<1.05)requestAnimationFrame(frame);else resolve();};requestAnimationFrame(frame);});
     return{hits,frames};

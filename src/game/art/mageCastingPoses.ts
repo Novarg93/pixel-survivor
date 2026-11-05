@@ -4,7 +4,7 @@ type Hands = readonly [number, number, number, number];
 export const CAST_COLORS: Record<MageSpell, number> = { 'ultimate-lightning':0xbceeff,'ultimate-frost':0xe1fcff,'ultimate-fire':0xffb366, fireball:0xffc880, frost:0xdef7ff, lightning:0xd7d9ff, meteor:0xffd28b, shield:0xd1baff };
 const POSES: Record<MageSpell, readonly Hands[]> = {
   'ultimate-lightning':[[4.5,10.7,11.2,8.7],[4.8,10,10.6,5.2],[5.2,9.4,10.5,4.5],[10.7,9.8,14.3,9],[3.7,10.3,10.4,10.2],[4.6,12.3,10.9,12.1]],
-  'ultimate-frost':[[4,10,11.2,10],[3.3,7,12,7],[7,7.8,13.8,7.8],[11.3,9,14.4,9],[10,10,13.6,10],[4.6,12.3,10.9,12.1]],
+  'ultimate-frost':[[4,10,11.2,9],[4.8,10,10.6,5.2],[5.2,9.4,10.5,4.5],[5.5,11,11.5,14],[4.6,11.5,11.5,14.3],[4.6,12.3,10.9,12.1]],
   'ultimate-fire':[[4,10,11,9],[3,7,12,6],[3,5,12.5,4.5],[3,7,12.5,7],[4,10,11,10],[4.6,12.3,10.9,12.1]],
   fireball:[[4.9,11.7,10.9,9.3],[5.1,10.7,11.5,7.2],[6,10.2,14.3,8.9],[6.2,11,14.5,9.8],[5.3,11.8,12.2,11],[4.6,12.5,10.9,12.1]],
   frost:[[4,10.5,11.1,9.7],[2.3,7.5,12.7,7.1],[1.5,8.1,14,7.7],[3.1,5.8,13.7,9.1],[6.1,8.4,14.5,10.7],[4.6,12.2,10.9,12.1]],
@@ -27,6 +27,6 @@ export function castingHands(spell: MageSpell, rank: number, direction: CastDire
     if((spell==='frost'||spell==='meteor')&&f===3){lx=5.2;ly=11;rx=11.6;ry=14;}
     if((spell==='frost'||spell==='meteor')&&f===4){lx=5;ly=14.1;rx=10.8;ry=11.1;}
   }else if(direction==='left'){const x=lx,y=ly;lx=16-rx;ly=ry;rx=16-x;ry=y;}
-  if(spell.startsWith('ultimate-') && (direction==='up'||direction==='down') && f===3){lx=5.5;rx=10.8;ly=ry=direction==='up'?5.5:14;}
+  if((spell==='ultimate-lightning'||spell==='ultimate-fire') && (direction==='up'||direction==='down') && f===3){lx=5.5;rx=10.8;ly=ry=direction==='up'?5.5:14;}
   return [lx,ly,rx,ry];
 }

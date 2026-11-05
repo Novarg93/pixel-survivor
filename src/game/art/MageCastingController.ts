@@ -6,7 +6,7 @@ import { ULTIMATE } from '../config/ultimates';
 export type MageSpell = 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield';
 export type MageGesture = MageSpell | 'ultimate-lightning' | 'ultimate-frost' | 'ultimate-fire';
 export const CAST_PRIORITY: Record<MageGesture, number> = { 'ultimate-lightning':100,'ultimate-frost':100,'ultimate-fire':100, fireball: 1, lightning: 2, shield: 3, frost: 4, meteor: 5 };
-export const CAST_DURATION: Record<MageGesture, number> = { 'ultimate-lightning':.975,'ultimate-frost':.7,'ultimate-fire':.8, fireball: .28, lightning: .3, shield: .34, frost: .48, meteor: 1.3 };
+export const CAST_DURATION: Record<MageGesture, number> = { 'ultimate-lightning':.975,'ultimate-frost':1.1,'ultimate-fire':.8, fireball: .28, lightning: .3, shield: .34, frost: .48, meteor: 1.3 };
 export interface CastSignal { ability: MageGesture; rank: number; target: Point; origin?: Point; impact?: boolean; duration?: number }
 interface Gesture extends CastSignal { started: number; duration: number; beats: number; lastBeat: number }
 interface Pending extends CastSignal { at: number }
@@ -112,6 +112,7 @@ export class MageCastingController {
     const a = this.active;
     let frame = a ? Math.min(5, Math.floor(Math.max(0, now - a.started) / a.duration * 6)) : 0;
     if(a?.ability==='ultimate-lightning'){const age=now-a.started,c=ULTIMATE.lightning;frame=age<c.invocation?(age<.14?0:1):age<c.preparation?2:age<c.preparation+c.reveal?3:age<c.preparation+c.reveal+c.recoil?4:5;}
+    if(a?.ability==='ultimate-frost'){const age=now-a.started,c=ULTIMATE.frost;frame=age<c.invocation?(age<.12?0:age<.28?1:2):age<c.invocation+c.creation?3:age<c.invocation+c.creation+c.activation?4:5;}
     if (a?.ability === 'meteor') {
       const age = now - a.started;
       frame = a.impact ? age < .16 ? 3 + a.beats % 2 : 5 : age < .18 ? 0 : age < .34 ? 1 : age < .72 ? 1 + Math.floor(age * 9) % 2 : 3;

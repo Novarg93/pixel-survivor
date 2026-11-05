@@ -31,7 +31,7 @@ it('protects only the finite World cast without touching HP, damage cooldown, Ab
     w.elapsed=start+age;w.ultimate.update(w);expect(w.damagePlayer(10)).toBe(false);expect(e.hp).toBe(enemyHp);
     expect(w.player.hp).toBe(hp);expect(w.absorb).toBe(50);expect(w.player.invulnerableUntil).toBe(0);
   }
-  w.elapsed=start+C.preparation;w.ultimate.update(w);const after=e.hp;expect(enemyHp-after).toBe(C.damage);
+  w.elapsed=start+C.preparation;w.ultimate.update(w);const after=e.hp;expect(enemyHp-after).toBe(enemyHp);expect(after).toBe(0);
   expect(w.ultimate.casting).toBe(false);expect(w.ultimate.protected(w.elapsed)).toBe(false);expect(w.damagePlayer(10)).toBe(true);expect(w.absorb).toBeLessThan(50);
   w.elapsed+=.05;w.ultimate.update(w);expect(e.hp).toBe(after);
 });

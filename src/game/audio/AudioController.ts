@@ -45,13 +45,14 @@ export class AudioController {
       this.peakVoices = Math.max(this.peakVoices, this.voices.size); return true;
     } catch { this.rejected.unavailable++; return false; }
   }
-  update(status: string, biome: string) {
+  update(status: string, biome: string, frostField=false) {
     if (this.status !== status) { this.stop(status === 'paused' || status === 'upgrade' ? .06 : 0); this.status = status; }
     const audible = this.enabled && !this.dead && this.backend.running && !this.muted && this.volumes.master > 0 && status === 'playing';
     const desired: AssetId[] = audible && this.volumes.music ? ['underscore', biome === 'dark-forest' ? 'forest' : 'grove'] : [];
+    if(audible&&frostField&&this.volumes.sfx)desired.push('frostAir');
     for (const [key, voice] of this.loops) if (!desired.includes(key)) { voice.stop(.25); this.loops.delete(key); }
     for (const asset of desired) if (!this.loops.has(asset)) {
-      try { const voice = this.backend.start(asset, asset === 'underscore' ? 'music' : 'ambient', 1, 1, true, () => { if (this.loops.get(asset) === voice) this.loops.delete(asset); }); if (voice) this.loops.set(asset, voice); } catch { this.rejected.unavailable++; }
+      try { const voice = this.backend.start(asset, asset === 'underscore' ? 'music' : asset==='frostAir'?'sfx':'ambient', asset==='frostAir'?.09:1, 1, true, () => { if (this.loops.get(asset) === voice) this.loops.delete(asset); }); if (voice) this.loops.set(asset, voice); } catch { this.rejected.unavailable++; }
     }
     this.peakLoops = Math.max(this.peakLoops, this.backend.diagnostics().loops);
   }

@@ -3,9 +3,10 @@ import { CHARGE_BOSS as C } from '../config/chargeBoss';
 import type { Enemy } from '../entities/types';
 import { direction, distance, segmentDistance } from '../utils/math';
 import type { World } from './World';
+import { ultimateFrozen } from './UltimateFreeze';
 
 export function updateChargeBoss(w: World, e: Enemy, dt: number) {
-  if (w.status !== 'playing' || e.hp <= 0 || !w.enemies.includes(e) || !Number.isFinite(dt) || dt <= 0 || !Number.isFinite(e.x + e.y + w.player.x + w.player.y)) return;
+  if (w.status !== 'playing' || ultimateFrozen(e,w.elapsed) || e.hp <= 0 || !w.enemies.includes(e) || !Number.isFinite(dt) || dt <= 0 || !Number.isFinite(e.x + e.y + w.player.x + w.player.y)) return;
   const b = e.boss!;
   const frequency = b.aggression?.frequency ?? 1;
   const pursuit = e.speed * C.pursuitMultiplier * (b.aggression?.movement ?? 1);

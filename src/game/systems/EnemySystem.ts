@@ -7,15 +7,18 @@ import { SpatialGrid } from './SpatialGrid';
 import { updateBoss } from './BossSystem';
 import { pressureAt } from './EndgamePressure';
 import { novaMovementFactor } from './FrostControl';
+import { ultimateFrozen,unfrozenDelta } from './UltimateFreeze';
 export class EnemySystem {
   private grid = new SpatialGrid<Enemy>();
   update(w: World, dt: number) {
     this.grid.rebuild(w.enemies);
     for (const e of w.enemies) {
       if (w.status !== 'playing') break;
+      if(ultimateFrozen(e,w.elapsed))continue;
+      const step=unfrozenDelta(e,w.elapsed,dt);if(step<=0)continue;
       if (e.kind === 'guardian') { if (w.guardianSystem.encounters.has(e.id) && distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }
-      if (e.boss) { updateBoss(w, e, dt * novaMovementFactor(e, w.elapsed)); continue; }
-      if (e.rush) { updateRusher(w, e, dt); continue; }
+      if (e.boss) { updateBoss(w, e, step * novaMovementFactor(e, w.elapsed)); continue; }
+      if (e.rush) { updateRusher(w, e, step); continue; }
       const d = distance(e, w.player); let toward = direction(w.player.x - e.x, w.player.y - e.y);
       if (e.kind === 'caster') {
         const pressure = pressureAt(w.elapsed), forward = toward;
@@ -33,7 +36,7 @@ export class EnemySystem {
       }
       const length = Math.max(1, Math.hypot(toward.x + sx, toward.y + sy));
       const speed = regularMoveSpeed(e, w.elapsed);
-      e.x += (toward.x + sx) / length * speed * dt; e.y += (toward.y + sy) / length * speed * dt;
+      e.x += (toward.x + sx) / length * speed * step; e.y += (toward.y + sy) / length * speed * step;
       if (distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage);
     }
   }
