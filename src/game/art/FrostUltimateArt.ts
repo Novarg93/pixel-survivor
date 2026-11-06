@@ -3,6 +3,7 @@ import type { World } from '../systems/World';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { enemyVisual,visualDimensions } from './assetRegistry';
 import type { Point } from '../utils/math';
+import { FROST_AVALANCHE as A, frostAvalanchePixels } from './frostAvalancheTexture';
 interface RuneLine { a:Point;b:Point;r:number }
 function runeLines(radius:number):RuneLine[]{
   const lines:RuneLine[]=[];
@@ -19,13 +20,23 @@ function runeLines(radius:number):RuneLine[]{
   }
   return lines;
 }
-// Two bounded batches: a stationary authored seal and ice on at most156 actors.
+// Two bounded batches plus one cached avalanche image; ice on at most156 actors.
 export class FrostUltimateArt {
   private ground:Phaser.GameObjects.Graphics;private ice:Phaser.GameObjects.Graphics;
+  private avalanche:Phaser.GameObjects.Image;private ownsTexture=false;private avalancheRadius=0;
   private lines:RuneLine[]=[];private started=-Infinity;private run='';private phase='idle';private frozen=0;private drawn=0;
-  constructor(scene:Phaser.Scene){this.ground=scene.add.graphics().setName('eternal-winter-seal').setDepth(-1.5);this.ice=scene.add.graphics().setName('ultimate-frozen-silhouettes').setDepth(4.8);}
+  constructor(private scene:Phaser.Scene){
+    this.ground=scene.add.graphics().setName('eternal-winter-seal').setDepth(-1.5);this.ice=scene.add.graphics().setName('ultimate-frozen-silhouettes').setDepth(4.8);
+    if(!scene.textures.exists(A.key)){
+      const texture=scene.textures.createCanvas(A.key,A.size,A.size);
+      if(!texture)throw new Error('Unable to create frost avalanche texture');
+      const data=texture.context.createImageData(A.size,A.size);data.data.set(frostAvalanchePixels());texture.context.putImageData(data,0,0);texture.refresh();this.ownsTexture=true;
+    }
+    this.avalanche=scene.add.image(0,0,A.key).setName('frost-avalanche').setDepth(4.9).setVisible(false);
+  }
   render(w:World,intensity:number,reduced:boolean){
     const g=this.ground.clear(),ice=this.ice.clear(),f=w.ultimate.frost,now=w.elapsed,view=f.view(now),strength=Math.max(0,Math.min(1,intensity));this.frozen=this.drawn=0;this.phase='idle';
+    this.avalanche.setVisible(false);this.avalancheRadius=0;
     if(this.run!==w.runId){this.run=w.runId;this.started=-Infinity;this.lines=[];}
     if(w.status==='over'||w.status==='menu')return;
     if(w.ultimate.selected==='frost'&&view.phase!=='idle'){
@@ -42,6 +53,13 @@ export class FrostUltimateArt {
         g.lineStyle(bright?1.2:1.7,bright?0x95e4f7:0x173b83,(bright?.72:.85)*strength*fade*pulse).lineBetween(x+line.a.x,y+line.a.y,x+line.b.x,y+line.b.y);this.drawn++;
       }
       if(view.phase==='activation')g.lineStyle(2,0xd0f8ff,.35*strength).strokeCircle(x,y,light);
+      if(view.avalancheVisible&&view.avalanche>0){
+        this.avalancheRadius=r*view.avalanche;
+        const diameter=this.avalancheRadius*A.size/A.radius;
+        // Hold the snow crest through the sweep, then dissolve it at the rune boundary.
+        const opacity=Math.min(1,(1-view.avalanche)/.14)*strength*(reduced?.65:.9);
+        this.avalanche.setPosition(x,y).setDisplaySize(diameter,diameter).setAlpha(opacity).setVisible(true);
+      }
       const count=reduced?12:24;
       for(let i=0;i<count;i++){const a=i*2.39996323,p=(i*.31+(reduced?0:age*.08))%1,rad=view.phase==='invocation'?15+p*16:r*(.25+.7*p);g.fillStyle(0xc2eff8,.45*strength*fade).fillRect(Math.round(x+Math.cos(a)*rad),Math.round(y+Math.sin(a)*rad-(reduced?0:p*8)),1,i%3?1:3);}
     }
@@ -53,6 +71,6 @@ export class FrostUltimateArt {
       ice.fillStyle(0xe1faff,.6*strength).fillRect(Math.round(x-rx*.5),Math.round(y-ry*.6),2,3).fillRect(Math.round(x+rx*.6),Math.round(y+ry*.5),2,2);
     }
   }
-  diagnostics(){return{phase:this.phase,segments:this.drawn,geometry:this.lines.length,frozen:this.frozen,batches:2};}
-  destroy(){this.ground.destroy();this.ice.destroy();this.lines=[];}
+  diagnostics(){return{phase:this.phase,segments:this.drawn,geometry:this.lines.length,frozen:this.frozen,batches:3,avalancheRadius:this.avalancheRadius,avalancheVisible:this.avalanche.visible};}
+  destroy(){this.ground.destroy();this.ice.destroy();this.avalanche.destroy();if(this.ownsTexture)this.scene.textures.remove(A.key);this.lines=[];}
 }

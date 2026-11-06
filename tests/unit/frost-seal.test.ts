@@ -63,7 +63,7 @@ it('pauses Guardian orb warning and lifetime, then emits one orb after the remai
   to(w,w.ultimate.frost.thawsAt+.01);expect(w.projectiles).toHaveLength(0);to(w,w.elapsed+remaining+.1);expect(w.projectiles.filter(p=>p.ownerId===e.id)).toHaveLength(1);
 });
 it('freezes World clocks on pause/upgrade and clears all special status on death/teardown/restart',()=>{
-  const w=setup(),e=w.spawn('tank',{x:70,y:0})!;w.ultimate.activate(w);to(w,w.ultimate.frost.activeAt+.3);const frozen=w.elapsed;w.pause();w.step(100);expect(w.elapsed).toBe(frozen);w.resume();w.status='upgrade';w.step(100);expect(w.elapsed).toBe(frozen);w.status='playing';w.damagePlayer(1e9);expect(w.status).toBe('over');expect(e.ultimateFreeze).toBeUndefined();expect(w.ultimate.frost.started).toBe(-Infinity);
+  const w=setup(),e=w.spawn('tank',{x:70,y:0})!;e.hp=e.maxHp=1e6;w.ultimate.activate(w);to(w,w.ultimate.frost.activeAt+.3);const frozen=w.elapsed;w.pause();w.step(100);expect(w.elapsed).toBe(frozen);w.resume();w.status='upgrade';w.step(100);expect(w.elapsed).toBe(frozen);w.status='playing';w.damagePlayer(1e9);expect(w.status).toBe('over');expect(e.ultimateFreeze).toBeUndefined();expect(w.ultimate.frost.started).toBe(-Infinity);
   expect(new World().enemies.every(e=>!e.ultimateFreeze)).toBe(true);
 });
 it('shifts only finite owner clocks once per elapsed interval without changing global scaling',()=>{
