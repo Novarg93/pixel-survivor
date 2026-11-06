@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
-import { ATMOSPHERE_BUDGET } from '../config/atmosphere';
+import { ATMOSPHERE_BUDGET, type PhaseDefinition } from '../config/atmosphere';
+import { mapDefinition } from '../config/biomes';
 import { AtmospherePhaseController } from '../systems/AtmospherePhaseController';
 import type { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import type { Settings } from '../services/storage';
@@ -19,7 +20,8 @@ export class ForestAtmosphere {
   private active = false;
   private destroyed = false;
 
-  constructor(private scene: Phaser.Scene, private chunks: WorldChunkSystem) {
+  constructor(private scene: Phaser.Scene, private chunks: WorldChunkSystem, phases: readonly PhaseDefinition[] = mapDefinition('grove').presentation.phases) {
+    this.controller = new AtmospherePhaseController(phases); this.state = this.controller.sample(0);
     // Original, small radial textures. Allocated once per scene, never per phase/chunk.
     const soft = scene.textures.createCanvas(SOFT, 128, 128);
     const edge = scene.textures.createCanvas(EDGE, 256, 128);
@@ -46,6 +48,7 @@ export class ForestAtmosphere {
     if (status === 'menu' || status === 'over') { if (this.active) this.clear(); return; }
     this.active = true;
     this.state = this.controller.sample(elapsed);
+    this.chunks.setPresentationTime(elapsed);
     const style = this.state.style, camera = this.scene.cameras.main;
     const width = camera.width / camera.zoom, height = camera.height / camera.zoom;
     const x = camera.width / 2, y = camera.height / 2;
@@ -82,6 +85,7 @@ export class ForestAtmosphere {
   clear() {
     this.state = this.controller.sample(0); this.active = false; this.moteCount = 0;
     this.chunks.setAtmosphereTint(0xffffff);
+    this.chunks.setPresentationTime(0);
     this.veil.setVisible(false); this.vignette.setVisible(false);
     for (const image of [...this.fog, ...this.glow]) image.setVisible(false);
     this.motes.clear();
@@ -90,7 +94,7 @@ export class ForestAtmosphere {
   diagnostics() {
     return { ...this.state, active: this.active, motes: this.moteCount, objects: ATMOSPHERE_BUDGET.objects,
       layers: [this.veil, this.vignette, ...this.glow, ...this.fog, this.motes].map(o => ({ name: o.name, depth: o.depth, visible: o.visible })),
-      terrain: this.chunks.atmosphereDiagnostics(), textureBytes: ATMOSPHERE_BUDGET.textureBytes };
+      terrain: this.chunks.atmosphereDiagnostics(), environment: this.chunks.diagnostics(), textureBytes: ATMOSPHERE_BUDGET.textureBytes };
   }
 
   destroy() {

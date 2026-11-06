@@ -26,7 +26,7 @@ test('boss atlas contains distinct hard-alpha poses with transparent frame margi
 for (const kind of HD_BOSS_KINDS) test(kind + ' real phases, hurt/death and owner cleanup on both maps and viewports', async ({ page }) => {
   test.setTimeout(45000); mkdirSync(directory, { recursive: true }); const evidence = [];
   for (const dark of [false, true]) {
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; w.spawn(kind, { x: 260, y: -30 })!.boss!.until = w.elapsed + 10; }, kind);
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
     const walks = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { for (const a of window.__PIXEL__!.art().actors) if (a.texture === 'hd-bosses' && String(a.frame).includes('-walk-')) frames.push(String(a.frame)); if (performance.now() - start < 700) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
@@ -57,7 +57,7 @@ for (const kind of HD_BOSS_KINDS) test(kind + ' real phases, hurt/death and owne
 test('Eclipse stage2 unfolds before four real warnings and a second volley', async ({ page }) => {
   mkdirSync(directory, { recursive: true });
   for (const dark of [false, true]) {
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; const e = w.spawn('eclipse', { x: 60, y: -25 })!; w.damageEnemy(e, e.maxHp * .51); e.boss!.until = w.elapsed; });
     await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith('eclipse-2-') && String(a.frame).includes('-windup-'))), { intervals: [10] }).toBe(true);
     await page.evaluate(() => window.__PIXEL__!.world.pause());
@@ -94,7 +94,7 @@ test('three boss deaths preserve immediate chests and bounded resources through 
 test('both classes fight three bosses beside150 mobs on both maps', async ({ page }) => {
   test.setTimeout(45000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) {
-    await page.goto('/?test=1'); await selectTestCharacter(page, hero); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); await selectTestCharacter(page, hero); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     const initial = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 5; for (let i = 0; i < 150; i++) w.spawn((['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const)[i % 6], { x: (i % 15 - 7) * 30, y: (Math.floor(i / 15) - 4.5) * 30 }, i % 13 === 0); w.spawn('charger', { x: -65, y: 60 }); w.spawn('sorcerer', { x: 65, y: -35 }); w.spawn('eclipse', { x: -65, y: -65 }); return { regular: w.regularCount, bosses: w.bosses.length }; }); expect(initial).toEqual({ regular: 150, bosses: 3 });
     await page.waitForTimeout(1450); await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' });
     const layers = await page.evaluate(() => window.__PIXEL__!.art().layers); expect(layers.find(l => l.name === 'hostile-tells')!.depth).toBeGreaterThan(layers.find(l => l.name === 'friendly-feedback')!.depth);

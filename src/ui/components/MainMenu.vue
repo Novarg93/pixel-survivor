@@ -5,6 +5,7 @@ import { useInputDevice } from '../inputDevice';
 const inputDevice = useInputDevice();
 import type { CharacterId } from '../../game/config/characters';
 import type { BiomeId } from '../../game/config/biomes';
+import { AVAILABLE_MAPS } from '../../game/config/biomes';
 import { isPublicCharacter } from '../../game/bootstrap/publicCharacters';
 const unavailable = ref(false);
 function chooseCharacter(value: CharacterId) {
@@ -22,14 +23,14 @@ const emit = defineEmits<{ play: []; help: []; settings: []; records: []; charac
    <p class="menu-description">Чаща пробуждается.<br>Двигайся. Собирай магию. Продержись ещё минуту.</p>
    <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="true" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button class="coming-soon" aria-disabled="true" :aria-pressed="false" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>В разработке</small></button></div>
    <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
-   <div class="run-selection" aria-label="Локация"><button :aria-pressed="biome === 'grove'" v-pad="() => emit('biome','grove')" @click="emit('biome','grove')">Роща осколков</button><button :aria-pressed="biome === 'dark-forest'" v-pad="() => emit('biome','dark-forest')" @click="emit('biome','dark-forest')">Dark Forest</button></div>
+   <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
    <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>
    <p v-if="best" class="best">Личный рекорд · {{ best.toLocaleString('ru-RU') }} очков</p>
   </section>
-  <div class="menu-caption"><span>{{ biome === 'dark-forest' ? 'DARK FOREST' : 'РОЩА ОСКОЛКОВ' }}</span><small>Оригинальная пиксельная магия</small></div>
+  <div class="menu-caption"><span>РОЩА ОСКОЛКОВ</span><small>Оригинальная пиксельная магия</small></div>
   <footer class="menu-footer"><span>ОДИНОЧНАЯ ИГРА · БЕЗ СЕРВЕРА</span><span>{{ inputDevice === 'gamepad' ? 'D-PAD · A ВЫБРАТЬ · ЛЕВЫЙ СТИК В ЗАБЕГЕ' : 'WASD / СТРЕЛКИ · АВТОМАТИЧЕСКАЯ МАГИЯ' }}</span></footer>
  </div>
 </template>

@@ -4,7 +4,7 @@ const directory='screenshots/fire-radius/after',report='docs/fire-radius';
 for(const [width,height]of [[1280,720],[844,390]])test(`Fire doubled area and exclusive flame silhouette on actual Canvas ${width}`,async({browser,baseURL})=>{
   const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width===844}),page=await context.newPage(),errors:string[]=[];
   page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));
-  await page.goto('/?test=1');await page.getByRole('button',{name:'Dark Forest',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
+  await page.goto('/?test=1');await page.getByRole('button',{name:'Роща осколков',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
   await page.evaluate(()=>{
     const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.elapsed=601;w.experience.level=40;w.encounterDirector.nextAt=1e9;w.enemies=[];
     for(const a of Object.values(w.abilities))a.level=0;

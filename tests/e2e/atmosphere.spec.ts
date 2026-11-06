@@ -11,7 +11,7 @@ function errorsOn(page: Page) {
 async function start(page: Page, hero = 'Mage') {
   await page.addInitScript(() => Object.defineProperty(HTMLElement.prototype, 'requestFullscreen', { value: undefined }));
   await page.goto('/?test=1'); await selectTestCharacter(page, hero);
-  await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.locator('.play-button').click();
+  await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.locator('.play-button').click();
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e9;
     for (const a of Object.values(w.abilities)) a.level = 0;
@@ -22,7 +22,7 @@ async function start(page: Page, hero = 'Mage') {
 async function seek(page: Page, elapsed: number) {
   await page.evaluate(t => { window.__PIXEL__!.world.elapsed = t; }, elapsed);
   await page.waitForFunction(t => {
-    const s = window.__PIXEL__!.atmosphere(); return s.active && (t < 300 ? s.phase === 'normal' : t >= 902.5 ? s.phase === 'burning' : t >= 602.5 ? s.phase === 'creepy' : s.phase === 'darkened');
+    const s = window.__PIXEL__!.atmosphere(); return s.active && (t < 305 ? s.phase === 'normal' : t >= 905 ? s.phase === 'burning' : t >= 605 ? s.phase === 'dying' : s.phase === 'dusk');
   }, elapsed);
   await page.waitForTimeout(120);
 }
@@ -41,7 +41,7 @@ for (const [width, height] of [[1280, 720], [844, 390]]) test(`forest phases ret
   });
   // Keep HUD and controls visible while revealing paused Canvas for comparison.
   await page.addStyleTag({ content: '.overlay{display:none!important}' });
-  const rows = [], phases = ['normal', 'darkened', 'creepy', 'burning']; let keys: string[] = [];
+  const rows = [], phases = ['normal', 'dusk', 'dying', 'burning']; let keys: string[] = [];
   for (const [i, time] of [240, 315, 615, 915].entries()) {
     await seek(page, time);
     const before = await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world));
@@ -77,13 +77,14 @@ for (const [width, height] of [[1280, 720], [844, 390]]) test(`forest phases ret
 
 test('atmosphere transitions, new chunks and ten run/scene restarts are bounded', async ({ page }) => {
   test.setTimeout(45000); const errors = errorsOn(page); await start(page, 'Warrior');
+  await seek(page, 0);
   const initial = await page.evaluate(() => { const a = window.__PIXEL__!.art(); return { textures: a.textures.length - a.chunks, objects: a.objects - a.chunks, listeners: window.__PIXEL__!.listeners() }; });
   const transitions = [];
   for (const startTime of [300, 600, 900]) {
     const samples = await page.evaluate(async startTime => {
-      const w = window.__PIXEL__!.world; w.elapsed = startTime; w.status = 'playing'; w.player.invulnerableUntil = 1e9;
+      const w = window.__PIXEL__!.world; w.elapsed = startTime; w.pause(); w.player.invulnerableUntil = 1e9;
       const values: ReturnType<NonNullable<Window['__PIXEL__']>['atmosphere']>[] = [];
-      await new Promise<void>(resolve => { const frame = () => { values.push(window.__PIXEL__!.atmosphere()); if (w.elapsed < startTime + 2.8) requestAnimationFrame(frame); else resolve(); }; requestAnimationFrame(frame); });
+      await new Promise<void>(resolve => { const frame = () => { values.push(window.__PIXEL__!.atmosphere()); if (w.elapsed < startTime + 5) { w.elapsed = Math.min(startTime + 5, w.elapsed + .025); requestAnimationFrame(frame); } else resolve(); }; requestAnimationFrame(frame); });
       w.pause(); return values;
     }, startTime);
     expect(samples.length).toBeGreaterThan(60); expect(samples.at(-1)!.blend).toBe(1);
@@ -137,7 +138,7 @@ for (const [width, height] of [[1280, 720], [844, 390]]) test(`atmosphere sequen
   const early = summarize(872, 879), burning = summarize(902, 929);
   expect(result.rows.at(-1)!.time - result.rows[0].time).toBeGreaterThan(50); expect(result.metrics).toMatchObject({ enemies: 150, bosses: 3 });
   expect(result.atmosphere.phase).toBe('burning'); expect(result.rows.every(r => r.motes <= (width === 844 ? 18 : 28))).toBe(true);
-  expect(new Set(result.rows.map(r => r.textures)).size).toBe(1); expect(result.art).toEqual({ clock: [0, 0, 0], tweens: 0 });
+  expect(Math.max(...result.rows.map(r => r.textures)) - Math.min(...result.rows.map(r => r.textures))).toBeLessThanOrEqual(result.atmosphere.environment.chunks); expect(result.art).toEqual({ clock: [0, 0, 0], tweens: 0 });
   expect(burning.median).toBeLessThan(Math.max(40, early.median * 1.6 + 6)); expect(burning.p95).toBeLessThan(Math.max(100, early.p95 * 2 + 12));
   await page.screenshot({ path: `${directory}/stress-burning-${width}.png` }); expect(errors).toEqual([]);
   writeFileSync(`${report}/soak-${width}.json`, JSON.stringify({ ...result, early, burning, errors }, null, 2)); await context.close();

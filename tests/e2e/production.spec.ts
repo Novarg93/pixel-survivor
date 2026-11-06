@@ -22,9 +22,10 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   page.on('pageerror', error => errors.push(error.message)); page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   page.on('request', request => { const url = new URL(request.url()); if (url.protocol !== 'data:' && url.origin !== new URL(baseURL!).origin) external.push(request.url()); if (url.pathname.startsWith('/assets/') && /\.(?:json|png|webp|jpe?g|gif|svg)$/.test(url.pathname)) artRequests.push(url.pathname); });
-  await page.goto('/?test=1&visual=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
+  await page.goto('/?test=1&visual=1' + (biome==='dark'?'&biome=dark-forest&visualTime=915':'')); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
   await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
-  await page.getByRole('button',{name:new RegExp('^'+hero)}).click({force:true}); if(hero==='Warrior'){await expect(page.getByText('Warrior находится в разработке',{exact:true})).toBeVisible(); await expect(page.getByRole('button',{name:/^Mage/})).toHaveAttribute('aria-pressed','true');} await page.getByRole('button',{name:biome==='dark'?'Dark Forest':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Dark Forest',exact:true})).toHaveCount(0);await expect(page.getByLabel('Локация').getByRole('button')).toHaveCount(1);
+  await page.getByRole('button',{name:new RegExp('^'+hero)}).click({force:true}); if(hero==='Warrior'){await expect(page.getByText('Warrior находится в разработке',{exact:true})).toBeVisible(); await expect(page.getByRole('button',{name:/^Mage/})).toHaveAttribute('aria-pressed','true');} await page.getByRole('button',{name:biome==='dark'?'Роща осколков':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
   expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
   await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(page.locator('.hero-name')).toContainText('MAGE');

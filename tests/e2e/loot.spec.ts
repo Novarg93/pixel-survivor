@@ -1,3 +1,4 @@
+import { selectTestMap } from '../helpers/map';
 import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -6,7 +7,7 @@ import type { Metrics } from '../../src/game/events/bridge';
 async function start(page: Page, hero = 'Mage', biome = 'Роща осколков') {
   await page.goto('/?test=1');
   await selectTestCharacter(page, hero);
-  await page.getByRole('button', { name: biome, exact: true }).click();
+  await selectTestMap(page,biome);
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.invulnerableUntil = 100000; for (const a of Object.values(w.abilities)) a.level = 0; });
 }
@@ -16,7 +17,7 @@ function errorsIn(page: Page) {
 
 for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`loot contact, HUD and Canvas: ${hero} / ${dark ? 'forest' : 'grove'}`, async ({ page }) => {
   const errors = errorsIn(page); if (hero === 'Warrior' && dark) await page.setViewportSize({ width: 390, height: 844 });
-  await start(page, hero, dark ? 'Dark Forest' : 'Роща осколков');
+  await start(page, hero, dark ? 'Роща осколков' : 'Роща осколков');
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.player.hp = 20; w.loot.drop(w, 'healing', { x: w.player.x + 40, y: w.player.y }); });
   await page.keyboard.down('d'); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.loot.items.length)).toBe(0); await page.keyboard.up('d');
   expect(await page.evaluate(() => { const w = window.__PIXEL__!.world; return w.player.hp; })).toBe(hero === 'Mage' ? 50 : 65);

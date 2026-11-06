@@ -4,14 +4,14 @@ import { AtmospherePhaseController } from '../../src/game/systems/AtmospherePhas
 
 const controller = new AtmospherePhaseController();
 describe('run atmosphere presentation clock', () => {
-  it.each([[0, 'normal'], [240, 'normal'], [299.99, 'normal'], [302.5, 'darkened'], [315, 'darkened'], [599.99, 'darkened'], [602.5, 'creepy'], [615, 'creepy'], [899.99, 'creepy'], [902.5, 'burning'], [915, 'burning'], [36000, 'burning']] as const)('samples %ss as %s', (elapsed, phase) => {
+  it.each([[0, 'normal'], [240, 'normal'], [299.99, 'normal'], [305, 'dusk'], [315, 'dusk'], [599.99, 'dusk'], [605, 'dying'], [615, 'dying'], [899.99, 'dying'], [905, 'burning'], [915, 'burning'], [36000, 'burning']] as const)('samples %ss as %s', (elapsed, phase) => {
     const state = controller.sample(elapsed);
     expect(state.phase).toBe(phase); expect(state.target).toBe(phase); expect(state.blend).toBe(1);
     expect(state.style).toEqual(ATMOSPHERE_PHASES.find(p => p.id === phase)!.style);
   });
 
-  it('starts exactly at 5/10/15 minutes and completes each transformation in 2.5 seconds', () => {
-    expect(ATMOSPHERE_PHASES.slice(1).map(p => [p.start, p.end])).toEqual([[300, 302.5], [600, 602.5], [900, 902.5]]);
+  it('starts exactly at 5/10/15 minutes and transforms over five run seconds', () => {
+    expect(ATMOSPHERE_PHASES.slice(1).map(p => [p.start, p.end])).toEqual([[300, 305], [600, 605], [900, 905]]);
   });
 
   it.each(ATMOSPHERE_PHASES.slice(1))('smoothly blends every channel in the $id window', phase => {

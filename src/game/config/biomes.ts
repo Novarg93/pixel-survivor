@@ -1,5 +1,15 @@
 import { tileHash } from '../utils/worldTiles';
+import { ATMOSPHERE_PHASES, type PhaseDefinition } from './atmosphere';
+// Historical IDs are retained by storage; only MapId can start a new run.
 export type BiomeId = 'grove' | 'dark-forest';
+export type MapId = 'grove';
+export interface BiomePresentationConfig { artPack: 'grove'; phases: readonly PhaseDefinition[] }
+export interface MapDefinition { id: MapId; name: string; presentation: BiomePresentationConfig }
+export const AVAILABLE_MAPS: readonly MapDefinition[] = [
+  { id: 'grove', name: 'Роща осколков', presentation: { artPack: 'grove', phases: ATMOSPHERE_PHASES } },
+];
+export function playableMap(value: unknown): MapId { return AVAILABLE_MAPS.find(map => map.id === value)?.id ?? 'grove'; }
+export function mapDefinition(value: unknown) { return AVAILABLE_MAPS.find(map => map.id === playableMap(value))!; }
 export function biomeTile(x: number,y: number,biome: BiomeId) {
   const hash=tileHash(x,y),dark=biome==='dark-forest';
   const path=Math.abs(y-Math.round(Math.sin(x/12)*3))%32<=1 || Math.abs(x-Math.round(Math.sin(y/17)*2))%48<=1;

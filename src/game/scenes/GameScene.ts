@@ -24,6 +24,7 @@ import { runCharacter } from '../bootstrap/publicCharacters';
 import type { CharacterId } from '../config/characters';
 import { mobileViewport } from '../../ui/mobileViewport';
 import { ForestAtmosphere } from '../art/ForestAtmosphere';
+import { mapDefinition } from '../config/biomes';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -44,6 +45,7 @@ export class GameScene extends Phaser.Scene {
   private publishAt = 0;
   private runOptions: RunOptions = {};
   private testCharacter: CharacterId | undefined;
+  private visualTime: number | undefined;
   private orientationResume = false;
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
@@ -62,8 +64,9 @@ export class GameScene extends Phaser.Scene {
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
     this.world = new World(); this.orientationResume = false; this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
     this.world.status = 'menu'; this.audioPresentation.observe(this.world);
-    this.chunks = new WorldChunkSystem(this);
-    this.atmosphere = new ForestAtmosphere(this, this.chunks);
+    const presentation = mapDefinition(this.world.biome).presentation;
+    this.chunks = new WorldChunkSystem(this, presentation);
+    this.atmosphere = new ForestAtmosphere(this, this.chunks, presentation.phases);
     this.mage = this.add.sprite(0, 0, 'hd-mage', 'mage-down-idle-0').setOrigin(0.5, 0.75).setDepth(10);
     this.feedback = new CombatFeedback(this);
     this.lootPresentation = new LootPresentation(this);
@@ -96,7 +99,7 @@ export class GameScene extends Phaser.Scene {
       if (command.type === 'ultimate') { if(this.world.status === 'playing')this.ultimateRequested=true;return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') this.orientationResume = false;
+      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
       if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
@@ -114,7 +117,7 @@ export class GameScene extends Phaser.Scene {
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
-      window.__PIXEL__ = { world: this.world, setTestCharacter: character => { if (character !== 'mage' && character !== 'warrior') throw new Error('Unknown test character'); this.testCharacter = character; commands.emit({ type: 'preview' }); }, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.scene.restart(); }, art: () => this.art.diagnostics(), atmosphere: () => this.atmosphere.diagnostics(), audio: () => this.audio.diagnostics() };
+      window.__PIXEL__ = { world: this.world, setVisualTime: seconds => { if (seconds !== undefined && (!Number.isFinite(seconds) || seconds < 0)) throw new Error('Invalid visual time'); this.visualTime = seconds; }, setTestCharacter: character => { if (character !== 'mage' && character !== 'warrior') throw new Error('Unknown test character'); this.testCharacter = character; commands.emit({ type: 'preview' }); }, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.visualTime = undefined; this.scene.restart(); }, art: () => this.art.diagnostics(), atmosphere: () => this.atmosphere.diagnostics(), audio: () => this.audio.diagnostics() };
     }
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.events.off(Phaser.Scenes.Events.DESTROY, destroyHeldInput); destroyHeldInput(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.input.keyboard?.off('keydown-Q',ultimateKey); this.ultimateRequested=false; this.atmosphere.destroy(); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
@@ -169,9 +172,8 @@ export class GameScene extends Phaser.Scene {
     if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
     else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
     this.mage.setAlpha(this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
-    this.chunks.setBiome(this.world.biome);
+    this.atmosphere.render(this.visualTime ?? this.world.elapsed, this.world.status, this.preferences, viewport.touch);
     this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.scale.width / zoom, this.scale.height / zoom, viewport.touch ? 0 : 1);
-    this.atmosphere.render(this.world.elapsed, this.world.status, this.preferences, viewport.touch);
     const active = new Set<number>();
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
       active.add(entity.id); let sprite = this.sprites.get(entity.id);

@@ -1,4 +1,4 @@
-import { ATMOSPHERE_PHASES, type AtmosphereStyle } from '../config/atmosphere';
+import { ATMOSPHERE_PHASES, type AtmosphereStyle, type PhaseDefinition } from '../config/atmosphere';
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 export function blendAtmosphereColor(a: number, b: number, t: number) {
@@ -7,10 +7,11 @@ export function blendAtmosphereColor(a: number, b: number, t: number) {
 
 // Stateless presentation controller: reads run time, never touches simulation or RNG.
 export class AtmospherePhaseController {
+  constructor(private phases: readonly PhaseDefinition[] = ATMOSPHERE_PHASES) {}
   sample(elapsed: number) {
     const now = Number.isNaN(elapsed) ? 0 : Math.max(0, elapsed);
-    let from = ATMOSPHERE_PHASES[0], to = from, blend = 1;
-    for (const phase of ATMOSPHERE_PHASES.slice(1)) {
+    let from = this.phases[0], to = from, blend = 1;
+    for (const phase of this.phases.slice(1)) {
       if (now < phase.start) break;
       to = phase;
       const t = Math.min(1, (now - phase.start) / (phase.end - phase.start));

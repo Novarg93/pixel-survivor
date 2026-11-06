@@ -15,7 +15,7 @@ import { ObjectPool } from './ObjectPool';
 import { chooseUpgrades, applyUpgrade, type UpgradeDefinition } from './UpgradeSystem';
 import { initialAbilities, ABILITIES, abilitiesFor } from '../abilities/definitions';
 import { CHARACTERS, type CharacterId } from '../config/characters';
-import type { BiomeId } from '../config/biomes';
+import { playableMap, type BiomeId } from '../config/biomes';
 import { tickAbilities } from '../abilities/tickAbilities';
 import { profileAt, pickEnemy, scalesAt, spawnCadenceAt } from './DifficultyDirector';
 import { enrageAt } from '../config/survivalEnrage';
@@ -93,7 +93,7 @@ export class World {
   readonly shield = new AbsorbPool();
   warrior = { whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0 };
   get character() { return this.options.character ?? 'mage'; }
-  get biome() { return this.options.biome ?? 'grove'; }
+  get biome() { return playableMap(this.options.biome); }
   get abilityDefinitions() { return abilitiesFor(this.character); }
   impacts: Impact[] = [];
   zones: Zone[] = [];

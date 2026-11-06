@@ -16,7 +16,7 @@ import { formatTime } from './ui/format';
 import { installUpgradeSpaceGuard } from './ui/upgradeInput';
 import RunStatistics from './ui/components/RunStatistics.vue';
 import LocalRecords from './ui/components/LocalRecords.vue';
-import type { BiomeId } from './game/config/biomes';
+import { playableMap, type BiomeId } from './game/config/biomes';
 import type { CharacterId } from './game/config/characters';
 import { navigateGamepad, vPad } from './ui/gamepadNavigation';
 import { INPUT_DEVICE } from './ui/inputDevice';
@@ -36,7 +36,7 @@ const offNotice = gamepadNotices.on(notice => {
 });
 const character = ref<CharacterId>('mage');
 const biome = ref<BiomeId>('grove');
-function chooseBiome(value: BiomeId) { biome.value=value; commands.emit({type:'preview',biome:value}); }
+function chooseBiome(value: BiomeId) { biome.value=playableMap(value); commands.emit({type:'preview',biome:biome.value}); }
 function chooseCharacter(value: CharacterId) { character.value = isPublicCharacter(value) ? value : PUBLIC_CHARACTER; commands.emit({type:'preview',character:character.value}); }
 const mount = ref<HTMLElement>(), state = ref<Snapshot>();
 const debug = import.meta.env.DEV && new URLSearchParams(location.search).get('debug') === '1';

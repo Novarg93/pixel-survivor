@@ -6,7 +6,7 @@ import { cpus, totalmem } from 'node:os';
 export const RUNNER_EVIDENCE = 'screenshots/runner-pack-01';
 async function start(page: Page, dark = true) {
   await page.goto('/?test=1'); await selectTestCharacter(page, 'Warrior');
-  await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.getByRole('button', { name: dark ? 'Роща осколков' : 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
 }
 test('Runner pack: comparable 150 ordinary runners, texture budgets and ten scene restarts', async ({ page, browser }) => {
   test.setTimeout(90000); mkdirSync(RUNNER_EVIDENCE, { recursive: true });

@@ -12,7 +12,7 @@ test('HD integration: comparable live 150-mob render benchmark', async ({ page, 
   page.on('request', r => requests.push(new URL(r.url()).pathname));
   for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport); await page.goto('/?test=1');
-    await selectTestCharacter(page, 'Warrior'); await page.getByRole('button', { name: 'Dark Forest', exact: true }).click();
+    await selectTestCharacter(page, 'Warrior'); await page.getByRole('button', { name: 'Роща осколков', exact: true }).click();
     await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => {
       const w = window.__PIXEL__!.world; w.elapsed = 1170.08; w.player.x = w.player.y = 0;

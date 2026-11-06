@@ -65,9 +65,14 @@ for (const [width, height, scale, touch] of [
     for (const [x, y] of [[-127, -127], [63, 63], [1023, 257], [0, 0]]) {
       await page.evaluate(({ x, y }) => { const world = window.__PIXEL__!.world; world.player.x = x; world.player.y = y; }, { x, y });
       await expect.poll(async () => {
-        const camera = await scene.evaluate(s => ({ x: s.cameras.main.midPoint.x, y: s.cameras.main.midPoint.y, chunks: s.textures.getTextureKeys().filter(key => key.startsWith('chunk-')).sort() }));
+        const camera = await scene.evaluate(s => {
+          const textures = s.textures.getTextureKeys().filter(key => key.startsWith('chunk-'));
+          return { x: s.cameras.main.midPoint.x, y: s.cameras.main.midPoint.y,
+            allNormal: textures.every(key => key.endsWith('-normal')),
+            chunks: textures.map(key => key.replace(/-(normal|dusk|dying|burning)$/, '')).sort() };
+        });
         const required = chunkKeys(camera.x, camera.y, width / zoom, height / zoom, touch ? 0 : 1).map(chunk => chunk.key).sort();
-        return camera.x === x && camera.y === y && JSON.stringify(camera.chunks) === JSON.stringify(required);
+        return camera.x === x && camera.y === y && camera.allNormal && JSON.stringify(camera.chunks) === JSON.stringify(required);
       }).toBe(true);
     }
     // Actual battle and live automatic casts, with deterministic test-only targets.

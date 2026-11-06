@@ -6,7 +6,7 @@ const directory = process.env.PIXEL_HD_PACK && process.env.PIXEL_HD_PACK !== '03
 for (const dark of [false, true]) test('Warrior five live skills, warning layers, slam phases and reduced intensity / ' + (dark ? 'forest' : 'grove'), async ({ page }) => {
   const prefix = dark ? 'forest-' : '';
   mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.goto('/?test=1'); await selectTestCharacter(page, 'Warrior'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.goto('/?test=1'); await selectTestCharacter(page, 'Warrior'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.elapsed = 1170; w.options.spawnRate = 0; w.player.invulnerableUntil = 1e6; w.encounterDirector.nextAt = 1e6;
     for (const a of w.abilityDefinitions) { w.abilities[a.id].level = 3; w.abilities[a.id].readyAt = 0; }

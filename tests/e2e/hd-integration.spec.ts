@@ -4,7 +4,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 const directory = 'screenshots/hd-pixel-art';
 async function start(page: Page, hero = 'Warrior') {
   await page.goto('/?test=1&visual=1'); await selectTestCharacter(page, hero);
-  await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+  await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.waitForFunction(() => window.__PIXEL__?.world.status === 'playing');
 }
 function captureErrors(page: Page) { const errors: string[] = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); }); page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); }); return errors; }

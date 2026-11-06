@@ -4,7 +4,7 @@ import { mockGamepads } from '../helpers/gamepad';
 const directory='screenshots/lightning-cinematic',report='docs/lightning-cinematic';
 async function start(page:Page){
   await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));
-  await page.goto('/?test=1');await page.getByRole('button',{name:'Dark Forest',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
+  await page.goto('/?test=1');await page.getByRole('button',{name:'Роща осколков',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
   await page.evaluate(()=>{
     const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.elapsed=601;w.experience.level=40;
     for(const a of Object.values(w.abilities))a.level=0;

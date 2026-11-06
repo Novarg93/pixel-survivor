@@ -8,7 +8,7 @@ const directory = `screenshots/hd-rework/pack-${pack}`;
 async function start(page: Page, hero: string, dark: boolean) {
   await page.goto('/?test=1');
   await selectTestCharacter(page, hero);
-  await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click();
+  await page.getByRole('button', { name: dark ? 'Роща осколков' : 'Роща осколков', exact: true }).click();
   await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(async () => {
     const moduleUrl = '/src/game/utils/SeededRandom.ts';

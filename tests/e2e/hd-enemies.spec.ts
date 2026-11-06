@@ -57,7 +57,7 @@ for (const kind of HD_ENEMY_KINDS) test(kind + ' live motion, hurt and six death
   await page.waitForTimeout(180); await page.evaluate(() => window.__PIXEL__!.world.pause());
   for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-death-${width}.png` }); }
   for (const dark of [false, true]) {
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170; w.spawn(kind, { x: -42, y: -20 }); w.spawn(kind, { x: 45, y: 30 }, true)!.modifier = 'shielded'; w.spawn('grunt', { x: -45, y: 48 }); w.spawn('runner', { x: 45, y: -45 }); }, kind);
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(80); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-${dark ? 'forest' : 'grove'}-${width}.png` }); }

@@ -4,7 +4,7 @@ import { mockGamepads,connectPad,pressPad } from '../helpers/gamepad';
 const images='screenshots/fire-inferno/after',report='docs/fire-inferno';
 async function start(page:Page){
   await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));
-  await page.goto('/?test=1');await page.getByRole('button',{name:'Dark Forest',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
+  await page.goto('/?test=1');await page.getByRole('button',{name:'Роща осколков',exact:true}).click();await page.getByRole('button',{name:/^Начать забег/}).click();
   await page.evaluate(()=>{
     const w=window.__PIXEL__!.world;w.elapsed=601;w.experience.level=40;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.enemies=[];
     for(const a of Object.values(w.abilities))a.level=0;w.ultimate.choose(w,'fire');

@@ -10,6 +10,7 @@ import { RUN_LIMITS } from '../../game/config/runLimits';
 import { xpPercent } from '../hudStatus';
 import { useInputDevice } from '../inputDevice';
 import EventTimeline from './EventTimeline.vue';
+import BiomePhaseNotice from './BiomePhaseNotice.vue';
 const inputDevice = useInputDevice();
 defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 </script>
@@ -28,6 +29,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
     </div>
   </header>
   <EventTimeline v-if="state.status !== 'over'" :state="state" />
+  <BiomePhaseNotice :state="state" />
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
   <GameRadar />
   <MobilityControl :state="state" @activate="commands.emit({ type: 'mobility' })" />

@@ -34,7 +34,7 @@ async function screenshot(page: Page, name: string) {
   await page.screenshot({ path: `screenshots/gamepad/${name}.png` });
 }
 
-for (const [hero, biome, width, height] of [['Mage', 'Роща осколков', 1280, 720], ['Warrior', 'Dark Forest', 390, 844]] as const) {
+for (const [hero, biome, width, height] of [['Mage', 'Роща осколков', 1280, 720], ['Warrior', 'Роща осколков', 390, 844]] as const) {
   test(`${hero} (DEV character fixture): controller-only menus, settings, run, mobility, upgrade, pause, death and restart ${width}`, async ({ page }) => {
     test.setTimeout(60000);
     const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
@@ -53,7 +53,7 @@ for (const [hero, biome, width, height] of [['Mage', 'Роща осколков'
     await expect(page.getByRole('dialog', { name: 'Как играть' })).toContainText('X (Square)'); await pressPad(page, 'confirm');
     await padFocus(page, page.getByRole('button', { name: 'Начать забег' })); await screenshot(page, `${width}-menu`); await pressPad(page, 'confirm'); await quiet(page);
     expect(await page.evaluate(() => window.__PIXEL__!.world.character)).toBe(hero.toLowerCase());
-    expect(await page.evaluate(() => window.__PIXEL__!.world.biome)).toBe(biome === 'Dark Forest' ? 'dark-forest' : 'grove');
+    expect(await page.evaluate(() => window.__PIXEL__!.world.biome)).toBe('grove');
     await stick(page, 1, 0); await expect.poll(async () => (await position(page)).x).toBeGreaterThan(8);
     await stick(page, 0, -1); await pressPad(page, 'mobility'); await expect.poll(async () => (await position(page)).mobility).toBe(1);
     await stick(page, 0, 0); await offer(page); const frozen = await position(page);

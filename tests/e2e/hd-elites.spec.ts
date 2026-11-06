@@ -7,7 +7,7 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
   mkdirSync(directory, { recursive: true });
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   for (const dark of [false, true]) {
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => {
       const w = window.__PIXEL__!.world; w.pause(); w.elapsed = 1170.08;
       const kinds = ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const;
@@ -18,7 +18,7 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(100); await page.screenshot({ path: `${directory}/${phase}-elites-${dark ? 'forest' : 'grove'}-${width}.png` }); }
     expect(await page.evaluate(() => window.__PIXEL__!.world.enemies.length)).toBe(18);
     if (phase !== 'before') expect(await page.evaluate(() => window.__PIXEL__!.art().eliteAdornments)).toBe(18);
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.elapsed=240; w.encounterDirector.nextAt=240; w.encounterDirector.update(w); w.pause(); });
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
     await expect(page.locator('.run-notice')).toBeVisible();

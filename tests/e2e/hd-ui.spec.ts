@@ -7,7 +7,7 @@ for (const hero of ['Mage', 'Warrior']) for (const dark of [false, true]) test(`
   page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); }); page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); });
   for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.goto('/?test=1');
-    await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Dark Forest' : 'Роща осколков', exact: true }).click();
+    await selectTestCharacter(page, hero); await page.getByRole('button', { name: dark ? 'Роща осколков' : 'Роща осколков', exact: true }).click();
     await page.getByRole('button', { name: 'Настройки', exact: true }).click(); await page.getByRole('button', { name: '3×', exact: true }).click();
     const prefix = `${directory}/${phase}-${hero}-${dark ? 'forest' : 'grove'}-${width}`;
     await page.screenshot({ path: `${prefix}-settings.png` }); await page.getByRole('button', { name: 'Готово' }).click(); await page.screenshot({ path: `${prefix}-menu.png` });

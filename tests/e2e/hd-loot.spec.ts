@@ -6,7 +6,7 @@ const directory = `screenshots/hd-rework/pack-${pack}${pack === '07' ? '' : '/lo
 test('loot and five artifact ground/HUD matrix on both maps and viewports', async ({ page }) => {
   mkdirSync(directory, { recursive: true });
   for (const dark of [false, true]) for (const group of [0, 1]) {
-    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Dark Forest', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
+    await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(group => {
       const w = window.__PIXEL__!.world; w.elapsed = 1170; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; for (const a of Object.values(w.abilities)) a.level = 0;
       for (const id of ['health', 'damage', 'speed', 'cooldown', 'experience'] as const) w.artifacts.grant(w, id);
