@@ -1,0 +1,135 @@
+{
+  "version": 4,
+  "authoring": "scripts/build-mage-ability-vfx.mjs",
+  "width": 528,
+  "height": 792,
+  "rgbaBytes": 1672704,
+  "modelCanvas": 128,
+  "padding": 2,
+  "meteorModelWorldSize": 30,
+  "frostAlpha": 0.5,
+  "sampling": "Verified 4:1 nearest-neighbor; fixed full canvas plus transparent padding; no frame fitting",
+  "clips": {
+    "meteor-fall": {
+      "input": "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png",
+      "sheet": "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png",
+      "gifSha256": null,
+      "sheetSha256": "e1c1a14cb7a8cb712f984728360550afc626e7a7b48eb0a318662bccf7285b2e",
+      "frameCount": 1,
+      "durationsMs": [
+        217.94871794871793
+      ],
+      "originalDurationsMs": null,
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "sourceEdgePixels": 0,
+      "sheetVsGifAlphaDifferences": 0,
+      "timingSource": "Static PNG; movement follows runtime launchAt/landAt"
+    },
+    "meteor-ground-impact": {
+      "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.gif",
+      "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.png",
+      "gifSha256": "6b876fe326ef5e73a7c4bc7147851d773a1065f2964746dc1ddb82adb9a799ff",
+      "sheetSha256": "f2fbff58574d3130f89bb7acf42af5b4ee5a39b9aec4f7174c6f448f73cbf594",
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "originalDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "contactPivot": {
+        "x": 64,
+        "y": 84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6515151515151515
+      },
+      "sourceEdgePixels": 16,
+      "sheetVsGifColorDifferentPixels": 362224,
+      "sheetVsGifAlphaDifferences": 0
+    },
+    "meteor-explosion-impact": {
+      "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.gif",
+      "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.png",
+      "gifSha256": "8d41eb63b2c95cd96da192de5de1baf0ee86ba0659a5af787a827b2ef92a5247",
+      "sheetSha256": "fcf5c326216c337a21778f7e0c97be1934f620ba03d3db717eaf04cc27c19d35",
+      "frameCount": 11,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "originalDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "contactPivot": {
+        "x": 64,
+        "y": 84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6515151515151515
+      },
+      "sourceEdgePixels": 360,
+      "sheetVsGifColorDifferentPixels": 373216,
+      "sheetVsGifAlphaDifferences": 0
+    }
+  },
+  "notes": [
+    "Nova is a local soft light, not an atlas animation.",
+    "Meteor flight uses static PNG 1981710313. Landing replaces both old clips with meteor-v2 ground 599290415 and explosion 686437158.",
+    "Model and landing sizes are fixed, independent of damage radius, area modifiers or rank.",
+    "GIF supplies timing and order; PNG sheet supplies colors. Alpha silhouettes match exactly.",
+    "Source V2 frames touch image edges. Padding prevents atlas bleed but cannot reconstruct source-clipped particles.",
+    "Both landing clips begin at the actual hit time with the same fixed contact pivot; their final frames fade out."
+  ]
+}

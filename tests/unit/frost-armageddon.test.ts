@@ -11,6 +11,7 @@ import { updateGuardianEncounter } from '../../src/game/systems/GuardianEncounte
 import { applyUpgrade, eligibleUpgrades } from '../../src/game/systems/UpgradeSystem';
 import { validGroundTarget } from '../../src/game/abilities/targeting';
 import { drawMageMagic } from '../../src/game/art/MageMagic';
+import { MageAbilityPresentation } from '../../src/game/art/MageAbilityArt';
 import type Phaser from 'phaser';
 
 function quiet(seed = 12345) {
@@ -85,7 +86,7 @@ it.each([1, 2, 3, 4, 5])('Armageddon rank%i schedules the correct count, spacing
   const w = quiet(); w.abilities.meteor.level = rank; w.stats.damage = 2; w.artifacts.grant(w, 'damage'); w.buffs.activate('fury', 0);
   const e = target(w, 160); e.speed = 0; const hp = e.hp; meteor(w);
   const count = [1, 1, 2, 2, 3][rank - 1], base = (55 + rank * 25) * 2;
-  expect(w.impacts).toHaveLength(count); w.impacts.forEach((p, i) => { expect(p.landAt).toBeCloseTo(.85 + i * .15); expect(p.launchAt).toBeCloseTo(i * .15); expect(p.damage).toBe(base * (i ? .75 : 1)); expect(validGroundTarget(w, p, M.range)).toBe(true); });
+  expect(w.impacts).toHaveLength(count); w.impacts.forEach((p, i) => { expect(p.landAt).toBeCloseTo(.85 / (1.5*1.3*2) + i * .15); expect(p.launchAt).toBeCloseTo(i * .15); expect(p.damage).toBe(base * (i ? .75 : 1)); expect(validGroundTarget(w, p, M.range)).toBe(true); });
   advance(w, 1.3); expect(hp - e.hp).toBeCloseTo(base * (1 + (count - 1) * .75) * 1.08 * 1.5);
   const landed = e.hp; advance(w, .5); expect(e.hp).toBe(landed); expect(w.impacts).toHaveLength(0);
 });
@@ -127,8 +128,11 @@ it('freezes root/sequence on pause, clears casts and control on death/disposal a
 it('HD drawing never displays a future meteor before its launch or a rooted cage after expiry, and consumes no RNG', () => {
   const w = quiet(); w.abilities.meteor.level = 5; target(w, 160).freezeUntil = 2; meteor(w);
   const calls: unknown[][] = [], proxy: object = new Proxy({}, { get: (_t, key) => (...args: unknown[]) => { calls.push([key, ...args]); return proxy; } });
-  const g = proxy as Phaser.GameObjects.Graphics, draw = () => { calls.length = 0; const before = JSON.stringify(w); drawMageMagic(g, w, .7); expect(JSON.stringify(w)).toBe(before); return calls.filter(c => c[0] === 'fillTriangle').length; };
-  expect(draw()).toBe(2); w.elapsed = .15; expect(draw()).toBe(4); w.elapsed = .3; expect(draw()).toBe(6);
+  const presentation=new MageAbilityPresentation();
+  const g = proxy as Phaser.GameObjects.Graphics, draw = () => { calls.length = 0; const before = JSON.stringify(w); drawMageMagic(g, w, .7); const views=presentation.views(w,.7);expect(JSON.stringify(w)).toBe(before);expect(calls.filter(c=>c[0]==='fillTriangle'||c[0]==='strokePath')).toHaveLength(0); return views.filter(v=>v.frame.startsWith('meteor-fall-')).length; };
+  expect(draw()).toBe(1); w.elapsed = .15; expect(draw()).toBe(2);
+  w.elapsed=M.delay+.001;expect(draw()).toBe(1); // First landed; third has not launched.
+  w.elapsed = .3; expect(draw()).toBe(2);
   w.impacts = []; w.elapsed = 2; expect(draw()).toBe(0); expect(calls).toHaveLength(0);
   expect(F.rootGap).toBe(2); expect(M.interval).toBe(.15);
 });

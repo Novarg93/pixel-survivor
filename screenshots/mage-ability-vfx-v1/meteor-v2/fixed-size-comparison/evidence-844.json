@@ -1,0 +1,140 @@
+{
+  "evidence": [
+    {
+      "rank": 1,
+      "area": 1,
+      "fixture": {
+        "impact": {
+          "id": 2,
+          "x": 30,
+          "y": 0,
+          "radius": 55,
+          "damage": 80,
+          "launchAt": 2.0482542666630903,
+          "landAt": 2.2662029846118084,
+          "damageScale": 1,
+          "hostile": false,
+          "source": "meteor"
+        },
+        "hp": 10000
+      },
+      "fall": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-fall-0",
+        "x": 169.67755102405556,
+        "y": -132.31757910392088,
+        "size": 30.9375,
+        "alpha": 0.7,
+        "depth": 14.2,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0,
+        "originY": 0.5
+      },
+      "peak": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-explosion-impact-2",
+        "x": 30,
+        "y": 0,
+        "size": 60.328125,
+        "originY": 0.6515151515151515,
+        "alpha": 0.7,
+        "depth": 14.1,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0
+      }
+    },
+    {
+      "rank": 5,
+      "area": 1,
+      "fixture": {
+        "impact": {
+          "id": 6,
+          "x": 30,
+          "y": 0,
+          "radius": 83,
+          "damage": 180,
+          "launchAt": 4.473254266663089,
+          "landAt": 4.691202984611807,
+          "damageScale": 1,
+          "hostile": false,
+          "source": "meteor"
+        },
+        "hp": 10000
+      },
+      "fall": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-fall-0",
+        "x": 169.67755102405556,
+        "y": -132.31757910392088,
+        "size": 30.9375,
+        "alpha": 0.7,
+        "depth": 14.2,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0,
+        "originY": 0.5
+      },
+      "peak": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-explosion-impact-2",
+        "x": 30,
+        "y": 0,
+        "size": 60.328125,
+        "originY": 0.6515151515151515,
+        "alpha": 0.7,
+        "depth": 14.1,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0
+      }
+    },
+    {
+      "rank": 5,
+      "area": 2,
+      "fixture": {
+        "impact": {
+          "id": 12,
+          "x": 30,
+          "y": 0,
+          "radius": 166,
+          "damage": 180,
+          "launchAt": 6.898254266663088,
+          "landAt": 7.116202984611806,
+          "damageScale": 1,
+          "hostile": false,
+          "source": "meteor"
+        },
+        "hp": 10000
+      },
+      "fall": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-fall-0",
+        "x": 169.67755102405556,
+        "y": -132.31757910392088,
+        "size": 30.9375,
+        "alpha": 0.7,
+        "depth": 14.2,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0,
+        "originY": 0.5
+      },
+      "peak": {
+        "texture": "hd-mage-abilities",
+        "frame": "meteor-explosion-impact-2",
+        "x": 30,
+        "y": 0,
+        "size": 60.328125,
+        "originY": 0.6515151515151515,
+        "alpha": 0.7,
+        "depth": 14.1,
+        "blendMode": 0,
+        "tint": 16777215,
+        "rotation": 0
+      }
+    }
+  ],
+  "errors": []
+}

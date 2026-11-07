@@ -2,7 +2,6 @@ import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 import type { Effect } from '../entities/types';
 import { abilityVisual } from './abilityVisual';
-import { ARMAGEDDON } from '../config/mageAbilities';
 import { showPlayerShieldShell } from './playerShieldVisuals';
 
 export function effectPhase(now: number, started: number, duration: number) { return Math.min(1, Math.max(0, (now - started) / Math.max(.001, duration))); }
@@ -24,22 +23,7 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
   }
   for (const e of w.effects) {
     const t = effectPhase(w.elapsed, e.started, e.duration), fade = (1 - t) * intensity;
-    if (e.kind === 'frost') {
-      if (w.status === 'over' || e.expires <= w.elapsed) continue;
-      const age = w.elapsed - e.started, v = abilityVisual(w.abilities.frost.level);
-      const bloom = Math.min(1, age / .22), alpha = Math.min(1, (e.expires - w.elapsed) / .2) * intensity;
-      const r = e.radius * (.3 + .7 * bloom);
-      ring(g, e.x, e.y, r + 2, 0x254458, alpha * .8, 0, 32, 3);
-      ring(g, e.x, e.y, r, 0xd9f3f7, alpha, 0, 32, 2);
-      ring(g, e.x, e.y, r - 5, 0x81becf, alpha * .5, .05, 32);
-      for (let i = 0; i < v.sparks; i++) {
-        const a = i * Math.PI * 2 / v.sparks, x = Math.round(e.x + Math.cos(a) * r), y = Math.round(e.y + Math.sin(a) * r);
-        const h = Math.round((5 + i % 3 * 3 + v.power * 3) * bloom);
-        g.fillStyle(0x578ea9, alpha * .8).fillRect(x - 3, y - h, 6, h + 2);
-        g.fillStyle(0xb8e4f3, alpha).fillRect(x - 2, y - h - 2, 4, h + 2);
-        g.fillStyle(0xf0fcff, alpha).fillRect(x - 1, y - h - 3, 2, Math.max(2, h * .6));
-      }
-    } else if (e.kind === 'shield') {
+    if (e.kind === 'shield') {
       if (w.status === 'over' || e.expires <= w.elapsed || !showPlayerShieldShell(w)) continue;
       // A spent cast must not leave a protective shell. The large evolution
       // pulse remains visible as damage feedback while the player is alive.
@@ -62,7 +46,7 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
       if (v.rank >= 3) for (const [i, p] of points.entries()) if (i % 2 && i < 6) g.lineStyle(v.lineWidth, 0xd4b7ff, fade * .8).lineBetween(p.x, p.y, p.x - dy / len * (4 + v.power * 5), p.y + dx / len * (4 + v.power * 5));
       if (v.capstone) ring(g, e.target.x, e.target.y, 6, 0xf3e5ff, fade, 0, 8);
       g.fillStyle(0xf3e5ff, fade).fillRect(e.target.x - 2, e.target.y - 2, 4, 4);
-    } else if (e.kind === 'meteor' && e.color !== 0xff829d && !skipMeteor(e)) {
+    } else if (e.kind === 'meteor' && e.source !== 'meteor' && e.color !== 0xff829d && !skipMeteor(e)) {
       const v = abilityVisual(w.abilities.meteor.level);
       const r = e.radius * (.3 + t * .7); ring(g, e.x, e.y, r, 0xffb779, fade * .9); ring(g, e.x, e.y, r + 3, 0x9e5d51, fade * .6);
       if (e.color === 0xffae65 && t < .18) g.fillStyle(0xffefb8, intensity * (1 - t / .18) * .38).fillCircle(e.x, e.y, e.radius * .35);
@@ -72,26 +56,6 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
         g.fillStyle(i % 2 ? 0xfba35e : 0xffe0a0, fade).fillRect(Math.round(x), Math.round(y - t * 8), Math.max(1, 5 * (1 - t)), Math.max(1, 3 * (1 - t)));
       }
     }
-  }
-  for (const impact of w.impacts) if (!impact.hostile && impact.source === 'meteor') {
-    if (impact.launchAt !== undefined && w.elapsed < impact.launchAt) continue;
-    const v = abilityVisual(w.abilities.meteor.level), size = 1 + v.power * .5;
-    const t = 1 - Math.min(1, Math.max(0, (impact.landAt - w.elapsed) / ARMAGEDDON.delay));
-    ring(g, impact.x, impact.y, impact.radius, 0xe6a36c, intensity * .55);
-    ring(g, impact.x, impact.y, impact.radius * (.5 + .5 * t), 0xfbd0a0, intensity * .4);
-    if (v.capstone) for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, r = impact.radius * .8; g.lineStyle(2, 0xffd497, intensity * .7).lineBetween(impact.x + Math.cos(a) * r, impact.y + Math.sin(a) * r, impact.x + Math.cos(a) * (r - 5), impact.y + Math.sin(a) * (r - 5)); }
-    const y = impact.y - (1 - t) * 100, x = impact.x + (1 - t) * 32;
-    g.lineStyle(3 + v.power * 3, 0xa65e48, intensity * .6).lineBetween(x + 8, y - 22 - v.power * 10, x, y);
-    for (let i = 1; i <= 5 + v.rank; i++) {
-      const size = Math.max(1, Math.round(5 + v.power * 2 - i * .35));
-      g.fillStyle(i % 2 ? 0xf59e46 : 0xffd18e, intensity * (1 - i / (7 + v.rank))).fillRect(Math.round(x + i * 2.2) - size / 2, Math.round(y - i * 6), size, size + 2);
-    }
-    g.fillStyle(0xb95d41, intensity).fillRect(Math.round(x - 6 * size), Math.round(y - 5 * size), 11 * size, 9 * size);
-    g.fillStyle(0xe08b52, intensity).fillTriangle(x - 6 * size, y - 6 * size, x + 4 * size, y - 9 * size, x + 4 * size, y + 5 * size);
-    g.fillStyle(0xffe3a1, intensity).fillTriangle(x - 3 * size, y - 4 * size, x + 2 * size, y - 6 * size, x + 2 * size, y + 2 * size);
-    g.fillStyle(0x594a4e, intensity).fillRect(Math.round(x - 4 * size), Math.round(y - 3 * size), 7 * size, 6 * size);
-    g.fillStyle(0x92756a, intensity).fillRect(Math.round(x - 4 * size), Math.round(y - 3 * size), 3 * size, 4 * size);
-    g.fillStyle(0xffd18e, intensity).fillRect(Math.round(x - size), Math.round(y - size), size, 4 * size);
   }
   // Feet-only ice cages leave hands, projectiles and depth20 hostile tells clear.
   if (w.status !== 'over') for (const e of w.enemies) {

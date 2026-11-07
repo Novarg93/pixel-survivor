@@ -1,0 +1,951 @@
+[
+  {
+    "ability": "meteor",
+    "id": "1533140700",
+    "input": "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.gif",
+    "sheet": "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.png",
+    "sha256": "03e18cebe4bd458bebc939a1110a45fb7240d9188646a1294e640aff137a7c74",
+    "sheetSha256": "84f59856182c8b429985e9badf729cfd5ef186d494db2fa0114c30023cee9442",
+    "sheetWidth": 2048,
+    "sheetHeight": 1024,
+    "runtimeCanvas": 128,
+    "frames": [
+      {
+        "index": 0,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 18368,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 112,
+          "minY": 168,
+          "maxX": 375,
+          "maxY": 367
+        },
+        "gifVsSheetDifferentPixels": 0,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 1,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 6624,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 140,
+          "minY": 152,
+          "maxX": 359,
+          "maxY": 367
+        },
+        "gifVsSheetDifferentPixels": 0,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 2,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 62736,
+        "partialAlpha": 0,
+        "edge": 12,
+        "bounds": {
+          "minX": 0,
+          "minY": 4,
+          "maxX": 471,
+          "maxY": 471
+        },
+        "gifVsSheetDifferentPixels": 720,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 3,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 14256,
+        "partialAlpha": 0,
+        "edge": 8,
+        "bounds": {
+          "minX": 0,
+          "minY": 8,
+          "maxX": 499,
+          "maxY": 499
+        },
+        "gifVsSheetDifferentPixels": 0,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 4,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 2128,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 12,
+          "minY": 172,
+          "maxX": 371,
+          "maxY": 387
+        },
+        "gifVsSheetDifferentPixels": 224,
+        "gifVsSheetAlphaDifferentPixels": 0
+      }
+    ]
+  },
+  {
+    "ability": "meteor",
+    "id": "478336783",
+    "input": "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.gif",
+    "sheet": "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.png",
+    "sha256": "08ea2a6ad88a365a2201151162781877a0c7d69cd8746a38235bb6dc6082a7cf",
+    "sheetSha256": "a14e71777dd03c55aee835233219b7f456da98f5dfca7b4fd473d94d85399c74",
+    "sheetWidth": 2048,
+    "sheetHeight": 1536,
+    "runtimeCanvas": 128,
+    "frames": [
+      {
+        "index": 0,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 127536,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 44,
+          "minY": 56,
+          "maxX": 455,
+          "maxY": 467
+        },
+        "gifVsSheetDifferentPixels": 47488,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 1,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 131888,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 28,
+          "minY": 32,
+          "maxX": 467,
+          "maxY": 471
+        },
+        "gifVsSheetDifferentPixels": 76016,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 2,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 128144,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 32,
+          "minY": 88,
+          "maxX": 443,
+          "maxY": 479
+        },
+        "gifVsSheetDifferentPixels": 44208,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 3,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 130720,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 8,
+          "minY": 76,
+          "maxX": 471,
+          "maxY": 487
+        },
+        "gifVsSheetDifferentPixels": 71120,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 4,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 109856,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 24,
+          "minY": 136,
+          "maxX": 487,
+          "maxY": 463
+        },
+        "gifVsSheetDifferentPixels": 55888,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 5,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 106576,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 36,
+          "minY": 144,
+          "maxX": 483,
+          "maxY": 463
+        },
+        "gifVsSheetDifferentPixels": 55152,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 6,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 106720,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 20,
+          "minY": 124,
+          "maxX": 467,
+          "maxY": 467
+        },
+        "gifVsSheetDifferentPixels": 53056,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 7,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 114304,
+        "partialAlpha": 0,
+        "edge": 12,
+        "bounds": {
+          "minX": 24,
+          "minY": 68,
+          "maxX": 511,
+          "maxY": 499
+        },
+        "gifVsSheetDifferentPixels": 68272,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 8,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 117968,
+        "partialAlpha": 0,
+        "edge": 32,
+        "bounds": {
+          "minX": 4,
+          "minY": 96,
+          "maxX": 511,
+          "maxY": 471
+        },
+        "gifVsSheetDifferentPixels": 50256,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 9,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 118752,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 8,
+          "minY": 88,
+          "maxX": 491,
+          "maxY": 499
+        },
+        "gifVsSheetDifferentPixels": 72160,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 10,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 118528,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 8,
+          "minY": 80,
+          "maxX": 495,
+          "maxY": 483
+        },
+        "gifVsSheetDifferentPixels": 34560,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 11,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 116608,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 8,
+          "minY": 68,
+          "maxX": 471,
+          "maxY": 483
+        },
+        "gifVsSheetDifferentPixels": 37408,
+        "gifVsSheetAlphaDifferentPixels": 0
+      }
+    ]
+  },
+  {
+    "ability": "meteor-v2",
+    "id": "599290415",
+    "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.gif",
+    "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.png",
+    "sha256": "6b876fe326ef5e73a7c4bc7147851d773a1065f2964746dc1ddb82adb9a799ff",
+    "sheetSha256": "f2fbff58574d3130f89bb7acf42af5b4ee5a39b9aec4f7174c6f448f73cbf594",
+    "sheetWidth": 2048,
+    "sheetHeight": 1536,
+    "runtimeCanvas": 128,
+    "frames": [
+      {
+        "index": 0,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 35936,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 40,
+          "minY": 168,
+          "maxX": 487,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 22784,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 1,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 38320,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 40,
+          "minY": 116,
+          "maxX": 491,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 20096,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 2,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 40832,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 40,
+          "minY": 80,
+          "maxX": 491,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 27760,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 3,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 45760,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 36,
+          "minY": 44,
+          "maxX": 491,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 36960,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 4,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 52752,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 32,
+          "minY": 60,
+          "maxX": 487,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 43712,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 5,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 56464,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 4,
+          "minY": 40,
+          "maxX": 487,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 26592,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 6,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 57856,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 4,
+          "minY": 40,
+          "maxX": 487,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 37776,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 7,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 53344,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 24,
+          "minY": 68,
+          "maxX": 487,
+          "maxY": 475
+        },
+        "gifVsSheetDifferentPixels": 37664,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 8,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 48496,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 24,
+          "minY": 44,
+          "maxX": 487,
+          "maxY": 479
+        },
+        "gifVsSheetDifferentPixels": 23152,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 9,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 44784,
+        "partialAlpha": 0,
+        "edge": 16,
+        "bounds": {
+          "minX": 24,
+          "minY": 88,
+          "maxX": 495,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 28128,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 10,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 44832,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 24,
+          "minY": 228,
+          "maxX": 495,
+          "maxY": 491
+        },
+        "gifVsSheetDifferentPixels": 22352,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 11,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 45520,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 12,
+          "minY": 228,
+          "maxX": 495,
+          "maxY": 491
+        },
+        "gifVsSheetDifferentPixels": 35248,
+        "gifVsSheetAlphaDifferentPixels": 0
+      }
+    ]
+  },
+  {
+    "ability": "meteor-v2",
+    "id": "686437158",
+    "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.gif",
+    "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.png",
+    "sha256": "8d41eb63b2c95cd96da192de5de1baf0ee86ba0659a5af787a827b2ef92a5247",
+    "sheetSha256": "fcf5c326216c337a21778f7e0c97be1934f620ba03d3db717eaf04cc27c19d35",
+    "sheetWidth": 2048,
+    "sheetHeight": 1536,
+    "runtimeCanvas": 128,
+    "frames": [
+      {
+        "index": 0,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 48672,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 60,
+          "minY": 72,
+          "maxX": 491,
+          "maxY": 487
+        },
+        "gifVsSheetDifferentPixels": 35744,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 1,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 59760,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 36,
+          "minY": 60,
+          "maxX": 503,
+          "maxY": 503
+        },
+        "gifVsSheetDifferentPixels": 40864,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 2,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 76160,
+        "partialAlpha": 0,
+        "edge": 8,
+        "bounds": {
+          "minX": 24,
+          "minY": 8,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 44160,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 3,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 90624,
+        "partialAlpha": 0,
+        "edge": 48,
+        "bounds": {
+          "minX": 0,
+          "minY": 32,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 46704,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 4,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 99712,
+        "partialAlpha": 0,
+        "edge": 36,
+        "bounds": {
+          "minX": 12,
+          "minY": 8,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 43808,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 5,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 84208,
+        "partialAlpha": 0,
+        "edge": 80,
+        "bounds": {
+          "minX": 0,
+          "minY": 64,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 58512,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 6,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 63696,
+        "partialAlpha": 0,
+        "edge": 92,
+        "bounds": {
+          "minX": 0,
+          "minY": 40,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 39600,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 7,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 59024,
+        "partialAlpha": 0,
+        "edge": 80,
+        "bounds": {
+          "minX": 20,
+          "minY": 0,
+          "maxX": 511,
+          "maxY": 511
+        },
+        "gifVsSheetDifferentPixels": 45616,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 8,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 14080,
+        "partialAlpha": 0,
+        "edge": 8,
+        "bounds": {
+          "minX": 60,
+          "minY": 44,
+          "maxX": 511,
+          "maxY": 403
+        },
+        "gifVsSheetDifferentPixels": 8704,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 9,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 10976,
+        "partialAlpha": 0,
+        "edge": 4,
+        "bounds": {
+          "minX": 32,
+          "minY": 8,
+          "maxX": 511,
+          "maxY": 423
+        },
+        "gifVsSheetDifferentPixels": 6304,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 10,
+        "width": 512,
+        "height": 512,
+        "durationMs": 150,
+        "visible": 4944,
+        "partialAlpha": 0,
+        "edge": 4,
+        "bounds": {
+          "minX": 36,
+          "minY": 0,
+          "maxX": 495,
+          "maxY": 427
+        },
+        "gifVsSheetDifferentPixels": 3200,
+        "gifVsSheetAlphaDifferentPixels": 0
+      }
+    ]
+  },
+  {
+    "ability": "frost-nova",
+    "id": "891386533",
+    "input": "art/main-hero-mage/abilities/frost-nova/make_animation_of_sp...-891386533-0.gif",
+    "sheet": "art/main-hero-mage/abilities/frost-nova/make_animation_of_sp...-891386533-0.png",
+    "sha256": "38f5183fca0cf84ea60ac332c6f224dcf92139ff26cfe148fd04684245062263",
+    "sheetSha256": "d839c9ba7483df68eae8be38a74cfbb0a6bee4a4a6e12b0e9a2a42101b57c341",
+    "sheetWidth": 4096,
+    "sheetHeight": 3072,
+    "runtimeCanvas": 256,
+    "frames": [
+      {
+        "index": 0,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 526304,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 60,
+          "minY": 76,
+          "maxX": 959,
+          "maxY": 951
+        },
+        "gifVsSheetDifferentPixels": 198960,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 1,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 572960,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 52,
+          "minY": 60,
+          "maxX": 971,
+          "maxY": 959
+        },
+        "gifVsSheetDifferentPixels": 248224,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 2,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 614384,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 32,
+          "minY": 36,
+          "maxX": 979,
+          "maxY": 991
+        },
+        "gifVsSheetDifferentPixels": 379136,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 3,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 621776,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 32,
+          "minY": 40,
+          "maxX": 983,
+          "maxY": 987
+        },
+        "gifVsSheetDifferentPixels": 139760,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 4,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 644864,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 36,
+          "minY": 60,
+          "maxX": 1007,
+          "maxY": 995
+        },
+        "gifVsSheetDifferentPixels": 139808,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 5,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 581200,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 40,
+          "minY": 64,
+          "maxX": 1003,
+          "maxY": 987
+        },
+        "gifVsSheetDifferentPixels": 164464,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 6,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 574976,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 20,
+          "minY": 28,
+          "maxX": 983,
+          "maxY": 967
+        },
+        "gifVsSheetDifferentPixels": 345024,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 7,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 351776,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 36,
+          "minY": 36,
+          "maxX": 987,
+          "maxY": 979
+        },
+        "gifVsSheetDifferentPixels": 45520,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 8,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 340192,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 52,
+          "minY": 64,
+          "maxX": 979,
+          "maxY": 967
+        },
+        "gifVsSheetDifferentPixels": 62928,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 9,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 203440,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 16,
+          "minY": 36,
+          "maxX": 955,
+          "maxY": 1003
+        },
+        "gifVsSheetDifferentPixels": 50304,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 10,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 179088,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 20,
+          "minY": 12,
+          "maxX": 915,
+          "maxY": 947
+        },
+        "gifVsSheetDifferentPixels": 17232,
+        "gifVsSheetAlphaDifferentPixels": 0
+      },
+      {
+        "index": 11,
+        "width": 1024,
+        "height": 1024,
+        "durationMs": 150,
+        "visible": 97216,
+        "partialAlpha": 0,
+        "edge": 0,
+        "bounds": {
+          "minX": 96,
+          "minY": 76,
+          "maxX": 923,
+          "maxY": 963
+        },
+        "gifVsSheetDifferentPixels": 38816,
+        "gifVsSheetAlphaDifferentPixels": 0
+      }
+    ]
+  }
+]

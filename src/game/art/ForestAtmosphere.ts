@@ -4,6 +4,7 @@ import { mapDefinition } from '../config/biomes';
 import { AtmospherePhaseController } from '../systems/AtmospherePhaseController';
 import type { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import type { Settings } from '../services/storage';
+import { createSoftLightTexture } from './softLightTexture';
 
 const SOFT = 'forest-atmosphere-soft', EDGE = 'forest-atmosphere-edge';
 const fract = (n: number) => n - Math.floor(n);
@@ -23,12 +24,9 @@ export class ForestAtmosphere {
   constructor(private scene: Phaser.Scene, private chunks: WorldChunkSystem, phases: readonly PhaseDefinition[] = mapDefinition('grove').presentation.phases) {
     this.controller = new AtmospherePhaseController(phases); this.state = this.controller.sample(0);
     // Original, small radial textures. Allocated once per scene, never per phase/chunk.
-    const soft = scene.textures.createCanvas(SOFT, 128, 128);
+    createSoftLightTexture(scene,SOFT);
     const edge = scene.textures.createCanvas(EDGE, 256, 128);
-    if (!soft || !edge) throw new Error('Unable to create forest atmosphere textures');
-    const s = soft.context, light = s.createRadialGradient(64, 64, 0, 64, 64, 64);
-    light.addColorStop(0, 'rgba(255,255,255,1)'); light.addColorStop(.35, 'rgba(255,255,255,.48)'); light.addColorStop(1, 'rgba(255,255,255,0)');
-    s.fillStyle = light; s.fillRect(0, 0, 128, 128); soft.refresh();
+    if (!edge) throw new Error('Unable to create forest atmosphere textures');
     const e = edge.context; e.save(); e.scale(2, 1);
     const shade = e.createRadialGradient(64, 64, 18, 64, 64, 88);
     shade.addColorStop(0, 'rgba(5,12,20,0)'); shade.addColorStop(.55, 'rgba(5,12,20,.15)'); shade.addColorStop(1, 'rgba(5,12,20,1)');

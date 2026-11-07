@@ -143,8 +143,8 @@ export class World {
     if(boss&&this.elapsed>=ENDGAME.from){const late=lateBossProfile(this.elapsed,++this.encounterDirector.endgameSpawns,kind==='charger');enemy.boss!.late=late;enemy.boss!.aggression={...aggression,movement:aggression.movement*late.movement,frequency:aggression.frequency*late.frequency};}
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
-  effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number) {
-    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y } }); if (effect) this.effects.push(effect); }
+  effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number, source?: DamageSource) {
+    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y }, source }); if (effect) this.effects.push(effect); }
   }
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
@@ -275,7 +275,7 @@ export class World {
       else { for (const enemy of [...this.enemies]) if (distance(impact, enemy) < impact.radius + enemy.radius) this.damageEnemy(enemy, impact.damage, impact.source);
         if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage * (impact.damageScale ?? 1), 3, 'meteor'); }
       if (!impact.hostile && (impact.source === 'meteor' || impact.source === 'slam')) this.feedback({ type: 'impact', source: impact.source, strength: impact.damageScale ?? 1, target: { x: impact.x, y: impact.y } });
-      this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5);
+      this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5, undefined, undefined, impact.hostile ? undefined : impact.source);
     }
     this.impacts = this.impacts.filter(i => i.landAt > this.elapsed||i.hostile&&i.ownerId!==undefined&&frozenOwners.has(i.ownerId));
     this.zones = this.zones.filter(z => z.expires > this.elapsed);

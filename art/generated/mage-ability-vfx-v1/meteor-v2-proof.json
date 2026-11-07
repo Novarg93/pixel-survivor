@@ -1,0 +1,179 @@
+{
+  "selection": "Meteor V2 ground and explosion replace both previous landing clips; restore fixed pre-AoE size",
+  "clips": {
+    "meteor-fall": {
+      "input": "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png",
+      "sheet": "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png",
+      "gifSha256": null,
+      "sheetSha256": "e1c1a14cb7a8cb712f984728360550afc626e7a7b48eb0a318662bccf7285b2e",
+      "frameCount": 1,
+      "durationsMs": [
+        217.94871794871793
+      ],
+      "originalDurationsMs": null,
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "sourceEdgePixels": 0,
+      "sheetVsGifAlphaDifferences": 0,
+      "timingSource": "Static PNG; movement follows runtime launchAt/landAt"
+    },
+    "meteor-ground-impact": {
+      "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.gif",
+      "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.png",
+      "gifSha256": "6b876fe326ef5e73a7c4bc7147851d773a1065f2964746dc1ddb82adb9a799ff",
+      "sheetSha256": "f2fbff58574d3130f89bb7acf42af5b4ee5a39b9aec4f7174c6f448f73cbf594",
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "originalDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "contactPivot": {
+        "x": 64,
+        "y": 84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6515151515151515
+      },
+      "sourceEdgePixels": 16,
+      "sheetVsGifColorDifferentPixels": 362224,
+      "sheetVsGifAlphaDifferences": 0
+    },
+    "meteor-explosion-impact": {
+      "input": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.gif",
+      "sheet": "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.png",
+      "gifSha256": "8d41eb63b2c95cd96da192de5de1baf0ee86ba0659a5af787a827b2ef92a5247",
+      "sheetSha256": "fcf5c326216c337a21778f7e0c97be1934f620ba03d3db717eaf04cc27c19d35",
+      "frameCount": 11,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "originalDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "canvas": 132,
+      "sourceCanvas": 512,
+      "verifiedPixelBlock": 4,
+      "contactPivot": {
+        "x": 64,
+        "y": 84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6515151515151515
+      },
+      "sourceEdgePixels": 360,
+      "sheetVsGifColorDifferentPixels": 373216,
+      "sheetVsGifAlphaDifferences": 0
+    }
+  },
+  "tuning": {
+    "novaPlaybackRate": 2,
+    "meteorModelScale": 1.5,
+    "meteorFallSpeed": 5.07,
+    "meteorFallAngleDegrees": 46.55,
+    "meteorFallDistance": 192.4,
+    "meteorGroundPlaybackRate": 2,
+    "meteorExplosionPlaybackRate": 2,
+    "meteorImpactScale": 1.95
+  },
+  "display": {
+    "stone": 30.9375,
+    "landing": 60.328125,
+    "logicalLanding": 58.5,
+    "areaScaling": false,
+    "originY": 0.6515151515151515
+  },
+  "runtimeDurations": {
+    "ground": 0.9,
+    "explosion": 0.825
+  },
+  "reproducible": true,
+  "hashes": {
+    "public/assets/hd/mage-ability-vfx-v1/atlas.png": "063b5636c40602ecefaa37ad4950403621ad15e383724f92f4744f15426fdf54",
+    "public/assets/hd/mage-ability-vfx-v1/atlas.json": "e6492e27d9075cd870a3a3048cb8888a2bfb4fc3b91dd1cf1ad33725c404dd44",
+    "src/game/art/mageAbilityManifest.json": "67fedc107706c8339967671cb9c4555a45d3ec85b81cb2ad7f43acf26cf3eecc"
+  },
+  "unchangedInputsAndGameplayHashes": {
+    "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.gif": "03e18cebe4bd458bebc939a1110a45fb7240d9188646a1294e640aff137a7c74",
+    "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.png": "84f59856182c8b429985e9badf729cfd5ef186d494db2fa0114c30023cee9442",
+    "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png": "e1c1a14cb7a8cb712f984728360550afc626e7a7b48eb0a318662bccf7285b2e",
+    "art/main-hero-mage/abilities/meteor/Create_a_top_down_pi...-1462813121-0.png": "cf825995ea35e3bd93e3ae9454f66a5b1a7ea11f5e38c2d58ca4022c7be2059a",
+    "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.gif": "08ea2a6ad88a365a2201151162781877a0c7d69cd8746a38235bb6dc6082a7cf",
+    "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.png": "a14e71777dd03c55aee835233219b7f456da98f5dfca7b4fd473d94d85399c74",
+    "art/main-hero-mage/abilities/meteor-v2/generate_explosion_t...-1918136690-0.png": "302c6c3a0f1b3996ad1466197217af4760ec475b38c8d40cb518057121ad9bf6",
+    "art/main-hero-mage/abilities/meteor-v2/generate_impact_text...-1344328569-0.png": "dcca75a1f9f9e5fd5e044d7a3f7b522b63d2c592fc7864a60e8d72dcdd016849",
+    "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.gif": "6b876fe326ef5e73a7c4bc7147851d773a1065f2964746dc1ddb82adb9a799ff",
+    "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-599290415-0.png": "f2fbff58574d3130f89bb7acf42af5b4ee5a39b9aec4f7174c6f448f73cbf594",
+    "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.gif": "8d41eb63b2c95cd96da192de5de1baf0ee86ba0659a5af787a827b2ef92a5247",
+    "art/main-hero-mage/abilities/meteor-v2/make_animation_of_im...-686437158-0.png": "fcf5c326216c337a21778f7e0c97be1934f620ba03d3db717eaf04cc27c19d35",
+    "src/game/abilities/meteor.ts": "e5e90659748693e8f2ce21c2b35c885b57e52e090953a3279c4310f8215b59ae",
+    "src/game/config/mageAbilities.ts": "e7e97a100727be4df080d8ec505ddc131f2b36780ef696817da963d0e2c30370",
+    "src/game/systems/World.ts": "a42adf0256c7a21b84316e5a91e4b25c8ee6b7342fcb107b4d07e07ff6c234b2",
+    "src/game/art/FinalBossArt.ts": "5bf26f69ac92c3bc58276283e3a313e0b9308ebb65c3bdd3c8bba2aa10c2c2ab"
+  },
+  "validation": {
+    "unitTests": 750,
+    "unitFiles": 93,
+    "e2eTests": 6,
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "canvasViewed": true,
+    "viewportSizes": [
+      "1280x720",
+      "844x390"
+    ],
+    "sourceGroundEdgePixels": 16,
+    "sourceExplosionEdgePixels": 360
+  },
+  "screenshots": "screenshots/mage-ability-vfx-v1/meteor-v2/"
+}

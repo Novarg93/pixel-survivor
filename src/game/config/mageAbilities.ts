@@ -1,3 +1,5 @@
+import tuning from './mageAbilityTuning.json';
+
 export const FROST_NOVA = {
   range: 310, radius: 73, radiusMultiplier: [1, 1.2, 1.2, 1.2, 1.44],
   root: [1.2, 1.2, 1.2, 1.7, 2], cooldown: 2.8, rankedCooldown: .85,
@@ -7,7 +9,8 @@ export const FROST_NOVA = {
 } as const;
 export const ARMAGEDDON = {
   range: 310, cooldown: 5.6, count: [1, 1, 2, 2, 3],
-  delay: .85, interval: .15, extraDamage: .75, offset: 8, groupMinimum: 2,
+  // Original path: 148 units in .85s. Duration follows distance / velocity.
+  delay: .85 * (tuning.meteorFallDistance / 148) / tuning.meteorFallSpeed, interval: .15, extraDamage: .75, offset: 8, groupMinimum: 2,
   radiusBase: 48, radiusPerRank: 7, damageBase: 55, damagePerRank: 25,
 } as const;
 export function frostNovaStats(rank: number, area = 1) {
