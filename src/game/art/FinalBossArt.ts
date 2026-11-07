@@ -1,26 +1,34 @@
 import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 import { FINAL_BOSS as C } from '../config/finalBoss';
-import {WARDEN,wardenTexture,wardenIndex,wardenPose,type WardenLayer} from './ashWardenPack';
+import {WARDEN,wardenTexture,wardenIndex,wardenPose,wardenFacing,type WardenLayer} from './ashWardenPack';
 import {ultimateFrozen} from '../systems/UltimateFreeze';
 import { enemyVisual } from './assetRegistry';
+import {FlameStrikeArt} from './FlameStrikeArt';
+import {MeleeComboArt} from './MeleeComboArt';
 export class FinalBossArt {
   private ground:Phaser.GameObjects.Graphics;private tells:Phaser.GameObjects.Graphics;
   private images:Phaser.GameObjects.Image[]=[];private used=0;private ghosts:Phaser.GameObjects.Image[]=[];
   private labels:Phaser.GameObjects.Text[]=[];
   private deathAge=0;
   private pose:ReturnType<typeof wardenPose>|null=null;
+  private flameStrike:FlameStrikeArt;
+  private meleeCombo:MeleeComboArt;
   constructor(private scene:Phaser.Scene){
     this.ground=scene.add.graphics().setName('final-arena').setDepth(-.8);
     this.tells=scene.add.graphics().setName('final-telegraphs').setDepth(20.2);
+    this.flameStrike=new FlameStrikeArt(scene);
+    this.meleeCombo=new MeleeComboArt(scene);
   }
   private image(layer:WardenLayer,x:number,y:number,depth:number,flip=false,scale=1,alpha=1,tint=0xffffff,scaleY=scale){
     if(this.used>=48)return;
-    const image=this.images[this.used]??this.scene.add.image(0,0,wardenTexture(WARDEN.locations[layer.frame]!));this.images[this.used++]=image;
-    image.setTexture(wardenTexture(WARDEN.locations[layer.frame]!),layer.frame).setName('ash-warden-layer').setOrigin(layer.pivot[0]!/image.frame.realWidth,layer.pivot[1]!/image.frame.realHeight).setPosition(x,y).setScale(layer.scale*scale,layer.scale*scaleY).setDepth(depth).setFlipX(flip).setAlpha(alpha).setTint(tint).setVisible(true);
+    const texture=layer.texture??wardenTexture(WARDEN.locations[layer.frame]!);
+    const image=this.images[this.used]??this.scene.add.image(0,0,texture);this.images[this.used++]=image;
+    image.setTexture(texture,layer.frame).setName('ash-warden-layer').setOrigin(layer.pivot[0]!/image.frame.realWidth,layer.pivot[1]!/image.frame.realHeight).setPosition(x,y).setScale(layer.scale*scale,layer.scale*scaleY).setDepth(depth).setFlipX(flip).setAlpha(alpha).setTint(tint).setVisible(true);
+    return image;
   }
-  private clip(id:string,age:number,x:number,y:number,depth:number,scale=1,alpha=1,scaleY=scale){
-    const c=WARDEN.clips[id]!;for(const layer of c.frames[wardenIndex(c,age)]!.layers)this.image(layer,x,y,depth,false,scale,alpha,0xffffff,scaleY);
+  private clip(id:string,age:number,x:number,y:number,depth:number,scale=1,alpha=1,scaleY=scale,flip=false){
+    const c=WARDEN.clips[id]!;for(const layer of c.frames[wardenIndex(c,age)]!.layers)this.image(layer,x,y,depth,flip,scale,alpha,0xffffff,scaleY)?.setName(`ash-warden-${id}`);
   }
   private actors(w:World,intensity:number,reduced:boolean){
     const f=w.finalEncounter,e=f.boss!;const pose=wardenPose(f),depth=e.y/10000;
@@ -42,9 +50,11 @@ export class FinalBossArt {
     for(const event of f.events){
       if(event.name!=='chargeStart'&&event.name!=='chargeStop')continue;
       const stop=event.name==='chargeStop',age=f.clock-event.clock;if(age<0||age>=(stop?.24:.16))continue;
-      for(const [i,layer]of ['ground','back','front'].entries())this.clip(`charge-${stop?'stop':'start'}-${layer}`,age,event.x+2.6193243244,event.y-1.3096621622,i===2?depth+.001:-.2+i*.001,1,decor);
+      const flip=wardenFacing(event.direction??f.attack.direction)==='west';
+      for(const [i,layer]of ['ground','back','front'].entries())this.clip(`charge-${stop?'stop':'start'}-${layer}`,age,event.x+(flip?-1:1)*2.6193243244,event.y-1.3096621622,i===2?depth+.001:-.2+i*.001,1,decor,1,flip);
     }
     for(const m of f.meteors){
+      if(m.age<0)continue;
       const visualScale=C.meteorRadius/(39*.6548310811),warning=m.warning??C.meteorWarning;
       if(!m.landed){
         this.clip('meteor-telegraph',Math.min(.899,m.age),m.x,m.y,-.3,visualScale,.85,C.meteorRadius/(18*.6548310811));
@@ -57,6 +67,8 @@ export class FinalBossArt {
     }
   }
   render(w:World,intensity:number,reduced:boolean){
+    this.flameStrike.render(w,intensity,reduced);
+    this.meleeCombo.render(w);
     const f=w.finalEncounter,e=f.boss,g=this.ground.clear(),t=this.tells.clear();this.used=0;for(const image of this.images)image.setVisible(false);
     this.deathAge=f.attack.kind==='death'?f.attack.age:0;
     for(const image of this.ghosts)image.setVisible(false);for(const label of this.labels)label.setVisible(false);
@@ -88,28 +100,10 @@ export class FinalBossArt {
       g.lineStyle(5,0x88bdd6,.14).strokeEllipse(e.x,e.y-31,94,120);
       for(let i=0;i<6;i++){const angle=i*Math.PI/3,px=e.x+Math.cos(angle)*44,py=e.y-31+Math.sin(angle)*56;g.fillStyle(0xd2f3f7,.85).fillRect(px-2,py-2,4,4);}
     }
-    if(a.kind==='chargeWindup'){
-      t.lineStyle(64,0xb55136,.17).lineBetween(a.from.x,a.from.y,a.to.x,a.to.y);
-      t.lineStyle(2,0xffd29a,.95).lineBetween(a.from.x,a.from.y,a.to.x,a.to.y).strokeCircle(a.to.x,a.to.y,32);
-    }
-    if(a.kind==='swordWindup'||a.kind==='swordActive'){
-      const d=a.direction,n={x:-d.y,y:d.x},active=a.kind==='swordActive',end={x:e.x+d.x*C.swordRadius,y:e.y+d.y*C.swordRadius},half=C.swordWidth/2;
-      t.fillStyle(active?0xffdfa8:0xd17b49,active?.28:.10).beginPath().moveTo(e.x+n.x*half,e.y+n.y*half).lineTo(end.x+n.x*half,end.y+n.y*half).lineTo(end.x-n.x*half,end.y-n.y*half).lineTo(e.x-n.x*half,e.y-n.y*half).closePath().fillPath();
-      for(const sign of [-1,1])t.lineStyle(1,0xf8d8a5,.9).lineBetween(e.x+n.x*half*sign,e.y+n.y*half*sign,end.x+n.x*half*sign,end.y+n.y*half*sign);
-      if(active){t.lineStyle(7,0xffe6ab,.9).lineBetween(e.x,e.y,end.x,end.y);t.lineStyle(2,0xff6b31).lineBetween(e.x,e.y,end.x,end.y);}
-      if(active||a.age>.72){g.lineStyle(10,0xff732e,.25).lineBetween(e.x,e.y-28,e.x+d.x*80,e.y-28+d.y*80);g.lineStyle(3,0xffdda0,.7).lineBetween(e.x,e.y-28,e.x+d.x*80,e.y-28+d.y*80);}
-    }
-    if(a.kind==='recovery'){
-      const d=a.direction,fade=Math.max(0,1-a.age/C.recovery);
-      for(let i=0;i<12;i++){const x=e.x+d.x*C.swordRadius*i/12,y=e.y+d.y*C.swordRadius*i/12,jag=(i%2?1:-1)*3;g.lineStyle(3,0xf26c32,fade*.8).lineBetween(x-d.y*jag,y+d.x*jag,x+d.x*C.swordRadius/12+d.y*jag,y+d.y*C.swordRadius/12-d.x*jag);}
-    }
-    if(a.kind==='basicMelee'&&a.age<C.meleeHit){
-      const angle=Math.atan2(a.direction.y,a.direction.x);t.lineStyle(1.5,0xffd29a,.9).beginPath().arc(e.x,e.y,C.meleeRadius,angle-C.meleeAngle/2,angle+C.meleeAngle/2).strokePath();
-    }
     if(a.kind==='shieldBreak'){
       const p=Math.min(1,a.age/.7);for(let i=0;i<12;i++){const angle=i*Math.PI/6,drift=35+p*60;g.lineStyle(2,0xc8f0f4,(1-p)*.9).lineBetween(e.x+Math.cos(angle)*drift,e.y-25+Math.sin(angle)*drift,e.x+Math.cos(angle)*drift+4,e.y-34+Math.sin(angle)*drift);}
     }
-    for(const m of f.meteors)if(!m.landed){
+    for(const m of f.meteors)if(m.age>=0&&!m.landed){
       // Exact world danger boundary: art ellipse is decorative, gameplay circle is authoritative.
       t.lineStyle(1.5,0xffd29a,.95).strokeCircle(m.x,m.y,C.meteorRadius);
       t.lineStyle(1,0xffe9c1,.9).beginPath().arc(m.x,m.y,C.meteorRadius-3,-Math.PI/2,-Math.PI/2+Math.min(1,m.age/(m.warning??C.meteorWarning))*Math.PI*2).strokePath();
@@ -128,6 +122,6 @@ export class FinalBossArt {
       label.setPosition(marker.x,marker.y).setText(marker.boss?'СТРАЖ':`ЩИТ${marker.count>1?' ×'+marker.count:''}`).setVisible(true);
     }
   }
-  diagnostics(){return{deathAge:this.deathAge,pose:this.used?this.pose:null,pooledImages:this.images.length,activeImages:this.used,ghosts:this.ghosts.length,labels:this.labels.length,atlasBytes:WARDEN.rgbaBytes,atlasPages:WARDEN.pages};}
-  destroy(){this.ground.destroy();this.tells.destroy();for(const image of this.images)image.destroy();for(const image of this.ghosts)image.destroy();for(const label of this.labels)label.destroy();}
+  diagnostics(){const flameStrike=this.flameStrike.diagnostics(),meleeCombo=this.meleeCombo.diagnostics();return{deathAge:this.deathAge,pose:this.used?this.pose:null,bodyImages:this.images.filter(i=>i.visible&&i.name==='ash-warden-layer').map(i=>({frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y})),telegraphCommands:this.tells.commandBuffer.length,meteorWarnings:this.images.filter(i=>i.visible&&i.name==='ash-warden-meteor-telegraph').map(i=>({x:i.x,y:i.y,frame:i.frame.name})),chargeImages:this.images.filter(i=>i.visible&&i.name.startsWith('ash-warden-charge-')).map(i=>({name:i.name,frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y})),pooledImages:this.images.length+flameStrike.pooledImages+meleeCombo.pooledImages,activeImages:this.used+flameStrike.activeImages+meleeCombo.activeImages,ghosts:this.ghosts.length,labels:this.labels.length,atlasBytes:WARDEN.rgbaBytes,atlasPages:WARDEN.pages,flameStrike,meleeCombo,totalAtlasBytes:WARDEN.rgbaBytes+flameStrike.atlasBytes+meleeCombo.atlasBytes};}
+  destroy(){this.meleeCombo.destroy();this.flameStrike.destroy();this.ground.destroy();this.tells.destroy();for(const image of this.images)image.destroy();for(const image of this.ghosts)image.destroy();for(const label of this.labels)label.destroy();}
 }

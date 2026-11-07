@@ -8,7 +8,7 @@ test('final meteor remains visible with zero effects, reduced motion/flash and m
   const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:0,muted:true,pixelScale:2,effectsIntensity:0,reducedMotion:true,reducedFlash:true}});
   const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.elapsed=1200;for(const a of Object.values(w.abilities))a.level=0;w.finalEncounter.begin(w);w.finalEncounter.phase='phase3';w.finalEncounter.nextCombo=Infinity;w.finalEncounter.nextVolley=.1;
  });
- await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.length===5);await page.evaluate(()=>window.__PIXEL__!.world.pause());
+ await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.length===9);await page.evaluate(()=>window.__PIXEL__!.world.pause());
  // Keep the paused simulation fixed, and remove the overlaid Vue dialog from
  // this Canvas pixel probe. Screenshot compositing includes occluding DOM.
  await page.addStyleTag({content:'.overlay{display:none!important}'});

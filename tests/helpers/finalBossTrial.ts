@@ -2,7 +2,7 @@ import { World } from '../../src/game/systems/World';
 import { applyUpgrade } from '../../src/game/systems/UpgradeSystem';
 import type { UltimateId } from '../../src/game/config/ultimates';
 import { direction,distance,type Point } from '../../src/game/utils/math';
-import { swordContains } from '../../src/game/systems/FinalEncounter';
+import {findFinalEscape} from '../../src/game/systems/FinalDangerPlanner';
 export const FINAL_BUILDS={
   moderate:{rank:3,damage:2,cooldown:3,projectiles:1,health:5,area:2,speed:4,evolve:0},
   typical:{rank:4,damage:5,cooldown:5,projectiles:3,health:5,area:3,speed:4,evolve:1},
@@ -23,15 +23,18 @@ export function finalPilot(w:World):Point{
   const f=w.finalEncounter,e=f.boss;if(!e)return{x:0,y:0};
   const target=[...w.guardians].filter(g=>g.finalRole).sort((a,b)=>distance(w.player,a)-distance(w.player,b))[0]??e;
   const a=f.attack;
-  if((a.kind==='swordWindup'||a.kind==='swordActive')&&swordContains(w.player,e,a.direction))return{x:-a.direction.y,y:a.direction.x};
+  if((a.kind==='swordWindup'||a.kind==='swordActive')&&f.swordHits(w.player)){
+    const escape=findFinalEscape(w.player,w.effectiveSpeed,f.dangers(),p=>f.clamp(p));
+    return escape?direction(escape.x-w.player.x,escape.y-w.player.y):{x:-a.direction.y,y:a.direction.x};
+  }
   if(a.kind==='basicMelee'&&a.age<.8)return{x:-a.direction.x,y:-a.direction.y};
   if(a.kind==='chargeWindup'||a.kind==='chargeTravel')return{x:-a.direction.y,y:a.direction.x};
-  const danger=f.meteors.filter(m=>!m.landed&&distance(m,w.player)<100);
+  const danger=f.meteors.filter(m=>!m.landed&&!m.targetOnRelease&&distance(m,w.player)<100);
   if(danger.length){
     let best=-Infinity,chosen={x:0,y:0};
     for(let i=0;i<16;i++){
       const v={x:Math.cos(i*Math.PI/8),y:Math.sin(i*Math.PI/8)},p=f.clamp({x:w.player.x+v.x*80,y:w.player.y+v.y*80});
-      const score=Math.min(...f.meteors.filter(m=>!m.landed).map(m=>distance(m,p)))-distance(p,f.center)*.008;
+      const score=Math.min(...f.meteors.filter(m=>!m.landed&&!m.targetOnRelease).map(m=>distance(m,p)))-distance(p,f.center)*.008;
       if(score>best){best=score;chosen=v;}
     }return chosen;
   }

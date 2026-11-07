@@ -7,7 +7,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Warden directional sword
  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.experience.level=70;w.elapsed=1200;w.player.invulnerableUntil=1e9;for(const a of Object.values(w.abilities))a.level=0;w.finalEncounter.begin(w);});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
  const frames=[];
  for(const [direction,x,y]of [['down',0,1],['up',0,-1],['right',1,0],['left',-1,0]]as const){
-  await page.evaluate(({x,y})=>{const w=window.__PIXEL__!.world,f=w.finalEncounter,e=f.boss!;e.x=f.center.x;e.y=f.center.y;w.player.x=e.x+70;w.player.y=e.y+65;f.nextCombo=Infinity;f.attack={...f.attack,kind:'swordWindup',age:0,duration:.9,direction:{x,y},contacted:false};}, {x,y});
+  await page.evaluate(({x,y})=>{const w=window.__PIXEL__!.world,f=w.finalEncounter,e=f.boss!;e.x=f.center.x;e.y=f.center.y;w.player.x=e.x+70;w.player.y=e.y+65;f.nextCombo=Infinity;f.attack={...f.attack,kind:'swordWindup',age:0,duration:.6,direction:{x,y},contacted:false};}, {x,y});
   await page.waitForTimeout(550);await page.screenshot({path:`screenshots/final-boss/sword-${direction}-windup-${width}.png`});
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.attack.kind==='swordActive');
   frames.push(await page.evaluate(()=>{const f=window.__PIXEL__!.world.finalEncounter;return{kind:f.attack.kind,direction:f.attack.direction,age:f.attack.age};}));await page.screenshot({path:`screenshots/final-boss/sword-${direction}-active-${width}.png`});

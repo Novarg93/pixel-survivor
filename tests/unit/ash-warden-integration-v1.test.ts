@@ -29,13 +29,13 @@ it('uses accepted South fallback without changing North combat direction',()=>{
 it('plays spawnReady once and does not permit invisible intro damage',()=>{
   const w=new World(7,{spawnRate:0});w.elapsed=1199.96;w.step(.05);const f=w.finalEncounter,e=f.boss!,hp=w.player.hp;expect(w.damageEnemy(e,1e9)).toBe(false);tick(w,2.2);expect(f.phase).toBe('intro');expect(w.player.hp).toBe(hp);tick(w,.1);expect(f.phase).toBe('phase1');expect(f.events.filter(e=>e.name==='spawnReady')).toHaveLength(1);
 });
-it('hits Basic Melee only at650ms, once, with independently latched aim',()=>{
-  const w=setup(),f=w.finalEncounter,e=f.boss!;f.nextMelee=0;w.player.x=e.x+80;w.player.y=e.y;w.step(.05);expect(f.attack.kind).toBe('basicMelee');const id=f.attack.id;
-  tick(w,.6);expect(w.player.hp).toBe(100);tick(w,.05);expect(w.player.hp).toBeLessThan(100);const hp=w.player.hp;tick(w,.5);expect(w.player.hp).toBe(hp);expect(f.events.filter(e=>e.instance===id&&e.name==='hitFrame')).toHaveLength(1);expect(f.attack.direction).toEqual({x:1,y:0});expect(meleeContains({x:e.x-80,y:e.y},e,{x:1,y:0})).toBe(false);
+it('hits Basic Melee once at the accelerated hit time, with independently latched aim',()=>{
+  const w=setup(),f=w.finalEncounter,e=f.boss!;f.nextMelee=0;w.player.x=e.x+45;w.player.y=e.y;w.step(.05);expect(f.attack.kind).toBe('basicMelee');const id=f.attack.id;
+  tick(w,.65/1.15-.001);expect(w.player.hp).toBe(100);tick(w,.001);expect(w.player.hp).toBeLessThan(100);const hp=w.player.hp;tick(w,.5);expect(w.player.hp).toBe(hp);expect(f.events.filter(e=>e.instance===id&&e.name==='hitFrame')).toHaveLength(1);expect(f.attack.direction).toEqual({x:1,y:0});expect(meleeContains({x:e.x-80,y:e.y},e,{x:1,y:0})).toBe(false);
 });
 it('uses a narrow long Cleave strip and bounded speed adapted to three player builds',()=>{
   expect(swordContains({x:250,y:0},{x:0,y:0},{x:1,y:0})).toBe(true);expect(swordContains({x:120,y:60},{x:0,y:0},{x:1,y:0})).toBe(false);
-  for(const speed of [135,210,400]){const w=setup(),f=w.finalEncounter,e=f.boss!;w.player.speed=speed;w.player.x=e.x+500;f.nextCombo=f.nextMeteor=Infinity;w.step(.05);expect(f.chaseSpeed).toBe(Math.min(C.chaseMax,Math.max(C.chaseMin,w.effectiveSpeed*C.chaseMultiplier)));expect(f.chaseSpeed).toBeLessThanOrEqual(C.chaseMax);}
+  for(const speed of [135,210,400]){const w=setup(),f=w.finalEncounter,e=f.boss!;w.player.speed=speed;w.player.x=e.x+500;f.nextCombo=f.nextMeteor=Infinity;w.step(.05);expect(f.chaseSpeed).toBe(C.speed);expect(f.chaseSpeed).toBe(256);}
 });
 it('locks a single Meteor target and preserves the full1300ms warning',()=>{
   const w=setup(),f=w.finalEncounter,e=f.boss!;w.player.x=e.x+450;f.nextMeteor=0;f.nextCombo=Infinity;w.step(.05);expect(f.attack.kind).toBe('meteorCast');expect(f.meteors).toHaveLength(1);const m=f.meteors[0]!,target={x:m.x,y:m.y};tick(w,1.25);expect(m.landed).toBe(false);w.player.y+=150;tick(w,.05);expect(m.landed).toBe(true);expect({x:m.x,y:m.y}).toEqual(target);
@@ -46,7 +46,7 @@ it.each([false,true])('staggered impacts never hit a future circle early and con
   const hurt=vi.spyOn(w,'damagePlayer');w.step(.05);expect(f.meteors[1]!.landed).toBe(false);expect(hurt).toHaveBeenCalledTimes(overlap?1:0);w.player.invulnerableUntil=0;w.step(.05);expect(hurt).toHaveBeenCalledTimes(1);expect(w.player.hp).toBe(46);tick(w,.7);expect(f.meteors).toHaveLength(0);
 });
 it('casts two shielded volleys, has immediate vulnerability and a three-second staged stagger',()=>{
-  const w=setup(),f=w.finalEncounter;w.player.invulnerableUntil=1e9;w.damageEnemy(f.boss!,1e9);tick(w,C.transition);expect(f.supports.size).toBe(3);expect(w.combatTargets).not.toContain(f.boss);tick(w,3.4);expect(f.events.some(e=>e.name==='armageddonRelease')).toBe(true);expect(f.meteors.filter(m=>!m.landed)).toHaveLength(6);tick(w,1.6);expect(f.diagnostics.meteors).toBe(11);
+  const w=setup(),f=w.finalEncounter;w.player.invulnerableUntil=1e9;w.damageEnemy(f.boss!,1e9);tick(w,C.transition);expect(f.supports.size).toBe(3);expect(w.combatTargets).not.toContain(f.boss);tick(w,3.4);expect(f.events.some(e=>e.name==='armageddonRelease')).toBe(true);expect(f.meteors.filter(m=>!m.landed)).toHaveLength(11);expect(f.meteors.filter(m=>m.age>=0)).toHaveLength(1);tick(w,1.6);expect(f.diagnostics.meteors).toBe(11);
   for(const g of [...w.guardians])w.damageEnemy(g,1e9);expect(f.shielded).toBe(false);expect(w.combatTargets).toContain(f.boss);expect(wardenPose(f).clip).toBe('shield-break');tick(w,1.1);expect(wardenPose(f).clip).toBe('stagger');tick(w,1.25);expect(wardenPose(f).clip).toBe('stagger-recover');tick(w,.65);expect(f.attack.kind).toBe('approach');
 });
 it('runs arena Armageddon during sword attacks, frozen AI and pause without catchup',()=>{

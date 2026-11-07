@@ -1,0 +1,178 @@
+{
+  "bodyA": {
+    "source": "art/generated/ash-warden-melee-swing-experiment-01/A/frames/",
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "worldScale": 0.6548310811,
+    "durationsMs": [
+      110,
+      110,
+      130,
+      150,
+      150,
+      80,
+      80,
+      90,
+      80,
+      80,
+      70,
+      70
+    ],
+    "sourceHashes": {
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/00.png": "4fa446ddc5eb308c637fe51204de941c2ff50a97d647cd889e8ae1d23c8c80de",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/01.png": "6f13c17b83fdaeb2f3394bbc67fc0d610f0752d02aee553f01f35cede877c8f9",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/02.png": "ac34952ed34dbc0bf50c5d4ec1f4d55dc26fa2fe1e6beebb18ec5690bab790ef",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/03.png": "5896a0ad7c29c1afa1de72132f5448be1e0eea316336e4d17e00f847abec4e3e",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/04.png": "e9f81680d2e348bab901030cc16d292262f18f7548b2bf03b6f7bdd96db5d087",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/05.png": "5b0b0c41d2b854f793e14704bd6c39adb7c9ac9ee590774e5bcf9dd8b8141735",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/06.png": "333c36e7e9fe431ea147f538752d49177cd9f55a02b33cc6858ccd5941cc044a",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/07.png": "e2091dd37d90807995d6e8f55bdd8fb2efa66970e83c0c9513862234532dfad6",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/08.png": "5bc0ae2f011a09565542a2bf6e86a52ec466a2fa18780fcabca3b17f3dd213b2",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/09.png": "3fe2188b2957c09b717c0cc8115b1e7d137caa9fa85eace579edfe97aeac14ff",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/10.png": "8a8e2efd80604cef0a6f35fb056ac3c03c43df346c7ab7a1aa9eea13a303fbf1",
+      "art/generated/ash-warden-melee-swing-experiment-01/A/frames/11.png": "b384975b5caf44533f969b12002923078ca1c7feb39803ebaeee37c55c77be3b"
+    },
+    "framesPreserved": 12
+  },
+  "slash": {
+    "rawSource": "slash/raw/output.gif",
+    "rawHash": "4485e015ecc6b8a230fd3ba7b81783d7e2daf9ef7e37d46384135844983fd5df",
+    "canvas": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      48
+    ],
+    "durationsMs": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "sourceDurationsMs": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "peakFrame": 8,
+    "leadMs": 160,
+    "worldScale": 1.65,
+    "preparation": "Retain warm RD pixels in a forward120degree sector, feather angular ends with pixel dither, fade one-shot envelope; raw preserved",
+    "analysis": [
+      {
+        "index": 0,
+        "occupied": 0,
+        "envelope": 0
+      },
+      {
+        "index": 1,
+        "occupied": 82,
+        "envelope": 0.25
+      },
+      {
+        "index": 2,
+        "occupied": 208,
+        "envelope": 0.5
+      },
+      {
+        "index": 3,
+        "occupied": 282,
+        "envelope": 0.75
+      },
+      {
+        "index": 4,
+        "occupied": 318,
+        "envelope": 1
+      },
+      {
+        "index": 5,
+        "occupied": 375,
+        "envelope": 1
+      },
+      {
+        "index": 6,
+        "occupied": 285,
+        "envelope": 1
+      },
+      {
+        "index": 7,
+        "occupied": 356,
+        "envelope": 1
+      },
+      {
+        "index": 8,
+        "occupied": 422,
+        "envelope": 1
+      },
+      {
+        "index": 9,
+        "occupied": 354,
+        "envelope": 1
+      },
+      {
+        "index": 10,
+        "occupied": 393,
+        "envelope": 0.8
+      },
+      {
+        "index": 11,
+        "occupied": 260,
+        "envelope": 0.65
+      },
+      {
+        "index": 12,
+        "occupied": 129,
+        "envelope": 0.5
+      },
+      {
+        "index": 13,
+        "occupied": 78,
+        "envelope": 0.25
+      },
+      {
+        "index": 14,
+        "occupied": 50,
+        "envelope": 0.1
+      },
+      {
+        "index": 15,
+        "occupied": 0,
+        "envelope": 0
+      }
+    ],
+    "westMirror": "x=95-x, all frames, no extra generation"
+  }
+}

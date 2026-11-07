@@ -1,4 +1,6 @@
 import { WARDEN,wardenTexture } from './ashWardenPack';
+import {FLAME_STRIKE_TEXTURE,FLAME_STRIKE_URLS} from './flameStrikePack';
+import {MELEE_COMBO_TEXTURE,MELEE_COMBO_URLS} from './meleeComboPack';
 import { FinalBossArt } from './FinalBossArt';
 import { UltimateArt } from './UltimateArt';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
@@ -29,6 +31,8 @@ import { PickupAnimation } from './PickupAnimation';
 import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
+  if(!scene.textures.exists(MELEE_COMBO_TEXTURE))scene.load.atlas(MELEE_COMBO_TEXTURE,import.meta.env.BASE_URL+MELEE_COMBO_URLS.image,import.meta.env.BASE_URL+MELEE_COMBO_URLS.data);
+  if(!scene.textures.exists(FLAME_STRIKE_TEXTURE))scene.load.atlas(FLAME_STRIKE_TEXTURE,import.meta.env.BASE_URL+FLAME_STRIKE_URLS.image,import.meta.env.BASE_URL+FLAME_STRIKE_URLS.data);
   for(let i=0;i<WARDEN.pages;i++)if(!scene.textures.exists(wardenTexture(i)))scene.load.atlas(wardenTexture(i),import.meta.env.BASE_URL+`assets/hd/ash-warden-v1/${i}.png`,import.meta.env.BASE_URL+`assets/hd/ash-warden-v1/${i}.json`);
   if (!scene.textures.exists(HD_CORE_TEXTURE)) scene.load.atlas(HD_CORE_TEXTURE, import.meta.env.BASE_URL + HD_CORE_URLS.image, import.meta.env.BASE_URL + HD_CORE_URLS.data);
   if (!scene.textures.exists(RUNNER_TEXTURE)) scene.load.atlas(RUNNER_TEXTURE, import.meta.env.BASE_URL + RUNNER_URLS.image, import.meta.env.BASE_URL + RUNNER_URLS.data);

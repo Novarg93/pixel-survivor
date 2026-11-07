@@ -26,7 +26,7 @@ it('selects approved walking from actual pursuit in four directions while retain
   for(const [face,dx,dy]of [['east',1,0],['west',-1,0],['south',0,1],['north',0,-1]] as const){
     w.player.x=e.x+dx*250;w.player.y=e.y+dy*250;w.step(.05);const pose=wardenPose(f);
     expect(f.attack.kind).toBe('approach');expect(pose.clip).toBe(face+'-walk');expect(pose.index).toBe(wardenIndex(WARDEN.clips[face+'-walk']!,f.bossClock));expect(pose.presentationDirection).toBe(face);
-    expect(f.chaseSpeed).toBe(Math.min(C.chaseMax,Math.max(C.chaseMin,w.effectiveSpeed*C.chaseMultiplier)));
+    expect(f.chaseSpeed).toBe(C.speed);
   }
 });
 it('holds new movement and emission under freeze/pause and returns to existing idle when motion stops',()=>{

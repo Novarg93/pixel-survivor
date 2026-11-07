@@ -25,7 +25,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`accepted Warden pack and
   await expect(page.locator('.final-boss-bar')).toContainText('НЕУЯЗВИМ');
   await page.evaluate(()=>{const w=window.__PIXEL__!.world,e=w.finalEncounter.boss!;w.player.x=e.x-85;w.player.y=e.y+55;});await shot('ritual-three-guardians');
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.attack.kind==='armageddonCast');await page.waitForTimeout(400);await shot('phase2-armageddon-first');
-  await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.some(m=>m.group!==window.__PIXEL__!.world.finalEncounter.meteors[0]?.group));await shot('phase2-armageddon-second');
+  await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.some(m=>m.age>=0&&m.group!==window.__PIXEL__!.world.finalEncounter.meteors[0]?.group));await shot('phase2-armageddon-second');
   await page.evaluate(()=>window.__PIXEL__!.finalScenario('breakShield'));await shot('shield-break');await page.waitForTimeout(1200);await shot('stagger');
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.attack.kind==='approach');await page.evaluate(()=>window.__PIXEL__!.finalScenario('phase3'));await page.waitForTimeout(750);await shot('phase3-overload');
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase3');

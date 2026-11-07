@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "selectedVariant": "c",
+  "sourceCanvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    144
+  ],
+  "worldScale": 0.58,
+  "frames": [
+    "eruption-0",
+    "eruption-1",
+    "eruption-2",
+    "eruption-3",
+    "eruption-4",
+    "eruption-5",
+    "eruption-6",
+    "eruption-7",
+    "eruption-8",
+    "eruption-9",
+    "eruption-10",
+    null
+  ],
+  "sourceDurationsMs": [
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150,
+    150
+  ],
+  "durationsMs": [
+    20,
+    20,
+    20,
+    25,
+    25,
+    60,
+    70,
+    80,
+    90,
+    80,
+    80,
+    30
+  ],
+  "loop": false,
+  "segments": 10,
+  "propagationMs": 90,
+  "leadMs": 110,
+  "rgbaBytes": 1048576,
+  "sources": {
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/00.png": "90e77da723cc43606dd4af1fac0e604be8983e6f7a07ebc8b134f6c5cd736780",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/01.png": "61b95e42d0a2c481c10ad7d95e83ddbdae2770327ae097df5ba38ae5c9048155",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/02.png": "3c130f03b2cc6d21d07cbfdfeb9d6aae95b0a5a8e19802c11689f059010915dd",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/03.png": "87d156644809bb928d1b1101049a801c9ca712d491d34e4021e5ded046f20138",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/04.png": "c1ebcfa20745728d15afa15332a4e55bba38c296bf705a32486dca32b846b8c8",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/05.png": "b3e0ffef480d0acfbaee272ef18201e355e0079d6d8b3425220b66626b1ada4a",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/06.png": "6c8d172a29895d6cc281888b5780ca14eaed328e578370e4c5eae61968b5111e",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/07.png": "45377a5acd8b182fae229ae3958bff4476de6c648ccf29e49deeeea853bea523",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/08.png": "18963067ddf4e332e303024cb537268a326b4b432e7481df82b7ce90092168be",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/09.png": "e578ec1d872e1162495cb50e23f88420c7a674409a2329da4bd5f4870c14a1db",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/10.png": "faa5231edac93a108be44e958fc664e44dbfa6c0708a71f934669d8e6e1f1c36",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/11.png": "3f428f0c48205e41707fe65ad63f707c1e371313c689fd02d96a5401135d5564",
+    "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/raw/output.gif": "71f58cdce17f54c73e2a35a5631aa5781f509ed69e3be5c98cf8a08e723e7e8d"
+  },
+  "preparation": {
+    "kind": "deterministic pixel-dither extinction, no new drawing",
+    "alphaCoverage": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.625,
+      0.25,
+      0
+    ],
+    "lastFrameFullyTransparent": true,
+    "rawPreserved": true
+  }
+}

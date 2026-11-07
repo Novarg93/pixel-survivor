@@ -32,7 +32,7 @@ it('migrates missing final boss counters before validation without relabeling hi
 it('leaves a reachable meteor escape at normal135 speed at the center and boundary, without Blink or overlapping sword',()=>{
  for(const radius of [0,550,790])for(let angle=0;angle<Math.PI*2;angle+=Math.PI/4){
   const w=setup(),f=w.finalEncounter;w.player.x=f.center.x+Math.cos(angle)*radius;w.player.y=f.center.y+Math.sin(angle)*radius;
-  f.phase='phase3';f.nextVolley=0;f.nextCombo=0;w.step(.05);expect(f.meteors).toHaveLength(5);expect(f.attack.kind).toBe('approach');
+  f.phase='phase3';f.nextVolley=0;f.nextCombo=0;w.step(.05);expect(f.meteors).toHaveLength(9);expect(f.meteors.filter(m=>m.age>=0)).toHaveLength(1);expect(f.attack.kind).toBe('approach');
   let escape:{x:number;y:number}|undefined;
   for(let i=0;i<64;i++){
    const v={x:Math.cos(i*Math.PI/32),y:Math.sin(i*Math.PI/32)},end=f.clamp({x:w.player.x+v.x*135*1.25,y:w.player.y+v.y*135*1.25});
@@ -77,8 +77,8 @@ it('preserves a real queued offer when XP collection pauses the intro at20:00',(
  w.step(30);expect(w.finalEncounter.clock).toBe(clock);expect(w.offerId).toBe(offer);expect(w.selectUpgrade('ultimate-frost',offer)).toBe(true);expect(w.ultimate.charge).toBe(10);w.step(.05);expect(w.finalEncounter.clock).toBeCloseTo(clock+.05);
 });
 it('keeps already announced world meteor points fixed while the player moves',()=>{
- const w=setup(),f=w.finalEncounter;f.phase='phase3';f.nextCombo=Infinity;f.nextVolley=0;w.step(.05);const points=f.meteors.map(m=>({x:m.x,y:m.y}));
- for(let i=0;i<8;i++)w.step(.05,{x:1,y:0});expect(f.meteors.map(m=>({x:m.x,y:m.y}))).toEqual(points);
+ const w=setup(),f=w.finalEncounter;f.phase='phase3';f.nextCombo=Infinity;f.nextVolley=0;w.step(.05);const announced=f.meteors.filter(m=>!m.targetOnRelease).map(m=>({id:m.id,x:m.x,y:m.y}));
+ for(let i=0;i<8;i++)w.step(.05,{x:1,y:0});for(const p of announced){const m=f.meteors.find(m=>m.id===p.id)!;expect({x:m.x,y:m.y}).toEqual({x:p.x,y:p.y});}expect(f.meteors[1]!.x).toBeGreaterThan(announced[0]!.x);
 });
 it('finishes on a lethal supply choice without resurrecting the run in selectUpgrade',()=>{
  const w=setup(),f=w.finalEncounter,e=f.boss!;f.phase='phase3';e.hp=100;w.player.x=e.x;w.player.y=e.y;w.status='upgrade';w.experience.pending=1;w.choices=[SUPPLIES.find(c=>c.id==='nova')!];

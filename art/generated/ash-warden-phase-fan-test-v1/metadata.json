@@ -1,0 +1,135 @@
+{
+  "purpose": "User-requested test balance in main; not deployed",
+  "movement": {
+    "constant": 256,
+    "playerSpeedDependent": false,
+    "distanceDependent": false,
+    "meleeStart": 50
+  },
+  "charge": {
+    "intervalByPhase": {
+      "phase1": 8,
+      "phase2": 4,
+      "phase3": 8
+    },
+    "countFrom": "Previous successful cast start",
+    "initialWarmup": 3,
+    "cancelledOtherAttacksDoNotResetCharge": true
+  },
+  "flame": {
+    "anglesDegreesByPhase": {
+      "phase1": [
+        0
+      ],
+      "phase2": [
+        0,
+        -22.5,
+        22.5
+      ],
+      "phase3": [
+        0,
+        -22.5,
+        22.5,
+        -45,
+        45
+      ]
+    },
+    "axisSpanDegrees": {
+      "phase1": 0,
+      "phase2": 45,
+      "phase3": 90
+    },
+    "range": 280,
+    "widthPerRay": 44,
+    "damageOnceAcrossFan": 64,
+    "windup": 0.6,
+    "active": 0.15,
+    "recovery": 0.75,
+    "segmentsPerRay": 10,
+    "maxFlameSprites": 50,
+    "maxGroundLights": 5,
+    "maxPooledImages": 55,
+    "collision": "Union of individual strips, including gaps; not a filled cone",
+    "lightAlpha": "Original alpha divided by ray count",
+    "facing": "Same locked aim drives all rays; mirror original overhead body/emission for leftward aim",
+    "sourceWindupTorsoTurnPreserved": true
+  },
+  "acceptedArtModified": false,
+  "screenshots": [
+    {
+      "file": "screenshots/1280-melee-at50.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-overview.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-west-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-west-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase3-overview.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase3-west-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase3-west-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/844-melee-at50.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-overview.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-west-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-west-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase3-overview.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase3-west-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase3-west-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/production-practice.png",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+import {test,expect} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const out='art/generated/ash-warden-player-meteors-v1/flame-timing/';
+for(const [width,height]of [[1280,720],[844,390]])test(`Flame Strike 50percent faster windup and double-speed release on game Canvas ${width}`,async({browser,baseURL})=>{
+  test.setTimeout(30000);mkdirSync(out+'screenshots',{recursive:true});const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width<1000}),page=await context.newPage(),errors:string[]=[];
+  page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));await page.goto('/?test=1');await page.locator('.play-button').click();
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.practice=true;w.options.spawnRate=0;w.encounterDirector.nextAt=Infinity;w.elapsed=1200;w.player.invulnerableUntil=Infinity;for(const a of Object.values(w.abilities))a.level=0;w.finalEncounter.begin(w);});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
+  const stills=[];
+  for(const [kind,age,index,label]of [['swordWindup',.52,5,'windup-faster'],['swordActive',.1,7,'faster-release'],['recovery',0,8,'follow-through'],['recovery',.16,10,'faster-return'],['recovery',.31,11,'finished']]as const){
+    await page.evaluate(({kind,age})=>{const w=window.__PIXEL__!.world,f=w.finalEncounter,e=f.boss!;w.pause();f.nextCombo=f.nextMelee=f.nextMeteor=Infinity;w.player.x=e.x+140;w.player.y=e.y-35;f.attack={...f.attack,kind,age,duration:kind==='swordWindup'?.6:kind==='swordActive'?.15:.75,direction:{x:1,y:0},contacted:false};},{kind,age});
+    await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().finalBoss.pose?.index)).toBe(index);stills.push({kind,age,index});await page.locator('canvas').screenshot({path:`${out}screenshots/${width}-${label}.png`,style:'.overlay{visibility:hidden!important}'});
+  }
+  // The trace uses the real animation clock, rather than synthetic wall-clock delays.
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world,f=w.finalEncounter;f.attack={...f.attack,kind:'swordWindup',age:0,duration:.6};w.resume();});
+  const playback=await page.evaluate(async()=>{const w=window.__PIXEL__!.world,start=w.finalEncounter.bossClock,rows:{time:number;kind:string;index:number;fire:number}[]=[];await new Promise<void>(resolve=>{const wall=performance.now();function sample(){const f=w.finalEncounter,art=window.__PIXEL__!.art().finalBoss;rows.push({time:f.bossClock-start,kind:f.attack.kind,index:art.pose?.index??-1,fire:art.flameStrike.segments.length});if(f.bossClock-start<1.55&&performance.now()-wall<5000)requestAnimationFrame(sample);else resolve();}requestAnimationFrame(sample);});return rows;});
+  expect([...new Set(playback.filter(r=>['swordWindup','swordActive','recovery'].includes(r.kind)).map(r=>r.index))].sort((a,b)=>a-b)).toEqual(Array.from({length:12},(_,i)=>i));
+  const impact=playback.find(r=>r.kind==='swordActive')!,finished=playback.find(r=>r.kind==='recovery'&&r.index===11)!;expect(impact.time).toBeGreaterThanOrEqual(.58);expect(impact.time).toBeLessThan(.7);expect(finished.time).toBeGreaterThan(.92);expect(finished.time).toBeLessThan(1.08);expect(playback.some(r=>r.kind==='swordActive'&&r.fire===10)).toBe(true);
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world,f=w.finalEncounter,e=f.boss!;f.attack={...f.attack,kind:'swordActive',age:.1,duration:.15};e.ultimateFreeze={until:w.elapsed+2,updated:w.elapsed,visualAt:w.elapsed};});await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().finalBoss.pose?.index)).toBe(7);
+  const frozen=await page.evaluate(()=>window.__PIXEL__!.art().finalBoss.pose);await page.waitForTimeout(140);expect(await page.evaluate(()=>window.__PIXEL__!.art().finalBoss.pose)).toEqual(frozen);await page.evaluate(()=>window.__PIXEL__!.world.pause());await page.waitForTimeout(100);expect(await page.evaluate(()=>window.__PIXEL__!.art().finalBoss.pose)).toEqual(frozen);
+  expect(errors).toEqual([]);writeFileSync(out+`validation-${width}.json`,JSON.stringify({viewport:[width,height],stills,playback,impact,finished,freezeHeld:true,pauseHeld:true,errors},null,2));await context.close();
+});

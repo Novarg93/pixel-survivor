@@ -57,7 +57,7 @@ for(const [width,height]of [[1280,720],[1920,1080],[844,390],[740,360],[1024,768
   await page.evaluate(async()=>{const w=window.__PIXEL__!.world,e=w.finalEncounter.boss!,module='/src/game/systems/UltimateFreeze.ts',{freezeForUltimate}=await import(module);w.player.x=e.x+80;w.player.y=e.y;freezeForUltimate(e,w.elapsed,w.elapsed+8);});
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.some(m=>m.owner==='arena'));
   await page.screenshot({path:`${dir}/frozen-armageddon-${width}.png`});
-  const geometry=await page.evaluate(()=>{const f=window.__PIXEL__!.world.finalEncounter;return{center:f.center,vertices:f.supports.size,meteorCount:f.meteors.length};});expect(geometry.meteorCount).toBe(5);
+  const geometry=await page.evaluate(()=>{const f=window.__PIXEL__!.world.finalEncounter;return{center:f.center,vertices:f.supports.size,meteorCount:f.meteors.length};});expect(geometry.meteorCount).toBe(9);
   await page.waitForTimeout(1550);await page.screenshot({path:`${dir}/armageddon-second-${width}.png`});
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.damageEnemy(w.finalEncounter.boss!,1e9);});
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='dying');expect(await page.evaluate(()=>window.__PIXEL__!.world.outcome)).toBe('victory');

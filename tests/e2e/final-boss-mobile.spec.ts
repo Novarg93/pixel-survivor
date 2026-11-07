@@ -3,7 +3,7 @@ test('final arena pauses on portrait, blur and upgrade and keeps geometry on res
  const context=await browser.newContext({baseURL,viewport:{width:844,height:390},hasTouch:true}),page=await context.newPage();
  await page.addInitScript(()=>Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined}));await page.goto('/?test=1');await page.locator('.play-button').click();
  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=1e9;w.elapsed=1200;w.experience.level=70;for(const a of Object.values(w.abilities))a.level=0;w.finalEncounter.begin(w);w.finalEncounter.phase='phase3';w.finalEncounter.nextVolley=w.finalEncounter.clock+.2;});
- await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.length===5);
+ await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.length===9);
  await page.setViewportSize({width:390,height:844});await expect(page.getByRole('dialog',{name:'Поверните устройство горизонтально'})).toBeVisible();
  await page.waitForFunction(()=>window.__PIXEL__!.world.status==='paused');
  const stopped=await page.evaluate(()=>{const w=window.__PIXEL__!.world;return{time:w.elapsed,encounter:JSON.stringify(w.finalEncounter)};});await page.waitForTimeout(200);

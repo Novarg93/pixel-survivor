@@ -1,0 +1,1732 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "movement": [
+    {
+      "speed": 60,
+      "span": 120,
+      "from": {
+        "x": 170,
+        "y": -40
+      },
+      "to": {
+        "x": 195.60000000000002,
+        "y": -40,
+        "speed": 256
+      }
+    },
+    {
+      "speed": 135,
+      "span": 500,
+      "from": {
+        "x": 195.60000000000002,
+        "y": -40
+      },
+      "to": {
+        "x": 221.20000000000005,
+        "y": -40,
+        "speed": 256
+      }
+    },
+    {
+      "speed": 400,
+      "span": 120,
+      "from": {
+        "x": 221.20000000000005,
+        "y": -40
+      },
+      "to": {
+        "x": 246.80000000000007,
+        "y": -40,
+        "speed": 256
+      }
+    }
+  ],
+  "phases": [
+    {
+      "phase": "phase2",
+      "count": 3,
+      "cooldown": 4,
+      "span": 45,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "south-cleave",
+          "age": 0.9,
+          "index": 6,
+          "frame": {
+            "layers": [
+              {
+                "frame": "de40d628e7077b9ce9fd2596",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "flipX": true,
+            "overlay": {
+              "frame": "4e993e97c4720453c061a346",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "west",
+          "presentationDirection": "west"
+        },
+        "bodyImages": [
+          {
+            "frame": "de40d628e7077b9ce9fd2596",
+            "flipX": true,
+            "x": 456.80000000000007,
+            "y": -40
+          }
+        ],
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 37,
+        "activeImages": 34,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": {
+            "impactAge": 0,
+            "origin": {
+              "x": 456.80000000000007,
+              "y": -40
+            },
+            "rotation": 3.141592653589793,
+            "waves": [
+              {
+                "index": 0,
+                "direction": {
+                  "x": -1,
+                  "y": 0
+                },
+                "rotation": 3.141592653589793
+              },
+              {
+                "index": 1,
+                "direction": {
+                  "x": -0.9238795325112867,
+                  "y": 0.3826834323650898
+                },
+                "rotation": 2.748893571891069
+              },
+              {
+                "index": 2,
+                "direction": {
+                  "x": -0.9238795325112867,
+                  "y": -0.3826834323650898
+                },
+                "rotation": -2.748893571891069
+              }
+            ],
+            "glowAlpha": 0.24,
+            "glowLength": 280,
+            "glowWidth": 56,
+            "segments": [
+              {
+                "index": 0,
+                "waveIndex": 0,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 442.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 1,
+                "waveIndex": 0,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 414.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 2,
+                "waveIndex": 0,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 386.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 3,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 358.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 4,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 330.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 5,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 302.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 6,
+                "waveIndex": 0,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 274.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 7,
+                "waveIndex": 0,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 246.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 8,
+                "waveIndex": 0,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 218.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 9,
+                "waveIndex": 0,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 190.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 10,
+                "waveIndex": 1,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 443.86568654484205,
+                "y": -34.64243194688874
+              },
+              {
+                "index": 11,
+                "waveIndex": 1,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 417.997059634526,
+                "y": -23.92729584066623
+              },
+              {
+                "index": 12,
+                "waveIndex": 1,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 392.12843272421003,
+                "y": -13.212159734443716
+              },
+              {
+                "index": 13,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 366.259805813894,
+                "y": -2.4970236282212
+              },
+              {
+                "index": 14,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 340.39117890357795,
+                "y": 8.21811247800131
+              },
+              {
+                "index": 15,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 314.5225519932619,
+                "y": 18.933248584223826
+              },
+              {
+                "index": 16,
+                "waveIndex": 1,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 288.6539250829459,
+                "y": 29.648384690446335
+              },
+              {
+                "index": 17,
+                "waveIndex": 1,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 262.78529817262984,
+                "y": 40.36352079666885
+              },
+              {
+                "index": 18,
+                "waveIndex": 1,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 236.91667126231383,
+                "y": 51.07865690289137
+              },
+              {
+                "index": 19,
+                "waveIndex": 1,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 211.0480443519978,
+                "y": 61.793793009113884
+              },
+              {
+                "index": 20,
+                "waveIndex": 2,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 443.86568654484205,
+                "y": -45.35756805311126
+              },
+              {
+                "index": 21,
+                "waveIndex": 2,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 417.997059634526,
+                "y": -56.07270415933377
+              },
+              {
+                "index": 22,
+                "waveIndex": 2,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 392.12843272421003,
+                "y": -66.78784026555628
+              },
+              {
+                "index": 23,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 366.259805813894,
+                "y": -77.5029763717788
+              },
+              {
+                "index": 24,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 340.39117890357795,
+                "y": -88.2181124780013
+              },
+              {
+                "index": 25,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 314.5225519932619,
+                "y": -98.93324858422383
+              },
+              {
+                "index": 26,
+                "waveIndex": 2,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 288.6539250829459,
+                "y": -109.64838469044633
+              },
+              {
+                "index": 27,
+                "waveIndex": 2,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 262.78529817262984,
+                "y": -120.36352079666885
+              },
+              {
+                "index": 28,
+                "waveIndex": 2,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 236.91667126231383,
+                "y": -131.07865690289137
+              },
+              {
+                "index": 29,
+                "waveIndex": 2,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 211.0480443519978,
+                "y": -141.79379300911387
+              }
+            ]
+          },
+          "activeImages": 33,
+          "pooledImages": 33,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": true,
+            "alpha": 0.08,
+            "rotation": -3.141592653589793
+          },
+          "groundLights": [
+            {
+              "x": 456.80000000000007,
+              "y": -40,
+              "alpha": 0.08,
+              "rotation": -3.141592653589793
+            },
+            {
+              "x": 456.80000000000007,
+              "y": -40,
+              "alpha": 0.08,
+              "rotation": 2.7488935718910685
+            },
+            {
+              "x": 456.80000000000007,
+              "y": -40,
+              "alpha": 0.08,
+              "rotation": -2.7488935718910685
+            }
+          ],
+          "segments": [
+            {
+              "x": 442.80000000000007,
+              "y": -40,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 414.80000000000007,
+              "y": -40,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 386.80000000000007,
+              "y": -40,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 358.80000000000007,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 330.80000000000007,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 302.80000000000007,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 274.80000000000007,
+              "y": -40,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 246.80000000000007,
+              "y": -40,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 218.80000000000007,
+              "y": -40,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 190.80000000000007,
+              "y": -40,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 443.86568654484205,
+              "y": -34.64243194688874,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 417.997059634526,
+              "y": -23.92729584066623,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 392.12843272421003,
+              "y": -13.212159734443716,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 366.259805813894,
+              "y": -2.4970236282212,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 340.39117890357795,
+              "y": 8.21811247800131,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 314.5225519932619,
+              "y": 18.933248584223826,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 288.6539250829459,
+              "y": 29.648384690446335,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 262.78529817262984,
+              "y": 40.36352079666885,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 236.91667126231383,
+              "y": 51.07865690289137,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 211.0480443519978,
+              "y": 61.793793009113884,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 443.86568654484205,
+              "y": -45.35756805311126,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 417.997059634526,
+              "y": -56.07270415933377,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 392.12843272421003,
+              "y": -66.78784026555628,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 366.259805813894,
+              "y": -77.5029763717788,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 340.39117890357795,
+              "y": -88.2181124780013,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 314.5225519932619,
+              "y": -98.93324858422383,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 288.6539250829459,
+              "y": -109.64838469044633,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 262.78529817262984,
+              "y": -120.36352079666885,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 236.91667126231383,
+              "y": -131.07865690289137,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 211.0480443519978,
+              "y": -141.79379300911387,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            }
+          ]
+        },
+        "meleeCombo": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "melee-ground-light",
+            "flipX": false,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    },
+    {
+      "phase": "phase3",
+      "count": 5,
+      "cooldown": 8,
+      "span": 90,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "south-cleave",
+          "age": 0.9,
+          "index": 6,
+          "frame": {
+            "layers": [
+              {
+                "frame": "de40d628e7077b9ce9fd2596",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "flipX": true,
+            "overlay": {
+              "frame": "4e993e97c4720453c061a346",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "west",
+          "presentationDirection": "west"
+        },
+        "bodyImages": [
+          {
+            "frame": "de40d628e7077b9ce9fd2596",
+            "flipX": true,
+            "x": 656.8000000000001,
+            "y": -40
+          },
+          {
+            "frame": "4e993e97c4720453c061a346",
+            "flipX": true,
+            "x": 656.8000000000001,
+            "y": -40
+          }
+        ],
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 60,
+        "activeImages": 57,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": {
+            "impactAge": 0,
+            "origin": {
+              "x": 656.8000000000001,
+              "y": -40
+            },
+            "rotation": 3.141592653589793,
+            "waves": [
+              {
+                "index": 0,
+                "direction": {
+                  "x": -1,
+                  "y": 0
+                },
+                "rotation": 3.141592653589793
+              },
+              {
+                "index": 1,
+                "direction": {
+                  "x": -0.9238795325112867,
+                  "y": 0.3826834323650898
+                },
+                "rotation": 2.748893571891069
+              },
+              {
+                "index": 2,
+                "direction": {
+                  "x": -0.9238795325112867,
+                  "y": -0.3826834323650898
+                },
+                "rotation": -2.748893571891069
+              },
+              {
+                "index": 3,
+                "direction": {
+                  "x": -0.7071067811865476,
+                  "y": 0.7071067811865475
+                },
+                "rotation": 2.356194490192345
+              },
+              {
+                "index": 4,
+                "direction": {
+                  "x": -0.7071067811865476,
+                  "y": -0.7071067811865475
+                },
+                "rotation": -2.356194490192345
+              }
+            ],
+            "glowAlpha": 0.24,
+            "glowLength": 280,
+            "glowWidth": 56,
+            "segments": [
+              {
+                "index": 0,
+                "waveIndex": 0,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 642.8000000000001,
+                "y": -40
+              },
+              {
+                "index": 1,
+                "waveIndex": 0,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 614.8000000000001,
+                "y": -40
+              },
+              {
+                "index": 2,
+                "waveIndex": 0,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 586.8000000000001,
+                "y": -40
+              },
+              {
+                "index": 3,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 558.8000000000001,
+                "y": -40
+              },
+              {
+                "index": 4,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 530.8000000000001,
+                "y": -40
+              },
+              {
+                "index": 5,
+                "waveIndex": 0,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 502.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 6,
+                "waveIndex": 0,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 474.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 7,
+                "waveIndex": 0,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 446.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 8,
+                "waveIndex": 0,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 418.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 9,
+                "waveIndex": 0,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 390.80000000000007,
+                "y": -40
+              },
+              {
+                "index": 10,
+                "waveIndex": 1,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 643.8656865448421,
+                "y": -34.64243194688874
+              },
+              {
+                "index": 11,
+                "waveIndex": 1,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 617.9970596345261,
+                "y": -23.92729584066623
+              },
+              {
+                "index": 12,
+                "waveIndex": 1,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 592.12843272421,
+                "y": -13.212159734443716
+              },
+              {
+                "index": 13,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 566.259805813894,
+                "y": -2.4970236282212
+              },
+              {
+                "index": 14,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 540.391178903578,
+                "y": 8.21811247800131
+              },
+              {
+                "index": 15,
+                "waveIndex": 1,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 514.5225519932619,
+                "y": 18.933248584223826
+              },
+              {
+                "index": 16,
+                "waveIndex": 1,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 488.6539250829459,
+                "y": 29.648384690446335
+              },
+              {
+                "index": 17,
+                "waveIndex": 1,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 462.78529817262984,
+                "y": 40.36352079666885
+              },
+              {
+                "index": 18,
+                "waveIndex": 1,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 436.9166712623138,
+                "y": 51.07865690289137
+              },
+              {
+                "index": 19,
+                "waveIndex": 1,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 411.04804435199776,
+                "y": 61.793793009113884
+              },
+              {
+                "index": 20,
+                "waveIndex": 2,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 643.8656865448421,
+                "y": -45.35756805311126
+              },
+              {
+                "index": 21,
+                "waveIndex": 2,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 617.9970596345261,
+                "y": -56.07270415933377
+              },
+              {
+                "index": 22,
+                "waveIndex": 2,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 592.12843272421,
+                "y": -66.78784026555628
+              },
+              {
+                "index": 23,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 566.259805813894,
+                "y": -77.5029763717788
+              },
+              {
+                "index": 24,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 540.391178903578,
+                "y": -88.2181124780013
+              },
+              {
+                "index": 25,
+                "waveIndex": 2,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 514.5225519932619,
+                "y": -98.93324858422383
+              },
+              {
+                "index": 26,
+                "waveIndex": 2,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 488.6539250829459,
+                "y": -109.64838469044633
+              },
+              {
+                "index": 27,
+                "waveIndex": 2,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 462.78529817262984,
+                "y": -120.36352079666885
+              },
+              {
+                "index": 28,
+                "waveIndex": 2,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 436.9166712623138,
+                "y": -131.07865690289137
+              },
+              {
+                "index": 29,
+                "waveIndex": 2,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 411.04804435199776,
+                "y": -141.79379300911387
+              },
+              {
+                "index": 30,
+                "waveIndex": 3,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 646.9005050633884,
+                "y": -30.100505063388336
+              },
+              {
+                "index": 31,
+                "waveIndex": 3,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 627.1015151901651,
+                "y": -10.301515190165006
+              },
+              {
+                "index": 32,
+                "waveIndex": 3,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 607.3025253169417,
+                "y": 9.497474683058321
+              },
+              {
+                "index": 33,
+                "waveIndex": 3,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 587.5035354437184,
+                "y": 29.29646455628165
+              },
+              {
+                "index": 34,
+                "waveIndex": 3,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 567.704545570495,
+                "y": 49.09545442950498
+              },
+              {
+                "index": 35,
+                "waveIndex": 3,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 547.9055556972718,
+                "y": 68.8944443027283
+              },
+              {
+                "index": 36,
+                "waveIndex": 3,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 528.1065658240484,
+                "y": 88.69343417595164
+              },
+              {
+                "index": 37,
+                "waveIndex": 3,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 508.3075759508251,
+                "y": 108.49242404917496
+              },
+              {
+                "index": 38,
+                "waveIndex": 3,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 488.50858607760176,
+                "y": 128.2914139223983
+              },
+              {
+                "index": 39,
+                "waveIndex": 3,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 468.7095962043784,
+                "y": 148.09040379562163
+              },
+              {
+                "index": 40,
+                "waveIndex": 4,
+                "frameIndex": 5,
+                "frame": "eruption-5",
+                "age": 0.11,
+                "delay": 0,
+                "x": 646.9005050633884,
+                "y": -49.89949493661166
+              },
+              {
+                "index": 41,
+                "waveIndex": 4,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.1,
+                "delay": 0.01,
+                "x": 627.1015151901651,
+                "y": -69.698484809835
+              },
+              {
+                "index": 42,
+                "waveIndex": 4,
+                "frameIndex": 4,
+                "frame": "eruption-4",
+                "age": 0.09,
+                "delay": 0.02,
+                "x": 607.3025253169417,
+                "y": -89.49747468305833
+              },
+              {
+                "index": 43,
+                "waveIndex": 4,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.08,
+                "delay": 0.030000000000000002,
+                "x": 587.5035354437184,
+                "y": -109.29646455628165
+              },
+              {
+                "index": 44,
+                "waveIndex": 4,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.07,
+                "delay": 0.04,
+                "x": 567.704545570495,
+                "y": -129.09545442950497
+              },
+              {
+                "index": 45,
+                "waveIndex": 4,
+                "frameIndex": 3,
+                "frame": "eruption-3",
+                "age": 0.060000000000000005,
+                "delay": 0.049999999999999996,
+                "x": 547.9055556972718,
+                "y": -148.8944443027283
+              },
+              {
+                "index": 46,
+                "waveIndex": 4,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.049999999999999996,
+                "delay": 0.060000000000000005,
+                "x": 528.1065658240484,
+                "y": -168.69343417595164
+              },
+              {
+                "index": 47,
+                "waveIndex": 4,
+                "frameIndex": 2,
+                "frame": "eruption-2",
+                "age": 0.039999999999999994,
+                "delay": 0.07,
+                "x": 508.3075759508251,
+                "y": -188.49242404917496
+              },
+              {
+                "index": 48,
+                "waveIndex": 4,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.03,
+                "delay": 0.08,
+                "x": 488.50858607760176,
+                "y": -208.2914139223983
+              },
+              {
+                "index": 49,
+                "waveIndex": 4,
+                "frameIndex": 1,
+                "frame": "eruption-1",
+                "age": 0.020000000000000004,
+                "delay": 0.09,
+                "x": 468.7095962043784,
+                "y": -228.09040379562163
+              }
+            ]
+          },
+          "activeImages": 55,
+          "pooledImages": 55,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": true,
+            "alpha": 0.048,
+            "rotation": -3.141592653589793
+          },
+          "groundLights": [
+            {
+              "x": 656.8000000000001,
+              "y": -40,
+              "alpha": 0.048,
+              "rotation": -3.141592653589793
+            },
+            {
+              "x": 656.8000000000001,
+              "y": -40,
+              "alpha": 0.048,
+              "rotation": 2.7488935718910685
+            },
+            {
+              "x": 656.8000000000001,
+              "y": -40,
+              "alpha": 0.048,
+              "rotation": -2.7488935718910685
+            },
+            {
+              "x": 656.8000000000001,
+              "y": -40,
+              "alpha": 0.048,
+              "rotation": 2.356194490192344
+            },
+            {
+              "x": 656.8000000000001,
+              "y": -40,
+              "alpha": 0.048,
+              "rotation": -2.356194490192345
+            }
+          ],
+          "segments": [
+            {
+              "x": 642.8000000000001,
+              "y": -40,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 614.8000000000001,
+              "y": -40,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 586.8000000000001,
+              "y": -40,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 558.8000000000001,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 530.8000000000001,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 502.80000000000007,
+              "y": -40,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 474.80000000000007,
+              "y": -40,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 446.80000000000007,
+              "y": -40,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 418.80000000000007,
+              "y": -40,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 390.80000000000007,
+              "y": -40,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 643.8656865448421,
+              "y": -34.64243194688874,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 617.9970596345261,
+              "y": -23.92729584066623,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 592.12843272421,
+              "y": -13.212159734443716,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 566.259805813894,
+              "y": -2.4970236282212,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 540.391178903578,
+              "y": 8.21811247800131,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 514.5225519932619,
+              "y": 18.933248584223826,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 488.6539250829459,
+              "y": 29.648384690446335,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 462.78529817262984,
+              "y": 40.36352079666885,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 436.9166712623138,
+              "y": 51.07865690289137,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 411.04804435199776,
+              "y": 61.793793009113884,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 643.8656865448421,
+              "y": -45.35756805311126,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 617.9970596345261,
+              "y": -56.07270415933377,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 592.12843272421,
+              "y": -66.78784026555628,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 566.259805813894,
+              "y": -77.5029763717788,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 540.391178903578,
+              "y": -88.2181124780013,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 514.5225519932619,
+              "y": -98.93324858422383,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 488.6539250829459,
+              "y": -109.64838469044633,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 462.78529817262984,
+              "y": -120.36352079666885,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 436.9166712623138,
+              "y": -131.07865690289137,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 411.04804435199776,
+              "y": -141.79379300911387,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 646.9005050633884,
+              "y": -30.100505063388336,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 627.1015151901651,
+              "y": -10.301515190165006,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 607.3025253169417,
+              "y": 9.497474683058321,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 587.5035354437184,
+              "y": 29.29646455628165,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 567.704545570495,
+              "y": 49.09545442950498,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 547.9055556972718,
+              "y": 68.8944443027283,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 528.1065658240484,
+              "y": 88.69343417595164,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 508.3075759508251,
+              "y": 108.49242404917496,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 488.50858607760176,
+              "y": 128.2914139223983,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 468.7095962043784,
+              "y": 148.09040379562163,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 646.9005050633884,
+              "y": -49.89949493661166,
+              "frame": "eruption-5",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 627.1015151901651,
+              "y": -69.698484809835,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 607.3025253169417,
+              "y": -89.49747468305833,
+              "frame": "eruption-4",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 587.5035354437184,
+              "y": -109.29646455628165,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 567.704545570495,
+              "y": -129.09545442950497,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 547.9055556972718,
+              "y": -148.8944443027283,
+              "frame": "eruption-3",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 528.1065658240484,
+              "y": -168.69343417595164,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 508.3075759508251,
+              "y": -188.49242404917496,
+              "frame": "eruption-2",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 488.50858607760176,
+              "y": -208.2914139223983,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            },
+            {
+              "x": 468.7095962043784,
+              "y": -228.09040379562163,
+              "frame": "eruption-1",
+              "rotation": 0,
+              "scale": 0.58
+            }
+          ]
+        },
+        "meleeCombo": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "melee-ground-light",
+            "flipX": false,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    }
+  ],
+  "freezeHeld": true,
+  "pauseHeld": true,
+  "errors": []
+}
