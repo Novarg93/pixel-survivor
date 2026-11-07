@@ -1,5 +1,5 @@
 import { ENCOUNTER_DIRECTOR as C, bossAggressionAt } from '../config/encounterDirector';
-import type { BossKind } from '../config/enemyDefinitions';
+import type { ScheduledBossKind as BossKind } from '../config/enemyDefinitions';
 import type { World } from './World';
 import { SURVIVAL_ENRAGE } from '../config/survivalEnrage';
 import { encounterWindowAt } from './encounterSchedule';

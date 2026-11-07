@@ -86,6 +86,7 @@ export class RareGuardianSystem {
     for (const id of [...this.owners.keys()]) if (!w.guardians.some(e => e.id === id)) this.resolve(w, id, false);
     for (const current of [...w.guardians]) {
       if (w.status !== 'playing') break;
+      if(current.finalRole)continue;
       if(ultimateFrozen(current,w.elapsed)||unfrozenDelta(current,w.elapsed,dt)<=0&&dt>0)continue;
       if (guardianVisible(w, current)) current.discovered = true;
       let state = this.encounters.get(current.id);

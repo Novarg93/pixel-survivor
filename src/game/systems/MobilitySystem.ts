@@ -41,6 +41,7 @@ export class MobilitySystem extends AbsorbPool {
     else if (this.variant === 'berserk') w.buffs.refresh('berserk', w.elapsed, S.berserkDuration, { damage: S.berserkDamage[rank], cooldown: S.berserkCooldown[rank] });
   }
   activate(w: World, input: Point = { x: 0, y: 0 }) {
+    if(w.outcome)return false;
     if (w.status !== 'playing' || w.elapsed < this.readyAt || this.remaining > 0 || !Number.isFinite(input.x + input.y + w.player.x + w.player.y)) return false;
     const c = MOBILITY[w.character], v = direction(input.x, input.y);
     this.direction = v.x || v.y ? v : { ...w.facing };
@@ -48,6 +49,7 @@ export class MobilitySystem extends AbsorbPool {
     this.distance = Math.min(c.distance, Math.max(24, Math.min(w.width, w.height) * MOBILITY.viewportFraction));
     this.from = { x: w.player.x, y: w.player.y };
     this.to = { x: this.from.x + this.direction.x * this.distance, y: this.from.y + this.direction.y * this.distance };
+    this.to=w.finalEncounter.clamp(this.to);this.distance=distance(this.from,this.to);
     this.castCooldown = effectiveCooldown(c.cooldown, w.effectiveCooldown);
     this.started = w.elapsed; this.readyAt = w.elapsed + this.castCooldown; this.protectedUntil = w.elapsed + c.protection; this.sequence++;
     this.dashHits.clear(); w.facing = { ...this.direction };
@@ -66,6 +68,7 @@ export class MobilitySystem extends AbsorbPool {
         this.dashHits.add(e.id); w.damageEnemy(e, S.cleaveDamage[this.rank - 1] * w.stats.damage, 'mobility');
       }
     }
+    if(w.finalEncounter.active){const at=w.finalEncounter.clamp(w.player);if(distance(at,w.player)>.01)this.remaining=0;Object.assign(w.player,at);}
     if (this.remaining === 0) this.arrive(w);
     return true;
   }

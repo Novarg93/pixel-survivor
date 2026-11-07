@@ -116,7 +116,12 @@ test('Level Up allows only fresh A, navigates D-pad/LB/RB, ignores commands duri
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.offerId)).toBeGreaterThan(firstOffer);
   await page.waitForTimeout(250); await expect(upgrade(page)).toBeVisible(); expect(await position(page)).toEqual(frozen);
   await expect(page.locator('.choice[aria-pressed="true"]')).toHaveCount(0);
-  await button(page, 5, false); await button(page, 0, false); await choose(page);
+  expect(await page.evaluate(id => window.__PIXEL__!.world.upgrades[id!], id)).toBe(1);
+  await button(page, 5, false); await button(page, 0, false);
+  // The next random offer may legally contain the same upgrade again. Select a
+  // different card so the following assertion measures input replay, not two choices.
+  if(await page.locator('.choice:focus').getAttribute('data-upgrade')===id)await pressPad(page,'right');
+  await choose(page);
   expect(await page.evaluate(id => window.__PIXEL__!.world.upgrades[id!], id)).toBe(1);
   expect((await position(page)).mobility).toBe(0);
 });
@@ -200,10 +205,10 @@ test('mouse/keyboard focus and gamepad hints remain accessible when sources chan
 
 test('unsupported mapping and denied Gamepad API show a bounded notice without breaking keyboard', async ({ page }) => {
   await mockGamepads(page); await page.goto('/?test=1'); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
-  await page.evaluate(() => window.__GAMEPAD_MOCK__.connect(0, '')); await expect(page.getByRole('status')).toContainText('standard mapping');
+  await page.evaluate(() => window.__GAMEPAD_MOCK__.connect(0, '')); await expect(page.locator('.controller-notice')).toContainText('standard mapping');
   await page.keyboard.press('Enter'); await quiet(page); await page.keyboard.down('d'); await expect.poll(async () => (await position(page)).x).toBeGreaterThan(5); await page.keyboard.up('d');
   await page.evaluate(() => { Object.defineProperty(navigator, 'getGamepads', { value: () => { throw new DOMException('Blocked by permissions policy', 'SecurityError'); } }); });
-  await expect(page.getByRole('status')).toContainText('недоступен'); await page.waitForTimeout(4200); await expect(page.getByText('Gamepad API недоступен в этом браузере или контексте', { exact: true })).toHaveCount(0);
+  await expect(page.locator('.controller-notice')).toContainText('недоступен'); await page.waitForTimeout(4200); await expect(page.getByText('Gamepad API недоступен в этом браузере или контексте', { exact: true })).toHaveCount(0);
 });
 
 test('direct scene DESTROY removes controller subscriptions and prevents later polling', async ({ page }) => {

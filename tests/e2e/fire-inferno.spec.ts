@@ -82,6 +82,6 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Fire 150+3+3 stable dens
 });
 
 test('Fire synthesis leaves all accepted non-Fire PCM bit-identical',async({page})=>{
-  await page.goto('/?test=1');const pcm=await page.evaluate(async()=>{const s='/src/game/audio/synthesis.ts',c='/src/game/audio/catalog.ts',{synthesize}=await import(s),{PATCHES}=await import(c),rows:{id:string;hash:string}[]=[];for(const id of Object.keys(PATCHES)){if(id==='inferno'||id==='embers')continue;const data=synthesize(id),hash=await crypto.subtle.digest('SHA-256',data.buffer);rows.push({id,hash:Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('')});}return rows;});
+  await page.goto('/?test=1');const pcm=await page.evaluate(async()=>{const s='/src/game/audio/synthesis.ts',c='/src/game/audio/catalog.ts',{synthesize}=await import(s),{PATCHES}=await import(c),rows:{id:string;hash:string}[]=[];for(const id of Object.keys(PATCHES)){if(id==='inferno'||id==='embers'||id==='ashSword')continue;const data=synthesize(id),hash=await crypto.subtle.digest('SHA-256',data.buffer);rows.push({id,hash:Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('')});}return rows;});
   const baseline=JSON.parse(readFileSync('tests/fixtures/non-fire-pcm.json','utf8')) as typeof pcm;expect(pcm).toEqual(baseline);
 });

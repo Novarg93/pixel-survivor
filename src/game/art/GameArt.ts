@@ -1,3 +1,5 @@
+import { WARDEN,wardenTexture } from './ashWardenPack';
+import { FinalBossArt } from './FinalBossArt';
 import { UltimateArt } from './UltimateArt';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { PlayerHealthBar } from './PlayerHealthBar';
@@ -27,6 +29,7 @@ import { PickupAnimation } from './PickupAnimation';
 import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
+  for(let i=0;i<WARDEN.pages;i++)if(!scene.textures.exists(wardenTexture(i)))scene.load.atlas(wardenTexture(i),import.meta.env.BASE_URL+`assets/hd/ash-warden-v1/${i}.png`,import.meta.env.BASE_URL+`assets/hd/ash-warden-v1/${i}.json`);
   if (!scene.textures.exists(HD_CORE_TEXTURE)) scene.load.atlas(HD_CORE_TEXTURE, import.meta.env.BASE_URL + HD_CORE_URLS.image, import.meta.env.BASE_URL + HD_CORE_URLS.data);
   if (!scene.textures.exists(RUNNER_TEXTURE)) scene.load.atlas(RUNNER_TEXTURE, import.meta.env.BASE_URL + RUNNER_URLS.image, import.meta.env.BASE_URL + RUNNER_URLS.data);
   if (!scene.textures.exists(MAGE_TEXTURE)) scene.load.atlas(MAGE_TEXTURE, import.meta.env.BASE_URL + MAGE_URLS.image, import.meta.env.BASE_URL + MAGE_URLS.data);
@@ -77,10 +80,11 @@ export class GameArt {
   private casting = new MageCastingController();
   private castingArt: MageCastingArt;
   private ultimateArt: UltimateArt;
+  private finalArt:FinalBossArt;
   private frozenVisuals=new Map<number,VisualSelection>();
   private frozenRun='';
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
@@ -91,6 +95,7 @@ export class GameArt {
     this.frozenVisuals.delete(entity.id);return this.liveEntityVisual(entity,world);
   }
   private liveEntityVisual(entity: RenderEntity, world: World): VisualSelection {
+
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
     if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world); return selectAsset(entity.kind, bossFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started, p.stage)); }
@@ -114,6 +119,7 @@ export class GameArt {
     sprite.setRotation(this.heroCasting&&cast.active?.ability==='ultimate-lightning'&&cast.frame===4?(world.ultimate.direction.x<0?.12:-.12):0);
   }
   update(world: World, intensity: number, reducedMotion=false, reducedFlash=false) {
+    this.finalArt.render(world,intensity,reducedMotion);
     const liveIds=new Set(world.enemies.map(e=>e.id));for(const id of this.frozenVisuals.keys())if(!liveIds.has(id))this.frozenVisuals.delete(id);
     if(reducedMotion&&world.ultimate.selected==='lightning')this.heroSprite?.setRotation(0);
     if(this.heroSprite)this.castingArt.render(this.heroSprite,world,this.heroMoving,this.heroCasting,intensity);
@@ -169,7 +175,7 @@ export class GameArt {
       image.setPosition(x, y).setDisplaySize(size.width * scale, size.height * scale).setVisible(true);
     };
     shadow(world.player.x, world.player.y + 6, 1.3);
-    for (const e of world.enemies) shadow(Math.round(e.x), Math.round(e.y + (e.boss ? 23 : 6)), e.boss ? 2.5 : e.kind === 'tank' ? 1.6 : e.elite ? 1.4 : 1);
+    for (const e of world.enemies) shadow(Math.round(e.x), Math.round(e.y + (e.finalRole==='boss'?3:e.boss ? 23 : 6)), e.boss ? 2.5 : e.kind === 'tank' ? 1.6 : e.elite ? 1.4 : 1);
     for (let i = count; i < this.shadows.length; i++) this.shadows[i].setVisible(false);
     count = 0;
     for (const e of world.effects) if (e.kind === 'cleave') {
@@ -188,6 +194,7 @@ export class GameArt {
     // Diagnostic reads only, pinned Phaser 4.2.1. Never used by gameplay.
     const clock = ['_active', '_pendingInsertion', '_pendingRemoval'].map(key => { const value: unknown = Reflect.get(this.scene.time, key); return Array.isArray(value) ? value.length : null; });
     return { heroFrame: this.heroFrame, atlasFrames: atlas.frameTotal - 1, runner: { atlasFrames: this.scene.textures.get(RUNNER_TEXTURE).frameTotal - 1, tracked: this.runner.tracked, activeDeaths: this.runner.corpses.filter(c => c.active).length, allocatedDeaths: this.runnerCorpses.filter(Boolean).length, replaced: this.runner.replaced, corpses: this.runner.corpses.flatMap((c, i) => c.active ? [{ ...c, frame: runnerFrame('death', c.facing, this.worldTime - c.started), width: this.runnerCorpses[i]?.displayWidth ?? 0, height: this.runnerCorpses[i]?.displayHeight ?? 0 }] : []) }, textures, chunks: textures.filter(t => t.startsWith('chunk-')).length,
+      finalBoss:this.finalArt.diagnostics(),
       ultimate: this.ultimateArt.diagnostics(),
       casting: {...this.casting.view(this.worldTime),...this.castingArt.diagnostics(),bodyFrame:this.heroFrame},
       playerHealth: this.playerHealth.diagnostics(),
@@ -202,5 +209,5 @@ export class GameArt {
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y }; }),
     };
   }
-  destroy() { this.frozenVisuals.clear();this.ultimateArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
+  destroy() { this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

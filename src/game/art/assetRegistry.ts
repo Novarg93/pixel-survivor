@@ -1,3 +1,4 @@
+import { WARDEN,wardenTexture } from './ashWardenPack';
 import type { CharacterId } from '../config/characters';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
@@ -49,6 +50,7 @@ export const ASSET_REGISTRY = {
   tankElite: { ...packedActor(1.6), adornment: 'quartz-mantle' }, casterElite: { ...packedActor(1.4), adornment: 'bone-crescent' },
   rusherElite: { ...packedActor(1.4), adornment: 'thorn-collar' }, splitterElite: { ...packedActor(1.4), adornment: 'gilded-seams' },
   guardian: { ...hd(24, 28, 1.4, 'actor', { idle: 3, walk: 0, hurt: 3, death: 6 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 96, height: 112 } },
+  ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
   charger: bossActor(), sorcerer: bossActor(), eclipse: bossActor(),
   fireball: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
   xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
@@ -69,7 +71,7 @@ export const ASSET_REGISTRY = {
 } satisfies Record<string, AssetSpec>;
 export type AssetId = keyof typeof ASSET_REGISTRY;
 export const CHARACTER_ART: Record<CharacterId, AssetId> = { mage: 'mage', warrior: 'warrior' };
-export const ENEMY_ART: Record<EnemyKind, AssetId> = { grunt: 'grunt', runner: 'runner', tank: 'tank', caster: 'caster', rusher: 'rusher', splitter: 'splitter', guardian: 'guardian', charger: 'charger', sorcerer: 'sorcerer', eclipse: 'eclipse' };
+export const ENEMY_ART: Record<EnemyKind, AssetId> = { ashGuard:'ashGuard', grunt: 'grunt', runner: 'runner', tank: 'tank', caster: 'caster', rusher: 'rusher', splitter: 'splitter', guardian: 'guardian', charger: 'charger', sorcerer: 'sorcerer', eclipse: 'eclipse' };
 export const ELITE_ART: Record<RegularKind, AssetId> = { grunt: 'gruntElite', runner: 'runnerElite', tank: 'tankElite', caster: 'casterElite', rusher: 'rusherElite', splitter: 'splitterElite' };
 export const LOOT_ART: Record<LootKind, AssetId> = { healing: 'healing', haste: 'haste', fury: 'fury', magnet: 'magnet' };
 export const ARTIFACT_ART: Record<ArtifactId, AssetId> = { health: 'artifactHealth', damage: 'artifactDamage', speed: 'artifactSpeed', cooldown: 'artifactCooldown', experience: 'artifactExperience' };
@@ -84,7 +86,8 @@ export function heroVisual(character: CharacterId, facing: Facing, moving: boole
   return selectAsset('warrior', `warrior-${facing}-${pose}-${Math.floor(elapsed * rate) % clip}`);
 }
 export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number, playback?: RunnerPlayback): VisualSelection {
-  const asset = elite && kind !== 'guardian' && kind !== 'charger' && kind !== 'sorcerer' && kind !== 'eclipse' ? ELITE_ART[kind] : ENEMY_ART[kind], spec = ASSET_REGISTRY[asset];
+  const asset = elite && kind !== 'ashGuard' && kind !== 'guardian' && kind !== 'charger' && kind !== 'sorcerer' && kind !== 'eclipse' ? ELITE_ART[kind] : ENEMY_ART[kind], spec = ASSET_REGISTRY[asset];
+  if (kind === 'ashGuard') {const layer=WARDEN.clips['south-idle']!.frames[Math.floor(elapsed/.45)%4]!.layers[0]!;return{...selectAsset('ashGuard',layer.frame),texture:wardenTexture(WARDEN.locations[layer.frame]!)};}
   if (kind === 'grunt') return selectAsset(asset, `grunt-${elite ? 'elite' : 'normal'}-${Math.floor(elapsed * 7 + id) % 4}`);
   if (kind === 'runner') return selectAsset(asset, runnerFrame(playback?.pose ?? 'walk', playback?.facing ?? 'right', elapsed - (playback?.started ?? 0)), elite ? 1.4 : 1);
   if (kind === 'guardian') return selectAsset('guardian', guardianFrame('idle', elapsed));

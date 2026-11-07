@@ -1,6 +1,6 @@
 import type { World } from '../systems/World';
 import type { Enemy } from '../entities/types';
-import type { BossKind } from '../config/enemyDefinitions';
+import type { ScheduledBossKind as BossKind } from '../config/enemyDefinitions';
 import { isHdBoss, BOSS_CLIPS, type BossFacing, type BossPose } from './bossPack';
 interface Playback { pose: BossPose; facing: BossFacing; started: number; stage: number }
 interface Track { enemy: Readonly<Enemy>; x: number; y: number; time: number; hit: number; hurt: number; attack: number; phase: string; shootingAt: number; slam: number; nextSlam: number; playback: Playback }

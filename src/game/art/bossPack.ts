@@ -1,4 +1,4 @@
-import type { BossKind } from '../config/enemyDefinitions';
+import type { ScheduledBossKind as BossKind } from '../config/enemyDefinitions';
 export const BOSS_TEXTURE = 'hd-bosses';
 export const BOSS_URLS = { image: 'assets/hd/bosses.png', data: 'assets/hd/bosses.json' } as const;
 export const HD_BOSS_KINDS = ['charger', 'sorcerer', 'eclipse'] as const;

@@ -10,9 +10,12 @@ for(const [width,height]of [[1280,720],[844,390],[1024,768]])test(`gold ultimate
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.experience.level=69;w.experience.xp=1999;w.gainXp(100000);});
   await page.locator('[data-upgrade]').first().click();await page.waitForFunction(()=>window.__PIXEL__!.world.status==='playing');await page.evaluate(()=>window.__PIXEL__!.world.gainXp(100000));
   expect(await page.evaluate(()=>({level:window.__PIXEL__!.world.experience.level,pending:window.__PIXEL__!.world.experience.pending}))).toEqual({level:70,pending:0});await expect(page.locator('.xp-compact')).toHaveText('MAX');
-  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1199.96;});await expect(page.getByRole('heading',{name:'Победа!',exact:true})).toBeVisible();
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.elapsed=1199.96;});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.damageEnemy(w.finalEncounter.boss!,1e9);});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.supports.size===3);
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;for(const g of [...w.guardians])w.damageEnemy(g,1e9);w.damageEnemy(w.finalEncounter.boss!,1e9);});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase3');
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.damageEnemy(w.finalEncounter.boss!,1e9);});await expect(page.getByRole('heading',{name:'Победа!',exact:true})).toBeVisible();
   await page.screenshot({path:`screenshots/core-finish/victory-${width}.png`});
-  expect(await page.evaluate(()=>{const w=window.__PIXEL__!.world,p=JSON.parse(localStorage.getItem('pixel-survivor-v1')!);return{outcome:w.outcome,time:w.elapsed,hp:w.player.hp,runs:p.statistics.runs,result:p.records[0].outcome,level:p.records[0].level,death:window.__PIXEL__!.audio().played['player.death']??0};})).toEqual({outcome:'victory',time:1200,hp:100,runs:1,result:'victory',level:70,death:0});
+  expect(await page.evaluate(()=>{const w=window.__PIXEL__!.world,p=JSON.parse(localStorage.getItem('pixel-survivor-v1')!);return{outcome:w.outcome,time:w.finalEncounter.phase,hp:w.player.hp,runs:p.statistics.runs,result:p.records[0].outcome,level:p.records[0].level,death:window.__PIXEL__!.audio().played['player.death']??0};})).toEqual({outcome:'victory',time:'defeated',hp:100,runs:1,result:'victory',level:70,death:0});
   await page.waitForTimeout(150);expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('pixel-survivor-v1')!).statistics.runs)).toBe(1);
   await page.getByRole('button',{name:'Начать заново',exact:true}).click();await page.waitForFunction(()=>window.__PIXEL__!.world.status==='playing');expect(await page.evaluate(()=>window.__PIXEL__!.world.experience.level)).toBe(1);await context.close();
 });

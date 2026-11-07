@@ -13,7 +13,7 @@ function chooseCharacter(value: CharacterId) {
   unavailable.value = false; emit('character', value);
 }
 defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
-const emit = defineEmits<{ play: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
+const emit = defineEmits<{ play: []; bossPractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
  <div class="menu-shell">
@@ -24,7 +24,8 @@ const emit = defineEmits<{ play: []; help: []; settings: []; records: []; charac
    <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="true" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button class="coming-soon" aria-disabled="true" :aria-pressed="false" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>В разработке</small></button></div>
    <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
    <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
-   <button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
+   <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
+   <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Бой со Стражем</b><small>Тренировка · Mage 54 · Ледяная ульта</small></span><span aria-hidden="true">↗</span></button></div>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
    <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>
@@ -35,6 +36,11 @@ const emit = defineEmits<{ play: []; help: []; settings: []; records: []; charac
  </div>
 </template>
 <style scoped>
+.menu-shell{align-items:safe center}.menu-shell .wordmark{font-size:clamp(48px,5.3vw,68px);margin:12px 0 16px}.menu-shell .menu-description{margin:10px 0 14px;font-size:13px;line-height:1.7}.menu-shell .run-selection{margin-bottom:12px}
+.menu-shell .best{margin:4px 0 0}.menu-shell .menu-footer{bottom:12px}
+.start-actions{display:grid;gap:10px}.boss-practice-button{display:flex;align-items:center;gap:14px;width:100%;padding:12px 18px;background:linear-gradient(110deg,#233341,#172532);border:1px solid #a9c2ce88;color:#e0eced;text-align:left;box-shadow:inset 0 0 0 2px #0c18234d}
+.boss-practice-button>span:nth-child(2){flex:1}.boss-practice-button b{display:block;font:700 13px monospace;letter-spacing:.03em}.boss-practice-button small{display:block;margin-top:4px;font:10px monospace;color:#a9bdc9}.practice-sword{font-size:26px;color:#d7c092}.boss-practice-button:hover{background:#304859;border-color:#d4e2df}
+@media(max-height:500px){.menu-shell .wordmark{font-size:36px;margin:6px 0}.menu-shell .menu-description{font-size:11px;margin:5px 0}.menu-shell .run-selection{margin-bottom:7px}.start-actions{grid-template-columns:1fr 1fr;gap:8px}.boss-practice-button{padding:7px 10px;gap:8px}.boss-practice-button b{font-size:11px}.boss-practice-button small{font-size:9px;margin-top:2px}.practice-sword{font-size:20px}}
 .run-selection .coming-soon{filter:grayscale(1) brightness(.65);background:#181d25;border-color:#65717a;color:#c2c8ce}
 .run-selection .coming-soon:hover{filter:grayscale(1) brightness(.8)}
 .run-selection .coming-soon:focus{outline:2px solid #fff1c9;outline-offset:3px}

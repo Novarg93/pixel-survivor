@@ -24,7 +24,7 @@ export function updateGuardianOrbs(w:World,e:Enemy,s:GuardianEncounter){
 export function steerGuardianOrb(w:World,p:Projectile,dt:number){
   const h=p.homing;if(!h)return true;
   const owner=w.guardians.find(e=>e.id===p.ownerId);
-  if(!owner||!w.guardianSystem.encounters.has(owner.id)||p.expires<=w.elapsed||h.travelled>=C.maxTravel||distance(p,owner)>h.maxDistance){p.expires=0;return false;}
+  if(!owner||(!owner.finalRole&&!w.guardianSystem.encounters.has(owner.id))||p.expires<=w.elapsed||h.travelled>=C.maxTravel||distance(p,owner)>h.maxDistance){p.expires=0;return false;}
   const a=Math.atan2(p.vy,p.vx),target=Math.atan2(w.player.y-p.y,w.player.x-p.x),delta=Math.atan2(Math.sin(target-a),Math.cos(target-a));
   const turn=Math.max(-h.turnRate*dt,Math.min(h.turnRate*dt,delta)),angle=a+turn;
   p.vx=Math.cos(angle)*h.speed;p.vy=Math.sin(angle)*h.speed;h.travelled+=h.speed*dt;return true;

@@ -1,0 +1,15 @@
+export const FINAL_BOSS = {
+  at:1200, intro:2.3, firstCombo:3, hp:108000, guardianHp:1800,
+  arenaRadius:800, guardianRadius:550, bodyRadius:28, speed:72,
+  chaseMin:120, chaseMax:255, chaseMultiplier:1.10, chaseNear:145,
+  meleeRange:105, meleeRadius:115, meleeAngle:100*Math.PI/180, meleeHit:.65, meleeDuration:1.2, meleeCooldown:2.2, meleeDamage:32,
+  comboInterval:12, chargeWindup:.65, chargeDuration:.42, chargeDistance:300,
+  chargeBrake:.3, swordWindup:.9, swordActive:.15, swordRadius:280, swordWidth:44,
+  recovery:.75, shieldBreak:3, repeatAfter:50,
+  transition:.8, phase3Transform:1.8, ritualEnter:.9, meteorCast:1.44, meteorInterval:8, meteorRange:300, meteorWarning:1.3, meteorRadius:42,
+  ritualInterval:18, ritualCast:1.2, ritualRelease:.33, meteorTail:.5, meteorStagger:.06, maxMeteors:12,
+  armageddonInterval:15, secondGroupAt:1.55, armageddonFirst:3,
+  chargeDamage:48, swordDamage:64, meteorDamage:54, orbDamage:24,
+  orbInterval:8, orbWarning:.65, orbSpeed:86, orbTurn:.65, orbLifetime:20,
+  deathDuration:2.2,
+} as const;

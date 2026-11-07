@@ -1,4 +1,6 @@
 import { ultimateFrozen } from '../systems/UltimateFreeze';
+import { startBossPractice } from '../bootstrap/startBossPractice';
+import {finalBossScenario} from '../bootstrap/finalBossScenario';
 import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
@@ -43,6 +45,7 @@ export class GameScene extends Phaser.Scene {
   private uiScreen: UiScreen = 'game';
   private inputStatus: World['status'] = 'menu';
   private publishAt = 0;
+  private terminalPublished='';
   private runOptions: RunOptions = {};
   private testCharacter: CharacterId | undefined;
   private visualTime: number | undefined;
@@ -94,19 +97,27 @@ export class GameScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-Q',ultimateKey);
     this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
-      if (mobileViewport().blocked && ['restart', 'resume', 'mobility', 'ultimate'].includes(command.type)) return;
+      if (mobileViewport().blocked && ['restart', 'boss-practice', 'resume', 'mobility', 'ultimate'].includes(command.type)) return;
       if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
       if (command.type === 'ultimate') { if(this.world.status === 'playing')this.ultimateRequested=true;return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
-      if (command.type === 'restart' || command.type === 'menu' || command.type === 'preview') { this.runOptions.character = runCharacter(import.meta.env.DEV ? this.testCharacter : undefined); if(command.biome)this.runOptions.biome=command.biome; this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear(); this.world = new World(Date.now(), this.runOptions); if (command.type !== 'restart') this.world.status = 'menu'; for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; if (window.__PIXEL__) window.__PIXEL__.world = this.world; }
+      if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
+      if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') {
+        this.runOptions.character = command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined);
+        if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
+        this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
+        this.world = new World(Date.now(), this.runOptions);
+        if(command.type==='boss-practice')startBossPractice(this.world);else if (command.type !== 'restart') this.world.status = 'menu';
+        for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
+        if (window.__PIXEL__) window.__PIXEL__.world = this.world;
+      }
       else if (command.type === 'upgrade') this.world.selectUpgrade(command.id, command.offer);
       else if (command.type === 'pause') this.world.pause();
       else if (command.type === 'resume') this.world.resume();
       else if (command.type === 'settings') { this.preferences = { ...command.value }; this.audio.settings(this.preferences); }
       this.audioPresentation.observe(this.world);
-      this.audio.ui(command.type === 'restart' ? 'ui.start' : command.type === 'pause' ? 'ui.pause' : 'ui.select'); lastUiCommand = performance.now();
+      this.audio.ui(command.type === 'restart'||command.type==='boss-practice' ? 'ui.start' : command.type === 'pause' ? 'ui.pause' : 'ui.select'); lastUiCommand = performance.now();
       this.resetInput(command.type === 'upgrade'); snapshots.emit(this.world.snapshot());
     });
     let lastUiCommand = -Infinity;
@@ -117,7 +128,7 @@ export class GameScene extends Phaser.Scene {
     const visibility = () => { if (document.hidden) blur(); };
     this.game.events.on(Phaser.Core.Events.BLUR, blur); document.addEventListener('visibilitychange', visibility);
     if (import.meta.env.DEV && new URLSearchParams(location.search).get('test') === '1') {
-      window.__PIXEL__ = { world: this.world, setVisualTime: seconds => { if (seconds !== undefined && (!Number.isFinite(seconds) || seconds < 0)) throw new Error('Invalid visual time'); this.visualTime = seconds; }, setTestCharacter: character => { if (character !== 'mage' && character !== 'warrior') throw new Error('Unknown test character'); this.testCharacter = character; commands.emit({ type: 'preview' }); }, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.visualTime = undefined; this.scene.restart(); }, art: () => this.art.diagnostics(), atmosphere: () => this.atmosphere.diagnostics(), audio: () => this.audio.diagnostics() };
+      window.__PIXEL__ = { world: this.world, finalScenario: action=>finalBossScenario(this.world,action), setVisualTime: seconds => { if (seconds !== undefined && (!Number.isFinite(seconds) || seconds < 0)) throw new Error('Invalid visual time'); this.visualTime = seconds; }, setTestCharacter: character => { if (character !== 'mage' && character !== 'warrior') throw new Error('Unknown test character'); this.testCharacter = character; commands.emit({ type: 'preview' }); }, listeners: () => ({ commands: commands.size, snapshots: snapshots.size, metrics: metrics.size }), metrics: () => ({ ...this.measured }), restartScene: () => { this.visualTime = undefined; this.scene.restart(); }, art: () => this.art.diagnostics(), atmosphere: () => this.atmosphere.diagnostics(), audio: () => this.audio.diagnostics() };
     }
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { off(); this.events.off(Phaser.Scenes.Events.DESTROY, destroyHeldInput); destroyHeldInput(); this.mobilityRequested = false; this.input.keyboard?.off('keydown-SPACE', mobilityKey); this.input.keyboard?.off('keydown-Q',ultimateKey); this.ultimateRequested=false; this.atmosphere.destroy(); this.art.destroy(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.destroy(); this.feedback.destroy(); this.audio.destroy(); document.removeEventListener('pointerdown', gesture, true); document.removeEventListener('keydown', gesture, true); document.removeEventListener('click', uiClick); this.game.events.off(Phaser.Core.Events.BLUR, blur); document.removeEventListener('visibilitychange', visibility); this.chunks.destroy(); this.input.keyboard?.removeAllKeys(true); for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = []; delete window.__PIXEL__; });
   }
@@ -160,6 +171,7 @@ export class GameScene extends Phaser.Scene {
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, this.mobilityDirection ?? input); this.mobilityDirection = undefined; }
     if (!viewport.blocked) this.world.step(delta / 1000, input);
+    if(this.world.status==='over'&&this.terminalPublished!==this.world.runId){this.terminalPublished=this.world.runId;snapshots.emit(this.world.snapshot());}
     if(this.ultimateRequested){this.ultimateRequested=false;if(!viewport.blocked)this.world.ultimate.activate(this.world);}
     this.syncInputState();
     this.art.observeCasts(this.world);
@@ -172,16 +184,19 @@ export class GameScene extends Phaser.Scene {
     if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
     else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
     this.mage.setAlpha(this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
-    this.atmosphere.render(this.visualTime ?? this.world.elapsed, this.world.status, this.preferences, viewport.touch);
+    const atmosphereStatus=this.world.status==='over'&&this.world.finalEncounter.phase!=='inactive'?'paused':this.world.status;
+    this.atmosphere.render(this.visualTime ?? this.world.elapsed, atmosphereStatus, this.preferences, viewport.touch);
     this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.scale.width / zoom, this.scale.height / zoom, viewport.touch ? 0 : 1);
     const active = new Set<number>();
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
+      if('kind' in entity&&entity.kind==='ashGuard')continue; // Layered accepted pack is owned by FinalBossArt.
       active.add(entity.id); let sprite = this.sprites.get(entity.id);
       const pickup = 'lootKind' in entity || 'lootPool' in entity || 'artifact' in entity;
       const visual = this.art.entityVisual(entity, this.world);
       if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setVisible(!('homing'in entity&&entity.homing));
+      sprite.setFlipX('kind' in entity&&entity.kind==='ashGuard'&&Math.abs(this.world.finalEncounter.attack.direction.x)>.6&&this.world.finalEncounter.attack.direction.x<0);
       sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
@@ -209,7 +224,7 @@ export class GameScene extends Phaser.Scene {
         this.effects.lineStyle(2, 0xffb1b7).lineBetween(enemy.x + Math.cos(a) * 7, enemy.y + Math.sin(a) * 7, x, y).fillStyle(0xffe1c4).fillRect(Math.round(x) - 1, Math.round(y) - 1, 3, 3);
       }
       drawChargePreparation(this.effects, this.world, enemy);
-      if (enemy.boss && (Math.abs(enemy.x - this.mage.x) > this.world.width / 2 - 20 || Math.abs(enemy.y - this.mage.y) > this.world.height / 2 - 20)) {
+      if (enemy.boss && !enemy.finalRole && (Math.abs(enemy.x - this.mage.x) > this.world.width / 2 - 20 || Math.abs(enemy.y - this.mage.y) > this.world.height / 2 - 20)) {
         const angle = Math.atan2(enemy.y - this.mage.y, enemy.x - this.mage.x), r = Math.min((this.world.width / 2 - 18) / Math.max(0.01, Math.abs(Math.cos(angle))), (this.world.height / 2 - 18) / Math.max(0.01, Math.abs(Math.sin(angle))));
         const x = this.mage.x + Math.cos(angle) * r, y = this.mage.y + Math.sin(angle) * r;
         this.effects.fillStyle(0xffaf8b).fillTriangle(x + Math.cos(angle) * 6, y + Math.sin(angle) * 6, x + Math.cos(angle + 2.4) * 5, y + Math.sin(angle + 2.4) * 5, x + Math.cos(angle - 2.4) * 5, y + Math.sin(angle - 2.4) * 5);

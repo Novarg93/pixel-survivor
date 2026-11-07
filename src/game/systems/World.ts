@@ -1,5 +1,6 @@
+import { FinalEncounter } from './FinalEncounter';
 import { UltimateSystem } from '../ultimates/UltimateSystem';
-import { RUN_LIMITS } from '../config/runLimits';
+import { FINAL_BOSS } from '../config/finalBoss';
 import { advanceUltimateFreeze, ultimateFrozen } from './UltimateFreeze';
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
 import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
@@ -50,6 +51,7 @@ export class World {
   readonly guardianSystem: RareGuardianSystem;
   readonly mobility = new MobilitySystem();
   readonly ultimate = new UltimateSystem();
+  readonly finalEncounter = new FinalEncounter();
   facing = { x: 0, y: 1 };
   get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed) * this.buffs.modifier('speed', this.elapsed); }
   get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
@@ -58,9 +60,12 @@ export class World {
   get absorb(){return this.shield.absorbValue(this.elapsed)+this.mobility.absorbValue(this.elapsed);}
   get guardians() { return this.enemies.filter(e => e.kind === 'guardian'); }
   get rareGuardian() { return this.guardians[0]; }
-  get combatTargets() { return this.enemies.filter(e => e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)); }
+  get combatTargets() { return this.enemies.filter(e => this.canDamageTarget(e) && (e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)));  }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
+  canDamageTarget(e: Enemy) { return e.hp > 0 && this.finalEncounter.canTarget(e); }
+  clearHostileThreats() { this.retainProjectiles(p=>!p.hostile);this.impacts=this.impacts.filter(i=>!i.hostile);this.zones=this.zones.filter(z=>z.ownerId===undefined); }
   clearTemporaryState() {
+    this.finalEncounter.cancel();
     this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb(); this.ultimate.clear();
     for (const e of this.enemies) {
       delete e.ultimateFreeze;
@@ -73,6 +78,7 @@ export class World {
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   outcome:'victory'|'defeat'|null=null;
+  practice=false;
   sounds: LegacyCue[] = [];
   feedbackEvents: GameFeedback[] = [];
   feedback(event: GameFeedback) {
@@ -80,7 +86,7 @@ export class World {
     const key = (e: GameFeedback) => e.type === 'ability' ? e.type + e.ability : e.type === 'impact' ? e.type + e.source : e.type + e.kind;
     if (!this.feedbackEvents.some(e => key(e) === key(event))) this.feedbackEvents.push(event);
   }
-  sound(cue: LegacyCue) { if (this.sounds.length < 16) this.sounds.push(cue); }
+  sound(cue: LegacyCue) { if(cue.startsWith('final-')){if(this.sounds.length>=16)this.sounds.pop();this.sounds.unshift(cue);}else if (this.sounds.length < 16) this.sounds.push(cue); }
   pause() { if (this.status === 'playing') this.status = 'paused'; }
   resume() { if (this.status === 'paused') this.status = 'playing'; }
   experience = new ExperienceSystem();
@@ -122,6 +128,7 @@ export class World {
   constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
   id() { return ++this.serial; }
   spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
+    if (this.finalEncounter.active || this.finalEncounter.phase==='defeated' || kind==='ashGuard') return;
     const boss = isBossKind(kind);
     if (!boss && kind !== 'guardian' && this.ultimate.regularSpawnFactor(this.elapsed) === 0) return;
     if (kind === 'guardian' ? this.guardians.length >= GUARDIAN_BALANCE.cap : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
@@ -146,25 +153,30 @@ export class World {
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
-    if (this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
-    if (enemy.kind === 'guardian') { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
+    if (this.outcome || this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
+    if (enemy.kind === 'guardian' && !enemy.finalRole) { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
+    if(!this.canDamageTarget(enemy)){this.finalEncounter.diagnostics.blocked++;return false;}
     const before = enemy.hp;
     if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
     const devastation=executeRegular&&source==='ultimate-lightning'&&!enemy.boss&&enemy.kind!=='guardian';
-    enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1))); enemy.hitUntil = this.elapsed + 0.12;
+    const resolved=Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
+    enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - this.finalEncounter.limitDamage(enemy,resolved));
+    this.finalEncounter.afterDamage(this,enemy); enemy.hitUntil = this.elapsed + 0.12;
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
     if (!enemy.boss && enemy.kind !== 'guardian'&&!ultimateFrozen(enemy,this.elapsed)) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
       this.scoring.recordKill(enemy.kind, enemy.elite);
+      if(enemy.finalRole==='boss'){enemy.deathSource=source;this.finalEncounter.finish(this);return true;}
       this.sound('kill');
       enemy.deathSource = source;
       if (source !== 'ultimate-lightning') this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
       this.dropXp(enemy, enemy.xp);
-      this.loot.onEnemyDeath(this, enemy);
+      if(!enemy.finalRole)this.loot.onEnemyDeath(this, enemy);
       if (enemy.boss) { this.clearOwnedEffects(enemy.id); enemy.boss.charge = undefined; }
-      if (enemy.kind === 'guardian') this.guardianSystem.complete(this, enemy.id);
-      this.enemies.splice(this.enemies.indexOf(enemy), 1); onSpecialDeath(this, enemy); return true;
+      if(enemy.finalRole==='guardian')this.finalEncounter.supportRemoved(this,enemy.id);
+      else if (enemy.kind === 'guardian') this.guardianSystem.complete(this, enemy.id);
+      this.enemies.splice(this.enemies.indexOf(enemy), 1); if(!enemy.finalRole)onSpecialDeath(this, enemy); return true;
     }
     return false;
   }
@@ -175,17 +187,20 @@ export class World {
     if (orb) this.orbs.push(orb);
     else { const old = nearest(at, this.orbs, Infinity); if (old) old.value += value; }
   }
-  gainXp(amount: number) { if(this.status==='over'||this.status==='menu')return; const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
+  gainXp(amount: number) { if(this.outcome||this.status==='over'||this.status==='menu')return; const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
   private openUpgrade() {
     if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.offerId++; this.choices = chooseUpgrades(this); }
   }
   selectUpgrade(id: string, offer = this.offerId) {
     if (offer !== this.offerId || this.status !== 'upgrade' || !this.choices.some(c => c.id === id) || !applyUpgrade(this, id)) return false;
-    this.experience.pending--; this.choices = []; this.status = 'playing'; this.openUpgrade(); return true;
+    this.experience.pending--; this.choices = [];
+    // Supply effects can resolve a terminal encounter during the choice itself.
+    if(this.outcome)return true;
+    this.status = 'playing'; this.openUpgrade(); return true;
   }
   collectAllOrbs() { const value = this.orbs.reduce((sum, o) => sum + (o.expires > this.elapsed ? o.value : 0), 0); for (const orb of this.orbs) this.orbPool.release(orb); this.orbs = []; this.gainXp(value); }
   damagePlayer(amount: number) {
-    if (this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
+    if (this.outcome || this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
     const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
     const arcane=this.shield.absorbDamage(this.elapsed,incoming);
@@ -200,10 +215,12 @@ export class World {
   step(rawDelta: number, input: MovementInput = { x: 0, y: 0 }) {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
-    if(this.elapsed+1e-7>=RUN_LIMITS.victoryAt){this.elapsed=RUN_LIMITS.victoryAt;this.outcome='victory';this.status='over';this.choices=[];this.experience.pending=0;this.clearTemporaryState();return;}
+    if(this.finalEncounter.phase==='dying'){this.finalEncounter.update(this,dt);return;}
+    if(this.elapsed+1e-7>=FINAL_BOSS.at)this.finalEncounter.begin(this);
     const vector = direction(input.x, input.y);
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
     if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
+    if(this.finalEncounter.active)Object.assign(this.player,this.finalEncounter.clamp(this.player));
     if (vector.x || vector.y) this.facing = vector;
     // Release starts relief before this frame's spawns, including Splitter offspring.
     if (this.ultimate.selected === 'lightning') this.ultimate.update(this);
@@ -211,22 +228,23 @@ export class World {
     const profile = profileAt(this.elapsed);
     const cadence=spawnCadenceAt(this.elapsed);
     const spawnFactor=this.ultimate.regularSpawnFactor(this.elapsed);
-    if(spawnFactor===0)this.spawnClock.reset();
+    if(this.finalEncounter.active || spawnFactor===0)this.spawnClock.reset();
     else if (this.spawnClock.tick(dt*spawnFactor, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
       for (let i = 0; i < cadence.burst; i++) {
         const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
         this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
       }
     }
-    this.encounterDirector.update(this);
+    if(!this.finalEncounter.active)this.encounterDirector.update(this);
     if(this.ultimate.selected==='frost')this.ultimate.update(this);
     advanceUltimateFreeze(this);
     this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
-    if (this.status !== 'playing') return;
+    this.finalEncounter.update(this,dt);
+    if (this.outcome || this.status !== 'playing') return;
     this.mobility.tick(this);
     if (this.ultimate.selected === 'fire') this.ultimate.update(this);
-    this.enemies = this.enemies.filter(e => { const keep = e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
+    this.enemies = this.enemies.filter(e => { const keep = !!e.finalRole || e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
       if (this.status !== 'playing') break;
@@ -235,7 +253,7 @@ export class World {
       const old = { x: shot.x, y: shot.y }; shot.x += shot.vx * dt; shot.y += shot.vy * dt;
       if(this.ultimate.selected==='fire'&&this.ultimate.fire.absorb(this,old,shot))continue;
       if (shot.hostile) { if (segmentDistance(this.player, old, shot) < (shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius+9:12)) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
-      const targets = this.enemies.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
+      const targets = this.combatTargets.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
       for (const target of targets) {
         this.damageEnemy(target, shot.damage, shot.source); shot.hits?.push(target.id);
         if (shot.source === 'fireball' && evolved(this, 'fireball') && !shot.exploded) {
@@ -278,6 +296,8 @@ export class World {
     const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
+      finalEncounter: this.finalEncounter.snapshot(),
+      ...(this.practice?{practice:true}:{}),
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
@@ -296,7 +316,7 @@ export class World {
       }),
       abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
       bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase })),
-      wave: profileAt(this.elapsed).name,
+      wave: this.finalEncounter.phase!=='inactive'?'Финальная встреча':profileAt(this.elapsed).name,
     };
   }
 }

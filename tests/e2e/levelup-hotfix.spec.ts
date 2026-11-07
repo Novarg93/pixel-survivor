@@ -41,12 +41,15 @@ test('Enter chooses focused third card and Tab/Shift+Tab continue trapping focus
 test('first selection locks, real RAF stays paused until the 200ms commit and resumes once', async ({ page }) => {
   await start(page); await offer(page); const id = (await page.locator('.choice').first().getAttribute('data-upgrade'))!;
   await page.evaluate(() => {
-    const w = window.__PIXEL__!.world, trace = { selectedAt: 0, committedAt: 0, done: false, frames: [] as { elapsed: number; status: string; count: number; at: number }[] };
+    const w = window.__PIXEL__!.world, trace = { selectedAt: 0, committedAt: 0, observedAt: 0, done: false, frames: [] as { elapsed: number; status: string; count: number; at: number }[] };
     Object.defineProperty(window, '__HOTFIX_TRACE__', { value: trace, configurable: true });
     window.addEventListener('keydown', () => { trace.selectedAt = performance.now(); }, { capture: true, once: true });
+    // Timestamp the actual UI commit; a later RAF measures presentation latency.
+    const select = w.selectUpgrade.bind(w);
+    w.selectUpgrade = (id, offer) => { const accepted = select(id, offer); if (accepted && !trace.committedAt) trace.committedAt = performance.now(); return accepted; };
     const sample = () => {
       const count = Object.values(w.upgrades).reduce((sum, n) => sum + n, 0), at = performance.now(); trace.frames.push({ elapsed: w.elapsed, status: w.status, count, at });
-      if (count && !trace.committedAt) trace.committedAt = at;
+      if (count && !trace.observedAt) trace.observedAt = at;
       if (trace.committedAt && at - trace.committedAt >= 100) trace.done = true; else requestAnimationFrame(sample);
     }; requestAnimationFrame(sample);
   });
@@ -54,6 +57,7 @@ test('first selection locks, real RAF stays paused until the 200ms commit and re
   await page.keyboard.down('Digit1'); await page.keyboard.press('Digit2'); await page.keyboard.down('Digit1');
   await page.waitForFunction(() => Object.getOwnPropertyDescriptor(window, '__HOTFIX_TRACE__')!.value.done);
   const trace = await page.evaluate(() => Object.getOwnPropertyDescriptor(window, '__HOTFIX_TRACE__')!.value as { selectedAt: number; committedAt: number; frames: { elapsed: number; status: string; count: number; at: number }[] });
+  mkdirSync(directory, { recursive: true }); writeFileSync(`${directory}/real-confirmation-timeline.json`, JSON.stringify(trace, null, 2));
   expect(trace.committedAt - trace.selectedAt).toBeGreaterThanOrEqual(180); expect(trace.committedAt - trace.selectedAt).toBeLessThan(280);
   const pending = trace.frames.filter(f => f.at >= trace.selectedAt && !f.count); expect(pending.length).toBeGreaterThan(3);
   for (const frame of pending) { expect(frame.status).toBe('upgrade'); expect(frame.elapsed).toBe(frozen); }

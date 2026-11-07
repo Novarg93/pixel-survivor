@@ -37,6 +37,8 @@ export class UltimateSystem {
   get casting() { return this.selected==='lightning' && this.released<this.started || this.selected==='frost'&&this.frost.casting(this.updated); }
   protected(now: number) { return this.selected==='lightning'&&this.casting && now >= this.started && now + 1e-7 < this.started + C.lightning.preparation; }
   activate(w: World) {
+    if(w.outcome)return false;
+    if(w.finalEncounter.phase==='intro')return false;
     if(w.character!=='mage'||w.status!=='playing'||!this.selected||this.charge<C.charges||w.elapsed<this.activeUntil||this.casting)return false;
     const nodes=this.selected==='lightning'?chainStorm(w.player,w.facing,w.combatTargets,this.viewport.width,this.viewport.height):[];
     if(this.selected==='lightning'&&!nodes.length)return false;

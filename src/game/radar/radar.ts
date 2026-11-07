@@ -7,7 +7,7 @@ import type { Point } from '../utils/math';
 export type RadarKind = 'enemy' | 'elite' | BossKind | 'guardian' | LootKind | 'artifact' | 'chest';
 export interface RadarMarker extends Point { id: number; kind: RadarKind }
 export interface RadarFrame { runId: string; radius: number; facing: Point; markers: RadarMarker[] }
-const PRIORITY: Record<RadarKind, number> = { enemy: 0, elite: 1, chest: 2, healing: 3, haste: 3, fury: 3, magnet: 3, charger: 4, sorcerer: 4, eclipse: 4, artifact: 5, guardian: 6 };
+const PRIORITY: Record<RadarKind, number> = { enemy: 0, elite: 1, chest: 2, healing: 3, haste: 3, fury: 3, magnet: 3, charger: 4, sorcerer: 4, eclipse: 4, ashGuard:7, artifact: 5, guardian: 6 };
 export function radarRadius(width: number, height: number) { return Math.max(C.minRadius, Math.max(width, height) * C.radiusMultiplier); }
 // Normalized player-relative coordinates; outside-radius objects are excluded, never clamped to an edge marker.
 export function worldToRadar(at: Point, player: Point, radius: number): Point | undefined {

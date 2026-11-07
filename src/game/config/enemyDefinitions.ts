@@ -1,4 +1,6 @@
+import { FINAL_BOSS } from './finalBoss';
 export const ENEMIES = {
+  ashGuard: { hp: FINAL_BOSS.hp, speed: 72, damage: 0, score: 5000, xp: 0, radius: 28, color: 0xbacbd0 },
   guardian: { hp: 3780, speed: 0, damage: 20, score: 500, xp: 40, radius: 17, color: 0xf2cb72 },
   grunt: { hp: 22, speed: 38, damage: 10, score: 10, xp: 5, radius: 10, color: 0x97b975 },
   runner: { hp: 16, speed: 68, damage: 8, score: 15, xp: 7, radius: 8, color: 0xd79b65 },
@@ -11,7 +13,8 @@ export const ENEMIES = {
   eclipse: { hp: 5040, speed: 26, damage: 24, score: 1500, xp: 150, radius: 24, color: 0x8bc4d5 },
 } as const;
 export type EnemyKind = keyof typeof ENEMIES;
-export const ENEMY_NAMES: Record<EnemyKind, string> = { guardian: 'Редкий хранитель', grunt: 'Росток', runner: 'Бегун', tank: 'Каменный голем', caster: 'Рунный стрелок', rusher: 'Рывковик', splitter: 'Осколочник', charger: 'Терновый таран', eclipse: 'Хранитель затмения', sorcerer: 'Хранитель рун' };
-export type BossKind = 'charger' | 'sorcerer' | 'eclipse';
+export const ENEMY_NAMES: Record<EnemyKind, string> = { ashGuard: 'Страж Пепельной Рощи', guardian: 'Редкий хранитель', grunt: 'Росток', runner: 'Бегун', tank: 'Каменный голем', caster: 'Рунный стрелок', rusher: 'Рывковик', splitter: 'Осколочник', charger: 'Терновый таран', eclipse: 'Хранитель затмения', sorcerer: 'Хранитель рун' };
+export type ScheduledBossKind = 'charger' | 'sorcerer' | 'eclipse';
+export type BossKind = ScheduledBossKind | 'ashGuard';
 export type RegularKind = Exclude<EnemyKind, BossKind | 'guardian'>;
-export function isBossKind(kind: EnemyKind): kind is BossKind { return kind === 'charger' || kind === 'sorcerer' || kind === 'eclipse'; }
+export function isBossKind(kind: EnemyKind): kind is BossKind { return kind === 'charger' || kind === 'sorcerer' || kind === 'eclipse' || kind === 'ashGuard'; }

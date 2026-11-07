@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "status": "available-pack-for-manual-review",
+  "directions": [
+    "south"
+  ],
+  "bodyCanvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310811,
+  "clips": {
+    "spawn": {
+      "id": "spawn",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "spawn/frames/00.png",
+        "spawn/frames/01.png",
+        "spawn/frames/02.png",
+        "spawn/frames/03.png",
+        "spawn/frames/04.png",
+        "spawn/frames/05.png",
+        "spawn/frames/06.png",
+        "spawn/frames/07.png",
+        "spawn/frames/08.png",
+        "spawn/frames/09.png"
+      ],
+      "durationsMs": [
+        240,
+        260,
+        200,
+        180,
+        180,
+        180,
+        180,
+        180,
+        200,
+        500
+      ],
+      "totalMs": 2300,
+      "gif": "spawn/preview.gif",
+      "loop": false,
+      "bodyMotion": "Genuine generated crouch/rebalance/recovery poses reused as rising/settling apparition; no rigid sprite transform.",
+      "sources": [
+        "empty",
+        "empty",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "B0",
+        "acceptedIdle0",
+        "acceptedIdle0"
+      ]
+    },
+    "shield-break": {
+      "id": "shield-break",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "shield-break/frames/00.png",
+        "shield-break/frames/01.png",
+        "shield-break/frames/02.png",
+        "shield-break/frames/03.png",
+        "shield-break/frames/04.png",
+        "shield-break/frames/05.png",
+        "shield-break/frames/06.png",
+        "shield-break/frames/07.png"
+      ],
+      "durationsMs": [
+        60,
+        70,
+        100,
+        120,
+        150,
+        160,
+        180,
+        200
+      ],
+      "totalMs": 1040,
+      "gif": "shield-break/preview.gif",
+      "loop": false,
+      "bodyMotion": "New RD shoulder recoil, knees bending, support and exhausted crouch.",
+      "sources": [
+        "acceptedRitual0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ]
+    },
+    "stagger": {
+      "id": "stagger",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "stagger/frames/00.png"
+      ],
+      "durationsMs": [
+        500
+      ],
+      "totalMs": 500,
+      "gif": "stagger/preview.gif",
+      "loop": true,
+      "bodyMotion": "Intentionally held low exhausted pose during remaining vulnerability window."
+    },
+    "stagger-recover": {
+      "id": "stagger-recover",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "stagger-recover/frames/00.png",
+        "stagger-recover/frames/01.png",
+        "stagger-recover/frames/02.png",
+        "stagger-recover/frames/03.png",
+        "stagger-recover/frames/04.png",
+        "stagger-recover/frames/05.png",
+        "stagger-recover/frames/06.png"
+      ],
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        100,
+        60,
+        60
+      ],
+      "totalMs": 700,
+      "gif": "stagger-recover/preview.gif",
+      "loop": false
+    },
+    "transformation": {
+      "id": "transformation",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "transformation/frames/00.png",
+        "transformation/frames/01.png",
+        "transformation/frames/02.png",
+        "transformation/frames/03.png",
+        "transformation/frames/04.png",
+        "transformation/frames/05.png",
+        "transformation/frames/06.png",
+        "transformation/frames/07.png",
+        "transformation/frames/08.png",
+        "transformation/frames/09.png"
+      ],
+      "durationsMs": [
+        160,
+        160,
+        180,
+        200,
+        220,
+        220,
+        180,
+        160,
+        160,
+        160
+      ],
+      "totalMs": 1800,
+      "gif": "transformation/preview.gif",
+      "loop": false,
+      "bodyMotion": "Several articulated poses: brace, two-handed sword lift, tense guard. Glow/ash are separate layers.",
+      "readyPose": "Cleave windup1 reference as tense Phase3 idle; accepted idle remains available for persistence."
+    },
+    "death-a": {
+      "id": "death-a",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "death-a/frames/00.png",
+        "death-a/frames/01.png",
+        "death-a/frames/02.png",
+        "death-a/frames/03.png",
+        "death-a/frames/04.png",
+        "death-a/frames/05.png",
+        "death-a/frames/06.png",
+        "death-a/frames/07.png",
+        "death-a/frames/08.png",
+        "death-a/frames/09.png",
+        "death-a/frames/10.png",
+        "death-a/frames/11.png"
+      ],
+      "durationsMs": [
+        90,
+        100,
+        130,
+        160,
+        180,
+        200,
+        200,
+        200,
+        220,
+        220,
+        250,
+        250
+      ],
+      "totalMs": 2200,
+      "gif": "death-a/preview.gif",
+      "loop": false,
+      "bodyMotion": "Generated articulated knee collapse and forward torso fall. Raw10/11 head-rebound omitted; final raw9 corpse held.",
+      "sourceFrameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        9,
+        9
+      ],
+      "releaseFrame": 6,
+      "collapseFrame": 7,
+      "emberFadeFrame": 9,
+      "candidateSelected": false
+    }
+  },
+  "layers": {
+    "sword": {
+      "id": "sword-drop",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "sword-drop/frames/00.png",
+        "sword-drop/frames/01.png",
+        "sword-drop/frames/02.png",
+        "sword-drop/frames/03.png",
+        "sword-drop/frames/04.png"
+      ],
+      "durationsMs": [
+        50,
+        60,
+        80,
+        90,
+        160
+      ],
+      "totalMs": 440,
+      "gif": "sword-drop/preview.gif",
+      "loop": false,
+      "releasedBodyFrame": 6,
+      "persistFinal": true,
+      "impactOffsetMs": 110,
+      "source": "Original accepted blade pixels, isolated guard/hilt repair; rigid rotation is weapon physics only, never corpse rotation."
+    },
+    "extinction": {
+      "id": "ember-extinction",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "ember-extinction/frames/00.png",
+        "ember-extinction/frames/01.png",
+        "ember-extinction/frames/02.png",
+        "ember-extinction/frames/03.png",
+        "ember-extinction/frames/04.png",
+        "ember-extinction/frames/05.png",
+        "ember-extinction/frames/06.png",
+        "ember-extinction/frames/07.png",
+        "ember-extinction/frames/08.png",
+        "ember-extinction/frames/09.png",
+        "ember-extinction/frames/10.png",
+        "ember-extinction/frames/11.png"
+      ],
+      "durationsMs": [
+        90,
+        100,
+        130,
+        160,
+        180,
+        200,
+        200,
+        200,
+        220,
+        220,
+        250,
+        250
+      ],
+      "totalMs": 2200,
+      "gif": "ember-extinction/preview.gif",
+      "loop": false,
+      "separateFromBody": true,
+      "persistFinal": true
+    },
+    "fatalPulse": {
+      "id": "fatal-hit-emission",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "fatal-hit-emission/frames/00.png",
+        "fatal-hit-emission/frames/01.png",
+        "fatal-hit-emission/frames/02.png",
+        "fatal-hit-emission/frames/03.png",
+        "fatal-hit-emission/frames/04.png",
+        "fatal-hit-emission/frames/05.png",
+        "fatal-hit-emission/frames/06.png",
+        "fatal-hit-emission/frames/07.png",
+        "fatal-hit-emission/frames/08.png",
+        "fatal-hit-emission/frames/09.png",
+        "fatal-hit-emission/frames/10.png",
+        "fatal-hit-emission/frames/11.png"
+      ],
+      "durationsMs": [
+        90,
+        100,
+        130,
+        160,
+        180,
+        200,
+        200,
+        200,
+        220,
+        220,
+        250,
+        250
+      ],
+      "totalMs": 2200,
+      "gif": "fatal-hit-emission/preview.gif",
+      "loop": false,
+      "separateFromBody": true
+    },
+    "swordExtinction": {
+      "id": "sword-extinction",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "sword-extinction/frames/00.png",
+        "sword-extinction/frames/01.png",
+        "sword-extinction/frames/02.png",
+        "sword-extinction/frames/03.png",
+        "sword-extinction/frames/04.png",
+        "sword-extinction/frames/05.png",
+        "sword-extinction/frames/06.png",
+        "sword-extinction/frames/07.png",
+        "sword-extinction/frames/08.png",
+        "sword-extinction/frames/09.png",
+        "sword-extinction/frames/10.png",
+        "sword-extinction/frames/11.png"
+      ],
+      "durationsMs": [
+        90,
+        100,
+        130,
+        160,
+        180,
+        200,
+        200,
+        200,
+        220,
+        220,
+        250,
+        250
+      ],
+      "totalMs": 2200,
+      "gif": "sword-extinction/preview.gif",
+      "loop": false,
+      "separateFromBody": true,
+      "persistFinal": true
+    },
+    "overheat": {
+      "id": "phase3-transform-emission",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "phase3-transform-emission/frames/00.png",
+        "phase3-transform-emission/frames/01.png",
+        "phase3-transform-emission/frames/02.png",
+        "phase3-transform-emission/frames/03.png",
+        "phase3-transform-emission/frames/04.png",
+        "phase3-transform-emission/frames/05.png",
+        "phase3-transform-emission/frames/06.png",
+        "phase3-transform-emission/frames/07.png",
+        "phase3-transform-emission/frames/08.png",
+        "phase3-transform-emission/frames/09.png"
+      ],
+      "durationsMs": [
+        160,
+        160,
+        180,
+        200,
+        220,
+        220,
+        180,
+        160,
+        160,
+        160
+      ],
+      "totalMs": 1800,
+      "gif": "phase3-transform-emission/preview.gif",
+      "loop": false,
+      "separateFromBody": true,
+      "persistFinal": true
+    },
+    "reveal": {
+      "id": "spawn-silhouette",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "spawn-silhouette/frames/00.png",
+        "spawn-silhouette/frames/01.png",
+        "spawn-silhouette/frames/02.png",
+        "spawn-silhouette/frames/03.png",
+        "spawn-silhouette/frames/04.png",
+        "spawn-silhouette/frames/05.png",
+        "spawn-silhouette/frames/06.png",
+        "spawn-silhouette/frames/07.png",
+        "spawn-silhouette/frames/08.png",
+        "spawn-silhouette/frames/09.png"
+      ],
+      "durationsMs": [
+        240,
+        260,
+        200,
+        180,
+        180,
+        180,
+        180,
+        180,
+        200,
+        500
+      ],
+      "totalMs": 2300,
+      "gif": "spawn-silhouette/preview.gif",
+      "loop": false,
+      "separateFromBody": true
+    }
+  },
+  "vfx": {
+    "spawn": {
+      "id": "vfx-spawn",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-spawn/frames/00.png",
+        "vfx-spawn/frames/01.png",
+        "vfx-spawn/frames/02.png",
+        "vfx-spawn/frames/03.png",
+        "vfx-spawn/frames/04.png",
+        "vfx-spawn/frames/05.png"
+      ],
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        120
+      ],
+      "totalMs": 620,
+      "gif": "vfx-spawn/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    },
+    "shatter": {
+      "id": "vfx-shatter",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-shatter/frames/00.png",
+        "vfx-shatter/frames/01.png",
+        "vfx-shatter/frames/02.png",
+        "vfx-shatter/frames/03.png",
+        "vfx-shatter/frames/04.png",
+        "vfx-shatter/frames/05.png",
+        "vfx-shatter/frames/06.png"
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "totalMs": 420,
+      "gif": "vfx-shatter/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    },
+    "overload": {
+      "id": "vfx-overload",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-overload/frames/00.png",
+        "vfx-overload/frames/01.png",
+        "vfx-overload/frames/02.png",
+        "vfx-overload/frames/03.png",
+        "vfx-overload/frames/04.png",
+        "vfx-overload/frames/05.png"
+      ],
+      "durationsMs": [
+        40,
+        50,
+        60,
+        70,
+        80,
+        100
+      ],
+      "totalMs": 400,
+      "gif": "vfx-overload/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    },
+    "deathAsh": {
+      "id": "vfx-deathAsh",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-deathAsh/frames/00.png",
+        "vfx-deathAsh/frames/01.png",
+        "vfx-deathAsh/frames/02.png",
+        "vfx-deathAsh/frames/03.png",
+        "vfx-deathAsh/frames/04.png",
+        "vfx-deathAsh/frames/05.png"
+      ],
+      "durationsMs": [
+        70,
+        80,
+        100,
+        100,
+        100,
+        150
+      ],
+      "totalMs": 600,
+      "gif": "vfx-deathAsh/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    },
+    "stoneHit": {
+      "id": "vfx-stoneHit",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-stoneHit/frames/00.png",
+        "vfx-stoneHit/frames/01.png",
+        "vfx-stoneHit/frames/02.png",
+        "vfx-stoneHit/frames/03.png",
+        "vfx-stoneHit/frames/04.png",
+        "vfx-stoneHit/frames/05.png"
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        80,
+        100
+      ],
+      "totalMs": 360,
+      "gif": "vfx-stoneHit/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    },
+    "phase3Embers": {
+      "id": "vfx-phase3Embers",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811,
+      "frames": [
+        "vfx-phase3Embers/frames/00.png",
+        "vfx-phase3Embers/frames/01.png",
+        "vfx-phase3Embers/frames/02.png",
+        "vfx-phase3Embers/frames/03.png",
+        "vfx-phase3Embers/frames/04.png",
+        "vfx-phase3Embers/frames/05.png"
+      ],
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "totalMs": 600,
+      "gif": "vfx-phase3Embers/preview.gif",
+      "loop": false,
+      "bodyPixels": false
+    }
+  },
+  "events": {
+    "spawn": [
+      {
+        "name": "spawnStart",
+        "frame": 0,
+        "timeMs": 0,
+        "clip": "spawn",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "spawnReveal",
+        "frame": 2,
+        "timeMs": 500,
+        "clip": "spawn",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "spawnReady",
+        "frameExclusive": 10,
+        "timeMs": 2300,
+        "clip": "spawn",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      }
+    ],
+    "shield": [
+      {
+        "name": "shieldBreakStart",
+        "frame": 0,
+        "timeMs": 300,
+        "clip": "shield-break",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "shieldShatter",
+        "frame": 0,
+        "timeMs": 300,
+        "clip": "shield-break",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "staggerStart",
+        "frame": 2,
+        "timeMs": 430,
+        "clip": "shield-break",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "staggerEnd",
+        "frameExclusive": 7,
+        "timeMs": 3300,
+        "clip": "stagger-recover",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      }
+    ],
+    "phase3": [
+      {
+        "name": "phase3Start",
+        "frame": 0,
+        "timeMs": 600,
+        "clip": "transformation",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "phase3Overload",
+        "frame": 4,
+        "timeMs": 1300,
+        "clip": "transformation",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "phase3Ready",
+        "frameExclusive": 10,
+        "timeMs": 2400,
+        "clip": "transformation",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      }
+    ],
+    "death": [
+      {
+        "name": "deathStart",
+        "frame": 0,
+        "timeMs": 0,
+        "clip": "death-a",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "swordRelease",
+        "frame": 6,
+        "timeMs": 860,
+        "clip": "death-a",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "bodyCollapse",
+        "frame": 7,
+        "timeMs": 1060,
+        "clip": "death-a",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "emberFade",
+        "frame": 9,
+        "timeMs": 1480,
+        "clip": "death-a",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      },
+      {
+        "name": "deathAnimationComplete",
+        "frameExclusive": 12,
+        "timeMs": 2200,
+        "clip": "death-a",
+        "oncePer": "encounterId + eventName",
+        "scrubDispatch": false
+      }
+    ]
+  },
+  "scenarios": {
+    "spawn": {
+      "durationMs": 2900,
+      "idleFrom": 2300
+    },
+    "shield": {
+      "durationMs": 3800,
+      "channelUntil": 300,
+      "breakAt": 300,
+      "holdAt": 1340,
+      "recoverAt": 2600,
+      "idleAt": 3300,
+      "vulnerableFrom": 300,
+      "vulnerableUntil": 3300
+    },
+    "phase3": {
+      "durationMs": 3400,
+      "transformAt": 600,
+      "readyAt": 2400,
+      "readyPose": "transformation last frame, tense two-hand guard"
+    },
+    "death": {
+      "durationMs": 3000,
+      "animationComplete": 2200,
+      "corpsePersists": true
+    }
+  },
+  "deathB": {
+    "available": false,
+    "reason": "Starter51→44 leaves3pp; previous jobs needed up to4pp. No third paid call, no substitute recolor candidate."
+  },
+  "phase3Persistence": "phase3-persistence.json",
+  "runtimeContract": {
+    "spawnDamageEnabledAfter": "spawnReady",
+    "shieldImmunityEndsAt": "shieldShatter, not staggerEnd",
+    "phase3TransitionOncePerEncounter": true,
+    "phase3ThresholdCrossingCannotBeSkipped": true,
+    "deathVictoryLatchOnceAtHP0": true,
+    "hostileDamageDisabledAtDeathStart": true,
+    "cancelHazardsAtDeathStart": true,
+    "victoryScreenAfter": "deathAnimationComplete",
+    "noNewVictoryTimerWhileDeathPlays": true
+  },
+  "noProductionIntegration": true
+}

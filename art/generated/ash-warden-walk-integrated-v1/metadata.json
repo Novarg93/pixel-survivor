@@ -1,0 +1,1077 @@
+{
+  "version": 1,
+  "status": "user-approved; integrated movement",
+  "timingPolicy": "source GIF durations, no cadence acceleration",
+  "logicalCanvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310811,
+  "normalization": "Exact fixed integer block reduction; no fitting or recentering",
+  "clips": {
+    "east": {
+      "source": {
+        "gif": "art/generated/ash-warden-walk-rd-v2/incoming/east/east-walk.gif",
+        "sheet": "art/generated/ash-warden-walk-rd-v2/incoming/east/east-walk-spritesheet.png"
+      },
+      "sourceHashes": {
+        "gif": "3515d1d3ca46a807893f4acac94a58e4719eb0a36e32e92c36190e58e552f37b",
+        "sheet": "027e74441a834487e9797e624b0c8f40af793e7a54e614183ac332bc0d9dc039"
+      },
+      "frames": [
+        "east/frames/00.png",
+        "east/frames/01.png",
+        "east/frames/02.png",
+        "east/frames/03.png",
+        "east/frames/04.png",
+        "east/frames/05.png",
+        "east/frames/06.png",
+        "east/frames/07.png",
+        "east/frames/08.png",
+        "east/frames/09.png",
+        "east/frames/10.png",
+        "east/frames/11.png"
+      ],
+      "overlays": [
+        "east/overlays/00.png",
+        "east/overlays/01.png",
+        "east/overlays/02.png",
+        "east/overlays/03.png",
+        "east/overlays/04.png",
+        "east/overlays/05.png",
+        "east/overlays/06.png",
+        "east/overlays/07.png",
+        "east/overlays/08.png",
+        "east/overlays/09.png",
+        "east/overlays/10.png",
+        "east/overlays/11.png"
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "frameCount": 12,
+      "pivot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310811,
+      "loop": true,
+      "validation": [
+        {
+          "index": 0,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 15680,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 1,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 12000,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 2,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 36912,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 3,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 47232,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 4,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 13584,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 5,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 31040,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 6,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 31344,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 7,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 36432,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 8,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 28880,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 9,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 14528,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 10,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 24080,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 11,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 14160,
+          "sheetAlphaDiff": 0
+        }
+      ]
+    },
+    "north": {
+      "source": {
+        "gif": "art/generated/ash-warden-walk-manual-v1/north/walk/north.gif",
+        "sheet": "art/generated/ash-warden-walk-manual-v1/north/walk/north.png"
+      },
+      "sourceHashes": {
+        "gif": "658c566760c35b8965fc89e5c12c1c9403c1396590271f86008a74af3d74305d",
+        "sheet": "3247f027a83f8c40167bf030d91c1144534cce71d09f664df7d1c116e105d783"
+      },
+      "frames": [
+        "north/frames/00.png",
+        "north/frames/01.png",
+        "north/frames/02.png",
+        "north/frames/03.png",
+        "north/frames/04.png",
+        "north/frames/05.png",
+        "north/frames/06.png",
+        "north/frames/07.png",
+        "north/frames/08.png",
+        "north/frames/09.png",
+        "north/frames/10.png",
+        "north/frames/11.png"
+      ],
+      "overlays": [
+        "north/overlays/00.png",
+        "north/overlays/01.png",
+        "north/overlays/02.png",
+        "north/overlays/03.png",
+        "north/overlays/04.png",
+        "north/overlays/05.png",
+        "north/overlays/06.png",
+        "north/overlays/07.png",
+        "north/overlays/08.png",
+        "north/overlays/09.png",
+        "north/overlays/10.png",
+        "north/overlays/11.png"
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "frameCount": 12,
+      "pivot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310811,
+      "loop": true,
+      "validation": [
+        {
+          "index": 0,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 17072,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 1,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 7200,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 2,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 6128,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 3,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 17040,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 4,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 12240,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 5,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 11216,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 6,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 10640,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 7,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 21872,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 8,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 7216,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 9,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 5440,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 10,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 20944,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 11,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 8064,
+          "sheetAlphaDiff": 0
+        }
+      ]
+    },
+    "south": {
+      "source": {
+        "gif": "art/generated/ash-warden-walk-manual-v1/south/walk/south.gif",
+        "sheet": "art/generated/ash-warden-walk-manual-v1/south/walk/south.png"
+      },
+      "sourceHashes": {
+        "gif": "6f6a5d378c27dd5efaede0f50140d129bbe2718846b0eb7de3f2f2e81532bf5c",
+        "sheet": "540f986a5acc3337c8d3aa35a94771c59c8187c9638b1418defcc9558677dc64"
+      },
+      "frames": [
+        "south/frames/00.png",
+        "south/frames/01.png",
+        "south/frames/02.png",
+        "south/frames/03.png",
+        "south/frames/04.png",
+        "south/frames/05.png",
+        "south/frames/06.png",
+        "south/frames/07.png",
+        "south/frames/08.png",
+        "south/frames/09.png",
+        "south/frames/10.png",
+        "south/frames/11.png"
+      ],
+      "overlays": [
+        "south/overlays/00.png",
+        "south/overlays/01.png",
+        "south/overlays/02.png",
+        "south/overlays/03.png",
+        "south/overlays/04.png",
+        "south/overlays/05.png",
+        "south/overlays/06.png",
+        "south/overlays/07.png",
+        "south/overlays/08.png",
+        "south/overlays/09.png",
+        "south/overlays/10.png",
+        "south/overlays/11.png"
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "frameCount": 12,
+      "pivot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310811,
+      "loop": true,
+      "validation": [
+        {
+          "index": 0,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 24112,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 1,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 22224,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 2,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 39408,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 3,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 47040,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 4,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 13264,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 5,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 39744,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 6,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 14560,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 7,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 11872,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 8,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 12704,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 9,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 8656,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 10,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 5056,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 11,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 35856,
+          "sheetAlphaDiff": 0
+        }
+      ]
+    },
+    "west": {
+      "source": {
+        "mirrorOf": "east"
+      },
+      "sourceHashes": {
+        "gif": "3515d1d3ca46a807893f4acac94a58e4719eb0a36e32e92c36190e58e552f37b",
+        "sheet": "027e74441a834487e9797e624b0c8f40af793e7a54e614183ac332bc0d9dc039"
+      },
+      "frames": [
+        "west/frames/00.png",
+        "west/frames/01.png",
+        "west/frames/02.png",
+        "west/frames/03.png",
+        "west/frames/04.png",
+        "west/frames/05.png",
+        "west/frames/06.png",
+        "west/frames/07.png",
+        "west/frames/08.png",
+        "west/frames/09.png",
+        "west/frames/10.png",
+        "west/frames/11.png"
+      ],
+      "overlays": [
+        "west/overlays/00.png",
+        "west/overlays/01.png",
+        "west/overlays/02.png",
+        "west/overlays/03.png",
+        "west/overlays/04.png",
+        "west/overlays/05.png",
+        "west/overlays/06.png",
+        "west/overlays/07.png",
+        "west/overlays/08.png",
+        "west/overlays/09.png",
+        "west/overlays/10.png",
+        "west/overlays/11.png"
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "frameCount": 12,
+      "pivot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310811,
+      "loop": true,
+      "validation": [
+        {
+          "index": 0,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 15680,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 1,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 12000,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 2,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 36912,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 3,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 47232,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 4,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 13584,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 5,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 31040,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 6,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 31344,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 7,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 36432,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 8,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 28880,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 9,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 14528,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 10,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 24080,
+          "sheetAlphaDiff": 0
+        },
+        {
+          "index": 11,
+          "native": [
+            768,
+            768
+          ],
+          "logical": [
+            192,
+            192
+          ],
+          "fixedReduction": 4,
+          "durationMs": 150,
+          "nonuniform": 0,
+          "edge": 0,
+          "sheetRGBDiff": 14160,
+          "sheetAlphaDiff": 0
+        }
+      ],
+      "runtimeUsesEastFlipX": true
+    }
+  }
+}

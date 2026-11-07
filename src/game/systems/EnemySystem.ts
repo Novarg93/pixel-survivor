@@ -14,6 +14,7 @@ export class EnemySystem {
     this.grid.rebuild(w.enemies);
     for (const e of w.enemies) {
       if (w.status !== 'playing') break;
+      if(e.finalRole)continue;
       if(ultimateFrozen(e,w.elapsed))continue;
       const step=unfrozenDelta(e,w.elapsed,dt);if(step<=0)continue;
       if (e.kind === 'guardian') { if (w.guardianSystem.encounters.has(e.id) && distance(e, w.player) < e.radius + 9) w.damagePlayer(e.damage); continue; }

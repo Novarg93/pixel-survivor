@@ -3,5 +3,5 @@ import type { Metrics } from './game/events/bridge';
 import type { GameArt } from './game/art/GameArt';
 import type { CharacterId } from './game/config/characters';
 declare global {
-  interface Window { __PIXEL__?: { world: World; setVisualTime: (seconds?: number) => void; setTestCharacter: (character: CharacterId) => void; listeners: () => { commands: number; snapshots: number; metrics: number }; metrics: () => Metrics; restartScene: () => void; art: () => ReturnType<GameArt['diagnostics']>; atmosphere: () => ReturnType<import('./game/art/ForestAtmosphere').ForestAtmosphere['diagnostics']>; audio: () => ReturnType<import('./game/audio/AudioController').AudioController['diagnostics']> } }
+  interface Window { __PIXEL__?: { world: World; finalScenario: (action: import('./game/bootstrap/finalBossScenario').FinalScenario) => void; setVisualTime: (seconds?: number) => void; setTestCharacter: (character: CharacterId) => void; listeners: () => { commands: number; snapshots: number; metrics: number }; metrics: () => Metrics; restartScene: () => void; art: () => ReturnType<GameArt['diagnostics']>; atmosphere: () => ReturnType<import('./game/art/ForestAtmosphere').ForestAtmosphere['diagnostics']>; audio: () => ReturnType<import('./game/audio/AudioController').AudioController['diagnostics']> } }
 }

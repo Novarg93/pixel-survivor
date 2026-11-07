@@ -45,11 +45,13 @@ for (const width of [1280, 390]) for (const hero of ['Mage', 'Warrior']) test(`s
       await page.screenshot({ path: `${directory}/cards-${hero}-${width}-${group}-focus.png`, animations: 'disabled' });
       const frozen = await page.evaluate(() => window.__PIXEL__!.world.elapsed), index = group % 3;
       if (width === 390 && group === groups.length - 1) await cards.nth(index).tap({ force: true }); else await page.keyboard.press(String(index + 1));
+      await page.keyboard.press(String((index + 1) % 3 + 1));
+      // Check the pending window before screenshot capture, which can exceed
+      // the legitimate 200ms commit delay under parallel rendering load.
+      expect(await page.evaluate(() => window.__PIXEL__!.world.elapsed)).toBe(frozen);
       await expect(cards.nth(index)).toHaveAttribute('aria-pressed', 'true'); await expect(cards.nth(index)).toContainText('Выбрано ✓');
       expect(await cards.nth(index).evaluate(n => getComputedStyle(n).outlineWidth)).toBe('3px');
       await page.screenshot({ path: `${directory}/cards-${hero}-${width}-${group}-selected.png`, animations: 'disabled' });
-      await page.keyboard.press(String((index + 1) % 3 + 1));
-      expect(await page.evaluate(() => window.__PIXEL__!.world.elapsed)).toBe(frozen);
       await expect(page.getByRole('dialog', { name: 'Новый уровень' })).toHaveCount(0);
       expect(await page.evaluate(id => window.__PIXEL__!.world.upgrades[id], ids[index])).toBe(1);
       evidence.push({ ids, colors, selected: ids[index] });

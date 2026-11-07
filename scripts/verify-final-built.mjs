@@ -1,0 +1,10 @@
+import {build} from 'vite';
+import {resolve} from 'node:path';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const out=resolve('.tmp/final-boss-built');
+await build({configFile:false,logLevel:'warn',build:{outDir:out,emptyOutDir:false,minify:true,lib:{entry:resolve('tests/helpers/finalBossTrial.ts'),formats:['es'],fileName:()=> 'fight.mjs'}}});
+const {runFinalTrial}=await import('../.tmp/final-boss-built/fight.mjs');
+const victory=runFinalTrial(42,'typical','frost','full'),defeat=runFinalTrial(42,'typical','frost','afk');
+if(victory.outcome!=='victory'||defeat.outcome!=='defeat')throw new Error('Built runtime terminal outcome failed');
+mkdirSync('docs/final-boss',{recursive:true});writeFileSync('docs/final-boss/built-runtime.json',JSON.stringify({context:'Separate minified Vite ES library of actual World and legal trial; never shipped in public dist and no production DEV hook. Public Vue/Phaser smoke is tested separately.',victory,defeat},null,2));
+globalThis.console.log({builtVictory:victory.duration,builtDefeat:defeat.duration});

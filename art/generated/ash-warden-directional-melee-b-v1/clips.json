@@ -1,0 +1,1818 @@
+{
+  "south-idle": {
+    "direction": "south",
+    "pose": "idle",
+    "presentation": "front",
+    "combatFacing": "south",
+    "worldForward": [
+      0,
+      1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "b414f77b76346644c019",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "90a894608e0d36ed9adc",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      450,
+      450,
+      450,
+      450
+    ],
+    "totalMs": 1800,
+    "previewFPS": 2.2222222222222223,
+    "strideWorld": null,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "south-walk": {
+    "direction": "south",
+    "pose": "walk",
+    "presentation": "front",
+    "combatFacing": "south",
+    "worldForward": [
+      0,
+      1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "60a87a4b7da01488396c",
+            "x": 71,
+            "y": 113
+          },
+          {
+            "texture": "83caa979e778b8ee9431",
+            "x": 36,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "e9d38ef0246002345b8f",
+            "x": 72,
+            "y": 118
+          },
+          {
+            "texture": "da587791c38d907eea74",
+            "x": 36,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "1423e32569a70d7bf0ed",
+            "x": 73,
+            "y": 113
+          },
+          {
+            "texture": "4eaed8249c13e40d481d",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "e39b6be6956a8c204299",
+            "x": 74,
+            "y": 119
+          },
+          {
+            "texture": "8be5987930ac2d2a2776",
+            "x": 38,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "b4b8888d98220331a590",
+            "x": 74,
+            "y": 120
+          },
+          {
+            "texture": "d4b6ec54176a218614fc",
+            "x": 38,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "df27de26aa03c8a03052",
+            "x": 74,
+            "y": 121
+          },
+          {
+            "texture": "67219d84bf7dc280003d",
+            "x": 38,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "cfbbd95bfb447afb33f9",
+            "x": 74,
+            "y": 120
+          },
+          {
+            "texture": "d1271f67fa79817e7f22",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "a151941b10e9c7e4c74b",
+            "x": 72,
+            "y": 119
+          },
+          {
+            "texture": "40f391aa072ecd35e1f0",
+            "x": 36,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289
+    ],
+    "totalMs": 509.3130630630631,
+    "previewFPS": 15.70743140159639,
+    "strideWorld": 36.67054054054054,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "south-melee": {
+    "direction": "south",
+    "pose": "melee",
+    "presentation": "front",
+    "combatFacing": "south",
+    "worldForward": [
+      0,
+      1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "5fcdb9f8f7382ac16f32",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "b84303e511e43412f175",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "54e1b9e18180c59423aa",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "c95de79b59d1b9dae37a",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "8e2642064dc6ba1070f8",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "9103ba2e7eaa3439b85e",
+            "x": 37,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "f98be1f512c502662d04",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "168f7315f052aefa9210",
+            "x": 44,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4ec1764fec2056843261",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "6b94740decd54f8d1a35",
+            "x": 4,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4a7bde9366cd8c482b9a",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "18cc8bd5de2986b0f171",
+            "x": 6,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "d4589c00c695366908c4",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "87b45b1b183266d24b5f",
+            "x": 61,
+            "y": 5
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4b3c761bd7c7e0f929ac",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "96667aa6a76c36d8b3a9",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "ac5dc3c8e68298c9ec73",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "3ce3277b482b4f10b051",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "1d45f5c7dc90448265a4",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "6e4a8158f0cf8462af21",
+            "x": 66,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "ff005b30322110f5be1f",
+            "x": 77,
+            "y": 128
+          },
+          {
+            "texture": "0ea47faa455f0c6982c3",
+            "x": 63,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "59c65150e907c8e7e501",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "bee8d25f582d0279fdf1",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      80,
+      80,
+      90,
+      100,
+      110,
+      80,
+      110,
+      150,
+      100,
+      100,
+      100,
+      100
+    ],
+    "totalMs": 1200,
+    "previewFPS": 10,
+    "strideWorld": null,
+    "events": {
+      "attackStart": {
+        "frame": 0,
+        "timeMs": 0
+      },
+      "directionLock": {
+        "frame": 0,
+        "timeMs": 0,
+        "worldForward": [
+          0,
+          1
+        ],
+        "policy": "Latch combat aim independently of presentation once per attack"
+      },
+      "windupEnd": {
+        "frame": 5,
+        "timeMs": 460
+      },
+      "hitFrame": {
+        "frame": 7,
+        "timeMs": 650,
+        "guardKey": "attackInstanceId",
+        "dispatch": "once-per-instance"
+      },
+      "activeEnd": {
+        "frame": 8,
+        "timeMs": 800
+      },
+      "recoveryEnd": {
+        "frameExclusive": 12,
+        "timeMs": 1200
+      },
+      "damagePolicy": {
+        "maxApplicationsPerAttack": 1,
+        "notPerActiveFrame": true
+      },
+      "hitArea": {
+        "worldForward": [
+          0,
+          1
+        ],
+        "kind": "front-sector",
+        "radiusWorld": null,
+        "deriveFromSwordImage": false
+      },
+      "returnToLocomotion": {
+        "visualBlendWindowMs": [
+          1100,
+          1200
+        ],
+        "exitAllowedAfterMs": 1200
+      },
+      "presentation": "front",
+      "combatFacing": "south",
+      "status": "visual metadata, not connected to gameplay"
+    },
+    "loop": false,
+    "status": "candidate-for-manual-review"
+  },
+  "east-idle": {
+    "direction": "east",
+    "pose": "idle",
+    "presentation": "front",
+    "combatFacing": "east",
+    "worldForward": [
+      1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "b414f77b76346644c019",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "90a894608e0d36ed9adc",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      450,
+      450,
+      450,
+      450
+    ],
+    "totalMs": 1800,
+    "previewFPS": 2.2222222222222223,
+    "strideWorld": null,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "east-walk": {
+    "direction": "east",
+    "pose": "walk",
+    "presentation": "front",
+    "combatFacing": "east",
+    "worldForward": [
+      1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "58f15d5214cfa1016f1b",
+            "x": 78,
+            "y": 112
+          },
+          {
+            "texture": "83caa979e778b8ee9431",
+            "x": 36,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "88633da40500a1b9826d",
+            "x": 74,
+            "y": 113
+          },
+          {
+            "texture": "da587791c38d907eea74",
+            "x": 36,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "462719f264d575f69d8b",
+            "x": 71,
+            "y": 112
+          },
+          {
+            "texture": "4eaed8249c13e40d481d",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "0fe5ef078baea7d86cd6",
+            "x": 67,
+            "y": 111
+          },
+          {
+            "texture": "8be5987930ac2d2a2776",
+            "x": 38,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "9f71d3423f49a73d5c80",
+            "x": 60,
+            "y": 112
+          },
+          {
+            "texture": "d4b6ec54176a218614fc",
+            "x": 38,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4e276415b27a68bd3a84",
+            "x": 64,
+            "y": 113
+          },
+          {
+            "texture": "67219d84bf7dc280003d",
+            "x": 38,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4df26465fd3bf956807f",
+            "x": 72,
+            "y": 112
+          },
+          {
+            "texture": "d1271f67fa79817e7f22",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "c203f666491de6c55f3b",
+            "x": 76,
+            "y": 111
+          },
+          {
+            "texture": "40f391aa072ecd35e1f0",
+            "x": 36,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289
+    ],
+    "totalMs": 509.3130630630631,
+    "previewFPS": 15.70743140159639,
+    "strideWorld": 36.67054054054054,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "east-melee": {
+    "direction": "east",
+    "pose": "melee",
+    "presentation": "front",
+    "combatFacing": "east",
+    "worldForward": [
+      1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "5fcdb9f8f7382ac16f32",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "b84303e511e43412f175",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "b483bfebf57a59154c81",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "c95de79b59d1b9dae37a",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "180d654fe4671812fd74",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "9103ba2e7eaa3439b85e",
+            "x": 37,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "a4e87e1b2a004fe53ae4",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "168f7315f052aefa9210",
+            "x": 44,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "6ed59343e7503fb890bf",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "6b94740decd54f8d1a35",
+            "x": 4,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "1c23aa866084d8f4b91b",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "18cc8bd5de2986b0f171",
+            "x": 6,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "6deaeea49049fb7434a2",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "87b45b1b183266d24b5f",
+            "x": 61,
+            "y": 5
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "23a6eb4ef24d3cbd49e8",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "96667aa6a76c36d8b3a9",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "f50b8c6a84ab677ec3af",
+            "x": 70,
+            "y": 128
+          },
+          {
+            "texture": "3ce3277b482b4f10b051",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "f2cc66fadf2218cb44cf",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "6e4a8158f0cf8462af21",
+            "x": 66,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "ff005b30322110f5be1f",
+            "x": 77,
+            "y": 128
+          },
+          {
+            "texture": "0ea47faa455f0c6982c3",
+            "x": 63,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "59c65150e907c8e7e501",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "bee8d25f582d0279fdf1",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      80,
+      80,
+      90,
+      100,
+      110,
+      80,
+      110,
+      150,
+      100,
+      100,
+      100,
+      100
+    ],
+    "totalMs": 1200,
+    "previewFPS": 10,
+    "strideWorld": null,
+    "events": {
+      "attackStart": {
+        "frame": 0,
+        "timeMs": 0
+      },
+      "directionLock": {
+        "frame": 0,
+        "timeMs": 0,
+        "worldForward": [
+          1,
+          0
+        ],
+        "policy": "Latch combat aim independently of presentation once per attack"
+      },
+      "windupEnd": {
+        "frame": 5,
+        "timeMs": 460
+      },
+      "hitFrame": {
+        "frame": 7,
+        "timeMs": 650,
+        "guardKey": "attackInstanceId",
+        "dispatch": "once-per-instance"
+      },
+      "activeEnd": {
+        "frame": 8,
+        "timeMs": 800
+      },
+      "recoveryEnd": {
+        "frameExclusive": 12,
+        "timeMs": 1200
+      },
+      "damagePolicy": {
+        "maxApplicationsPerAttack": 1,
+        "notPerActiveFrame": true
+      },
+      "hitArea": {
+        "worldForward": [
+          1,
+          0
+        ],
+        "kind": "front-sector",
+        "radiusWorld": null,
+        "deriveFromSwordImage": false
+      },
+      "returnToLocomotion": {
+        "visualBlendWindowMs": [
+          1100,
+          1200
+        ],
+        "exitAllowedAfterMs": 1200
+      },
+      "presentation": "front",
+      "combatFacing": "east",
+      "status": "visual metadata, not connected to gameplay"
+    },
+    "loop": false,
+    "status": "candidate-for-manual-review"
+  },
+  "west-idle": {
+    "direction": "west",
+    "pose": "idle",
+    "presentation": "front-mirror",
+    "combatFacing": "west",
+    "worldForward": [
+      -1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "b414f77b76346644c019",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "91bc6392052c80b39cd3",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "90a894608e0d36ed9adc",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      }
+    ],
+    "durationsMs": [
+      450,
+      450,
+      450,
+      450
+    ],
+    "totalMs": 1800,
+    "previewFPS": 2.2222222222222223,
+    "strideWorld": null,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "west-walk": {
+    "direction": "west",
+    "pose": "walk",
+    "presentation": "front-mirror",
+    "combatFacing": "west",
+    "worldForward": [
+      -1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "58f15d5214cfa1016f1b",
+            "x": 78,
+            "y": 112
+          },
+          {
+            "texture": "83caa979e778b8ee9431",
+            "x": 36,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "88633da40500a1b9826d",
+            "x": 74,
+            "y": 113
+          },
+          {
+            "texture": "da587791c38d907eea74",
+            "x": 36,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "462719f264d575f69d8b",
+            "x": 71,
+            "y": 112
+          },
+          {
+            "texture": "4eaed8249c13e40d481d",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "0fe5ef078baea7d86cd6",
+            "x": 67,
+            "y": 111
+          },
+          {
+            "texture": "8be5987930ac2d2a2776",
+            "x": 38,
+            "y": 32
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "9f71d3423f49a73d5c80",
+            "x": 60,
+            "y": 112
+          },
+          {
+            "texture": "d4b6ec54176a218614fc",
+            "x": 38,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "4e276415b27a68bd3a84",
+            "x": 64,
+            "y": 113
+          },
+          {
+            "texture": "67219d84bf7dc280003d",
+            "x": 38,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "4df26465fd3bf956807f",
+            "x": 72,
+            "y": 112
+          },
+          {
+            "texture": "d1271f67fa79817e7f22",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "c203f666491de6c55f3b",
+            "x": 76,
+            "y": 111
+          },
+          {
+            "texture": "40f391aa072ecd35e1f0",
+            "x": 36,
+            "y": 32
+          }
+        ],
+        "flipX": true
+      }
+    ],
+    "durationsMs": [
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289
+    ],
+    "totalMs": 509.3130630630631,
+    "previewFPS": 15.70743140159639,
+    "strideWorld": 36.67054054054054,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "west-melee": {
+    "direction": "west",
+    "pose": "melee",
+    "presentation": "front-mirror",
+    "combatFacing": "west",
+    "worldForward": [
+      -1,
+      0
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "5fcdb9f8f7382ac16f32",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "b84303e511e43412f175",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "b483bfebf57a59154c81",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "c95de79b59d1b9dae37a",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "180d654fe4671812fd74",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "9103ba2e7eaa3439b85e",
+            "x": 37,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "a4e87e1b2a004fe53ae4",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "168f7315f052aefa9210",
+            "x": 44,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "6ed59343e7503fb890bf",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "6b94740decd54f8d1a35",
+            "x": 4,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "1c23aa866084d8f4b91b",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "18cc8bd5de2986b0f171",
+            "x": 6,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "6deaeea49049fb7434a2",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "87b45b1b183266d24b5f",
+            "x": 61,
+            "y": 5
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "23a6eb4ef24d3cbd49e8",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "96667aa6a76c36d8b3a9",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "f50b8c6a84ab677ec3af",
+            "x": 70,
+            "y": 128
+          },
+          {
+            "texture": "3ce3277b482b4f10b051",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "f2cc66fadf2218cb44cf",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "6e4a8158f0cf8462af21",
+            "x": 66,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "ff005b30322110f5be1f",
+            "x": 77,
+            "y": 128
+          },
+          {
+            "texture": "0ea47faa455f0c6982c3",
+            "x": 63,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      },
+      {
+        "layers": [
+          {
+            "texture": "59c65150e907c8e7e501",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "bee8d25f582d0279fdf1",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      }
+    ],
+    "durationsMs": [
+      80,
+      80,
+      90,
+      100,
+      110,
+      80,
+      110,
+      150,
+      100,
+      100,
+      100,
+      100
+    ],
+    "totalMs": 1200,
+    "previewFPS": 10,
+    "strideWorld": null,
+    "events": {
+      "attackStart": {
+        "frame": 0,
+        "timeMs": 0
+      },
+      "directionLock": {
+        "frame": 0,
+        "timeMs": 0,
+        "worldForward": [
+          -1,
+          0
+        ],
+        "policy": "Latch combat aim independently of presentation once per attack"
+      },
+      "windupEnd": {
+        "frame": 5,
+        "timeMs": 460
+      },
+      "hitFrame": {
+        "frame": 7,
+        "timeMs": 650,
+        "guardKey": "attackInstanceId",
+        "dispatch": "once-per-instance"
+      },
+      "activeEnd": {
+        "frame": 8,
+        "timeMs": 800
+      },
+      "recoveryEnd": {
+        "frameExclusive": 12,
+        "timeMs": 1200
+      },
+      "damagePolicy": {
+        "maxApplicationsPerAttack": 1,
+        "notPerActiveFrame": true
+      },
+      "hitArea": {
+        "worldForward": [
+          -1,
+          0
+        ],
+        "kind": "front-sector",
+        "radiusWorld": null,
+        "deriveFromSwordImage": false
+      },
+      "returnToLocomotion": {
+        "visualBlendWindowMs": [
+          1100,
+          1200
+        ],
+        "exitAllowedAfterMs": 1200
+      },
+      "presentation": "front-mirror",
+      "combatFacing": "west",
+      "status": "visual metadata, not connected to gameplay"
+    },
+    "loop": false,
+    "status": "candidate-for-manual-review"
+  },
+  "north-idle": {
+    "direction": "north",
+    "pose": "idle",
+    "presentation": "back",
+    "combatFacing": "north",
+    "worldForward": [
+      0,
+      -1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "07d4a5eba25b82e70234",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "d945e19e787c1b11d652",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      450,
+      450,
+      450,
+      450
+    ],
+    "totalMs": 1800,
+    "previewFPS": 2.2222222222222223,
+    "strideWorld": null,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "north-walk": {
+    "direction": "north",
+    "pose": "walk",
+    "presentation": "back",
+    "combatFacing": "north",
+    "worldForward": [
+      0,
+      -1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "a78eabc05dec3fa561cb",
+            "x": 59,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "35fc4b9b3c8ef24ebe91",
+            "x": 59,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "dd9272d31880bc7337d1",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "17263d0131511ade22d5",
+            "x": 61,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "279780f1358193b29ac9",
+            "x": 61,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "dc5206f0a41a387ca2e3",
+            "x": 61,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "ca7aeecf17cd8579f0c1",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "873709f4e1321f334523",
+            "x": 59,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289,
+      63.66413288288289
+    ],
+    "totalMs": 509.3130630630631,
+    "previewFPS": 15.70743140159639,
+    "strideWorld": 36.67054054054054,
+    "events": null,
+    "loop": true,
+    "status": "candidate-for-manual-review"
+  },
+  "north-melee": {
+    "direction": "north",
+    "pose": "melee",
+    "presentation": "back",
+    "combatFacing": "north",
+    "worldForward": [
+      0,
+      -1
+    ],
+    "frames": [
+      {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "528f5ca331d749360bdc",
+            "x": 61,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "bdd2a18c48e152dc725c",
+            "x": 31,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "4a2f3976aab26ce824eb",
+            "x": 13,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "11c52e83aaf7d5a31d33",
+            "x": 20,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "b07239a9da61eaecada8",
+            "x": 19,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "fd3fa03a21880c71a937",
+            "x": 13,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "27a262854e3bf3f8a991",
+            "x": 41,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "587de6d3aa26ebcceaaf",
+            "x": 64,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "2a0b1089cf7e94150295",
+            "x": 63,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "e478b2e32aeb74c939d2",
+            "x": 61,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      },
+      {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    ],
+    "durationsMs": [
+      80,
+      80,
+      90,
+      100,
+      110,
+      80,
+      110,
+      150,
+      100,
+      100,
+      100,
+      100
+    ],
+    "totalMs": 1200,
+    "previewFPS": 10,
+    "strideWorld": null,
+    "events": {
+      "attackStart": {
+        "frame": 0,
+        "timeMs": 0
+      },
+      "directionLock": {
+        "frame": 0,
+        "timeMs": 0,
+        "worldForward": [
+          0,
+          -1
+        ],
+        "policy": "Latch combat aim independently of presentation once per attack"
+      },
+      "windupEnd": {
+        "frame": 6,
+        "timeMs": 540
+      },
+      "hitFrame": {
+        "frame": 7,
+        "timeMs": 650,
+        "guardKey": "attackInstanceId",
+        "dispatch": "once-per-instance"
+      },
+      "activeEnd": {
+        "frame": 8,
+        "timeMs": 800
+      },
+      "recoveryEnd": {
+        "frameExclusive": 12,
+        "timeMs": 1200
+      },
+      "damagePolicy": {
+        "maxApplicationsPerAttack": 1,
+        "notPerActiveFrame": true
+      },
+      "hitArea": {
+        "worldForward": [
+          0,
+          -1
+        ],
+        "kind": "front-sector",
+        "radiusWorld": null,
+        "deriveFromSwordImage": false
+      },
+      "returnToLocomotion": {
+        "visualBlendWindowMs": [
+          1100,
+          1200
+        ],
+        "exitAllowedAfterMs": 1200
+      },
+      "presentation": "back",
+      "combatFacing": "north",
+      "status": "visual metadata, not connected to gameplay"
+    },
+    "loop": false,
+    "status": "candidate-for-manual-review"
+  }
+}

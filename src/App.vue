@@ -6,6 +6,7 @@ import { snapshots, commands, metrics, gamepadUi, gamepadNotices, inputDevices, 
 import type { Snapshot } from './game/systems/World';
 import { loadProfile, saveProfile, withRun, runRecord, type Settings } from './game/services/storage';
 import LevelUpModal from './ui/components/LevelUpModal.vue';
+import FinalBossBar from './ui/components/FinalBossBar.vue';
 import BossBars from './ui/components/BossBars.vue';
 import MainMenu from './ui/components/MainMenu.vue';
 import SettingsPanel from './ui/components/SettingsPanel.vue';
@@ -58,17 +59,26 @@ const offPadUi = gamepadUi.on(({ scope, action }) => {
 let game: ReturnType<typeof createGame> | undefined;
 let offUpgradeSpace: (() => void) | undefined;
 let recordedId = '';
+const resultsVisible=ref(false);
 const off = snapshots.on(value => {
   state.value = value;
-  if (value.status === 'over' && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; profile.value = withRun(profile.value, runRecord(value)); storageFailed.value = !saveProfile(profile.value); }
+  if(value.status!=='over'){resultsVisible.value=false;}
+  else resultsVisible.value=true;
+  // Latch/save victory at the fatal hit; show results only after World completes Death A.
+  if ((value.status === 'over'||value.outcome==='victory') && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; if(!value.practice){profile.value = withRun(profile.value, runRecord(value)); storageFailed.value = !saveProfile(profile.value);} }
 });
-function start() {
+function start(){startRun(false);}
+function startBossPractice(){startRun(true);}
+function restartCurrent(){if(state.value?.practice)startBossPractice();else start();}
+function startRun(practice:boolean) {
   const current = mobileViewport();
   if (current.blocked) return;
   if (current.touch && inputDevice.value !== 'gamepad') fullscreen.enter(document.documentElement);
   character.value = PUBLIC_CHARACTER;
+  if(practice)biome.value='grove';
+  storageFailed.value=false;
   screen.value = 'game';
-  commands.emit({ type: 'restart', character: PUBLIC_CHARACTER, biome: biome.value });
+  commands.emit({ type: practice?'boss-practice':'restart', character: PUBLIC_CHARACTER, biome: biome.value });
 }
 function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value); commands.emit({ type: 'settings', value }); }
 function openSettings() { commands.emit({ type: 'pause' }); screen.value = 'settings'; }
@@ -76,7 +86,7 @@ function key(event: KeyboardEvent) {
   if (screen.value !== 'game' || event.repeat) return;
   if (event.key === 'Escape' || event.key.toLowerCase() === 'p') { event.preventDefault(); if (state.value?.status === 'playing') commands.emit({ type: 'pause' }); else if (state.value?.status === 'paused') commands.emit({ type: 'resume' }); }
 }
-onMounted(() => { offUpgradeSpace = installUpgradeSpaceGuard(window, () => state.value?.status === 'upgrade'); if (mount.value) game = createGame(mount.value, settings.value); window.addEventListener('keydown', key); });
+onMounted(() => { offUpgradeSpace = installUpgradeSpaceGuard(window, () => state.value?.status === 'upgrade' || state.value?.status === 'over'); if (mount.value) game = createGame(mount.value, settings.value); window.addEventListener('keydown', key); });
 onMounted(() => { window.addEventListener('resize', resizeViewport); document.addEventListener('fullscreenchange', resizeViewport); window.screen.orientation?.addEventListener('change', resizeViewport); window.visualViewport?.addEventListener('resize', resizeViewport); });
 onUnmounted(() => { fullscreen.destroy(); window.removeEventListener('resize', resizeViewport); document.removeEventListener('fullscreenchange', resizeViewport); window.screen.orientation?.removeEventListener('change', resizeViewport); window.visualViewport?.removeEventListener('resize', resizeViewport); });
 onUnmounted(() => { off(); offMetrics(); offDevice(); offNotice(); offPadUi(); clearTimeout(noticeTimer); offUpgradeSpace?.(); window.removeEventListener('keydown', key); game?.destroy(true); });
@@ -88,14 +98,14 @@ onUnmounted(() => { off(); offMetrics(); offDevice(); offNotice(); offPadUi(); c
   <div ref="mount" class="game-mount"></div><div class="vignette"></div>
   <div v-if="controllerNotice" class="controller-notice" role="status">{{ controllerNotice }}</div>
   <div v-if="debug && debugState" class="debug-hud">FPS {{ debugState.fps.toFixed(1) }} · update {{ debugState.updateMs.toFixed(2) }}ms<br>mobs {{ debugState.enemies }} / bullets {{ debugState.projectiles }} / XP {{ debugState.orbs }} / bosses {{ debugState.bosses }}<br>chunks {{ debugState.chunks }} / sprites {{ debugState.sprites }} + {{ debugState.pooledSprites }} pooled</div>
-  <MainMenu v-if="state?.status === 'menu'" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" @character="chooseCharacter" @biome="chooseBiome" @play="start" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" />
+  <MainMenu v-if="state?.status === 'menu'" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" />
   <template v-if="state && state.status !== 'menu'">
    <UltimateControl :state="state" @activate="commands.emit({ type: 'ultimate' })" />
-   <GameHUD :state="state" @pause="commands.emit({ type: 'pause' })" /><BossBars :bosses="state.bosses" />
+   <GameHUD :state="state" @pause="commands.emit({ type: 'pause' })" /><BossBars v-if="state.finalEncounter.phase==='inactive'" :bosses="state.bosses" /><FinalBossBar v-else :state="state" />
    <VirtualJoystick v-if="state.status === 'playing' || state.status === 'upgrade'" @move="commands.emit({ type: 'move', input: $event })" />
    <LevelUpModal v-if="state.status === 'upgrade'" :choices="state.choices" :level="state.level - state.pending + 1" :offer="state.offerId" @choose="(id, offer) => commands.emit({ type: 'upgrade', id, offer })" />
    <DialogFrame v-if="state.status === 'paused' && screen === 'game'" label="Пауза" @close="commands.emit({ type: 'resume' })"><small>ЧАЩА ПОДОЖДЁТ</small><h1>Пауза</h1><p>Переведи дух. Твоя магия никуда не исчезнет.</p><div class="button-stack"><button v-pad="() => commands.emit({ type: 'resume' })" @click="commands.emit({ type: 'resume' })">Продолжить →</button><button class="secondary" v-pad="openSettings" @click="openSettings">Настройки</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
-   <DialogFrame v-if="state.status === 'over'" label="Игра окончена"><small>{{state.outcome==='victory'?'20:00 · ЛЕС ПРОЙДЕН':'ПОСЛЕДНЯЯ ИСКРА'}}</small><h1 v-if="state.outcome==='victory'">Победа!</h1><h1 v-else>Чаща сильнее.<br>Пока.</h1><button v-if="state.outcome==='victory'" class="victory-restart" v-pad="start" @click="start">Начать заново</button><p>Время {{ formatTime(state.elapsed) }} · Уровень {{ state.level }} · Убийства {{ state.kills }}</p><h2 class="result-score">{{ state.score.toLocaleString('ru-RU') }} <small>ОЧКОВ</small></h2><p class="previous-best">Предыдущий рекорд: {{ previousBest }} <b v-if="state.score > previousBest">· Новый рекорд!</b></p><div class="run-build"><span v-for="ability in state.abilities.filter(a => a.level > 0)" :key="ability.id">{{ ability.icon }} {{ ability.name }} {{ ability.level }}</span></div><p class="muted">Ростки {{ state.killsByKind.grunt }} · Бегуны {{ state.killsByKind.runner }} · Големы {{ state.killsByKind.tank }} · Стрелки {{ state.killsByKind.caster }} · Боссы {{ state.bossKills }}</p><RunStatistics :state="state" /><LocalRecords :records="profile.records.slice(0, 3)" /><p v-if="storageFailed" class="muted">Хранилище браузера недоступно. Результат доступен до закрытия вкладки.</p><div class="button-stack"><button v-if="state.outcome!=='victory'" v-pad="start" @click="start">Начать заново</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
+   <DialogFrame v-if="state.status === 'over' && resultsVisible" label="Игра окончена"><p v-if="state.practice" class="muted">Тренировка · результат не записывается в рекорды.</p><small>{{state.outcome==='victory'?'СТРАЖ ПОВЕРЖЕН':'ПОСЛЕДНЯЯ ИСКРА'}}</small><h1 v-if="state.outcome==='victory'">Победа!</h1><h1 v-else>Чаща сильнее.<br>Пока.</h1><button v-if="state.outcome==='victory'" class="victory-restart" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><p>Время {{ formatTime(state.elapsed) }} · Уровень {{ state.level }} · Убийства {{ state.kills }}</p><h2 class="result-score">{{ state.score.toLocaleString('ru-RU') }} <small>ОЧКОВ</small></h2><p v-if="!state.practice" class="previous-best">Предыдущий рекорд: {{ previousBest }} <b v-if="state.score > previousBest">· Новый рекорд!</b></p><div class="run-build"><span v-for="ability in state.abilities.filter(a => a.level > 0)" :key="ability.id">{{ ability.icon }} {{ ability.name }} {{ ability.level }}</span></div><p class="muted">Ростки {{ state.killsByKind.grunt }} · Бегуны {{ state.killsByKind.runner }} · Големы {{ state.killsByKind.tank }} · Стрелки {{ state.killsByKind.caster }} · Боссы {{ state.bossKills }}</p><RunStatistics :state="state" /><LocalRecords v-if="!state.practice" :records="profile.records.slice(0, 3)" /><p v-if="storageFailed" class="muted">Хранилище браузера недоступно. Результат доступен до закрытия вкладки.</p><div class="button-stack"><button v-if="state.outcome!=='victory'" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
   </template>
   <SettingsPanel v-if="screen === 'settings'" :settings="settings" @change="updateSettings" @close="screen = 'game'" />
   <DialogFrame v-if="screen === 'records'" label="Локальные рекорды" @close="screen = 'game'"><small>ТВОЯ ИСТОРИЯ В ЭТОЙ ЧАЩЕ</small><h1>Личные рекорды</h1><LocalRecords :records="profile.records" /><p class="muted">Забегов: {{ profile.statistics.runs }} · Убийств: {{ profile.statistics.kills }}. Данные хранятся локально в этом браузере.</p><button v-pad="() => screen = 'game'" @click="screen = 'game'">Назад</button></DialogFrame>
@@ -108,8 +118,9 @@ onUnmounted(() => { off(); offMetrics(); offDevice(); offNotice(); offPadUi(); c
     <li><b>Используй Blink.</b> Space или X (Square). Esc / P / Start (Options) — пауза. B (Circle) не назначена.</li>
     <li><b>Guardian активен сразу.</b> Первый — на 4:00, неподвижен, отмечен звездой. Уклоняйся от медленных и быстрых самонаводящихся сфер. За полную волну — один артефакт; уход из зоны прерывает награду.</li>
     <li><b>Следи за планом.</b> Enrage — с 10:00, события каждые 30с. С 15:00 — Phase II и запрос трёх боссов за окно. Лимит: 3 босса и 3 Guardian; занятые слоты пропускаются.</li>
+    <li><b>20:00 — финальный Страж.</b> Победа приходит после его смерти. Уклоняйся от рывка и сектора меча; на 70% HP разрушь три опоры щита, на 30% следи за двумя группами небесных метеоритов. Лучи щита безопасны, ритуальные Guardian не выдают артефактов.</li>
    </ol>
-   <p class="help-footer">Забег бесконечный. Рекорды хранятся только в этом браузере.</p>
+   <p class="help-footer">Продержись до 20:00 и победи финального Стража. Рекорды хранятся только в этом браузере.</p>
    <button v-pad="() => screen = 'game'" @click="screen = 'game'">Понятно</button>
   </DialogFrame>
   </div>

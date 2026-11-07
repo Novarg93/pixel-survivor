@@ -13,6 +13,7 @@ export class GuardianAnimation {
   frame(e: Enemy, w: World) {
     const state = this.previous.get(e.id); if (!state) return guardianFrame('idle', w.elapsed);
     if (e.hitUntil > state.hit && e.hitUntil > w.elapsed) { state.hit = e.hitUntil; state.hurt = w.elapsed; }
+    if(e.finalRole){const s=w.finalEncounter.supports.get(e.id);if(s?.warning)return guardianFrame('cast',Math.max(0,.65-(s.next-s.clock)));if(w.elapsed-e.shootingAt<.25)return guardianFrame('release',w.elapsed-e.shootingAt);return guardianFrame('idle',s?.clock??0);}
     const encounter = w.guardianSystem.encounters.get(e.id), phase = encounter?.phase ?? '';
     if (state.phase === 'orb-warning' && phase === 'orbs') state.release = w.elapsed;
     state.phase = phase;

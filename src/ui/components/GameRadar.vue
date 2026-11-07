@@ -5,7 +5,7 @@ import type { RadarFrame, RadarKind } from '../../game/radar/radar';
 import { RADAR_BALANCE } from '../../game/config/gameBalance';
 const frame = shallowRef<RadarFrame | null>(null);
 const off = radarFrames.on(value => { frame.value = value; }); onUnmounted(off);
-const colors: Record<RadarKind, string> = { enemy: '#a8c5b3', elite: '#ff927e', charger: '#ffc38a', sorcerer: '#c0a1ff', eclipse: '#89e4eb', guardian: '#ffda78', healing: '#8de2a1', haste: '#ffcf65', fury: '#ff7589', magnet: '#75dcf0', artifact: '#ffe1a1', chest: '#cda060' };
+const colors: Record<RadarKind, string> = { enemy: '#a8c5b3', elite: '#ff927e', charger: '#ffc38a', sorcerer: '#c0a1ff', eclipse: '#89e4eb', ashGuard:'#e4e5cc', guardian: '#ffda78', healing: '#8de2a1', haste: '#ffcf65', fury: '#ff7589', magnet: '#75dcf0', artifact: '#ffe1a1', chest: '#cda060' };
 const angle = () => frame.value ? Math.atan2(frame.value.facing.y, frame.value.facing.x) * 180 / Math.PI + 90 : 0;
 </script>
 
@@ -17,7 +17,8 @@ const angle = () => frame.value ? Math.atan2(frame.value.facing.y, frame.value.f
       <circle cx="90" cy="90" r="43" fill="none" stroke="#708b6e" stroke-opacity=".28" stroke-dasharray="2 6" />
       <path d="M90 9V171M9 90H171" stroke="#708b6e" stroke-opacity=".22" />
       <g v-for="m in frame.markers" :key="m.id" :data-marker="m.kind" :data-entity="m.id" :transform="`translate(${90 + m.x * 80} ${90 + m.y * 80})`" :fill="colors[m.kind]" stroke="#12272e" stroke-width="1">
-        <path v-if="m.kind === 'guardian'" d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" />
+        <path v-if="m.kind === 'ashGuard'" d="M-1 -7H2V3H5V5H2V8H-1V5H-4V3H-1Z" />
+        <path v-else-if="m.kind === 'guardian'" d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" />
         <path v-else-if="m.kind === 'artifact' || m.kind === 'sorcerer'" d="M0 -5L5 0L0 5L-5 0Z" />
         <path v-else-if="m.kind === 'charger'" d="M0 -5L5 4L-5 4Z" />
         <circle v-else-if="m.kind === 'eclipse'" r="4.5" fill="none" :stroke="colors[m.kind]" stroke-width="2" />

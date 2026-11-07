@@ -1,4 +1,4 @@
-import type { BossKind } from './enemyDefinitions';
+import type { ScheduledBossKind as BossKind } from './enemyDefinitions';
 import { enrageAt, SURVIVAL_ENRAGE as E } from './survivalEnrage';
 export const ENCOUNTER_DIRECTOR = {
   firstMinute: 3, interval: 60, historyCap: 32, noticeDuration: 5,

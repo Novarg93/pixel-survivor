@@ -26,7 +26,8 @@ export class AudioPresentation {
       else if (event.source === 'cleave') add('cleave.impact');
     }
     for (const cue of w.sounds.splice(0)) {
-      if(cue==='ultimate-charge')add('ultimate.charge');
+      if(cue.startsWith('final-'))add(('final.'+cue.slice(6)) as SoundEvent);
+      else if(cue==='ultimate-charge')add('ultimate.charge');
       else if(cue==='ultimate-sky'){this.audio.stopEvent('ultimate.charge');add('ultimate.sky');}
       else if(cue==='ultimate-overload')add('ultimate.overload');
       else if(cue==='ultimate-lightning')add('ultimate.lightning');
