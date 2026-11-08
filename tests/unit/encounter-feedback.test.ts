@@ -27,12 +27,12 @@ it('charge arrival and teleport departures/releases are observed once and bounde
   fx.prepare(new World()); expect(fx.diagnostics()).toMatchObject({ tracked: 0, active: 0 });
 });
 
-it('Guardian reads actual warning/release, preserves hit reaction and gives its existing reward immediately', () => {
+it('Guardian reads actual warning/release, keeps casting through hits and gives its existing reward immediately', () => {
   const w = new World(), e = w.spawn('guardian', { x: 60, y: 0 })!, a = new GuardianAnimation();
   w.guardianSystem.awaken(w, e); a.prepare(w); const state = w.guardianSystem.encounters.get(e.id)!;
   state.phase = 'orb-warning'; state.until = w.elapsed + .2; const before = JSON.stringify(w);
   expect(a.frame(e, w)).toContain('guardian-cast-'); expect(JSON.stringify(w)).toBe(before);
-  state.phase = 'orbs'; expect(a.frame(e, w)).toBe('guardian-release-0');
-  w.damageEnemy(e, 1); expect(a.frame(e, w)).toBe('guardian-hurt-0');
+  state.phase = 'orbs'; state.orbIndex=1; expect(a.frame(e, w)).toBe('guardian-cast-6');
+  w.damageEnemy(e, 1); expect(a.frame(e, w)).toBe('guardian-cast-6');
   w.damageEnemy(e, 999999); a.finish(w); expect(a.corpses).toHaveLength(1); expect(w.artifacts.snapshot()).toHaveLength(1); expect(w.buffs.snapshot(w.elapsed)).toHaveLength(0);
 });

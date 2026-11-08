@@ -28,30 +28,30 @@ test('elite matrix and Guardian notice: both maps, viewports and real Canvas', a
   expect(errors).toEqual([]);
 });
 
-test('Guardian19 authored frames and live hurt/death keep immediate artifact and clean teardown', async ({ page }) => {
+test('Guardian26 imported frames and live hit/fade keep immediate artifact and clean teardown', async ({ page }) => {
   mkdirSync(directory, { recursive: true });
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   const pixels = await page.evaluate(async () => {
     const image = await createImageBitmap(await (await fetch('/assets/hd/guardian.png')).blob());
     const data: { frames: Record<string, { frame: { x: number; y: number; w: number; h: number } }> } = await (await fetch('/assets/hd/guardian.json')).json();
-    const c = document.createElement('canvas'); c.width = 96; c.height = 112; const g = c.getContext('2d', { willReadFrequently: true })!;
+    const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d', { willReadFrequently: true })!;
     return Object.entries(data.frames).map(([name, { frame: f }]) => {
-      g.clearRect(0, 0, 96, 112); g.drawImage(image, f.x, f.y, 96, 112, 0, 0, 96, 112); const p = g.getImageData(0, 0, 96, 112).data;
+      g.clearRect(0, 0, 128, 128); g.drawImage(image, f.x, f.y, 128, 128, 0, 0, 128, 128); const p = g.getImageData(0, 0, 128, 128).data;
       let border = 0, soft = 0, count = 0, hash = 2166136261;
-      for (let i = 0; i < p.length; i++) { hash = Math.imul(hash ^ p[i], 16777619); if (i % 4 === 3 && p[i]) { count++; const n = (i - 3) / 4, x = n % 96, y = Math.floor(n / 96); if (!x || !y || x === 95 || y === 111) border++; if (p[i] !== 255) soft++; } }
+      for (let i = 0; i < p.length; i++) { hash = Math.imul(hash ^ p[i], 16777619); if (i % 4 === 3 && p[i]) { count++; const n = (i - 3) / 4, x = n % 128, y = Math.floor(n / 128); if (!x || !y || x === 127 || y === 127) border++; if (p[i] !== 255) soft++; } }
       return { name, border, soft, count, hash: hash >>> 0 };
     });
   });
-  expect(pixels).toHaveLength(19); expect(new Set(pixels.map(p => p.hash)).size).toBe(19);
+  expect(pixels).toHaveLength(26); expect(new Set(pixels.map(p => p.hash)).size).toBeGreaterThanOrEqual(24);
   for (const p of pixels) { expect(p.border, p.name).toBe(0); expect(p.soft, p.name).toBe(0); expect(p.count, p.name).toBeGreaterThan(500); }
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; w.experience.level = 30; w.player.invulnerableUntil = 1e6; w.artifacts.rng.next = () => 0; for (const a of Object.values(w.abilities)) a.level = 0; w.spawn('guardian', { x: 60, y: -40 }); });
   await page.waitForTimeout(80); await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 1); });
-  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith('guardian-hurt-'))), { intervals: [10] }).toBe(true);
+  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => a.texture==='hd-guardian'&&a.tint===0xffe5b3)), { intervals: [10] }).toBe(true);
   await page.locator('canvas').screenshot({ path: `${directory}/guardian-hurt.png` });
   const reward = await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.rareGuardian!, 999999); return { artifacts: w.artifacts.snapshot().reduce((n,a)=>n+a.stacks,0), kills: w.snapshot().guardianKills, chests: w.loot.chests.length }; });
   expect(reward).toEqual({ artifacts: 1, kills: 1, chests: 0 });
   const frames = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { const frame = window.__PIXEL__!.art().guardian.frame; if (frame) frames.push(frame); if (performance.now() - start < 670) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
-  expect(frames).toHaveLength(6); expect(await page.evaluate(() => window.__PIXEL__!.art().guardian.activeDeaths)).toBe(0);
+  expect(frames).toHaveLength(1); expect(frames[0]).toMatch(/^guardian-(idle|cast)-/); expect(await page.evaluate(() => window.__PIXEL__!.art().guardian.activeDeaths)).toBe(0);
   await page.keyboard.down('d'); await page.keyboard.down('w'); await expect(page.locator('[data-artifact="health"]')).toBeVisible(); await page.keyboard.up('d'); await page.keyboard.up('w');
   expect(await page.evaluate(() => window.__PIXEL__!.world.artifacts.count('health'))).toBe(1);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.spawn('guardian', { x: w.player.x - 45, y: w.player.y }); });

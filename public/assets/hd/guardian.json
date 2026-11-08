@@ -4,221 +4,529 @@
       "frame": {
         "x": 2,
         "y": 2,
-        "w": 96,
-        "h": 112
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-idle-1": {
       "frame": {
-        "x": 102,
+        "x": 134,
         "y": 2,
-        "w": 96,
-        "h": 112
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-idle-2": {
       "frame": {
-        "x": 202,
+        "x": 266,
         "y": 2,
-        "w": 96,
-        "h": 112
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-3": {
+      "frame": {
+        "x": 398,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-4": {
+      "frame": {
+        "x": 530,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-5": {
+      "frame": {
+        "x": 662,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-6": {
+      "frame": {
+        "x": 794,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-7": {
+      "frame": {
+        "x": 926,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-8": {
+      "frame": {
+        "x": 2,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-9": {
+      "frame": {
+        "x": 134,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-10": {
+      "frame": {
+        "x": 266,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-11": {
+      "frame": {
+        "x": 398,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-idle-12": {
+      "frame": {
+        "x": 530,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-cast-0": {
       "frame": {
-        "x": 302,
-        "y": 2,
-        "w": 96,
-        "h": 112
+        "x": 662,
+        "y": 134,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-cast-1": {
       "frame": {
-        "x": 402,
-        "y": 2,
-        "w": 96,
-        "h": 112
+        "x": 794,
+        "y": 134,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-cast-2": {
       "frame": {
-        "x": 2,
-        "y": 118,
-        "w": 96,
-        "h": 112
+        "x": 926,
+        "y": 134,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
     "guardian-cast-3": {
       "frame": {
-        "x": 102,
-        "y": 118,
-        "w": 96,
-        "h": 112
+        "x": 2,
+        "y": 266,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
-    "guardian-release-0": {
+    "guardian-cast-4": {
       "frame": {
-        "x": 202,
-        "y": 118,
-        "w": 96,
-        "h": 112
+        "x": 134,
+        "y": 266,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
-    "guardian-release-1": {
+    "guardian-cast-5": {
       "frame": {
-        "x": 302,
-        "y": 118,
-        "w": 96,
-        "h": 112
+        "x": 266,
+        "y": 266,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
-    "guardian-release-2": {
+    "guardian-cast-6": {
       "frame": {
-        "x": 402,
-        "y": 118,
-        "w": 96,
-        "h": 112
+        "x": 398,
+        "y": 266,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
-    "guardian-hurt-0": {
+    "guardian-cast-7": {
+      "frame": {
+        "x": 530,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-cast-8": {
+      "frame": {
+        "x": 662,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-cast-9": {
+      "frame": {
+        "x": 794,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-cast-10": {
+      "frame": {
+        "x": 926,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
+    },
+    "guardian-cast-11": {
       "frame": {
         "x": 2,
-        "y": 234,
-        "w": 96,
-        "h": 112
+        "y": 398,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     },
-    "guardian-hurt-1": {
+    "guardian-cast-12": {
       "frame": {
-        "x": 102,
-        "y": 234,
-        "w": 96,
-        "h": 112
+        "x": 134,
+        "y": 398,
+        "w": 128,
+        "h": 128
       },
       "rotated": false,
-      "trimmed": false
-    },
-    "guardian-hurt-2": {
-      "frame": {
-        "x": 202,
-        "y": 234,
-        "w": 96,
-        "h": 112
+      "trimmed": false,
+      "sourceSize": {
+        "w": 128,
+        "h": 128
       },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-0": {
-      "frame": {
-        "x": 302,
-        "y": 234,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-1": {
-      "frame": {
-        "x": 402,
-        "y": 234,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-2": {
-      "frame": {
-        "x": 2,
-        "y": 350,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-3": {
-      "frame": {
-        "x": 102,
-        "y": 350,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-4": {
-      "frame": {
-        "x": 202,
-        "y": 350,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
-    },
-    "guardian-death-5": {
-      "frame": {
-        "x": 302,
-        "y": 350,
-        "w": 96,
-        "h": 112
-      },
-      "rotated": false,
-      "trimmed": false
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      }
     }
   },
   "meta": {
     "image": "guardian.png",
     "size": {
-      "w": 502,
-      "h": 466
+      "w": 1056,
+      "h": 528
     },
-    "clips": {
-      "idle": {
-        "frames": 3,
-        "fps": 3
-      },
-      "cast": {
-        "frames": 4,
-        "fps": 8
-      },
-      "release": {
-        "frames": 3,
-        "fps": 12
-      },
-      "hurt": {
-        "frames": 3,
-        "fps": 14
-      },
-      "death": {
-        "frames": 6,
-        "fps": 10
-      }
-    },
-    "authoring": "scripts/guardian-art-source.mjs"
+    "authoring": "scripts/build-rootbound-guardian.mjs"
   }
 }

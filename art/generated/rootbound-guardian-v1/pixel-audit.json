@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "model": "Rootbound Arcane Totem",
+  "width": 1056,
+  "height": 528,
+  "canvas": 128,
+  "columns": 8,
+  "cell": 132,
+  "padding": 2,
+  "rgbaBytes": 2230272,
+  "frameCount": 26,
+  "pivot": [
+    64,
+    64
+  ],
+  "releaseFrame": 6,
+  "sources": {
+    "art/guardian/idle/pixellab-make-cracklight-lightninh-for--1794146212900.png": "b90b2b93b3b8a33bcb9378736c08698ec76677628b8c4f7194bde9ecc915f228",
+    "art/guardian/idle/pixellab-make-cracklight-lightninh-for--1794146212900.gif": "850d671d9c9619d64773e53ba007ca6683805233e70505462bd9830d6a5a323a",
+    "art/guardian/cast/pixellab-make-energy-gathering-around-c-1794146274171.png": "07e20f7b5be1f00a4f99b610f677f666e7d83a791d6cecadec1c5fd7712ce48c",
+    "art/guardian/cast/pixellab-make-energy-gathering-around-c-1794146274171.gif": "2fe9a29bd0a17f6b73b7840977c00b02fa64ca65cc8de6da5d99d487ba095cbb"
+  },
+  "clips": {
+    "idle": {
+      "sheet": "art/guardian/idle/pixellab-make-cracklight-lightninh-for--1794146212900.png",
+      "gif": "art/guardian/idle/pixellab-make-cracklight-lightninh-for--1794146212900.gif",
+      "frameCount": 13,
+      "durationsMs": [
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130
+      ],
+      "sourceColumns": 4,
+      "unusedCells": [
+        0,
+        0,
+        0
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2296,
+          "visible": 4971,
+          "border": 0,
+          "pixelSHA256": "d8ea67da077134a025d714f69e994b3dddfb7b12ee619967a927230676579237"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2327,
+          "visible": 4972,
+          "border": 0,
+          "pixelSHA256": "4f3a3b2689e5f7cdc2a170b6e1644dc0d54315efb13bc3c3e425cdd6e6f4b730"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2327,
+          "visible": 4970,
+          "border": 0,
+          "pixelSHA256": "78d579b375782ec1968589dc4086f3c331f611ff977c1a69ba8d11adc4e5c3a3"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2341,
+          "visible": 4973,
+          "border": 0,
+          "pixelSHA256": "de46d5841fb29ce3a158cd367f401378f72ac45ca6379487c0b1216ab96338ba"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2324,
+          "visible": 4972,
+          "border": 0,
+          "pixelSHA256": "e9abb846c17f50f67322776355a04883bddf527e17150f2bb23f514eb9922c94"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2338,
+          "visible": 4969,
+          "border": 0,
+          "pixelSHA256": "bac0e68c7eddaa22692bd3c45c2dce0b064b73da4e5da637855be154b0480417"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2355,
+          "visible": 4950,
+          "border": 0,
+          "pixelSHA256": "eaa27182c66e64a76ef3cb8ea54b3390fbffa2857cd5b3c7ecedec3f8bdf5c4e"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2325,
+          "visible": 4965,
+          "border": 0,
+          "pixelSHA256": "ebb07a9a23d2bd38c59b9b6ccbb40ca35f3ca3d60c94639cf27c3e3d6d804c1a"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2327,
+          "visible": 4969,
+          "border": 0,
+          "pixelSHA256": "325b733b51cd563e8782a0a35ae1ab002d62635f278a00b7008bbd3ce35a5ba3"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2331,
+          "visible": 4971,
+          "border": 0,
+          "pixelSHA256": "0aae05b257ba30a5a93fee6661ba3afd87aef92cc1b71304ad5258b7b3802076"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2328,
+          "visible": 4973,
+          "border": 0,
+          "pixelSHA256": "3c3d9de30fde5eeb9d849df0f262ebcb359b7b9b14e1598173e7ccc4fd8f352b"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2327,
+          "visible": 4972,
+          "border": 0,
+          "pixelSHA256": "1015a167e1c44392d453a4ca4d82f11e46b45ed0d90d4e744d8f761c1ce4dee1"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2325,
+          "visible": 4970,
+          "border": 0,
+          "pixelSHA256": "4fc77973b97aef8378ab5f957cc27ffcad4c8d7bbd185ae583b160d837122663"
+        }
+      ]
+    },
+    "cast": {
+      "sheet": "art/guardian/cast/pixellab-make-energy-gathering-around-c-1794146274171.png",
+      "gif": "art/guardian/cast/pixellab-make-energy-gathering-around-c-1794146274171.gif",
+      "frameCount": 13,
+      "durationsMs": [
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130
+      ],
+      "sourceColumns": 4,
+      "unusedCells": [
+        0,
+        0,
+        0
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2296,
+          "visible": 4971,
+          "border": 0,
+          "pixelSHA256": "d8ea67da077134a025d714f69e994b3dddfb7b12ee619967a927230676579237"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2377,
+          "visible": 5091,
+          "border": 0,
+          "pixelSHA256": "1a10b54d373992a5e74795061564fb7b3f5123eecd6c5cb5a6b3895cf4cd8d10"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2388,
+          "visible": 5165,
+          "border": 0,
+          "pixelSHA256": "d9ae2459590a26121bbb8ae6a4a5f8512d8d1ea0e93eb0cf07b8231518205d90"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2526,
+          "visible": 5190,
+          "border": 0,
+          "pixelSHA256": "bd28e23b991509a58c2931e3cf2349c54ac884479028872af8cbde45baf65e65"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2615,
+          "visible": 5520,
+          "border": 0,
+          "pixelSHA256": "94dc71c71c644d05495c5c091b02a66435eeb03bb547fd8f17cd3086b0d8c5fa"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2649,
+          "visible": 5464,
+          "border": 0,
+          "pixelSHA256": "0569969e307f17b15d32fa6404f4cddb12aed089d919496bf735af3729145425"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2554,
+          "visible": 5078,
+          "border": 0,
+          "pixelSHA256": "95963402c4208960416a423a05886c1040c78ba940192625b6cfdfb0f10bb4c7"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2541,
+          "visible": 5057,
+          "border": 0,
+          "pixelSHA256": "37bdcd1dd1224988e8153e4c6f4a4d2a3b14d776311e06e15eb6d04d66833a68"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2490,
+          "visible": 5119,
+          "border": 0,
+          "pixelSHA256": "0f7a8f69a62cd09330e67a444f5b19771d9b85bcee893662eda0d7a92a793c82"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2456,
+          "visible": 5274,
+          "border": 0,
+          "pixelSHA256": "89388d7fdc0ce674b70c323559f4cd4d54b9ba3901ddeb96142e3665f7199948"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2397,
+          "visible": 5105,
+          "border": 0,
+          "pixelSHA256": "d18e8705c568d84b6967dd7ea7e5d64b29fc304aaf6cd8aab90f2f6f08927171"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2243,
+          "visible": 4961,
+          "border": 0,
+          "pixelSHA256": "d08cd60b4de44e2931cace4766c0531c8182afae2dee9c6dcff83c50861ba931"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 130,
+          "alphaDifferences": 0,
+          "colorDifferences": 2314,
+          "visible": 4971,
+          "border": 0,
+          "pixelSHA256": "c44377fd5354ca17e112fc421e7661d6c1de254d1f89b7ff7943204b1b93dafe"
+        }
+      ]
+    }
+  }
+}

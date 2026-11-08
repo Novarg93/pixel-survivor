@@ -9,10 +9,11 @@ test('built main menu starts the real boss practice without a DEV harness',async
  await expect(page.locator('.run-clock')).toContainText('20:');await expect(page.getByRole('progressbar',{name:'Здоровье',exact:true})).toHaveAttribute('aria-valuemax','200');
  expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();await expect(page.locator('.final-boss-bar')).toHaveAttribute('data-phase','phase1',{timeout:6000});
 });
-test('built menu starts the isolated Astral Revenant duel without a DEV harness',async({page})=>{
-  await page.goto('/');await page.getByRole('button',{name:/Бой с Хранителем затмения/}).click();
-  await expect(page.locator('.run-clock')).toContainText('Хранитель затмения · 1×1');await expect(page.locator('.level-line')).toContainText('54');
-  await expect(page.getByRole('progressbar',{name:'Хранитель затмения',exact:true})).toBeVisible();await expect(page.locator('.boss-bar')).toHaveCount(1);await expect(page.locator('.final-boss-bar')).toHaveCount(0);
+test('built menu starts the isolated Rootbound Guardian duel without a DEV harness',async({page})=>{
+  await page.goto('/');await expect(page.getByRole('button',{name:/Бой с Хранителем затмения/})).toHaveCount(0);await page.getByRole('button',{name:/Бой с Хранителем/}).click();
+  await expect(page.locator('.run-clock')).toContainText('Корневой хранитель · 1×1');await expect(page.locator('.level-line')).toContainText('54');
+  await expect(page.locator('[data-marker="guardian"]')).toHaveCount(1);await expect(page.locator('.boss-bar')).toHaveCount(0);await expect(page.locator('.guardian-waves')).toHaveCount(0);await expect(page.locator('.final-boss-bar')).toHaveCount(0);
+  await page.locator('canvas').screenshot({path:'screenshots/rootbound-guardian-v1/practice/production.png'});
   expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();await page.getByRole('button',{name:'Пауза',exact:true}).click();
   await expect(page.getByRole('dialog',{name:'Пауза',exact:true})).toBeVisible();
 });

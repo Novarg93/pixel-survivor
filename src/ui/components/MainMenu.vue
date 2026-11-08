@@ -13,7 +13,7 @@ function chooseCharacter(value: CharacterId) {
   unavailable.value = false; emit('character', value);
 }
 defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
-const emit = defineEmits<{ play: []; bossPractice: []; astralPractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
+const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
  <div class="menu-shell">
@@ -26,7 +26,7 @@ const emit = defineEmits<{ play: []; bossPractice: []; astralPractice: []; help:
    <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
    <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Бой со Стражем</b><small>Тренировка · Mage 54 · Ледяная ульта</small></span><span aria-hidden="true">↗</span></button>
-   <button class="boss-practice-button astral-practice-button" v-pad="() => emit('astralPractice')" @click="emit('astralPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Бой с Хранителем затмения</b><small>1×1 · Mage 54 · Без других мобов</small></span><span aria-hidden="true">↗</span></button></div>
+   <button class="boss-practice-button guardian-practice-button" v-pad="() => emit('guardianPractice')" @click="emit('guardianPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Бой с Хранителем</b><small>Корневой тотем · 1×1 · Mage 54</small></span><span aria-hidden="true">↗</span></button></div>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
    <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>

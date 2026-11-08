@@ -21,12 +21,7 @@ export function drawChargePreparation(g: Phaser.GameObjects.Graphics, w: World, 
 // Enemy danger belongs to the existing depth-20 batch and ignores cosmetic intensity.
 export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, state: GuardianEncounter | null, owner = state?.ownerId) {
   const e = owner === undefined ? w.rareGuardian : w.guardians.find(e => e.id === owner); if (!e) return;
-  g.lineStyle(1, state ? 0xffcc83 : 0xb29c65, .9).strokeCircle(e.x, e.y, e.radius + 5);
   if (!state || state.ownerId !== e.id) return;
-  if(state.phase==='orb-warning'){
-    const color=GUARDIAN_ORBS[(state.orbIndex??0)%2?'fast':'slow'].color;
-    for(let i=0;i<8;i++){const a=i*Math.PI/4,r=e.radius+8+Math.sin(w.elapsed*8)*2;g.fillStyle(color,1).fillRect(Math.round(e.x+Math.cos(a)*r)-1,Math.round(e.y+Math.sin(a)*r)-1,3,3);}
-  }
   if (state.phase === 'beam-warning' || state.phase === 'beam') {
     const end = guardianBeamEnd(e, state), active = state.phase === 'beam';
     g.lineStyle(C.beamWidth + 2, 0x251f3a, .8).lineBetween(e.x, e.y, end.x, end.y);
@@ -41,7 +36,7 @@ export function drawGuardianDanger(g: Phaser.GameObjects.Graphics, w: World, sta
 }
 export function drawEnrageDanger(g:Phaser.GameObjects.Graphics,w:World){
   if(w.status==='over')return;
-  for(const p of w.projectiles)if(p.homing&&p.expires>w.elapsed){
+  for(const p of w.projectiles)if(p.homing&&!p.appearance&&p.expires>w.elapsed){
     const c=GUARDIAN_ORBS[p.homing.variant],r=c.radius,x=Math.round(p.x),y=Math.round(p.y),speed=Math.hypot(p.vx,p.vy)||1;
     for(let i=1;i<=4;i++)g.fillStyle(c.color,(1-i/5)*.7).fillRect(Math.round(x-p.vx/speed*i*4)-1,Math.round(y-p.vy/speed*i*4)-1,3,3);
     g.fillStyle(0x132330,1).fillRect(x-r-2,y-r,2*r+4,2*r).fillRect(x-r,y-r-2,2*r,2*r+4);

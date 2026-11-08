@@ -92,9 +92,6 @@ export class FinalBossArt {
         const support=w.enemies.find(e=>e.id===id);if(!support)continue;
         g.lineStyle(5,0x4d809f,.22).lineBetween(e.x,e.y-25,support.x,support.y-12);
         g.lineStyle(1.5,0xa8e0eb,.8).lineBetween(e.x,e.y-25,support.x,support.y-12);
-        g.lineStyle(1,0xc3e8ed,.65).strokeCircle(support.x,support.y,29);
-        const state=f.supports.get(id)!;
-        if(state.warning)t.lineStyle(2,0xf3cb88).strokeCircle(support.x,support.y,22+Math.max(0,state.next-state.clock)*12);
       }
       g.lineStyle(2,0xb7e1ef,.85).strokeEllipse(e.x,e.y-31,91,118);
       g.lineStyle(5,0x88bdd6,.14).strokeEllipse(e.x,e.y-31,94,120);

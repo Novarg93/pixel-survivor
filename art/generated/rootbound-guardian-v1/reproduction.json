@@ -1,0 +1,10 @@
+{
+  "command": "node scripts/build-guardian-art.mjs",
+  "outputs": {
+    "public/assets/hd/guardian.png": "2f6e6e8a4e6f2c65b9ca31d0749ccfd0d83ffe18931c282fc2ef3badb1fafdb3",
+    "public/assets/hd/guardian.json": "4b77c438bc75df6f57c2d68c5fb613aff04177730cd0d77dcc5f712fb1077257",
+    "src/game/art/guardianManifest.json": "5ef91bd244f2bc4f6fa30d7f7a7bf52339d883a9e9c8a2ee5bfa252cdb8fcc3c"
+  },
+  "byteIdentical": true,
+  "sourceFilesUnchanged": 4
+}

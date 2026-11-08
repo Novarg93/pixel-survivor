@@ -1,5 +1,6 @@
 import {ASTRAL_VFX} from '../config/astralRevenant';
 import {startAstralPractice} from '../bootstrap/startAstralPractice';
+import {startGuardianPractice} from '../bootstrap/startGuardianPractice';
 import { startBriarPractice } from '../bootstrap/startBriarPractice';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { startBossPractice } from '../bootstrap/startBossPractice';
@@ -112,7 +113,7 @@ export class GameScene extends Phaser.Scene {
         if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
         this.world = new World(Date.now(), this.runOptions);
-        if(command.type==='boss-practice'){if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
+        if(command.type==='boss-practice'){if(command.practiceBoss==='rootbound-guardian')startGuardianPractice(this.world);else if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
         for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
         if (window.__PIXEL__) window.__PIXEL__.world = this.world;
       }
@@ -199,7 +200,7 @@ export class GameScene extends Phaser.Scene {
       const visual = this.art.entityVisual(entity, this.world);
       if (!sprite) { sprite = this.spareSprites.pop() ?? this.add.sprite(entity.x, entity.y, visual.texture, visual.frame); sprite.setActive(true).setVisible(true).setFlipX(false); this.sprites.set(entity.id, sprite); }
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
-      sprite.setVisible(!('homing'in entity&&entity.homing));
+      sprite.setVisible(!('homing'in entity&&entity.homing&&!entity.appearance));
       sprite.setFlipX('kind' in entity&&entity.kind==='ashGuard'&&Math.abs(this.world.finalEncounter.attack.direction.x)>.6&&this.world.finalEncounter.attack.direction.x<0);
       sprite.setRotation('vx' in entity && (!entity.hostile||entity.appearance!==undefined) ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);

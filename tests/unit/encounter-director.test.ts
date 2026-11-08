@@ -102,9 +102,10 @@ it('Eclipse stageII scales recovery and cooldown but preserves its1.25s warning 
   expect(e.shootingAt-w.elapsed).toBeCloseTo(.6);expect(e.boss!.until-w.elapsed).toBeCloseTo(Math.max(BOSS_MAGIC.minRecovery,2/e.boss!.aggression!.frequency));
   w.elapsed=e.boss!.until;updateBoss(w,e,.01);expect(e.boss!.until-w.elapsed).toBeCloseTo(Math.max(BOSS_MAGIC.minApproach,1.5/e.boss!.aggression!.frequency));
 });
-it('uses independent hurt/death presentation for three Guardian IDs without changing the world',()=>{
+it('uses independent cast/death presentation for three Guardian IDs without hit interruption',()=>{
   const w=quiet(),art=new GuardianAnimation();w.guardianSystem.spawnWave(w,3,11);art.prepare(w);const [a,b]=w.guardians;a.discovered=true;w.damageEnemy(a,1);
-  expect(art.frame(a,w)).toContain('hurt');expect(art.frame(b,w)).toContain('cast');for(const e of [...w.guardians])kill(w,e.id);art.finish(w);expect(art.corpses).toHaveLength(3);
+  const sa=w.guardianSystem.encounters.get(a.id)!;sa.phase='orb-warning';sa.until=w.elapsed+.3;
+  expect(art.frame(a,w)).toContain('cast');expect(art.frame(b,w)).toContain('idle');for(const e of [...w.guardians])kill(w,e.id);art.finish(w);expect(art.corpses).toHaveLength(3);
   w.elapsed+=.6;art.finish(w);expect(art.corpses).toHaveLength(0);art.clear();
 });
 it('temporarily softens ordinary spawn frequency for8s and then restores it with heavy enemies still alive',()=>{

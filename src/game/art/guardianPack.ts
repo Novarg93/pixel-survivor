@@ -1,14 +1,31 @@
+import manifest from './guardianManifest.json';
 export const GUARDIAN_TEXTURE = 'hd-guardian';
 export const GUARDIAN_URLS = { image: 'assets/hd/guardian.png', data: 'assets/hd/guardian.json' } as const;
-export const GUARDIAN_CLIPS = { idle: { frames: 3, fps: 3 }, cast: { frames: 4, fps: 8 }, release: { frames: 3, fps: 12 }, hurt: { frames: 3, fps: 14 }, death: { frames: 6, fps: 10 } } as const;
+export const GUARDIAN_MANIFEST = manifest;
+export const GUARDIAN_CLIPS = {
+  idle: { first: 0, last: manifest.clips.idle.frameCount - 1, source: 'idle' },
+  cast: { first: 0, last: manifest.releaseFrame - 1, source: 'cast' },
+  release: { first: manifest.releaseFrame, last: manifest.clips.cast.frameCount - 1, source: 'cast' },
+} as const;
 export type GuardianPose = keyof typeof GUARDIAN_CLIPS;
+export function guardianDuration(pose: GuardianPose) {
+  const c = GUARDIAN_CLIPS[pose];
+  return manifest.clips[c.source].durationsMs.slice(c.first, c.last + 1).reduce((a, b) => a + b, 0) / 1000;
+}
 export function guardianFrame(pose: GuardianPose, age: number) {
-  const clip = GUARDIAN_CLIPS[pose], n = Math.floor(Math.max(0, age) * clip.fps + 1e-7);
-  return `guardian-${pose}-${pose === 'idle' ? n % clip.frames : Math.min(clip.frames - 1, n)}`;
+  const c = GUARDIAN_CLIPS[pose];
+  let ms = Math.max(0, age) * 1000;
+  if (pose === 'idle') ms %= guardianDuration(pose) * 1000;
+  for (let i = c.first; i <= c.last; i++) {
+    if (ms < manifest.clips[c.source].durationsMs[i]! - 1e-7) return `guardian-${c.source}-${i}`;
+    ms -= manifest.clips[c.source].durationsMs[i]!;
+  }
+  return `guardian-${c.source}-${c.last}`;
+}
+export function guardianWindupFrame(progress: number) {
+  return guardianFrame('cast', Math.max(0, Math.min(1, progress)) * guardianDuration('cast'));
 }
 export function guardianLayout() {
-  const frames: { name: string; pose: GuardianPose; index: number; frame: { x: number; y: number; w: number; h: number } }[] = [];
-  let n = 0;
-  for (const pose of Object.keys(GUARDIAN_CLIPS) as GuardianPose[]) for (let index = 0; index < GUARDIAN_CLIPS[pose].frames; index++, n++) frames.push({ name: `guardian-${pose}-${index}`, pose, index, frame: { x: 2 + n % 5 * 100, y: 2 + Math.floor(n / 5) * 116, w: 96, h: 112 } });
-  return { width: 502, height: 2 + Math.ceil(frames.length / 5) * 116, frames };
+  const names = (['idle', 'cast'] as const).flatMap(pose => Array.from({ length: manifest.clips[pose].frameCount }, (_, index) => ({ name: `guardian-${pose}-${index}`, pose, index })));
+  return { width: manifest.width, height: manifest.height, frames: names.map((f, i) => ({ ...f, frame: { x: manifest.padding + i % manifest.columns * manifest.cell, y: manifest.padding + Math.floor(i / manifest.columns) * manifest.cell, w: manifest.canvas, h: manifest.canvas } })) };
 }

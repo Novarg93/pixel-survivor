@@ -91,7 +91,7 @@ export class RareGuardianSystem {
       if (guardianVisible(w, current)) current.discovered = true;
       let state = this.encounters.get(current.id);
       if (!state && distance(current, w.player) <= D.activationRadius) { current.discovered = true; this.awaken(w, current); state = this.encounters.get(current.id); }
-      if (!state && w.elapsed - current.born >= C.lifetime || distance(current, w.player) > radarRadius(w.width, w.height) * C.abandonRadiusMultiplier || state && guardianExpired(w, current, state)) { this.dismiss(w, current.id); continue; }
+      if (!w.practiceDuel && (!state && w.elapsed - current.born >= C.lifetime || distance(current, w.player) > radarRadius(w.width, w.height) * C.abandonRadiusMultiplier || state && guardianExpired(w, current, state))) { this.dismiss(w, current.id); continue; }
       if (state) updateGuardianEncounter(w, current, state, dt);
     }
   }

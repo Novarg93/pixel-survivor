@@ -4,7 +4,7 @@ import type { World } from '../systems/World';
 import type { BossAnimation } from './BossAnimation';
 
 type BurstKind = 'slam' | 'arrival' | 'cast' | 'death' | 'teleport';
-interface Burst { kind: BurstKind; x: number; y: number; started: number; color: number; owner: number }
+interface Burst { kind: BurstKind; x: number; y: number; started: number; color: number; owner: number; ownerKind: Enemy['kind'] }
 interface Track { enemy: Readonly<Enemy>; phase: string; magic: string; slam: number; shootingAt: number }
 // Cosmetic observer only. Fixed batch, at most 24 short-lived bursts, no Clock/tweens/RNG.
 export class EncounterFeedback {
@@ -18,7 +18,7 @@ export class EncounterFeedback {
   private phase(e: Readonly<Enemy>, w: World) { return e.boss?.phase ?? w.guardianSystem.encounters.get(e.id)?.phase ?? ''; }
   private emit(w: World, e: Readonly<Enemy>, kind: BurstKind, color: number, x = e.x, y = e.y) {
     if (this.bursts.length === 24) this.bursts.shift();
-    this.bursts.push({ kind, x, y, started: w.elapsed, color, owner: e.id });
+    this.bursts.push({ kind, x, y, started: w.elapsed, color, owner: e.id, ownerKind: e.kind });
   }
   update(w: World, bosses: BossAnimation) {
     for (let i = this.bursts.length - 1; i >= 0; i--) if (w.elapsed - this.bursts[i].started >= .6) this.bursts.splice(i, 1);
@@ -45,9 +45,9 @@ export class EncounterFeedback {
     g.clear(); if (w.status === 'over') return;
     const strength = Math.max(.3, intensity);
     for (const e of [...w.bosses, ...w.guardians]) {
-      if(e.kind==='sorcerer'||e.kind==='eclipse')continue;
+      if(e.kind==='guardian'||e.kind==='sorcerer'||e.kind==='eclipse')continue;
       const phase = this.phase(e, w), preparing = phase === 'windup' || phase.endsWith('warning') || phase === 'awakening';
-      const color = e.kind === 'charger' ? 0xd0a477 : e.kind === 'guardian' ? 0xffd78e : 0x99dbdc;
+      const color = e.kind === 'charger' ? 0xd0a477 : 0x99dbdc;
       if (preparing) {
         const until = e.boss?.until ?? w.guardianSystem.encounters.get(e.id)?.until ?? w.elapsed;
         const p = 1 - Math.min(1, Math.max(0, until - w.elapsed) / .5);
@@ -65,7 +65,7 @@ export class EncounterFeedback {
     }
     for (const b of this.bursts) {
       const t = Math.max(0, (w.elapsed - b.started) / .6), alpha = (1 - t) * strength, heavy = b.kind === 'arrival' || b.kind === 'slam', r = (heavy ? 30 : b.kind === 'death' ? 18 : 8) + t * (heavy ? 18 : 24), y = b.y + (heavy ? 18 : 4);
-      g.lineStyle(t < .15 ? 2 : 1, b.color, alpha).strokeEllipse(b.x, y, r * 2, r * (heavy ? .8 : 1.5));
+      if (b.ownerKind !== 'guardian') g.lineStyle(t < .15 ? 2 : 1, b.color, alpha).strokeEllipse(b.x, y, r * 2, r * (heavy ? .8 : 1.5));
       if (heavy) this.cracks(g, b.x, y, 30 + t * 12, alpha * .9, b.color);
       for (let i = 0; i < (b.kind === 'death' ? 12 : 8); i++) {
         const a = i * Math.PI / (b.kind === 'death' ? 6 : 4) + .2, x = Math.round(b.x + Math.cos(a) * r), py = Math.round(y + Math.sin(a) * r * .55 - Math.sin(t * Math.PI) * 9);

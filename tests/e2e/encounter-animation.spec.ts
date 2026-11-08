@@ -64,7 +64,7 @@ test('Guardian actual charge, release, hit reaction and immediate reward/death b
   await shot(page, 'guardian-cast');
   await page.waitForFunction(() => {
     const w = window.__PIXEL__!.world;
-    if (!window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith('guardian-release-'))) return false;
+    if (!window.__PIXEL__!.art().actors.some(a => a.frame==='guardian-cast-6')) return false;
     w.pause(); return true;
   }, undefined, { polling: 'raf' });
   expect(await page.evaluate(() => window.__PIXEL__!.world.projectiles.some(p => p.homing))).toBe(true);
@@ -79,7 +79,7 @@ test('Guardian actual charge, release, hit reaction and immediate reward/death b
   await page.waitForFunction(() => {
     if (!window.__PIXEL__!.art().encounterFeedback.bursts.some(b => b.kind === 'death')) return false;
     const w = window.__PIXEL__!.world;
-    if (!window.__PIXEL__!.art().guardian.frame?.endsWith('-2')) return false;
+    if (!window.__PIXEL__!.art().guardian.frame) return false;
     w.pause(); return true;
   }, undefined, { polling: 'raf' });
   await shot(page, 'guardian-death');

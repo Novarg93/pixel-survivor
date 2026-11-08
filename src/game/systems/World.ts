@@ -159,7 +159,7 @@ export class World {
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
     if (this.projectiles.length >= BALANCE.projectileCap || (shot.hostile && this.hostileProjectileSlots===0)) return;
-    const projectile = this.projectilePool.acquire({ ...shot, appearance:shot.appearance, started:this.elapsed, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
+    const projectile = this.projectilePool.acquire({ ...shot, appearance:shot.appearance??(shot.homing?'astral-volley':undefined), started:this.elapsed, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
@@ -253,7 +253,7 @@ export class World {
     if(!this.practiceDuel&&!this.finalEncounter.active)this.encounterDirector.update(this);
     if(this.ultimate.selected==='frost')this.ultimate.update(this);
     advanceUltimateFreeze(this);
-    if(!this.practiceDuel)this.guardianSystem.update(this, dt);
+    if(!this.practiceDuel||this.practiceDuel.kind==='guardian')this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     this.finalEncounter.update(this,dt);
     if (this.outcome || this.status !== 'playing') return;

@@ -35,7 +35,6 @@ export class LootPresentation {
     for (const chest of w.loot.chests) seal(chest.x, chest.y, 13, 0xd8b476, chest.born, true);
     for (const item of w.artifacts.items) seal(item.x, item.y, 12, 0xffd77c, item.born, true);
     for (const guardian of w.guardians) {
-      g.fillStyle(0xffd77c, intensity * (0.1 + Math.sin(w.elapsed * 2) * 0.025)).fillCircle(guardian.x, guardian.y, 32).lineStyle(1, 0xffd77c, intensity * 0.55).strokeEllipse(guardian.x, guardian.y + 15, 50, 15);
       g.fillStyle(0x172c39).fillRect(guardian.x - 22, guardian.y - 28, 44, 4).fillStyle(0xffd77c).fillRect(guardian.x - 21, guardian.y - 27, 42 * guardian.hp / guardian.maxHp, 2);
     }
   }

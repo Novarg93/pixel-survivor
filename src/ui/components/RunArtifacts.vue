@@ -9,7 +9,7 @@ defineProps<{ state: Snapshot }>();
     <div class="artifact-list"><div v-for="a in state.artifacts" :key="a.id" class="artifact-bonus" :data-artifact="a.id" :title="`${a.name}: ${a.effect}. Копии ${a.stacks}/${a.cap}`" :aria-label="`${a.name}: ${a.percent > 0 ? '+' : ''}${a.percent}% ${a.short}, ${a.stacks} из ${a.cap}`"><img :src="artifactIcon(a.id)" alt="" width="28" height="28" /><span><i><span class="artifact-short">{{ a.short }} </span>{{ a.percent > 0 ? '+' : '' }}{{ a.percent }}%</i><small>{{ a.stacks }}/{{ a.cap }}</small></span></div></div>
   </aside>
   <div v-if="state.encounterNotice || state.runNotice" class="run-notice" role="status"><strong v-if="state.encounterNotice">{{ state.encounterNotice }}</strong><span v-if="state.runNotice">{{ state.runNotice }}</span></div>
-  <aside v-if="state.guardianWaves.length" class="guardian-waves" aria-label="Волны Guardian">
+  <aside v-if="!state.practice && state.guardianWaves.length" class="guardian-waves" aria-label="Волны Guardian">
     <small>{{ state.artifacts.length === 5 && state.artifacts.every(a => a.stacks === a.cap) ? 'GUARDIAN · ЛИМИТ АРТЕФАКТОВ · ОПЫТ И ОЧКИ' : 'GUARDIAN · 1 АРТЕФАКТ ЗА ВОЛНУ' }}</small>
     <span v-for="wave in state.guardianWaves" :key="wave.id">{{ wave.minute }}:00 · {{ wave.killed }}/{{ wave.total }} побеждено{{ wave.failed ? ' · награда сорвана' : '' }}</span>
   </aside>

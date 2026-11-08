@@ -33,7 +33,7 @@ it('preserves world footprints and existing elite/tank/boss scale precedence', (
   expect(visualDimensions(enemyVisual('grunt', true, 0, 1)).width).toBeCloseTo(22.4);
   expect(visualDimensions(enemyVisual('tank', true, 0, 1)).width).toBeCloseTo(25.6);
   expect(visualDimensions(enemyVisual('charger', false, 0, 1)).width).toBeCloseTo(57.6);
-  expect(visualDimensions(enemyVisual('guardian', false, 0, 1)).height).toBeCloseTo(39.2);
+  expect(visualDimensions(enemyVisual('guardian', false, 0, 1)).height).toBeCloseTo(44.8);
 });
 it('leaves only explicitly justified runtime threat Graphics, with all visible art migrated', () => {
   const legacy = Object.entries(ASSET_REGISTRY).filter(([, a]) => a.status === 'legacy');

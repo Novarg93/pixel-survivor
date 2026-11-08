@@ -33,7 +33,7 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
     const player = art.actors.find(a => a.texture === (hero === 'Warrior' ? 'hd-core' : 'hd-mage') && String(a.frame).startsWith(hero.toLowerCase() + '-'))!;
     expect(player.width).toBe(24); expect(player.height).toBe(30);
     expect(art.actors.find(a => String(a.frame).startsWith('grunt-elite'))!.width).toBeCloseTo(22.4);
-    expect(art.actors.find(a => a.texture === 'hd-guardian')!.width).toBeCloseTo(33.6);
+    expect(art.actors.find(a => a.texture === 'hd-guardian')!.width).toBeCloseTo(44.8);
     expect(art.actors.some(a => a.texture === 'hd-loot' && String(a.frame).startsWith('chest-'))).toBe(true); expect(art.actors.some(a => a.texture === 'hd-loot' && String(a.frame).startsWith('artifact-'))).toBe(true);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(size.width);
     await page.screenshot({ path: `${directory}/${hero.toLowerCase()}-${size.width}x${size.height}.png` });

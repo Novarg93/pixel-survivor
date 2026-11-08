@@ -28,7 +28,7 @@ import { MageCastingController } from './MageCastingController';
 import { MageCastingArt } from './MageCastingArt';
 import { ENEMY_TEXTURE, ENEMY_URLS, isHdEnemy, packedEnemyFrame } from './enemyPack';
 import { EnemyAnimation } from './EnemyAnimation';
-import { GUARDIAN_TEXTURE, GUARDIAN_URLS, guardianFrame } from './guardianPack';
+import { GUARDIAN_TEXTURE, GUARDIAN_URLS } from './guardianPack';
 import { GuardianAnimation } from './GuardianAnimation';
 import { EliteAdornment } from './EliteAdornment';
 import { BOSS_TEXTURE, BOSS_URLS, isHdBoss } from './bossPack';
@@ -119,7 +119,7 @@ export class GameArt {
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
     if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; return bossVisual(entity.kind,p.facing,p.pose,age,Math.max(0,(entity.kind==='eclipse'&&entity.shootingAt>world.elapsed?entity.shootingAt:entity.boss?.until??world.elapsed)-world.elapsed)); }
     if ('kind' in entity && isHdEnemy(entity.kind)) { const p = this.packed.view(entity, world), visual = enemyVisual(entity.kind, entity.elite, world.elapsed, entity.id); return { ...visual, frame: packedEnemyFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started) }; }
-    if('vx' in entity&&entity.appearance==='astral-volley')return selectAsset('astralVolley',astralProjectileFrame(world.elapsed-(entity.started??world.elapsed)));
+    if('vx' in entity&&entity.appearance==='astral-volley')return selectAsset('astralVolley',astralProjectileFrame(world.elapsed-(entity.started??world.elapsed)),ASSET_REGISTRY.astralVolley.worldScale*(entity.homing?.variant==='fast'?1.2:1));
     if('vx' in entity&&entity.appearance==='arcane-volley')return selectAsset('runeVolley',runeVolleyFrame(world.elapsed-(entity.started??world.elapsed)));
     return entityVisual(entity, world.elapsed);
   }
@@ -168,9 +168,9 @@ export class GameArt {
     }
     for (let i = this.bosses.corpses.length; i < this.bossCorpses.length; i++) this.bossCorpses[i].setVisible(false).setActive(false);
     for (const [i, corpse] of this.guardian.corpses.entries()) {
-      const image = this.guardianCorpses[i] ?? this.scene.add.image(0, 0, GUARDIAN_TEXTURE, 'guardian-death-0'); this.guardianCorpses[i] = image;
+      const image = this.guardianCorpses[i] ?? this.scene.add.image(0, 0, GUARDIAN_TEXTURE, corpse.frame); this.guardianCorpses[i] = image;
       const age = world.elapsed - corpse.started, size = visualDimensions(selectAsset('guardian'));
-      image.setTexture(GUARDIAN_TEXTURE, guardianFrame('death', age)).setPosition(corpse.x, corpse.y).setDisplaySize(size.width, size.height).setDepth(corpse.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
+      image.setTexture(GUARDIAN_TEXTURE, corpse.frame).setPosition(corpse.x, corpse.y).setOrigin(.5).setDisplaySize(size.width, size.height).setDepth(corpse.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
     }
     for (let i = this.guardian.corpses.length; i < this.guardianCorpses.length; i++) this.guardianCorpses[i].setVisible(false).setActive(false);
     for (let i = 0; i < this.packed.corpses.length; i++) {
@@ -227,11 +227,11 @@ export class GameArt {
       loot: { tracked: this.pickups.tracked, active: this.pickups.bursts.length, allocated: this.pickupImages.length, frames: this.pickups.bursts.map(p => lootFrame(p.key, this.worldTime - p.started, p.open)) },
       packed: { tracked: this.packed.tracked, activeDeaths: this.packed.corpses.filter(c => c.active).length, allocatedDeaths: this.packedCorpses.length, replaced: this.packed.replaced, corpses: this.packed.corpses.filter(c => c.active).map(c => ({ ...c, frame: packedEnemyFrame(c.kind, c.facing, 'death', this.worldTime - c.started) })) },
       encounterFeedback: this.encounterFeedback.diagnostics(),
-      guardian: { activeDeaths: this.guardian.corpses.length, allocatedDeaths: this.guardianCorpses.length, frame: this.guardian.corpse ? guardianFrame('death', this.worldTime - this.guardian.corpse.started) : null }, eliteAdornments: this.elites.count,
+      guardian: { activeDeaths: this.guardian.corpses.length, allocatedDeaths: this.guardianCorpses.length, frame: this.guardian.corpse?.frame ?? null }, eliteAdornments: this.elites.count,
       bosses: { tracked: this.bosses.tracked, activeDeaths: this.bosses.corpses.filter(c => c.active).length, allocatedDeaths: this.bossCorpses.length, corpses: this.bosses.corpses.filter(c => c.active).map(c => ({ ...c, frame: bossVisual(c.kind,c.facing,'death',this.worldTime-c.started).frame! })) },
       shadows: this.shadows.length, cleaves: this.cleaves.length, objects: this.scene.children.length, layers: this.scene.children.getAll().filter(o => o.name === 'friendly-feedback' || o.name === 'hostile-tells').map(o => ({ name: o.name, depth: (o as Phaser.GameObjects.Graphics).depth })), tweens: this.scene.tweens.getTweens().length, clock,
       blurListeners: this.scene.game.events.listenerCount(Phaser.Core.Events.BLUR),
-      actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y, rotation:s.rotation, alpha:s.alpha, tint:s.tintTopLeft }; }),
+      actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y, rotation:s.rotation, alpha:s.alpha, tint:s.tintTopLeft, visible:s.visible, originX:s.originX, originY:s.originY }; }),
     };
   }
   destroy() { this.astralArt.destroy();this.runeArt.destroy();this.mageAbilityArt.destroy();this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
