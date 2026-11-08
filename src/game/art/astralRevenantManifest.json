@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-astral-revenant.mjs",
+  "width": 1056,
+  "height": 2112,
+  "rgbaBytes": 8921088,
+  "frameCount": 126,
+  "sourceCanvas": 512,
+  "canvas": 128,
+  "padding": 2,
+  "bodyPivot": [
+    64,
+    64
+  ],
+  "sources": {
+    "art/astral-revenant/astral-revenant.png": "4a90ce4d432becbb26b4f6a753dddfda8464e3b98ffcab87663e14caa33a4a8f",
+    "art/astral-revenant/casting/make_animation_of_ca...-2047300936-0.gif": "be0f596632e696fd1208cf760dd53d57beb07cd6b5727904124d2b5c19852356",
+    "art/astral-revenant/casting/make_animation_of_ca...-2047300936-0.png": "a7ccda332a770ac909dcde174dac06b3b0290626879f3a4d2a77a76519e8d502",
+    "art/astral-revenant/ground-blast/idle.gif": "2ccb7f0abf390331774f7b1ee40a53cde4027201005631faae755d02b86f3581",
+    "art/astral-revenant/ground-blast/idle.png": "73808ca211817bfdde0510b235f937086907abc347eff3ccb1089288733acfbd",
+    "art/astral-revenant/ground-blast/make_one_segment_of_...-211407062-0 (1).png": "fa8df14cd8cdcbb71f5678431a23e8fa625c232416f6e339b183d66e0e83f20e",
+    "art/astral-revenant/ground-blast/spawn.gif": "ee0593c365dabab9a9c3b02799eddea617db764e2969150d398cfcba06480438",
+    "art/astral-revenant/ground-blast/spawn.png": "8f381d62c747cd5ffd5d79402ef955c80205728febd08b2b76317923f62fb521",
+    "art/astral-revenant/projectile/generate_necrotic_pr...-62937138-0.png": "e6f676f2294785f5dfafd9fba52bfe5d55362289cc24b33bb185ae5e307e109e",
+    "art/astral-revenant/projectile/make_animation_of_th...-460760605-0.gif": "1f659b84de3c59359f00c32902b0a7792766931a13dde5bce6fa5558c167b33b",
+    "art/astral-revenant/projectile/make_animation_of_th...-460760605-0.png": "92bd28190c6ceb4596c3133a98807c9249d0a3d19d7677c7c8a067dbaa244370",
+    "art/astral-revenant/projectile/make_animation_of_th...-663521443-0.gif": "79f791dff740e5768c9f600c8f38b577bc206971bbde7ccb294b235f947180c2",
+    "art/astral-revenant/projectile/make_animation_of_th...-663521443-0.png": "67271847b0694ea7a38335df0f7df99275da384746ea1954d006e3041f1e6c2f",
+    "art/astral-revenant/walking/make_animation_of_mo...-265563492-0.gif": "b6c44725412b847cf2472a956a1655b160cb41065dbb82b555f539eded2b61ba",
+    "art/astral-revenant/walking/make_animation_of_mo...-265563492-0.png": "245bf5e663c5f862fabd378bbea3627a79885932cda3bca0fc0b00f927905ef8",
+    "art/astral-revenant/ground-blast/spawn-b/spawn.gif": "4e4ea05dc704e83ec5dd11942fa5e6727e263e618f4f12e6e610933a85667aa6",
+    "art/astral-revenant/ground-blast/spawn-b/spawn.png": "a051aa6db79c89a154429200a315058f61e4dd992d23f3b9b10e4dd4b7188e87"
+  },
+  "clips": {
+    "walk": {
+      "frameCount": 16,
+      "gifFrameCount": 16,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/walking/make_animation_of_mo...-265563492-0.gif",
+      "sheet": "art/astral-revenant/walking/make_animation_of_mo...-265563492-0.png",
+      "alphaSource": "png",
+      "atlasClip": "walk",
+      "unusedCells": [],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7456,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 18800,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 17120,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15088,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 28416,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5504,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 32352,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 17184,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 17232,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 14976,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6608,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5392,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15232,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 13,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15568,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 14,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15168,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 15,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5440,
+          "timingSource": "gif"
+        }
+      ]
+    },
+    "cast": {
+      "frameCount": 16,
+      "gifFrameCount": 16,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/casting/make_animation_of_ca...-2047300936-0.gif",
+      "sheet": "art/astral-revenant/casting/make_animation_of_ca...-2047300936-0.png",
+      "alphaSource": "png",
+      "atlasClip": "cast",
+      "unusedCells": [],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5440,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7120,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 9008,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8768,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12256,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7568,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8848,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7248,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6800,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 4048,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5456,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 9248,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 26384,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 13,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 11072,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 14,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7728,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 15,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 22592,
+          "timingSource": "gif"
+        }
+      ]
+    },
+    "volley-flight": {
+      "frameCount": 12,
+      "gifFrameCount": 12,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/projectile/make_animation_of_th...-460760605-0.gif",
+      "sheet": "art/astral-revenant/projectile/make_animation_of_th...-460760605-0.png",
+      "alphaSource": "png",
+      "atlasClip": "volley-flight",
+      "unusedCells": [],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20848,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5920,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20272,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 16624,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 3824,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13120,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 22352,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 18864,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 14768,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 11760,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 3360,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 4544,
+          "timingSource": "gif"
+        }
+      ]
+    },
+    "volley-impact": {
+      "frameCount": 8,
+      "gifFrameCount": 8,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/projectile/make_animation_of_th...-663521443-0.gif",
+      "sheet": "art/astral-revenant/projectile/make_animation_of_th...-663521443-0.png",
+      "alphaSource": "png",
+      "atlasClip": "volley-impact",
+      "unusedCells": [
+        0,
+        576,
+        0,
+        0
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7536,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 10496,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7536,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 17248,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20112,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 19792,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 10048,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6096,
+          "timingSource": "gif"
+        }
+      ]
+    },
+    "flame-spawn": {
+      "frameCount": 16,
+      "gifFrameCount": 13,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/ground-blast/spawn.gif",
+      "sheet": "art/astral-revenant/ground-blast/spawn.png",
+      "alphaSource": "png",
+      "atlasClip": "flame-spawn",
+      "unusedCells": [
+        0,
+        0,
+        0
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13808,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13168,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15200,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8944,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13920,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 11568,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 33760,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15968,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 11632,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20928,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13520,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6304,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 208,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 13,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "png-tail"
+        },
+        {
+          "sourceIndex": 14,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "png-tail"
+        },
+        {
+          "sourceIndex": 15,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "png-tail"
+        }
+      ]
+    },
+    "flame-idle": {
+      "frameCount": 16,
+      "gifFrameCount": 16,
+      "sourceCanvas": 512,
+      "columns": 4,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/astral-revenant/ground-blast/idle.gif",
+      "sheet": "art/astral-revenant/ground-blast/idle.png",
+      "alphaSource": "png",
+      "atlasClip": "flame-idle",
+      "unusedCells": [],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 14160,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13072,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 1472,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12176,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 1664,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7792,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20352,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15664,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 10576,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 9,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12064,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 10,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8288,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 11,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7152,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 12,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5056,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 13,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8976,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 14,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7312,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 15,
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6464,
+          "timingSource": "gif"
+        }
+      ]
+    },
+    "flame-appear": {
+      "frameCount": 9,
+      "gifFrameCount": 9,
+      "sourceCanvas": 128,
+      "columns": 3,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "gif": "art/astral-revenant/ground-blast/spawn-b/spawn.gif",
+      "sheet": "art/astral-revenant/ground-blast/spawn-b/spawn.png",
+      "alphaSource": "png",
+      "atlasClip": "flame-appear",
+      "unusedCells": [],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 1,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 2,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 3,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 4,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 5,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 6,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 7,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        },
+        {
+          "sourceIndex": 8,
+          "durationMs": 100,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "timingSource": "gif"
+        }
+      ]
+    }
+  }
+}

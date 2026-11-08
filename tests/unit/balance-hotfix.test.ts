@@ -25,14 +25,15 @@ function wall(variant: MobilityVariant, rank: number) {
   return { w, e, zone: w.zones[0] };
 }
 
-it.each(baseline.hp)('reduces actual spawn HP exactly30% at minute$minute without changing other enemy stats', row => {
+it.each(baseline.hp)('retains spawn HP reduction at minute$minute and the approved Briar movement buff', row => {
   const w = quiet(); w.elapsed = row.minute * 60;
   for (const kind of kinds) {
     const before = baseline.definitions[kind], e = w.spawn(kind, { x: 80, y: 0 })!;
     expect(e.maxHp).toBeCloseTo(row.enemies[kind].maxHp * .7); expect(e.hp).toBe(e.maxHp);
     expect(ENEMIES[kind].hp).toBeCloseTo(before.hp * .7);
-    expect(ENEMIES[kind]).toEqual({ ...before, hp: ENEMIES[kind].hp });
-    expect(e.speed).toBe(before.speed); expect(e.damage).toBeCloseTo(before.damage * scalesAt(w.elapsed).damage);
+    const speed=kind==='charger'?31.2:before.speed;
+    expect(ENEMIES[kind]).toEqual({ ...before, hp: ENEMIES[kind].hp, speed });
+    expect(e.speed).toBe(speed); expect(e.damage).toBeCloseTo(before.damage * scalesAt(w.elapsed).damage);
     expect(e.xp).toBe(before.xp); expect(e.score).toBe(before.score);
   }
   for (const kind of ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const) expect(ENEMIES[kind]).toEqual(baseline.definitions[kind]);

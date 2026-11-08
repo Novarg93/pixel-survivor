@@ -18,7 +18,7 @@ function setup(minute = 3, character: 'mage' | 'warrior' = 'mage') {
 }
 it('pursues inside the old 150px stopping range and emits one warning sound per attempt', () => {
   const { w, e, advance } = setup(); w.player.x = 100; e.boss!.until = w.elapsed + 10;
-  advance(.05); expect(e.x).toBeCloseTo(2.4);
+  advance(.05); expect(e.x).toBeCloseTo(3.12);
   e.boss!.until = w.elapsed; advance(.05); advance(.1); expect(w.sounds.filter(s => s === 'charge')).toHaveLength(1);
 });
 it('warns for exactly0.5s, locks at the end, then never homes toward a new target', () => {
@@ -27,11 +27,11 @@ it('warns for exactly0.5s, locks at the end, then never homes toward a new targe
   w.player.y = 120; advance(.001); expect(w.elapsed - start).toBeCloseTo(.5);
   expect(e.boss!.phase).toBe('charge'); expect(e.boss!.direction).toEqual({ x: .8, y: .6 });
   const locked = { ...e.boss!.direction }; w.player.x = -500; w.player.y = -500;
-  advance(.05); expect(e.boss!.direction).toEqual(locked); expect(e.x).toBeCloseTo(144 * .05 * .8); expect(e.y).toBeCloseTo(144 * .05 * .6);
+  advance(.05); expect(e.boss!.direction).toEqual(locked); expect(e.x).toBeCloseTo(187.2 * .05 * .8); expect(e.y).toBeCloseTo(187.2 * .05 * .6);
 });
 it.each([3, 5, 7, 9, 10])('uses base multipliers and completion-based cooldown/recovery at minute%i', minute => {
   const { w, e, advance, launch } = setup(minute); launch(); const frequency = e.boss!.aggression!.frequency;
-  expect(e.boss!.charge!.speed).toBeCloseTo(24 * 2 * 3 * e.boss!.aggression!.movement);
+  expect(e.boss!.charge!.speed).toBeCloseTo(31.2 * 2 * 3 * e.boss!.aggression!.movement);
   advance(C.duration); const finish = w.elapsed;
   expect(e.boss!.phase).toBe('recover'); expect(e.boss!.until - finish).toBeCloseTo(.6 / frequency);
   expect(e.boss!.charge!.nextAt - finish).toBeCloseTo(5 / frequency);

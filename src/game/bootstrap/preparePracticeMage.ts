@@ -1,7 +1,7 @@
 import type { World } from '../systems/World';
 import { applyUpgrade } from '../systems/UpgradeSystem';
 
-// Shared lawful level54/53-choice build for the two isolated practice entries.
+// Shared lawful level54/53-choice build for isolated practice encounters.
 export function preparePracticeMage(w:World,at:number){
   if(w.character!=='mage'||w.practice||w.elapsed!==0||w.enemies.length||w.finalEncounter.phase!=='inactive')throw new Error('Boss practice requires a fresh Mage run');
   w.practice=true;w.elapsed=at;w.experience.level=54;

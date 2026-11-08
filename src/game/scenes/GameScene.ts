@@ -1,3 +1,6 @@
+import {ASTRAL_VFX} from '../config/astralRevenant';
+import {startAstralPractice} from '../bootstrap/startAstralPractice';
+import { startBriarPractice } from '../bootstrap/startBriarPractice';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { startBossPractice } from '../bootstrap/startBossPractice';
 import { startRunePractice } from '../bootstrap/startRunePractice';
@@ -109,7 +112,7 @@ export class GameScene extends Phaser.Scene {
         if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
         this.world = new World(Date.now(), this.runOptions);
-        if(command.type==='boss-practice'){if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
+        if(command.type==='boss-practice'){if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
         for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
         if (window.__PIXEL__) window.__PIXEL__.world = this.world;
       }
@@ -198,12 +201,13 @@ export class GameScene extends Phaser.Scene {
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setVisible(!('homing'in entity&&entity.homing));
       sprite.setFlipX('kind' in entity&&entity.kind==='ashGuard'&&Math.abs(this.world.finalEncounter.attack.direction.x)>.6&&this.world.finalEncounter.attack.direction.x<0);
-      sprite.setRotation('vx' in entity && (!entity.hostile||entity.appearance==='arcane-volley') ? Math.atan2(entity.vy, entity.vx) : 0);
+      sprite.setRotation('vx' in entity && (!entity.hostile||entity.appearance!==undefined) ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
       if('kind' in entity&&ultimateFrozen(entity,this.world.elapsed))sprite.setTint(0x96d9ec).setTintMode(Phaser.TintModes.MULTIPLY);
       else if (preparingCharge && entity.boss!.until - this.world.elapsed <= CHARGE_BOSS.flashDuration) sprite.setTint(0xffe6b8).setTintMode(Phaser.TintModes.FILL);
-      else if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY); else sprite.clearTint();
+      else if ('hitUntil' in entity && entity.hitUntil > this.world.elapsed) sprite.setTint(0xffe5b3).setTintMode(Phaser.TintModes.MULTIPLY);
+      else if('kind' in entity&&entity.kind==='eclipse'&&entity.boss?.stage===2)sprite.setTint(ASTRAL_VFX.stage2Tint).setTintMode(Phaser.TintModes.ADD);else sprite.clearTint();
       sprite.setAlpha(!preparingCharge && 'hitUntil' in entity && entity.hitUntil > this.world.elapsed ? .85 : 1);
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
@@ -215,7 +219,6 @@ export class GameScene extends Phaser.Scene {
     drawEnrageDanger(this.effects,this.world);
     for (const e of this.world.guardians) drawGuardianDanger(this.effects, this.world, this.world.guardianSystem.encounters.get(e.id) ?? null, e.id);
     for (const enemy of this.world.enemies) {
-      if (enemy.kind === 'eclipse' && enemy.boss?.phase === 'windup' && !enemy.boss.enrageIndex) { this.effects.lineStyle(2, enemy.boss.stage === 2 ? 0xe3a2ff : 0x9ae5e3).strokeCircle(enemy.x, enemy.y, 40); for(let i=0;i<12;i++)if(i!==0&&i!==6){const a=Math.atan2(this.mage.y-enemy.y,this.mage.x-enemy.x)-Math.PI/12+i*Math.PI/6;this.effects.lineBetween(enemy.x+Math.cos(a)*28,enemy.y+Math.sin(a)*28,enemy.x+Math.cos(a)*47,enemy.y+Math.sin(a)*47);} }
       if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.fillStyle(0x9ccbf5).fillRect(enemy.x - 3, enemy.y - 18, 6, 2).fillRect(enemy.x - 2, enemy.y - 16, 4, 3);
       if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % pressureAt(this.world.elapsed).frenzyCycle < .4) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 3, enemy.y - 17, enemy.x + 3, enemy.y - 17);
       if (enemy.modifier === 'volatile') this.effects.fillStyle(0xff83aa).fillRect(enemy.x - 2, enemy.y - 18, 4, 3);

@@ -5,11 +5,11 @@ import { bossFrame, bossLayout, HD_BOSS_KINDS } from '../../src/game/art/bossPac
 import { enemyVisual, visualDimensions } from '../../src/game/art/assetRegistry';
 import { updateBoss } from '../../src/game/systems/BossSystem';
 import manifest from '../../public/assets/hd/bosses.json';
-it('boss frames match the real atlas and preserve57.6world display size', () => {
+it('boss frames match the real atlas with the enlarged Astral model', () => {
   const frames = manifest.frames as Record<string, { frame: { x: number; y: number; w: number; h: number } }>;
   expect(Object.keys(frames)).toHaveLength(bossLayout().frames.length);
   for (const f of bossLayout().frames) expect(frames[f.name].frame).toEqual(f.frame);
-  for (const kind of HD_BOSS_KINDS) { const d = visualDimensions(enemyVisual(kind, false, 0, 1)); expect(d.width).toBeCloseTo(57.6); expect(d.height).toBeCloseTo(57.6); expect(frames).toHaveProperty(bossFrame(kind, 'left', 'death', 99)); }
+  for (const kind of HD_BOSS_KINDS) { const d = visualDimensions(enemyVisual(kind, false, 0, 1)); expect(d.width).toBeCloseTo(kind==='eclipse'?66.24:57.6); expect(d.height).toBeCloseTo(kind==='eclipse'?66.24:57.6); expect(frames).toHaveProperty(bossFrame(kind, 'left', 'death', 99)); }
 });
 for (const kind of HD_BOSS_KINDS) it(kind + ' art reads real phases and never delays score/chest/owner cleanup', () => {
   const w = new World(), art = new BossAnimation(), e = w.spawn(kind, { x: 150, y: 0 })!; art.prepare(w);
@@ -23,7 +23,7 @@ for (const kind of HD_BOSS_KINDS) it(kind + ' art reads real phases and never de
 it('Eclipse art follows the real stage2 and preserves pause and despawn semantics', () => {
   const w = new World(), art = new BossAnimation(), e = w.spawn('eclipse', { x: 150, y: 0 })!;
   art.prepare(w); e.hp = e.maxHp / 2; w.elapsed = 2; updateBoss(w, e, .01);
-  const p = art.view(e, w); expect(p.stage).toBe(2); expect(p.pose).toBe('windup'); expect(w.impacts).toHaveLength(4);
+  const p = art.view(e, w); expect(p.stage).toBe(2); expect(p.pose).toBe('windup'); expect(w.zones.filter(z=>z.necrotic)).toHaveLength(4);
   expect(bossFrame(e.kind as 'eclipse', p.facing, p.pose, 0, p.stage)).toContain('eclipse-2-');
   const frozen = { ...p }; w.pause(); art.view(e, w); expect(p).toEqual(frozen);
   w.enemies = []; art.finish(w); expect(art.tracked).toBe(0); expect(art.corpses).toHaveLength(0);

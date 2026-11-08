@@ -1,5 +1,8 @@
 import { WARDEN,wardenTexture } from './ashWardenPack';
 import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
+import { BRIAR_BEAST_TEXTURE, briarBodyFrame } from './briarBeastPack';
+import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
+import {ASTRAL_VFX} from '../config/astralRevenant';
 import { ARCANE_VOLLEY } from '../config/runeWarden';
 import type { CharacterId } from '../config/characters';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
@@ -11,7 +14,7 @@ import { MAGE_TEXTURE, MAGE_CLIPS, mageFrame } from './magePack';
 import { MAGE_CAST_TEXTURE } from './mageCastingPack';
 import { ENEMY_TEXTURE, ENEMY_CLIPS, isHdEnemy, packedEnemyFrame } from './enemyPack';
 import { GUARDIAN_TEXTURE, guardianFrame } from './guardianPack';
-import { BOSS_TEXTURE, BOSS_CLIPS, isHdBoss, bossFrame } from './bossPack';
+import { BOSS_TEXTURE, BOSS_CLIPS, isHdBoss, type BossFacing, type BossPose } from './bossPack';
 import { LOOT_TEXTURE } from './lootPack';
 import type { ArtifactId } from '../loot/ArtifactSystem';
 
@@ -37,7 +40,7 @@ function packedActor(worldScale = 1) {
   return { ...hd(16, 16, worldScale, 'actor'), source: { kind: 'atlas' as const, key: ENEMY_TEXTURE, width: 64, height: 64 }, clips: { idle: ENEMY_CLIPS.idle.frames, walk: ENEMY_CLIPS.walk.frames, hurt: ENEMY_CLIPS.hurt.frames, death: ENEMY_CLIPS.death.frames } };
 }
 function runnerActor(worldScale = 1) { return { ...hd(16, 16, worldScale, 'actor'), source: { kind: 'atlas' as const, key: RUNNER_TEXTURE, width: 64, height: 64 }, clips: { idle: RUNNER_CLIPS.idle.frames, walk: RUNNER_CLIPS.walk.frames, hurt: RUNNER_CLIPS.hurt.frames, death: RUNNER_CLIPS.death.frames } }; }
-function bossActor() { return { ...hd(32, 32, 1.8, 'actor'), source: { kind: 'atlas' as const, key: BOSS_TEXTURE, width: 128, height: 128 }, clips: { idle: BOSS_CLIPS.idle.frames, walk: BOSS_CLIPS.walk.frames, hurt: BOSS_CLIPS.hurt.frames, death: BOSS_CLIPS.death.frames } }; }
+function bossActor(multiplier=1) { return { ...hd(32, 32, 1.8*multiplier, 'actor'), source: { kind: 'atlas' as const, key: BOSS_TEXTURE, width: 128, height: 128 }, clips: { idle: BOSS_CLIPS.idle.frames, walk: BOSS_CLIPS.walk.frames, hurt: BOSS_CLIPS.hurt.frames, death: BOSS_CLIPS.death.frames } }; }
 function lootAsset(size = 16, scale = 1): AssetSpec { return { ...hd(size, size, scale, 'pickup'), source: { kind: 'atlas', key: LOOT_TEXTURE, width: size === 6 ? 24 : 64, height: size === 6 ? 24 : 64 }, clips: { ...single, idle: 3 } }; }
 // One catalog: integrated art and explicit legacy fallbacks. No gameplay radii.
 export const ASSET_REGISTRY = {
@@ -53,8 +56,9 @@ export const ASSET_REGISTRY = {
   rusherElite: { ...packedActor(1.4), adornment: 'thorn-collar' }, splitterElite: { ...packedActor(1.4), adornment: 'gilded-seams' },
   guardian: { ...hd(24, 28, 1.4, 'actor', { idle: 3, walk: 0, hurt: 3, death: 6 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 96, height: 112 } },
   ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
-  charger: bossActor(), sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: bossActor(),
+  charger: { ...bossActor(), source:{kind:'atlas',key:BRIAR_BEAST_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: {...bossActor(ASTRAL_VFX.bodyScale),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},clips:{idle:1,walk:16,hurt:0,death:0}},
   runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, origin:{x:104/128,y:.5} },
+  astralVolley:{...hd(32,32,ASTRAL_VFX.projectileSize/32,'projectile'),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},origin:{x:ASTRAL_VFX.projectilePivot,y:.5}},
   fireball: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
   xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
   artifactHealth: lootAsset(16, 1.15), artifactDamage: lootAsset(16, 1.15), artifactSpeed: lootAsset(16, 1.15), artifactCooldown: lootAsset(16, 1.15), artifactExperience: lootAsset(16, 1.15),
@@ -94,10 +98,12 @@ export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id
   if (kind === 'grunt') return selectAsset(asset, `grunt-${elite ? 'elite' : 'normal'}-${Math.floor(elapsed * 7 + id) % 4}`);
   if (kind === 'runner') return selectAsset(asset, runnerFrame(playback?.pose ?? 'walk', playback?.facing ?? 'right', elapsed - (playback?.started ?? 0)), elite ? 1.4 : 1);
   if (kind === 'guardian') return selectAsset('guardian', guardianFrame('idle', elapsed));
-  if (kind === 'sorcerer') return selectAsset('sorcerer',runeBodyFrame('right','idle',0));
-  if (isHdBoss(kind)) return selectAsset(asset, bossFrame(kind, 'right', 'idle', elapsed));
+  if (isHdBoss(kind)) return bossVisual(kind,'right','idle',elapsed);
   if (isHdEnemy(kind)) return selectAsset(asset, packedEnemyFrame(kind, 'right', 'walk', elapsed + id / 7), spec.worldScale === 1 && elite ? 1.4 : spec.worldScale);
   return { ...selectAsset(asset, undefined, spec.worldScale === 1 && elite ? 1.4 : spec.worldScale), texture: kind + (spec.clips.walk && Math.floor(elapsed * 5 + id) % 2 ? '-walk' : '') };
+}
+export function bossVisual(kind:'charger'|'sorcerer'|'eclipse',facing:BossFacing,pose:BossPose,age:number,remaining=0){
+  return selectAsset(kind,kind==='charger'?briarBodyFrame(facing,pose,age,remaining):kind==='sorcerer'?runeBodyFrame(facing,pose,age,remaining):astralBodyFrame(facing,pose,age,remaining));
 }
 export function visualDimensions(selection: VisualSelection, multiplier = 1) {
   const size = ASSET_REGISTRY[selection.asset].logicalSize;

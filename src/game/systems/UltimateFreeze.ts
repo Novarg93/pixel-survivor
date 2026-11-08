@@ -24,5 +24,8 @@ export function advanceUltimateFreeze(w:World){
     const s=w.guardianSystem.encounters.get(e.id);
     if(s){s.until+=dt;s.activatedAt+=dt;s.lastDamageAt+=dt;if(s.nextDamageAt)s.nextDamageAt+=dt;if(s.nextOrbAt)s.nextOrbAt+=dt;}
     for(const impact of w.impacts)if(impact.hostile&&impact.ownerId===e.id){impact.landAt+=dt;if(impact.launchAt)impact.launchAt+=dt;}
+    for(const z of w.zones)if(z.ownerId===e.id&&z.necrotic){
+      z.necrotic.born+=dt;z.necrotic.spawnAt+=dt;z.necrotic.activeAt+=dt;z.necrotic.fadeAt+=dt;z.expires+=dt;z.nextTick+=dt;
+    }
   }
 }

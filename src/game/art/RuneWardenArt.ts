@@ -19,7 +19,7 @@ export function runeWardenViews(w: World, intensity: number): RuneView[] {
   }
   for(const e of w.bosses){
     const m=e.boss?.magic;
-    if(e.kind==='sorcerer'&&m?.phase==='signal'&&m.from&&m.target)for(const p of [m.from,m.target])add('blink-rune',p.x,p.y,(e.radius+9)*2);
+    if(m?.phase==='signal'&&m.from&&m.target)for(const p of [m.from,m.target])add('blink-rune',p.x,p.y,(e.radius+9)*2);
   }
   for(const e of w.effects){
     const age=w.elapsed-e.started;if(age<0||age>=e.duration||e.expires<=w.elapsed)continue;

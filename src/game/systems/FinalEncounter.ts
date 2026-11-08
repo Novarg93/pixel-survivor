@@ -67,7 +67,7 @@ export class FinalEncounter {
     w.enemies.push(e);return e;
   }
   begin(w:World){
-    if(w.practiceBoss==='rune-warden')return;
+    if(w.practiceDuel)return;
     if(this.phase!=='inactive'||w.status!=='playing')return;
     this.phase='intro';this.started=w.elapsed;this.center=w.mobility.remaining>0?{...w.mobility.to}:{x:w.player.x,y:w.player.y};
     this.departing=w.enemies.slice(0,156).map(e=>({x:e.x,y:e.y,kind:e.kind,elite:e.elite}));

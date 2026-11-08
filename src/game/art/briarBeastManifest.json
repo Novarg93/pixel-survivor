@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-briar-beast.mjs",
+  "width": 1056,
+  "height": 1320,
+  "rgbaBytes": 5575680,
+  "frameCount": 74,
+  "sourceCanvas": 512,
+  "canvas": 128,
+  "padding": 2,
+  "bodyPivot": [
+    64,
+    64
+  ],
+  "sources": {
+    "art/armored-briar-beast/armored-briar-beast.png": "e8904f84e3cf4497f31812e6f3daf972a4a142a41b7f44b2e10a45a6064b72e1",
+    "art/armored-briar-beast/attack/make_animation_of_at...-628910143-0.gif": "8f07bb97e452405674c1bcfd8db91d0af32eb09e3fa08229a60f411bd0a6010e",
+    "art/armored-briar-beast/attack/make_animation_of_at...-628910143-0.png": "6df43d2d74e8d3663c4014f510d8c845fac699136216ff75910a4ce38bedff48",
+    "art/armored-briar-beast/charge/make_walking_animati...-1716663340-0.gif": "a755474f8ea588050045c2ad117bed6a6cb9c4a0f6fa2f7f441072ce4f4be281",
+    "art/armored-briar-beast/charge/make_walking_animati...-1716663340-0.png": "6716877427257c84a77106c06cbf2b3af1345f3fe2b0ab98197e2dd12b67bcea",
+    "art/armored-briar-beast/walking/make_walking_animati...-642940903-0.gif": "802218a35b436533719ba882451ab28e0f876e3bb93df6a724d3fdbeb91cf8f3",
+    "art/armored-briar-beast/walking/make_walking_animati...-642940903-0.png": "198ea3922fbd41b3c0ad45906c01cdec2b0b97404b50841cfbc26f3f2bd9a776"
+  },
+  "clips": {
+    "walk": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/armored-briar-beast/walking/make_walking_animati...-642940903-0.gif",
+      "sheet": "art/armored-briar-beast/walking/make_walking_animati...-642940903-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 28144
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 26192
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 46848
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 38480
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 44880
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 38128
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 29120
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 26944
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 30624
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 32352
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 43392
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 37552
+        }
+      ]
+    },
+    "charge": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/armored-briar-beast/charge/make_walking_animati...-1716663340-0.gif",
+      "sheet": "art/armored-briar-beast/charge/make_walking_animati...-1716663340-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 37776
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36592
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 38224
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 23408
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 23840
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 30976
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 45424
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 29872
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 20096
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 41920
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 42672
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 62672
+        }
+      ]
+    },
+    "attack": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/armored-briar-beast/attack/make_animation_of_at...-628910143-0.gif",
+      "sheet": "art/armored-briar-beast/attack/make_animation_of_at...-628910143-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 33120
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 18208
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 21616
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 24928
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 19904
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15600
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 23328
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 21120
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 15792
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 50832
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 47408
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36416
+        }
+      ]
+    }
+  }
+}

@@ -1,7 +1,10 @@
+import {AstralRevenantArt} from './AstralRevenantArt';
+import {ASTRAL_REVENANT_TEXTURE,ASTRAL_REVENANT_URLS,astralProjectileFrame} from './astralRevenantPack';
 import {MageAbilityArt} from './MageAbilityArt';
 import { RuneWardenArt } from './RuneWardenArt';
 import { RUNE_FLASH_TEXTURE } from './RuneJudgementFlash';
-import { RUNE_WARDEN_TEXTURE, RUNE_WARDEN_URLS, runeBodyFrame, runeVolleyFrame } from './runeWardenPack';
+import { RUNE_WARDEN_TEXTURE, RUNE_WARDEN_URLS, runeVolleyFrame } from './runeWardenPack';
+import { BRIAR_BEAST_TEXTURE, BRIAR_BEAST_URLS } from './briarBeastPack';
 import {MAGE_ABILITY_TEXTURE,MAGE_ABILITY_URLS} from './mageAbilityPack';
 import { WARDEN,wardenTexture } from './ashWardenPack';
 import {FLAME_STRIKE_TEXTURE,FLAME_STRIKE_URLS} from './flameStrikePack';
@@ -15,7 +18,7 @@ import type { World } from '../systems/World';
 import type { Enemy, Projectile, XpOrb } from '../entities/types';
 import type { LootItem, Chest } from '../loot/types';
 import type { ArtifactDrop } from '../loot/ArtifactSystem';
-import { ASSET_REGISTRY, LOOT_ART, ARTIFACT_ART, heroVisual, enemyVisual, selectAsset, visualDimensions, type Facing, type VisualSelection } from './assetRegistry';
+import { ASSET_REGISTRY, LOOT_ART, ARTIFACT_ART, heroVisual, enemyVisual, bossVisual, selectAsset, visualDimensions, type Facing, type VisualSelection } from './assetRegistry';
 import { HD_CORE_TEXTURE, HD_CORE_URLS } from './hdCoreLayout';
 import { RUNNER_TEXTURE, RUNNER_URLS, RUNNER_CLIPS, runnerFrame } from './runnerPack';
 import { RunnerAnimation } from './RunnerAnimation';
@@ -28,7 +31,7 @@ import { EnemyAnimation } from './EnemyAnimation';
 import { GUARDIAN_TEXTURE, GUARDIAN_URLS, guardianFrame } from './guardianPack';
 import { GuardianAnimation } from './GuardianAnimation';
 import { EliteAdornment } from './EliteAdornment';
-import { BOSS_TEXTURE, BOSS_URLS, isHdBoss, bossFrame } from './bossPack';
+import { BOSS_TEXTURE, BOSS_URLS, isHdBoss } from './bossPack';
 import { EncounterFeedback } from './EncounterFeedback';
 import { BossAnimation } from './BossAnimation';
 import { LOOT_TEXTURE, LOOT_URLS, ARTIFACT_KEYS, lootFrame } from './lootPack';
@@ -36,6 +39,8 @@ import { PickupAnimation } from './PickupAnimation';
 import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
+  if(!scene.textures.exists(ASTRAL_REVENANT_TEXTURE))scene.load.atlas(ASTRAL_REVENANT_TEXTURE,import.meta.env.BASE_URL+ASTRAL_REVENANT_URLS.image,import.meta.env.BASE_URL+ASTRAL_REVENANT_URLS.data);
+  if(!scene.textures.exists(BRIAR_BEAST_TEXTURE))scene.load.atlas(BRIAR_BEAST_TEXTURE,import.meta.env.BASE_URL+BRIAR_BEAST_URLS.image,import.meta.env.BASE_URL+BRIAR_BEAST_URLS.data);
   if(!scene.textures.exists(RUNE_WARDEN_TEXTURE))scene.load.atlas(RUNE_WARDEN_TEXTURE,import.meta.env.BASE_URL+RUNE_WARDEN_URLS.image,import.meta.env.BASE_URL+RUNE_WARDEN_URLS.data);
   if(!scene.textures.exists(MAGE_ABILITY_TEXTURE))scene.load.atlas(MAGE_ABILITY_TEXTURE,import.meta.env.BASE_URL+MAGE_ABILITY_URLS.image,import.meta.env.BASE_URL+MAGE_ABILITY_URLS.data);
   if(!scene.textures.exists(MELEE_COMBO_TEXTURE))scene.load.atlas(MELEE_COMBO_TEXTURE,import.meta.env.BASE_URL+MELEE_COMBO_URLS.image,import.meta.env.BASE_URL+MELEE_COMBO_URLS.data);
@@ -94,10 +99,11 @@ export class GameArt {
   private finalArt:FinalBossArt;
   private mageAbilityArt:MageAbilityArt;
   private runeArt:RuneWardenArt;
+  private astralArt:AstralRevenantArt;
   private frozenVisuals=new Map<number,VisualSelection>();
   private frozenRun='';
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { this.runeArt=new RuneWardenArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { this.runeArt=new RuneWardenArt(scene);this.astralArt=new AstralRevenantArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [ASTRAL_REVENANT_TEXTURE,BRIAR_BEAST_TEXTURE,RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
@@ -111,8 +117,9 @@ export class GameArt {
 
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
-    if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; return selectAsset(entity.kind, entity.kind==='sorcerer'?runeBodyFrame(p.facing,p.pose,age,Math.max(0,(entity.boss?.until??world.elapsed)-world.elapsed)):bossFrame(entity.kind, p.facing, p.pose, age, p.stage)); }
+    if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; return bossVisual(entity.kind,p.facing,p.pose,age,Math.max(0,(entity.kind==='eclipse'&&entity.shootingAt>world.elapsed?entity.shootingAt:entity.boss?.until??world.elapsed)-world.elapsed)); }
     if ('kind' in entity && isHdEnemy(entity.kind)) { const p = this.packed.view(entity, world), visual = enemyVisual(entity.kind, entity.elite, world.elapsed, entity.id); return { ...visual, frame: packedEnemyFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started) }; }
+    if('vx' in entity&&entity.appearance==='astral-volley')return selectAsset('astralVolley',astralProjectileFrame(world.elapsed-(entity.started??world.elapsed)));
     if('vx' in entity&&entity.appearance==='arcane-volley')return selectAsset('runeVolley',runeVolleyFrame(world.elapsed-(entity.started??world.elapsed)));
     return entityVisual(entity, world.elapsed);
   }
@@ -134,7 +141,7 @@ export class GameArt {
   }
   update(world: World, intensity: number, reducedMotion=false, reducedFlash=false) {
     this.finalArt.render(world,intensity,reducedMotion);
-    this.mageAbilityArt.render(world,intensity);this.runeArt.render(world,intensity);
+    this.mageAbilityArt.render(world,intensity);this.runeArt.render(world,intensity);this.astralArt.render(world,intensity);
     const liveIds=new Set(world.enemies.map(e=>e.id));for(const id of this.frozenVisuals.keys())if(!liveIds.has(id))this.frozenVisuals.delete(id);
     if(reducedMotion&&world.ultimate.selected==='lightning')this.heroSprite?.setRotation(0);
     if(this.heroSprite)this.castingArt.render(this.heroSprite,world,this.heroMoving,this.heroCasting,intensity);
@@ -156,8 +163,8 @@ export class GameArt {
     this.encounterFeedback.draw(this.encounterGround, world, intensity);
     for (let i = 0; i < this.bosses.corpses.length; i++) {
       const c = this.bosses.corpses[i]; if (!c.active) { this.bossCorpses[i]?.setVisible(false).setActive(false); continue; }
-      const age = world.elapsed - c.started, size = visualDimensions(selectAsset(c.kind)), image = this.bossCorpses[i] ?? this.scene.add.image(0, 0, BOSS_TEXTURE, bossFrame(c.kind, c.facing, 'death', 0, c.stage)); this.bossCorpses[i] = image;
-      image.setTexture(c.kind==='sorcerer'?RUNE_WARDEN_TEXTURE:BOSS_TEXTURE, c.kind==='sorcerer'?runeBodyFrame(c.facing,'death',age):bossFrame(c.kind, c.facing, 'death', age, c.stage)).setPosition(c.x, c.y).setOrigin(.5).setDisplaySize(size.width, size.height).setDepth(c.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
+      const age = world.elapsed - c.started, visual=bossVisual(c.kind,c.facing,'death',age),size = visualDimensions(visual), image = this.bossCorpses[i] ?? this.scene.add.image(0, 0, visual.texture,visual.frame); this.bossCorpses[i] = image;
+      image.setTexture(visual.texture,visual.frame).setPosition(c.x, c.y).setOrigin(.5).setDisplaySize(size.width, size.height).setDepth(c.y / 10000 - .02).setAlpha(1 - (age / .6) ** 2).setVisible(true).setActive(true);
     }
     for (let i = this.bosses.corpses.length; i < this.bossCorpses.length; i++) this.bossCorpses[i].setVisible(false).setActive(false);
     for (const [i, corpse] of this.guardian.corpses.entries()) {
@@ -213,6 +220,7 @@ export class GameArt {
       ultimate: this.ultimateArt.diagnostics(),
       mageAbilities:this.mageAbilityArt.diagnostics(),
       runeWarden:this.runeArt.diagnostics(),
+      astralRevenant:this.astralArt.diagnostics(),
       casting: {...this.casting.view(this.worldTime),...this.castingArt.diagnostics(),bodyFrame:this.heroFrame},
       playerHealth: this.playerHealth.diagnostics(),
       textureBytes: textures.reduce((n, key) => { const source = this.scene.textures.get(key).getSourceImage() as HTMLCanvasElement; return n + source.width * source.height * 4; }, 0),
@@ -220,11 +228,11 @@ export class GameArt {
       packed: { tracked: this.packed.tracked, activeDeaths: this.packed.corpses.filter(c => c.active).length, allocatedDeaths: this.packedCorpses.length, replaced: this.packed.replaced, corpses: this.packed.corpses.filter(c => c.active).map(c => ({ ...c, frame: packedEnemyFrame(c.kind, c.facing, 'death', this.worldTime - c.started) })) },
       encounterFeedback: this.encounterFeedback.diagnostics(),
       guardian: { activeDeaths: this.guardian.corpses.length, allocatedDeaths: this.guardianCorpses.length, frame: this.guardian.corpse ? guardianFrame('death', this.worldTime - this.guardian.corpse.started) : null }, eliteAdornments: this.elites.count,
-      bosses: { tracked: this.bosses.tracked, activeDeaths: this.bosses.corpses.filter(c => c.active).length, allocatedDeaths: this.bossCorpses.length, corpses: this.bosses.corpses.filter(c => c.active).map(c => ({ ...c, frame: c.kind==='sorcerer'?runeBodyFrame(c.facing,'death',0):bossFrame(c.kind, c.facing, 'death', this.worldTime - c.started, c.stage) })) },
+      bosses: { tracked: this.bosses.tracked, activeDeaths: this.bosses.corpses.filter(c => c.active).length, allocatedDeaths: this.bossCorpses.length, corpses: this.bosses.corpses.filter(c => c.active).map(c => ({ ...c, frame: bossVisual(c.kind,c.facing,'death',this.worldTime-c.started).frame! })) },
       shadows: this.shadows.length, cleaves: this.cleaves.length, objects: this.scene.children.length, layers: this.scene.children.getAll().filter(o => o.name === 'friendly-feedback' || o.name === 'hostile-tells').map(o => ({ name: o.name, depth: (o as Phaser.GameObjects.Graphics).depth })), tweens: this.scene.tweens.getTweens().length, clock,
       blurListeners: this.scene.game.events.listenerCount(Phaser.Core.Events.BLUR),
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y, rotation:s.rotation, alpha:s.alpha, tint:s.tintTopLeft }; }),
     };
   }
-  destroy() { this.runeArt.destroy();this.mageAbilityArt.destroy();this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
+  destroy() { this.astralArt.destroy();this.runeArt.destroy();this.mageAbilityArt.destroy();this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

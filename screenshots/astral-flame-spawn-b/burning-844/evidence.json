@@ -1,0 +1,404 @@
+{
+  "missiles": {
+    "enrageIndex": 1,
+    "lateVolley": 7,
+    "late": 1,
+    "shots": [
+      {
+        "x": 100.79283303255046,
+        "y": -41.202718471279304,
+        "vx": -175.87269634957636,
+        "vy": 71.89432994840212,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 100.78776664266617,
+        "y": -41.33258733941001,
+        "vx": -180.9390862324931,
+        "vy": -57.97453814693499,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 100.86736366216707,
+        "y": -41.435329276819154,
+        "vx": -101.34206675327749,
+        "vy": -160.71647552809964,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 101.10938269491041,
+        "y": -41.402323377423485,
+        "vx": 140.6769659241623,
+        "vy": -127.71057614141469,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 101.15856131299032,
+        "y": -41.28201936776561,
+        "vx": 189.85558399067307,
+        "vy": -7.406566516306982,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 101.11890439328701,
+        "y": -41.158249743319,
+        "vx": 150.19866429816483,
+        "vy": 116.3630578965987,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      },
+      {
+        "x": 101.00896784926724,
+        "y": -41.08892768690837,
+        "vx": 40.26212030833092,
+        "vy": 185.6851142883497,
+        "damage": 31.32,
+        "ttl": 2.5,
+        "appearance": "astral-volley"
+      }
+    ]
+  },
+  "flameDamage": {
+    "hp": 1000,
+    "firstHp": 989.038,
+    "secondHp": 978.076,
+    "fadeHp": 967.114
+  },
+  "anchors": {
+    "from": {
+      "x": 100,
+      "y": -40
+    },
+    "to": {
+      "x": 39.239840883515726,
+      "y": 64.43561637444753
+    }
+  },
+  "death": {
+    "score": 1500,
+    "chests": 1,
+    "owned": 0
+  },
+  "art": {
+    "heroFrame": "mage-down-idle-2",
+    "atlasFrames": 37,
+    "runner": {
+      "atlasFrames": 36,
+      "tracked": 0,
+      "activeDeaths": 0,
+      "allocatedDeaths": 0,
+      "replaced": 0,
+      "corpses": []
+    },
+    "textures": [
+      "briar-beast-v1",
+      "astral-revenant-v1",
+      "rune-warden-v1",
+      "hd-mage-abilities",
+      "ash-warden-melee-combo-v1",
+      "ash-warden-flame-strike-v1",
+      "ash-warden-v1-0",
+      "ash-warden-v1-1",
+      "ash-warden-v1-2",
+      "ash-warden-v1-3",
+      "hd-core",
+      "hd-runner",
+      "hd-mage",
+      "hd-mage-casting",
+      "hd-enemies",
+      "hd-guardian",
+      "hd-loot",
+      "hd-bosses",
+      "rune-judgement-flash",
+      "mage-nova-soft-light",
+      "frost-avalanche-crest",
+      "living-inferno-light",
+      "forest-atmosphere-soft",
+      "forest-atmosphere-edge",
+      "chunk--3--2-burning",
+      "chunk--3--1-burning",
+      "chunk--3-0-burning",
+      "chunk--3-1-burning",
+      "chunk--2--2-burning",
+      "chunk--2--1-burning",
+      "chunk--2-0-burning",
+      "chunk--2-1-burning",
+      "chunk--1--2-burning",
+      "chunk--1--1-burning",
+      "chunk--1-0-burning",
+      "chunk--1-1-burning",
+      "chunk-0--2-burning",
+      "chunk-0--1-burning",
+      "chunk-0-0-burning",
+      "chunk-0-1-burning",
+      "chunk-1--2-burning",
+      "chunk-1--1-burning",
+      "chunk-1-0-burning",
+      "chunk-1-1-burning",
+      "chunk-2--2-burning",
+      "chunk-2--1-burning",
+      "chunk-2-0-burning",
+      "chunk-2-1-burning",
+      "chunk-3--2-burning",
+      "chunk-3--1-burning",
+      "chunk-3-0-burning",
+      "chunk-3-1-burning"
+    ],
+    "chunks": 28,
+    "finalBoss": {
+      "deathAge": 0,
+      "pose": null,
+      "bodyImages": [],
+      "telegraphCommands": 0,
+      "meteorWarnings": [],
+      "chargeImages": [],
+      "pooledImages": 3,
+      "activeImages": 0,
+      "ghosts": 0,
+      "labels": 0,
+      "atlasBytes": 16777216,
+      "atlasPages": 4,
+      "flameStrike": {
+        "view": null,
+        "activeImages": 0,
+        "pooledImages": 1,
+        "atlasBytes": 1048576,
+        "groundLight": {
+          "visible": false,
+          "alpha": 1,
+          "rotation": 0
+        },
+        "groundLights": [],
+        "segments": []
+      },
+      "meleeCombo": {
+        "view": null,
+        "activeImages": 0,
+        "pooledImages": 2,
+        "atlasBytes": 2097152,
+        "groundLight": {
+          "visible": false,
+          "alpha": 1
+        },
+        "slash": {
+          "visible": false,
+          "frame": "melee-ground-light",
+          "flipX": false,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "totalAtlasBytes": 19922944
+    },
+    "ultimate": {
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "segments": 0,
+        "geometry": 0,
+        "frozen": 0,
+        "batches": 3,
+        "avalancheRadius": 0,
+        "avalancheVisible": false
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    },
+    "mageAbilities": {
+      "active": [],
+      "allocated": 0,
+      "tracked": 0,
+      "atlasBytes": 1672704,
+      "glowTextureBytes": 65536
+    },
+    "runeWarden": {
+      "active": [],
+      "allocated": 4,
+      "atlasBytes": 7248384,
+      "flashTextureBytes": 196608
+    },
+    "astralRevenant": {
+      "active": [],
+      "ground": [],
+      "allocated": 18,
+      "atlasBytes": 8921088
+    },
+    "casting": {
+      "mode": "idle",
+      "frame": 0,
+      "accents": [],
+      "pending": 0,
+      "requested": {
+        "fireball": 0,
+        "frost": 0,
+        "lightning": 0,
+        "meteor": 0,
+        "shield": 0
+      },
+      "started": 0,
+      "coalesced": 0,
+      "interrupted": 0,
+      "dropped": 0,
+      "maxPending": 0,
+      "visible": false,
+      "armsFrame": "arms-fireball-down-0",
+      "x": 51,
+      "y": 0.15000000000000002,
+      "width": 24,
+      "height": 30,
+      "rotation": 0,
+      "origin": {
+        "x": 0.5,
+        "y": 0.75
+      },
+      "hands": [],
+      "recoil": 0,
+      "bodyFrame": "mage-down-idle-2"
+    },
+    "playerHealth": {
+      "x": 34,
+      "y": -33,
+      "width": 34,
+      "height": 5,
+      "hp": 0.967114,
+      "absorb": 0,
+      "visible": true,
+      "depth": 11,
+      "objects": 1
+    },
+    "textureBytes": 84111152,
+    "loot": {
+      "tracked": 2,
+      "active": 0,
+      "allocated": 0,
+      "frames": []
+    },
+    "packed": {
+      "tracked": 0,
+      "activeDeaths": 0,
+      "allocatedDeaths": 0,
+      "replaced": 0,
+      "corpses": []
+    },
+    "encounterFeedback": {
+      "tracked": 0,
+      "active": 0,
+      "bursts": []
+    },
+    "guardian": {
+      "activeDeaths": 0,
+      "allocatedDeaths": 0,
+      "frame": null
+    },
+    "eliteAdornments": 0,
+    "bosses": {
+      "tracked": 0,
+      "activeDeaths": 0,
+      "allocatedDeaths": 1,
+      "corpses": []
+    },
+    "shadows": 2,
+    "cleaves": 0,
+    "objects": 102,
+    "layers": [
+      {
+        "name": "friendly-feedback",
+        "depth": 14
+      },
+      {
+        "name": "hostile-tells",
+        "depth": 20
+      }
+    ],
+    "tweens": 0,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "blurListeners": 4,
+    "actors": [
+      {
+        "texture": "hd-loot",
+        "frame": "chest-idle-2",
+        "width": 20,
+        "height": 20,
+        "x": 39,
+        "y": 63,
+        "rotation": 0,
+        "alpha": 1,
+        "tint": 16777215
+      },
+      {
+        "texture": "hd-mage",
+        "frame": "mage-down-idle-2",
+        "width": 24,
+        "height": 30,
+        "x": 51,
+        "y": 0,
+        "rotation": 0,
+        "alpha": 1,
+        "tint": 16777215
+      },
+      {
+        "texture": "hd-loot",
+        "frame": "xp-idle-2",
+        "width": 6,
+        "height": 6,
+        "x": 39,
+        "y": 64,
+        "rotation": 0,
+        "alpha": 1,
+        "tint": 16777215
+      }
+    ]
+  },
+  "errors": []
+}

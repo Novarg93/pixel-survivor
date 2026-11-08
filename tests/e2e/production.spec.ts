@@ -9,10 +9,10 @@ test('built main menu starts the real boss practice without a DEV harness',async
  await expect(page.locator('.run-clock')).toContainText('20:');await expect(page.getByRole('progressbar',{name:'Здоровье',exact:true})).toHaveAttribute('aria-valuemax','200');
  expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();await expect(page.locator('.final-boss-bar')).toHaveAttribute('data-phase','phase1',{timeout:6000});
 });
-test('built menu starts the isolated Rune Warden duel without a DEV harness',async({page})=>{
-  await page.goto('/');await page.getByRole('button',{name:/Бой с Хранителем рун/}).click();
-  await expect(page.locator('.run-clock')).toContainText('Хранитель рун · 1×1');await expect(page.locator('.level-line')).toContainText('54');
-  await expect(page.getByRole('progressbar',{name:'Хранитель рун',exact:true})).toBeVisible();await expect(page.locator('.boss-bar')).toHaveCount(1);await expect(page.locator('.final-boss-bar')).toHaveCount(0);
+test('built menu starts the isolated Astral Revenant duel without a DEV harness',async({page})=>{
+  await page.goto('/');await page.getByRole('button',{name:/Бой с Хранителем затмения/}).click();
+  await expect(page.locator('.run-clock')).toContainText('Хранитель затмения · 1×1');await expect(page.locator('.level-line')).toContainText('54');
+  await expect(page.getByRole('progressbar',{name:'Хранитель затмения',exact:true})).toBeVisible();await expect(page.locator('.boss-bar')).toHaveCount(1);await expect(page.locator('.final-boss-bar')).toHaveCount(0);
   expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();await page.getByRole('button',{name:'Пауза',exact:true}).click();
   await expect(page.getByRole('dialog',{name:'Пауза',exact:true})).toBeVisible();
 });
@@ -57,7 +57,7 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
-  expect(artRequests.sort()).toEqual(['/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json','/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage-casting.json', '/assets/hd/mage-casting.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
+  expect(artRequests.sort()).toEqual(['/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json','/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage-casting.json', '/assets/hd/mage-casting.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
 });
 
 for (const width of [1280, 390]) test(`built controller-only shell, movement, mobility and pause ${width}`, async ({ page }) => {

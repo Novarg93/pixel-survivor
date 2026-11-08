@@ -11,6 +11,7 @@ import {runeWardenViews} from '../../src/game/art/RuneWardenArt';
 import {runeBodyFrame,runeVolleyFrame,runeFrameIndex,runeJudgementFrame,runeFlashOpacity,RUNE_WARDEN_MANIFEST as pack} from '../../src/game/art/runeWardenPack';
 import {RUNE_WARDEN_VFX as C,ARCANE_VOLLEY} from '../../src/game/config/runeWarden';
 import {MAGIC_ATTACKS} from '../../src/game/config/bossEnrage';
+import {ASTRAL_VOLLEY} from '../../src/game/config/astralRevenant';
 import {enemyVisual,visualDimensions,selectAsset} from '../../src/game/art/assetRegistry';
 import {freezeForUltimate} from '../../src/game/systems/UltimateFreeze';
 import atlas from '../../public/assets/hd/rune-warden-v1/atlas.json';
@@ -66,18 +67,18 @@ it('also doubles the actual volley released after Blink preparation',()=>{
   w.elapsed=e.boss!.until+.001;updateMagicTeleport(w,e);expect(w.projectiles).toHaveLength(3);
   for(const p of w.projectiles)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(210,8);
 });
-it('keeps Eclipse volley speed unchanged',()=>{
+it('applies the separate Astral speed multiplier without changing Rune tuning',()=>{
   const w=quiet();w.elapsed=1500;const e=w.spawn('eclipse',{x:200,y:0})!;fireBossVolley(w,e);
-  expect(w.projectiles.length).toBeGreaterThan(0);for(const p of w.projectiles)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(MAGIC_ATTACKS.eclipse.speed*(e.boss!.late?.projectile??1),8);
+  expect(w.projectiles.length).toBeGreaterThan(0);for(const p of w.projectiles)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(MAGIC_ATTACKS.eclipse.speed*ASTRAL_VOLLEY.speedScale*(e.boss!.late?.projectile??1),8);
 });
-it('removes Rune volley direction ticks in both windups while retaining Eclipse warnings and all simulation state',()=>{
+it('omits Rune and Eclipse volley direction ticks in both windups without changing simulation state',()=>{
   const w=quiet();w.elapsed=630;const rune=w.spawn('sorcerer',{x:200,y:0})!,eclipse=w.spawn('eclipse',{x:-200,y:0})!;
   w.elapsed+=2;updateBoss(w,rune,.01);updateBoss(w,eclipse,.01);
   let lines=0;const graphics={lineStyle:()=>graphics,lineBetween:()=>{lines++;return graphics;}};
   const draw=()=>{lines=0;const before=JSON.stringify(w);drawEnrageDanger(graphics as unknown as Parameters<typeof drawEnrageDanger>[0],w);expect(JSON.stringify(w)).toBe(before);return lines;};
   w.enemies=[rune];expect(rune.boss!.phase).toBe('windup');expect(draw()).toBe(0);
   rune.boss!.magic!.phase='prepare';expect(draw()).toBe(0);
-  w.enemies=[eclipse];expect(eclipse.boss!.phase).toBe('windup');expect(draw()).toBeGreaterThan(0);
+  w.enemies=[eclipse];expect(eclipse.boss!.phase).toBe('windup');expect(draw()).toBe(0);
 });
 it('shows the new circular rune, charges it before the real hit and fades the flash once without extra damage',()=>{
   const w=quiet(),e=w.spawn('sorcerer',{x:200,y:0})!;w.elapsed=2;updateBoss(w,e,.01);

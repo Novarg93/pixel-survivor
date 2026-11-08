@@ -3,6 +3,7 @@ import type {Enemy} from '../entities/types';
 import {distance,direction,type Point} from '../utils/math';
 import {ENDGAME} from '../config/endgame';
 import {RUNE_WARDEN_VFX,ARCANE_VOLLEY} from '../config/runeWarden';
+import {ASTRAL_VOLLEY} from '../config/astralRevenant';
 import {bossBirth,BOSS_MAGIC as C,MAGIC_ATTACKS} from '../config/bossEnrage';
 export function teleportRing(w:World,e:Enemy){const max=Math.min(C.ringMax,w.width/2-e.radius-8,w.height/2-e.radius-8);return{min:Math.min(C.ringMin,max),max};}
 export function validTeleport(w:World,e:Enemy,p:Point,selecting=true){
@@ -24,8 +25,8 @@ export function bossVolleyAngles(e:Enemy){
   return Array.from({length:slots},(_,i)=>i).filter(i=>i!==0&&i!==Math.floor(slots/2)).map(i=>offset+i*Math.PI*2/slots);
 }
 export function fireBossVolley(w:World,e:Enemy){
-  const angles=bossVolleyAngles(e),count=Math.min(angles.length,w.hostileProjectileSlots),speed=MAGIC_ATTACKS[e.kind==='sorcerer'?'sorcerer':'eclipse'].speed*(e.boss?.late?.projectile??1)*(e.kind==='sorcerer'?ARCANE_VOLLEY.speedScale:1);
-  for(let i=0;i<count;i++){const a=angles[Math.floor(i*angles.length/count)];w.shoot({x:e.x,y:e.y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,damage:e.damage,hostile:true,ownerId:e.id,appearance:e.kind==='sorcerer'?'arcane-volley':undefined});}
+  const angles=bossVolleyAngles(e),count=Math.min(angles.length,w.hostileProjectileSlots),speed=MAGIC_ATTACKS[e.kind==='sorcerer'?'sorcerer':'eclipse'].speed*(e.boss?.late?.projectile??1)*(e.kind==='sorcerer'?ARCANE_VOLLEY.speedScale:ASTRAL_VOLLEY.speedScale);
+  for(let i=0;i<count;i++){const a=angles[Math.floor(i*angles.length/count)];w.shoot({x:e.x,y:e.y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,damage:e.damage,hostile:true,ownerId:e.id,appearance:e.kind==='sorcerer'?'arcane-volley':'astral-volley'});}
 }
 export function updateMagicTeleport(w:World,e:Enemy){
   const b=e.boss!,m=b.magic;if(!m||w.status!=='playing')return false;
@@ -40,7 +41,7 @@ export function updateMagicTeleport(w:World,e:Enemy){
   if(m.phase==='signal'){
     if(!m.target||!validTeleport(w,e,m.target,false)){m.phase=undefined;b.phase='recover';b.until=w.elapsed+C.minRecovery;return true;}
     e.x=m.target.x;e.y=m.target.y;m.teleports++;m.phase='prepare';
-    if(e.kind==='sorcerer'&&m.from)w.effect('rune-blink',m.from,e.radius+9,0xffffff,RUNE_WARDEN_VFX.blink,{x:e.x,y:e.y},undefined,undefined,e.id);
+    if(m.from)w.effect('rune-blink',m.from,e.radius+9,0xffffff,RUNE_WARDEN_VFX.blink,{x:e.x,y:e.y},undefined,undefined,e.id);
     b.aim={x:w.player.x,y:w.player.y};b.direction=direction(b.aim.x-e.x,b.aim.y-e.y);
     b.until=w.elapsed+bossTell(e,e.kind==='sorcerer'?C.sorcererTell:C.eclipseTell);b.contactSafeUntil=b.until+C.contactGrace;
     if(e.kind==='sorcerer')for(let i=0;i<2&&w.impacts.length+w.zones.length<24;i++)w.impacts.push({id:w.id(),x:b.aim.x+(i?48:0),y:b.aim.y,radius:28,damage:e.damage,landAt:b.until,hostile:true,ownerId:e.id,appearance:'runic-judgement'});

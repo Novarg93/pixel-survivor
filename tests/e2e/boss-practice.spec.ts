@@ -6,7 +6,7 @@ for(const [width,height]of [[1280,720],[844,390],[740,360]])test(`menu boss prac
  test.setTimeout(35000);mkdirSync('screenshots/final-boss',{recursive:true});
  const context=await browser.newContext({baseURL,viewport:{width,height},hasTouch:width<1000}),page=await context.newPage(),errors:string[]=[];
  page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(profile=>{localStorage.setItem('pixel-survivor-v1',profile);Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});},profile);
- await page.goto('/?test=1');const button=page.getByRole('button',{name:/Бой со Стражем/});await expect(button).toBeInViewport({ratio:1});
+ await page.goto('/?test=1');const button=page.getByRole('button',{name:/Бой со Стражем/});await expect(button).toBeInViewport({ratio:1});await expect(page.getByRole('button',{name:/Бой с Хранителем затмения/})).toBeInViewport({ratio:1});
  if(width===1280){const best=await page.locator('.best').boundingBox(),footer=await page.locator('.menu-footer').boundingBox();expect(footer!.y-best!.y-best!.height).toBeGreaterThanOrEqual(8);}
  await page.screenshot({path:`screenshots/final-boss/practice-menu-${width}.png`});
  if(width===1280){await button.focus();await page.keyboard.press('Enter');}else await button.tap();

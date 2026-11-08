@@ -13,7 +13,7 @@ function chooseCharacter(value: CharacterId) {
   unavailable.value = false; emit('character', value);
 }
 defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
-const emit = defineEmits<{ play: []; bossPractice: []; runePractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
+const emit = defineEmits<{ play: []; bossPractice: []; astralPractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
  <div class="menu-shell">
@@ -26,7 +26,7 @@ const emit = defineEmits<{ play: []; bossPractice: []; runePractice: []; help: [
    <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
    <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Бой со Стражем</b><small>Тренировка · Mage 54 · Ледяная ульта</small></span><span aria-hidden="true">↗</span></button>
-   <button class="boss-practice-button rune-practice-button" v-pad="() => emit('runePractice')" @click="emit('runePractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Бой с Хранителем рун</b><small>1×1 · Mage 54 · Без других мобов</small></span><span aria-hidden="true">↗</span></button></div>
+   <button class="boss-practice-button astral-practice-button" v-pad="() => emit('astralPractice')" @click="emit('astralPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Бой с Хранителем затмения</b><small>1×1 · Mage 54 · Без других мобов</small></span><span aria-hidden="true">↗</span></button></div>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
    <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>
@@ -39,6 +39,7 @@ const emit = defineEmits<{ play: []; bossPractice: []; runePractice: []; help: [
 <style scoped>
 .menu-shell{align-items:safe center}.menu-shell .wordmark{font-size:clamp(48px,5.3vw,68px);margin:12px 0 16px}.menu-shell .menu-description{margin:10px 0 14px;font-size:13px;line-height:1.7}.menu-shell .run-selection{margin-bottom:12px}
 .menu-shell .best{margin:4px 0 0}.menu-shell .menu-footer{bottom:12px}
+.menu-shell:has(.best) .records-link{margin-bottom:0}
 .menu-shell .menu-actions{margin:12px 0 21px}
 .start-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.start-actions .play-button{grid-column:1/-1}.boss-practice-button{display:flex;align-items:center;gap:8px;width:100%;padding:12px;background:linear-gradient(110deg,#233341,#172532);border:1px solid #a9c2ce88;color:#e0eced;text-align:left;box-shadow:inset 0 0 0 2px #0c18234d}
 .boss-practice-button>span:nth-child(2){flex:1}.boss-practice-button b{display:block;font:700 13px monospace;letter-spacing:.03em}.boss-practice-button small{display:block;margin-top:4px;font:10px monospace;color:#a9bdc9}.practice-sword{font-size:26px;color:#d7c092}.boss-practice-button:hover{background:#304859;border-color:#d4e2df}
