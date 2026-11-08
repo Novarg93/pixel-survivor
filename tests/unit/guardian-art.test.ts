@@ -16,7 +16,7 @@ it('all six elite families use HD bases and individually identified adornments w
 it('Guardian has exact frames, fixed pivot/footprint and immediate artifact independent of visual death', () => {
   for (const f of guardianLayout().frames) expect(manifest.frames[f.name as keyof typeof manifest.frames].frame).toEqual(f.frame);
   expect(Object.keys(manifest.frames)).toHaveLength(26);
-  expect(visualDimensions(enemyVisual('guardian', false, 0, 1))).toEqual({ width: 44.8, height: 44.8 });
+  expect(visualDimensions(enemyVisual('guardian', false, 0, 1))).toEqual({ width: 67.2, height: 67.2 });
   expect(ASSET_REGISTRY.guardian.origin).toEqual({ x: .5, y: .5 });
   const w = new World(), art = new GuardianAnimation(), e = w.spawn('guardian', { x: 60, y: 0 })!;
   art.prepare(w); const frame=art.frame(e,w); w.damageEnemy(e, 1); expect(art.frame(e, w)).toBe(frame); expect(e.x).toBe(60);

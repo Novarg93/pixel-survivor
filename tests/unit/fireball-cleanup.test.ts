@@ -4,10 +4,12 @@ import { World } from '../../src/game/systems/World';
 import { fireball } from '../../src/game/abilities/fireball';
 import { drawMageMagic } from '../../src/game/art/MageMagic';
 import { BALANCE } from '../../src/game/config/gameBalance';
+import {selectAsset,visualDimensions} from '../../src/game/art/assetRegistry';
+import {fireballFlightFrame} from '../../src/game/art/fireballPack';
 
-it.each([[1, 0, 4], [3, 0, 6], [5, 0, 8], [5, 3, 8]])(
-  'Fireball rank %i / damage upgrades %i keeps its core/trail and mechanics without side lines',
-  (rank, damageUpgrades, trailRects) => {
+it.each([[1, 0], [3, 0], [5, 0], [5, 3]])(
+  'Fireball rank %i / damage upgrades %i keeps fixed native art and mechanics without legacy Graphics',
+  (rank, damageUpgrades) => {
     const world = new World(12345, { spawnRate: 0 });
     for (const ability of Object.values(world.abilities)) ability.level = 0;
     world.abilities.fireball.level = rank;
@@ -28,7 +30,9 @@ it.each([[1, 0, 4], [3, 0, 6], [5, 0, 8], [5, 3, 8]])(
     drawMageMagic(proxy as Phaser.GameObjects.Graphics, world, .7);
     expect(JSON.stringify(world)).toBe(before);
     expect(calls.filter(method => method === 'lineBetween')).toHaveLength(0);
-    expect(calls.filter(method => method === 'fillRect')).toHaveLength(trailRects * world.projectiles.length);
-    expect(calls.filter(method => method === 'strokePath')).toHaveLength(rank === 5 ? world.projectiles.length : 0);
+    expect(calls.filter(method => method === 'fillRect')).toHaveLength(0);
+    expect(calls.filter(method => method === 'strokePath')).toHaveLength(0);
+    expect(selectAsset('fireball',fireballFlightFrame(.3))).toMatchObject({texture:'mage-fireball-v1',frame:'fireball-idle-1'});
+    expect(visualDimensions(selectAsset('fireball'))).toEqual({width:56,height:42});
   },
 );

@@ -1,3 +1,4 @@
+import {fireballDuration} from '../art/fireballPack';
 import {ASTRAL_VFX} from '../config/astralRevenant';
 import {NecroticFlameWalls} from './NecroticFlameWalls';
 import { FinalEncounter } from './FinalEncounter';
@@ -78,7 +79,7 @@ export class World {
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.boss.magic=undefined;e.boss.contactSafeUntil=undefined;e.shootingAt = 0; }
     }
-    this.effects = this.effects.filter(e => { if (e.kind !== 'frost' && e.kind !== 'meteor' && e.ownerId === undefined) return true; this.effectPool.release(e); return false; });
+    this.effects = this.effects.filter(e => { if (e.kind !== 'fireball-impact' && e.kind !== 'frost' && e.kind !== 'meteor' && e.ownerId === undefined) return true; this.effectPool.release(e); return false; });
     this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp);
   }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
@@ -154,7 +155,7 @@ export class World {
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number, source?: DamageSource, ownerId?: number) {
     if(ownerId!==undefined&&this.status==='over')return;
-    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: kind==='arcane-impact'||kind==='rune-blink'||kind==='astral-impact'?--this.cosmeticSerial:this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y }, source, ownerId }); if (effect) this.effects.push(effect); }
+    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: kind==='fireball-impact'||kind==='arcane-impact'||kind==='rune-blink'||kind==='astral-impact'?--this.cosmeticSerial:this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y }, source, ownerId }); if (effect) this.effects.push(effect); }
   }
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
@@ -270,11 +271,12 @@ export class World {
       if (shot.hostile) { if (segmentDistance(this.player, old, shot) < (shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius+9:12)) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
       const targets = this.combatTargets.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
       for (const target of targets) {
+        if(shot.source==='fireball')this.effect('fireball-impact',shot,4,0xffffff,fireballDuration('explosion'),{x:shot.vx,y:shot.vy},undefined,'fireball');
         this.damageEnemy(target, shot.damage, shot.source); shot.hits?.push(target.id);
         if (shot.source === 'fireball' && evolved(this, 'fireball') && !shot.exploded) {
           shot.exploded = true; const radius = 38 * this.stats.area;
           for (const e of [...this.enemies]) if (e.id !== target.id && distance(e, target) < radius + e.radius) this.damageEnemy(e, shot.damage * 0.45, 'fireball');
-          this.effect('meteor', target, radius, 0xffa46c, 0.3);
+          this.effect('meteor', target, radius, 0xffa46c, 0.3,undefined,undefined,'fireball');
         }
         if ((shot.pierce ?? 0) <= 0) { shot.expires = 0; break; } shot.pierce = (shot.pierce ?? 0) - 1;
       }

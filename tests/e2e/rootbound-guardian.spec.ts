@@ -11,7 +11,7 @@ for(const burning of [false,true])for(const viewport of [{width:1280,height:720}
   const art=()=>page.evaluate(()=>window.__PIXEL__!.art()),body=()=>page.evaluate(()=>window.__PIXEL__!.art().actors.find(a=>a.texture==='hd-guardian')!);
   const records:{name:string;frame:string;projectiles:number}[]=[];
   const shot=async(name:string)=>{await page.locator('canvas').screenshot({path:`${directory}/${name}.png`});records.push({name,frame:String((await body())?.frame??(await art()).guardian.frame),projectiles:await page.evaluate(()=>window.__PIXEL__!.world.projectiles.length)});};
-  await page.waitForTimeout(80);expect(String((await body()).frame)).toMatch(/^guardian-idle-/);expect(await body()).toMatchObject({width:44.8,height:44.8,originX:.5,originY:.5,visible:true,rotation:0});await shot('idle');
+  await page.waitForTimeout(80);expect(String((await body()).frame)).toMatch(/^guardian-idle-/);expect(await body()).toMatchObject({width:67.2,height:67.2,originX:.5,originY:.5,visible:true,rotation:0});await shot('idle');
   if(viewport.width===844){
     await page.setViewportSize({width:390,height:844});await page.evaluate(()=>{const e=window.__PIXEL__!.world.guardians[0]!;e.x=55;e.y=45;});await page.waitForTimeout(65);await shot('portrait-idle');
     await page.evaluate(()=>{const e=window.__PIXEL__!.world.guardians[0]!;e.x=140;e.y=-40;});await page.setViewportSize(viewport);await page.waitForTimeout(65);

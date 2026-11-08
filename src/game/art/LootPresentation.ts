@@ -3,6 +3,7 @@ import { LOOT_BALANCE as C } from '../config/gameBalance';
 import type { Settings } from '../services/storage';
 import type { World } from '../systems/World';
 import { LOOT_COLORS } from '../loot/types';
+import {selectAsset,visualDimensions} from './assetRegistry';
 
 export class LootPresentation {
   private graphics: Phaser.GameObjects.Graphics;
@@ -35,7 +36,8 @@ export class LootPresentation {
     for (const chest of w.loot.chests) seal(chest.x, chest.y, 13, 0xd8b476, chest.born, true);
     for (const item of w.artifacts.items) seal(item.x, item.y, 12, 0xffd77c, item.born, true);
     for (const guardian of w.guardians) {
-      g.fillStyle(0x172c39).fillRect(guardian.x - 22, guardian.y - 28, 44, 4).fillStyle(0xffd77c).fillRect(guardian.x - 21, guardian.y - 27, 42 * guardian.hp / guardian.maxHp, 2);
+      const top=guardian.y-visualDimensions(selectAsset('guardian')).height/2-6;
+      g.fillStyle(0x172c39).fillRect(guardian.x - 22, top, 44, 4).fillStyle(0xffd77c).fillRect(guardian.x - 21, top+1, 42 * guardian.hp / guardian.maxHp, 2);
     }
   }
   clear() { this.graphics.clear(); this.trail = []; this.lastTrailAt = 0; }

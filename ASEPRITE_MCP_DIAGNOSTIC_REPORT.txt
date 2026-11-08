@@ -1,0 +1,274 @@
+ОТЧЁТ О ДИАГНОСТИКЕ ASEPRITE MCP — PIXEL SURVIVOR
+Дата сохранения: 2026-11-07 15:26:06 +03:00
+Проект: C:\Users\Novarg\Desktop\PixelSurvivor
+
+1. ИТОГ
+
+MCP подключён: ДА — сервер mcp__aseprite отвечает.
+Инструментов доступно: 65 в текущей сессии, а не ожидаемые 73.
+Aseprite.exe найден: ДА.
+Путь: C:\Program Files\Aseprite\Aseprite.exe
+Версия CLI: Aseprite 1.3.18.6-x64.
+Версия Lua runtime Aseprite: 1.3.18.6.
+Lua API: 41.
+CLI: РАБОТАЕТ по полному пути; MCP cli --version завершился с exitCode 0.
+Batch: РАБОТАЕТ.
+Live: НЕ РАБОТАЕТ — подключённого клиента Aseprite нет.
+MCP Bridge: НЕ УСТАНОВЛЕН.
+Тестовая анимация: УСПЕШНО — 32×32, 3 кадра, экспорт PNG и GIF.
+
+Вывод: пакетная обработка через MCP доступна и проверена созданием, сохранением,
+повторным чтением и экспортом тестовой анимации. Для live требуется установка
+MCP Bridge и подключение Aseprite.
+
+2. ПОЛНЫЙ ДИАГНОСТИЧЕСКИЙ РЕЗУЛЬТАТ STATUS
+
+Вызван инструмент mcp__aseprite__status с аргументами {}.
+Первый и повторный вызовы вернули одинаковый диагностический JSON:
+
+{
+  "executable": "C:\\Program Files\\Aseprite\\Aseprite.exe",
+  "batch": {
+    "apiVersion": 41,
+    "mode": "batch",
+    "os": "Windows NT 10.0.19045",
+    "runtime": "0.1.1",
+    "sprites": 0,
+    "ui": false,
+    "version": "1.3.18.6"
+  },
+  "live": {
+    "port": 41234,
+    "listening": true,
+    "connected": false
+  },
+  "extensionInstalled": false,
+  "workDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor"
+}
+
+3. ДОСТУПНЫЕ ИНСТРУМЕНТЫ
+
+Обнаружено 65 инструментов с префиксом mcp__aseprite__.
+Ниже приведены имена без этого префикса:
+
+01. add_frames
+02. add_layer
+03. add_tag
+04. api_docs
+05. app_state
+06. apply_filter
+07. ask_user
+08. canvas_size
+09. change_color_mode
+10. clear
+11. cli
+12. clipboard
+13. close_sprite
+14. convert_layer
+15. copy_cel
+16. crop_sprite
+17. delete_cel
+18. delete_frames
+19. delete_layer
+20. delete_slice
+21. delete_tag
+22. draw_image
+23. draw_text
+24. duplicate_layer
+25. duplicate_sprite
+26. export
+27. export_sprite_sheet
+28. flip_rotate
+29. get_cels
+30. get_palette
+31. get_pixels
+32. get_sprite_info
+33. import_sprite_sheet
+34. install_extension
+35. launch_aseprite
+36. link_cels
+37. list_commands
+38. list_preferences
+39. list_sprites
+40. merge_layers
+41. move_frame
+42. new_sprite
+43. open_sprite
+44. palette_edit
+45. preferences
+46. properties
+47. recent_events
+48. render_preview
+49. replace_color
+50. resize_sprite
+51. run_command
+52. run_lua
+53. save_palette
+54. save_sprite
+55. selection_edit
+56. set_frame_duration
+57. set_palette
+58. set_sprite_properties
+59. status
+60. tilemap
+61. tileset
+62. undo_redo
+63. update_cel
+64. update_layer
+65. update_tag
+
+Инструменты покрывают создание и редактирование спрайтов, кадров, слоёв и cel,
+палитры, импорт и экспорт, предпросмотр, Lua, CLI, тайлмапы, теги и диагностику.
+Причина отличия от ожидаемых 73 инструментов не установлена: 65 — фактически
+предоставленный текущей сессии набор, а не предположение о возможностях сервера.
+
+4. ИСПОЛНЯЕМЫЙ ФАЙЛ И CLI
+
+Проверка Test-Path: True.
+FileName: C:\Program Files\Aseprite\Aseprite.exe
+FileVersion: 1,3,18,6
+ProductVersion: 1,3,18,6
+
+Ответ mcp__aseprite__cli с аргументами {"args":["--version"]}:
+
+{
+  "exitCode": 0,
+  "stdout": "Aseprite 1.3.18.6-x64"
+}
+
+Get-Command aseprite: команда в PATH не найдена (CLI_ON_PATH=False).
+Это не препятствует работе MCP, поскольку сервер использует полный путь.
+Для ручного вызова без изменения PATH можно использовать PowerShell:
+
+& 'C:\Program Files\Aseprite\Aseprite.exe' --version
+
+5. ПРОВЕРКА BATCH BACKEND
+
+Выполнен mcp__aseprite__run_lua с backend="batch",
+mutates=false и save=false. Код вернул сведения о среде Aseprite:
+
+{
+  "apiVersion": 41,
+  "isUIAvailable": false,
+  "sprites": 0,
+  "userConfigPath": "C:\\Users\\Novarg\\AppData\\Roaming\\Aseprite\\",
+  "version": "1.3.18.6"
+}
+
+Затем через MCP выполнены:
+- new_sprite: создание .aseprite, 32×32, RGB, 3 кадра;
+- run_lua: отрисовка оригинального тестового квадрата в каждом кадре;
+- export: экспорт трёх PNG и анимированного GIF;
+- export_sprite_sheet: экспорт PNG-листа и JSON;
+- get_sprite_info: повторное чтение сохранённого спрайта;
+- render_preview: визуальная проверка всех трёх кадров.
+
+Все перечисленные операции успешно завершились.
+
+6. LIVE BACKEND И MCP BRIDGE
+
+Проверка: mcp__aseprite__list_sprites с {"backend":"live"}.
+Инструмент вернул isError=true и точное сообщение:
+
+Error: No live Aseprite is connected. Run launch_aseprite, or use backend='batch'.
+
+Подтверждённые факты:
+- сервер слушает порт 41234: listening=true;
+- клиент Aseprite не подключён: connected=false;
+- status сообщает extensionInstalled=false;
+- каталог пользовательских расширений отсутствует:
+
+C:\Users\Novarg\AppData\Roaming\Aseprite\extensions
+
+Причина недоступности live: отсутствует установленный MCP Bridge,
+подключения Aseprite к live-серверу нет.
+
+Способ исправления ПОСЛЕ разрешения пользователя:
+1. Вызвать mcp__aseprite__install_extension.
+2. Перезапустить Aseprite для загрузки установленного расширения.
+3. Вызвать mcp__aseprite__launch_aseprite.
+4. Если появится запрос разрешений Bridge, проверить и разрешить необходимый
+   доступ для работы расширения.
+5. Повторить status и list_sprites с backend="live".
+   Ожидаемый признак подключения: live.connected=true.
+
+Установка расширения и запуск live в ходе диагностики НЕ выполнялись.
+Конфигурация и разрешения расширений НЕ изменялись.
+
+7. ТЕСТОВАЯ АНИМАЦИЯ
+
+Временная директория:
+
+C:\Users\Novarg\AppData\Local\Temp\pixel-survivor-aseprite-probe-cce8b7c9879b42009d94fdac7e69f5e1
+
+Содержимое:
+- probe.aseprite — исходный спрайт, 541 байт;
+- probe.gif — анимированный GIF, 298 байт;
+- probe_frame_0.png — первый кадр, 166 байт;
+- probe_frame_1.png — второй кадр, 166 байт;
+- probe_frame_2.png — третий кадр, 169 байт;
+- probe_sheet.png — горизонтальный PNG-лист, 244 байта;
+- probe_sheet.json — метаданные PNG-листа, 1176 байт;
+- verification.json — отчёт независимой проверки.
+
+Описание: оригинальный квадрат 8×8 с тёмной рамкой и двумя белыми точками
+перемещается вправо на прозрачном холсте 32×32 и меняет цвет:
+бирюзовый → жёлтый → розовый.
+
+Кадр 1: длительность 120 мс; границы непрозрачных пикселей x=4..11, y=12..19.
+Кадр 2: длительность 160 мс; границы x=12..19, y=12..19.
+Кадр 3: длительность 200 мс; границы x=20..27, y=12..19.
+Общая длительность: 480 мс.
+
+Повторное чтение .aseprite через get_sprite_info подтвердило:
+- ширина 32, высота 32;
+- 3 кадра;
+- frameDurationsMs=[120,160,200];
+- 1 видимый слой "MCP diagnostic only";
+- 3 cel;
+- modified=false после сохранения.
+
+8. ПРОВЕРКА ЭКСПОРТА
+
+Независимый декодер: Windows System.Drawing.
+Результат проверки: PASS; команда проверки завершилась с кодом 0.
+
+Проверено:
+- каждый из трёх PNG имеет размер 32×32;
+- GIF имеет размер 32×32 и содержит 3 кадра;
+- длительности GIF составляют 120, 160 и 200 мс;
+- PNG-лист имеет размер 96×32;
+- JSON содержит 3 записи кадров;
+- в каждом кадре ровно 64 непрозрачных пикселя;
+- положение, цвета и прозрачность каждого PNG соответствуют ожидаемому рисунку;
+- GIF и соответствующие PNG совпадают по видимым RGBA-пикселям;
+- каждый участок PNG-листа совпадает с соответствующим PNG.
+
+Различий на каждом из трёх кадров:
+- PNG против ожидаемого рисунка: 0;
+- GIF против PNG: 0;
+- PNG-лист против PNG: 0.
+
+При сравнении полностью прозрачных пикселей скрытые значения RGB игнорировались;
+альфа-канал сравнивался. Предпросмотр всех трёх кадров визуально просмотрен:
+перемещение, цвет и прозрачный фон соответствуют тесту.
+
+Вспомогательная проверка Python/Pillow обнаружила отсутствие необязательного
+пакета, точная ошибка: ModuleNotFoundError: No module named 'PIL'.
+Установка не выполнялась. Проверка экспорта полностью выполнена через штатный
+Windows System.Drawing; отсутствие Pillow не является блокером Aseprite.
+
+9. ГРАНИЦЫ ВЫПОЛНЕННОЙ РАБОТЫ
+
+Во время исходной диагностики:
+- файлы проекта не изменялись;
+- рабочие анимации Ash Warden не открывались для редактирования и не изменялись;
+- тестовые ресурсы создавались только во временной директории;
+- расширения не устанавливались;
+- конфигурация MCP/Aseprite и системные настройки Windows не менялись;
+- commit, push и deploy не выполнялись.
+
+По последующему запросу пользователя этот TXT-отчёт сохранён в корне проекта:
+
+C:\Users\Novarg\Desktop\PixelSurvivor\ASEPRITE_MCP_DIAGNOSTIC_REPORT.txt
+

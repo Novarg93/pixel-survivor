@@ -1,4 +1,9 @@
+import {LIGHTNING_ULTIMATE_TEXTURE,LIGHTNING_ULTIMATE_URLS} from './lightningUltimatePack';
+import {RegularLightningArt} from './RegularLightningArt';
+import {REGULAR_LIGHTNING_TEXTURE,REGULAR_LIGHTNING_URLS} from './regularLightningPack';
 import {AstralRevenantArt} from './AstralRevenantArt';
+import {FireballArt} from './FireballArt';
+import {FIREBALL_TEXTURE,FIREBALL_URLS,fireballFlightFrame} from './fireballPack';
 import {ASTRAL_REVENANT_TEXTURE,ASTRAL_REVENANT_URLS,astralProjectileFrame} from './astralRevenantPack';
 import {MageAbilityArt} from './MageAbilityArt';
 import { RuneWardenArt } from './RuneWardenArt';
@@ -39,6 +44,9 @@ import { PickupAnimation } from './PickupAnimation';
 import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
+  if(!scene.textures.exists(LIGHTNING_ULTIMATE_TEXTURE))scene.load.atlas(LIGHTNING_ULTIMATE_TEXTURE,import.meta.env.BASE_URL+LIGHTNING_ULTIMATE_URLS.image,import.meta.env.BASE_URL+LIGHTNING_ULTIMATE_URLS.data);
+  if(!scene.textures.exists(REGULAR_LIGHTNING_TEXTURE))scene.load.atlas(REGULAR_LIGHTNING_TEXTURE,import.meta.env.BASE_URL+REGULAR_LIGHTNING_URLS.image,import.meta.env.BASE_URL+REGULAR_LIGHTNING_URLS.data);
+  if(!scene.textures.exists(FIREBALL_TEXTURE))scene.load.atlas(FIREBALL_TEXTURE,import.meta.env.BASE_URL+FIREBALL_URLS.image,import.meta.env.BASE_URL+FIREBALL_URLS.data);
   if(!scene.textures.exists(ASTRAL_REVENANT_TEXTURE))scene.load.atlas(ASTRAL_REVENANT_TEXTURE,import.meta.env.BASE_URL+ASTRAL_REVENANT_URLS.image,import.meta.env.BASE_URL+ASTRAL_REVENANT_URLS.data);
   if(!scene.textures.exists(BRIAR_BEAST_TEXTURE))scene.load.atlas(BRIAR_BEAST_TEXTURE,import.meta.env.BASE_URL+BRIAR_BEAST_URLS.image,import.meta.env.BASE_URL+BRIAR_BEAST_URLS.data);
   if(!scene.textures.exists(RUNE_WARDEN_TEXTURE))scene.load.atlas(RUNE_WARDEN_TEXTURE,import.meta.env.BASE_URL+RUNE_WARDEN_URLS.image,import.meta.env.BASE_URL+RUNE_WARDEN_URLS.data);
@@ -65,7 +73,7 @@ export function entityVisual(entity: RenderEntity, elapsed: number): VisualSelec
   if ('lootKind' in entity) return selectAsset(LOOT_ART[entity.lootKind], lootFrame(entity.lootKind, elapsed));
   if ('lootPool' in entity) return selectAsset('chest', lootFrame('chest', elapsed));
   if ('artifact' in entity) return selectAsset(ARTIFACT_ART[entity.artifact], lootFrame(ARTIFACT_KEYS[entity.artifact], elapsed));
-  return entity.hostile ? selectAsset('hostile', `hostile-${Math.floor(elapsed * 12) % 4}`) : selectAsset('fireball', `fireball-${Math.floor(elapsed * 12) % 4}`);
+  return entity.hostile ? selectAsset('hostile', `hostile-${Math.floor(elapsed * 12) % 4}`) : selectAsset('fireball',fireballFlightFrame(elapsed-(entity.started??elapsed)));
 }
 // Reads simulation state; no timers, inputs, damage, collision bodies or RNG.
 export class GameArt {
@@ -100,10 +108,12 @@ export class GameArt {
   private mageAbilityArt:MageAbilityArt;
   private runeArt:RuneWardenArt;
   private astralArt:AstralRevenantArt;
+  private fireballArt:FireballArt;
+  private regularLightningArt:RegularLightningArt;
   private frozenVisuals=new Map<number,VisualSelection>();
   private frozenRun='';
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { this.runeArt=new RuneWardenArt(scene);this.astralArt=new AstralRevenantArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [ASTRAL_REVENANT_TEXTURE,BRIAR_BEAST_TEXTURE,RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { this.regularLightningArt=new RegularLightningArt(scene);this.fireballArt=new FireballArt(scene);this.runeArt=new RuneWardenArt(scene);this.astralArt=new AstralRevenantArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.castingArt = new MageCastingArt(scene,this.casting); for (const key of [LIGHTNING_ULTIMATE_TEXTURE,REGULAR_LIGHTNING_TEXTURE,FIREBALL_TEXTURE,ASTRAL_REVENANT_TEXTURE,BRIAR_BEAST_TEXTURE,RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), HD_CORE_TEXTURE, RUNNER_TEXTURE, MAGE_TEXTURE, MAGE_CAST_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world); }
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
@@ -140,6 +150,7 @@ export class GameArt {
     sprite.setRotation(this.heroCasting&&cast.active?.ability==='ultimate-lightning'&&cast.frame===4?(world.ultimate.direction.x<0?.12:-.12):0);
   }
   update(world: World, intensity: number, reducedMotion=false, reducedFlash=false) {
+    this.fireballArt.render(world,intensity);this.regularLightningArt.render(world,intensity);
     this.finalArt.render(world,intensity,reducedMotion);
     this.mageAbilityArt.render(world,intensity);this.runeArt.render(world,intensity);this.astralArt.render(world,intensity);
     const liveIds=new Set(world.enemies.map(e=>e.id));for(const id of this.frozenVisuals.keys())if(!liveIds.has(id))this.frozenVisuals.delete(id);
@@ -221,6 +232,8 @@ export class GameArt {
       mageAbilities:this.mageAbilityArt.diagnostics(),
       runeWarden:this.runeArt.diagnostics(),
       astralRevenant:this.astralArt.diagnostics(),
+      fireball:this.fireballArt.diagnostics(),
+      regularLightning:this.regularLightningArt.diagnostics(),
       casting: {...this.casting.view(this.worldTime),...this.castingArt.diagnostics(),bodyFrame:this.heroFrame},
       playerHealth: this.playerHealth.diagnostics(),
       textureBytes: textures.reduce((n, key) => { const source = this.scene.textures.get(key).getSourceImage() as HTMLCanvasElement; return n + source.width * source.height * 4; }, 0),
@@ -234,5 +247,5 @@ export class GameArt {
       actors: this.scene.children.getAll().filter(o => o.type === 'Sprite' && o.active).map(o => { const s = o as Phaser.GameObjects.Sprite; return { texture: s.texture.key, frame: s.frame.name, width: s.displayWidth, height: s.displayHeight, x: s.x, y: s.y, rotation:s.rotation, alpha:s.alpha, tint:s.tintTopLeft, visible:s.visible, originX:s.originX, originY:s.originY }; }),
     };
   }
-  destroy() { this.astralArt.destroy();this.runeArt.destroy();this.mageAbilityArt.destroy();this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
+  destroy() { this.regularLightningArt.destroy();this.fireballArt.destroy();this.astralArt.destroy();this.runeArt.destroy();this.mageAbilityArt.destroy();this.frozenVisuals.clear();this.ultimateArt.destroy();this.finalArt.destroy(); this.encounterGround.destroy(); this.encounterFeedback.clear(); this.castingArt.destroy(); this.playerHealth.destroy(); for (const image of [...this.shadows, ...this.cleaves, ...this.runnerCorpses, ...this.packedCorpses, ...this.bossCorpses, ...this.pickupImages]) image.destroy(); this.pickupImages = []; this.pickups.clear(); this.bossCorpses = []; this.bosses.clear(); for (const image of this.guardianCorpses) image.destroy(); this.guardianCorpses = []; this.elites.destroy(); this.guardian.clear(); this.shadows = []; this.cleaves = []; this.runnerCorpses = []; this.packedCorpses = []; this.runner.destroy(); this.packed.clear(); }
 }

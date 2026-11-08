@@ -1,4 +1,5 @@
 import { WARDEN,wardenTexture } from './ashWardenPack';
+import {FIREBALL_TEXTURE,FIREBALL_VFX,FIREBALL_MANIFEST} from './fireballPack';
 import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
 import { BRIAR_BEAST_TEXTURE, briarBodyFrame } from './briarBeastPack';
 import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
@@ -54,18 +55,18 @@ export const ASSET_REGISTRY = {
   rusher: packedActor(), splitter: packedActor(),
   tankElite: { ...packedActor(1.6), adornment: 'quartz-mantle' }, casterElite: { ...packedActor(1.4), adornment: 'bone-crescent' },
   rusherElite: { ...packedActor(1.4), adornment: 'thorn-collar' }, splitterElite: { ...packedActor(1.4), adornment: 'gilded-seams' },
-  guardian: { ...hd(128, 128, .35, 'actor', { idle: 13, walk: 0, hurt: 0, death: 0 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 128, height: 128 } },
+  guardian: { ...hd(128, 128, .525, 'actor', { idle: 13, walk: 0, hurt: 0, death: 0 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 128, height: 128 } },
   ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
   charger: { ...bossActor(), source:{kind:'atlas',key:BRIAR_BEAST_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: {...bossActor(ASTRAL_VFX.bodyScale),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},clips:{idle:1,walk:16,hurt:0,death:0}},
   runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, origin:{x:104/128,y:.5} },
   astralVolley:{...hd(32,32,ASTRAL_VFX.projectileSize/32,'projectile'),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},origin:{x:ASTRAL_VFX.projectilePivot,y:.5}},
-  fireball: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
+  fireball: { ...hd(FIREBALL_MANIFEST.canvas.width,FIREBALL_MANIFEST.canvas.height,FIREBALL_VFX.scale,'projectile'),source:{kind:'atlas',key:FIREBALL_TEXTURE,width:FIREBALL_MANIFEST.canvas.width,height:FIREBALL_MANIFEST.canvas.height},origin:{x:FIREBALL_VFX.originX,y:FIREBALL_VFX.originY},clips:{...single,idle:FIREBALL_MANIFEST.clips.idle.frameCount} }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
   xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
   artifactHealth: lootAsset(16, 1.15), artifactDamage: lootAsset(16, 1.15), artifactSpeed: lootAsset(16, 1.15), artifactCooldown: lootAsset(16, 1.15), artifactExperience: lootAsset(16, 1.15),
   shadow: hd(20, 8, 1, 'effect'), cleave: hd(48, 48, 1, 'effect', { idle: 4, walk: 0, hurt: 0, death: 0 }),
   grove: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
   darkForest: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
-  frost: { ...drawn('MageMagic:frost'), status: 'hd-integrated' }, lightning: { ...drawn('MageMagic:lightning'), status: 'hd-integrated' }, meteor: { ...drawn('MageMagic:meteor'), status: 'hd-integrated' },
+  frost: { ...drawn('MageMagic:frost'), status: 'hd-integrated' }, lightning: { ...drawn('RegularLightningArt'), status: 'hd-integrated' }, meteor: { ...drawn('MageMagic:meteor'), status: 'hd-integrated' },
   shield: { ...drawn('MageMagic:shield'), status: 'hd-integrated' }, whirlwind: { ...drawn('WarriorMagic:whirlwind'), status: 'hd-integrated' }, slam: { ...drawn('WarriorMagic:slam'), status: 'hd-integrated' },
   blades: { ...drawn('WarriorMagic:blades'), status: 'hd-integrated' }, iron: { ...drawn('WarriorMagic:iron'), status: 'hd-integrated' }, hit: { ...drawn('CombatFeedback:hit'), status: 'hd-integrated' }, death: { ...drawn('CombatFeedback:death'), status: 'hd-integrated' },
   buffHaste: { ...drawn('LootPresentation:haste'), status: 'hd-integrated' }, buffFury: { ...drawn('LootPresentation:fury'), status: 'hd-integrated' },

@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-fireball.mjs",
+  "width": 928,
+  "height": 528,
+  "rgbaBytes": 1959936,
+  "frameCount": 48,
+  "canvas": {
+    "width": 112,
+    "height": 84
+  },
+  "pivot": {
+    "x": 65,
+    "y": 42
+  },
+  "padding": 2,
+  "columns": 8,
+  "sources": {
+    "art/main-hero-mage/abilities/fireball/fireball-forming.png": "980d0bbf726e61470973331308f79e2c0da8d1c922cf9f05a6a20101359672bf",
+    "art/main-hero-mage/abilities/fireball/fireball-forming.gif": "3c2e7e60807dc04e82b12f4a97ea0d527c1f70883c36d1ea0b5a3aecf0d8332c",
+    "art/main-hero-mage/abilities/fireball/fireball-forming.json": "4ea40d0e5e69db9e626d5d46c02df1815392325cf8db1ab8e9c3f3edd23b5655",
+    "art/main-hero-mage/abilities/fireball/fireball-idle.png": "0a56101ffcf074b548ebc37115ca8baa8c55238942a1e89ece5dadc0fb654424",
+    "art/main-hero-mage/abilities/fireball/fireball-idle.gif": "842ce1c0cda25563033805c7b3196de5feef30c3f4b09280720d9614201d7c61",
+    "art/main-hero-mage/abilities/fireball/fireball-idle.json": "f5ef6079c37f5bbdb9877f2ef8241e71fa6b461aaa92dc81e12033c3813167c8",
+    "art/main-hero-mage/abilities/fireball/fireball-explosion.png": "a5fb1c7bf1423912e23719f956df2606b2d8396e1c13606fa7f07fb66cbbcc38",
+    "art/main-hero-mage/abilities/fireball/fireball-explosion.gif": "f0604c9c5c673230380e2af8a7c088768c56ebfd7d8fe8ae8ee4c7a505cbad09",
+    "art/main-hero-mage/abilities/fireball/fireball-explosion.json": "fecc8a62698a7f929c3d07c898c76b27020a0aa2c3a691f6cca904b27ba9f3ad"
+  },
+  "clips": {
+    "forming": {
+      "frameCount": 24,
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "sourceCanvas": {
+        "w": 91,
+        "h": 32
+      },
+      "sourcePivot": {
+        "x": 63,
+        "y": 17
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 8,
+          "pixelSHA256": "d79ae312e505102a898994e26463321dbae59e4817eb5626330b710376bf7061"
+        },
+        {
+          "index": 1,
+          "visible": 10,
+          "pixelSHA256": "bd64e1264c377b2826cf5889ced8753a662145ada1d3b0a7292eff5963f74c5b"
+        },
+        {
+          "index": 2,
+          "visible": 18,
+          "pixelSHA256": "5383cd4b6489baff0fe61814d77a79535afe0b5d856e87f2f630505e00641317"
+        },
+        {
+          "index": 3,
+          "visible": 31,
+          "pixelSHA256": "9505a641aaf23ff00a34bf896f4715965d27ac8b26e03d380a1ce7b5d3db05f2"
+        },
+        {
+          "index": 4,
+          "visible": 42,
+          "pixelSHA256": "51411713f5020e8ed86d2c374d8a9682730bedec2a709c71855219d0247ee436"
+        },
+        {
+          "index": 5,
+          "visible": 59,
+          "pixelSHA256": "2e7160522e960eb939ca34b2aac58697239c88d2b178d49882cab496c742e3c2"
+        },
+        {
+          "index": 6,
+          "visible": 75,
+          "pixelSHA256": "744663480a5b600b7e928146286189743c41821792b48cce33a755eb9298577b"
+        },
+        {
+          "index": 7,
+          "visible": 104,
+          "pixelSHA256": "9d9e20789b045863ee675d40dcb3a18813286552f77459264129d834fc68279a"
+        },
+        {
+          "index": 8,
+          "visible": 125,
+          "pixelSHA256": "7cde80c55868c7c2c2234be42d36de68873bc14622343547275b2ea05e262d53"
+        },
+        {
+          "index": 9,
+          "visible": 139,
+          "pixelSHA256": "db2960b8c087d4b22fa0a69bd852ad15be28a27442a8e95ecc4bc8d4ff1f5c7d"
+        },
+        {
+          "index": 10,
+          "visible": 173,
+          "pixelSHA256": "14b644018f2605d733e9645cb229bd89438a94a362d6dc50926fd9306e735f5e"
+        },
+        {
+          "index": 11,
+          "visible": 187,
+          "pixelSHA256": "a4118a95986957539a6dc14136cebf5e1bf5114442d1d56862a226c81a3d6e73"
+        },
+        {
+          "index": 12,
+          "visible": 251,
+          "pixelSHA256": "49e0d3dc83a514b5711cffb6a399583042c0dbb60791d3050b1a8dc5e2cefeb4"
+        },
+        {
+          "index": 13,
+          "visible": 314,
+          "pixelSHA256": "c8c8b55b05b5e7a7ed7b02d0d1c1861b6b3aabe7cde593e729a9f79407c4fbd7"
+        },
+        {
+          "index": 14,
+          "visible": 371,
+          "pixelSHA256": "2095940cf554faa705e6a9096fb54413eae70fe651c718050403d714ab97560f"
+        },
+        {
+          "index": 15,
+          "visible": 432,
+          "pixelSHA256": "c2ede62c024d846295adb79ae32f5b598eaa5152c134d32476e8c9de3385e94d"
+        },
+        {
+          "index": 16,
+          "visible": 515,
+          "pixelSHA256": "9ccbadb6c0d4ca4e28d004a183c7f7ac572364eb1f21efa52bdf4468544cf0e7"
+        },
+        {
+          "index": 17,
+          "visible": 574,
+          "pixelSHA256": "c24aa75caa01a271223628a4618c4a5fd0ab4117fa250c45038e9fd4299e4038"
+        },
+        {
+          "index": 18,
+          "visible": 697,
+          "pixelSHA256": "7a748346482a62c070af0bbab761167901d57b77ea42dcd81995bc68c867a334"
+        },
+        {
+          "index": 19,
+          "visible": 800,
+          "pixelSHA256": "68dc9368acd9d98c09c52217d045228e8c330013d1abc602b2879a69ac94b835"
+        },
+        {
+          "index": 20,
+          "visible": 806,
+          "pixelSHA256": "9cd1a18e6b9ed16295f875c5d22d804a2010eb06dd2aa61da558c7482d407bcd"
+        },
+        {
+          "index": 21,
+          "visible": 702,
+          "pixelSHA256": "3a6ae216e7006139fa2e2615b343cdc18add979c7d16a625bbf661b39d8acccb"
+        },
+        {
+          "index": 22,
+          "visible": 701,
+          "pixelSHA256": "ff0c2bee8ce5c6a5249ca21ee110364f54479127d7bd439db612cbe117bf478c"
+        },
+        {
+          "index": 23,
+          "visible": 665,
+          "pixelSHA256": "3dab8edd5ae8d1ab57d801ddbe6d4432c40844d1b677756f76576b6c1a909475"
+        }
+      ]
+    },
+    "idle": {
+      "frameCount": 12,
+      "durationsMs": [
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83
+      ],
+      "sourceCanvas": {
+        "w": 74,
+        "h": 28
+      },
+      "sourcePivot": {
+        "x": 63,
+        "y": 15
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 679,
+          "pixelSHA256": "7a9c09f4d2de7de5eaaa29f554ab8cfddf5d1d87ab200daa92872588e144acaf"
+        },
+        {
+          "index": 1,
+          "visible": 682,
+          "pixelSHA256": "2689cb966b7fdacf77af6e1b0749df31baaf160a2ffc4085aeeed2ed0593ad5e"
+        },
+        {
+          "index": 2,
+          "visible": 692,
+          "pixelSHA256": "a05cd790919d2f07dad10a6c5949b9eb74998035cf289886c2eb4fddcc0fa8a9"
+        },
+        {
+          "index": 3,
+          "visible": 678,
+          "pixelSHA256": "2267a66187836df66e5cce183aa53465724350c4960c871e3b21d8fdf9200e35"
+        },
+        {
+          "index": 4,
+          "visible": 678,
+          "pixelSHA256": "5f2cc77dc025eb1c6c3c8e774ecf459bbee5f148afddece939f518f3711ae9f5"
+        },
+        {
+          "index": 5,
+          "visible": 644,
+          "pixelSHA256": "6c3427aa01e92d6d2ac88ee74a6456419b8dd1688dba90b6d50b3d34af0b2286"
+        },
+        {
+          "index": 6,
+          "visible": 672,
+          "pixelSHA256": "16c86c8d2b10c97f11c04ec12c5b7b1157a7746091293c1e427b2db228b110ea"
+        },
+        {
+          "index": 7,
+          "visible": 679,
+          "pixelSHA256": "81a932b2438dd69653737463892c1acc201c74cac50d8e887ba83a8cafa88eb9"
+        },
+        {
+          "index": 8,
+          "visible": 698,
+          "pixelSHA256": "68950ab4798948fc984f6b8c142eb99b42affa087ec3aa7ae7205ec8e3301fe5"
+        },
+        {
+          "index": 9,
+          "visible": 682,
+          "pixelSHA256": "a8f716f8eba437a89b9f05719691bcbc331aa11449215de0b4a07bdee1070a2a"
+        },
+        {
+          "index": 10,
+          "visible": 673,
+          "pixelSHA256": "d7c5de15563ca0fc52247a0b52d45b836244c421dc516e97718a6bda7a631e7d"
+        },
+        {
+          "index": 11,
+          "visible": 647,
+          "pixelSHA256": "cf3cea29e5fda870c7e944daa2a9bc7e534b020949395d50834c5ccd070c72cb"
+        }
+      ]
+    },
+    "explosion": {
+      "frameCount": 12,
+      "durationsMs": [
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71
+      ],
+      "sourceCanvas": {
+        "w": 80,
+        "h": 78
+      },
+      "sourcePivot": {
+        "x": 39,
+        "y": 39
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 39,
+          "pixelSHA256": "e4281cad8324bd0b0673f4218db49063177215feebd5cbde13f3e0a9545f3bb0"
+        },
+        {
+          "index": 1,
+          "visible": 512,
+          "pixelSHA256": "d200a24718a96abd1e49092a7583562297f98c853252be64786f0da7d591a290"
+        },
+        {
+          "index": 2,
+          "visible": 923,
+          "pixelSHA256": "d5214838f568ac47d4e18fa157160c5724ecf83d44ca291b13151fba62a0b131"
+        },
+        {
+          "index": 3,
+          "visible": 1377,
+          "pixelSHA256": "75e2a8ef6fc63cb5d4694dfed556079b948c4ad8fdf416c60feafd95f38f513e"
+        },
+        {
+          "index": 4,
+          "visible": 1721,
+          "pixelSHA256": "1f4e4fdb09c278fac510efe07dd8ebe67faa74d8505a2f81dac9fc5916405d07"
+        },
+        {
+          "index": 5,
+          "visible": 2088,
+          "pixelSHA256": "d1cd7849d82e33c1e95e7f33745acde1056c3fe794bd1ea463bc15d255495dfa"
+        },
+        {
+          "index": 6,
+          "visible": 2301,
+          "pixelSHA256": "abe1e4af0c9046064a92a4999f231d49d58bbddc5007d0cc507e1e7b6c585572"
+        },
+        {
+          "index": 7,
+          "visible": 2145,
+          "pixelSHA256": "2a678e29155491b9a1ad87bc9785728628b5352bbee58eeaeac05e105d4e3846"
+        },
+        {
+          "index": 8,
+          "visible": 1820,
+          "pixelSHA256": "20aaeb65abb48e2ba1f43e688aa3d30f740c31190c21deefbb2612ed48321f96"
+        },
+        {
+          "index": 9,
+          "visible": 969,
+          "pixelSHA256": "7353d4e14f625d9b9d7f373d3e68494468ac201d8b257b199fdaa22fc40456de"
+        },
+        {
+          "index": 10,
+          "visible": 329,
+          "pixelSHA256": "be7bdac9a6a364794e716f5c7c9857d86513620ce5b3f05ffcf0ba2380714e21"
+        },
+        {
+          "index": 11,
+          "visible": 0,
+          "pixelSHA256": "064472034d4d30eef4b30d1f71db4d142ab7f646582e44e062fe897d0b5b7e23"
+        }
+      ]
+    }
+  }
+}

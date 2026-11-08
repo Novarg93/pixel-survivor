@@ -188,7 +188,9 @@ export class GameScene extends Phaser.Scene {
     this.mage.setPosition(this.world.player.x, this.world.player.y);
     if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
     else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
-    this.mage.setAlpha(this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
+    // Keep the sky strike behind an opaque Mage, including a recent-hit blink.
+    const lightningCharging=this.world.ultimate.selected==='lightning'&&this.world.ultimate.casting;
+    this.mage.setAlpha(!lightningCharging&&this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
     const atmosphereStatus=this.world.status==='over'&&this.world.finalEncounter.phase!=='inactive'?'paused':this.world.status;
     this.atmosphere.render(this.visualTime ?? this.world.elapsed, atmosphereStatus, this.preferences, viewport.touch);
     this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.scale.width / zoom, this.scale.height / zoom, viewport.touch ? 0 : 1);

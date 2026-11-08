@@ -19,7 +19,7 @@ export class CombatFeedback {
     drawMobility(g, w, w.mobility, intensity);
     for (const z of w.zones) { if(z.wall||z.necrotic||z.source==='meteor')continue; g.fillStyle(0xf68d57, intensity * 0.12).fillCircle(z.x, z.y, z.radius).lineStyle(1, 0xffb76b, intensity * 0.6).strokeCircle(z.x, z.y, z.radius); for (let i = 0; i < 6; i++) g.fillRect(z.x + Math.cos(i * 4) * z.radius * 0.7, z.y + Math.sin(i * 4) * z.radius * 0.7 - Math.sin(w.elapsed * 7 + i) * 4, 3, 4); }
     for (const e of w.effects) {
-      if(e.kind==='arcane-impact'||e.kind==='runic-judgement'||e.kind==='rune-blink'||e.kind==='astral-impact')continue;
+      if(e.kind==='fireball-impact'||e.kind==='meteor'&&e.source==='fireball'||e.kind==='arcane-impact'||e.kind==='runic-judgement'||e.kind==='rune-blink'||e.kind==='astral-impact')continue;
       if (e.kind === 'cleave') continue; // HD crescent is drawn by GameArt.
       if (e.kind === 'frost' || e.kind === 'shield' || e.kind === 'lightning' || e.kind === 'meteor' && e.color !== 0xff829d) continue;
       const t = Math.min(1, (w.elapsed - e.started) / e.duration), fade = (1 - t) * intensity;

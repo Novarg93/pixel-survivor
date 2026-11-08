@@ -15,7 +15,7 @@ function ring(g: Phaser.GameObjects.Graphics, x: number, y: number, r: number, c
   g.strokePath();
 }
 export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensity: number, skipMeteor: (effect: Effect) => boolean = () => false) {
-  for (const p of w.projectiles) if (!p.hostile) {
+  for (const p of w.projectiles) if (!p.hostile&&p.source!=='fireball') {
     const v = abilityVisual(w.abilities.fireball.level), count = 4 + Math.round(v.power * 4);
     const length = Math.hypot(p.vx, p.vy) || 1, dx = p.vx / length, dy = p.vy / length;
     for (let i = 1; i <= count; i++) { const size = Math.max(1, 3 + v.power * 2 - i * .5); g.fillStyle(i < 3 ? 0xffd38b : 0xc76a44, intensity * (1 - i / (count + 1))).fillRect(Math.round(p.x - dx * i * 3) - size / 2, Math.round(p.y - dy * i * 3) - size / 2, size, size); }
@@ -36,17 +36,7 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
         const a = i * Math.PI * 2 / v.sparks, x = Math.round(e.x + Math.cos(a) * r), y = Math.round(e.y + Math.sin(a) * r);
         g.lineStyle(v.lineWidth, 0xdffff0, fade).lineBetween(x - 2, y, x + 2, y).lineBetween(x, y - 3, x, y + 3);
       }
-    } else if (e.kind === 'lightning' && e.target) {
-      const v = abilityVisual(w.abilities.lightning.level);
-      const dx = e.target.x - e.x, dy = e.target.y - e.y, len = Math.hypot(dx, dy) || 1;
-      const points = Array.from({ length: 7 }, (_, i) => { const n = i / 6, kick = i === 0 || i === 6 ? 0 : ((i + e.id) % 2 ? 1 : -1) * (3 + w.abilities.lightning.level * .35); return { x: Math.round(e.x + dx * n - dy / len * kick), y: Math.round(e.y + dy * n + dx / len * kick) }; });
-      for (const [width, color, alpha] of [[4 + v.power * 3, 0x423354, .4], [2 + v.power * 1.5, 0xaf8cdd, .85], [1 + v.power * .5, 0xf3e5ff, 1]]) {
-        g.lineStyle(width, color, fade * alpha).beginPath(); points.forEach((p, i) => i ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y)); g.strokePath();
-      }
-      if (v.rank >= 3) for (const [i, p] of points.entries()) if (i % 2 && i < 6) g.lineStyle(v.lineWidth, 0xd4b7ff, fade * .8).lineBetween(p.x, p.y, p.x - dy / len * (4 + v.power * 5), p.y + dx / len * (4 + v.power * 5));
-      if (v.capstone) ring(g, e.target.x, e.target.y, 6, 0xf3e5ff, fade, 0, 8);
-      g.fillStyle(0xf3e5ff, fade).fillRect(e.target.x - 2, e.target.y - 2, 4, 4);
-    } else if (e.kind === 'meteor' && e.source !== 'meteor' && e.color !== 0xff829d && !skipMeteor(e)) {
+    } else if (e.kind === 'meteor' && e.source !== 'meteor' && e.source!=='fireball' && e.color !== 0xff829d && !skipMeteor(e)) {
       const v = abilityVisual(w.abilities.meteor.level);
       const r = e.radius * (.3 + t * .7); ring(g, e.x, e.y, r, 0xffb779, fade * .9); ring(g, e.x, e.y, r + 3, 0x9e5d51, fade * .6);
       if (e.color === 0xffae65 && t < .18) g.fillStyle(0xffefb8, intensity * (1 - t / .18) * .38).fillCircle(e.x, e.y, e.radius * .35);
