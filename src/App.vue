@@ -19,6 +19,7 @@ import RunStatistics from './ui/components/RunStatistics.vue';
 import LocalRecords from './ui/components/LocalRecords.vue';
 import { playableMap, type BiomeId } from './game/config/biomes';
 import type { CharacterId } from './game/config/characters';
+import type { PracticeBoss } from './game/config/bossPractice';
 import { navigateGamepad, vPad } from './ui/gamepadNavigation';
 import { INPUT_DEVICE } from './ui/inputDevice';
 import { isPublicCharacter, PUBLIC_CHARACTER } from './game/bootstrap/publicCharacters';
@@ -67,10 +68,11 @@ const off = snapshots.on(value => {
   // Latch/save victory at the fatal hit; show results only after World completes Death A.
   if ((value.status === 'over'||value.outcome==='victory') && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; if(!value.practice){profile.value = withRun(profile.value, runRecord(value)); storageFailed.value = !saveProfile(profile.value);} }
 });
-function start(){startRun(false);}
-function startBossPractice(){startRun(true);}
-function restartCurrent(){if(state.value?.practice)startBossPractice();else start();}
-function startRun(practice:boolean) {
+function start(){startRun(null);}
+function startBossPractice(){startRun('ash-warden');}
+function startRunePractice(){startRun('rune-warden');}
+function restartCurrent(){if(state.value?.practice)startRun(state.value.practiceBoss??'ash-warden');else start();}
+function startRun(practice:PracticeBoss|null) {
   const current = mobileViewport();
   if (current.blocked) return;
   if (current.touch && inputDevice.value !== 'gamepad') fullscreen.enter(document.documentElement);
@@ -78,7 +80,7 @@ function startRun(practice:boolean) {
   if(practice)biome.value='grove';
   storageFailed.value=false;
   screen.value = 'game';
-  commands.emit({ type: practice?'boss-practice':'restart', character: PUBLIC_CHARACTER, biome: biome.value });
+  commands.emit({ type: practice?'boss-practice':'restart', practiceBoss:practice??undefined, character: PUBLIC_CHARACTER, biome: biome.value });
 }
 function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value); commands.emit({ type: 'settings', value }); }
 function openSettings() { commands.emit({ type: 'pause' }); screen.value = 'settings'; }
@@ -98,14 +100,14 @@ onUnmounted(() => { off(); offMetrics(); offDevice(); offNotice(); offPadUi(); c
   <div ref="mount" class="game-mount"></div><div class="vignette"></div>
   <div v-if="controllerNotice" class="controller-notice" role="status">{{ controllerNotice }}</div>
   <div v-if="debug && debugState" class="debug-hud">FPS {{ debugState.fps.toFixed(1) }} · update {{ debugState.updateMs.toFixed(2) }}ms<br>mobs {{ debugState.enemies }} / bullets {{ debugState.projectiles }} / XP {{ debugState.orbs }} / bosses {{ debugState.bosses }}<br>chunks {{ debugState.chunks }} / sprites {{ debugState.sprites }} + {{ debugState.pooledSprites }} pooled</div>
-  <MainMenu v-if="state?.status === 'menu'" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" />
+  <MainMenu v-if="state?.status === 'menu'" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @rune-practice="startRunePractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" />
   <template v-if="state && state.status !== 'menu'">
    <UltimateControl :state="state" @activate="commands.emit({ type: 'ultimate' })" />
    <GameHUD :state="state" @pause="commands.emit({ type: 'pause' })" /><BossBars v-if="state.finalEncounter.phase==='inactive'" :bosses="state.bosses" /><FinalBossBar v-else :state="state" />
    <VirtualJoystick v-if="state.status === 'playing' || state.status === 'upgrade'" @move="commands.emit({ type: 'move', input: $event })" />
    <LevelUpModal v-if="state.status === 'upgrade'" :choices="state.choices" :level="state.level - state.pending + 1" :offer="state.offerId" @choose="(id, offer) => commands.emit({ type: 'upgrade', id, offer })" />
    <DialogFrame v-if="state.status === 'paused' && screen === 'game'" label="Пауза" @close="commands.emit({ type: 'resume' })"><small>ЧАЩА ПОДОЖДЁТ</small><h1>Пауза</h1><p>Переведи дух. Твоя магия никуда не исчезнет.</p><div class="button-stack"><button v-pad="() => commands.emit({ type: 'resume' })" @click="commands.emit({ type: 'resume' })">Продолжить →</button><button class="secondary" v-pad="openSettings" @click="openSettings">Настройки</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
-   <DialogFrame v-if="state.status === 'over' && resultsVisible" label="Игра окончена"><p v-if="state.practice" class="muted">Тренировка · результат не записывается в рекорды.</p><small>{{state.outcome==='victory'?'СТРАЖ ПОВЕРЖЕН':'ПОСЛЕДНЯЯ ИСКРА'}}</small><h1 v-if="state.outcome==='victory'">Победа!</h1><h1 v-else>Чаща сильнее.<br>Пока.</h1><button v-if="state.outcome==='victory'" class="victory-restart" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><p>Время {{ formatTime(state.elapsed) }} · Уровень {{ state.level }} · Убийства {{ state.kills }}</p><h2 class="result-score">{{ state.score.toLocaleString('ru-RU') }} <small>ОЧКОВ</small></h2><p v-if="!state.practice" class="previous-best">Предыдущий рекорд: {{ previousBest }} <b v-if="state.score > previousBest">· Новый рекорд!</b></p><div class="run-build"><span v-for="ability in state.abilities.filter(a => a.level > 0)" :key="ability.id">{{ ability.icon }} {{ ability.name }} {{ ability.level }}</span></div><p class="muted">Ростки {{ state.killsByKind.grunt }} · Бегуны {{ state.killsByKind.runner }} · Големы {{ state.killsByKind.tank }} · Стрелки {{ state.killsByKind.caster }} · Боссы {{ state.bossKills }}</p><RunStatistics :state="state" /><LocalRecords v-if="!state.practice" :records="profile.records.slice(0, 3)" /><p v-if="storageFailed" class="muted">Хранилище браузера недоступно. Результат доступен до закрытия вкладки.</p><div class="button-stack"><button v-if="state.outcome!=='victory'" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
+   <DialogFrame v-if="state.status === 'over' && resultsVisible" label="Игра окончена"><p v-if="state.practice" class="muted">Тренировка · результат не записывается в рекорды.</p><small>{{state.outcome==='victory'?(state.practiceBoss==='rune-warden'?'ХРАНИТЕЛЬ РУН ПОВЕРЖЕН':'СТРАЖ ПОВЕРЖЕН'):'ПОСЛЕДНЯЯ ИСКРА'}}</small><h1 v-if="state.outcome==='victory'">Победа!</h1><h1 v-else>Чаща сильнее.<br>Пока.</h1><button v-if="state.outcome==='victory'" class="victory-restart" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><p>Время {{ formatTime(state.practiceElapsed??state.elapsed) }} · Уровень {{ state.level }} · Убийства {{ state.kills }}</p><h2 class="result-score">{{ state.score.toLocaleString('ru-RU') }} <small>ОЧКОВ</small></h2><p v-if="!state.practice" class="previous-best">Предыдущий рекорд: {{ previousBest }} <b v-if="state.score > previousBest">· Новый рекорд!</b></p><div class="run-build"><span v-for="ability in state.abilities.filter(a => a.level > 0)" :key="ability.id">{{ ability.icon }} {{ ability.name }} {{ ability.level }}</span></div><p class="muted">Ростки {{ state.killsByKind.grunt }} · Бегуны {{ state.killsByKind.runner }} · Големы {{ state.killsByKind.tank }} · Стрелки {{ state.killsByKind.caster }} · Боссы {{ state.bossKills }}</p><RunStatistics :state="state" /><LocalRecords v-if="!state.practice" :records="profile.records.slice(0, 3)" /><p v-if="storageFailed" class="muted">Хранилище браузера недоступно. Результат доступен до закрытия вкладки.</p><div class="button-stack"><button v-if="state.outcome!=='victory'" v-pad="restartCurrent" @click="restartCurrent">Начать заново</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">В главное меню</button></div></DialogFrame>
   </template>
   <SettingsPanel v-if="screen === 'settings'" :settings="settings" @change="updateSettings" @close="screen = 'game'" />
   <DialogFrame v-if="screen === 'records'" label="Локальные рекорды" @close="screen = 'game'"><small>ТВОЯ ИСТОРИЯ В ЭТОЙ ЧАЩЕ</small><h1>Личные рекорды</h1><LocalRecords :records="profile.records" /><p class="muted">Забегов: {{ profile.statistics.runs }} · Убийств: {{ profile.statistics.kills }}. Данные хранятся локально в этом браузере.</p><button v-pad="() => screen = 'game'" @click="screen = 'game'">Назад</button></DialogFrame>

@@ -1,5 +1,6 @@
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { startBossPractice } from '../bootstrap/startBossPractice';
+import { startRunePractice } from '../bootstrap/startRunePractice';
 import {finalBossScenario} from '../bootstrap/finalBossScenario';
 import { CombatFeedback } from '../art/CombatFeedback';
 import Phaser from 'phaser';
@@ -108,7 +109,7 @@ export class GameScene extends Phaser.Scene {
         if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
         this.world = new World(Date.now(), this.runOptions);
-        if(command.type==='boss-practice')startBossPractice(this.world);else if (command.type !== 'restart') this.world.status = 'menu';
+        if(command.type==='boss-practice'){if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
         for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
         if (window.__PIXEL__) window.__PIXEL__.world = this.world;
       }
@@ -197,7 +198,7 @@ export class GameScene extends Phaser.Scene {
       applyVisual(sprite, visual, pickup ? Math.min(1, 0.4 + Math.max(0, this.world.elapsed - entity.born) * 4) : 1);
       sprite.setVisible(!('homing'in entity&&entity.homing));
       sprite.setFlipX('kind' in entity&&entity.kind==='ashGuard'&&Math.abs(this.world.finalEncounter.attack.direction.x)>.6&&this.world.finalEncounter.attack.direction.x<0);
-      sprite.setRotation('vx' in entity && !entity.hostile ? Math.atan2(entity.vy, entity.vx) : 0);
+      sprite.setRotation('vx' in entity && (!entity.hostile||entity.appearance==='arcane-volley') ? Math.atan2(entity.vy, entity.vx) : 0);
       sprite.setPosition(Math.round(entity.x), Math.round(entity.y - (pickup ? Math.sin((this.world.elapsed - entity.born) * 3) * 1.5 : 0))).setDepth(pickup ? 1 : 'kind' in entity ? entity.y / 10000 : 12);
       const preparingCharge = 'kind' in entity && entity.kind === 'charger' && entity.boss?.phase === 'windup';
       if('kind' in entity&&ultimateFrozen(entity,this.world.elapsed))sprite.setTint(0x96d9ec).setTintMode(Phaser.TintModes.MULTIPLY);
@@ -230,7 +231,10 @@ export class GameScene extends Phaser.Scene {
         this.effects.fillStyle(0xffaf8b).fillTriangle(x + Math.cos(angle) * 6, y + Math.sin(angle) * 6, x + Math.cos(angle + 2.4) * 5, y + Math.sin(angle + 2.4) * 5, x + Math.cos(angle - 2.4) * 5, y + Math.sin(angle - 2.4) * 5);
       }
     }
-    for (const impact of this.world.impacts) if (impact.hostile || impact.source !== 'meteor' && impact.source !== 'slam') this.effects.fillStyle(impact.hostile ? 0xff749e : 0xffb26f, 0.14).fillCircle(impact.x, impact.y, impact.radius).lineStyle(2, impact.hostile ? 0xff749e : 0xffb26f, 0.8).strokeCircle(impact.x, impact.y, impact.radius).lineBetween(impact.x - 6, impact.y, impact.x + 6, impact.y).lineBetween(impact.x, impact.y - 6, impact.x, impact.y + 6);
+    for (const impact of this.world.impacts) {
+      if(impact.appearance==='runic-judgement')continue;
+      if (impact.hostile || impact.source !== 'meteor' && impact.source !== 'slam') this.effects.fillStyle(impact.hostile ? 0xff749e : 0xffb26f, 0.14).fillCircle(impact.x, impact.y, impact.radius).lineStyle(2, impact.hostile ? 0xff749e : 0xffb26f, 0.8).strokeCircle(impact.x, impact.y, impact.radius).lineBetween(impact.x - 6, impact.y, impact.x + 6, impact.y).lineBetween(impact.x, impact.y - 6, impact.x, impact.y + 6);
+    }
     this.measured = { fps: this.game.loop.actualFps, updateMs: performance.now() - started, enemies: this.world.regularCount, projectiles: this.world.projectiles.length, orbs: this.world.orbs.length, effects: this.world.effects.length, bosses: this.world.bosses.length, chunks: this.chunks.count, sprites: this.sprites.size, pooledSprites: this.spareSprites.length, guardians: this.world.guardians.length, artifacts: { items: this.world.artifacts.items.length, allocated: this.world.artifacts.allocated }, radar: { updates: this.radar.updates, markers: this.radar.frame?.markers.length ?? 0, listeners: radarFrames.size }, loot: { items: this.world.loot.items.length, chests: this.world.loot.chests.length, buffs: this.world.buffs.snapshot(this.world.elapsed).length, trail: this.lootPresentation.trailCount, allocatedItems: this.world.loot.allocations.items, allocatedChests: this.world.loot.allocations.chests }, allocations: this.world.allocations };
     if (this.time.now >= this.publishAt) { this.publishAt = this.time.now + 100; snapshots.emit(this.world.snapshot()); if (import.meta.env.DEV) metrics.emit(this.measured); }
   }

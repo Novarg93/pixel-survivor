@@ -22,14 +22,14 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
       <span class="health-accessibility" role="progressbar" aria-label="Здоровье" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>
-    <div class="run-clock"><b>{{ formatTime(state.elapsed) }}</b><small v-if="state.enrage.active && state.finalEncounter.phase==='inactive'" class="enrage-indicator" :aria-label="`Survival Enrage, интенсивность ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.practice?'Тренировка Стража':state.wave }}</small></div>
+    <div class="run-clock"><b>{{ formatTime(state.practiceElapsed??state.elapsed) }}</b><small v-if="!state.practice && state.enrage.active && state.finalEncounter.phase==='inactive'" class="enrage-indicator" :aria-label="`Survival Enrage, интенсивность ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.practice?(state.practiceBoss==='rune-warden'?'Хранитель рун · 1×1':'Тренировка Стража'):state.wave }}</small></div>
     <div class="run-score">
       <div><b>{{ state.score.toLocaleString('ru-RU') }}</b><small>ОЧКИ · {{ state.kills }} УБИЙСТВ</small></div>
       <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ<small v-if="inputDevice === 'gamepad'" class="pause-key">START</small></button>
     </div>
   </header>
-  <EventTimeline v-if="state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
-  <BiomePhaseNotice :state="state" />
+  <EventTimeline v-if="!state.practice && state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
+  <BiomePhaseNotice v-if="!state.practice" :state="state" />
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
   <GameRadar />
   <MobilityControl :state="state" @activate="commands.emit({ type: 'mobility' })" />

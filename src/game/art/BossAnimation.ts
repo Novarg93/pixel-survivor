@@ -3,7 +3,7 @@ import type { Enemy } from '../entities/types';
 import type { ScheduledBossKind as BossKind } from '../config/enemyDefinitions';
 import { isHdBoss, BOSS_CLIPS, type BossFacing, type BossPose } from './bossPack';
 interface Playback { pose: BossPose; facing: BossFacing; started: number; stage: number }
-interface Track { enemy: Readonly<Enemy>; x: number; y: number; time: number; hit: number; hurt: number; attack: number; phase: string; shootingAt: number; slam: number; nextSlam: number; playback: Playback }
+interface Track { enemy: Readonly<Enemy>; x: number; y: number; time: number; frozenShift: number; hit: number; hurt: number; attack: number; phase: string; shootingAt: number; magic: string; slam: number; nextSlam: number; playback: Playback }
 export interface BossCorpse { active: boolean; kind: BossKind; x: number; y: number; started: number; facing: BossFacing; stage: number }
 export class BossAnimation {
   private runId = '';
@@ -12,11 +12,14 @@ export class BossAnimation {
   prepare(w: World) { if (this.runId !== w.runId) { this.clear(); this.runId = w.runId; } for (const e of w.bosses) if (isHdBoss(e.kind)) this.track(e, w); }
   private track(e: Readonly<Enemy>, w: World): Track {
     let t = this.tracks.get(e.id);
-    if (!t) { t = { enemy: e, x: e.x, y: e.y, time: w.elapsed, hit: 0, hurt: -Infinity, attack: -Infinity, phase: e.boss?.phase ?? 'approach', shootingAt: e.shootingAt, slam: -Infinity, nextSlam: w.elapsed, playback: { pose: 'idle', facing: e.x > w.player.x ? 'left' : 'right', started: w.elapsed, stage: e.boss?.stage ?? 1 } }; if (this.tracks.size < 3) this.tracks.set(e.id, t); }
+    if (!t) { t = { enemy: e, x: e.x, y: e.y, time: w.elapsed, frozenShift: 0, hit: 0, hurt: -Infinity, attack: -Infinity, phase: e.boss?.phase ?? 'approach', shootingAt: e.shootingAt, magic: e.boss?.magic?.phase ?? '', slam: -Infinity, nextSlam: w.elapsed, playback: { pose: 'idle', facing: e.x > w.player.x ? 'left' : 'right', started: w.elapsed, stage: e.boss?.stage ?? 1 } }; if (this.tracks.size < 3) this.tracks.set(e.id, t); }
     return t;
   }
   view(e: Readonly<Enemy>, w: World) {
     const t = this.track(e, w), dx = e.x - t.x, dy = e.y - t.y, hit = e.hitUntil > t.hit && e.hitUntil > w.elapsed, phase = e.boss?.phase ?? 'approach';
+    const freeze=e.ultimateFreeze;
+    if(e.kind==='sorcerer'&&freeze&&freeze.updated>t.frozenShift)t.playback.started+=Math.max(0,freeze.updated-Math.max(t.frozenShift,freeze.visualAt));
+    t.frozenShift=freeze?.updated??0;
     if (hit) { t.hit = e.hitUntil; t.hurt = w.elapsed; }
     if (w.elapsed !== t.time || hit) {
       if (t.phase === 'windup' && phase === 'recover' || t.shootingAt > 0 && e.shootingAt === 0) t.attack = w.elapsed;
@@ -25,8 +28,8 @@ export class BossAnimation {
       if (e.kind === 'charger' && phase === 'approach' && Math.hypot(e.x - w.player.x, e.y - w.player.y) < e.radius + 22 && w.elapsed >= t.nextSlam) { t.slam = w.elapsed; t.nextSlam = w.elapsed + 1.2; }
       const slamming = phase === 'approach' && w.elapsed - t.slam < .6;
       const pose: BossPose = phase === 'windup' ? 'windup' : slamming ? 'slam' : hurting ? 'hurt' : phase === 'charge' || w.elapsed - t.attack < 4 / 12 ? 'attack' : phase === 'recover' ? 'recover' : dx * dx + dy * dy > .0001 ? 'walk' : 'idle';
-      if (pose !== t.playback.pose || hit) t.playback = { pose, facing: t.playback.facing, started: pose === 'hurt' ? t.hurt : pose === 'slam' ? t.slam : w.elapsed, stage: e.boss?.stage ?? 1 };
-      t.playback.stage = e.boss?.stage ?? 1; t.x = e.x; t.y = e.y; t.time = w.elapsed; t.phase = phase; t.shootingAt = e.shootingAt;
+      if (pose !== t.playback.pose || hit && (e.kind !== 'sorcerer' || pose === 'hurt') || e.kind === 'sorcerer' && pose === 'windup' && t.magic !== (e.boss?.magic?.phase ?? '')) t.playback = { pose, facing: t.playback.facing, started: pose === 'hurt' ? t.hurt : pose === 'slam' ? t.slam : w.elapsed, stage: e.boss?.stage ?? 1 };
+      t.playback.stage = e.boss?.stage ?? 1; t.x = e.x; t.y = e.y; t.time = w.elapsed; t.phase = phase; t.shootingAt = e.shootingAt; t.magic = e.boss?.magic?.phase ?? '';
     }
     return t.playback;
   }

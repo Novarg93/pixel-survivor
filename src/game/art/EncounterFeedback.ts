@@ -30,6 +30,7 @@ export class EncounterFeedback {
         else for (let i = this.bursts.length - 1; i >= 0; i--) if (this.bursts[i].owner === id) this.bursts.splice(i, 1);
         this.tracks.delete(id); continue;
       }
+      if(e.kind==='sorcerer'){t.phase=phase;t.magic=e.boss?.magic?.phase??'';t.shootingAt=e.shootingAt;continue;}
       if (e.kind === 'charger') {
         if (t.phase === 'charge' && phase === 'recover') this.emit(w, e, 'arrival', color);
         const p = bosses.view(e, w);
@@ -44,8 +45,9 @@ export class EncounterFeedback {
     g.clear(); if (w.status === 'over') return;
     const strength = Math.max(.3, intensity);
     for (const e of [...w.bosses, ...w.guardians]) {
+      if(e.kind==='sorcerer')continue;
       const phase = this.phase(e, w), preparing = phase === 'windup' || phase.endsWith('warning') || phase === 'awakening';
-      const color = e.kind === 'charger' ? 0xd0a477 : e.kind === 'guardian' ? 0xffd78e : e.kind === 'sorcerer' ? 0xc4a0ee : 0x99dbdc;
+      const color = e.kind === 'charger' ? 0xd0a477 : e.kind === 'guardian' ? 0xffd78e : 0x99dbdc;
       if (preparing) {
         const until = e.boss?.until ?? w.guardianSystem.encounters.get(e.id)?.until ?? w.elapsed;
         const p = 1 - Math.min(1, Math.max(0, until - w.elapsed) / .5);

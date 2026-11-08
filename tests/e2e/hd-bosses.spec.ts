@@ -29,22 +29,22 @@ for (const kind of HD_BOSS_KINDS) test(kind + ' real phases, hurt/death and owne
     await page.goto('/?test=1'); if (dark) await page.getByRole('button', { name: 'Роща осколков', exact: true }).click(); await page.getByRole('button', { name: 'Начать забег' }).click();
     await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.elapsed = 1170; w.experience.level = 30; w.options.spawnRate = 0; w.encounterDirector.nextAt = 1e6; w.player.invulnerableUntil = 1e6; for (const a of Object.values(w.abilities)) a.level = 0; w.spawn(kind, { x: 260, y: -30 })!.boss!.until = w.elapsed + 10; }, kind);
     await page.addStyleTag({ content: '.overlay{display:none!important}' });
-    const walks = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { for (const a of window.__PIXEL__!.art().actors) if (a.texture === 'hd-bosses' && String(a.frame).includes('-walk-')) frames.push(String(a.frame)); if (performance.now() - start < 700) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
-    expect(walks).toHaveLength(4);
+    const walks = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { for (const a of window.__PIXEL__!.art().actors) if ((a.texture === 'hd-bosses'||a.texture==='rune-warden-v1') && String(a.frame).includes('-walk-')) frames.push(String(a.frame)); if (performance.now() - start < 700) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
+    if(kind==='sorcerer')expect(walks.length).toBeGreaterThanOrEqual(4);else expect(walks).toHaveLength(4);
     await page.evaluate(() => { const w = window.__PIXEL__!.world, e = w.bosses[0]; e.x = 75; e.y = -30; e.boss!.until = w.elapsed; });
     for (const pose of ['windup', 'attack', 'recover']) {
-      await expect.poll(() => page.evaluate(({ kind, pose }) => window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith(kind + '-') && String(a.frame).includes(`-${pose}-`)), { kind, pose }), { intervals: [10] }).toBe(true);
+      await expect.poll(() => page.evaluate(({ kind, pose }) => window.__PIXEL__!.art().actors.some(a => String(a.frame).startsWith(kind + '-') && (kind==='sorcerer'?String(a.frame).includes(pose==='windup'?'-cast-':pose==='attack'?'-cast-11':'-walk-0'):String(a.frame).includes(`-${pose}-`))), { kind, pose }), { intervals: [10] }).toBe(true);
       await page.evaluate(() => { const w = window.__PIXEL__!.world; w.pause(); const e = w.bosses[0]; w.player.x = e.x - 40; w.player.y = e.y; });
       for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(50); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-${dark ? 'forest' : 'grove'}-${pose}-${width}.png` }); }
       await page.evaluate(() => window.__PIXEL__!.world.resume());
     }
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.bosses[0], 1); });
-    await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().actors.some(a => String(a.frame).includes('-hurt-'))), { intervals: [10] }).toBe(true);
+    await expect.poll(() => page.evaluate(kind => window.__PIXEL__!.art().actors.some(a => kind==='sorcerer'?a.texture==='rune-warden-v1'&&a.tint!==0xffffff:String(a.frame).includes('-hurt-')),kind), { intervals: [10] }).toBe(true);
     await page.locator('canvas').screenshot({ path: `${directory}/${kind}-${dark ? 'forest' : 'grove'}-hurt.png` });
     const reward = await page.evaluate(() => { const w = window.__PIXEL__!.world, e = w.bosses[0], id = e.id; w.shoot({ x: e.x, y: e.y, vx: 1, vy: 0, damage: 1, hostile: true, ownerId: id }); w.damageEnemy(e, 999999); return { chests: w.loot.chests.length, score: w.score, owned: w.projectiles.filter(p => p.ownerId === id).length + w.impacts.filter(i => i.ownerId === id).length }; });
     expect(reward.chests).toBe(1); expect(reward.score).toBeGreaterThanOrEqual(1000); expect(reward.owned).toBe(0);
     const frames = await page.evaluate(async () => { const frames: string[] = [], start = performance.now(); await new Promise<void>(resolve => { const tick = () => { for (const c of window.__PIXEL__!.art().bosses.corpses) frames.push(c.frame); if (performance.now() - start < 670) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
-    expect(frames).toHaveLength(6); evidence.push({ dark, walks, reward, frames });
+    if(kind==='sorcerer'){expect(frames).toHaveLength(1);expect(frames[0]).toMatch(/^sorcerer-1-(left|right)-walk-0$/);}else expect(frames).toHaveLength(6); evidence.push({ dark, walks, reward, frames });
     await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.spawn(kind, { x: w.player.x + 40, y: w.player.y + 20 }); }, kind); await page.waitForTimeout(60);
     await page.evaluate(() => { const w = window.__PIXEL__!.world; w.damageEnemy(w.bosses[0], 999999); }); await page.waitForTimeout(240); await page.evaluate(() => window.__PIXEL__!.world.pause());
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.locator('canvas').screenshot({ path: `${directory}/${kind}-${dark ? 'forest' : 'grove'}-death-${width}.png` }); }

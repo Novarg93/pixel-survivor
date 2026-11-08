@@ -1,0 +1,555 @@
+{
+  "version": 2,
+  "authoring": "scripts/build-rune-warden.mjs",
+  "width": 1056,
+  "height": 1716,
+  "rgbaBytes": 7248384,
+  "frameCount": 101,
+  "sourceCanvas": 512,
+  "canvas": 128,
+  "padding": 2,
+  "bodyPivot": [
+    64,
+    64
+  ],
+  "judgementPivot": [
+    64,
+    64
+  ],
+  "judgementDiameter": 94,
+  "judgementHitFrame": 12,
+  "volleyPivot": [
+    104,
+    64
+  ],
+  "sources": {
+    "art/rune-warden/ancient-rune-archmage.png": "af275c38e81502f67343ecde93da99edeaecbd9d8969f90e40827a2d069bb9b9",
+    "art/rune-warden/anime_it_casting_spe...-1154412044-0.gif": "47e2fdec31dd890e478d924b3fda9f31e1e23c0bb42106e9cf6664567a560737",
+    "art/rune-warden/anime_it_casting_spe...-1154412044-0.png": "60f67aa8eda2efc9e40b7ca118343b28399613821a6c99394fb74aede7530e4b",
+    "art/rune-warden/anime_it_walking_rig...-1745306397-0.gif": "9049f06be77ca2a5c4ccc8936aba1bf14234227e5774365a855d792dd406eadf",
+    "art/rune-warden/anime_it_walking_rig...-1745306397-0.png": "9e5b616a0ff8bd9f18e2afec04eb291654a8e94be86582c43f703620ad01077f",
+    "art/rune-warden/skills/arcane-volley/Animate_this_exact_p...-1107651780-0.gif": "6f61ecd7cf35c5d3ec8c034b1928aa3af17e635af3a8b18ca2d453e27360a718",
+    "art/rune-warden/skills/arcane-volley/Animate_this_exact_p...-1107651780-0.png": "6504b20980c5b945d3cb00b6c1ef3a121bb9d7accfe701cc4b09559bcf8b5c43",
+    "art/rune-warden/skills/arcane-volley/Create_a_single_stat...-1832713892-0.png": "0fd83683c662f6e98d6e04c21092dbc6a0abe6295f145cb2afea0f0c9f2f769b",
+    "art/rune-warden/skills/arcane-volley/make_animation_of_co...-981675602-0.gif": "fe475d4a200f480a51bb33a127f9173d397a0da9939877526ec7a8d66dd4cb2e",
+    "art/rune-warden/skills/arcane-volley/make_animation_of_co...-981675602-0.png": "1f11157e43f490e2d0d5fb61474eb9c8e88faf1e9f6983d4c9b7cea2bf76ac6c",
+    "art/rune-warden/skills/blink/anime_spawn_this_run...-780421823-0.gif": "fd64080b9c5ad140eb168167050e829edc62f3e2f92db748484099559aa17f28",
+    "art/rune-warden/skills/blink/anime_spawn_this_run...-780421823-0.png": "c390b0a6629ece1f0393cd9230c73af01f88b986cd581623716e0dca2914f240",
+    "art/rune-warden/skills/blink/Create_a_pixel_art_t...-909001807-0.png": "23e26a4468713c793c2fab0cb67d6055ea22c9545d30aa43436018f8593599c3",
+    "art/rune-warden/skills/runic-judgement/anime_explosion_of_t...-1338804019-0.gif": "9947d5853ae3d2974102be96da369dacd9de4c7eb3437dbd3215008256a888fc",
+    "art/rune-warden/skills/runic-judgement/anime_explosion_of_t...-1338804019-0.png": "9d151d6ccb7b203898a471df54b9b7f49cbbf58fa2495088ae0db9c9ff991168",
+    "art/rune-warden/skills/runic-judgement/make_a_rune_it_l_wil...-1072504761-0.png": "3df6f2326331e906148a97b5925b4dc5f2a22902ac0f7363e8f3746009850b15"
+  },
+  "clips": {
+    "walk": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/anime_it_walking_rig...-1745306397-0.gif",
+      "sheet": "art/rune-warden/anime_it_walking_rig...-1745306397-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 80592
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 79392
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 85968
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 57024
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 77472
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 57456
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 59856
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 61776
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 77968
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 57056
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 81520
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 84384
+        }
+      ]
+    },
+    "cast": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/anime_it_casting_spe...-1154412044-0.gif",
+      "sheet": "art/rune-warden/anime_it_casting_spe...-1154412044-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 67600
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 72816
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 68240
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 80448
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 74128
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 82192
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 76752
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 82416
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 75648
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 75952
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 80576
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 83888
+        }
+      ]
+    },
+    "volley": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/skills/arcane-volley/Animate_this_exact_p...-1107651780-0.gif",
+      "sheet": "art/rune-warden/skills/arcane-volley/Animate_this_exact_p...-1107651780-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7840
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7072
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7488
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7408
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12640
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13424
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 10560
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 9728
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12096
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 12192
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 8928
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 1232
+        }
+      ]
+    },
+    "volley-impact": {
+      "frameCount": 11,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/skills/arcane-volley/make_animation_of_co...-981675602-0.gif",
+      "sheet": "art/rune-warden/skills/arcane-volley/make_animation_of_co...-981675602-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 4624
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 5584
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 6576
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 4352
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 7216
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 2144
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 688
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 400
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 576
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 608
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 32
+        }
+      ]
+    },
+    "judgement": {
+      "frameCount": 16,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/skills/runic-judgement/anime_explosion_of_t...-1338804019-0.gif",
+      "sheet": "art/rune-warden/skills/runic-judgement/anime_explosion_of_t...-1338804019-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 10784
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 29216
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 32224
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36432
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 37920
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 30560
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 29008
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 13520
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 23760
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 28272
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 52352
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 51840
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36096
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 80,
+          "colorDifferences": 58544
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 240,
+          "colorDifferences": 76832
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 25072,
+          "colorDifferences": 25072
+        }
+      ]
+    },
+    "blink": {
+      "frameCount": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "gif": "art/rune-warden/skills/blink/anime_spawn_this_run...-780421823-0.gif",
+      "sheet": "art/rune-warden/skills/blink/anime_spawn_this_run...-780421823-0.png",
+      "alphaSource": "png",
+      "frames": [
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36512
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 41808
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 57664
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 40816
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 41696
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 29792
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 38896
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 56272
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 30928
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 41808
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 28752
+        },
+        {
+          "durationMs": 150,
+          "alphaDifferences": 0,
+          "colorDifferences": 36672
+        }
+      ]
+    }
+  }
+}

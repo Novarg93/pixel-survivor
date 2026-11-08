@@ -29,6 +29,8 @@ import { BOSS_CAP } from './BossSystem';
 import { EncounterDirector } from './EncounterDirector';
 import { bossBirthAggression, BOSS_MAGIC } from '../config/bossEnrage';
 import { CHARGE_BOSS } from '../config/chargeBoss';
+import { RUNE_WARDEN_VFX } from '../config/runeWarden';
+import { RUNE_PRACTICE, type PracticeBoss } from '../config/bossPractice';
 import { MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
 import type { LegacyCue, GameFeedback } from '../events/gameFeedback';
 import { ScoreSystem } from './ScoreSystem';
@@ -63,7 +65,7 @@ export class World {
   get combatTargets() { return this.enemies.filter(e => this.canDamageTarget(e) && (e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)));  }
   get regularCount() { return this.enemies.filter(e => !e.boss && e.kind !== 'guardian').length; }
   canDamageTarget(e: Enemy) { return e.hp > 0 && this.finalEncounter.canTarget(e); }
-  clearHostileThreats() { this.retainProjectiles(p=>!p.hostile);this.impacts=this.impacts.filter(i=>!i.hostile);this.zones=this.zones.filter(z=>z.ownerId===undefined); }
+  clearHostileThreats() { this.retainProjectiles(p=>!p.hostile);this.impacts=this.impacts.filter(i=>!i.hostile);this.zones=this.zones.filter(z=>z.ownerId===undefined);this.effects=this.effects.filter(e=>{if(e.ownerId===undefined)return true;this.effectPool.release(e);return false;}); }
   clearTemporaryState() {
     this.finalEncounter.cancel();
     this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb(); this.ultimate.clear();
@@ -72,13 +74,14 @@ export class World {
       e.mobilitySlowUntil = e.freezeUntil = e.freezeImmuneUntil = e.novaSlowUntil = e.novaResistUntil = e.frostUntil = e.frostStacks = e.frostEvolutionReadyAt = 0;
       if (e.boss) { e.boss.phase = 'recover'; e.boss.until = Infinity; e.boss.charge = undefined; e.boss.magic=undefined;e.boss.contactSafeUntil=undefined;e.shootingAt = 0; }
     }
-    this.effects = this.effects.filter(e => { if (e.kind !== 'frost' && e.kind !== 'meteor') return true; this.effectPool.release(e); return false; });
+    this.effects = this.effects.filter(e => { if (e.kind !== 'frost' && e.kind !== 'meteor' && e.ownerId === undefined) return true; this.effectPool.release(e); return false; });
     this.buffs.clear(); this.loot.clear(); this.artifacts.clear(); this.guardianSystem.clear(this); this.encounterDirector.clear(); this.impacts = []; this.zones = []; this.retainProjectiles(() => false); this.mobility.clear(); this.enemies = this.enemies.filter(e => e.kind !== 'guardian'); this.player.hp = Math.min(this.player.hp, this.effectiveMaxHp);
   }
   player = { x: 0, y: 0, hp: 100, maxHp: 100, speed: BALANCE.playerSpeed as number, invulnerableUntil: 0 };
   status: 'menu' | 'playing' | 'paused' | 'upgrade' | 'over' = 'playing';
   outcome:'victory'|'defeat'|null=null;
   practice=false;
+  practiceBoss:PracticeBoss|null=null;
   sounds: LegacyCue[] = [];
   feedbackEvents: GameFeedback[] = [];
   feedback(event: GameFeedback) {
@@ -124,10 +127,11 @@ export class World {
   get score() { return this.scoring.score; }
   width = 640; height = 360;
   spawnedRegular = 0;
-  private serial = 0; private spawnClock = new SpawnClock();
+  private serial = 0; private cosmeticSerial = 0; private spawnClock = new SpawnClock();
   constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
   id() { return ++this.serial; }
   spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
+    if(this.practiceBoss==='rune-warden'&&(this.outcome||kind!=='sorcerer'||this.enemies.length>0))return;
     if (this.finalEncounter.active || this.finalEncounter.phase==='defeated' || kind==='ashGuard') return;
     const boss = isBossKind(kind);
     if (!boss && kind !== 'guardian' && this.ultimate.regularSpawnFactor(this.elapsed) === 0) return;
@@ -143,13 +147,14 @@ export class World {
     if(boss&&this.elapsed>=ENDGAME.from){const late=lateBossProfile(this.elapsed,++this.encounterDirector.endgameSpawns,kind==='charger');enemy.boss!.late=late;enemy.boss!.aggression={...aggression,movement:aggression.movement*late.movement,frequency:aggression.frequency*late.frequency};}
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
-  effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number, source?: DamageSource) {
-    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y }, source }); if (effect) this.effects.push(effect); }
+  effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number, source?: DamageSource, ownerId?: number) {
+    if(ownerId!==undefined&&this.status==='over')return;
+    if (this.effects.length < BALANCE.effectCap) { const effect = this.effectPool.acquire({ x: p.x, y: p.y, id: kind==='arcane-impact'||kind==='rune-blink'?--this.cosmeticSerial:this.id(), kind, radius, color, expires: this.elapsed + duration, started: this.elapsed, duration, amount, target: target && { x: target.x, y: target.y }, source, ownerId }); if (effect) this.effects.push(effect); }
   }
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
     if (this.projectiles.length >= BALANCE.projectileCap || (shot.hostile && this.hostileProjectileSlots===0)) return;
-    const projectile = this.projectilePool.acquire({ ...shot, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
+    const projectile = this.projectilePool.acquire({ ...shot, appearance:shot.appearance, started:this.elapsed, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
@@ -167,6 +172,11 @@ export class World {
     if (!enemy.boss && enemy.kind !== 'guardian'&&!ultimateFrozen(enemy,this.elapsed)) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
       this.scoring.recordKill(enemy.kind, enemy.elite);
+      if(this.practiceBoss==='rune-warden'&&enemy.kind==='sorcerer'){
+        enemy.deathSource=source;this.sound('kill');this.effect('death',enemy,12,ENEMIES.sorcerer.color,.45);
+        this.clearOwnedEffects(enemy.id);this.enemies.splice(this.enemies.indexOf(enemy),1);
+        this.outcome='victory';this.status='over';this.clearTemporaryState();return true;
+      }
       if(enemy.finalRole==='boss'){enemy.deathSource=source;this.finalEncounter.finish(this);return true;}
       this.sound('kill');
       enemy.deathSource = source;
@@ -180,8 +190,8 @@ export class World {
     }
     return false;
   }
-  private retainProjectiles(keep: (projectile: Projectile) => boolean) { this.projectiles = this.projectiles.filter(p => { if (keep(p)) return true; this.projectilePool.release(p); return false; }); }
-  clearOwnedEffects(ownerId: number) { this.impacts = this.impacts.filter(i => i.ownerId !== ownerId); this.zones = this.zones.filter(z => z.ownerId !== ownerId); this.retainProjectiles(p => p.ownerId !== ownerId); }
+  private retainProjectiles(keep: (projectile: Projectile) => boolean, dissipate = false) { this.projectiles = this.projectiles.filter(p => { if (keep(p)) return true; if(dissipate&&p.appearance==='arcane-volley')this.effect('arcane-impact',p,16,0xffffff,RUNE_WARDEN_VFX.impact,{x:p.vx,y:p.vy},undefined,undefined,p.ownerId);this.projectilePool.release(p); return false; }); }
+  clearOwnedEffects(ownerId: number) { this.impacts = this.impacts.filter(i => i.ownerId !== ownerId); this.zones = this.zones.filter(z => z.ownerId !== ownerId); this.retainProjectiles(p => p.ownerId !== ownerId);this.effects=this.effects.filter(e=>{if(e.ownerId!==ownerId)return true;this.effectPool.release(e);return false;}); }
   dropXp(at: Point, value: number) {
     const orb = this.orbPool.acquire({ x: at.x, y: at.y, id: this.id(), value, expires: this.elapsed + 50 });
     if (orb) this.orbs.push(orb);
@@ -216,7 +226,7 @@ export class World {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
     if(this.finalEncounter.phase==='dying'){this.finalEncounter.update(this,dt);return;}
-    if(this.elapsed+1e-7>=FINAL_BOSS.at)this.finalEncounter.begin(this);
+    if(this.practiceBoss!=='rune-warden'&&this.elapsed+1e-7>=FINAL_BOSS.at)this.finalEncounter.begin(this);
     const vector = direction(input.x, input.y);
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
     if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
@@ -228,23 +238,23 @@ export class World {
     const profile = profileAt(this.elapsed);
     const cadence=spawnCadenceAt(this.elapsed);
     const spawnFactor=this.ultimate.regularSpawnFactor(this.elapsed);
-    if(this.finalEncounter.active || spawnFactor===0)this.spawnClock.reset();
+    if(this.practiceBoss==='rune-warden'||this.finalEncounter.active || spawnFactor===0)this.spawnClock.reset();
     else if (this.spawnClock.tick(dt*spawnFactor, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
       for (let i = 0; i < cadence.burst; i++) {
         const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
         this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
       }
     }
-    if(!this.finalEncounter.active)this.encounterDirector.update(this);
+    if(this.practiceBoss!=='rune-warden'&&!this.finalEncounter.active)this.encounterDirector.update(this);
     if(this.ultimate.selected==='frost')this.ultimate.update(this);
     advanceUltimateFreeze(this);
-    this.guardianSystem.update(this, dt);
+    if(this.practiceBoss!=='rune-warden')this.guardianSystem.update(this, dt);
     this.enemySystem.update(this, dt);
     this.finalEncounter.update(this,dt);
     if (this.outcome || this.status !== 'playing') return;
     this.mobility.tick(this);
     if (this.ultimate.selected === 'fire') this.ultimate.update(this);
-    this.enemies = this.enemies.filter(e => { const keep = !!e.finalRole || e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
+    this.enemies = this.enemies.filter(e => { const keep = this.practiceBoss==='rune-warden' || !!e.finalRole || e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
       if (this.status !== 'playing') break;
@@ -265,7 +275,7 @@ export class World {
       }
     }
     if (this.status !== 'playing') return;
-    this.retainProjectiles(p => p.expires > this.elapsed && distance(p, this.player) < Math.max(700, Math.hypot(this.width, this.height)));
+    this.retainProjectiles(p => p.expires > this.elapsed && distance(p, this.player) < Math.max(700, Math.hypot(this.width, this.height)),true);
     this.effects = this.effects.filter(e => { if (e.expires > this.elapsed) return true; this.effectPool.release(e); return false; });
     const frozenOwners=new Set(this.enemies.filter(e=>ultimateFrozen(e,this.elapsed)).map(e=>e.id));
     for (const impact of this.impacts.filter(i => i.landAt <= this.elapsed&&!(i.hostile&&i.ownerId!==undefined&&frozenOwners.has(i.ownerId)))) {
@@ -275,7 +285,8 @@ export class World {
       else { for (const enemy of [...this.enemies]) if (distance(impact, enemy) < impact.radius + enemy.radius) this.damageEnemy(enemy, impact.damage, impact.source);
         if (impact.source === 'meteor' && evolved(this, 'meteor')) this.addZone(impact, impact.radius * 0.8, 12 * this.stats.damage * (impact.damageScale ?? 1), 3, 'meteor'); }
       if (!impact.hostile && (impact.source === 'meteor' || impact.source === 'slam')) this.feedback({ type: 'impact', source: impact.source, strength: impact.damageScale ?? 1, target: { x: impact.x, y: impact.y } });
-      this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5, undefined, undefined, impact.hostile ? undefined : impact.source);
+      if(impact.appearance==='runic-judgement')this.effect('runic-judgement',impact,impact.radius,0xffffff,RUNE_WARDEN_VFX.judgement,undefined,undefined,undefined,impact.ownerId);
+      else this.effect('meteor', impact, impact.radius, impact.hostile ? 0xff829d : 0xffae65, 0.5, undefined, undefined, impact.hostile ? undefined : impact.source);
     }
     this.impacts = this.impacts.filter(i => i.landAt > this.elapsed||i.hostile&&i.ownerId!==undefined&&frozenOwners.has(i.ownerId));
     this.zones = this.zones.filter(z => z.expires > this.elapsed);
@@ -298,6 +309,8 @@ export class World {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
       finalEncounter: this.finalEncounter.snapshot(),
       ...(this.practice?{practice:true}:{}),
+      ...(this.practiceBoss?{practiceBoss:this.practiceBoss}:{}),
+      ...(this.practiceBoss==='rune-warden'?{practiceElapsed:Math.max(0,this.elapsed-RUNE_PRACTICE.at)}:{}),
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),

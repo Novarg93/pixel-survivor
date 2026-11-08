@@ -45,14 +45,14 @@ export function drawEnrageDanger(g:Phaser.GameObjects.Graphics,w:World){
   for(const e of w.bosses){
     const b=e.boss!,m=b.magic;if(!b.enrageIndex||!m)continue;
     const color=e.kind==='sorcerer'?0xc2a0ff:0x87e7e9;
-    if(m.phase&&m.target){
+    if(e.kind!=='sorcerer'&&m.phase&&m.target){
       const p=m.phase==='signal'?m.target:e,r=e.radius+9;
-      g.lineStyle(3,0x172534,.9);if(e.kind==='sorcerer')g.strokeRect(p.x-r,p.y-r,r*2,r*2);else g.strokeCircle(p.x,p.y,r);
-      g.lineStyle(1,color,1);if(e.kind==='sorcerer')g.strokeRect(p.x-r,p.y-r,r*2,r*2);else g.beginPath().arc(p.x,p.y,r,.25,Math.PI*1.8).strokePath();
+      g.lineStyle(3,0x172534,.9).strokeCircle(p.x,p.y,r);
+      g.lineStyle(1,color,1).beginPath().arc(p.x,p.y,r,.25,Math.PI*1.8).strokePath();
       for(let i=0;i<Math.min(6,b.enrageIndex);i++){const a=i*Math.PI/3;g.fillStyle(color,1).fillRect(Math.round(p.x+Math.cos(a)*(r+4))-1,Math.round(p.y+Math.sin(a)*(r+4))-1,3,3);}
       if(m.phase==='signal')g.fillStyle(color,.6).fillRect(e.x-5,e.y-18,10,3);
     }
-    if(b.phase==='windup'&&m.phase!=='signal')for(const a of bossVolleyAngles(e))g.lineStyle(1,color,1).lineBetween(e.x+Math.cos(a)*27,e.y+Math.sin(a)*27,e.x+Math.cos(a)*42,e.y+Math.sin(a)*42);
+    if(e.kind!=='sorcerer'&&b.phase==='windup'&&m.phase!=='signal')for(const a of bossVolleyAngles(e))g.lineStyle(1,color,1).lineBetween(e.x+Math.cos(a)*27,e.y+Math.sin(a)*27,e.x+Math.cos(a)*42,e.y+Math.sin(a)*42);
   }
   for(const p of w.projectiles)if(p.homing&&p.expires>w.elapsed){
     const c=GUARDIAN_ORBS[p.homing.variant],r=c.radius,x=Math.round(p.x),y=Math.round(p.y),speed=Math.hypot(p.vx,p.vy)||1;

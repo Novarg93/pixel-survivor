@@ -1,4 +1,6 @@
 import { WARDEN,wardenTexture } from './ashWardenPack';
+import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
+import { ARCANE_VOLLEY } from '../config/runeWarden';
 import type { CharacterId } from '../config/characters';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
@@ -51,7 +53,8 @@ export const ASSET_REGISTRY = {
   rusherElite: { ...packedActor(1.4), adornment: 'thorn-collar' }, splitterElite: { ...packedActor(1.4), adornment: 'gilded-seams' },
   guardian: { ...hd(24, 28, 1.4, 'actor', { idle: 3, walk: 0, hurt: 3, death: 6 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 96, height: 112 } },
   ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
-  charger: bossActor(), sorcerer: bossActor(), eclipse: bossActor(),
+  charger: bossActor(), sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: bossActor(),
+  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, origin:{x:104/128,y:.5} },
   fireball: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
   xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
   artifactHealth: lootAsset(16, 1.15), artifactDamage: lootAsset(16, 1.15), artifactSpeed: lootAsset(16, 1.15), artifactCooldown: lootAsset(16, 1.15), artifactExperience: lootAsset(16, 1.15),
@@ -91,6 +94,7 @@ export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id
   if (kind === 'grunt') return selectAsset(asset, `grunt-${elite ? 'elite' : 'normal'}-${Math.floor(elapsed * 7 + id) % 4}`);
   if (kind === 'runner') return selectAsset(asset, runnerFrame(playback?.pose ?? 'walk', playback?.facing ?? 'right', elapsed - (playback?.started ?? 0)), elite ? 1.4 : 1);
   if (kind === 'guardian') return selectAsset('guardian', guardianFrame('idle', elapsed));
+  if (kind === 'sorcerer') return selectAsset('sorcerer',runeBodyFrame('right','idle',0));
   if (isHdBoss(kind)) return selectAsset(asset, bossFrame(kind, 'right', 'idle', elapsed));
   if (isHdEnemy(kind)) return selectAsset(asset, packedEnemyFrame(kind, 'right', 'walk', elapsed + id / 7), spec.worldScale === 1 && elite ? 1.4 : spec.worldScale);
   return { ...selectAsset(asset, undefined, spec.worldScale === 1 && elite ? 1.4 : spec.worldScale), texture: kind + (spec.clips.walk && Math.floor(elapsed * 5 + id) % 2 ? '-walk' : '') };

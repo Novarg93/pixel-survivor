@@ -38,7 +38,7 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(size.width);
     await page.screenshot({ path: `${directory}/${hero.toLowerCase()}-${size.width}x${size.height}.png` });
   }
-  expect(new Set(requests)).toEqual(new Set(['/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.png`,`/assets/hd/ash-warden-v1/${i}.json`]).flat(), '/assets/hd/ash-warden-melee-combo-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/core.png', '/assets/hd/core.json', '/assets/hd/runner.png', '/assets/hd/runner.json', '/assets/hd/mage.png', '/assets/hd/mage-casting.png', '/assets/hd/mage-casting.json', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/enemies.png', '/assets/hd/enemies.json', '/assets/hd/guardian.png', '/assets/hd/guardian.json', '/assets/hd/bosses.png', '/assets/hd/bosses.json'])); expect(errors).toEqual([]);
+  expect(new Set(requests)).toEqual(new Set(['/assets/hd/rune-warden-v1/atlas.png','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.png`,`/assets/hd/ash-warden-v1/${i}.json`]).flat(), '/assets/hd/ash-warden-melee-combo-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/core.png', '/assets/hd/core.json', '/assets/hd/runner.png', '/assets/hd/runner.json', '/assets/hd/mage.png', '/assets/hd/mage-casting.png', '/assets/hd/mage-casting.json', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/enemies.png', '/assets/hd/enemies.json', '/assets/hd/guardian.png', '/assets/hd/guardian.json', '/assets/hd/bosses.png', '/assets/hd/bosses.json'])); expect(errors).toEqual([]);
 });
 
 test('HD movement, hurt, real contact radius and automatic Cleave retain gameplay behavior', async ({ page }) => {
@@ -76,5 +76,5 @@ test('HD textures, shadows, timers and listeners stay bounded across travel and 
     expect(await page.evaluate(() => window.__PIXEL__!.art().shadows)).toBe(1);
     await page.getByRole('button', { name: 'Начать забег' }).click();
   }
-  expect(loads).toHaveLength(30); expect(new Set(loads).size).toBe(30); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
+  expect(loads).toHaveLength(32); expect(new Set(loads).size).toBe(32); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
 });
