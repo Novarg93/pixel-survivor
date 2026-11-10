@@ -1,0 +1,50 @@
+{
+  "width": 256,
+  "height": 256,
+  "durationsMs": [
+    20,
+    20,
+    20,
+    30,
+    30,
+    30,
+    40,
+    40,
+    30,
+    30,
+    30,
+    20
+  ],
+  "layers": [
+    "Phantom Glow",
+    "Phantom Upper Body",
+    "Phantom Arm Hand",
+    "Small Cast Sparks"
+  ],
+  "slices": [
+    {
+      "bounds": {
+        "height": 256,
+        "width": 256,
+        "x": 0,
+        "y": 0
+      },
+      "color": "#00000000",
+      "name": "shoulder-anchor",
+      "pivot": {
+        "x": 128,
+        "y": 64
+      }
+    }
+  ],
+  "tags": [
+    {
+      "aniDir": "forward",
+      "color": "#000000ff",
+      "from": 1,
+      "name": "Arcane Phantom Cast South",
+      "repeats": 0,
+      "to": 12
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "viewport": [
+    844,
+    390
+  ],
+  "stills": [
+    {
+      "kind": "swordWindup",
+      "age": 0.52,
+      "index": 5
+    },
+    {
+      "kind": "swordActive",
+      "age": 0.1,
+      "index": 7
+    },
+    {
+      "kind": "recovery",
+      "age": 0,
+      "index": 8
+    },
+    {
+      "kind": "recovery",
+      "age": 0.16,
+      "index": 10
+    },
+    {
+      "kind": "recovery",
+      "age": 0.31,
+      "index": 11
+    }
+  ],
+  "playback": [
+    {
+      "time": 0.016680000000000028,
+      "kind": "swordWindup",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 0.03334999999999999,
+      "kind": "swordWindup",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 0.05001999999999995,
+      "kind": "swordWindup",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 0.06667999999999985,
+      "kind": "swordWindup",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 0.08334999999999981,
+      "kind": "swordWindup",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 0.10000999999999971,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.11666999999999961,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.13333999999999957,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.14999999999999947,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.16665999999999936,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.18331999999999926,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.19997999999999916,
+      "kind": "swordWindup",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 0.21663999999999906,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.23330999999999902,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.24996999999999892,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.2666399999999989,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.28330999999999884,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.29996999999999874,
+      "kind": "swordWindup",
+      "index": 2,
+      "fire": 0
+    },
+    {
+      "time": 0.3166399999999987,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.33330999999999866,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.3499799999999986,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.3666499999999986,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.38331999999999855,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.39997999999999845,
+      "kind": "swordWindup",
+      "index": 3,
+      "fire": 0
+    },
+    {
+      "time": 0.4166499999999984,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 0
+    },
+    {
+      "time": 0.4333199999999984,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 0
+    },
+    {
+      "time": 0.44997999999999827,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 0
+    },
+    {
+      "time": 0.46664999999999823,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 0
+    },
+    {
+      "time": 0.4833199999999982,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 0
+    },
+    {
+      "time": 0.49998999999999816,
+      "kind": "swordWindup",
+      "index": 4,
+      "fire": 1
+    },
+    {
+      "time": 0.516649999999998,
+      "kind": "swordWindup",
+      "index": 5,
+      "fire": 3
+    },
+    {
+      "time": 0.533319999999998,
+      "kind": "swordWindup",
+      "index": 5,
+      "fire": 5
+    },
+    {
+      "time": 0.5499799999999979,
+      "kind": "swordWindup",
+      "index": 5,
+      "fire": 6
+    },
+    {
+      "time": 0.5666599999999979,
+      "kind": "swordWindup",
+      "index": 5,
+      "fire": 8
+    },
+    {
+      "time": 0.5833299999999979,
+      "kind": "swordWindup",
+      "index": 5,
+      "fire": 10
+    },
+    {
+      "time": 0.5999999999999979,
+      "kind": "swordActive",
+      "index": 6,
+      "fire": 10
+    },
+    {
+      "time": 0.6166699999999978,
+      "kind": "swordActive",
+      "index": 6,
+      "fire": 10
+    },
+    {
+      "time": 0.6333399999999978,
+      "kind": "swordActive",
+      "index": 6,
+      "fire": 10
+    },
+    {
+      "time": 0.6500099999999978,
+      "kind": "swordActive",
+      "index": 6,
+      "fire": 10
+    },
+    {
+      "time": 0.6666699999999977,
+      "kind": "swordActive",
+      "index": 6,
+      "fire": 10
+    },
+    {
+      "time": 0.6833299999999976,
+      "kind": "swordActive",
+      "index": 7,
+      "fire": 10
+    },
+    {
+      "time": 0.6999899999999974,
+      "kind": "swordActive",
+      "index": 7,
+      "fire": 10
+    },
+    {
+      "time": 0.7166699999999975,
+      "kind": "swordActive",
+      "index": 7,
+      "fire": 10
+    },
+    {
+      "time": 0.7333299999999974,
+      "kind": "swordActive",
+      "index": 7,
+      "fire": 10
+    },
+    {
+      "time": 0.7499999999999973,
+      "kind": "recovery",
+      "index": 8,
+      "fire": 10
+    },
+    {
+      "time": 0.7666599999999972,
+      "kind": "recovery",
+      "index": 8,
+      "fire": 10
+    },
+    {
+      "time": 0.7833299999999972,
+      "kind": "recovery",
+      "index": 8,
+      "fire": 10
+    },
+    {
+      "time": 0.7999899999999971,
+      "kind": "recovery",
+      "index": 8,
+      "fire": 10
+    },
+    {
+      "time": 0.816659999999997,
+      "kind": "recovery",
+      "index": 8,
+      "fire": 10
+    },
+    {
+      "time": 0.833329999999997,
+      "kind": "recovery",
+      "index": 9,
+      "fire": 10
+    },
+    {
+      "time": 0.849999999999997,
+      "kind": "recovery",
+      "index": 9,
+      "fire": 10
+    },
+    {
+      "time": 0.866679999999997,
+      "kind": "recovery",
+      "index": 9,
+      "fire": 10
+    },
+    {
+      "time": 0.8833399999999969,
+      "kind": "recovery",
+      "index": 9,
+      "fire": 10
+    },
+    {
+      "time": 0.9000099999999969,
+      "kind": "recovery",
+      "index": 10,
+      "fire": 10
+    },
+    {
+      "time": 0.9166699999999968,
+      "kind": "recovery",
+      "index": 10,
+      "fire": 10
+    },
+    {
+      "time": 0.9333399999999967,
+      "kind": "recovery",
+      "index": 10,
+      "fire": 10
+    },
+    {
+      "time": 0.9500099999999967,
+      "kind": "recovery",
+      "index": 10,
+      "fire": 10
+    },
+    {
+      "time": 0.9666899999999967,
+      "kind": "recovery",
+      "index": 10,
+      "fire": 10
+    },
+    {
+      "time": 0.9833499999999966,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 10
+    },
+    {
+      "time": 1.0000199999999966,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 10
+    },
+    {
+      "time": 1.0166899999999965,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 10
+    },
+    {
+      "time": 1.0333499999999964,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 10
+    },
+    {
+      "time": 1.0500199999999964,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 10
+    },
+    {
+      "time": 1.0666799999999963,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 9
+    },
+    {
+      "time": 1.0833499999999963,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 7
+    },
+    {
+      "time": 1.1000199999999962,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 5
+    },
+    {
+      "time": 1.1166799999999961,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 4
+    },
+    {
+      "time": 1.133339999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 2
+    },
+    {
+      "time": 1.150009999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.166679999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.183359999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.200029999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.216699999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.233379999999996,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.2500499999999959,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.2667099999999958,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.2833799999999957,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3000499999999957,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3167099999999956,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3333699999999955,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3500299999999954,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3666899999999953,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.3833499999999952,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.399999999999995,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.416659999999995,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.4333299999999949,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.4499899999999948,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.4666499999999947,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.4833199999999946,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.4999799999999945,
+      "kind": "recovery",
+      "index": 11,
+      "fire": 0
+    },
+    {
+      "time": 1.5166399999999944,
+      "kind": "approach",
+      "index": 0,
+      "fire": 0
+    },
+    {
+      "time": 1.5333099999999944,
+      "kind": "approach",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 1.5499699999999943,
+      "kind": "approach",
+      "index": 1,
+      "fire": 0
+    },
+    {
+      "time": 1.5666499999999943,
+      "kind": "approach",
+      "index": 1,
+      "fire": 0
+    }
+  ],
+  "impact": {
+    "time": 0.5999999999999979,
+    "kind": "swordActive",
+    "index": 6,
+    "fire": 10
+  },
+  "finished": {
+    "time": 0.9833499999999966,
+    "kind": "recovery",
+    "index": 11,
+    "fire": 10
+  },
+  "freezeHeld": true,
+  "pauseHeld": true,
+  "errors": []
+}

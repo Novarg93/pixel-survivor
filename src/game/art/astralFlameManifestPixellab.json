@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "provider": "PixelLab AI",
+  "approvedReview": "art/generated/astral-flame-review-v1/manifest.json",
+  "canvas": 128,
+  "width": 528,
+  "height": 924,
+  "padding": 2,
+  "rgbaBytes": 1951488,
+  "frameCount": 26,
+  "sources": {
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/00.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/01.png": "ee91a58bb861abb9856ba0e68435543f426e31dd8c8243382987615e14f4fd13",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/02.png": "3824ffe0a2b0bfebc19553ac26786a4780aa00b7f45bfbf4a1c9c299d290ab93",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/03.png": "3909046191e1d1a1e195d6259779add647a76ac0af3a3ee2cd4e8107a688f72c",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/04.png": "d446c6c1fb7288dac2104d79ddd97e4f5fa9da3248b3704c2738489e59b4630b",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/05.png": "d78c3f6acc19fd6ded03d0268c4d401ae4d322d8f7aa0b61960f10f6158caff8",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/06.png": "1cca8c2fe534add15dec0cfa9a48ff331cc161a4126618460b80dcc5d53c5d20",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/07.png": "74c7aad6cefe00c5a7c8cce4098ef44a2688292bbc37e2876d32a632922c5780",
+    "art/generated/astral-flame-review-v1/raw/flame-spawn/08.png": "a0595e3667ca8a4c3e4eeed4798db579e82c3948695632cf4e8ff2b304bf9620",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/01.png": "169d775480014d12869bd3667513c1473248f2de58f893c33e87930136122f97",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/02.png": "09845d8ae33ab9aeb2fabf4d6ca4a2ca6c42c073f8552d5a70611963ce745d95",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/03.png": "f04fa6724edd6dd0be11a9338e9ca45cef979ca6e459fec623cc0959544d3db1",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/04.png": "e0242397fa51d27b0e47e03b7f77db934d850a80cbfdbd204110bb45e0c2155d",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/05.png": "3651b46e85b12c73b480d8e08fa1fa8b023722a8f3ad6a4b94bbc29e50516b60",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/06.png": "a6bd45a36e85f985fbf451cd51321d129a5ab97535aac00721243a0887f674b0",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/07.png": "98c1c1ff14f904f7d0358e4914e9921d429e78916ab9c14520d6fc811a4a7de9",
+    "art/generated/astral-flame-review-v1/raw/flame-idle/08.png": "ad0b519f4c5af051104bc6142b013ac663e719d116ecb382fe08ae3f628a5553",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/00.png": "7253a9a99a5c8b8850fee85f1d58247d1f36c7e204216846bc6a13cb7928f092",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/01.png": "44d02173e74bfd4ddb64264d38ac7aaf09cf5fb1fe8c65197ac8f2661452e4d6",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/02.png": "9a608e44780f08edb1ac6c219d789163bd1197245b654a4aa5a88589f72a11c3",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/03.png": "822fb87f7047f6bf89f19ea37f8b26411ed156dd64e46d2eb5051d0979d57c5f",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/04.png": "a61e027e52b946c66f6650de7afce1061141707b5cf89c682527c071e916bb3b",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/05.png": "82a6f57411931b1e4815bd8325eaf85fd30bf0da088f6d7ad0bffa6f608b135b",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/06.png": "2c9fd95fb15dd33ff4e1afc6fe82c9977824702951c57d40a917d35c9fc29487",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/07.png": "3f180409135a6a41649f8ca843203eb8ecb24e72cf8ed8974efdbefb44c664b3",
+    "art/generated/astral-flame-review-v1/raw/flame-vanish/08.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee"
+  },
+  "clips": {
+    "spawn": {
+      "frames": [
+        {
+          "name": "eclipse-flame-ai-spawn-0",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-1",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "6037d93bb2bf80e2a9cb22b1c5a92fea43fe2a6e6cb5e635b65b9d9260fcde7f"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-2",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "64624e80bdeff3e81c1aef2869d7a0edc417f5276eed0f0f54fae2d118b35a14"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-3",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "5bf396907b01995033d8fe7b3d00fa470b0ffc543941a6ac8847b1fa7a64d986"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-4",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "06685ada5df00a7b25f78e0352d23cbb88afe49639c537e512e3a69c5f979c9a"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-5",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "bf147cc6633772ba66b1b65e321fd5628c3f65df3fd8910857117fede9a57a14"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-6",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "beeb5baab82bb9c2dc76a4fc153780760f2a21c17766b34c79c5e38b33c96a7d"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-7",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "6519837386369c01b313182a61228d1dc279af610ba105560bc263e0a4ac01c5"
+        },
+        {
+          "name": "eclipse-flame-ai-spawn-8",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-spawn/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "1629ed52163e411f0116c13a1036873ad4387dd352c32c78997e771207263fef"
+        }
+      ],
+      "frameCount": 9,
+      "durationsMs": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 60,
+        "y": 116
+      },
+      "size": 62
+    },
+    "idle": {
+      "frames": [
+        {
+          "name": "eclipse-flame-ai-idle-0",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "179208e9c86494a6b4ceccb9832003b0c49772a69bce4eda7730a774fd1c056e"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-1",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "1e27b2a273db2cc1387bc356dc6427697c05244d0151d1a2a51cbb9e1ad91742"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-2",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "21e5c8680f62751073df63edac77cdffac597150e39aaac2a3199dc731f1dcbe"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-3",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "41b0b45a6562a95ccd293ae5f0f1138d878fb1e6501f953f3748ff43fdf5a2de"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-4",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "a8e9090b34b542f1a2484447e9d2da9dfa2c6eb50dfc2e4d5f6cf77c0fbf02fa"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-5",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "568a7dad19f180384a6a06a1e85db1bea056e9fd1404c304eae2ddb7b5fa706c"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-6",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "08efda3c593be5590d9a3e68dc729f6b8b7fc6c29265e536f55d184e07534b58"
+        },
+        {
+          "name": "eclipse-flame-ai-idle-7",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-idle/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "d0c5d4758752de09652bb4e73b462214e545b566fca63238d9d97de6ee310a3f"
+        }
+      ],
+      "frameCount": 8,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "pivot": {
+        "x": 60,
+        "y": 116
+      },
+      "size": 62
+    },
+    "vanish": {
+      "frames": [
+        {
+          "name": "eclipse-flame-ai-vanish-0",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "c3956c0cf3497af3517f79feb67e101c960639f79d5dc0712f96b450cbc55067"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-1",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "319584f4f54ad2172ff8936658119a57d2ad676acde3d51b1bd1cfd68ab0ef79"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-2",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "c346a2e2348939b55003ffe33d231f3ccaf7d1a9651a91f9ee344bb2d4cde439"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-3",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "0d7b8cfc1d9415f64a9050088bd0aec68f97f93306dcfc387cf88764722ac79f"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-4",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "c81417df63160d3d5095b63ad0942d5cc73d9312976e491f2dae1b4e27c0d768"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-5",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "f9598ee88e990eabc12fde231f8995da297ce71b0e424303beea737da8e6225f"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-6",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "e2db97a79c743c620c72146a2d8dab6aa505fdcc189c923db392322282365529"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-7",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "389f7269a9b6c0e16c840391c47f69fcb81cfa27caa8bae9cc4d68e50d8f4667"
+        },
+        {
+          "name": "eclipse-flame-ai-vanish-8",
+          "source": "art/generated/astral-flame-review-v1/raw/flame-vanish/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "frameCount": 9,
+      "durationsMs": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 60,
+        "y": 116
+      },
+      "size": 62
+    }
+  }
+}

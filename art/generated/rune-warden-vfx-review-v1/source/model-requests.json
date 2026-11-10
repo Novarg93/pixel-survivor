@@ -1,0 +1,64 @@
+[
+  {
+    "id": "projectile-model",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 7,
+      "palette": [
+        "#2d2b40",
+        "#4d405e",
+        "#756187",
+        "#9d80ae",
+        "#bf9dc8",
+        "#ddd0df",
+        "#b87896"
+      ],
+      "palette_name": "Pixel Survivor Rune Warden muted lavender, bone and slate",
+      "style_image": {
+        "url": "upload:5ccddd36-1eb5-4a06-856f-e92d33d51355",
+        "usage_description": "Use only the Warden's restrained dark fantasy pixel clusters, broad shaded materials and purple/bone colour identity. Do not draw the character or armour."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": false,
+        "shading": true
+      },
+      "seed": 2026111201,
+      "description": "One isolated small hostile RUNIC SHARD PROJECTILE flying horizontally to the RIGHT, for Pixel Survivor top-down dark fantasy. Large128x128 transparent canvas with a modest compact sprite only. A thick pointed chisel-like lavender energy shard, dark slate outer contour, muted purple body, narrow bone-lilac leading edge and a tiny dull rose threat accent. The pointed leading nose is near(104,64), short sparse broken block tail extends left to about(40,64). Total visible height about20px and visible width about64px; most of canvas stays EMPTY. A simple angular rune notch can sit in the shard body. Coarse clean pixel clusters at least2px thick, only5-7 colours, no tiny stippled sparkle noise. Keep a single readable silhouette, a weak short tail, limited narrow highlights. This is a repeatable miniboss projectile, not an ultimate weapon. No white orb, no white filled flame, no neon magenta streaks, no broad bloom, no circular energy bands, no lightning spaghetti, no giant glowing halo, no smoky cloud, no background, no character, no text, no sprite sheet. Preserve24px margins at top/bottom and12px at left/right. One projectile only, a horizontal sprite with its tip pointing right."
+    }
+  },
+  {
+    "id": "blink-model",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 7,
+      "palette": [
+        "#2d2b40",
+        "#4d405e",
+        "#756187",
+        "#9d80ae",
+        "#bf9dc8",
+        "#ddd0df",
+        "#b87896"
+      ],
+      "palette_name": "Pixel Survivor Rune Warden muted lavender, bone and slate",
+      "style_image": {
+        "url": "upload:5ccddd36-1eb5-4a06-856f-e92d33d51355",
+        "usage_description": "Use only the Warden's restrained dark fantasy pixel clusters, broad shaded materials and purple/bone colour identity. Do not draw the character or armour."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": false,
+        "shading": true
+      },
+      "seed": 2026111202,
+      "description": "One isolated modest BLINK GROUND RUNE for the Rune Warden miniboss in Pixel Survivor. A quiet flat ground seal seen from high top-down: a thin BROKEN ANGULAR OCTAGON compressed into a shallow ellipse on the ground, centered exactly at(64,64), about84px wide and44px tall on128x128 TRANSPARENT canvas. Only four broad short rune marks and four separated stepped brace corners around a completely EMPTY TRANSPARENT centre, leaving the Warden feet and terrain readable. Restrained dusty lavender and slate with one narrow pale lilac edge, a few coarse2px clusters, no fine writing. It should resemble a simple old carved ward energised softly, not a spectacular portal. Large blank margins. It is a rune OVERLAY only, NOT a physical stone plate. No caster, no character, no floor, no altar, no tall portal, no central orb, no white or cyan core, no filled disk, no elaborate concentric magic circles, no pentagram, no dense tiny lettering, no neon rays, no bloom, no particles or runic noise. Flat low-key hollow seal, simple and readable at small gameplay scale. All visible pixels remain at least16px from the canvas edges."
+    }
+  }
+]

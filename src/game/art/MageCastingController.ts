@@ -2,21 +2,26 @@ import type { World } from '../systems/World';
 import type { Point } from '../utils/math';
 import type { GameFeedback } from '../events/gameFeedback';
 import { ULTIMATE } from '../config/ultimates';
+import {MOBILITY} from '../config/encounters';
+import {MAGE_PHANTOM_SECONDS,isMagePhantomSpell} from './magePhantomPack';
 
 export type MageSpell = 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield';
-export type MageGesture = MageSpell | 'ultimate-lightning' | 'ultimate-frost' | 'ultimate-fire';
-export const CAST_PRIORITY: Record<MageGesture, number> = { 'ultimate-lightning':100,'ultimate-frost':100,'ultimate-fire':100, fireball: 1, lightning: 2, shield: 3, frost: 4, meteor: 5 };
-export const CAST_DURATION: Record<MageGesture, number> = { 'ultimate-lightning':.975,'ultimate-frost':1.1,'ultimate-fire':.8, fireball: .28, lightning: .3, shield: .34, frost: .48, meteor: 1.3 };
+export type MageGesture = MageSpell | 'blink' | 'ultimate-lightning' | 'ultimate-frost' | 'ultimate-fire';
+export const CAST_PRIORITY: Record<MageGesture, number> = { 'ultimate-lightning':100,'ultimate-frost':100,'ultimate-fire':100,blink:80, fireball: 1, lightning: 2, shield: 3, frost: 4, meteor: 5 };
+export const CAST_DURATION: Record<MageGesture, number> = { 'ultimate-lightning':.975,'ultimate-frost':1.1,'ultimate-fire':.8,blink:MOBILITY.visualDuration, fireball:MAGE_PHANTOM_SECONDS, lightning:MAGE_PHANTOM_SECONDS, shield: .34, frost: .48, meteor: 1.3 };
+export const MAGE_SHIELD_GESTURE_ENABLED=false;
 export interface CastSignal { ability: MageGesture; rank: number; target: Point; origin?: Point; impact?: boolean; duration?: number }
 interface Gesture extends CastSignal { started: number; duration: number; beats: number; lastBeat: number }
 interface Pending extends CastSignal { at: number }
 const priority = (signal: CastSignal) => signal.ability === 'shield' && signal.impact ? 6 : CAST_PRIORITY[signal.ability];
-export function isMageSpell(value: string): value is MageSpell { return !value.startsWith('ultimate-') && Object.hasOwn(CAST_PRIORITY, value); }
+export function isMageSpell(value: string): value is MageSpell { return value!=='blink'&&!value.startsWith('ultimate-') && Object.hasOwn(CAST_PRIORITY, value); }
 
-// Presentation only. One active gesture, one fresh pending gesture, two accents.
+// Presentation only. One body gesture, one pending gesture, two accents,
+// and one queue-free shared directional projection.
 // Uses World.elapsed, never RAF/timers/World.rng and never consumes domain events.
 export class MageCastingController {
   private active?: Gesture;
+  private directional?:Gesture;
   private pending?: Pending;
   private block?: { mode: 'hurt' | 'blink' | 'death'; until: number };
   private accents: Pending[] = [];
@@ -25,7 +30,7 @@ export class MageCastingController {
   requested: Record<MageSpell, number> & Partial<Record<Exclude<MageGesture,MageSpell>,number>> = { fireball: 0, frost: 0, lightning: 0, meteor: 0, shield: 0 };
   started = 0; coalesced = 0; interrupted = 0; dropped = 0; maxPending = 0;
   lastInput?: Pending;
-  clear() { this.active = this.pending = this.block = undefined; this.accents.length = 0; this.lastInput = undefined; }
+  clear() { this.active = this.pending = this.block = undefined; this.directional=undefined;this.accents.length = 0; this.lastInput = undefined; }
   interrupt(mode: 'hurt' | 'blink' | 'death', now: number) {
     if (this.block?.mode === 'death' || this.block?.mode === 'hurt' && this.block.until > now && mode === 'blink') return;
     this.clear(); this.block = { mode, until: mode === 'death' ? Infinity : now + (mode === 'hurt' ? .25 : .18) };
@@ -34,6 +39,7 @@ export class MageCastingController {
     this.active = { ...signal, target: { ...signal.target }, started: now, duration: signal.duration ?? (signal.impact ? .3 : CAST_DURATION[signal.ability]), beats: signal.impact ? 1 : 0, lastBeat: signal.impact ? now : -Infinity }; this.started++;
   }
   advance(now: number) {
+    if(this.directional&&now-this.directional.started>=this.directional.duration)this.directional=undefined;
     this.accents = this.accents.filter(a => now - a.at < .18);
     if (this.block && now >= this.block.until) this.block = undefined;
     if (this.block) return;
@@ -45,9 +51,18 @@ export class MageCastingController {
   }
   request(signal: CastSignal, now: number) {
     this.advance(now); this.requested[signal.ability]=(this.requested[signal.ability]??0)+1; this.lastInput = { ...signal, target: { ...signal.target }, at: now };
+    // Cosmetic only: Shield still refreshes/absorbs damage, but cannot replace
+    // or queue a body gesture while this temporary presentation switch is off.
+    if(signal.ability==='shield'&&!MAGE_SHIELD_GESTURE_ENABLED)return;
     if (this.block) { this.dropped++; return; }
+    if(signal.ability.startsWith('ultimate-'))this.directional=undefined;
+    else if(isMagePhantomSpell(signal.ability)&&this.active?.ability!=='blink'&&!this.active?.ability.startsWith('ultimate-')&&!this.directional){
+      // A single shared projection reacts to the real event even while a long
+      // AOE gesture owns the body queue. Overlapping shots never reset it or grow a queue.
+      this.directional={...signal,target:{...signal.target},started:now,duration:MAGE_PHANTOM_SECONDS,beats:0,lastBeat:-Infinity};
+    }
     this.accents.push(this.lastInput); if (this.accents.length > 2) this.accents.shift();
-    if (this.active?.ability === signal.ability) {
+    if (this.active && (this.active.ability === signal.ability || isMagePhantomSpell(this.active.ability)&&isMagePhantomSpell(signal.ability))) {
       this.coalesced++;
       if (signal.impact) { this.active.beats++; this.active.lastBeat = now; this.active.target = { ...signal.target }; return; }
       // Repetition updates the next stroke, never resets the current stroke.
@@ -59,16 +74,30 @@ export class MageCastingController {
     this.maxPending = Math.max(this.maxPending, this.pending ? 1 : 0);
   }
   observe(w: World) {
-    if (this.run !== w.runId) { this.clear(); this.run = w.runId; this.hp = w.player.hp; this.mobility = w.mobility.sequence; this.ultimateSequence=0; }
+    if (this.run !== w.runId) {
+      this.clear();this.run=w.runId;this.hp=w.player.hp;this.ultimateSequence=0;
+      const age=w.elapsed-w.mobility.started;
+      // Input can teleport before the new scene's first presentation frame.
+      this.mobility=w.mobility.sequence-(age>=0&&age<CAST_DURATION.blink?1:0);
+    }
     const hurt = this.hp - w.player.hp >= 8, blink = this.mobility !== w.mobility.sequence;
     this.hp = w.player.hp; this.mobility = w.mobility.sequence;
     if (w.character !== 'mage') { this.clear(); return; }
     if (w.status === 'over') { this.interrupt('death', w.elapsed); return; }
     if (w.status !== 'playing') return;
-    if (hurt) this.interrupt('hurt', w.elapsed); else if (blink) this.interrupt('blink', w.elapsed);
+    if (hurt) this.interrupt('hurt', w.elapsed);
+    else if (blink) {
+      this.interrupt('blink',w.elapsed);
+      if(this.block?.mode==='blink'){
+        this.block=undefined;
+        const m=w.mobility;this.requested.blink=(this.requested.blink??0)+1;
+        this.begin({ability:'blink',rank:1,origin:{...m.from},target:{x:m.from.x+m.direction.x*80,y:m.from.y+m.direction.y*80}},m.started);
+      }
+    }
     this.advance(w.elapsed);
     const u=w.ultimate;
     if(u.selected && u.sequence>0 && w.elapsed<u.started+CAST_DURATION[`ultimate-${u.selected}`]){
+      this.directional=undefined;
       const ability: MageGesture=`ultimate-${u.selected}`,fresh=u.sequence!==this.ultimateSequence;
       if(fresh){this.ultimateSequence=u.sequence;this.requested[ability]=(this.requested[ability]??0)+1;}
       // Blink is instantaneous; its cosmetic block must not swallow the ultimate
@@ -120,6 +149,7 @@ export class MageCastingController {
       else if (age > a.duration - .14) frame = 5;
     }
     return { mode: this.block?.mode ?? (a ? 'cast' : 'idle'), active: a ? { ...a, target: { ...a.target } } : undefined, frame,
+      directional:this.directional?{...this.directional,target:{...this.directional.target}}:undefined,
       accents: this.accents.map(p => ({ ...p, target: { ...p.target } })), pending: this.pending ? 1 : 0,
       requested: { ...this.requested }, started: this.started, coalesced: this.coalesced, interrupted: this.interrupted, dropped: this.dropped, maxPending: this.maxPending, lastInput: this.lastInput };
   }

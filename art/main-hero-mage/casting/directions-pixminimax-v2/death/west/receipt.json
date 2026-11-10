@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: a82e4bfe-5e4b-4ba1-a256-9a585621eedc\njob_id: a82e4bfe-5e4b-4ba1-a256-9a585621eedc\ndescription: Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 12\nsize: 256x256px\ntransparent: True\nseed: 8111038\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"a82e4bfe-5e4b-4ba1-a256-9a585621eedc\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/a82e4bfe-5e4b-4ba1-a256-9a585621eedc/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 083fdf21-25ea-5382-860b-c94673c98903\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

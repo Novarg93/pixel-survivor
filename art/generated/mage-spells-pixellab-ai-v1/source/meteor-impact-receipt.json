@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "meteor-impact",
+    "args": {
+      "description": "A single modest mage meteor impact at a fixed ground contact near (47,68). The small slate shard hits and breaks into a few small grey chips, a restrained amber flick and a little low dry dust spreading sideways. The short upper-right flame wake collapses into the contact point. Everything cools, shrinks and dissipates completely to the final transparent frame. This is a weak ordinary mage stone, distinctly less dramatic than a boss meteor. Keep the same cool slate / copper pixel palette and large clusters. No giant blast, no expanding bright circle or shockwave ring, no lava crater, no molten cracks, no tall flames, no thick smoke, no camera shake. No more than five readable chips; all pixels remain well inside the transparent canvas.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download",
+      "last_frame_url": "upload:3dfb9cc2-3363-4ad1-b40b-31b5da1723a9",
+      "frame_count": 8,
+      "direction": "south-west",
+      "view": "high top-down",
+      "subject_description": "one small slate-and-bronze mage meteor making a modest rocky dust impact",
+      "initial_pose": "grey stone head near (47,68), diagonal short flame wake points upper right, isolated on transparency",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111014
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 437c3dee-116e-49c2-8c4d-1bbf15fc1419\njob_id: 437c3dee-116e-49c2-8c4d-1bbf15fc1419\ndescription: A single modest mage meteor impact at a fixed ground contact near (47,68). The small slate shard hits and breaks into a few small grey chips, a restrained amber flick and a little low dry dust spreading sideways. The short upper-right flame wake collapses into the contact point. Everything cools, shrinks and dissipates completely to the final transparent frame. This is a weak ordinary mage stone, distinctly less dramatic than a boss meteor. Keep the same cool slate / copper pixel palette and large clusters. No giant blast, no expanding bright circle or shockwave ring, no lava crater, no molten cracks, no tall flames, no thick smoke, no camera shake. No more than five readable chips; all pixels remain well inside the transparent canvas.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111014\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"437c3dee-116e-49c2-8c4d-1bbf15fc1419\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/437c3dee-116e-49c2-8c4d-1bbf15fc1419/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 2bb119c2-a421-5906-8af6-580258780fb6\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

@@ -129,7 +129,7 @@ it('HD drawing never displays a future meteor before its launch or a rooted cage
   const w = quiet(); w.abilities.meteor.level = 5; target(w, 160).freezeUntil = 2; meteor(w);
   const calls: unknown[][] = [], proxy: object = new Proxy({}, { get: (_t, key) => (...args: unknown[]) => { calls.push([key, ...args]); return proxy; } });
   const presentation=new MageAbilityPresentation();
-  const g = proxy as Phaser.GameObjects.Graphics, draw = () => { calls.length = 0; const before = JSON.stringify(w); drawMageMagic(g, w, .7); const views=presentation.views(w,.7);expect(JSON.stringify(w)).toBe(before);expect(calls.filter(c=>c[0]==='fillTriangle'||c[0]==='strokePath')).toHaveLength(0); return views.filter(v=>v.frame.startsWith('meteor-fall-')).length; };
+  const g = proxy as Phaser.GameObjects.Graphics, draw = () => { calls.length = 0; const before = JSON.stringify(w); drawMageMagic(g, w, .7); const views=presentation.views(w,.7);expect(JSON.stringify(w)).toBe(before);expect(calls.filter(c=>c[0]==='fillTriangle'||c[0]==='strokePath')).toHaveLength(0); return views.filter(v=>v.frame.startsWith('mage-meteor-flight-')).length; };
   expect(draw()).toBe(1); w.elapsed = .15; expect(draw()).toBe(2);
   w.elapsed=M.delay+.001;expect(draw()).toBe(1); // First landed; third has not launched.
   w.elapsed = .3; expect(draw()).toBe(2);

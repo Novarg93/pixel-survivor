@@ -1,0 +1,384 @@
+{
+  "date": "2026-11-06",
+  "budgetUSD": 2,
+  "maxAttempts": 4,
+  "model": "rd_pro",
+  "style": "rd_pro__default",
+  "balanceBefore": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 100,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 100,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "models": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "selectedStyle": {
+    "prompt_style": "rd_pro__default",
+    "name": "Default",
+    "description": "Clean modern pixel art style model that allows multiple reference images and extremely detailed prompting.",
+    "group_id": "RD Pro",
+    "required_model": "rd_pro",
+    "required_tab": "tab:image",
+    "min_width": 12,
+    "max_width": 256,
+    "min_height": 12,
+    "max_height": 256,
+    "max_number_of_images": 16,
+    "require_input_image": null,
+    "prompt_requirement": null,
+    "supports_reference_images": true,
+    "supports_frames_duration": false,
+    "example_prompt": "Example: A raven standing on a branch with appalachian forests and mountains in the background"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "request": {
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "prompt_style": "rd_pro__default",
+        "prompt": "One single full-body Ancient Ash Warden, south-facing, low top-down view with visible upper shoulder planes, neutral grounded combat idle stance. Preserve the character identity of reference 1: extremely heavy broad charcoal-black cracked armor, narrow glowing orange concealed-face visor, orange magma fissures across chest and arms, scorched dry branching wood growing from shoulders and upper back, twisted dead roots wrapping armor, torn ash-gray tabard. Small dry branches, not decorative horns. Exactly TWO arms and TWO clearly separate armored gauntlets BOTH firmly wrapped one above the other around the SAME long central grip of ONE massive two-handed greatsword in front of the body. Both elbows bend inward to that grip; no free hand. Wide heavy charcoal blade, thick crossguard below both hands, glowing orange cracks along blade. Sword points down diagonally to the viewer's left, kept clear of both separated boots. Heavy intimidating final-boss silhouette. Full sword, branch tips and feet visible with empty margin. Transparent background, no ground, shadow, environment, text, UI, scene effects or additional characters. The reference pose is secondary: replace its one-handed grip with the explicit two-handed grip described here.",
+        "reference_images": [
+          "art/references/ash-warden-concept-02.png"
+        ],
+        "bypass_prompt_expansion": true,
+        "seed": 604112,
+        "remove_bg": true,
+        "return_non_bg_removed": true,
+        "upload_outputs": true,
+        "timeout_seconds": 180
+      },
+      "receipt": {
+        "created_at": 1793984592,
+        "model": "rd_pro",
+        "balance_cost": 0,
+        "remaining_balance": 10,
+        "remaining_credits": 0,
+        "output_images_count": 0,
+        "base64_images_count": 2,
+        "downloadable_data": null,
+        "request_id": "fd26f8bb-4804-4bd2-aafd-3d067274870e",
+        "outputs_retained_until": 1794070900,
+        "output_url_expires_at": 1793985492,
+        "warnings": null,
+        "delivery_status": "url",
+        "requested_images_count": 1,
+        "resolved_prompt_style": "rd_pro__default",
+        "used_input_image": false,
+        "reference_images_count": 1,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 98
+        }
+      },
+      "balanceAfter": 10
+    },
+    {
+      "attempt": 2,
+      "request": {
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "prompt_style": "rd_pro__default",
+        "prompt": "One single full-body Ancient Ash Warden, south-facing, low top-down view with visible upper shoulder planes, neutral grounded combat idle stance. Preserve the character identity of reference 1: extremely heavy broad charcoal-black cracked armor, narrow glowing orange concealed-face visor, orange magma fissures across chest and arms, scorched dry branching wood growing from shoulders and upper back, twisted dead roots wrapping armor, torn ash-gray tabard. Small dry branches, not decorative horns. Exactly TWO arms and TWO clearly separate armored gauntlets BOTH firmly wrapped one above the other around the SAME long central grip of ONE massive two-handed greatsword in front of the body. Both elbows bend inward to that grip; no free hand. Wide heavy charcoal blade, thick crossguard below both hands, glowing orange cracks along blade. Sword points down diagonally to the viewer's left, kept clear of both separated boots. Heavy intimidating final-boss silhouette. Full sword, branch tips and feet visible with empty margin. Transparent background, no ground, shadow, environment, text, UI, scene effects or additional characters. The reference pose is secondary: replace its one-handed grip with the explicit two-handed grip described here. Reference 1 defines identity, armor, roots and fissures. Reference 2 guides only compact game-scale readability and both-hands grip. Keep the helmet distinct from the shoulder branches, broad armored shoulders, clear separated boots, and readable broad sword. Do not redesign the character.",
+        "reference_images": [
+          "art/references/ash-warden-concept-02.png",
+          "art/final-boss/ash-warden-base-final.png"
+        ],
+        "bypass_prompt_expansion": true,
+        "seed": 604112,
+        "remove_bg": true,
+        "return_non_bg_removed": true,
+        "upload_outputs": true,
+        "timeout_seconds": 180
+      },
+      "estimate": {
+        "created_at": 1793984621,
+        "credit_cost": 0,
+        "balance_cost": 0.18,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.18,
+        "resolved_prompt_style": "rd_pro__default",
+        "used_input_image": false,
+        "reference_images_count": 2,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "receipt": {
+        "created_at": 1793984757,
+        "model": "rd_pro",
+        "balance_cost": 0,
+        "remaining_balance": 10,
+        "remaining_credits": 0,
+        "output_images_count": 0,
+        "base64_images_count": 2,
+        "downloadable_data": null,
+        "request_id": "a7ca871d-6d20-408c-b65e-bc605964d3d9",
+        "outputs_retained_until": 1794071072,
+        "output_url_expires_at": 1793985658,
+        "warnings": null,
+        "delivery_status": "url",
+        "requested_images_count": 1,
+        "resolved_prompt_style": "rd_pro__default",
+        "used_input_image": false,
+        "reference_images_count": 2,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 97
+        }
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 97,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 97,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "attempt": 3,
+      "reason": "Attempt 2 touches top border (9 opaque edge pixels); improve framing and separate wrist cuffs only.",
+      "request": {
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "prompt_style": "rd_pro__default",
+        "prompt": "One single full-body Ancient Ash Warden, south-facing, low top-down view with visible upper shoulder planes, neutral grounded combat idle stance. Preserve the character identity of reference 1: extremely heavy broad charcoal-black cracked armor, narrow glowing orange concealed-face visor, orange magma fissures across chest and arms, scorched dry branching wood growing from shoulders and upper back, twisted dead roots wrapping armor, torn ash-gray tabard. Small dry branches, not decorative horns. Exactly TWO arms and TWO clearly separate armored gauntlets BOTH firmly wrapped one above the other around the SAME long central grip of ONE massive two-handed greatsword in front of the body. Both elbows bend inward to that grip; no free hand. Wide heavy charcoal blade, thick crossguard below both hands, glowing orange cracks along blade. Sword points down diagonally to the viewer's left, kept clear of both separated boots. Heavy intimidating final-boss silhouette. Full sword, branch tips and feet visible with empty margin. Transparent background, no ground, shadow, environment, text, UI, scene effects or additional characters. The reference pose is secondary: replace its one-handed grip with the explicit two-handed grip described here. Reference 1 defines identity, armor, roots and fissures. Reference 2 guides only compact game-scale readability and both-hands grip. Keep the helmet distinct from the shoulder branches, broad armored shoulders, clear separated boots, and readable broad sword. Do not redesign the character. Framing correction: keep ALL branch tips at least 8 pixels away from every canvas edge. Fit the entire figure, sword and branches inside a centered 108 by 108 bounding area of the 128 by 128 canvas. Reduce the whole figure uniformly to provide this empty margin. Grip clarification: show two separate compact dark gauntlets with distinct knuckle outlines stacked on the same exposed diagonal handle; make the narrow gap between the two wrist cuffs readable. Preserve all other design and pose details.",
+        "reference_images": [
+          "art/references/ash-warden-concept-02.png",
+          "art/final-boss/ash-warden-base-final.png"
+        ],
+        "bypass_prompt_expansion": true,
+        "seed": 604112,
+        "remove_bg": true,
+        "return_non_bg_removed": true,
+        "upload_outputs": true,
+        "timeout_seconds": 180
+      },
+      "estimate": {
+        "created_at": 1793984780,
+        "credit_cost": 0,
+        "balance_cost": 0.18,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.18,
+        "resolved_prompt_style": "rd_pro__default",
+        "used_input_image": false,
+        "reference_images_count": 2,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "receipt": {
+        "created_at": 1793984888,
+        "model": "rd_pro",
+        "balance_cost": 0,
+        "remaining_balance": 10,
+        "remaining_credits": 0,
+        "output_images_count": 0,
+        "base64_images_count": 2,
+        "downloadable_data": null,
+        "request_id": "d6e1a079-2b25-4398-8532-5756ffea3b4d",
+        "outputs_retained_until": 1794071194,
+        "output_url_expires_at": 1793985790,
+        "warnings": null,
+        "delivery_status": "url",
+        "requested_images_count": 1,
+        "resolved_prompt_style": "rd_pro__default",
+        "used_input_image": false,
+        "reference_images_count": 2,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 96
+        }
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 96,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 96,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "balanceAfter": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 96,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 96,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "actualUSD": 0,
+  "hypotheticalBalanceCostUSD": 0.54,
+  "bestAttempt": 1,
+  "operations": 3,
+  "processing": [
+    "RD server background removal in original request",
+    "best-candidate is byte-identical copy of attempt-01",
+    "Nearest-neighbor comparison sheets only; no retouch, palette reduction, resizing of source or compositing of character parts"
+  ],
+  "references": [
+    {
+      "path": "art/references/ash-warden-concept-02.png",
+      "sha256": "64ac95bc510ae073d0b7128f99092c716eecc69de864be8287e1515ae9bccbc1"
+    },
+    {
+      "path": "art/final-boss/ash-warden-base-final.png",
+      "sha256": "f6efd392171071f8519a3870d78f6595229e195117518aa0ddd7a800111903a5"
+    }
+  ],
+  "outputHashes": {
+    "attempt-01-non-bg-x4.png": "14597ab5de03f4bca107062edda4bb043f996949b3139f1a9a3afa033c9f7c2b",
+    "attempt-01-non-bg.png": "bed9315ca0b51f855d7391d0f0e8db035f1ad446d1eaf9aab223659673829f6a",
+    "attempt-01-x4.png": "47c1eecf1a57b7f637b6382934017c393e618dc125ebe4c0031462abd9a6c490",
+    "attempt-01.png": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+    "attempt-02-non-bg-x4.png": "08edbba3f52510d5b7b1d52a61885b5e8c6ed552de3b7b754b3d94717b859171",
+    "attempt-02-non-bg.png": "fe74df1d7e0c379206c54f47777248df035fb8874378585716dae08ba7af2e24",
+    "attempt-02-x4.png": "ff3fb6a5094fa2228e6925df506343a58939d19f05b0ebb53e1f887d06c7abab",
+    "attempt-02.png": "d0d4e79fdb169d1c8a9fff610bd0238d757f0710010536d731aad405196d3ac7",
+    "attempt-03-non-bg-x4.png": "281194931a69456e25975301cf0eb94de623c76e913cb43296c6860074cd308f",
+    "attempt-03-non-bg.png": "047ef47da97ba8166879fae6f280bd5ff58b722a25d3bacefc069f75d7d0e287",
+    "attempt-03-x4.png": "301c31cc386fbfce10b2c02edf153ecc75562f67af9dcc1bf4d9df9f0e144ae5",
+    "attempt-03.png": "604c9271f979f4897b6d51e9665f54ff03393245053e53cc8e00b674c4737149",
+    "best-candidate.png": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+    "comparison-canvas-screenshot.png": "f90443d79e8cdbf41388192521565451194e4871834393895f792b56846de179",
+    "comparison-desktop.png": "3e40a5198f2f5832ddc1ce010c1d19264deb44b06e6ac5b6096525a590f54171",
+    "comparison-mobile-landscape.png": "9795c7b439f8150f18662bccb621c1fe71b710adff289040a1a5e6fd843fef87",
+    "comparison-nearest-x4.png": "6eda291db89bdcc69ae3c5c4785835084bc0cda117e46167d71a3ae0221cf188",
+    "comparison-sheet.png": "d13f892fa434e2d993d33a70b19d7940ac72663a7653d7654d66a034bd8b479a"
+  }
+}

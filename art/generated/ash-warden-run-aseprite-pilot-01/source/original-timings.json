@@ -1,0 +1,182 @@
+{
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "events": null,
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/00.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 0,
+      "render": {
+        "layers": [
+          {
+            "texture": "58f15d5214cfa1016f1b",
+            "x": 78,
+            "y": 112
+          },
+          {
+            "texture": "83caa979e778b8ee9431",
+            "x": 36,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 1,
+      "file": "frames/01.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 63.66413288288289,
+      "render": {
+        "layers": [
+          {
+            "texture": "88633da40500a1b9826d",
+            "x": 74,
+            "y": 113
+          },
+          {
+            "texture": "da587791c38d907eea74",
+            "x": 36,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 2,
+      "file": "frames/02.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 127.32826576576578,
+      "render": {
+        "layers": [
+          {
+            "texture": "462719f264d575f69d8b",
+            "x": 71,
+            "y": 112
+          },
+          {
+            "texture": "4eaed8249c13e40d481d",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 3,
+      "file": "frames/03.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 190.99239864864867,
+      "render": {
+        "layers": [
+          {
+            "texture": "0fe5ef078baea7d86cd6",
+            "x": 67,
+            "y": 111
+          },
+          {
+            "texture": "8be5987930ac2d2a2776",
+            "x": 38,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 4,
+      "file": "frames/04.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 254.65653153153156,
+      "render": {
+        "layers": [
+          {
+            "texture": "9f71d3423f49a73d5c80",
+            "x": 60,
+            "y": 112
+          },
+          {
+            "texture": "d4b6ec54176a218614fc",
+            "x": 38,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 5,
+      "file": "frames/05.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 318.32066441441447,
+      "render": {
+        "layers": [
+          {
+            "texture": "4e276415b27a68bd3a84",
+            "x": 64,
+            "y": 113
+          },
+          {
+            "texture": "67219d84bf7dc280003d",
+            "x": 38,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 6,
+      "file": "frames/06.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 381.98479729729735,
+      "render": {
+        "layers": [
+          {
+            "texture": "4df26465fd3bf956807f",
+            "x": 72,
+            "y": 112
+          },
+          {
+            "texture": "d1271f67fa79817e7f22",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 7,
+      "file": "frames/07.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 445.64893018018023,
+      "render": {
+        "layers": [
+          {
+            "texture": "c203f666491de6c55f3b",
+            "x": 76,
+            "y": 111
+          },
+          {
+            "texture": "40f391aa072ecd35e1f0",
+            "x": 36,
+            "y": 32
+          }
+        ],
+        "flipX": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "meteor-flight",
+    "args": {
+      "description": "A short seamless in-place flight-effect loop. The small slate-and-bronze stone head stays completely fixed, same faceted shape and orientation throughout; ONLY the short amber flame wake pointing UPPER RIGHT flickers gently along its existing diagonal axis. The comet is travelling lower left but DO NOT translate the sprite inside the canvas: the game will move it. Preserve the 45 degree silhouette, restrained size, sparse warm rim, and limited flat shading. No tumbling, rotation, expansion, new lava cracks, detached rock pieces, smoke or new objects. End on the same pose.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download",
+      "last_frame_url": "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download",
+      "frame_count": 8,
+      "direction": "south-west",
+      "view": "high top-down",
+      "subject_description": "one small grey-green slate and bronze mage meteor shard with a short amber flame wake pointing upper right",
+      "initial_pose": "stone head near (48,70), diagonal wake pointing upper right, fixed in transparent frame",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111012
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 53188356-f9ef-4420-8b20-46634b20cd4c\njob_id: 53188356-f9ef-4420-8b20-46634b20cd4c\ndescription: A short seamless in-place flight-effect loop. The small slate-and-bronze stone head stays completely fixed, same faceted shape and orientation throughout; ONLY the short amber flame wake pointing UPPER RIGHT flickers gently along its existing diagonal axis. The comet is travelling lower left but DO NOT translate the sprite inside the canvas: the game will move it. Preserve the 45 degree silhouette, restrained size, sparse warm rim, and limited flat shading. No tumbling, rotation, expansion, new lava cracks, detached rock pieces, smoke or new objects. End on the same pose.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111012\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"53188356-f9ef-4420-8b20-46634b20cd4c\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/53188356-f9ef-4420-8b20-46634b20cd4c/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 09f02c3f-5449-5bd4-98da-45afccd7cc91\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

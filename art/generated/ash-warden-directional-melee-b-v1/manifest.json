@@ -1,0 +1,187 @@
+{
+  "status": "manual-review-pending",
+  "approvedMotionReference": "Candidate B, user decision 2026-11-06",
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "presentation": {
+    "south": "front",
+    "east": "front",
+    "west": "front-mirror",
+    "north": "back"
+  },
+  "combatDirections": {
+    "south": [
+      0,
+      1
+    ],
+    "east": [
+      1,
+      0
+    ],
+    "west": [
+      -1,
+      0
+    ],
+    "north": [
+      0,
+      -1
+    ]
+  },
+  "counts": {
+    "directions": 4,
+    "idlePerDirection": 4,
+    "walkPerDirection": 8,
+    "meleePerDirection": 12,
+    "totalPNGFrames": 96
+  },
+  "retime": {
+    "originalBMs": 1800,
+    "derivedBMs": 1200,
+    "framesRemoved": 0,
+    "allInteriorSouthBPixelPosesPreserved": true,
+    "endpointsToIdle": [
+      0,
+      11
+    ]
+  },
+  "mirror": {
+    "axisX": 96,
+    "pixelFormula": "191-x",
+    "additionalTranslation": 0,
+    "reason": "Keep root pivot fixed and retain entire wide blade inside192; no old +16 registration"
+  },
+  "sharedLayers": {
+    "southEastIdle": true,
+    "southEastWalkUpper": true,
+    "southEastMeleeUpper": true,
+    "westUsesEastTexturesWithFlip": true
+  },
+  "textureMemory": {
+    "uniqueTextures": 81,
+    "atlasSize": [
+      1024,
+      1033
+    ],
+    "atlasRGBABytes": 4231168,
+    "naiveFullFrameRGBABytes": 14155776
+  },
+  "north": {
+    "method": "RD custom_action from accepted back model; only endpoints and secondary blade-like artifact cleanup",
+    "cleanup": [
+      {
+        "frame": 0,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": true
+      },
+      {
+        "frame": 1,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 2,
+        "removedPixels": 292,
+        "mask": [
+          [
+            142,
+            44
+          ],
+          [
+            175,
+            44
+          ],
+          [
+            175,
+            105
+          ],
+          [
+            142,
+            105
+          ]
+        ],
+        "endpointToIdle": false
+      },
+      {
+        "frame": 3,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 4,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 5,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 6,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 7,
+        "removedPixels": 422,
+        "mask": [
+          [
+            146,
+            44
+          ],
+          [
+            185,
+            44
+          ],
+          [
+            185,
+            110
+          ],
+          [
+            146,
+            110
+          ]
+        ],
+        "endpointToIdle": false
+      },
+      {
+        "frame": 8,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 9,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 10,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": false
+      },
+      {
+        "frame": 11,
+        "removedPixels": 0,
+        "mask": null,
+        "endpointToIdle": true
+      }
+    ]
+  },
+  "gameplayChanged": false
+}

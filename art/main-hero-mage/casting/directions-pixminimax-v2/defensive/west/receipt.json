@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: c3bde63d-9ac7-4d4f-b33b-796ab7d36646\njob_id: c3bde63d-9ac7-4d4f-b33b-796ab7d36646\ndescription: Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111026\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"c3bde63d-9ac7-4d4f-b33b-796ab7d36646\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/c3bde63d-9ac7-4d4f-b33b-796ab7d36646/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: a4e930b8-950e-5ce3-8e9c-58fee57affa8\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

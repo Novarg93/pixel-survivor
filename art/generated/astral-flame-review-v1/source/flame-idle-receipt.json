@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 48aecefc-876a-4574-b73c-65c8fab55083\njob_id: 48aecefc-876a-4574-b73c-65c8fab55083\ndescription: Seamless in-place burning loop. Three thin mint tongues flicker upward and curl sideways with visibly changing tips, shorter side tongues and a taller center. Keep the floor contact EXACTLY at x60 y116 and width fixed; no shifting, no camera movement. Stay sparse with transparent gaps, narrow brighter streaks, no opaque white mass. Small gentle pulses like a ground-fire eruption continuing to burn. No orb, ring, explosion, smoke or new objects. Return to the input pose.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110122\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"48aecefc-876a-4574-b73c-65c8fab55083\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/48aecefc-876a-4574-b73c-65c8fab55083/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 99d0ec53-80ef-52c9-a639-99b572d119fd\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

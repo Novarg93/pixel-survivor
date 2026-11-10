@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 039cb37d-1add-42aa-a4f8-c86c7f2b0719\njob_id: 039cb37d-1add-42aa-a4f8-c86c7f2b0719\ndescription: One short quiet impact and disappearance, locked camera, head anchor fixed at x75 y62. The existing crescent breaks into three or four tiny mint slivers that spread only a few pixels and quickly fade completely into transparent canvas. Start with the input sprite, end entirely empty. Preserve the dark slate and muted mint colors. No new orb, no ring, no explosion disk, no large white flash, no smoke cloud, no persistent outline, no camera movement.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110112\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"039cb37d-1add-42aa-a4f8-c86c7f2b0719\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/039cb37d-1add-42aa-a4f8-c86c7f2b0719/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 31573b65-5b54-5d68-8ca0-8f9219b03c01\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

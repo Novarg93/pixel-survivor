@@ -1,0 +1,76 @@
+{
+  "selection": "Ground impact follows actual damage radius; falling stone and destruction remain fixed",
+  "calibration": {
+    "peakFrame": 2,
+    "logicalCanvas": 128,
+    "referenceCoreRadiusPixels": 36,
+    "displaySizeFormula": "Impact.radius * 132 / 36",
+    "note": "Approximate irregular core radius; decorative rays and sparks can extend beyond damage radius. Fixed scale and anchor throughout the clip."
+  },
+  "tuning": {
+    "novaPlaybackRate": 2,
+    "meteorModelScale": 1.5,
+    "meteorFallSpeed": 5.07,
+    "meteorFallAngleDegrees": 46.55,
+    "meteorFallDistance": 192.4,
+    "meteorDestructionPlaybackRate": 2,
+    "meteorContactPlaybackRate": 2,
+    "meteorDestructionContactFrames": 5,
+    "meteorCollisionContactFrames": 2,
+    "meteorCollisionRadiusPixels": 36
+  },
+  "modelPaddedSize": 30.9375,
+  "cases": [
+    {
+      "rank": 1,
+      "area": 1,
+      "radius": 55,
+      "fallSize": 30.9375,
+      "peakSize": 201.66666666666666,
+      "peakFrame": "meteor-collision-2"
+    },
+    {
+      "rank": 5,
+      "area": 1,
+      "radius": 83,
+      "fallSize": 30.9375,
+      "peakSize": 304.3333333333333,
+      "peakFrame": "meteor-collision-2"
+    },
+    {
+      "rank": 5,
+      "area": 2,
+      "radius": 166,
+      "fallSize": 30.9375,
+      "peakSize": 608.6666666666666,
+      "peakFrame": "meteor-collision-2"
+    }
+  ],
+  "verification": {
+    "unitTests": 749,
+    "unitFiles": 93,
+    "e2e": 6,
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "canvasViewed": true,
+    "viewportSizes": [
+      "1280x720",
+      "844x390"
+    ],
+    "unchangedSourceFiles": 5,
+    "unchangedAtlasFiles": {
+      "public/assets/hd/mage-ability-vfx-v1/atlas.png": "bdbb747290f34df66c0851eb5e1b4d716b25e36f6403d296e69465e25cdfc73b",
+      "public/assets/hd/mage-ability-vfx-v1/atlas.json": "a601cfe75638cf567afc50d53f2629d15dbe3693d80b9b0e27545c2ca4e60eab",
+      "src/game/art/mageAbilityManifest.json": "c78b5701d43964c9478c59cde1f2257041901bd03ea5b55bdff62fdd80436fef"
+    },
+    "sourceHashes": {
+      "art/main-hero-mage/abilities/meteor/Create_a_pixel_art_m...-1981710313-0.png": "e1c1a14cb7a8cb712f984728360550afc626e7a7b48eb0a318662bccf7285b2e",
+      "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.gif": "08ea2a6ad88a365a2201151162781877a0c7d69cd8746a38235bb6dc6082a7cf",
+      "art/main-hero-mage/abilities/meteor/make_animation_of_de...-478336783-0.png": "a14e71777dd03c55aee835233219b7f456da98f5dfca7b4fd473d94d85399c74",
+      "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.gif": "03e18cebe4bd458bebc939a1110a45fb7240d9188646a1294e640aff137a7c74",
+      "art/main-hero-mage/abilities/meteor/Animate_this_exact_p...-1533140700-0.png": "84f59856182c8b429985e9badf729cfd5ef186d494db2fa0114c30023cee9442"
+    }
+  },
+  "screenshots": "screenshots/mage-ability-vfx-v1/damage-radius-impact-v1/"
+}

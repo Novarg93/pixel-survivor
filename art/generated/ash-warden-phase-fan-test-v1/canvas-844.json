@@ -82,10 +82,14 @@
         },
         "bodyImages": [
           {
+            "texture": "ash-warden-v1-0",
             "frame": "de40d628e7077b9ce9fd2596",
             "flipX": true,
             "x": 456.80000000000007,
-            "y": -40
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
           }
         ],
         "telegraphCommands": 0,
@@ -97,6 +101,8 @@
         "labels": 0,
         "atlasBytes": 16777216,
         "atlasPages": 4,
+        "pixellabAtlasBytes": 8466240,
+        "meteorImages": [],
         "flameStrike": {
           "view": {
             "impactAge": 0,
@@ -695,7 +701,7 @@
             "y": 0
           }
         },
-        "totalAtlasBytes": 19922944
+        "totalAtlasBytes": 28389184
       }
     },
     {
@@ -735,16 +741,24 @@
         },
         "bodyImages": [
           {
+            "texture": "ash-warden-v1-0",
             "frame": "de40d628e7077b9ce9fd2596",
             "flipX": true,
             "x": 656.8000000000001,
-            "y": -40
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
           },
           {
+            "texture": "ash-warden-v1-2",
             "frame": "4e993e97c4720453c061a346",
             "flipX": true,
             "x": 656.8000000000001,
-            "y": -40
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
           }
         ],
         "telegraphCommands": 0,
@@ -756,6 +770,8 @@
         "labels": 0,
         "atlasBytes": 16777216,
         "atlasPages": 4,
+        "pixellabAtlasBytes": 8466240,
+        "meteorImages": [],
         "flameStrike": {
           "view": {
             "impactAge": 0,
@@ -1722,7 +1738,7 @@
             "y": 0
           }
         },
-        "totalAtlasBytes": 19922944
+        "totalAtlasBytes": 28389184
       }
     }
   ],

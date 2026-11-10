@@ -1,0 +1,679 @@
+{
+  "sources": {
+    "art/generated/mage-phantom-cast-production-v1/processed/south/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/01.png": "311d325dfe0661592afb12250b58addfd57d52102b04446fe7b0b3b937d2ff5d",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/02.png": "e04355beacf4bcdd0b8f5262753dab7f3c17df7fe8dff5bf5efe9cb4ad0b5760",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/03.png": "bce49a14131df2c485e2517542f005ace34bdca980beac14fc5c901882ecf297",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/04.png": "5bd5c6275f6aafdc234bcbaafaccfdc22fb35e72c8f26dec711fac4fdc882a18",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/05.png": "2617666e14a05f1e16f602b96feeac0a0b69299d39271da52462c4f97c6191f3",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/06.png": "79bf0e28c321654da88002f21fc7bc5fefb27a35c0f82378d1ed347bcba58877",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/07.png": "c0aceee1001b62dd5642adefe5dc2e3d0fcc13cf5912a9af346181d3cf28c4df",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/08.png": "22c9ccc2dfa7c0ceba12c9f9daa51e430d53270eb47455ae54d28061c67a6249",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/09.png": "90ab8d11e813142192c4324b006db48b45ced59783d6c245ce412e43e441c47b",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/10.png": "7fa33e888a2cf37e043ac9da61e4c40723042988694bae5881477ef223bed923",
+    "art/generated/mage-phantom-cast-production-v1/processed/south/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-1.png": "3373a0be94daee871b9f7be7c50dcb0f7f5ac68ec02921baea7b2541dc90e09a",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-2.png": "087b357738c8f1fcad415ab7c43d2aa5a1641e28532fe0daffe2917f26702f39",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/01.png": "3e56bdca1a515432be58fc93bf05aa0ea71219c08bf20c1e24649c329819924a",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/02.png": "4a5e10b0a46f5b12f609091ea45b905a67c3c87dc0bf18fa0d225187aaeffbef",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/03.png": "c237d39ec7c950f5e1ab7f130ef12a63165f6c54ef3592388195c431b3305a0c",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/04.png": "e02d78d4c1ddb19485a76ef3453b45383d4ad11c984bcd251e2d101b2c3b069f",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/05.png": "dbfc0e109028f778e27513c266ca7f5f8c7a1fd28dc2af3bdb738b3bf0e90560",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/06.png": "8ffc4cba1aa25499a56d0dc00d2a8846af732a1cbf326c45a4501d86aa088903",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/07.png": "63588e6401d4b8ca8247738c4cf132927d9d320656caa885d63096993017bf7f",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/08.png": "331a395140743901ae32a473f22772f3a186b50dab7f8d6905f27311cc0d9f21",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/09.png": "3689c43dab7df75d5ad109483887b0aab45718e02586f6358c3794956e557ebd",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/10.png": "6c6f9ced21b701005a6eafdb672f9dd66500ec896bf48d8302e2650c96355be5",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-east/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-east-1.png": "65b4f5367a91af4d9c334fdf368bb1e3ff618a707c56d5fb29e7ab2b3cb772ea",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-east-2.png": "5fd6bf73c651e0c8c0de86d7e42797f30982d14e5788e86bb686b655572ba3e9",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/01.png": "9dd6f67c909ad591a194d16af899ca98009abf3f648542dab97704698360b24a",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/02.png": "b11fd938e868b3d0ef57e21fe91c26aee9a52da253375830278bdab2e39dd817",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/03.png": "bb972b79bca6af7217368068bbdf67727748d636333eb109371966ca8130c743",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/04.png": "46f86e3de67aad50e8e3ca29402e922d182c1fed88a935e770b6127547363869",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/05.png": "a4adf4ce47644ef6f58d201227a4972795079dc8e6024171589ca81a283d897e",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/06.png": "acf56775e679a140f330ae2436931fd9d120fac6ae12af0d573c75ec83b713d9",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/07.png": "c55e773c01b545cd4de2bf00d78bf908ddf96d478ef488fd34991a5c7e66b560",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/08.png": "c50ef4dc8305a319985d9aa16709e061f615c9e40e4719a5e06cba742caa3ed9",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/09.png": "ae0c767931337b141fabdb222aad7938c5c91d67f8c0f9c34b1780373a239fde",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/10.png": "74bd5330c7d26eec4f728c8a8fbc5cb73abee8e802d5da577411930c21e013d3",
+    "art/generated/mage-phantom-cast-production-v1/processed/east/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/east-1.png": "cb9ea96987218d6cf4369c95b777cdd7ae5036ae510dbed03e13fe48ed1ffe16",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/east-2.png": "6405a9e2402fde2c24130838f03895d489d313dfb091f986eae85d73d26f61d0",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/01.png": "75635c1ec065a5d0c862fb7887442894325600d123feb8e3bb34d6ecaa08df9e",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/02.png": "b4ae9bf5ad4b73615329a1675c2c83efc6b2da41c54ef7d869bb9bfc3fcd344a",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/03.png": "26a61f260d6d227f7d34b244216b7af40b439685bc9c6724a180ddb4c6c7736e",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/04.png": "721b73feaa893c1ddeb88f9b26ab93611f5110bfe853a31bf3f8440221802511",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/05.png": "f8ea08b8349672680516012214c24a1062066613bbc6e522ac5e65f3321a222c",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/06.png": "9b4eefeff854849e5f2d133b236b3840f7775f4f3b38f3e4888606738222f36e",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/07.png": "a8e3b59b1f66e550c61dabf71ffaa84d3530e706cd8452801e230c67b62aef35",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/08.png": "322d7dffa6bb14a3a8ab7d076d6654e496af7fc69d74d2e47adfeaaa1bfe899e",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/09.png": "6da39c22249c7c1acb6e62991a3047eb2a57d0680b352d151dee1e385e0f86ee",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/10.png": "6965b6975cc80076a0dc038ebc34f7c3b44127ec7ad56566f5f1fb380a05d179",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-east/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-east-1.png": "4f9a04f18d1d70669a773e55d51ecd57238455609514fcb63367cf11249fe5e5",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-east-2.png": "7ad38da96e2a37c17f2156a7431e12fb1eb7239b22448ffd20cb108981160086",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/01.png": "dd7ad93fbc55c10967026d46ee154b03639aec6f2a21c2594fa1e28335f48999",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/02.png": "5fc9eaaf1a819bd6de391af56fa7f9bb52ebe133fa5b27763987d1fff8e7c226",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/03.png": "e1a009f2713b2b6e25967b484635e6ee632c3f0fd7ac59a79af58097d742e96c",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/04.png": "d1f262060ee9a55a2f29b872ad96196899b42a63181b685929830e2edca03f18",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/05.png": "f429561d853335bad2b74840fc33679ea3adfce9464136ab62fb2dba60b4282e",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/06.png": "1011063a233e2274dc4a84ef474e5555985a2b765112f4e0292e68e506a98f42",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/07.png": "08e9c455ea51e3faacbfd00da0bf5f196dcc59a473766691caebdc5a336873ed",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/08.png": "367eb967580270625ffbdc2d40de7a107299e0b8c572346b6dadca67a3bc2456",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/09.png": "c54abc14cba1f2fb868534a6ff1e3dfed6ca5cf0561e6622b6a000a095cd8979",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/10.png": "5ec2944e64980576302a1c3df2ef9565f3fd0942b5af0eb0d9608cc61bfaab29",
+    "art/generated/mage-phantom-cast-production-v1/processed/north/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-1.png": "dc5276f8521d554773596fcc712def8c65b8290f0ae90e84e3024610b3fd2292",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-2.png": "9b06a18baea85f17baf89c3ade0c338e9ba54a80c64e56967591aa4024998624",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/01.png": "caf42f0211de82091b606658c6141bb9db4e7b176f9c84347ca6e49d17c0d9a7",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/02.png": "dc5e65776b6fb93d61f4d0cf510be572d6051633ab0fd69a0c631903ad028232",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/03.png": "50fb61792fdb1d6f36c65ce2b71ede209a41e481c57a8c51444b98fbbf8d602f",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/04.png": "fdb3a755765915f27ecd4e31e7ac61c405c30f72cf36a389ad57db4a1ef14d55",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/05.png": "e0e25220c6dcf414906b32a8378804540ee541c39503fe3f4a316564a3985443",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/06.png": "624a0e975954444c9d0effa45ac1bbd632b0d42c00e3c16a1a45e23c4163c2e8",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/07.png": "d63d50b2ab39698394dcac0f1fb7aaa258c32abd9207708368c1a12615db5063",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/08.png": "bf4234168d52e51ed3ef69194cbe17dc65b4cf223a650e4d7b8c9de844aabbd9",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/09.png": "c91fff0c05b359dc04e512f8fa162023b8f61e6a9a6eec73c9a909ad03ffefe3",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/10.png": "3d855c05e46ff7631a10cdf46d938d812588a37992bfc46f561c171811f549b5",
+    "art/generated/mage-phantom-cast-production-v1/processed/north-west/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-west-1.png": "2d4c1ee560ff61323aaec6a8309f206d4fe0c26056152dd704e34aa4602dec4f",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/north-west-2.png": "572f97ca4b65c3b394811bf19f24996473bb6a07b2cf5cdf7eaff62d44f231d0",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/01.png": "f733b1f92624c5277d1011dfc130c9bb161e85f4bf937316f6fe1f00e59f5dc7",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/02.png": "ba72ff0d302241a8348e983ff7cc2b60843ae5f8b3ec4047e3e2d38a4870a96d",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/03.png": "f84e278ca32b7ec399985ac172a979cae29e8142679e6e5565d8f4448e24c2be",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/04.png": "a757bab4edd3d0177b8896ecf97e18475af32f247a95f24c4d11c77554a51394",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/05.png": "e45958108be4b334abcb1ef37987233923acb2457613c7d779ecf4fa725cb7d5",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/06.png": "b0bf5f0514b176dcbc2d5b5172a8fb0695d5d7dac35ca5b7f5219c2cd26f2373",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/07.png": "9f9d1cfb7f52804bd0dd35590b4307e57bab04b21b0b54531bab4e4acc5551c8",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/08.png": "9160cddbff8e43c475e3172a4525f7c9f5657812ef7ad61119921936a8843317",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/09.png": "6c5fcddf58fdefbe636ecc3dd11134d9ece5462bad8312364e25de42d584adf7",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/10.png": "0fae5b93b9dce4acef08dce8e5565a0d80f57d37f1646f53a4cc9e025de2aeab",
+    "art/generated/mage-phantom-cast-production-v1/processed/west/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/west-1.png": "523971ca454a461e8cfb03821542724e8654ede3bff580045c1674fba9606dec",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/west-2.png": "2f11ff80feda2d4d05d0e02d8aeb3d91f5ebdbd0793f2737c610a10fa2bd219c",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/00.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/01.png": "194d05f52c843925228cd89e8c012a2ca0086a43888fe19ed5b4d4af6acbb194",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/02.png": "645d470abda63802f983a29238f4177b87c32aad38be94a051f17ee9e3553072",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/03.png": "4ff830e61c2425f4cbd604b4673121616dee8e9ca9afcb28e76b2cf64d71786b",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/04.png": "8d0ff3d0897149541dc4c7109796e57c2fded73d64149fde27381814ecef27e7",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/05.png": "599785c8d2484659ce8250d6319013521a10703c7d087decccde71d58cef1b2a",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/06.png": "2837096c025e6f0b119bcef1071b256840d9a61c4fd9efe34f38c9d53ea35fe4",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/07.png": "193f236a7afde098965caf91304365f764243e95dfb6196feabb2def6c6878ac",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/08.png": "3890dfd030ce04f5ec6d727bd88ebfc02d1924f600b9eebe445a6400a3162e2f",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/09.png": "85043c41dc5533cb09bad26c5a179472932769c38e0cd1afd99aab8d13511ecf",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/10.png": "9bcb5a2295dafd6c1649a8afbfb894030bdfe89acb04dc0083389a9c824202a3",
+    "art/generated/mage-phantom-cast-production-v1/processed/south-west/11.png": "3c6c50f94ab35e9f96c772731fe6b7950048179bc81b8ab0396cc1edbde89163",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-west-1.png": "4bf41fd6aa40de0714ec86460f56e8b3993f7d40623fec582e2c4edf33367a1d",
+    "art/generated/mage-phantom-cast-production-v1/manifestation/south-west-2.png": "580801dced233a68bb0def4dc9a119461e7abe0a4ba6b3ede8796d5c94bb0165"
+  },
+  "frames": [
+    {
+      "name": "mage-phantom-south-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-south-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/01.png",
+      "pixelHash": "d2cf83d2d5bfb8f35b98c9a55dfe98a4ae47dac632d3d648fdd624247aa61b6e"
+    },
+    {
+      "name": "mage-phantom-south-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/02.png",
+      "pixelHash": "3fc6568e6dda46fadd3e69db5798547816c229dd1cb3864dac525baa35b1ab69"
+    },
+    {
+      "name": "mage-phantom-south-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/03.png",
+      "pixelHash": "248acc48e78367cd14b8b7ada96e810161c0fc9a0b20dce469523758d57aa59b"
+    },
+    {
+      "name": "mage-phantom-south-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/04.png",
+      "pixelHash": "2b072aae63432baba50cc1c9a803aba142f4858e24c076f7b087013792a6e4f9"
+    },
+    {
+      "name": "mage-phantom-south-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/05.png",
+      "pixelHash": "75e3e4da776ecc99ac84e6bbc4f60191d233b180dc0b573545a29987c059a199"
+    },
+    {
+      "name": "mage-phantom-south-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/06.png",
+      "pixelHash": "1c0dbc2834b784108711ceef113746f15c500ec1a8290dd227a008be42b2b654"
+    },
+    {
+      "name": "mage-phantom-south-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/07.png",
+      "pixelHash": "60cb431c8dedf51d92c3aadc3584eeaa7bbf9e0edc709ea054ed6d8010b7a7cd"
+    },
+    {
+      "name": "mage-phantom-south-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/08.png",
+      "pixelHash": "22b4c69ed914f81b7903e73d148df8f3f5405c546054ee6ed99c7a1df5452178"
+    },
+    {
+      "name": "mage-phantom-south-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/09.png",
+      "pixelHash": "3d46864753db6f55caceb6c46895723c73660e94dbbd8f59a22c7c797de33d16"
+    },
+    {
+      "name": "mage-phantom-south-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/10.png",
+      "pixelHash": "186668c923659834d4c0a0f044fe2c378d7eefe0d449a75fda558dbf5513eeef"
+    },
+    {
+      "name": "mage-phantom-south-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-south-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-1.png",
+      "pixelHash": "7b105601aeb99005a51e0422051f36cb9f9e94db1cf8ddc24d64f5f6a87d6c74"
+    },
+    {
+      "name": "mage-phantom-manifest-south-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-2.png",
+      "pixelHash": "b225e449c3cbe5d477935ab3fc571d860fa333531272b17226722a72ede7c7a6"
+    },
+    {
+      "name": "mage-phantom-south-east-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-south-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/01.png",
+      "pixelHash": "e5e017932167ed6fac4d2c1337c0dab668407276648fbc7d1ce48cc5289e572c"
+    },
+    {
+      "name": "mage-phantom-south-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/02.png",
+      "pixelHash": "882dd3b3bce0a676b5651c7b23d3bcd8cb451c179f8a7be7984e4feabec334d6"
+    },
+    {
+      "name": "mage-phantom-south-east-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/03.png",
+      "pixelHash": "c90cf6a722dfe9511e2420f9a00f187ab7185f93b6f180c410adb967dd1ae721"
+    },
+    {
+      "name": "mage-phantom-south-east-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/04.png",
+      "pixelHash": "c68a0d99359abad6f1708f1dbd7c640c175cf24d7c8823bbca1a88fb3cdbe256"
+    },
+    {
+      "name": "mage-phantom-south-east-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/05.png",
+      "pixelHash": "3f9535971433c7e700befdd126988bf1074cc6435278607df14b0930e13d90cf"
+    },
+    {
+      "name": "mage-phantom-south-east-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/06.png",
+      "pixelHash": "932ed6e01fd65e70876723f59589660535aae695945a2a403a3c0860b89d3803"
+    },
+    {
+      "name": "mage-phantom-south-east-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/07.png",
+      "pixelHash": "84640956ad0370d58e2b4e5aac3fa34d629fecb3c3e8f94ebea903d517ae42d4"
+    },
+    {
+      "name": "mage-phantom-south-east-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/08.png",
+      "pixelHash": "980e1b5bac8056f88b8f1dec6f67307fb57df9e70e4b5a4d609756e5fa103009"
+    },
+    {
+      "name": "mage-phantom-south-east-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/09.png",
+      "pixelHash": "5611d2db5872b20f7708844b62ae2ef600919a47de73850eee15c260a9ee7013"
+    },
+    {
+      "name": "mage-phantom-south-east-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/10.png",
+      "pixelHash": "17f2f09da2b6b34a033b82e94979d52d76d416ee41d3506efd1287c08036100d"
+    },
+    {
+      "name": "mage-phantom-south-east-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-east/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-south-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-east-1.png",
+      "pixelHash": "a06eed6ba754ec462afb201b77e25eb50bb2b08bdfe21302d24b085ed23589c3"
+    },
+    {
+      "name": "mage-phantom-manifest-south-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-east-2.png",
+      "pixelHash": "3bacfa61c49b3d8b805252e35705c0a0adc74ba3f268a6efbf99348bb8e7ff5f"
+    },
+    {
+      "name": "mage-phantom-east-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/01.png",
+      "pixelHash": "92b77f5905285cbe470901053f7eccf0745a02a3219efd42e05294189ebb2b99"
+    },
+    {
+      "name": "mage-phantom-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/02.png",
+      "pixelHash": "2dbe5d9c22de3dbe5d97f2c044e862ea6652674320c21e75b6ec425e4b3682e1"
+    },
+    {
+      "name": "mage-phantom-east-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/03.png",
+      "pixelHash": "3b26cc752a742deff4f373cadfe01c99e604b971c1dfc382482ef5b0a3eade95"
+    },
+    {
+      "name": "mage-phantom-east-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/04.png",
+      "pixelHash": "33bd72cc0ca17f8d1578e533f3f6e35b005835bdb7ded503f0e59a561ea24f29"
+    },
+    {
+      "name": "mage-phantom-east-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/05.png",
+      "pixelHash": "d04ca29331cacd39e1f4a4b42563031f547443af123978144aec7a1a5b9fc424"
+    },
+    {
+      "name": "mage-phantom-east-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/06.png",
+      "pixelHash": "989f00938f1e79c889161ac63d19f23585b33a317d78328b76668e7b3be81f1e"
+    },
+    {
+      "name": "mage-phantom-east-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/07.png",
+      "pixelHash": "9d0878be68062b609ce0f45a1aa2084f95a4a7f6af6f37b2ee561abe97becd50"
+    },
+    {
+      "name": "mage-phantom-east-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/08.png",
+      "pixelHash": "fe486a8733429812af2499a7450b367d9c1c345e84a63894198284cbdb98c230"
+    },
+    {
+      "name": "mage-phantom-east-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/09.png",
+      "pixelHash": "fc02ebac29137a5800801926c562195b8882afedcf36a1565a8603394a5a23c4"
+    },
+    {
+      "name": "mage-phantom-east-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/10.png",
+      "pixelHash": "8b2945fb0c19199e329101dc30c7a2c37e2548850cfb675f3cd19151caa65fa6"
+    },
+    {
+      "name": "mage-phantom-east-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/east/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/east-1.png",
+      "pixelHash": "4e64cf5a0bbcdf927edad1c59bed19e627cccc593626ad001bd897467d1ef73c"
+    },
+    {
+      "name": "mage-phantom-manifest-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/east-2.png",
+      "pixelHash": "43a3b14a8d63f3d73cba9df2795da993b13db64f1e2a016e9cc6937e7de567d7"
+    },
+    {
+      "name": "mage-phantom-north-east-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-north-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/01.png",
+      "pixelHash": "b1947114162751cde9e9c532c4d5a7482aaca5fe2673eabaca201a9f0d5ad1d8"
+    },
+    {
+      "name": "mage-phantom-north-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/02.png",
+      "pixelHash": "237d156302e09528bdbd4f3f69128dcfe98ac8319ddae1c278891237c2411cca"
+    },
+    {
+      "name": "mage-phantom-north-east-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/03.png",
+      "pixelHash": "39202f52752f67df16b08850c97be0d4e2e15f9b2d4e8e2e85176df050a2c544"
+    },
+    {
+      "name": "mage-phantom-north-east-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/04.png",
+      "pixelHash": "79f2426711a48f5934e7a2b61198274a3d61431924de0371759d6163d9a3bddc"
+    },
+    {
+      "name": "mage-phantom-north-east-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/05.png",
+      "pixelHash": "88c343d333bf8a0fc1c79986cedee3fe1dab0ab0316b08bbcbc1214843f19584"
+    },
+    {
+      "name": "mage-phantom-north-east-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/06.png",
+      "pixelHash": "9985a9ca32d951f47035ad2a27ebe2175f7be7d27cf942812327a4c97fda8d99"
+    },
+    {
+      "name": "mage-phantom-north-east-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/07.png",
+      "pixelHash": "afe086c503221ec749f022d0bf0e77a1261e66ed7e0a14d214f755a43a8cf280"
+    },
+    {
+      "name": "mage-phantom-north-east-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/08.png",
+      "pixelHash": "067f22d4775fff8d7c4c27cb4be0c1ecbf30629db2af05dfab62faa0565d64ef"
+    },
+    {
+      "name": "mage-phantom-north-east-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/09.png",
+      "pixelHash": "db106c4ab2e77f5535d5f98e418b0938aeb5d07923593c2265ee2d39e06d10c3"
+    },
+    {
+      "name": "mage-phantom-north-east-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/10.png",
+      "pixelHash": "afd357f4df9b380e115ca8c809c92afa444305426089f920aaa24dc4cb616e4f"
+    },
+    {
+      "name": "mage-phantom-north-east-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-east/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-north-east-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-east-1.png",
+      "pixelHash": "430fbfaf5597c7a9004adf03c21dde493db8180652b2e562cc1416e0234e0760"
+    },
+    {
+      "name": "mage-phantom-manifest-north-east-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-east-2.png",
+      "pixelHash": "0e694c03168ae3e607b3a0dc2d4f41dcd3b0a005f383dd8c1723eaf36cb261e9"
+    },
+    {
+      "name": "mage-phantom-north-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-north-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/01.png",
+      "pixelHash": "f65383d72ea5cf1ea9f2fdd0748c533257df92728645c17acb7dc56fba1c9ac2"
+    },
+    {
+      "name": "mage-phantom-north-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/02.png",
+      "pixelHash": "763015c3db452b89ed852b13f8f83eb4621cbc869c5fb6ab6d5f474e534030aa"
+    },
+    {
+      "name": "mage-phantom-north-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/03.png",
+      "pixelHash": "875ea7f4e9986e76419939ef82ff9e98b3673b20bb6e0116dd788bb72695d26c"
+    },
+    {
+      "name": "mage-phantom-north-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/04.png",
+      "pixelHash": "7276d096816cbd7334bef7e445556446783e5db10636792ed800cd12590130bd"
+    },
+    {
+      "name": "mage-phantom-north-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/05.png",
+      "pixelHash": "b2ebf0775fc11fbbce70983b262d5a442abc51b4961a98a91dc7450d2a2ef530"
+    },
+    {
+      "name": "mage-phantom-north-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/06.png",
+      "pixelHash": "f1634baefe61df56b1cd416efb5537c9857e6cfda1fc669ebf8a1a238fda5def"
+    },
+    {
+      "name": "mage-phantom-north-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/07.png",
+      "pixelHash": "edc52dbc889ec0add51868e655ecd3c07288b424c4e425cf2be80d8b46e4e323"
+    },
+    {
+      "name": "mage-phantom-north-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/08.png",
+      "pixelHash": "df9581a3dd19c846d677a6f14ee30792527f61038c75a19e39a5180c41782ad1"
+    },
+    {
+      "name": "mage-phantom-north-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/09.png",
+      "pixelHash": "1366479a24e344fe8807a842fb615142bb80c23a6f81dbbe19ba0cecd7eb55d2"
+    },
+    {
+      "name": "mage-phantom-north-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/10.png",
+      "pixelHash": "d770369d47529c4e3772244c237667a98ae9af12f1ccea9985eadbfae3c4706b"
+    },
+    {
+      "name": "mage-phantom-north-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-north-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-1.png",
+      "pixelHash": "e969938aa4eb6d3e30c04d4bbe9cb2d9ac5618906445d9ce6aab921ad430aabd"
+    },
+    {
+      "name": "mage-phantom-manifest-north-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-2.png",
+      "pixelHash": "3a6a14249f3b51738559c3c0bb8b0d6e456bd0f3b819346120f20b6e9d1e68d6"
+    },
+    {
+      "name": "mage-phantom-north-west-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-north-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/01.png",
+      "pixelHash": "4c13bcbae4e43d7505c8c03a1006a422d2044a23c7ae64c2a1369366d165d882"
+    },
+    {
+      "name": "mage-phantom-north-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/02.png",
+      "pixelHash": "2fe887c2435d5c2480ef00bb9004c31f310612e9ae544fcebaa667a85502ee46"
+    },
+    {
+      "name": "mage-phantom-north-west-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/03.png",
+      "pixelHash": "ad86a90d2fc1517b3a21f231a5ec8689d9f073702e0e44177e389caa4a4dc56a"
+    },
+    {
+      "name": "mage-phantom-north-west-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/04.png",
+      "pixelHash": "f81c5f697e1799df1e38e0ff4e39e69587afdd1ede4d7de0a42934bf2bf823c0"
+    },
+    {
+      "name": "mage-phantom-north-west-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/05.png",
+      "pixelHash": "8a04fe122ee85eeb3f8008bb0133cc86b7b58e78125617d7c1fdfa0705f7404e"
+    },
+    {
+      "name": "mage-phantom-north-west-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/06.png",
+      "pixelHash": "9e953916ad44f8788c2e8b1b736bec15183f8fae1a0365c34aa6cd191533ff04"
+    },
+    {
+      "name": "mage-phantom-north-west-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/07.png",
+      "pixelHash": "5c78730a5b43e06f93eea36145263d8c6eded2b27cd002bf0bae2569f43df56d"
+    },
+    {
+      "name": "mage-phantom-north-west-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/08.png",
+      "pixelHash": "3978a406868273e75e0ae5a289f05dc54116cf3c37eb7f3f2cad24dd47c663bb"
+    },
+    {
+      "name": "mage-phantom-north-west-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/09.png",
+      "pixelHash": "83e9d2cbb711a314354b838d977d8ccbe170363b2ae461144b672b0ce405d2de"
+    },
+    {
+      "name": "mage-phantom-north-west-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/10.png",
+      "pixelHash": "a2580ecd15a83f28e10e1293cafde88c14c662c3121dc26c205941da9f9ee8b3"
+    },
+    {
+      "name": "mage-phantom-north-west-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/north-west/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-north-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-west-1.png",
+      "pixelHash": "fc49bfc00f4edd19c562e8ff6cc2bb7159ac86b1ab718d472552e0d89fdccb02"
+    },
+    {
+      "name": "mage-phantom-manifest-north-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/north-west-2.png",
+      "pixelHash": "78ae9da83bd28e2c0cd624757943448edf4615f8c1c3c4eb573ff514119ade54"
+    },
+    {
+      "name": "mage-phantom-west-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/01.png",
+      "pixelHash": "ec28fc281ff3e7a4b83ebb50daceae4bf2c49b3aee3d9fe1fc5ce069565887e9"
+    },
+    {
+      "name": "mage-phantom-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/02.png",
+      "pixelHash": "c80208688eaf45fd3b8dde800d46f21d196513ec4dc5aba3a0a596d1f98319e5"
+    },
+    {
+      "name": "mage-phantom-west-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/03.png",
+      "pixelHash": "f31631fb5bfd501511681a6b54e15564463d636cba459702d3f21cd4e2f793ed"
+    },
+    {
+      "name": "mage-phantom-west-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/04.png",
+      "pixelHash": "31b3d9fbf39d8a958ab72ec10c10f9e84eacf836eb742559765a4d89752cdacc"
+    },
+    {
+      "name": "mage-phantom-west-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/05.png",
+      "pixelHash": "b0003c12821be6cbd8b58e5d3cd5e2cd11566fa8ad5b25a45171b9e4840b2b76"
+    },
+    {
+      "name": "mage-phantom-west-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/06.png",
+      "pixelHash": "edeb6f1367e11e7a3e85e837260b8bbab40a3595f6f1a3b5a4e34512d9bcac6d"
+    },
+    {
+      "name": "mage-phantom-west-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/07.png",
+      "pixelHash": "35008e633fbc9588e208a567e7044078cbca626ed5e6ad5ea65e07332f768615"
+    },
+    {
+      "name": "mage-phantom-west-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/08.png",
+      "pixelHash": "35d0d83dc87ae330cba2bae46f5ed1bd2b51b94baa08321b0f099d2245ff9b6b"
+    },
+    {
+      "name": "mage-phantom-west-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/09.png",
+      "pixelHash": "f7a732d8b8be5982c585de1fb857c42b0945330d036e3fd7ce207242a0e7a070"
+    },
+    {
+      "name": "mage-phantom-west-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/10.png",
+      "pixelHash": "d254069a5ac8099328f0b74af68b2c2501e8eef79a04124d125c49f2cf06d40c"
+    },
+    {
+      "name": "mage-phantom-west-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/west/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/west-1.png",
+      "pixelHash": "647a5f2a3d3346c5455423551c38dcb87fbcdccd696073e4d78c1a939ac628ce"
+    },
+    {
+      "name": "mage-phantom-manifest-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/west-2.png",
+      "pixelHash": "e3062df2458e32644af00c11ba955262b8b365e2f72693a585ce91379c8c62c1"
+    },
+    {
+      "name": "mage-phantom-south-west-0",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/00.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-south-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/01.png",
+      "pixelHash": "a28c8eab392d5bcb180d187107ba89f2a8248aeaafa2695ee5d143b43811e564"
+    },
+    {
+      "name": "mage-phantom-south-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/02.png",
+      "pixelHash": "3497771cc2ad6b77bf6367197be7d311ca99eb46d6481eb3dfc73edb4effb46f"
+    },
+    {
+      "name": "mage-phantom-south-west-3",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/03.png",
+      "pixelHash": "2648ef3f284cbb5662a5e59f9618720831c3ba075909578dabdef8057e05931b"
+    },
+    {
+      "name": "mage-phantom-south-west-4",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/04.png",
+      "pixelHash": "ca5e6e401802dc718840aa81fa93fe2608c7f67d928fdd5f947686fd0b04a4a8"
+    },
+    {
+      "name": "mage-phantom-south-west-5",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/05.png",
+      "pixelHash": "487eab0dc592c3a9f939db0b367445ea6ab9cee6f43350267994df1fb8c907bd"
+    },
+    {
+      "name": "mage-phantom-south-west-6",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/06.png",
+      "pixelHash": "199cfcd07ce62b815fa523b044e160241c73cb317dad10dd9d6cf0cb4bdcd78b"
+    },
+    {
+      "name": "mage-phantom-south-west-7",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/07.png",
+      "pixelHash": "5c2571cebb60c4b6149f11b2f55f511dedc24bf0e74358ac693bdda5af509a5e"
+    },
+    {
+      "name": "mage-phantom-south-west-8",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/08.png",
+      "pixelHash": "a67b51f4caf9285178ad79af56d49e8bc774fbb97a03150148bda8b874592e5e"
+    },
+    {
+      "name": "mage-phantom-south-west-9",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/09.png",
+      "pixelHash": "aa39fe0ec602a8e85c796a5dafe09ad83cd66e126554acc088f7a640911948f7"
+    },
+    {
+      "name": "mage-phantom-south-west-10",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/10.png",
+      "pixelHash": "57671feded229645eda9d4f98c86222fa6394cc7f3c36939b554c35356c09470"
+    },
+    {
+      "name": "mage-phantom-south-west-11",
+      "source": "art/generated/mage-phantom-cast-production-v1/processed/south-west/11.png",
+      "pixelHash": "6182ba8a831d4fd5a1e469cd7bbb745b23b455feadb8ba253e060b8250109906"
+    },
+    {
+      "name": "mage-phantom-manifest-south-west-1",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-west-1.png",
+      "pixelHash": "117eacb97e54cdd0cef287d13969a42179fbe067879d2a32f43fffc5d6240426"
+    },
+    {
+      "name": "mage-phantom-manifest-south-west-2",
+      "source": "art/generated/mage-phantom-cast-production-v1/manifestation/south-west-2.png",
+      "pixelHash": "1f4fbde7730a6fb8468a744af8413dee146ce760c743ac89e970c9b649969419"
+    }
+  ],
+  "runtimeManifestHash": "b83ff65cf490e9be496d8bcc310ff1311f152333e5463118b6c00180a49708ed"
+}

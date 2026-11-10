@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "source": "user supplied",
+  "thunder": "lightning ultimate release",
+  "originalBytesPreserved": true,
+  "entries": [
+    {
+      "folder": "blink",
+      "id": "mage-blink",
+      "event": "player.blink",
+      "source": "art/main-hero-mage-v2/sounds/blink/A_short_arcane_telep_#2-1794334259491.wav",
+      "file": "public/assets/audio/mage-sfx-uploaded-v1/blink.wav",
+      "bytes": 192078,
+      "sha256": "a05a19e562686f4506e44456ab241669f759e7ebd95b15764f357e76de96b1ca",
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 48000,
+        "peak": 0.80096435546875,
+        "rms": 0.07208028062496138,
+        "invalidSamples": 0,
+        "clippedFraction": 0
+      },
+      "gain": 0.936371
+    },
+    {
+      "folder": "chain-lightning",
+      "id": "mage-lightning",
+      "event": "lightning.cast",
+      "source": "art/main-hero-mage-v2/sounds/chain-lightning/A_single_sharp_elect_#1-1794334114518.wav",
+      "file": "public/assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav",
+      "bytes": 192078,
+      "sha256": "ce2b837486881ce9350193384acc6ccfe7861edad6a17d0f4fc3161f8a6f38c8",
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 48000,
+        "peak": 0.7704702615737915,
+        "rms": 0.09800103760668644,
+        "invalidSamples": 0,
+        "clippedFraction": 0
+      },
+      "gain": 0.973431
+    },
+    {
+      "folder": "fireball",
+      "id": "mage-fireball-cast",
+      "event": "fireball.cast",
+      "source": "art/main-hero-mage-v2/sounds/fireball/fireball.wav",
+      "file": "public/assets/audio/mage-sfx-uploaded-v1/fireball.wav",
+      "bytes": 192078,
+      "sha256": "0d3c4951b464819bb24975777fa41dc71211fd1f899965c74bd83b86d5f32b0b",
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 48000,
+        "peak": 0.8456068634986877,
+        "rms": 0.1391955580565463,
+        "invalidSamples": 0,
+        "clippedFraction": 0
+      },
+      "gain": 0.886937
+    },
+    {
+      "folder": "meteor",
+      "id": "mage-meteor",
+      "event": "armageddon.impact",
+      "source": "art/main-hero-mage-v2/sounds/meteor/meteor.wav",
+      "file": "public/assets/audio/mage-sfx-uploaded-v1/meteor.wav",
+      "bytes": 192078,
+      "sha256": "4136d860fee903a224c75d3880dd42c33e9bab864ceb5277ffcd9eced0e5bf08",
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 48000,
+        "peak": 0.824462890625,
+        "rms": 0.12216800003646362,
+        "invalidSamples": 0,
+        "clippedFraction": 0
+      },
+      "gain": 0.909683
+    },
+    {
+      "folder": "thunder",
+      "id": "mage-ultimate-release",
+      "event": "ultimate.lightning",
+      "source": "art/main-hero-mage-v2/sounds/thunder/thunder.wav",
+      "file": "public/assets/audio/mage-sfx-uploaded-v1/thunder.wav",
+      "bytes": 384078,
+      "sha256": "4a01cb052fb55f7aa8e25c7b80918770f323a02ec0dc1786b8a395367851545a",
+      "analysis": {
+        "seconds": 2,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 96000,
+        "peak": 0.9142429828643799,
+        "rms": 0.08785617065459726,
+        "invalidSamples": 0,
+        "clippedFraction": 0
+      },
+      "gain": 0.820351
+    }
+  ]
+}

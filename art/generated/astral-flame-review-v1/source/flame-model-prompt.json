@@ -1,0 +1,29 @@
+{
+  "description": "One isolated compact patch of necrotic mint fire erupting UPWARDS FROM THE GROUND in a dark fantasy pixel-art survivors game. This is the ground fire of the armored Eclipse miniboss reference. Three narrow uneven flame tongues, middle one taller, broad low root at the floor, large transparent gaps between tongues. Thin curved stepped tips, simple coarse clusters and flat shaded green-teal/slate flame bodies, very small pale mint inner streaks. Geyser-like rising and falling flame silhouette suitable for an eruption/idle/die-down animation, smaller and less powerful than a final boss ground inferno. NOT a round fireball or teal orb, not a tornado, not ice crystals, not a skull or rune.128x128 transparent canvas: contact base/pivot exactly x64 y104, flame feet at y104; keep the silhouette inside x22..106,y22..106 with generous transparent margins. Restrained dark slate, deep green-teal and cold mint palette from the reference caster armor. No white filled core, no warm orange/yellow, no purple, no smoke cloud, no bloom/blur, no concentric ring, no background, no character, no text. Match the PROJECT pixel-art style: chunky connected pixels, readable at game size, no noisy fine details.",
+  "width": 128,
+  "height": 128,
+  "max_colors": 8,
+  "palette": [
+    "#202f3b",
+    "#24494b",
+    "#31675f",
+    "#438e7c",
+    "#64b39a",
+    "#90cdb0",
+    "#c0dfc3",
+    "#506b70"
+  ],
+  "palette_name": "Pixel Survivor Eclipse necrotic mint and slate",
+  "no_background": true,
+  "style_image": {
+    "url": "upload:9070b97f-fb87-41d3-853e-b9e3dbeaeb09",
+    "usage_description": "Use only the slate and mint colors, stepped edges and coarse cluster shading of this Eclipse caster. Draw ground fire only."
+  },
+  "style_options": {
+    "color_palette": true,
+    "outline": true,
+    "detail": false,
+    "shading": true
+  },
+  "seed": 110121
+}

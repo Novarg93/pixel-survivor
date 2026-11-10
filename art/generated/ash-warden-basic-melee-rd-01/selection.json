@@ -1,0 +1,38 @@
+{
+  "status": "draft-not-production-approved",
+  "clips": {
+    "south": {
+      "source": "south-01",
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "durationsMs": [
+        70,
+        60,
+        60,
+        60,
+        40,
+        40,
+        60,
+        370
+      ],
+      "neutralEndpoints": true,
+      "activeStartFrame": 4,
+      "hitFrame": 6,
+      "activeEndFrame": 7
+    }
+  },
+  "mirrorWest": false,
+  "changes": [
+    "Frame0 and frame7 replaced with accepted South static base, common canvas and pivot unchanged.",
+    "Interior frames1-6 are original RD pixels; no static-body/rotating-blade assembly.",
+    "Retimed from 1200ms to 760ms; timing is a draft proposal. Abrupt recovery remains a rejection reason."
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "events": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        -1,
+        0
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 5,
+      "timeMs": 460
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        -1,
+        0
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "front-mirror",
+    "combatFacing": "west",
+    "status": "visual metadata, not connected to gameplay"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/00.png",
+      "durationMs": 80,
+      "startMs": 0,
+      "render": {
+        "layers": [
+          {
+            "texture": "5fcdb9f8f7382ac16f32",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "b84303e511e43412f175",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 1,
+      "file": "frames/01.png",
+      "durationMs": 80,
+      "startMs": 80,
+      "render": {
+        "layers": [
+          {
+            "texture": "b483bfebf57a59154c81",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "c95de79b59d1b9dae37a",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 2,
+      "file": "frames/02.png",
+      "durationMs": 90,
+      "startMs": 160,
+      "render": {
+        "layers": [
+          {
+            "texture": "180d654fe4671812fd74",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "9103ba2e7eaa3439b85e",
+            "x": 37,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 3,
+      "file": "frames/03.png",
+      "durationMs": 100,
+      "startMs": 250,
+      "render": {
+        "layers": [
+          {
+            "texture": "a4e87e1b2a004fe53ae4",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "168f7315f052aefa9210",
+            "x": 44,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 4,
+      "file": "frames/04.png",
+      "durationMs": 110,
+      "startMs": 350,
+      "render": {
+        "layers": [
+          {
+            "texture": "6ed59343e7503fb890bf",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "6b94740decd54f8d1a35",
+            "x": 4,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 5,
+      "file": "frames/05.png",
+      "durationMs": 80,
+      "startMs": 460,
+      "render": {
+        "layers": [
+          {
+            "texture": "1c23aa866084d8f4b91b",
+            "x": 66,
+            "y": 128
+          },
+          {
+            "texture": "18cc8bd5de2986b0f171",
+            "x": 6,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 6,
+      "file": "frames/06.png",
+      "durationMs": 110,
+      "startMs": 540,
+      "render": {
+        "layers": [
+          {
+            "texture": "6deaeea49049fb7434a2",
+            "x": 68,
+            "y": 128
+          },
+          {
+            "texture": "87b45b1b183266d24b5f",
+            "x": 61,
+            "y": 5
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 7,
+      "file": "frames/07.png",
+      "durationMs": 150,
+      "startMs": 650,
+      "render": {
+        "layers": [
+          {
+            "texture": "23a6eb4ef24d3cbd49e8",
+            "x": 69,
+            "y": 128
+          },
+          {
+            "texture": "96667aa6a76c36d8b3a9",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 8,
+      "file": "frames/08.png",
+      "durationMs": 100,
+      "startMs": 800,
+      "render": {
+        "layers": [
+          {
+            "texture": "f50b8c6a84ab677ec3af",
+            "x": 70,
+            "y": 128
+          },
+          {
+            "texture": "3ce3277b482b4f10b051",
+            "x": 70,
+            "y": 36
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 9,
+      "file": "frames/09.png",
+      "durationMs": 100,
+      "startMs": 900,
+      "render": {
+        "layers": [
+          {
+            "texture": "f2cc66fadf2218cb44cf",
+            "x": 71,
+            "y": 128
+          },
+          {
+            "texture": "6e4a8158f0cf8462af21",
+            "x": 66,
+            "y": 35
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 10,
+      "file": "frames/10.png",
+      "durationMs": 100,
+      "startMs": 1000,
+      "render": {
+        "layers": [
+          {
+            "texture": "ff005b30322110f5be1f",
+            "x": 77,
+            "y": 128
+          },
+          {
+            "texture": "0ea47faa455f0c6982c3",
+            "x": 63,
+            "y": 34
+          }
+        ],
+        "flipX": true
+      }
+    },
+    {
+      "index": 11,
+      "file": "frames/11.png",
+      "durationMs": 100,
+      "startMs": 1100,
+      "render": {
+        "layers": [
+          {
+            "texture": "59c65150e907c8e7e501",
+            "x": 72,
+            "y": 128
+          },
+          {
+            "texture": "bee8d25f582d0279fdf1",
+            "x": 37,
+            "y": 33
+          }
+        ],
+        "flipX": true
+      }
+    }
+  ]
+}

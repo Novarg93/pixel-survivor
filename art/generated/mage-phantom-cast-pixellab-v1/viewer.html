@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arcane Phantom Cast · PixelLab Pilot V1</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23b4a4ff' d='M16 2 20 12 30 16 20 20 16 30 12 20 2 16 12 12Z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="viewer.css">
+<main>
+<header><div><h1>Arcane Phantom Cast</h1><p>PixelLab Pilot V1 · Mage бежит NORTH, фантом кастует SOUTH</p></div><span id="badge">Художественный эксперимент · отдельно от игры</span></header>
+<div class="toolbar">
+  <button id="play" type="button">Пауза</button>
+  <label>Режим <select id="mode"><option value="combined">Mage Run + Phantom</option><option value="run">Mage Run only</option><option value="phantom">Phantom only</option><option value="standing">Mage standing + Phantom</option><option value="comparison">Обычный каст / Phantom — рядом</option></select></label>
+  <label>Скорость <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+  <label>Zoom <select id="zoom"><option value="1" selected>1× · игровой</option><option value="2">2×</option><option value="4">4× · детали</option></select></label>
+  <label><input id="phantom" type="checkbox" checked> Фантом</label>
+  <label><input id="anchor" type="checkbox"> Anchor</label>
+  <label><input id="direction" type="checkbox" checked> Направление</label>
+  <label><input id="fireball" type="checkbox" checked> Demo Fireball</label>
+  <label><input id="repeat" type="checkbox" checked> Повтор демо</label>
+</div>
+<section id="stage"><canvas id="canvas" aria-label="Arcane Phantom Cast — анимационный просмотр"></canvas><div id="loading">Загрузка кадров…</div></section>
+<div class="transport"><button id="previous" type="button" aria-label="Предыдущий кадр">‹</button><button id="next" type="button" aria-label="Следующий кадр">›</button><label>Кадр <input id="scrub" type="range" min="0" max="11" step="1" value="0"></label><output id="frame">—</output><output id="phase">—</output><span id="scale">—</span></div>
+<details id="timing"><summary>Индивидуальный retiming кадров</summary><div id="timing-fields"></div><button id="download-timings" type="button">Скачать frame timings JSON</button></details>
+<footer><span id="quality">Ожидание финальных художественных кадров.</span><a href="comparisons/processed-contact.png">Контактный лист</a><a href="phantom-cast.aseprite">Aseprite</a><a href="phantom-cast.gif">GIF</a><a href="animation.json">Метаданные</a></footer>
+</main>
+<script src="viewer-data.js" onerror="document.getElementById('loading').textContent='Не найден viewer-data.js. Откройте HTML из полной папки Viewer.'"></script>
+<script src="viewer.js" onerror="document.getElementById('loading').textContent='Не найден viewer.js. Откройте HTML из полной папки Viewer.'"></script>
+</html>

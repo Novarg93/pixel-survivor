@@ -1,0 +1,11 @@
+{
+  "method": "Original programmatic pixel art, sampled alpha lighting, local Aseprite export",
+  "authoring": "scripts/mage-meteor-art-source.mjs",
+  "builder": "scripts/build-mage-meteor-v3.mjs",
+  "renderer": "Aseprite 1.3.18.6, batch Lua API 41",
+  "date": "2026-11-10",
+  "costUSD": 0,
+  "aiInference": false,
+  "bossReferencePolicy": "Read-only crops from the actual integrated boss for viewer comparison; no boss pixels or generator used to draw Mage art",
+  "gifPolicy": "Authoritative PNG/Aseprite preserve RGBA; illumination GIF is composited on Grove because GIF does not preserve fractional alpha"
+}

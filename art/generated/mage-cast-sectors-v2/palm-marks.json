@@ -1,0 +1,2733 @@
+{
+  "nativeCanvas": 256,
+  "controlFrames": [
+    0,
+    4,
+    8,
+    12,
+    16
+  ],
+  "method": "Manual marks on approved source frames; linear interpolation between control frames. Ultimate marks unchanged.",
+  "frames": [
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 0,
+      "palm": {
+        "x": 174,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 1,
+      "palm": {
+        "x": 184,
+        "y": 127.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 2,
+      "palm": {
+        "x": 194,
+        "y": 115
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 3,
+      "palm": {
+        "x": 204,
+        "y": 102.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 4,
+      "palm": {
+        "x": 214,
+        "y": 90
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 5,
+      "palm": {
+        "x": 212.75,
+        "y": 90.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 6,
+      "palm": {
+        "x": 211.5,
+        "y": 91
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 7,
+      "palm": {
+        "x": 210.25,
+        "y": 91.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 8,
+      "palm": {
+        "x": 209,
+        "y": 92
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 9,
+      "palm": {
+        "x": 200.5,
+        "y": 104
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 10,
+      "palm": {
+        "x": 192,
+        "y": 116
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 11,
+      "palm": {
+        "x": 183.5,
+        "y": 128
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 12,
+      "palm": {
+        "x": 175,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 13,
+      "palm": {
+        "x": 174.75,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 14,
+      "palm": {
+        "x": 174.5,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 15,
+      "palm": {
+        "x": 174.25,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south",
+      "frame": 16,
+      "palm": {
+        "x": 174,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/fireball/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 0,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 1,
+      "palm": {
+        "x": 127.5,
+        "y": 126.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 2,
+      "palm": {
+        "x": 149,
+        "y": 114
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 3,
+      "palm": {
+        "x": 170.5,
+        "y": 101.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 4,
+      "palm": {
+        "x": 192,
+        "y": 89
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 5,
+      "palm": {
+        "x": 192,
+        "y": 89
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 6,
+      "palm": {
+        "x": 192,
+        "y": 89
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 7,
+      "palm": {
+        "x": 192,
+        "y": 89
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 8,
+      "palm": {
+        "x": 192,
+        "y": 89
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 9,
+      "palm": {
+        "x": 170.5,
+        "y": 101.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 10,
+      "palm": {
+        "x": 149,
+        "y": 114
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 11,
+      "palm": {
+        "x": 127.5,
+        "y": 126.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 12,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 13,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 14,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 15,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-east",
+      "frame": 16,
+      "palm": {
+        "x": 106,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-east/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 0,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 1,
+      "palm": {
+        "x": 131.5,
+        "y": 125.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 2,
+      "palm": {
+        "x": 135,
+        "y": 111
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 3,
+      "palm": {
+        "x": 138.5,
+        "y": 96.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 4,
+      "palm": {
+        "x": 142,
+        "y": 82
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 5,
+      "palm": {
+        "x": 157,
+        "y": 84.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 6,
+      "palm": {
+        "x": 172,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 7,
+      "palm": {
+        "x": 187,
+        "y": 89.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 8,
+      "palm": {
+        "x": 202,
+        "y": 92
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 9,
+      "palm": {
+        "x": 183.5,
+        "y": 104
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 10,
+      "palm": {
+        "x": 165,
+        "y": 116
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 11,
+      "palm": {
+        "x": 146.5,
+        "y": 128
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 12,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 13,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 14,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 15,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "east",
+      "frame": 16,
+      "palm": {
+        "x": 128,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/east/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 0,
+      "palm": {
+        "x": 171,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 1,
+      "palm": {
+        "x": 171,
+        "y": 126.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 2,
+      "palm": {
+        "x": 171,
+        "y": 112.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 3,
+      "palm": {
+        "x": 171,
+        "y": 98.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 4,
+      "palm": {
+        "x": 171,
+        "y": 85
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 5,
+      "palm": {
+        "x": 176.75,
+        "y": 81.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 6,
+      "palm": {
+        "x": 182.5,
+        "y": 77.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 7,
+      "palm": {
+        "x": 188.25,
+        "y": 73.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 8,
+      "palm": {
+        "x": 194,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 9,
+      "palm": {
+        "x": 195,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 10,
+      "palm": {
+        "x": 196,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 11,
+      "palm": {
+        "x": 197,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 12,
+      "palm": {
+        "x": 198,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 13,
+      "palm": {
+        "x": 191,
+        "y": 87.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 14,
+      "palm": {
+        "x": 184,
+        "y": 105
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 15,
+      "palm": {
+        "x": 177,
+        "y": 122.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-east",
+      "frame": 16,
+      "palm": {
+        "x": 170,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-east/attempt-02/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 0,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 1,
+      "palm": {
+        "x": 90.25,
+        "y": 125.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 2,
+      "palm": {
+        "x": 94.5,
+        "y": 112.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 3,
+      "palm": {
+        "x": 98.75,
+        "y": 99.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 4,
+      "palm": {
+        "x": 103,
+        "y": 86
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 5,
+      "palm": {
+        "x": 103.25,
+        "y": 79.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 6,
+      "palm": {
+        "x": 103.5,
+        "y": 72.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 7,
+      "palm": {
+        "x": 103.75,
+        "y": 65.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 8,
+      "palm": {
+        "x": 104,
+        "y": 59
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 9,
+      "palm": {
+        "x": 99.5,
+        "y": 79
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 10,
+      "palm": {
+        "x": 95,
+        "y": 99
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 11,
+      "palm": {
+        "x": 90.5,
+        "y": 119
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 12,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 13,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 14,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 15,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north",
+      "frame": 16,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 0,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 1,
+      "palm": {
+        "x": 83,
+        "y": 126.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 2,
+      "palm": {
+        "x": 72,
+        "y": 112.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 3,
+      "palm": {
+        "x": 61,
+        "y": 98.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 4,
+      "palm": {
+        "x": 50,
+        "y": 84
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 5,
+      "palm": {
+        "x": 47.5,
+        "y": 86.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 6,
+      "palm": {
+        "x": 45,
+        "y": 89.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 7,
+      "palm": {
+        "x": 42.5,
+        "y": 92.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 8,
+      "palm": {
+        "x": 40,
+        "y": 95
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 9,
+      "palm": {
+        "x": 53.5,
+        "y": 106.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 10,
+      "palm": {
+        "x": 67,
+        "y": 118
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 11,
+      "palm": {
+        "x": 80.5,
+        "y": 129.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 12,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 13,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 14,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 15,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "north-west",
+      "frame": 16,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north-west/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 0,
+      "palm": {
+        "x": 146,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 1,
+      "palm": {
+        "x": 142.75,
+        "y": 125
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 2,
+      "palm": {
+        "x": 139.5,
+        "y": 110
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 3,
+      "palm": {
+        "x": 136.25,
+        "y": 95
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 4,
+      "palm": {
+        "x": 133,
+        "y": 80
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 5,
+      "palm": {
+        "x": 116,
+        "y": 81.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 6,
+      "palm": {
+        "x": 99,
+        "y": 82.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 7,
+      "palm": {
+        "x": 82,
+        "y": 83.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 8,
+      "palm": {
+        "x": 65,
+        "y": 85
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 9,
+      "palm": {
+        "x": 81.5,
+        "y": 97
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 10,
+      "palm": {
+        "x": 98,
+        "y": 109
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 11,
+      "palm": {
+        "x": 114.5,
+        "y": 121
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 12,
+      "palm": {
+        "x": 131,
+        "y": 133
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 13,
+      "palm": {
+        "x": 134.75,
+        "y": 134.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 14,
+      "palm": {
+        "x": 138.5,
+        "y": 136.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 15,
+      "palm": {
+        "x": 142.25,
+        "y": 138.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "west",
+      "frame": 16,
+      "palm": {
+        "x": 146,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/west/raw/16.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 0,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/00.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 1,
+      "palm": {
+        "x": 139.25,
+        "y": 128.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/01.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 2,
+      "palm": {
+        "x": 121.5,
+        "y": 118.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/02.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 3,
+      "palm": {
+        "x": 103.75,
+        "y": 108.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/03.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 4,
+      "palm": {
+        "x": 86,
+        "y": 98
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/04.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 5,
+      "palm": {
+        "x": 103.75,
+        "y": 108.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/05.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 6,
+      "palm": {
+        "x": 121.5,
+        "y": 118.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/06.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 7,
+      "palm": {
+        "x": 139.25,
+        "y": 128.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/07.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 8,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/08.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 9,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/09.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 10,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/10.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 11,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/11.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 12,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/12.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 13,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/13.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 14,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/14.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 15,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/15.png"
+    },
+    {
+      "spell": "fireball",
+      "direction": "south-west",
+      "frame": 16,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/south-west/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 0,
+      "palm": {
+        "x": 174,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 1,
+      "palm": {
+        "x": 184.5,
+        "y": 129.25
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 2,
+      "palm": {
+        "x": 195,
+        "y": 118.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 3,
+      "palm": {
+        "x": 205.5,
+        "y": 107.75
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 4,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 5,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 6,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 7,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 8,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 9,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 10,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 11,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 12,
+      "palm": {
+        "x": 216,
+        "y": 97
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 13,
+      "palm": {
+        "x": 205.5,
+        "y": 107.75
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 14,
+      "palm": {
+        "x": 195,
+        "y": 118.5
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 15,
+      "palm": {
+        "x": 184.5,
+        "y": 129.25
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south",
+      "frame": 16,
+      "palm": {
+        "x": 174,
+        "y": 140
+      },
+      "source": "art/generated/mage-hero-v2/originals/lightning/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 0,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 1,
+      "palm": {
+        "x": 176.75,
+        "y": 124.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 2,
+      "palm": {
+        "x": 190.5,
+        "y": 109
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 3,
+      "palm": {
+        "x": 204.25,
+        "y": 93.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 4,
+      "palm": {
+        "x": 218,
+        "y": 78
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 5,
+      "palm": {
+        "x": 218,
+        "y": 78
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 6,
+      "palm": {
+        "x": 218,
+        "y": 78
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 7,
+      "palm": {
+        "x": 218,
+        "y": 78
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 8,
+      "palm": {
+        "x": 218,
+        "y": 78
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 9,
+      "palm": {
+        "x": 204.25,
+        "y": 93.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 10,
+      "palm": {
+        "x": 190.5,
+        "y": 109
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 11,
+      "palm": {
+        "x": 176.75,
+        "y": 124.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 12,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 13,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 14,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 15,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-east",
+      "frame": 16,
+      "palm": {
+        "x": 163,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-east/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 0,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 1,
+      "palm": {
+        "x": 162.75,
+        "y": 121.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 2,
+      "palm": {
+        "x": 179.5,
+        "y": 106.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 3,
+      "palm": {
+        "x": 196.25,
+        "y": 91.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 4,
+      "palm": {
+        "x": 213,
+        "y": 77
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 5,
+      "palm": {
+        "x": 213,
+        "y": 77
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 6,
+      "palm": {
+        "x": 213,
+        "y": 77
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 7,
+      "palm": {
+        "x": 213,
+        "y": 77
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 8,
+      "palm": {
+        "x": 213,
+        "y": 77
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 9,
+      "palm": {
+        "x": 196.25,
+        "y": 91.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 10,
+      "palm": {
+        "x": 179.5,
+        "y": 106.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 11,
+      "palm": {
+        "x": 162.75,
+        "y": 121.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 12,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 13,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 14,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 15,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "east",
+      "frame": 16,
+      "palm": {
+        "x": 146,
+        "y": 136
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/east/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 0,
+      "palm": {
+        "x": 171,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 1,
+      "palm": {
+        "x": 173.25,
+        "y": 122.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 2,
+      "palm": {
+        "x": 175.5,
+        "y": 105
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 3,
+      "palm": {
+        "x": 177.75,
+        "y": 87.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 4,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 5,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 6,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 7,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 8,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 9,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 10,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 11,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 12,
+      "palm": {
+        "x": 180,
+        "y": 70
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 13,
+      "palm": {
+        "x": 177.75,
+        "y": 87.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 14,
+      "palm": {
+        "x": 175.5,
+        "y": 105
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 15,
+      "palm": {
+        "x": 173.25,
+        "y": 122.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-east",
+      "frame": 16,
+      "palm": {
+        "x": 171,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-east/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 0,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 1,
+      "palm": {
+        "x": 91.25,
+        "y": 117.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 2,
+      "palm": {
+        "x": 96.5,
+        "y": 96.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 3,
+      "palm": {
+        "x": 101.75,
+        "y": 75.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 4,
+      "palm": {
+        "x": 107,
+        "y": 54
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 5,
+      "palm": {
+        "x": 107.25,
+        "y": 51.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 6,
+      "palm": {
+        "x": 107.5,
+        "y": 49.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 7,
+      "palm": {
+        "x": 107.75,
+        "y": 47.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 8,
+      "palm": {
+        "x": 108,
+        "y": 45
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 9,
+      "palm": {
+        "x": 108,
+        "y": 45.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 10,
+      "palm": {
+        "x": 108,
+        "y": 45.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 11,
+      "palm": {
+        "x": 108,
+        "y": 45.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 12,
+      "palm": {
+        "x": 108,
+        "y": 46
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 13,
+      "palm": {
+        "x": 102.5,
+        "y": 69.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 14,
+      "palm": {
+        "x": 97,
+        "y": 92.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 15,
+      "palm": {
+        "x": 91.5,
+        "y": 115.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north",
+      "frame": 16,
+      "palm": {
+        "x": 86,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north/attempt-02/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 0,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 1,
+      "palm": {
+        "x": 81.75,
+        "y": 123.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 2,
+      "palm": {
+        "x": 69.5,
+        "y": 106.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 3,
+      "palm": {
+        "x": 57.25,
+        "y": 89.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 4,
+      "palm": {
+        "x": 45,
+        "y": 72
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 5,
+      "palm": {
+        "x": 45,
+        "y": 72
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 6,
+      "palm": {
+        "x": 45,
+        "y": 72
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/repair-v1/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 7,
+      "palm": {
+        "x": 45,
+        "y": 72
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 8,
+      "palm": {
+        "x": 45,
+        "y": 72
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 9,
+      "palm": {
+        "x": 54.5,
+        "y": 81
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 10,
+      "palm": {
+        "x": 64,
+        "y": 90
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 11,
+      "palm": {
+        "x": 73.5,
+        "y": 99
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 12,
+      "palm": {
+        "x": 83,
+        "y": 108
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 13,
+      "palm": {
+        "x": 85.75,
+        "y": 116.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 14,
+      "palm": {
+        "x": 88.5,
+        "y": 124.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 15,
+      "palm": {
+        "x": 91.25,
+        "y": 132.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "north-west",
+      "frame": 16,
+      "palm": {
+        "x": 94,
+        "y": 141
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 0,
+      "palm": {
+        "x": 146,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 1,
+      "palm": {
+        "x": 119.5,
+        "y": 125.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 2,
+      "palm": {
+        "x": 93,
+        "y": 111.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 3,
+      "palm": {
+        "x": 66.5,
+        "y": 97.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 4,
+      "palm": {
+        "x": 40,
+        "y": 83
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 5,
+      "palm": {
+        "x": 40,
+        "y": 83
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 6,
+      "palm": {
+        "x": 40,
+        "y": 83
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 7,
+      "palm": {
+        "x": 40,
+        "y": 83
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 8,
+      "palm": {
+        "x": 40,
+        "y": 83
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 9,
+      "palm": {
+        "x": 66.5,
+        "y": 97
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 10,
+      "palm": {
+        "x": 93,
+        "y": 111
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 11,
+      "palm": {
+        "x": 119.5,
+        "y": 125
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 12,
+      "palm": {
+        "x": 146,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 13,
+      "palm": {
+        "x": 146,
+        "y": 139.25
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 14,
+      "palm": {
+        "x": 146,
+        "y": 139.5
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 15,
+      "palm": {
+        "x": 146,
+        "y": 139.75
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "west",
+      "frame": 16,
+      "palm": {
+        "x": 146,
+        "y": 140
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/west/raw/16.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 0,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/00.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 1,
+      "palm": {
+        "x": 138.75,
+        "y": 126
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/01.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 2,
+      "palm": {
+        "x": 120.5,
+        "y": 113
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/02.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 3,
+      "palm": {
+        "x": 102.25,
+        "y": 100
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/03.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 4,
+      "palm": {
+        "x": 84,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/04.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 5,
+      "palm": {
+        "x": 84,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/05.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 6,
+      "palm": {
+        "x": 84,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/06.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 7,
+      "palm": {
+        "x": 84,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/07.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 8,
+      "palm": {
+        "x": 84,
+        "y": 87
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/08.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 9,
+      "palm": {
+        "x": 102.25,
+        "y": 100
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/09.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 10,
+      "palm": {
+        "x": 120.5,
+        "y": 113
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/10.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 11,
+      "palm": {
+        "x": 138.75,
+        "y": 126
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/11.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 12,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/12.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 13,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/13.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 14,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/14.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 15,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/15.png"
+    },
+    {
+      "spell": "lightning",
+      "direction": "south-west",
+      "frame": 16,
+      "palm": {
+        "x": 157,
+        "y": 139
+      },
+      "source": "art/main-hero-mage/casting/directions-pixminimax-v2/lightning/south-west/raw/16.png"
+    }
+  ]
+}

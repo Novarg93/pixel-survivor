@@ -1,0 +1,2204 @@
+{
+  "sources": {
+    "art/main-hero-mage/abilities/hero-model/8-directions.png": "f6832fe1a023076ee40d4374679d92b46814363b430f8d351d4dc59bece022d1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/balance-after.json": "a53698822d2d93e68a67e9953bc46e75936cdfa38cb875b175bebec6e6c9582c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/balance-before.json": "7f4eaed404ce8fd3f054a9f1ba07f6ab78e7f96e551053609387ddfc757d6a52",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/balance-final.json": "f2f67b77a4b4e727cf6a12ad0d6130bf52f83809d372221579bdc46d2d98ba6e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/build-review.mjs": "e8f5fe2732a809d42576e72e08f02f1d9e5a8c0e275e2a5c4e90563b1d7cd7bf",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/build-viewer.mjs": "9e9e5b158465a440b72ca2e5c8fecc023adc0b0a90d1a8f91ee53152b00ea6b7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frame-north-east.png": "1db83c63423e9a1f0c75f6434ca4ce574198b24bd3a1572ccd03480264cb5bbf",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frame-north-west.png": "4a411be0a95b8496d9925cbab4ec72c95e3e922638e7586a572b077049eaf956",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frame-south-east.png": "1d0a8a70675dc9f8ed9d57d198cb0982f969c9db191b7211959e3884e3cd0159",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frame-south-west.png": "a8ee67755619ac401a0726ccd8beba54bf98cb787150c1539dcbd2cc5e411e18",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frame-south.png": "f7ec9dafc00dfbf30387ac58b208475b81ab090eac7be5dbb339b7c5321d37f8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/first-frames.png": "92452d862a32274b91c872ac449be08e9e373d68eec6bf19ecf76c1f12f4dc3f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/generation-record.json": "de21c73a741ec0dcfc24a13824e791d19e5be5d73346fb3f8364632c6ad598b4",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/jobs.json": "72fcef54c831a315448d0844d7c72864fecc2e73975c5ed25fe500ad8e2f47cd",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/pixel-audit.json": "5ecd2f54dcf9a9fd304a31ac04b4408dee61bbacd09f163f6afc9d26f2d650cc",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-00.png": "7373efbd3601a5c91c4272f96b47ddd43af875de9cd436c7ca250bc04f8baa72",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-01.png": "077f6b765dda4ec7eb8a3f6e4e39db0e379d12f49884bd747a8b75054de0143f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-02.png": "8d9421476d73b0e7cb1504554d89bfde51911219d46c2656fcff931cc36cb15d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-03.png": "d274e6172afac5c816d22afc9a7711064fa88ecd4b54231a711e3f1e39cf619c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-04.png": "00e114321fc2556f0c66670d94ac9c38e645659a8e06a46332a5fe7713039b4b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-05.png": "303f0da37290874905cd95d42134a417f30e93abbe407634ca3d0747c7af476f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-06.png": "4dc8f4be710c2c1cf5717a24a4e5094bb0ec11a5ddd4638ee023eb0f03e22806",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-07.png": "67e521aa382be2777cd819d64f59720fc64d7967450d3307eef1546796d7ee63",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-08.png": "4c54a354f94447b62b591bdb76635ad7cdc8f4f837dbb89351ff655dccafd6b2",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-09.png": "891f4bd194f4c3127382bf2ab6513622160521cf3eda315eca2529342231c3d9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-10.png": "0c8cf66c776944d6dec8a8bb540738368f4b75baa00ee35d2cb31ac2551ef158",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-11.png": "a0f88afc568aa11caee88dd8a824e191c8e08106f12c50c1b56e72506987ea74",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-12.png": "482eabce572b33cb2e9f0d4705a6f14f68afb527439859138ffc9f35d59780fe",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-13.png": "0987dd8823f3da7e989213b3e8256985ca1c08f8b81c91b9cc6ed16f3171929a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-14.png": "351d6deecadc7c071edcd1dbb6febd6724341ed5620777927104073d33fcc422",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-15.png": "c2f22602876f4af254117140a1c47cbcc2ba43f59e886414a848527b06e98544",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/raw/frame-16.png": "9d17786af36fdb7367d56a5af16dfa5109037b218a40e33112167a4e75c296e3",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/receipt.json": "ef74d8a02469fbc7a55557875549b3ff22013c6fcbcb0ba2d5310ce4c4f15734",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/result.json": "ee70c483323341c1fb70e168cdb96f974bfb2cb01195a9e1f851ec71d9b499d6",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/run-north-east-strip.png": "72e2380fb13af4b80ec1ab42e27a0e8ac351223345787dfbaf4fe0ced42ce4fe",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/run-north-east.aseprite": "5898c77d3369bea78a00e8717a94ba2f360dcca1502721b989aa6b6cff7d1597",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/run-north-east.gif": "33c31925239b8188826e14aefa9af39e4a0f68edaf61e4d732a362fc6edd0b09",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/run-north-east.json": "5c9574ed5f07fbc3453e4b5ff0d2ba41e66a8a79b44008377361fb205208d80a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/run/run-north-east.png": "f9a8d019c0a85a945f87240e4b0c20dbe7049d902488c9179ef340dfccd5ab5d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/pixel-audit.json": "a904d8b19157fe4f325190285d128ff64a784badbc62254df75ae8190cf2afc3",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-00.png": "7373efbd3601a5c91c4272f96b47ddd43af875de9cd436c7ca250bc04f8baa72",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-01.png": "ec3f6d2e761bb3b89520d637cb8d1b6dbfcfc26ed421941ab7765205c77cdbfd",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-02.png": "ea13563df852510d55214e27f35aace40b97c58814f74480acacb2864c1e1dea",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-03.png": "657611a1df45d6c637386107e0c174783cbba0ac01487f3fd4d2ac31317b96af",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-04.png": "d0211e5bde7a752da25b3188aa0eb8a3eff3bd9175180089d0686fa71c877a2f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-05.png": "1b736f61e5a42aee7e76bfcb903c879fd4c39121bfaafa8a43febaede815ccd0",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-06.png": "bea7abad97dee31cf06bd2d8fb742970fc79ac801f002f4be576eb56328b2ee9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-07.png": "f60b43ab57268f2f56ee845666a3373046a1f0d8c8649c3fbb8fda24e09e52fc",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-08.png": "b1cbce809c2fd7a47d4cdd1ed9951babbce0feca1bbc79775ba17e6f8c389ea8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-09.png": "f2f50615cd2a2070a7d0508dcba0d59a7be86ab9cb075accddb6223702b0dcf2",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-10.png": "3d61d2002a714abe62321a5ce7d0b15be2168075facaa4b21801c6f853dde87d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-11.png": "91f0f2cfc6f86bb06c845abfe6ce947aae45a3b6a7a97d6f14e1d8c1385dd7ef",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-12.png": "98590f81d20746b9ba4d61ab1780ffca3dd36125456c2580e8280adea0030ed1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-13.png": "98e6a31c040d9e85c47fbd04e8d89cd91daf7bdacca0ae71d6de8334a036b259",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-14.png": "729bec0ea959c102a268447bc37f79f749595ad422fdd6a2b5146185502089b8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-15.png": "70c633d5f0b81dcec1cde4cd50efc9c6b603f867f4e3d7e7961d7144976577f3",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/raw/frame-16.png": "3543e1b02055b776ba88df4bdb6899b606ddd338c8e11c0da819853b11c85813",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/receipt.json": "c670bfc0abcd1293e38a01a0e95e78c38f11e100413ce3f508bf9d3548c68b34",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/result.json": "98d18c60b4384682a94d16e07fa3995e95d29675b5244f412f031a64a7619f46",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/walk-north-east-strip.png": "7a2bdc2648c0cb121da86c1a47a6d7f7c2eecd674a118ba56df690dc6703b6a5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/walk-north-east.aseprite": "ed142d72d2775aa1f0c768d7e6bd95efffa730ada4f0daebf81e5c92d144c495",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/walk-north-east.gif": "a55685d5310eee61db5ac0a29f902c3ea944f6482e09607dc0e03d354872f750",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/walk-north-east.json": "1ae26149ccb2be35514978a0ba39c89a14889c761f485319e0f079b2c9adbf76",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-east/walk/walk-north-east.png": "5d5482efba7fcf9dbf9dea580a3fa1f57fd4c50635cf767b8d5e466668d10e61",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/pixel-audit.json": "60a2a13db41ede89c56a27cdc9629dd419fe4c7ec38bf13db3b5166bc661417b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-00.png": "2a2b98195104445e65dbf33d839f5d4bb67b4e03d1e04848b220744769761c1c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-01.png": "a1832dc147c81b3423224253fa95751999ecd3cb63eed6333c19a595c8a4aca6",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-02.png": "9a47059a1b0674305b7479561c93751af321f1482bf6927faff9b72f97038e41",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-03.png": "eddc85405654df51421bc4c8f6693192b2eabb8f0fad8225d8cd43b7420d6d73",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-04.png": "46774668028df67a57b2abbe2bb38c4d1157c6f66a9b8544a092450764d29b99",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-05.png": "9882cf2b6d96bb718900220da29eabd5f761bebdcd35ee04d8b6a191f7586c86",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-06.png": "ad04380af1157419dc743a21e4a320c138e3d50ff4f7c8bdc79945e329e8dcd5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-07.png": "2eb5163ca4bd61fb96302291f1e99efb6639a0017626fb11a34c77e23308ec96",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-08.png": "e51c193cf7f1ee63f453cff72a70b87887437ef7ecaa647086bb42224112587b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-09.png": "13360ac02870c753b4d9e996331d16ebb5af7f9f5bc1cb9ad2fdce669b081133",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-10.png": "f307f5fdbd1a3e22bac4d9b7fab688afaad0d56702d47faf782ab12a6d224937",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-11.png": "740cb437bf5bab98bdaccf34c5ea726721e4500d0edfc2862ed62cdeea8c973d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-12.png": "3c7b957fb427e84afeae7dd70d1ea556cb63e2e1f690b77a77b84aeb0148d98f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-13.png": "23254e114646281ff94f36a5f3bad2fd7e01c1b9b6ca1a13a16572bfd869bb1c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-14.png": "f960c8e2235409f95580b2dd29a080eb4dabc8f5ecb2caf0e2e2aacdc828dab8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-15.png": "37ad4c921555821b65188804f634f3a4d90963f8d54d6a2edee498095290fee1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/raw/frame-16.png": "c64b351a2930a532780513fb50f6ae0c3994105c11894558125e957806b11bc5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/receipt.json": "1d7bb974d682523f8abd1ba472e9a26d94dc300cc7a714b9495abfb22d8b6e84",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/result.json": "0990d92f2381bf73f51e106b6432a5574ecd767a9c6338857037a0dcafe3dcf1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/run-north-west-strip.png": "2affabb86f3938a681f27195f2cf5337de60f70dc8863b305e6977ef69f068e0",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/run-north-west.aseprite": "1698240d183a64f31a6be612025f7c4035ff4a78f33a2ba1f8365d150014a2b0",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/run-north-west.gif": "446f84675a60141c59cc26767b7764eac5b4787f607336afdd7b406745537633",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/run-north-west.json": "63fd121f2648fd20a00aa810ac06b46eb2fb21a93d2150b1f411651db9fadfcc",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/run/run-north-west.png": "b6033496509797be72cf89e8f56b2a6abc80b001d2607ef328377ca58ddd3f7b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/pixel-audit.json": "6a6496b1172a22004fdfa6333f5cbc6208277069bf7934546d98d1b646a03d18",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-00.png": "2a2b98195104445e65dbf33d839f5d4bb67b4e03d1e04848b220744769761c1c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-01.png": "ad1c2076dd6cb4d24f263ab535ef9e2a95afab5c4c048bbc076876c67d9b372a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-02.png": "efcc4e59ddcc357b6da8ccd9dbd1d767b0985979172773be54f108c0f7142159",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-03.png": "8390f1296a2ef7c46f429cb79b981c172b620a888bbb2b280b4a3de098e0160b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-04.png": "37eb97243eaaec2dd105f4b170d592de22876bcc0bd75290a2cb31b91694db19",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-05.png": "9bc850567458e410663588802cc5e5da4a6ab067499e845b410ebdb8dd4633fb",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-06.png": "068aa4e53415a858db61e5f6360b199cdcfb852a3234faf3210972f9b1c46d90",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-07.png": "6de6e177b881a399a617d58ff0bb8505d82d024f103929265a45232691d66021",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-08.png": "87854cd6ca1abb82158b4bbc3bc53cc7dcea1d4a656a937e675565fa588b48d2",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-09.png": "b49bbcaa87d40f6eedee9750cbc5652ff159c74a9fb96ecc7594c2e8c481dedb",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-10.png": "22bb61d726d24d4749d1ad5174140e75ba1cf19b71743e5d6bd50687be25a77f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-11.png": "b002e0d2b1a71f22317d8517560917c859ebafb793e03c693fe6ff9132c65c7a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-12.png": "0d5794aba4972d7515b46d65f18f5da83a5d55d10f30854c4aefcd82c0b24a31",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-13.png": "6fb59976ff80564ef061a3c5614f33e6d2164549c715a8515be670448763dc52",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-14.png": "f9ad63556c0ad41a71568ee2992bc107179a325f68c57f5d441bbbd1c5b20b60",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-15.png": "2132f0774b45b4bccfb3fd7bc216c7100f35dc2df17a3067cd595c9ebe329d3e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/raw/frame-16.png": "908449c6f45784ca65ce8ea6124b4a71d2bce92ab5c9b4acf3c4df105bc41c3b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/receipt.json": "6b1974929f2c4a529b130f7825049a7b5e2579e69c53e265f9cabd92c3728660",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/result.json": "eee206cc8cd8a28dfe1e16fe03f190bf41d7cc2615b58a1b3807afbf1056dd87",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/walk-north-west-strip.png": "06adb64fa8c814de6ee1c5be495ca615ef1a90190c8a0135694fbc51db04b5b1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/walk-north-west.aseprite": "dd9e322e13ec1768eb9ce839101796a20233ca52fd04d56694e4a935b962be44",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/walk-north-west.gif": "b98ab7315639d5bb5eea1b81eebb5ea8beae2447a0cc8a7370937c8686b4b642",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/walk-north-west.json": "acccac5224de8fd4bc761ec99e1f8a7c0e20fee591577843515d2c7a2f9e5830",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/north-west/walk/walk-north-west.png": "762069dc97873409359cb0ec5a86dff72279e7c67be344dbeff4e03b16d91546",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/README.md": "0fd38e26d67ecd121e6c2aa23dfc6d181470e6d665c53c5117f3aa2013524f7e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/reproduction.json": "bccd5fa8cc1cb53a8cca836977b1ad67ca8e8f5f8c3c69f4ef0c2116b73f3d4c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/requests.json": "21b4a620cef16b070ff4c732d5d975b5b6bb601b9e58dc32831668bc8a0344ac",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/retry-request.json": "af76a7833f5320d1e5e24230345e7d46666ccb0e5da8a0b86c8176490a5bf86d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/selection.json": "fa8596f3dd944ee63e23aafa838beb25f788b7e50a31b47e5e843a9d2d8b2c1b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/source-manifest.json": "63a81e16bf21a653aa2cc5913ff50b3c50157355da8121f3a78e90535e6a2c95",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/pixel-audit.json": "abb7a7304e59c27a26b48cadf2b7daf789e6b712cb78a366ea84d8ac97642e75",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-00.png": "fba5f9cd01988c3981c3a00dc22b9b6d6742841da215bb7d0bcd3e7a357cde60",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-01.png": "742945a3f7a296b63f383f00177b8b9de0621938ffbe6f1c11cd3ba428170f66",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-02.png": "72a32277806c106efc0bb5bd15f69bf23cc4dfdfa3fb4fdaab8849b622d0c527",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-03.png": "047d19ab7b678841144a2ca3dc9fd654656c2a8a7d9d6966ed590822b72afea5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-04.png": "5239e45bf7d9db918b39cfc1661698480a78ae805a2ed3400544a75c5a172507",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-05.png": "da764eacdfbb60f2036a905a51bd832800e88af2b3cb18c1866d5ef21666f281",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-06.png": "a12f371bfb6bd46b74ff4461f9617c35dbd544b8d2f997aae20bebdf9ead2a12",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-07.png": "6209135f974aebaafec1a99fcfb9fad8106d0e9143783f8d3226e54b54876783",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-08.png": "4ce9e46e25254e6709bc47024cfd9b723232554beaf39cc1239aa08a7b86d83a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-09.png": "5d017950f975c09a47fe111e99c941b97992014157ff59d588691d3b936fcdbf",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-10.png": "57ec57ccacef9b65c784cd6608bd2d01e8a4ee2f6c6f35bf777720fc1cc7d347",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-11.png": "41b28ab257c232106f0955ba721c9c8af8a6e8f9fe8a9db449209ec0f5d5d46b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-12.png": "01dc7dc538282ce4f347b76ac75c0459a408a8ee24fbb3cdcf68d4d93e49d0e5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-13.png": "c9bec94a115549216720844cc9f3e4da19eb01df3fa0a16e47143d971cb5b312",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-14.png": "e7ddb4845c9846ded6025e7fcf694e398ddf90fb80d0491c57edd0fde2770619",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-15.png": "9e73fe7adf71fa8dfdb9439904c0a743f27f640478fbb72f18891f50e87c3da5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/raw/frame-16.png": "aca2fcbc53e294fd6ccb93b2a5b90baea73d242c7a70cabb3f76368ad4b9387b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/receipt.json": "b752f7c8cfcc1e266c072b5574420aed6d49c93521b9c4f472be313463bd37f9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/result.json": "2e417a149cf0ab90563dabd3b33a3c9c144e9add00c53ff4410ef271b849f065",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/run-south-strip.png": "666b97066be28844653e024113d31cf735f36ad0055ea30d7a5082792887f760",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/run-south.aseprite": "cf371cc0a09a0fbc555eabf9936f70f3d92d3d813a6e2bff85e6f72fec8072a8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/run-south.gif": "79419ff0a7318d4806d808b387b148f46f580497c73855e6029fea92cc15c586",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/run-south.json": "1064a017ffbcdfc05758bc17b0608d1009ede6a97074aeebd367c21c31bd22a6",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/run/run-south.png": "72d168761bd6a84e26eab45432cbecccab020b71c9770b3b5ea92cba94774090",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/pixel-audit.json": "79d5e0852618b2c676111a90c596b88988d11f6c6f64cec7c019d992312fed0b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-00.png": "fba5f9cd01988c3981c3a00dc22b9b6d6742841da215bb7d0bcd3e7a357cde60",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-01.png": "5c91346f1ff70396aba4872f2fa479289b2ab0a16ff37f7adba8457f8b74fe1b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-02.png": "d213a8fa63b81fae8cfa99d26c5261e8bb34509b99af293d4d9bb92ac71f132c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-03.png": "a10ebcdde3f2353df816a85265960c950a6240e2e4c992ec9d16ec0904b31e12",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-04.png": "87d770d39e628c95703924cf7ca0605aeaad143839acb26ce03c29d6d389d33c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-05.png": "703d064f333b92c35991a6410f2f74f97ed00854fa51ef0d9e949e82ef8bff08",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-06.png": "d350f51f3127695cc97ff7fb6b4bed1f41a7ed5e576e008912a28514a696e76e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-07.png": "a5df69717ba61e86b87fbc6eba97bbcfab0649aabd6f657e926393dd0bec00b1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-08.png": "738e2219eb6712ff9d9fe223162627628502c6e706149c34a4c6e6a40b97b671",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-09.png": "4f9dff485eedc12f1238b304955afdf027184972d1b2bf6b95b5c37326857960",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-10.png": "9031e30965301cc95dcd3e20c5b4ccb3f1ad4b4439affb343049baa36a0b778c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-11.png": "9b81893085d81a911b28aa4b8e5c2bca9407bf0db52c723e5867ba1795ea83b0",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-12.png": "e93945f8a7964e71aa78935a509f4a187d0744d8b7866a17a6081cea69076346",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-13.png": "1c40128d2130604078e343097afb2a5c4c1edc1e2521523281624d05ff5fec64",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-14.png": "fedab98e93274efa9e38e97df1462048cbe2fe48f207ec895f5f818ec9aaa09f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-15.png": "37b805452d70d7363d266b9e5a393760e62276797ca35835aa56a742d6db2eaa",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/raw/frame-16.png": "6e5e776f174a2d417a4f889b9324aab0c7bb52a3095d9b68ffda3e6f242b4355",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/receipt.json": "bfae59c71aa06b56b6b58299a82285f085863636a53d93d73e9521e279b07b64",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/result.json": "37dc3dd4e339532bbcb1827af98a51fd1c5077e619c6dceea0807f2d424e82f4",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/walk-south-strip.png": "d9da8c0a4ae2f69d7d37148a8848678e14ab10c424eb93ec7272fb4e951e5c48",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/walk-south.aseprite": "f666f2b8d7b190588e56f6cb8f8508171679fc5b8c221774084236f381a6bb70",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/walk-south.gif": "91b9520dded4a9c2ef8e26ce38ac388efd110720300052ff70796ae41d26de36",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/walk-south.json": "9887f8e57aa93bfa24ebeabb95bc75b1108a0d8b73cad12016db458cc392538c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south/walk/walk-south.png": "b77c2ec4aac99b0551e706383ab4a4fdd7ef3fbc44c2172a08b946206a2f8259",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/pixel-audit.json": "2e211be90c4b553b62f0108c9878c58d0736a5c4a42f647da342bfd4204d437d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-00.png": "853177eba24187c39edac0278090fc7462f95ad7c12fba9c75a662e8f9e2eb06",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-01.png": "ca0d3d4a57bfd77daae678517c0bf45a7cb1673bade950078a5580752c6c941b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-02.png": "d724dbaf0688167a91826be542fb2c781097f6c3b12cca04e4f202cb4aec627c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-03.png": "243a8181ffb47048e2c8d03352d1e1cb02ee6a3176d3ab08f9bd060959d56c27",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-04.png": "0938d0253d49fc572ee794124fbbb87a6e135c6fd959b78486c3e25668a3058d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-05.png": "c8d8687eeeae916dc44f45acd749601052dda96362abc7736d7060f8138b14e2",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-06.png": "d65c433425305213ea6ad20d45024a63e08c6bd27e93165993e44950cc8e6de0",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-07.png": "88ea59367e9bdb660c9d08b7d914be72ed320668fe658f27a95651cef968333e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-08.png": "7e3a6a7b8d78350e95dfd77a865f2127f9ddb28f8443e85dacf9495d7d1b5a81",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-09.png": "dd7880fd24e38be2f337d2d95d10d6d015bb9e3ac9f665f99db19d9a52c8967a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-10.png": "ed3a23f9a154e7809ac2d69d99492b9e65aa8c94efc66fee2f4920ee48ab7dfe",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-11.png": "f37dfebc1bdb8538d44550672853ed826c4d0308e09f27f69ac09dc98d5599a4",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-12.png": "27bc9a0a4ba96e8bfe01cbc549bf7f590f38f7f8aa7fb2585f399a8145cec30f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-13.png": "fb08b8f06413c76bb8848de0f6f603e50e022399c91ddcf6e7228e35f717b937",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-14.png": "586e617dbc4762d0ffd27626e9ee61341d8f83a4c6a6d1b4f3320a3f052b2ea9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-15.png": "6481d925ab3bc8255e1b8951c3ef2fd7574832f25d03374bb3d4690dd4b7319c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/raw/frame-16.png": "07f854f9662d73a58b7ac84c27894e853f939b90974c5bb8d0074c9a7d03a1ce",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/receipt.json": "c6d11eb0847421f9d8a6677d711ed104cace6d137b65e7a99ae092835ec986eb",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/result.json": "b12ef565b04c83b8e24044b070c0f31f4c00ebbc76c1aef5d43fd5cc2aa8c70d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/run-south-east-strip.png": "7b9adb39773114bd6bab0565c493b62e8222cfc1347d701e589b5104993d7c81",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/run-south-east.aseprite": "d4d1123d265d7348fbbfc0d565b9797c5c897089dc6d703de8b25c950072f225",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/run-south-east.gif": "e305aab83952d4e3a0ace9fc5b91c0f9c215d894e14a3996332ce5e6793b00dc",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/run-south-east.json": "dfed364554cf1bf49ec62d392b471c11444536ba2db609914bc43c05ea43d59f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/run/run-south-east.png": "82f808e6cfa878ffe07208fc77eb254cbd1a0d48e9d8ac8c0aad3e0e211f446b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/pixel-audit.json": "68a52c00ac7a7540e0b70568c402a8d1e677d3799017052e0cf521234951ba68",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-00.png": "853177eba24187c39edac0278090fc7462f95ad7c12fba9c75a662e8f9e2eb06",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-01.png": "0b2937c5ee5b3ba91ec2db712e49a820dd61c26420a7892f8aa55a0f597d52b9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-02.png": "09e9620c028b7f7f9efc896e33a49bb93e6676358f5c2995eafe594f8b2d837a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-03.png": "65ae717065f93f721fd062a8ef8af084393bd8c868b43ef7a4a506fda82c66d9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-04.png": "cf193ee4bc0da97be8539ac91276f28427d6cbb9aebe5ae1f1f6177cdc979a74",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-05.png": "65256c972805272e2a0fa4e7fa8d1158dbdc83c95f51f37d5f420bf121c0519a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-06.png": "e1a9ebec8bd1c1288d6e82ea598dc8137faf3b6bce69a22f121bf00677df6582",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-07.png": "311659397116e48f1674b16ee80b2180a5f53615bd904606c4f0b789d47bf0ab",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-08.png": "1c06ea3f5803d7bd93cc5a0d8252059741e844ffb1f397c2bbd3bc6f1204fbf8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-09.png": "6c368f19ec7fce1410af77afc86b62bc785ad79fd23514e7d5c8a0b9615d4178",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-10.png": "3312e62ec69159dd1fbe883bc921a63a366d1e406857981e9bcb7c173df2c2e9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-11.png": "21164db4a08c7d433ac28de21172a437198300e3a54047bcae4c97fb54fcfe11",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-12.png": "59e2c6715c95c8e80011547a11db06ce3aaf32851f3e65f01eaee9a39c546034",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-13.png": "ffcbc900efa71be1d7af98ce55a23a8d6d102264b23c9d1d8cfedfa525b3b64f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-14.png": "eade26290d0a72bde3e7924840763e23438874ef030279c42567c583488a2d4c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-15.png": "3aa0228aa8327ccd70ff326e939d9b634dc0a8041cb1e4b16167c2d070e06b31",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/raw/frame-16.png": "226d0e8c0fd8e5f3a040e3d9a004be566707af201464a9494998f2cd58537518",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/receipt.json": "d86aa0083e26fceb0e8a50501dcda8d93f61bdbdcd16c30c60522f0d918c7e8e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/result.json": "b725cd2eee2b63906dfca6ffb75efbea0e5f7fe1c4d73739237b2f3b68cd6e2a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/walk-south-east-strip.png": "bc0455ea922d26e74142cfd5ee047f34fce0641d48dd08327a22f31a91a108be",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/walk-south-east.aseprite": "e68eb5dc2c38dda161d9927dbff92ff01cef1b145656f7d2a6297804b05c4ab8",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/walk-south-east.gif": "2c69bca7b418c69255af1e78055b9e311308ab3070d20627275e8aa655136889",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/walk-south-east.json": "13c7f0f8447d4774452eec62f27c923454b6c67c18178d315e6a82010b339688",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-east/walk/walk-south-east.png": "acceaadd7caee00ad60b941b2f8ac83e7856e9dfd5944675341825394c63f1d9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/pixel-audit.json": "8c453da9e6bf672f5c92e7c221164b1defd40ab863a5e5c829bff2c526ad3757",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-00.png": "455b5fcdcdd9ca5937ed41f710f82c6407810ce4aac4b40280584b667df3c7d7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-01.png": "567bada41caf2ab14cfb1d47d95074f35cd7a29f733dc1738ebbface58fa8acf",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-02.png": "8ae81263b96bf289f6d04c5e89993b51e80224817923d3acf9f5e2decaa04410",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-03.png": "0eb9afe99b67f2b5ffb9f1964b0229c075e117d05cd642a5b74c64ed9eaf219f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-04.png": "bd5946b1696038fed4a20f5f96468b76914d0ac1ebd55df5f41f1f1443809587",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-05.png": "6960643322ddd9e13bf046b852ade21409d5f22d8a2f568ed7b63825816eb430",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-06.png": "2e9d1f48679daa105786578c6d14132499396d0f4837f1bdaeaf678c7f3f5a78",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-07.png": "b03d9a82ce5c45827aeea2a342668f798b44ff3fec0fea5d3b7d33623b554319",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-08.png": "c747f449620d07e17d0215a8d2b797e06eb10a609e3aef0c59a0ef25735ad920",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-09.png": "685968b9de9e412f6b3bf526a629947aef849b31158676e0070aaaaf055f9cd1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-10.png": "c0e987c39e3d050df6c80f858a16c7e8d9b2154706f93ee6167537d150cd14b5",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-11.png": "0850936caf9f5a12d1905f6dfdeed812f24602bfe7c9a04a2eeac75c300c9dbf",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-12.png": "7263a3bdd02d5f6323433653394bb6c0b6ee4ec15160edb5d2fbbaec8e4cfa9e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-13.png": "9540b9fba2e8a65321423961b8ffbc4f0fbbf67d454b5360187f6d23683a4718",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-14.png": "598dba78568550854cab46099b9f6352381e823e83e825a29143a76be1e8045d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-15.png": "ccf0f341e0aa7aadd87e4b3f0fcb47521035b31f477df24daf6ddb03a9eca796",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/raw/frame-16.png": "a7176907466e57c17d6c3132ebdcbf1fc6cfc40a6da36cf8fb3817afa2ade7d9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/receipt.json": "56c97973b42f33ac996b595ef6a5ce7408ed3468f2702f9d0409b245223940f1",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/result.json": "943b396cb522af06442e339a38db33180c203031dc022f745c54a8adcd9a2709",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/run-south-west-strip.png": "7361124efd89078e59d899e1f1b6379dcb2e717013e547bccd73a0f3e250b04f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/run-south-west.aseprite": "6761c30929838699ac5816cd9fd23f1c402ff6fa74e3be673bef09786dd66915",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/run-south-west.gif": "115b7b474d97f13624c4a7a6e7ff36dda2f91d0886c2f119d4b79eba30d871a3",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/run-south-west.json": "25d15563d537175293f1a8974d32de53fc5dd62a90f1481a6d7c7e712ccd3879",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/run/run-south-west.png": "d764f4f794d9f2f177ad0f3f084ab8735274ea65e9a2028a70729e9dc23a8b98",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/pixel-audit.json": "6f27ab83ba7001746ec6ba9641c7b1d3aef4e9bf1f9f46e9037ef32a36c9261a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-00.png": "455b5fcdcdd9ca5937ed41f710f82c6407810ce4aac4b40280584b667df3c7d7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-01.png": "788c3d2d015b05bb02678f350c8bc678367b31d6374f338095886aae977da2a9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-02.png": "6367078c913f712994232fdd973bbc21dfae607de102c78cf47753b78c508fd6",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-03.png": "995318d8d458152d7c40200eb364292a136a6d9479bb24f18425b3a6f6b82291",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-04.png": "d46e931ff18ec93b79c686b9636c95113b2e8d14ede9a5d45a68d53fb2c3775c",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-05.png": "de0edcabf13df153abdb7744736c83d97f69cc346cc7887434ae21e419caebab",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-06.png": "38b51930f32b8710647002ce65c71c1e50b0b3a5351b2e650418d82c08e420bd",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-07.png": "78c1253ac2de04e1a3d4f2493baf6eb69c7691e8a23a4fcf405eb13905627480",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-08.png": "5c4f8c74781b6619c1b6e74d040437fa08723cc4f08809724d21b994a33804fe",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-09.png": "2eb71de5d0e8db15284301b1e2973772246ea2302f152bdd7459a91aad5c0fe4",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-10.png": "40e6f0a029139246e71763c73237a5d825e573022bd85aee5a4918391bb2d785",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-11.png": "7b387c4ffb436716e00636c2a07a74114faf60ae509afeb7137d1f68f3b83e95",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-12.png": "0dd11d21018c913d7cb63d643b2537717dfe91c3be83a2282bea5b33b10a7aea",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-13.png": "860b1adad09670818ce1969f162465a5945eb6d8d2b766169c34bc16c4d93bcb",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-14.png": "caa87deff9933866d9b4ce50e7b78247b04cf954fcc1141ff6327c12327ccef7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-15.png": "f0d88a7f497a25fc13df7fa889539f1677f7b4ee1f84ca5aaca0781485b7e2e6",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/raw/frame-16.png": "6af833c776572ca5b04006662c4fce9495d8cff60dd9667bdf798a9a8743b9f3",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/receipt.json": "94ad929d0a4ff703bda398afd86969dff4054b585ef4b84cd48b073666ab49d7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/result.json": "2b1df11ca412a7701f18d14ba691941651e06c825a3f84c365013fc907ca9347",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/walk-south-west-strip.png": "97587ada7c9644ef6c53ec3fbc22a5801192053c2cba60c790fa4f0ce9906d75",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/walk-south-west.aseprite": "5d09570ec3656d4522399566b9e8263e5791979b2b07c85494e2f05396336c2f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/walk-south-west.gif": "0c2b6b2c2ee009aaa68a4459511e1154ef9839b576ed85ed3286481f59b82c2e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/walk-south-west.json": "17ad2f2c215f7292b13b2554d45636be2d097e233ade5de5a57a41cf79e17712",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/attempt-02/walk-south-west.png": "5665329f2627a158604d61e33d24376b707365078bd3b8c4baea6e52289eff0f",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/pixel-audit.json": "67f1a82385eb170288a0177e8346336bd93387bddf6cfa7e8d6ae111364ff940",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-00.png": "455b5fcdcdd9ca5937ed41f710f82c6407810ce4aac4b40280584b667df3c7d7",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-01.png": "bebd47a19bda14c98dcd37a67ebb6a49899e6162946ee0be1969774159ba4b5d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-02.png": "50842e781af81a8b538eb51496e621502e9d76741eadc443748ca0fc8b76660a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-03.png": "85c7bef428b971225676dcc97869f89836c07aff892cfd265f9efcc7d4a19fba",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-04.png": "3162df075d677f7ef9c27a13602df979a10e9e9ac470a8b4eb0c791de1cc43ee",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-05.png": "b2535cc0a3731683f3e07d57667440e4362d171cd3c41c12f3dc2dae3f440121",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-06.png": "ac96489d7913190ef27cd1c229a4880a50fd4429c1358b5f34795f8a2b1a3586",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-07.png": "9b27cb7aec26ab7d6bc08f08598eb4eb930299f1bf0d4847d509ca88a0b0eeda",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-08.png": "9f3aea799018f0c2bdf7bb043f46a64d2ee6af9ed13d9e10dd2f59e1d0075c89",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-09.png": "0ad7ef626615728c8976fe3536344aae145e6204ddd8edf81a1ea0ff920f145b",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-10.png": "42dfe095ecb3b9183a9b3b6c876a6e529efa090d1cf44844ad7d1f61c1c522ec",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-11.png": "208ca6cd6116a0951646e4171717a017dd0f49e4cc117e5eed743274b805532e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-12.png": "74123c13f35538c6ed658fd0dcbadf22996d900b07b435c04cedc04465202577",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-13.png": "dcb27041da549945ecb7bd9248c667e85b47fab20e4b490b4cdbac4b14893378",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-14.png": "c3f09dbdd398f2dbaa56733e3f6e6d38d0a8c765727bda8c6edee71f4d8dfdbb",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-15.png": "32b3f797b0262368b9a21229b07aaba472df0560051a75e292e8d9cb5955595d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/raw/frame-16.png": "80ff07f6799197d1d3834db616503f9bc72c0e3e81b2246dba118309dd92f71a",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/receipt.json": "26f43dfe82b4479d98415ad9591fc47a0b03755bebaaa91cea3d6dcc0ff77c1e",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/result.json": "e9bd05c4761c6c5717e1cab3d47a1427ca39543b8f7d7a5e93f66d58d5ecb7ba",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/walk-south-west-strip.png": "8b02553989eca8ef7e06d471860dfad7358b84223621f4d1706010b95395f5ce",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/walk-south-west.aseprite": "cf912253cc5464b397d95b33126ab73dcd8b80f51ad35445b4779b8a757473c9",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/walk-south-west.gif": "e4a54f6cd8097d1e23f4fd5fb7c1871952873056032280115af464735adeba84",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/walk-south-west.json": "17ad2f2c215f7292b13b2554d45636be2d097e233ade5de5a57a41cf79e17712",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/south-west/walk/walk-south-west.png": "cf29c26a532577e6d676c798760c7842b680109213f31ef332c7cc72d616041d",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/validation.json": "378feec76ea8f61a69fd5558d40ac847af01ca728ca44be7350d2eabbbcf6528",
+    "art/main-hero-mage/abilities/hero-model/directions-pixminimax-v1/viewer.html": "dfc036d50b4b4919e0b189836ee575ea6a5fa45a6ed008757bda29d443194a5f",
+    "art/main-hero-mage/abilities/hero-model/idle-animation.png": "a4232216d885652a354fd92cca46cbd850f387bcf91e6fee5ae7cfbb96881dbc",
+    "art/main-hero-mage/abilities/hero-model/idle.gif": "bb9b4d1ebe6421bd90d1b24de7ae8fc2c864b7ef06fd76230e2b9083f1bc1f05",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/balance-after.json": "7f4eaed404ce8fd3f054a9f1ba07f6ab78e7f96e551053609387ddfc757d6a52",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/build-review.mjs": "dc6d992e908f01c16b4eaa52f10af5a1849c19d8609c90b91460782132902e55",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/build-viewer.mjs": "ef94a3909ccaf5beda3fb9580fb17d4942f0d4e040f8bff99923299f2483acf1",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/first-frame-north.png": "ebb63906cb0f6ad214dd28ef364f7e07db904f657fd7a8af6913560be9627440",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/generation-record.json": "0aa9c6f8d8afd6f919238ef63a598590ad554de6a67ba6672ac306a6ca8d3d93",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/README.md": "6fa7a8a06f3794be09e40a176b865617a32677478bf30826588e84f321888325",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/reproduction.json": "aada2f62bf5eba9c6b6145c71c6b433d47303ecc0b177eae18a8b8e3ef698c15",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/requests.json": "1fba79beaa81cc78000d7a3429c84ed0d2b471af53a61b81986ad6c9574488ba",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/pixel-audit.json": "df3184c739d9d62e3a46a5dde85cdb26038160d292bb9d3f5232573c75097ca0",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-00.png": "5bcfd1bed39bc00f69b176ad51c55ce86d9040ccce39e26b950bcbf749b1b269",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-01.png": "514ba712052880b1b8f496a8242caed2ff6b43d212517729ebe19f224e467d2c",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-02.png": "66b64f0eef3a2eceba58cc432b57364f0ea3c3b1604f17f0f64b86d7ccc41dde",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-03.png": "6f2df82148bcefc5bd2d8896119da0f7da65be2af5a09f508708550e91dd18ac",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-04.png": "ec38d832952663a3951b388ae189fcb791d4e374b52a4091ea4aabf0d423d29f",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-05.png": "7d37c30289cd009207bbce9f0ae1abd4401a98a493080c4cb5ed9839caaf993d",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-06.png": "cc97f023b255045871734ac70ea3219ddbff04eaf6879e02408471bb37d8b5fd",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-07.png": "18e1d0d61ee1a3671a5cf5e046603e4bb2c55010fe164bc21dca345941beaca5",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-08.png": "1c7131fed7d6ee7fa0c58e9ecf60977edbd980ae1b6f354573857a705c2889ee",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-09.png": "fa145beb073e37689d41a0e8f25fef46f6828b1db6d2b272ecced621efef9d7a",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-10.png": "5583207b38a51310e90e007cce5830fa7fade9119418259cdbbaefb022e7046e",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-11.png": "9ae85215011fe5ae32c2aaeaf35aef88bfeea10eec1895f11292d83aae837e90",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-12.png": "d6c3d34626ad710025f8a38b3a3f0e4b848f6eb7e8586f42f5991d7c6eb98bc3",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-13.png": "d69fd78e1ba6e57c4993391396a529dc611e1bef18b9d7a00731f890eff855dd",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-14.png": "7c4c01c283bb08955a0ec0c7a2b4374b8b10ae1e6efb12405bdc00b5d3c7504d",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-15.png": "51b40fd6d72a37c58ade58338cfe4d2cca42e7b6c96c5ae5e2d0f6828724761a",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/raw/frame-16.png": "4a00e0803b9a785eb4931c8117dbfc4ec44bb517725b87274dbdd84127c2615f",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/run-north-strip.png": "e087887b84150a581e29ca2aeb9331ee92e2ffabeb3de257626b19261fc1f0da",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/run-north.aseprite": "8009d18a9f57fb90e046ef21301712a2e100ba9cda7ed744f26ba87abca5e1a9",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/run-north.gif": "902a08b7a5ac87d353317b87cc9b2fc54eed9a94a80c0f72488fa340defdd44f",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/run-north.json": "3a9bfd7906292dc39a69ac76320294eb0d89b8e9a839b010c4e9ee1e0f94ad77",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run/run-north.png": "5ce6d6e8cb69ba828e09077486c6b7ff1755e2e94bf176101e9fde78b4b3f7b2",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run-receipt.json": "034d70b958905d10a42ce430aa90ae666972505a6b221abfc3d3b0f1e45e79b0",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/run-result.json": "35963fca752d0a5fac2acb81c8b360b02161ecef9300cb7918be43ed69798bcb",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/source-manifest.json": "5081b5af7fbce5d5094fab691a26314037687a764b4ae81a23b0bb0b5bdf20ce",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/validation.json": "6c1ea5f59c906a6b3d7189f5d8f13fca2e35fd4e8fca814cce7aaec350495be5",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/viewer.html": "afe4b5ea196c4e0d1e842c3fd33b2db04400b9e4fb391f74ef1ab2684260631a",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/pixel-audit.json": "fd4485443212af04ebfd7389bb0f89a4faa58956a9c15cdf18d5aa38e9f8328e",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-00.png": "5bcfd1bed39bc00f69b176ad51c55ce86d9040ccce39e26b950bcbf749b1b269",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-01.png": "bd164edf442703e1d642de002f8044acbebdf9490108486242b09cb91cda5f0d",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-02.png": "2f78accd2b4faba81257cfbda2e02290f7c475fb548f9aa25041431327e3f809",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-03.png": "46388d74e7fa688aebcbae440bfdb65fc54753448dd62b52dbc4b53bfee452e6",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-04.png": "feecccc8f2b5524e837df95d64e6e8dbaf3f669cd3184e44792125a9c76cedc9",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-05.png": "a0d4f8eec3fda068fc16dabf8952284284c8ec636878b9b61b2105e3738617d9",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-06.png": "405501cb470d0f374014474e718e766c6ae77006280bbea720c10bfe051b7e27",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-07.png": "57592c347dbc511620450a0394128d303f1cdb64be0f99aaf55b5c7892cac5a5",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-08.png": "fd3711129b7f53d8f1ed9637468e4dbb939c639c8a7f2272aa56b998e0cbd404",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-09.png": "711fd34b0f052f18d7ff9a62fc911329a75da9db3add43ab1df13f3fc4eae8f6",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-10.png": "a9d6188979ba9cd8cc68ff21d7c038b0e49cbb52c88ab634c44d0a85bb1165e5",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-11.png": "2b5e45e890bec4b8a9825df1a92d2dcce5ea52372b488ae5ed47e29b32189457",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-12.png": "985e9feb31f3a0437042d7771edf5957f20e4e02e416f86bd252a8837d97483e",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-13.png": "f0c028d75d5ccfe18f3d42f3048f5b5debb1ee58760dbaed947c00e807f7f85f",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-14.png": "74539a4139094278e0f0a3f3e75f544cf0c9f63b7f1fc4cda56964a9ba2e0a45",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-15.png": "52c7493d6aa91122cd4dbba60dd935bb961a0a7e19bf8d2632cf2dba5b1ec49b",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/raw/frame-16.png": "a3b7fa74791ecd4cca7b6affb5b59c697d17b4fd15cebbe046fc5237cb583197",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/walk-north-strip.png": "1471dbfd9af4f5c7f81746fd4f8da737e4440f9d897becdb06ed0074454b882f",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/walk-north.aseprite": "62f1fe086be358cd49c26d3f210c988f71cb1c3e3023020ac0ddfb80f32c80dd",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/walk-north.gif": "026ba9416b9f34318c85800584f3bd32427fc05d7a3dbd80c0526b6bfca81af5",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/walk-north.json": "dfe9e8487bd7dfe1c063155dd3f1101fcef56f35e06152ad91db9d4b03f16bce",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk/walk-north.png": "f97f5ffe107b29615f63d3f2f9a3aae90f63a2cf1d6a8ba31f1e40aa460833d8",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk-receipt.json": "9e5552117b6b22306dfe90387d2a58e02256f2145b666a6f036cfc115a23a926",
+    "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/walk-result.json": "74561e43df8d06d201326a7de632008ddfed4feb27063db3d75ab1f25981ed68",
+    "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.gif": "02cace84a99896594e07c6f8ce1f70440e5f8f2be327b8e37446cff9c7d4de22",
+    "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.png": "79ba7047cee66e8691ca350d07a63e0097629918ab02693a5c6c459b48b63d6b",
+    "art/main-hero-mage/abilities/hero-model/static.png": "fba5f9cd01988c3981c3a00dc22b9b6d6742841da215bb7d0bcd3e7a357cde60",
+    "art/main-hero-mage/abilities/hero-model/walking/walking.gif": "20cdb4d71c94648269dbbc0a8641374a7b0029a28a04b7dab03e948d7bc650d0",
+    "art/main-hero-mage/abilities/hero-model/walking/walking.png": "fc41fb69809c3add3bf784061cd121f51f7beab7453d4cc36e0b5424b99e1cac",
+    "art/main-hero-mage/casting/defensive/pixellab-animate-this-character-make-fa-1794159998183.gif": "a620edd41283cf4133c7d806138293b0785475d1b7c562a107118b4d20dbf19d",
+    "art/main-hero-mage/casting/defensive/pixellab-animate-this-character-make-fa-1794159998183.png": "33297cff727c47636dd3d0fba56da86464a8374e55c7e1d45db86d25ae5c4ee4",
+    "art/main-hero-mage/casting/fireball/pixellab-animation-of-casting-fire-spel-1794157518651.gif": "cfcba5a87a62daaa560172cfaef61d749dba027ad06686b809efee48983d417f",
+    "art/main-hero-mage/casting/fireball/pixellab-animation-of-casting-fire-spel-1794157518651.png": "615ed5eb9fe2b0cadd03bf029a299203d3e9f4d58eee2df6910ee0cde3922e51",
+    "art/main-hero-mage/casting/lightning/lightning-casting.gif": "91a292f6882f1acbbdd1f7fb4af218309a8cf510e517b0c1b7b0c714c14d3de1",
+    "art/main-hero-mage/casting/lightning/lightning-casting.png": "1ca3c4cdb5d5f83d48cf9c643df97c439391bcd854be3bdeada76e1a14f1c38f",
+    "art/main-hero-mage/casting/meteor/pixellab-Extend-one-arm-forward-with-th-1794157868053.gif": "e9b868d28ef6620a4f80a0e22fd91094a7e34f29a3ba891d100a917e5c0f8c58",
+    "art/main-hero-mage/casting/meteor/pixellab-Extend-one-arm-forward-with-th-1794157868053.png": "62b05041f1beb0fdb92124ee474b3215038e4f58c73de2e26f5b1e5698ef5c2e"
+  },
+  "clips": {
+    "fireball": {
+      "input": "art/main-hero-mage/casting/fireball/pixellab-animation-of-casting-fire-spel-1794157518651.gif",
+      "sourceSheet": "art/main-hero-mage/casting/fireball/pixellab-animation-of-casting-fire-spel-1794157518651.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1152,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18581,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4233,
+          "bounds": {
+            "minX": 56,
+            "minY": 32,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18780,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3151,
+          "bounds": {
+            "minX": 40,
+            "minY": 42,
+            "maxX": 237,
+            "maxY": 252
+          },
+          "visible": 18517,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3253,
+          "bounds": {
+            "minX": 50,
+            "minY": 42,
+            "maxX": 255,
+            "maxY": 253
+          },
+          "visible": 17830,
+          "edge": 2
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 2995,
+          "bounds": {
+            "minX": 47,
+            "minY": 42,
+            "maxX": 255,
+            "maxY": 253
+          },
+          "visible": 16482,
+          "edge": 3
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 2978,
+          "bounds": {
+            "minX": 49,
+            "minY": 42,
+            "maxX": 255,
+            "maxY": 253
+          },
+          "visible": 16053,
+          "edge": 1
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 2985,
+          "bounds": {
+            "minX": 51,
+            "minY": 42,
+            "maxX": 221,
+            "maxY": 253
+          },
+          "visible": 15826,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3042,
+          "bounds": {
+            "minX": 53,
+            "minY": 40,
+            "maxX": 215,
+            "maxY": 253
+          },
+          "visible": 15653,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3042,
+          "bounds": {
+            "minX": 55,
+            "minY": 37,
+            "maxX": 190,
+            "maxY": 252
+          },
+          "visible": 15514,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3598,
+          "bounds": {
+            "minX": 55,
+            "minY": 34,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 17249,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1164,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1161,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1163,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1161,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1161,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1161,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        }
+      ]
+    },
+    "meteor": {
+      "input": "art/main-hero-mage/casting/meteor/pixellab-Extend-one-arm-forward-with-th-1794157868053.gif",
+      "sourceSheet": "art/main-hero-mage/casting/meteor/pixellab-Extend-one-arm-forward-with-th-1794157868053.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 793,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 819,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18710,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 818,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18710,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 820,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18711,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 819,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18715,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 821,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18716,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 821,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18708,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 820,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18713,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 820,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 211,
+            "maxY": 252
+          },
+          "visible": 18720,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 814,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18603,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 815,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18601,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 813,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18604,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 815,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18602,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 814,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18601,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 820,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 202,
+            "maxY": 252
+          },
+          "visible": 18600,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 818,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18580,
+          "edge": 0
+        }
+      ]
+    },
+    "lightning": {
+      "input": "art/main-hero-mage/casting/lightning/lightning-casting.gif",
+      "sourceSheet": "art/main-hero-mage/casting/lightning/lightning-casting.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4494,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18734,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4439,
+          "bounds": {
+            "minX": 55,
+            "minY": 31,
+            "maxX": 207,
+            "maxY": 252
+          },
+          "visible": 18905,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4328,
+          "bounds": {
+            "minX": 54,
+            "minY": 31,
+            "maxX": 220,
+            "maxY": 252
+          },
+          "visible": 18883,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4382,
+          "bounds": {
+            "minX": 53,
+            "minY": 31,
+            "maxX": 220,
+            "maxY": 252
+          },
+          "visible": 18922,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3658,
+          "bounds": {
+            "minX": 53,
+            "minY": 31,
+            "maxX": 238,
+            "maxY": 252
+          },
+          "visible": 19241,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4352,
+          "bounds": {
+            "minX": 53,
+            "minY": 31,
+            "maxX": 251,
+            "maxY": 252
+          },
+          "visible": 20066,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4367,
+          "bounds": {
+            "minX": 53,
+            "minY": 10,
+            "maxX": 252,
+            "maxY": 252
+          },
+          "visible": 19922,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4025,
+          "bounds": {
+            "minX": 53,
+            "minY": 1,
+            "maxX": 244,
+            "maxY": 252
+          },
+          "visible": 20692,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4370,
+          "bounds": {
+            "minX": 53,
+            "minY": 2,
+            "maxX": 251,
+            "maxY": 252
+          },
+          "visible": 19573,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4379,
+          "bounds": {
+            "minX": 53,
+            "minY": 4,
+            "maxX": 221,
+            "maxY": 252
+          },
+          "visible": 19226,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4391,
+          "bounds": {
+            "minX": 53,
+            "minY": 14,
+            "maxX": 220,
+            "maxY": 252
+          },
+          "visible": 18940,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4348,
+          "bounds": {
+            "minX": 54,
+            "minY": 31,
+            "maxX": 219,
+            "maxY": 252
+          },
+          "visible": 18898,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1424,
+          "bounds": {
+            "minX": 55,
+            "minY": 31,
+            "maxX": 207,
+            "maxY": 252
+          },
+          "visible": 18888,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1324,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18742,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1306,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18577,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1302,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18577,
+          "edge": 0
+        }
+      ]
+    },
+    "defensive": {
+      "input": "art/main-hero-mage/casting/defensive/pixellab-animate-this-character-make-fa-1794159998183.gif",
+      "sourceSheet": "art/main-hero-mage/casting/defensive/pixellab-animate-this-character-make-fa-1794159998183.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4248,
+          "bounds": {
+            "minX": 57,
+            "minY": 32,
+            "maxX": 192,
+            "maxY": 252
+          },
+          "visible": 18087,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1545,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17385,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1558,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17326,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4249,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17362,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4281,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17446,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1542,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17468,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1547,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17382,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1561,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17328,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1544,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17380,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4287,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17442,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4295,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17461,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1553,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17381,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1552,
+          "bounds": {
+            "minX": 58,
+            "minY": 33,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17342,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4196,
+          "bounds": {
+            "minX": 57,
+            "minY": 32,
+            "maxX": 192,
+            "maxY": 252
+          },
+          "visible": 17692,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1520,
+          "bounds": {
+            "minX": 57,
+            "minY": 31,
+            "maxX": 192,
+            "maxY": 252
+          },
+          "visible": 18065,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1586,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18571,
+          "edge": 0
+        }
+      ]
+    },
+    "walk-east": {
+      "input": "art/main-hero-mage/abilities/hero-model/walking/walking.gif",
+      "sourceSheet": "art/main-hero-mage/abilities/hero-model/walking/walking.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4111,
+          "bounds": {
+            "minX": 57,
+            "minY": 31,
+            "maxX": 194,
+            "maxY": 251
+          },
+          "visible": 18459,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4009,
+          "bounds": {
+            "minX": 60,
+            "minY": 30,
+            "maxX": 193,
+            "maxY": 251
+          },
+          "visible": 18042,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1147,
+          "bounds": {
+            "minX": 63,
+            "minY": 29,
+            "maxX": 191,
+            "maxY": 251
+          },
+          "visible": 17705,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 914,
+          "bounds": {
+            "minX": 68,
+            "minY": 28,
+            "maxX": 187,
+            "maxY": 251
+          },
+          "visible": 17336,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 845,
+          "bounds": {
+            "minX": 72,
+            "minY": 30,
+            "maxX": 186,
+            "maxY": 251
+          },
+          "visible": 16760,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 807,
+          "bounds": {
+            "minX": 70,
+            "minY": 31,
+            "maxX": 186,
+            "maxY": 251
+          },
+          "visible": 16845,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 876,
+          "bounds": {
+            "minX": 69,
+            "minY": 33,
+            "maxX": 186,
+            "maxY": 251
+          },
+          "visible": 16876,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 839,
+          "bounds": {
+            "minX": 66,
+            "minY": 32,
+            "maxX": 184,
+            "maxY": 253
+          },
+          "visible": 16924,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3445,
+          "bounds": {
+            "minX": 63,
+            "minY": 30,
+            "maxX": 183,
+            "maxY": 253
+          },
+          "visible": 16867,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 917,
+          "bounds": {
+            "minX": 61,
+            "minY": 29,
+            "maxX": 180,
+            "maxY": 253
+          },
+          "visible": 17230,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1029,
+          "bounds": {
+            "minX": 61,
+            "minY": 28,
+            "maxX": 177,
+            "maxY": 253
+          },
+          "visible": 17609,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 937,
+          "bounds": {
+            "minX": 64,
+            "minY": 29,
+            "maxX": 185,
+            "maxY": 252
+          },
+          "visible": 17601,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 972,
+          "bounds": {
+            "minX": 66,
+            "minY": 31,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 17421,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 999,
+          "bounds": {
+            "minX": 65,
+            "minY": 33,
+            "maxX": 198,
+            "maxY": 252
+          },
+          "visible": 17457,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1046,
+          "bounds": {
+            "minX": 61,
+            "minY": 32,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 18010,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 1041,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18575,
+          "edge": 0
+        }
+      ]
+    },
+    "run-east": {
+      "input": "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.gif",
+      "sourceSheet": "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4673,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18574,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3908,
+          "bounds": {
+            "minX": 62,
+            "minY": 29,
+            "maxX": 183,
+            "maxY": 249
+          },
+          "visible": 17523,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3623,
+          "bounds": {
+            "minX": 63,
+            "minY": 26,
+            "maxX": 184,
+            "maxY": 247
+          },
+          "visible": 16692,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3407,
+          "bounds": {
+            "minX": 54,
+            "minY": 28,
+            "maxX": 186,
+            "maxY": 248
+          },
+          "visible": 15776,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3094,
+          "bounds": {
+            "minX": 41,
+            "minY": 31,
+            "maxX": 186,
+            "maxY": 253
+          },
+          "visible": 14961,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3224,
+          "bounds": {
+            "minX": 43,
+            "minY": 29,
+            "maxX": 195,
+            "maxY": 250
+          },
+          "visible": 15914,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3386,
+          "bounds": {
+            "minX": 61,
+            "minY": 25,
+            "maxX": 191,
+            "maxY": 245
+          },
+          "visible": 15869,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3186,
+          "bounds": {
+            "minX": 55,
+            "minY": 28,
+            "maxX": 187,
+            "maxY": 250
+          },
+          "visible": 15832,
+          "edge": 0
+        },
+        {
+          "index": 9,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3173,
+          "bounds": {
+            "minX": 46,
+            "minY": 28,
+            "maxX": 186,
+            "maxY": 248
+          },
+          "visible": 15109,
+          "edge": 0
+        },
+        {
+          "index": 10,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3075,
+          "bounds": {
+            "minX": 41,
+            "minY": 31,
+            "maxX": 186,
+            "maxY": 253
+          },
+          "visible": 15030,
+          "edge": 0
+        },
+        {
+          "index": 11,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3211,
+          "bounds": {
+            "minX": 43,
+            "minY": 29,
+            "maxX": 195,
+            "maxY": 251
+          },
+          "visible": 16010,
+          "edge": 0
+        },
+        {
+          "index": 12,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3474,
+          "bounds": {
+            "minX": 61,
+            "minY": 26,
+            "maxX": 191,
+            "maxY": 245
+          },
+          "visible": 15835,
+          "edge": 0
+        },
+        {
+          "index": 13,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3246,
+          "bounds": {
+            "minX": 55,
+            "minY": 29,
+            "maxX": 190,
+            "maxY": 253
+          },
+          "visible": 15717,
+          "edge": 0
+        },
+        {
+          "index": 14,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 3469,
+          "bounds": {
+            "minX": 44,
+            "minY": 31,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 16571,
+          "edge": 0
+        },
+        {
+          "index": 15,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4506,
+          "bounds": {
+            "minX": 48,
+            "minY": 31,
+            "maxX": 201,
+            "maxY": 252
+          },
+          "visible": 18275,
+          "edge": 0
+        },
+        {
+          "index": 16,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4701,
+          "bounds": {
+            "minX": 52,
+            "minY": 31,
+            "maxX": 195,
+            "maxY": 252
+          },
+          "visible": 18795,
+          "edge": 0
+        }
+      ]
+    },
+    "idle-south": {
+      "input": "art/main-hero-mage/abilities/hero-model/idle.gif",
+      "sourceSheet": "art/main-hero-mage/abilities/hero-model/idle-animation.png",
+      "colorAuthority": "original PNG sheet; GIF supplies timing only",
+      "frames": [
+        {
+          "index": 0,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4731,
+          "bounds": {
+            "minX": 56,
+            "minY": 31,
+            "maxX": 191,
+            "maxY": 252
+          },
+          "visible": 18588,
+          "edge": 0
+        },
+        {
+          "index": 1,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4616,
+          "bounds": {
+            "minX": 54,
+            "minY": 33,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 18446,
+          "edge": 0
+        },
+        {
+          "index": 2,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4627,
+          "bounds": {
+            "minX": 53,
+            "minY": 33,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 18453,
+          "edge": 0
+        },
+        {
+          "index": 3,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4404,
+          "bounds": {
+            "minX": 54,
+            "minY": 30,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 18623,
+          "edge": 0
+        },
+        {
+          "index": 4,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4631,
+          "bounds": {
+            "minX": 54,
+            "minY": 29,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 18779,
+          "edge": 0
+        },
+        {
+          "index": 5,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4596,
+          "bounds": {
+            "minX": 54,
+            "minY": 28,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 18938,
+          "edge": 0
+        },
+        {
+          "index": 6,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4817,
+          "bounds": {
+            "minX": 55,
+            "minY": 28,
+            "maxX": 193,
+            "maxY": 252
+          },
+          "visible": 18936,
+          "edge": 0
+        },
+        {
+          "index": 7,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4551,
+          "bounds": {
+            "minX": 54,
+            "minY": 29,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 19017,
+          "edge": 0
+        },
+        {
+          "index": 8,
+          "width": 256,
+          "height": 256,
+          "durationMs": 130,
+          "gifVsPngAlphaDifferences": 0,
+          "gifVsPngRgbDifferences": 4553,
+          "bounds": {
+            "minX": 53,
+            "minY": 32,
+            "maxX": 194,
+            "maxY": 252
+          },
+          "visible": 18896,
+          "edge": 0
+        }
+      ]
+    }
+  }
+}

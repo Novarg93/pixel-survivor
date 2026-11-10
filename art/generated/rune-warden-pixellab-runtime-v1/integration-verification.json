@@ -1,0 +1,37 @@
+{
+  "runtimeIntegration": true,
+  "approval": {
+    "runtimeIntegration": true,
+    "approval": "User accepted the PixelLab variants and asked for game integration and projectile speed +100%.",
+    "scope": "Accepted AI flight, hollow Blink idle/fade and source-PNG impact fade; Rune Warden speedScale2 to4. Other bosses unchanged."
+  },
+  "protectedFiles": 333,
+  "unchangedProtectedFiles": 328,
+  "changed": [
+    "src/game/art/GameArt.ts",
+    "src/game/art/RuneWardenArt.ts",
+    "src/game/art/assetRegistry.ts",
+    "src/game/art/runeWardenPack.ts",
+    "src/game/config/runeWarden.ts"
+  ],
+  "added": [
+    "public/assets/hd/rune-warden-pixellab-v1/atlas.json",
+    "public/assets/hd/rune-warden-pixellab-v1/atlas.png",
+    "src/game/art/runeWardenVfxManifestPixellab.json",
+    "src/game/art/runeWardenVfxPack.ts"
+  ],
+  "currentSHA256": {
+    "src/game/art/GameArt.ts": "f5a61a5546fd5d59f4364fe270207d47aeaeda8c3874036becd83a0b54597f85",
+    "src/game/art/RuneWardenArt.ts": "ed365e411b2131039f329ad70a7993468db552d5f5feea4ba89897038352fc05",
+    "src/game/art/assetRegistry.ts": "c15f9b195d1f9ac67a3c3a0fae8ad47c16d49e93a1e9798f70f89a35e2311375",
+    "src/game/art/runeWardenPack.ts": "3256d597367b468c35949568bcfbdfb91dd28b3b78a3f01ccfdff30b016ace37",
+    "src/game/config/runeWarden.ts": "242ad2ccd32fa1e28663aff91b44d5ca412c1a0059c7f6adca0d908c7dcaab74",
+    "public/assets/hd/rune-warden-pixellab-v1/atlas.json": "4b3008b59d87b00e530ad38c294d20e625abfd57713211ac3b878d25b8f3cbb8",
+    "public/assets/hd/rune-warden-pixellab-v1/atlas.png": "2d3c4424de7ed3ffbd06df2e920836952388a537c8350104e8940c4ad3e95d3e",
+    "src/game/art/runeWardenVfxManifestPixellab.json": "e19d6efbc34c791ac0e6f581f60f4de32e9c4ac0b70e50126e9558296dfb5c42",
+    "src/game/art/runeWardenVfxPack.ts": "34a46b0b523e5d2ae186957945d760f6938e256244095a57b6ae57c2886e1369"
+  },
+  "oldRuneAtlasUnchanged": true,
+  "otherBossAssetsUnchanged": true,
+  "worldAndDamageUnchanged": true
+}

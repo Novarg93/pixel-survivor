@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "provider": "PixelLab AI",
+  "authoring": "scripts/build-rune-warden-pixellab-runtime.mjs",
+  "approvedReview": "art/generated/rune-warden-vfx-review-v1/manifest.json",
+  "canvas": 128,
+  "width": 528,
+  "height": 924,
+  "padding": 2,
+  "rgbaBytes": 1951488,
+  "frameCount": 26,
+  "blinkOffsetY": 23,
+  "sources": {
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/01.png": "7c0db79058d882cac5504bf2edc536deb5537d51f85ac1861e668892383957ed",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/02.png": "08ee929fc3b3689097511602854269bf7c184f7fc8608f414980710cbb473278",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/03.png": "d7b6594a41ac87f5666fe5ee92f296628127c5f95e702cdb68ee83ce6ddcc6eb",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/04.png": "16b60b601009c56f566758c34eccee5163dd33b38cab5850669c6b6a58a49552",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/05.png": "d7252407f24835acd3f112839149cc70ca968b6ed63fde8477a4e8a5e74e8638",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/06.png": "83f322f1bafb14f0138c7038a7adf822008a7241575e65edef70168c45602f3d",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/07.png": "aafbba199e233f30a81cc9f60c2815d75eda6076254fb924826dc5b240757359",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/08.png": "d1421f74b955d02094340952216f660f7baec971c26eeaa2b8059c666b24f62d",
+    "art/generated/rune-warden-vfx-review-v1/raw/projectile-model/00.png": "453aa8a563676b7fd7820840c3e9ed22a785049a460f81187af4fb4e137671f1",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/01.png": "15c11cbbd00296ccd2a52a949053f72262e5c16753a2286142f530c9976c00c8",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/02.png": "5db43e3fa69c8c32b5b9b6d2ec74861210a0eca9b399c24f22d8a406895f7147",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/03.png": "d044a8699a7c58db8cd892e63cf557de88fab2fdedd2af0539b0e3b005d069c3",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/04.png": "16c3667df6b5c405b72f796bf9a0a43b19bfaefc4bbc44c71d379f810d868eed",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/05.png": "554249bd35fb588896e21879ccf39bb2126f66a39ecdd37583cc60a545b2b25c",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/06.png": "39afc041121506de1acadada28f0b8049adf26149b80c1bc07dbaaada62920a0",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/07.png": "ad9cbf0f6801f5906fc71afb27ff00e51963abb7a2e29444687b7f274b1467fa",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/08.png": "87503c10f311ff71ef0d35ecf6ac0a3469a7b1b9abb9f112ebd0b5b4dbe04183",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/00.png": "dadac00ec1e70573aa6bb9599a8d76a3ae36e716ce02a28aa10e8826b33a1886",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/01.png": "bd9fd7b3aca7e2ec7b751a484bc04504768aa90f34877d63582cc783be1e4291",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/02.png": "288a27432d3dc5532a4bdad106ed7ad2cb8e730ef4490ac797a22329d44795c4",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/03.png": "d126628ff59a4ef359a37bc69108c3d60d77fc13a2938eb271625eb2c25d279e",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/04.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/05.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/06.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/07.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/08.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee"
+  },
+  "clips": {
+    "flight": {
+      "source": "ai-projectile-flight",
+      "frames": [
+        {
+          "name": "rune-ai-flight-0",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "c10da6c9dbaa122f94921377ad7f158d0f41db8a6bfa792d70e3bae5db1520fa"
+        },
+        {
+          "name": "rune-ai-flight-1",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "500c37ea75c6b676357c101a294f455fec9a1f4770f25cb1995bd728e7ced1b2"
+        },
+        {
+          "name": "rune-ai-flight-2",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "e92efe8c6610b300806cb15d45dcd71f18c35708c402714a77460930b28f319c"
+        },
+        {
+          "name": "rune-ai-flight-3",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "6da8ca6144c7c3f3b8664cff8ad710c84f494412788c0dddea4e60eb852aae55"
+        },
+        {
+          "name": "rune-ai-flight-4",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "18810cd965b4f55b921cec639a223322d6db57997490a0ee44d872e5f2f2c9a8"
+        },
+        {
+          "name": "rune-ai-flight-5",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "a0e512bcf8722bdda852876430cd3b5e222c26e3be70c6b2642d392b026526e6"
+        },
+        {
+          "name": "rune-ai-flight-6",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "53204732f01804dba5864a586ecb21116bfbc1e3dd06c99e66faaf9f6e8c414c"
+        },
+        {
+          "name": "rune-ai-flight-7",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-flight/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "28a486816247578834aa3fad6c219d66497295f5e5c191ba8f46345a1d70dace"
+        }
+      ],
+      "frameCount": 8,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "pivot": {
+        "x": 95,
+        "y": 61
+      },
+      "size": 52,
+      "opacityFade": false
+    },
+    "impact": {
+      "source": "ai-projectile-impact",
+      "frames": [
+        {
+          "name": "rune-ai-impact-0",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/projectile-model/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "c48294597c513bd157a373cb13fd4131403158d05d7004fd09562fef6c13daa0"
+        }
+      ],
+      "frameCount": 1,
+      "durationsMs": [
+        540
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 95,
+        "y": 61
+      },
+      "size": 52,
+      "opacityFade": true
+    },
+    "blink-idle": {
+      "source": "ai-blink-idle",
+      "frames": [
+        {
+          "name": "rune-ai-blink-idle-0",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "c67c4ccdcbcf727774a98f3641507bc1a69008c4db9bfd15e6aeb28cb7e2039c"
+        },
+        {
+          "name": "rune-ai-blink-idle-1",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "edc3edc02961c6368dcac1df5ced2b54cb0eb85541053748ba870c19808c98b8"
+        },
+        {
+          "name": "rune-ai-blink-idle-2",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "90a2a24d8a5919a9e707a7d79210993af4c4fdd9d9df9be1464ba5cdef2e81e4"
+        },
+        {
+          "name": "rune-ai-blink-idle-3",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "969384695ef8f8f27411040118bfbd5f33afebdb3ebc7bb2c242cb87d1ff24ce"
+        },
+        {
+          "name": "rune-ai-blink-idle-4",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "b16c503a6898155dd0a48a9641186a295518c7293922b38ea9d530a2269501bc"
+        },
+        {
+          "name": "rune-ai-blink-idle-5",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "61601711c2980dd8e2a6c9ee9166707c92a601e35095dfdd1e961ea7be5c9514"
+        },
+        {
+          "name": "rune-ai-blink-idle-6",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "fd477332b587101197ea2acaf1a106e4a16b3538025cfcfe30b5471795dbb360"
+        },
+        {
+          "name": "rune-ai-blink-idle-7",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-idle-soft/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "1789692dc5d6da7f4d7ee60a59caeac2a7cf45f92727dbcaf0d086e94783bdac"
+        }
+      ],
+      "frameCount": 8,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": true,
+      "pivot": {
+        "x": 64,
+        "y": 64
+      },
+      "size": 62,
+      "opacityFade": false
+    },
+    "blink-fade": {
+      "source": "ai-blink-fade",
+      "frames": [
+        {
+          "name": "rune-ai-blink-fade-0",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "9799ade5f1a959d288ed0d9fc37e175387d2c7b0b1597c8a5a6f97735817d50c"
+        },
+        {
+          "name": "rune-ai-blink-fade-1",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "4488eeeac77fa04117ea80ea88ea15deab55ef70938f3db8b619ba5d4dc8468a"
+        },
+        {
+          "name": "rune-ai-blink-fade-2",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "f0ad9fb923623a8a76071d21855aa982546a5d77112dabdd169e92a88eab1c30"
+        },
+        {
+          "name": "rune-ai-blink-fade-3",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "36c432f3fac0df5ac17186fabe4d2878f9c5c841e1356e0aa75ff01cf0b3e3ac"
+        },
+        {
+          "name": "rune-ai-blink-fade-4",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "rune-ai-blink-fade-5",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "rune-ai-blink-fade-6",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "rune-ai-blink-fade-7",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "rune-ai-blink-fade-8",
+          "source": "art/generated/rune-warden-vfx-review-v1/raw/blink-fade/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "frameCount": 9,
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 64,
+        "y": 64
+      },
+      "size": 62,
+      "opacityFade": false
+    }
+  }
+}

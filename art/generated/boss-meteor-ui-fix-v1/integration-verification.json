@@ -1,0 +1,23 @@
+{
+  "baselineFiles": 363,
+  "changed": [
+    "src/game/art/FinalBossArt.ts",
+    "src/game/art/ashWardenPixellabPack.ts",
+    "src/style.css",
+    "src/ui/components/UltimateControl.vue"
+  ],
+  "added": [],
+  "unchanged": 359,
+  "previousSHA256": {
+    "src/game/art/FinalBossArt.ts": "18aa8a66ccc1b8e2acd8ac490f9b50c1d30c6470b1bc33a324a08b71f7044c59",
+    "src/game/art/ashWardenPixellabPack.ts": "7e0a810b5ef3a198f7ef2a9ddd942c4a9d8852e1857e30f7cb326c177f4b7d70",
+    "src/style.css": "0b188090c74315207591884e3c4eb18a2371fdc14bf8951fdef1305dd089e19f",
+    "src/ui/components/UltimateControl.vue": "eb0e7d6cf88d5a22687f81a8f4b81e20e877612c0a73f6de4ba7cd4f581fe8f0"
+  },
+  "currentSHA256": {
+    "src/game/art/FinalBossArt.ts": "472c8096833d52363892295e9a7463b6c769dea109e9a247f7aafcde11354c11",
+    "src/game/art/ashWardenPixellabPack.ts": "b01826da0673e6d21f86c1022b9bcf9001c00bf3403bed4a55804175be970858",
+    "src/style.css": "55f4c364f842159b148feb3faeb46c4a2f8baae021cab9f4fd3d808b835e2afb",
+    "src/ui/components/UltimateControl.vue": "ac4d6a4a8e7185de214c0fad430bfd2757f4a4e85bea5efbba2a56ba8601289e"
+  }
+}

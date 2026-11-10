@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 5d1df139-cfde-44cf-bf84-e2430e0adc70\njob_id: 5d1df139-cfde-44cf-bf84-e2430e0adc70\naction: The existing sprite simply fades smoothly to complete transparency, staying perfectly fixed in shape, colour, location and size. Only decrease its opacity. No new pixels or objects appear. Preserve all lavender, bone and slate colours unchanged. Do not add any effect, ring, flash, particle, blue or cyan. This is a plain disappear transition of the same original sprite, ending empty.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 2026111223\nasset_id: e266d887-b57e-566d-b8cc-3176994b5fde\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"5d1df139-cfde-44cf-bf84-e2430e0adc70\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/5d1df139-cfde-44cf-bf84-e2430e0adc70/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ],
+  "isError": false
+}

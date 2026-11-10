@@ -1,0 +1,37 @@
+{
+  "method": "Separate local screen-door dissolve mask over unchanged RD articulated frames; no PNG translation. NOT an RD-generated invisible pose.",
+  "visibility": [
+    1,
+    1,
+    1,
+    1,
+    0.6818181818181818,
+    0.22727272727272735,
+    -0.2727272727272728,
+    0.18181818181818188,
+    0.6363636363636366,
+    1,
+    1,
+    1
+  ],
+  "relocationFrame": -1,
+  "departureFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "arrivalFrames": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source": "../frames/*.png",
+  "bodyAndVfxSeparate": true
+}

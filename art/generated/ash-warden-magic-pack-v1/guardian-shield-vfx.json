@@ -1,0 +1,47 @@
+{
+  "kind": "separate vector preview, future Phaser Graphics",
+  "bodySpritesContainBeams": false,
+  "guardianTexture": "public/assets/hd/guardian.png",
+  "guardianFrames": [
+    "guardian-idle-0",
+    "guardian-idle-1",
+    "guardian-idle-2"
+  ],
+  "guardianScale": 0.35,
+  "guardianOffsetsWorld": [
+    [
+      -50,
+      -30
+    ],
+    [
+      0,
+      50
+    ],
+    [
+      60,
+      -32
+    ]
+  ],
+  "bossShield": {
+    "centerOffset": [
+      0,
+      -38
+    ],
+    "radii": [
+      36,
+      49
+    ],
+    "color": "#bee4ee"
+  },
+  "beams": {
+    "count": 3,
+    "outerColor": "#77c5d977",
+    "coreColor": "#bcf5e5",
+    "worldWidths": [
+      3,
+      1
+    ]
+  },
+  "sceneCleanup": "Remove beam graphics and shield on supports removed / state exit / death / shutdown; no body pixels modified.",
+  "previewOnly": true
+}

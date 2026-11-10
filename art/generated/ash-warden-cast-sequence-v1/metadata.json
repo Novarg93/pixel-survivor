@@ -1,0 +1,431 @@
+{
+  "southBasicGroundLight": false,
+  "charge": {
+    "castMs": 650,
+    "targetTracking": "Through final cast tick; locked only at travel transition",
+    "earlyTargetLock": false,
+    "groundStrip": false,
+    "groundLine": false,
+    "endpointCircle": false,
+    "speedMultiplier": 1.3
+  },
+  "meteor": {
+    "intervalMs": 150,
+    "warningMs": 1300,
+    "shielded": {
+      "count": 11,
+      "releaseMs": [
+        0,
+        150,
+        300,
+        450,
+        600,
+        750,
+        900,
+        1050,
+        1200,
+        1350,
+        1500
+      ],
+      "impactMs": [
+        1300,
+        1450,
+        1600,
+        1750,
+        1900,
+        2050,
+        2200,
+        2350,
+        2500,
+        2650,
+        2800
+      ]
+    },
+    "phase3": {
+      "count": 9,
+      "releaseMs": [
+        0,
+        150,
+        300,
+        450,
+        600,
+        750,
+        900,
+        1050,
+        1200
+      ],
+      "impactMs": [
+        1300,
+        1450,
+        1600,
+        1750,
+        1900,
+        2050,
+        2200,
+        2350,
+        2500
+      ]
+    },
+    "damagePerGroup": 54,
+    "damageGroups": {
+      "shielded": [
+        6,
+        5
+      ],
+      "phase3": [
+        5,
+        4
+      ]
+    },
+    "maxReserved": 12,
+    "queuedRepresentation": "Negative age; no art/sound before release; all future strikes included in danger planner"
+  },
+  "screenshots": [
+    {
+      "file": "screenshots/1280-charge-no-ground-tell.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-first-meteor-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-1.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-2.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-3.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-5.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-6.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-meteors-9.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-south-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-south-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/844-charge-no-ground-tell.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-first-meteor-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-1.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-2.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-3.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-5.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-6.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-meteors-9.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-south-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-south-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/production-practice.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-a-final.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-last-cast.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-start.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-stop.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-frozen-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-last-cast.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-start.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-stop.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-a-final.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-last-cast.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-start.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-stop.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-frozen-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-last-cast.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-start.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-stop.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/1280-a-phase3.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-600ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-750ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-800ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-900ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-no-ground-light.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-north-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-south-overhead-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/844-a-phase3.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-600ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-750ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-800ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-900ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-no-ground-light.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-north-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-south-overhead-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-b-hit.png",
+      "width": 844,
+      "height": 390
+    }
+  ],
+  "generatedAssets": false
+}

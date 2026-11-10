@@ -1,0 +1,216 @@
+{
+  "name": "Hooded Mage B — four-frame idle",
+  "version": 1,
+  "productionIntegrated": false,
+  "nativeCanvas": 96,
+  "phaseNames": [
+    "Исходная стойка",
+    "Вдох",
+    "Пик вдоха",
+    "Выдох"
+  ],
+  "framesPerLoop": 4,
+  "periodMs": 2000,
+  "durationsMs": [
+    500,
+    500,
+    500,
+    500
+  ],
+  "loop": true,
+  "bodyViews": [
+    "front",
+    "north"
+  ],
+  "rawFramesPerBody": 5,
+  "exportedRawIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "closingRawIndex": 4,
+  "atlasRgbaBytes": 294912,
+  "displayHeightWorld": 34.6875,
+  "feetFixedFromY": 76,
+  "directionBindings": {
+    "e": "front",
+    "se": "front",
+    "s": "front",
+    "w": "front-mirror",
+    "sw": "front-mirror",
+    "n": "north",
+    "nw": "north",
+    "ne": "north-mirror"
+  },
+  "clips": {
+    "front": {
+      "id": "front",
+      "body": "front",
+      "mirrored": false,
+      "pivot": [
+        46,
+        84
+      ],
+      "footLineNativeY": 84,
+      "baseFile": "source/front.png",
+      "frames": [
+        {
+          "file": "prepared/front-0.png",
+          "atlasFrame": "front-0",
+          "durationMs": 500,
+          "phase": "Исходная стойка"
+        },
+        {
+          "file": "prepared/front-1.png",
+          "atlasFrame": "front-1",
+          "durationMs": 500,
+          "phase": "Вдох"
+        },
+        {
+          "file": "prepared/front-2.png",
+          "atlasFrame": "front-2",
+          "durationMs": 500,
+          "phase": "Пик вдоха"
+        },
+        {
+          "file": "prepared/front-3.png",
+          "atlasFrame": "front-3",
+          "durationMs": 500,
+          "phase": "Выдох"
+        }
+      ],
+      "gif": "exports/front.gif",
+      "sheet": "exports/front.png",
+      "loop": true,
+      "periodMs": 2000,
+      "gifPaletteColors": 28
+    },
+    "front-mirror": {
+      "id": "front-mirror",
+      "body": "front",
+      "mirrored": true,
+      "pivot": [
+        50,
+        84
+      ],
+      "footLineNativeY": 84,
+      "baseFile": "source/front-mirror.png",
+      "frames": [
+        {
+          "file": "prepared/front-mirror-0.png",
+          "atlasFrame": "front-0",
+          "durationMs": 500,
+          "phase": "Исходная стойка"
+        },
+        {
+          "file": "prepared/front-mirror-1.png",
+          "atlasFrame": "front-1",
+          "durationMs": 500,
+          "phase": "Вдох"
+        },
+        {
+          "file": "prepared/front-mirror-2.png",
+          "atlasFrame": "front-2",
+          "durationMs": 500,
+          "phase": "Пик вдоха"
+        },
+        {
+          "file": "prepared/front-mirror-3.png",
+          "atlasFrame": "front-3",
+          "durationMs": 500,
+          "phase": "Выдох"
+        }
+      ],
+      "gif": "exports/front-mirror.gif",
+      "sheet": "exports/front-mirror.png",
+      "loop": true,
+      "periodMs": 2000,
+      "gifPaletteColors": 28
+    },
+    "north": {
+      "id": "north",
+      "body": "north",
+      "mirrored": false,
+      "pivot": [
+        48,
+        84
+      ],
+      "footLineNativeY": 83,
+      "baseFile": "source/north.png",
+      "frames": [
+        {
+          "file": "prepared/north-0.png",
+          "atlasFrame": "north-0",
+          "durationMs": 500,
+          "phase": "Исходная стойка"
+        },
+        {
+          "file": "prepared/north-1.png",
+          "atlasFrame": "north-1",
+          "durationMs": 500,
+          "phase": "Вдох"
+        },
+        {
+          "file": "prepared/north-2.png",
+          "atlasFrame": "north-2",
+          "durationMs": 500,
+          "phase": "Пик вдоха"
+        },
+        {
+          "file": "prepared/north-3.png",
+          "atlasFrame": "north-3",
+          "durationMs": 500,
+          "phase": "Выдох"
+        }
+      ],
+      "gif": "exports/north.gif",
+      "sheet": "exports/north.png",
+      "loop": true,
+      "periodMs": 2000,
+      "gifPaletteColors": 10
+    },
+    "north-mirror": {
+      "id": "north-mirror",
+      "body": "north",
+      "mirrored": true,
+      "pivot": [
+        48,
+        84
+      ],
+      "footLineNativeY": 83,
+      "baseFile": "source/north-mirror.png",
+      "frames": [
+        {
+          "file": "prepared/north-mirror-0.png",
+          "atlasFrame": "north-0",
+          "durationMs": 500,
+          "phase": "Исходная стойка"
+        },
+        {
+          "file": "prepared/north-mirror-1.png",
+          "atlasFrame": "north-1",
+          "durationMs": 500,
+          "phase": "Вдох"
+        },
+        {
+          "file": "prepared/north-mirror-2.png",
+          "atlasFrame": "north-2",
+          "durationMs": 500,
+          "phase": "Пик вдоха"
+        },
+        {
+          "file": "prepared/north-mirror-3.png",
+          "atlasFrame": "north-3",
+          "durationMs": 500,
+          "phase": "Выдох"
+        }
+      ],
+      "gif": "exports/north-mirror.gif",
+      "sheet": "exports/north-mirror.png",
+      "loop": true,
+      "periodMs": 2000,
+      "gifPaletteColors": 10
+    }
+  }
+}

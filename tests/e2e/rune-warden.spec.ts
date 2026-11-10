@@ -5,7 +5,7 @@ async function advance(page:Page,seconds:number){
   await page.waitForTimeout(65);
 }
 for(const burning of [false,true])for(const viewport of [{width:1280,height:720},{width:844,height:390}])test(`Rune Warden user art, spells, pause and cleanup ${burning?'burning':'grove'} ${viewport.width}`,async({page})=>{
-  const directory=`screenshots/rune-warden-volley-tuning/${burning?'burning':'grove'}-${viewport.width}`;mkdirSync(directory,{recursive:true});
+  const directory=`screenshots/rune-warden-pixellab-v1/legacy/${burning?'burning':'grove'}-${viewport.width}`;mkdirSync(directory,{recursive:true});
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
   await page.setViewportSize(viewport);await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
   await page.addStyleTag({content:'.overlay{display:none!important}'});
@@ -32,11 +32,11 @@ for(const burning of [false,true])for(const viewport of [{width:1280,height:720}
   const hp=await page.evaluate(()=>window.__PIXEL__!.world.player.hp);await advance(page,.72);
   art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.some(v=>v.frame==='judgement-12')).toBe(true);
   expect(await page.evaluate(()=>window.__PIXEL__!.world.player.hp)).toBeLessThan(hp);
-  expect(art.actors.some(a=>a.texture==='rune-warden-v1'&&String(a.frame).startsWith('volley-'))).toBe(true);
-  expect(art.actors.filter(a=>String(a.frame).startsWith('volley-')).every(a=>a.width===52&&a.height===52)).toBe(true);
+  expect(art.actors.some(a=>a.texture==='rune-warden-pixellab-v1'&&String(a.frame).startsWith('rune-ai-flight-'))).toBe(true);
+  expect(art.actors.filter(a=>String(a.frame).startsWith('rune-ai-flight-')).every(a=>a.width===52&&a.height===52)).toBe(true);
   const shots=await page.evaluate(()=>window.__PIXEL__!.world.projectiles.map(p=>({vx:p.vx,vy:p.vy,x:p.x,y:p.y,appearance:p.appearance})));
   expect(shots.every(p=>p.appearance==='arcane-volley')).toBe(true);
-  const expectedSpeed=await page.evaluate(()=>{const b=window.__PIXEL__!.world.bosses[0]!.boss!;return (b.enrageIndex?105:100)*(b.late?.projectile??1)*2;});
+  const expectedSpeed=await page.evaluate(()=>{const b=window.__PIXEL__!.world.bosses[0]!.boss!;return (b.enrageIndex?105:100)*(b.late?.projectile??1)*4;});
   for(const p of shots)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(expectedSpeed,8);
   await page.locator('canvas').screenshot({path:`${directory}/judgement-impact-and-volley.png`});
   // Isolate this cast's tail; late-game recovery can otherwise start the next real warning.
@@ -45,27 +45,26 @@ for(const burning of [false,true])for(const viewport of [{width:1280,height:720}
   await page.locator('canvas').screenshot({path:`${directory}/judgement-peak.png`});
   await advance(page,.25);art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.some(v=>v.frame==='judgement-15'&&v.alpha<.1)).toBe(true);
   await page.locator('canvas').screenshot({path:`${directory}/judgement-fade.png`});
-  await advance(page,.5);art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.some(v=>v.frame.startsWith('volley-impact-'))).toBe(true);
-  expect(art.runeWarden.active.some(v=>v.frame.startsWith('judgement'))).toBe(false);
+  expect(art.runeWarden.active.some(v=>v.frame==='rune-ai-impact-0')).toBe(true);
   await page.locator('canvas').screenshot({path:`${directory}/projectile-collision-and-rune-fade.png`});
   await advance(page,.65);expect(await page.evaluate(()=>window.__PIXEL__!.art().runeWarden.active.some(v=>v.frame.startsWith('judgement')))).toBe(false);
   await page.evaluate(()=>{
     const w=window.__PIXEL__!.world,e=w.bosses[0]!;w.clearHostileThreats();e.x=80;e.y=-40;e.boss!.phase='approach';e.boss!.until=1e6;e.boss!.enrageIndex=1;e.boss!.magic={nextAt:w.elapsed,teleports:0};
   });await advance(page,.025);
   const anchors=await page.evaluate(()=>{const m=window.__PIXEL__!.world.bosses[0]!.boss!.magic!;return {from:m.from!,to:m.target!};});
-  art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.filter(v=>v.frame==='blink-rune').map(v=>[v.x,v.y])).toEqual([[anchors.from.x,anchors.from.y],[anchors.to.x,anchors.to.y]]);
+  art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.filter(v=>v.frame.startsWith('rune-ai-blink-idle-')).map(v=>[v.x,v.y])).toEqual([[anchors.from.x,anchors.from.y+23],[anchors.to.x,anchors.to.y+23]]);
   await page.locator('canvas').screenshot({path:`${directory}/blink-marks.png`});
   const wait=await page.evaluate(()=>{const w=window.__PIXEL__!.world;return w.bosses[0]!.boss!.until-w.elapsed+.025;});await advance(page,wait);
-  art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.filter(v=>v.frame.startsWith('blink-')&&v.frame!=='blink-rune')).toHaveLength(2);
+  art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active.filter(v=>v.frame.startsWith('rune-ai-blink-fade-'))).toHaveLength(2);
   expect(await page.evaluate(()=>{const e=window.__PIXEL__!.world.bosses[0]!;return {x:e.x,y:e.y};})).toEqual(anchors.to);
   await page.locator('canvas').screenshot({path:`${directory}/blink-relocation.png`});
   await advance(page,.12);await page.locator('canvas').screenshot({path:`${directory}/blink-glow.png`});
-  await advance(page,.3);expect(await page.evaluate(()=>window.__PIXEL__!.art().runeWarden.active.some(v=>v.frame.startsWith('blink-')))).toBe(false);
+  await advance(page,.3);expect(await page.evaluate(()=>window.__PIXEL__!.art().runeWarden.active.some(v=>v.frame.startsWith('rune-ai-blink-')))).toBe(false);
   const death=await page.evaluate(()=>{const w=window.__PIXEL__!.world,e=w.bosses[0]!,score=w.score;w.damageEnemy(e,1e9);return {score:w.score-score,owned:w.projectiles.filter(p=>p.ownerId===e.id).length+w.effects.filter(p=>p.ownerId===e.id).length+w.impacts.filter(p=>p.ownerId===e.id).length};});
   expect(death).toEqual({score:1000,owned:0});await advance(page,.2);await page.locator('canvas').screenshot({path:`${directory}/death-fade.png`});
   art=await page.evaluate(()=>window.__PIXEL__!.art());expect(art.runeWarden.active).toEqual([]);expect(art.runeWarden.allocated).toBeLessThanOrEqual(160);expect(art.clock).toEqual([0,0,0]);expect(art.tweens).toBe(0);
   const bytes=art.textureBytes;await page.evaluate(()=>window.__PIXEL__!.restartScene());await page.waitForFunction(()=>window.__PIXEL__?.world.status==='menu');
-  expect(await page.evaluate(()=>window.__PIXEL__!.art().runeWarden)).toEqual({active:[],allocated:0,atlasBytes:7248384,flashTextureBytes:196608});
+  expect(await page.evaluate(()=>window.__PIXEL__!.art().runeWarden)).toEqual({active:[],allocated:0,atlasBytes:7248384+1951488,flashTextureBytes:196608});
   expect(await page.evaluate(()=>window.__PIXEL__!.art().textures.filter(t=>t==='rune-judgement-flash'))).toHaveLength(1);
   expect(await page.evaluate(()=>window.__PIXEL__!.art().textures.filter(t=>t==='rune-warden-v1'))).toHaveLength(1);expect(await page.evaluate(()=>window.__PIXEL__!.art().textureBytes)).toBe(bytes);
   expect(await page.evaluate(()=>window.__PIXEL__!.listeners())).toEqual({commands:1,snapshots:1,metrics:1});await expect(page.locator('canvas')).toHaveCount(1);expect(errors).toEqual([]);

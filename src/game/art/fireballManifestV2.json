@@ -1,0 +1,152 @@
+{
+  "version": 2,
+  "authoring": "scripts/build-mage-fireball-v2.mjs",
+  "width": 464,
+  "height": 264,
+  "rgbaBytes": 489984,
+  "frameCount": 12,
+  "canvas": {
+    "width": 112,
+    "height": 84
+  },
+  "pivot": {
+    "x": 65,
+    "y": 42
+  },
+  "padding": 2,
+  "columns": 4,
+  "palette": [
+    "#794132",
+    "#b85b35",
+    "#e88344",
+    "#fba35e",
+    "#ffe0a3"
+  ],
+  "sources": {
+    "art/generated/mage-fireball-v2/source/recipe.json": "f89e48d6dcb609f8627b876918e3ea668dd0a6e7e636780a1bf1d69f72bd4df9",
+    "art/generated/mage-fireball-v2/source/provenance.json": "cf7ab8106fbaecd7059918c14a2246879181c30e81ec148d7fdcbb7d78cb64d7",
+    "art/generated/mage-fireball-v2/source/pixel-survivor-ember-fireball-v2.png": "51536a40b0e5c529036ad3f9fbfb84462535d163bf68df32d7475b3a9b47b0b7",
+    "art/generated/mage-fireball-v2/source/pixel-survivor-ember-fireball-v2.gif": "70d68d8dcdbb77ab6729345f9bdd56729cc6bcbc15411ffe08c8caf3db4949d2",
+    "art/generated/mage-fireball-v2/source/pixel-survivor-ember-fireball-v2.json": "e21f07a307eaeeed6a6cf827ef7625ccd2d808a88d5397fe64d2243c8e32bf00",
+    "art/generated/mage-fireball-v2/source/pixel-survivor-ember-fireball-v2-game.zip": "142b39cd68a0cbae85065c9b6ce1137ad840675431c10b55bf8ba28d3053d325"
+  },
+  "clips": {
+    "forming": {
+      "frameCount": 2,
+      "durationsMs": [
+        100,
+        100
+      ],
+      "sourceCanvas": {
+        "w": 56,
+        "h": 42
+      },
+      "sourcePivot": {
+        "x": 33,
+        "y": 21
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 124,
+          "pixelSHA256": "cc25105f3cb89ee78f726377801f901b7fe152254deb2eb5a66f3cbcc534484e"
+        },
+        {
+          "index": 1,
+          "visible": 268,
+          "pixelSHA256": "bd967af0971dd51c9d65f648c47b8d15803d20d01cf881cc5aed3a7adbb68fba"
+        }
+      ]
+    },
+    "idle": {
+      "frameCount": 4,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "sourceCanvas": {
+        "w": 56,
+        "h": 42
+      },
+      "sourcePivot": {
+        "x": 33,
+        "y": 21
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 692,
+          "pixelSHA256": "b5f0c271c54245584f4c2401a034deb48a6f723e489f0f91e50ae21ecaea46eb"
+        },
+        {
+          "index": 1,
+          "visible": 708,
+          "pixelSHA256": "0a1350e3860f62346c85d3893af63fb17f02de7f0d4a5c353f42f9bc00c15bf2"
+        },
+        {
+          "index": 2,
+          "visible": 712,
+          "pixelSHA256": "12093ef072efbe5e714a71a9379719219d0841455efb36d4c16af92340254867"
+        },
+        {
+          "index": 3,
+          "visible": 692,
+          "pixelSHA256": "5e890d97271843ba5afaad20b021a2a0c6c6efa359745c3c8148791d121644f9"
+        }
+      ]
+    },
+    "explosion": {
+      "frameCount": 6,
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "sourceCanvas": {
+        "w": 56,
+        "h": 42
+      },
+      "sourcePivot": {
+        "x": 33,
+        "y": 21
+      },
+      "frames": [
+        {
+          "index": 0,
+          "visible": 204,
+          "pixelSHA256": "8e7c59a4ecc659ca4540b8eca322aa26ca60dbcafcea43d744110fba5d78dc4d"
+        },
+        {
+          "index": 1,
+          "visible": 692,
+          "pixelSHA256": "b7df3dbe167f5b6128fefaaf4885d58db2791dccd812fa57da11910b1f76f935"
+        },
+        {
+          "index": 2,
+          "visible": 508,
+          "pixelSHA256": "ee0b30b34547f6528c6eadd860774ced99679e6c8d1adc3b719253afac436f68"
+        },
+        {
+          "index": 3,
+          "visible": 144,
+          "pixelSHA256": "6f4d49f7c5fd873423ed9d04c1691f5983acb565a347a7d4ab43dd0b189e9332"
+        },
+        {
+          "index": 4,
+          "visible": 144,
+          "pixelSHA256": "5ce700031ddd27e389025946784657799304d0a577987ab9ed54fc9e742e1a49"
+        },
+        {
+          "index": 5,
+          "visible": 0,
+          "pixelSHA256": "064472034d4d30eef4b30d1f71db4d142ab7f646582e44e062fe897d0b5b7e23"
+        }
+      ]
+    }
+  }
+}

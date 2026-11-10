@@ -1,0 +1,57 @@
+{
+  "provider": "PixelLab",
+  "tool": "animate_image",
+  "frameCount": 8,
+  "canvas": 128,
+  "noBackground": true,
+  "firstFrame": "start-ember.png",
+  "lastFrame": "reference-flame.png",
+  "expectedTotalGenerations": 6,
+  "variants": [
+    {
+      "id": "a-soft-ignition",
+      "label": "Плавное разгорание",
+      "seed": 84121,
+      "action": "A tiny cold ember sprouts slender wisps upward, gently widening and gaining height in a smooth organic ignition. The base stays planted; the tendrils unfurl upward and settle into the mature flame. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: dc923733-75d4-44a5-8939-1ac593e59073\njob_id: dc923733-75d4-44a5-8939-1ac593e59073\naction: A tiny cold ember sprouts slender wisps upward, gently widening and gaining height in a smooth organic ignition. The base stays planted; the tendrils unfurl upward and settle into the mature flame. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 84121\nasset_id: 3ce156e9-f485-5dad-b48e-9bf8b911d9d0\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"dc923733-75d4-44a5-8939-1ac593e59073\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/dc923733-75d4-44a5-8939-1ac593e59073/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "id": "b-upward-flare",
+      "label": "Вспышка снизу",
+      "seed": 84122,
+      "action": "A tiny cold ember ignites in a quick vertical jet from the floor. A compact upward flare grows rapidly, then the upper flame curls and settles into the mature flame. Keep the flash inside the flame's silhouette, with no outward explosion. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "error: rate limit exceeded (1/1 jobs)\n\nhint: wait for a job to finish, then retry\n\nFree plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once)."
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "c-spiral-ignition",
+      "label": "Спиральное появление",
+      "seed": 84123,
+      "action": "A tiny cold ember raises two thin wisps that twist around each other counterclockwise into an ascending spiral. The curling energy fills from bottom to top, opens out and settles into the mature flame while its base stays planted. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "error: rate limit exceeded (1/1 jobs)\n\nhint: wait for a job to finish, then retry\n\nFree plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once)."
+          }
+        ],
+        "isError": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 7b16ae5d-c81e-463b-8af2-a5260e723f34\njob_id: 7b16ae5d-c81e-463b-8af2-a5260e723f34\ndescription: A clear continuous in-place WALK cycle facing diagonally south-west, toward the lower left. Show two unmistakable alternating steps: lift the left boot off the ground and bend that knee while the right leg supports the body, then plant the left boot forward and lift the right boot with a bent knee. Both boots must visibly leave the ground in alternation, with a clear forward and backward stride, while one foot remains planted at all times. Swing the empty arms naturally in opposition to the legs. Keep the original south-west three-quarter front heading throughout, the same size and costume, and the camera completely fixed. Keep the whole character within the frame. Gentle grounded walking, not idle swaying, no running and no hopping. End in the starting stance for a loop.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8110911\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"7b16ae5d-c81e-463b-8af2-a5260e723f34\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/7b16ae5d-c81e-463b-8af2-a5260e723f34/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: f3610e21-7be9-5b1b-ab27-a1651851699e\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

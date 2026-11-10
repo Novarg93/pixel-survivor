@@ -24,11 +24,14 @@ export const SOUND_CATALOG = {
   'final.break':cue('metal','sfx',11,.2,.45),
   'final.orb':cue('shield','sfx',11,.2,.45),
   'final.warning':cue('threat','sfx',11,.2,.45),
-  'final.impact':cue('meteor','sfx',11,.2,.45),
+  'final.impact':cue('meteor','sfx',11,.12,.52),
   'final.charge-warning':cue('threat','sfx',11,.2,.45),
   'final.charge':cue('stone','sfx',11,.2,.45),
   'final.sword':cue('threat','sfx',11,.2,.45),
   'final.slash':cue('ashSword','sfx',11,.2,.45),
+  'final.slam':cue('slam','sfx',11,.2,.45),
+  'final.swing-windup':cue('wind','sfx',8,.1,.30),
+  'final.meteor-fall':cue('wind','sfx',9,.1,.25),
   'final.phase3':cue('stone','sfx',11,.2,.45),
   'final.death':cue('death','sfx',11,.2,.65),
 
@@ -52,5 +55,5 @@ export const SOUND_CATALOG = {
 } as const;
 export type SoundEvent = keyof typeof SOUND_CATALOG;
 export const AUDIO_BUDGET = { voices: 12, sfx: 10, ui: 2, loops: 3, sampleRate: 22050 } as const;
-export const AUDIO_PROVENANCE = { origin: 'Original procedural PCM synthesis and original sparse underscore composed for Pixel Survivor. No third-party samples or melodies.', usage: 'Generated audio is original project content, distributable with Pixel Survivor; no third-party audio attribution required.', authoring: 'src/game/audio/synthesis.ts + catalog.ts', networkAssets: 0 } as const;
+export const AUDIO_PROVENANCE = { origin: 'User-uploaded Mage and Ash Warden sounds, original procedural UI/fallback, retained ElevenLabs SFX and five approved music takes for Pixel Survivor.', usage: 'Mage uploads: art/main-hero-mage-v2/sounds; Ash Warden uploads: art/final-boss/sound. Source hashes and audits: art/generated/mage-uploaded-sounds-v1 and art/generated/ash-warden-uploaded-sounds-v1. Existing generation provenance remains archived; music variants are2. Runtime uses local files only.', authoring: 'src/game/audio/synthesis.ts + catalog.ts + samples.ts + musicTracks.ts', networkAssets: 0 } as const;
 export const AUDIO_ASSET_MANIFEST = [...Object.entries(PATCHES).map(([id, patch]) => ({ id, seconds: patch[0], channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural patch' })), ...(['grove', 'forest', 'underscore'] as const).map(id => ({ id, seconds: id === 'underscore' ? 16 : 8, channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural composition' }))];

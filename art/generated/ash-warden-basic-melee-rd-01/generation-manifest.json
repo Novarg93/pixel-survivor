@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-06",
+  "status": "South pilot failed acceptance; best motion retained as draft",
+  "budget": {
+    "USD": 2,
+    "maxStarterPercentagePoints": 10,
+    "before": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 84,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 84,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "floorStarterPct": 74,
+    "after": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 79,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 79,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "actualUSD": 0,
+    "starterPointsUsedByBalance": 5,
+    "starterWorstObservedPointsUsed": 6
+  },
+  "sourcePack": "art/generated/ash-warden-directions-v1/",
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "operations": [
+    {
+      "id": "south-01",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "frames_duration": 8,
+        "input_image": "inputs/south.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt": "ONE complete compact two-handed DIAGONAL MELEE SLASH, then recover to the starting guard. Facing south, low top-down camera. Briefly draw the greatsword to the LEFT HIP with both hands, twist shoulders and torso slightly, then drive BOTH arms and shoulders through a fast short diagonal cut ACROSS THE FRONT at waist-to-chest height, follow through to the opposite low side, then return to the original idle guard. Feet stay grounded with a small weight transfer. This is an ordinary close-range sword attack, NOT an overhead slam: NEVER raise the blade above the helmet. Exactly one broad heavy greatsword, constant size and thick crossguard, BOTH gauntlets remain closed on ONE handle. Keep this same massive charcoal Ash Warden, helmet, shoulder armor, moderate dry branches, roots, tabard and orange cracks. No spinning, jumping, extra sword, fire trail, ground fissure, flash, scenery or effects. Entire figure and blade inside the canvas. Transparent background.",
+        "remove_bg": true,
+        "seed": 6110631,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793990853,
+        "credit_cost": 0,
+        "balance_cost": 0.25,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.25,
+        "resolved_prompt_style": "rd_advanced_animation__custom_action",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "c3f8115c-1d17-45be-ac8f-bdff5956998c",
+        "request_id": "c3f8115c-1d17-45be-ac8f-bdff5956998c",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793990897,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "c3f8115c-1d17-45be-ac8f-bdff5956998c",
+        "outputs_retained_until": 1794077269,
+        "output_url_expires_at": 1793991817,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 80
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 81,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 81,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "id": "south-02",
+      "reason": "Custom action has compact body/arm motion but curved/deforming blade in frames5-6; compare attack style with concise rigid-blade prompt.",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__attack",
+        "frames_duration": 8,
+        "input_image": "inputs/south.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt": "A short, powerful TWO-HANDED diagonal sword slash from a low side guard ACROSS the FRONT of the body, then recover to the same idle guard. Shoulders and torso twist, both elbows drive the cut, boots stay planted with weight transfer. Keep the huge straight BROAD sword rigid and unchanged, both hands on ONE handle throughout. Preserve this exact Ash Warden armor, helmet and shoulder branches. No overhead lift or slam, no sword enlargement, no curved blade, no effects, no spin or jump. South facing, low top-down camera, transparent background.",
+        "remove_bg": true,
+        "seed": 6110631,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793991022,
+        "credit_cost": 0,
+        "balance_cost": 0.14,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.14,
+        "resolved_prompt_style": "rd_advanced_animation__attack",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "c9dc77f5-5006-4f59-b88e-9dd7202fea69",
+        "request_id": "c9dc77f5-5006-4f59-b88e-9dd7202fea69",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793991175,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "c9dc77f5-5006-4f59-b88e-9dd7202fea69",
+        "outputs_retained_until": 1794077436,
+        "output_url_expires_at": 1793992081,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 78
+        },
+        "base64_images_count": 0,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 79,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 79,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "supportedDirections": [
+    "south-draft"
+  ],
+  "note": "Basic Melee compact diagonal; no overhead enhancement, no Cleave changes",
+  "selection": {
+    "bestMotion": "south-01",
+    "bestAppearance": "south-02",
+    "productionApproved": false,
+    "otherDirections": "Not generated: South pilot has inconsistent weapon and grip"
+  }
+}

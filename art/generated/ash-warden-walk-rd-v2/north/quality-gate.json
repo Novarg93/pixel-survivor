@@ -1,0 +1,10 @@
+{
+  "taskId": "d04e43e0-caf6-419f-9071-e0c745bbc760",
+  "technical": { "frameCount": 12, "uniqueFrames": 12, "canvas": [192,192], "durationMs": 1800, "edgePixels": 0, "partialAlphaPixels": 0 },
+  "visualInspection": "The back-facing design, branches, cloak and sword are retained. No front pixels were added. Visible leg motion is too weak for confident Walking approval; much of the result reads close to idle under the cloak.",
+  "footRegionEvidenceLogicalPixels": { "leftCentroidSpanX": 1.0635878597, "leftCentroidSpanY": 0.2404880609, "rightCentroidSpanX": 0.8341013825, "rightCentroidSpanY": 0.1723327805, "bothBottomRowsAcrossAllFrames": [153,153] },
+  "footMetricsArePhysicalContactProof": false,
+  "manualArtApproval": "not approved; motion concern",
+  "automaticRegeneration": false,
+  "recommendedWorldSpeedRange": null
+}

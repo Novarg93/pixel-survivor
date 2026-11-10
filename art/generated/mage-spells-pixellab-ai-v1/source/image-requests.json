@@ -1,0 +1,94 @@
+[
+  {
+    "id": "fireball-model",
+    "tool": "create_image_pro_flash",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 8,
+      "style_image": {
+        "url": "upload:161436ac-a356-4235-9c30-71c71e8e6333",
+        "usage_description": "Only the approved Pixel Survivor game's crisp pixel clusters, restrained dark fantasy outline weight and broad material shading. Do not draw the character."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "Standalone small MAGE FIREBALL projectile sprite for a top-down dark fantasy pixel-art game. Horizontal flight to the RIGHT. One round compact amber-orange head centered at pixel (78,64), diameter about 26 pixels. A SHORT three-tongue copper-orange tail extends LEFT, total visible width about 62 pixels, height about 30 pixels, plenty of transparent margin. Warm copper #955636, burnt orange #dc8648, amber #fba35e, narrow ivory #ffdb9b core. Large clean pixel clusters, simple restrained silhouette, 2 or 3 shading levels, subtle dark selective outline. Small ordinary mage spell, not an ultimate. Camera fixed; exactly one projectile. No explosion, smoke cloud, long streamer, neon halo, bloom, random spark confetti, ornate details, background scene, floor, character, text or sprite sheet. Match the supplied hero's pixel-art rendering quality, not its colours.",
+      "palette": [
+        "#59362f",
+        "#955636",
+        "#bd643c",
+        "#dc8648",
+        "#fba35e",
+        "#ffd18c",
+        "#ffdb9b"
+      ],
+      "palette_name": "Pixel Survivor restrained copper amber fire",
+      "seed": 2026111001
+    }
+  },
+  {
+    "id": "meteor-model",
+    "tool": "create_image_pro_flash",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 10,
+      "style_image": {
+        "url": "upload:161436ac-a356-4235-9c30-71c71e8e6333",
+        "usage_description": "Only the approved Pixel Survivor game's crisp pixel clusters, restrained dark fantasy outline weight and broad material shading. Do not draw the character."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "Standalone SMALL MAGE METEOR / stony comet sprite for a top-down dark fantasy pixel-art game. One chipped angular grey-green slate and bronze rock, about 32 pixels wide, head centered at pixel (53,79). Three large readable stone facets with upper-left lighting, ONE narrow warm amber heated edge and a tiny hot seam. A SHORT tapered amber-copper flame wake points UPPER RIGHT along an exactly 45-degree diagonal, toward (91,41); the rock travels LOWER LEFT along this axis. Overall visible footprint about 70 by 70 pixels, keep generous transparent margins. It must look like a modest spell of a mortal mage: noticeably smaller, calmer and less powerful than a volcanic boss meteor. No spherical lava boulder, molten cracked plates, glowing lava network, infernal smoke pillar, big shockwave or boss ornament. Original design, not a smaller copy of an existing boss sprite. Coherent low-to-medium detail, chunky crisp clusters, restrained selective outline. One object only, no ground, impact, characters, UI, sheet or background.",
+      "palette": [
+        "#343b40",
+        "#4b5552",
+        "#596561",
+        "#829081",
+        "#abb39a",
+        "#955636",
+        "#bd643c",
+        "#dc8648",
+        "#fba35e",
+        "#ffdb9b"
+      ],
+      "palette_name": "Pixel Survivor slate bronze and restrained amber",
+      "seed": 2026111002
+    }
+  },
+  {
+    "id": "landing-light-model",
+    "tool": "create_image_pro_flash",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": false,
+      "max_colors": 10,
+      "description": "VFX LIGHT PASS ONLY for a top-down pixel-art fantasy game. One very soft low-intensity AMBER POOL OF ILLUMINATION, circular seen from directly above, centered exactly at (64,64), radius about 48 pixels, feathering smoothly over a broad area into a completely PURE BLACK background. Flat luminous colour only. Broad dim warm center, no white or yellow hotspot. Several calm pixel-cluster bands with a very soft wide dark falloff, no visible rim. Black beyond the pool. This is a compositing light texture: absolutely no object, no stone, no fire tongues, no flames, no particles, no sparks, no dust, no smoke, no crater, no cracks, no floor texture, no ring, outline, circle stroke, rune, seal, rays or target symbol. Subtle ground-lighting anticipation for a weak mage meteor, not a powerful boss attack. Entire square is the black light pass, NOT a scene or illustration. Crisp pixel grid, soft falloff represented by colour levels.",
+      "palette": [
+        "#000000",
+        "#080603",
+        "#160f06",
+        "#281a0d",
+        "#3d2812",
+        "#59401d",
+        "#7e5927",
+        "#a57736",
+        "#b98843",
+        "#c28d48"
+      ],
+      "palette_name": "Dim warm illumination on pure black",
+      "seed": 2026111003
+    }
+  }
+]

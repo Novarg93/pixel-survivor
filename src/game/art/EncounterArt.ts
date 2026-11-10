@@ -1,6 +1,7 @@
 import type Phaser from 'phaser';
 import { GUARDIAN_ENCOUNTER as C, MOBILITY } from '../config/encounters';
 import { showPlayerShieldShell } from './playerShieldVisuals';
+import {PLAYER_VISUALS} from '../config/playerVisuals';
 import { guardianBeamEnd, type GuardianEncounter } from '../systems/GuardianEncounter';
 import type { MobilitySystem } from '../systems/MobilitySystem';
 import type { World } from '../systems/World';
@@ -46,6 +47,7 @@ export function drawEnrageDanger(g:Phaser.GameObjects.Graphics,w:World){
   }
 }
 export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility: MobilitySystem, intensity: number) {
+  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   drawMobilityUpgrade(g, w, mobility, intensity);
   const t = (w.elapsed - mobility.started) / MOBILITY.visualDuration;
   if (t < 0 || t >= 1 || w.status === 'over') return;
@@ -65,6 +67,7 @@ export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility:
 
 // Bounded pixel clusters, drawn in the existing friendly batch below hostile tells.
 export function drawMobilityUpgrade(g: Phaser.GameObjects.Graphics, w: World, m: MobilitySystem, intensity: number) {
+  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   if (w.status === 'over' || !m.variant) return;
   for (const zone of w.zones) if (zone.wall && zone.expires > w.elapsed) {
     const wall = zone.wall, dx = wall.to.x-wall.from.x, dy = wall.to.y-wall.from.y, length = Math.hypot(dx,dy), steps = Math.max(1,Math.ceil(length/5));

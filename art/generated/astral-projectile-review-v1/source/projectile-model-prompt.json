@@ -1,0 +1,29 @@
+{
+  "description": "One small hostile eclipse magic projectile for a dark fantasy pixel-art survivors game, travelling horizontally EAST. A compact hooked crescent of spectral cold mint energy wrapped around a dark blue-slate core, two short swept-back wisps. Strong coarse pixel clusters and stepped edges, sparse flat shading, a single narrow pale-mint rim highlight; modest miniboss attack, no bloom or blur. Not an arrowhead or purple rune shard, not a skull, not a glyph circle, not a huge fireball. Use the reference armored Eclipse caster ONLY as palette and pixel-style reference, do not draw the character. One isolated projectile only on transparent canvas. Head/pivot at x92 y64 on 128x128 canvas. Visible design contained between x32..104 y44..84, a short tapering left tail, generous transparent margins on every side. Restrained dark slate/teal/mint palette, very limited pale highlight area, no pure-white mass, no warm colors, no purple, no lightning/web/particles filling the canvas, no background, no floor, no text.",
+  "width": 128,
+  "height": 128,
+  "max_colors": 8,
+  "no_background": true,
+  "palette": [
+    "#202f3b",
+    "#304650",
+    "#426668",
+    "#568d87",
+    "#7eb5a7",
+    "#a6d2bd",
+    "#d2e6ce",
+    "#7d8f9b"
+  ],
+  "palette_name": "Pixel Survivor Eclipse slate and cold mint",
+  "style_image": {
+    "url": "upload:23886fe9-c4a3-4a27-97ac-5522186cbbb5",
+    "usage_description": "Use only the dark slate armor, cool mint restrained magic, coarse pixel clusters and stepped silhouette. Do not depict the warrior."
+  },
+  "style_options": {
+    "color_palette": true,
+    "outline": true,
+    "detail": false,
+    "shading": true
+  },
+  "seed": 110110
+}

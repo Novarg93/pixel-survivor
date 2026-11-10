@@ -1,0 +1,8 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const baseline=JSON.parse(readFileSync('art/generated/astral-flame-review-v1/source/runtime-baseline.json','utf8')),hash=f=>createHash('sha256').update(readFileSync(f)).digest('hex'),walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const changed=Object.keys(baseline).filter(f=>hash(f)!==baseline[f]).sort(),added=[...walk('src'),...walk('public')].filter(f=>!(f in baseline)).sort();
+const allowed=['src/game/art/AstralRevenantArt.ts','src/game/art/GameArt.ts'].sort(),newFiles=['public/assets/hd/astral-flame-pixellab-v1/atlas.json','public/assets/hd/astral-flame-pixellab-v1/atlas.png','src/game/art/astralFlameManifestPixellab.json','src/game/art/astralFlamePixellabPack.ts'].sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowed)||JSON.stringify(added)!==JSON.stringify(newFiles))throw Error('Unexpected flame integration scope: '+JSON.stringify({changed,added}));
+const report={runtimeIntegration:true,protectedFiles:Object.keys(baseline).length,unchangedProtectedFiles:Object.keys(baseline).length-changed.length,changed,added,currentSHA256:Object.fromEntries([...changed,...added].map(f=>[f,hash(f)])),worldAndDamageUnchanged:true,warningAndStageTimesUnchanged:true,bossAndOtherAssetsUnchanged:true};
+writeFileSync('art/generated/astral-flame-runtime-v1/integration-verification.json',JSON.stringify(report,null,2)+'\n');globalThis.console.log(JSON.stringify({approvedScopeVerified:true,changed:changed.length,added:added.length,unchanged:report.unchangedProtectedFiles}));

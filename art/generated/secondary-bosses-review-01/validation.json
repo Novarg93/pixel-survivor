@@ -1,0 +1,913 @@
+{
+  "browser": [
+    {
+      "width": 1280,
+      "height": 720,
+      "errors": [],
+      "controls": {
+        "forward": 150,
+        "back": 0,
+        "paused": true,
+        "failures": [],
+        "horizontalOverflow": false
+      },
+      "speedChecks": [
+        {
+          "speed": 0.25,
+          "advanceMs": 54.174999999999955
+        },
+        {
+          "speed": 0.5,
+          "advanceMs": 108.29999999999995
+        },
+        {
+          "speed": 1,
+          "advanceMs": 216.70000000000027
+        },
+        {
+          "speed": 2,
+          "advanceMs": 433.39999999999964
+        }
+      ],
+      "pauseDelta": 0,
+      "screenshots": "screenshots/*-1280.png"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "errors": [],
+      "controls": {
+        "forward": 150,
+        "back": 0,
+        "paused": true,
+        "failures": [],
+        "horizontalOverflow": false
+      },
+      "speedChecks": [
+        {
+          "speed": 0.25,
+          "advanceMs": 54.174999999999955
+        },
+        {
+          "speed": 0.5,
+          "advanceMs": 108.29999999999995
+        },
+        {
+          "speed": 1,
+          "advanceMs": 216.69999999999982
+        },
+        {
+          "speed": 2,
+          "advanceMs": 433.1999999999998
+        }
+      ],
+      "pauseDelta": 0,
+      "screenshots": "screenshots/*-844.png"
+    }
+  ],
+  "images": [
+    {
+      "folder": "charger/charge-a/attempt-2",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "charger/charge-b/attempt-2",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "charger/melee-a/attempt-2",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "charger/melee-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "sorcerer/cast-a",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "sorcerer/cast-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "sorcerer/teleport-a",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "sorcerer/teleport-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "eclipse/cast-a",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "eclipse/cast-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "eclipse/teleport-a",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "eclipse/teleport-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "guardian/orb-cast-a",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    },
+    {
+      "folder": "guardian/orb-cast-b",
+      "sourceFrames": 12,
+      "pngFrames": 12,
+      "mismatchedPixels": 0,
+      "previewMismatchedPixels": 0,
+      "partialAlpha": 0,
+      "edge": 0,
+      "dimensions": [
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          192,
+          192
+        ]
+      ],
+      "durationMs": 1800
+    }
+  ],
+  "protectedFiles": 2277,
+  "protectedChanges": [],
+  "checkedAt": "2026-11-07T09:39:40.667Z"
+}

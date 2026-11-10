@@ -1,0 +1,80 @@
+{
+  "reason": "User reported overlong arms in South release and follow-through",
+  "frames": [
+    3,
+    4
+  ],
+  "plannedRegion": [
+    27,
+    33,
+    65,
+    75
+  ],
+  "sourceJob": "a995f214-e7cd-4002-ae54-f8baad2a1434",
+  "requests": [
+    {
+      "index": 3,
+      "seed": 261109401,
+      "instruction": " This is the RELEASE pose: both hands extended modestly forward/down toward the viewer at waist height, palms around x40/y52 and x51/y53. The compact sleeve/elbow joints must be visible and naturally bent. Keep a clear casting gesture.",
+      "args": {
+        "method": "text",
+        "description": "Correct ONLY the anatomy and length of the mage's TWO ARMS in this frame. Both arms are currently much too long, reaching toward the knees. Shorten them to natural human proportions matching the standing character: elbows tucked near the ribs, upper arms about 8-9 pixels and forearms about 7-8 pixels on this 96x96 sprite. The hands must be in front of the lower chest/WAIST, just below the belt, NEVER at thigh or knee height. Use strong perspective FORESHORTENING toward the viewer to show a south/down spell-casting gesture, not stretched long vertical arms. Open readable bare palms, modest hands the same size as the original idle. Reconstruct the plain robe behind the removed long arms. Keep the exact same front-facing/slightly three-quarter body stance, hood and face, indigo cloak, slate-teal long robe, belt, boots, proportions, position, palette and medium-detail pixel style. Head, shoulders, torso, legs and feet must stay in place. Do not turn into a side view. No VFX, no orb, no particles, no glow, no text, no weapons, no background. Transparent 96x96 canvas. This is the RELEASE pose: both hands extended modestly forward/down toward the viewer at waist height, palms around x40/y52 and x51/y53. The compact sleeve/elbow joints must be visible and naturally bent. Keep a clear casting gesture.",
+        "no_background": true,
+        "use_color_palette_correction": true,
+        "seed": 261109401
+      },
+      "job": {
+        "background_job_id": "2bb2ed15-e6e5-478b-932b-21a4917b6352",
+        "image_id": "0e575702-9880-51b9-bf08-b8c6e5b66947",
+        "status": "processing",
+        "source_image_id": "0e575702-9880-51b9-bf08-b8c6e5b66947",
+        "job_id": "2bb2ed15-e6e5-478b-932b-21a4917b6352",
+        "description": "Correct ONLY the anatomy and length of the mage's TWO ARMS in this frame. Both arms are currently much too long, reaching toward the knees. Shorten them to natural human proportions matching the standing character: elbows tucked near the ribs, upper arms about 8-9 pixels and forearms about 7-8 pixels on this 96x96 sprite. The hands must be in front of the lower chest/WAIST, just below the belt, NEVER at thigh or knee height. Use strong perspective FORESHORTENING toward the viewer to show a south/down spell-casting gesture, not stretched long vertical arms. Open readable bare palms, modest hands the same size as the original idle. Reconstruct the plain robe behind the removed long arms. Keep the exact same front-facing/slightly three-quarter body stance, hood and face, indigo cloak, slate-teal long robe, belt, boots, proportions, position, palette and medium-detail pixel style. Head, shoulders, torso, legs and feet must stay in place. Do not turn into a side view. No VFX, no orb, no particles, no glow, no text, no weapons, no background. Transparent 96x96 canvas. This is the RELEASE pose: both hands extended modestly forward/down toward the viewer at waist height, palms around x40/y52 and x51/y53. The compact sleeve/elbow joints must be visible and naturally bent. Keep a clear casting gesture.",
+        "seed": 261109401,
+        "image_size": {
+          "width": 96,
+          "height": 96
+        },
+        "output_count": 1,
+        "estimated_generations": 5,
+        "pricing_provisional": true,
+        "poll_tool": "get_image",
+        "download_path": "/mcp/images/2bb2ed15-e6e5-478b-932b-21a4917b6352/download"
+      }
+    },
+    {
+      "index": 4,
+      "seed": 261109402,
+      "instruction": " This is the FOLLOW-THROUGH pose immediately after release: the same short, naturally proportioned arms retract slightly toward the abdomen, palms around x41/y50 and x51/y51. Keep elbows bent near the ribs. Avoid a new anticipation pose or long downward sleeves.",
+      "args": {
+        "method": "text",
+        "description": "Correct ONLY the anatomy and length of the mage's TWO ARMS in this frame. Both arms are currently much too long, reaching toward the knees. Shorten them to natural human proportions matching the standing character: elbows tucked near the ribs, upper arms about 8-9 pixels and forearms about 7-8 pixels on this 96x96 sprite. The hands must be in front of the lower chest/WAIST, just below the belt, NEVER at thigh or knee height. Use strong perspective FORESHORTENING toward the viewer to show a south/down spell-casting gesture, not stretched long vertical arms. Open readable bare palms, modest hands the same size as the original idle. Reconstruct the plain robe behind the removed long arms. Keep the exact same front-facing/slightly three-quarter body stance, hood and face, indigo cloak, slate-teal long robe, belt, boots, proportions, position, palette and medium-detail pixel style. Head, shoulders, torso, legs and feet must stay in place. Do not turn into a side view. No VFX, no orb, no particles, no glow, no text, no weapons, no background. Transparent 96x96 canvas. This is the FOLLOW-THROUGH pose immediately after release: the same short, naturally proportioned arms retract slightly toward the abdomen, palms around x41/y50 and x51/y51. Keep elbows bent near the ribs. Avoid a new anticipation pose or long downward sleeves.",
+        "no_background": true,
+        "use_color_palette_correction": true,
+        "seed": 261109402
+      },
+      "job": {
+        "background_job_id": "83cd0d43-15e5-4f67-9ef7-d2548f757219",
+        "image_id": "52e0a7e5-b1a2-5209-b44b-ddeb4fa86ad4",
+        "status": "processing",
+        "source_image_id": "52e0a7e5-b1a2-5209-b44b-ddeb4fa86ad4",
+        "job_id": "83cd0d43-15e5-4f67-9ef7-d2548f757219",
+        "description": "Correct ONLY the anatomy and length of the mage's TWO ARMS in this frame. Both arms are currently much too long, reaching toward the knees. Shorten them to natural human proportions matching the standing character: elbows tucked near the ribs, upper arms about 8-9 pixels and forearms about 7-8 pixels on this 96x96 sprite. The hands must be in front of the lower chest/WAIST, just below the belt, NEVER at thigh or knee height. Use strong perspective FORESHORTENING toward the viewer to show a south/down spell-casting gesture, not stretched long vertical arms. Open readable bare palms, modest hands the same size as the original idle. Reconstruct the plain robe behind the removed long arms. Keep the exact same front-facing/slightly three-quarter body stance, hood and face, indigo cloak, slate-teal long robe, belt, boots, proportions, position, palette and medium-detail pixel style. Head, shoulders, torso, legs and feet must stay in place. Do not turn into a side view. No VFX, no orb, no particles, no glow, no text, no weapons, no background. Transparent 96x96 canvas. This is the FOLLOW-THROUGH pose immediately after release: the same short, naturally proportioned arms retract slightly toward the abdomen, palms around x41/y50 and x51/y51. Keep elbows bent near the ribs. Avoid a new anticipation pose or long downward sleeves.",
+        "seed": 261109402,
+        "image_size": {
+          "width": 96,
+          "height": 96
+        },
+        "output_count": 1,
+        "estimated_generations": 5,
+        "pricing_provisional": true,
+        "poll_tool": "get_image",
+        "download_path": "/mcp/images/83cd0d43-15e5-4f67-9ef7-d2548f757219/download"
+      }
+    }
+  ],
+  "billingBefore": {
+    "generations": 1572.9,
+    "cashUsd": 0
+  }
+}

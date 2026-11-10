@@ -1,0 +1,142 @@
+{
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "events": null,
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/00.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 0,
+      "render": {
+        "layers": [
+          {
+            "texture": "a78eabc05dec3fa561cb",
+            "x": 59,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 1,
+      "file": "frames/01.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 63.66413288288289,
+      "render": {
+        "layers": [
+          {
+            "texture": "35fc4b9b3c8ef24ebe91",
+            "x": 59,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 2,
+      "file": "frames/02.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 127.32826576576578,
+      "render": {
+        "layers": [
+          {
+            "texture": "dd9272d31880bc7337d1",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 3,
+      "file": "frames/03.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 190.99239864864867,
+      "render": {
+        "layers": [
+          {
+            "texture": "17263d0131511ade22d5",
+            "x": 61,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 4,
+      "file": "frames/04.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 254.65653153153156,
+      "render": {
+        "layers": [
+          {
+            "texture": "279780f1358193b29ac9",
+            "x": 61,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 5,
+      "file": "frames/05.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 318.32066441441447,
+      "render": {
+        "layers": [
+          {
+            "texture": "dc5206f0a41a387ca2e3",
+            "x": 61,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 6,
+      "file": "frames/06.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 381.98479729729735,
+      "render": {
+        "layers": [
+          {
+            "texture": "ca7aeecf17cd8579f0c1",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 7,
+      "file": "frames/07.png",
+      "durationMs": 63.66413288288289,
+      "startMs": 445.64893018018023,
+      "render": {
+        "layers": [
+          {
+            "texture": "873709f4e1321f334523",
+            "x": 59,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    }
+  ]
+}

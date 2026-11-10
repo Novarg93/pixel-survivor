@@ -1,0 +1,459 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "from": {
+    "x": 170,
+    "y": -40,
+    "speed": 135
+  },
+  "chase": {
+    "x": 187.07750000000004,
+    "y": -40,
+    "speed": 170.77499999999998
+  },
+  "contact": {
+    "kind": "basicMelee",
+    "distance": 85,
+    "variant": "b",
+    "duration": 1.0434782608695652,
+    "hit": 0.5652173913043479
+  },
+  "rows": [
+    {
+      "face": "east",
+      "variant": "b",
+      "attack": {
+        "kind": "basicMelee",
+        "age": 0.5652173913043478,
+        "duration": 1.0434782608695652,
+        "direction": {
+          "x": 1,
+          "y": 0
+        },
+        "from": {
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "x": 0,
+          "y": 0
+        },
+        "contacted": true,
+        "id": 4,
+        "meleeVariant": "b"
+      },
+      "hit": 0.5652173913043479,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "east-melee",
+          "age": 0.6499999999999999,
+          "index": 7,
+          "frame": {
+            "flipX": false,
+            "layers": [
+              {
+                "frame": "53fa16cca637b93457a9d615",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              },
+              {
+                "frame": "c6e83ea610103dee29b33984",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "overlay": {
+              "frame": "4bbf8d206c886dff35354d92",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "east",
+          "presentationDirection": "east"
+        },
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 3,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": {
+            "variant": "b",
+            "side": true,
+            "origin": {
+              "x": 192.07750000000004,
+              "y": -40
+            },
+            "rotation": 0,
+            "glowAlpha": 0,
+            "glowScale": 1.9166666666666667,
+            "slash": {
+              "frame": "slash-8",
+              "index": 8,
+              "x": 242.07750000000004,
+              "y": -68,
+              "flipX": false
+            }
+          },
+          "activeImages": 1,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": true,
+            "frame": "slash-8",
+            "flipX": false,
+            "x": 242.07750000000004,
+            "y": -68
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    },
+    {
+      "face": "west",
+      "variant": "a",
+      "attack": {
+        "kind": "basicMelee",
+        "age": 0.4347826086956522,
+        "duration": 0.802675585284281,
+        "direction": {
+          "x": -1,
+          "y": 0
+        },
+        "from": {
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "x": 0,
+          "y": 0
+        },
+        "contacted": true,
+        "id": 6,
+        "meleeVariant": "a"
+      },
+      "hit": 0.4347826086956522,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "west-melee-a",
+          "age": 0.5,
+          "index": 5,
+          "frame": {
+            "flipX": true,
+            "layers": [
+              {
+                "frame": "body-a-5",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811,
+                "texture": "ash-warden-melee-combo-v1"
+              }
+            ],
+            "overlay": {
+              "frame": "emission-a-5",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811,
+              "texture": "ash-warden-melee-combo-v1"
+            }
+          },
+          "combatDirection": "west",
+          "presentationDirection": "west"
+        },
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 1,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": {
+            "variant": "a",
+            "side": true,
+            "origin": {
+              "x": 192.07750000000004,
+              "y": -40
+            },
+            "rotation": 3.141592653589793,
+            "glowAlpha": 0,
+            "glowScale": 1.9166666666666667,
+            "slash": null
+          },
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "slash-8",
+            "flipX": false,
+            "x": 242.07750000000004,
+            "y": -68
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    },
+    {
+      "face": "south",
+      "variant": "overhead",
+      "attack": {
+        "kind": "basicMelee",
+        "age": 0.5652173913043478,
+        "duration": 1.0434782608695652,
+        "direction": {
+          "x": 0,
+          "y": 1
+        },
+        "from": {
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "x": 0,
+          "y": 0
+        },
+        "contacted": true,
+        "id": 8,
+        "meleeVariant": "overhead"
+      },
+      "hit": 0.5652173913043479,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "south-cleave",
+          "age": 0.8999999999999999,
+          "index": 6,
+          "frame": {
+            "layers": [
+              {
+                "frame": "de40d628e7077b9ce9fd2596",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "flipX": false,
+            "overlay": {
+              "frame": "4e993e97c4720453c061a346",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "south",
+          "presentationDirection": "south"
+        },
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 1,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": {
+            "variant": "overhead",
+            "side": false,
+            "origin": {
+              "x": 192.07750000000004,
+              "y": -40
+            },
+            "rotation": 1.5707963267948966,
+            "glowAlpha": 0,
+            "glowScale": 1.9166666666666667,
+            "slash": null
+          },
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "slash-8",
+            "flipX": false,
+            "x": 242.07750000000004,
+            "y": -68
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    },
+    {
+      "face": "north",
+      "variant": "b",
+      "attack": {
+        "kind": "basicMelee",
+        "age": 0.5652173913043478,
+        "duration": 1.0434782608695652,
+        "direction": {
+          "x": 0,
+          "y": -1
+        },
+        "from": {
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "x": 0,
+          "y": 0
+        },
+        "contacted": true,
+        "id": 10,
+        "meleeVariant": "b"
+      },
+      "hit": 0.5652173913043479,
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "north-melee",
+          "age": 0.6499999999999999,
+          "index": 7,
+          "frame": {
+            "flipX": false,
+            "layers": [
+              {
+                "frame": "88113a79c8891bc37d3b0344",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "overlay": null
+          },
+          "combatDirection": "north",
+          "presentationDirection": "north"
+        },
+        "telegraphCommands": 0,
+        "meteorWarnings": [],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 1,
+        "ghosts": 0,
+        "labels": 0,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": {
+            "variant": "b",
+            "side": false,
+            "origin": {
+              "x": 192.07750000000004,
+              "y": -40
+            },
+            "rotation": -1.5707963267948966,
+            "glowAlpha": 0,
+            "glowScale": 1.9166666666666667,
+            "slash": null
+          },
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "slash-8",
+            "flipX": false,
+            "x": 242.07750000000004,
+            "y": -68
+          }
+        },
+        "totalAtlasBytes": 19922944
+      }
+    }
+  ],
+  "errors": []
+}

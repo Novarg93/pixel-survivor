@@ -1,0 +1,19 @@
+{
+  "indexBase": 0,
+  "selectionMethod": "Manual semantic inspection of all raw frames, not equal-index sampling",
+  "A": {
+    "Start": {"frame":0,"note":"Supplied low-left guard"},
+    "Backswing": {"frame":4,"note":"Blade left/up, torso coiled"},
+    "Middle Swing": {"frame":5,"note":"Body turns; blade remains across left/chest"},
+    "Full Follow-through": {"frame":7,"note":"NOT MET: nearest finish; no clear high right-side blade"},
+    "Recovery": {"frame":10,"note":"Blade lowers to low-left guard"}
+  },
+  "B": {
+    "Start": {"frame":0,"note":"Supplied low-left guard"},
+    "Backswing": {"frame":4,"note":"Arms load the blade far to the left"},
+    "Middle Swing": {"frame":6,"note":"Blade crosses overhead: front arc is uncertain"},
+    "Full Follow-through": {"frame":7,"note":"Right-high blade; torso has returned toward front"},
+    "Recovery": {"frame":9,"note":"Blade lowers in front, before guard return"}
+  },
+  "C": {"status":"not-generated","reason":"Starter ceiling: no safe quota for third job"}
+}

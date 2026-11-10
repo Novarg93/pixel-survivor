@@ -1,0 +1,64 @@
+[
+  {
+    "id": "arcane-shield-model",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 8,
+      "style_image": {
+        "url": "upload:590e0553-12b3-417e-b0fa-a1e682b37d7b",
+        "usage_description": "Match the approved mage's crisp pixel clusters, restrained dark fantasy silhouette and broad shading only. Do not draw the mage or any person."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "Isolated ARCANE SHIELD overlay for a small mortal mage in a top-down dark fantasy pixel-art game. A thin hollow protective oval shell, about 74px wide and 92px tall on this128px transparent canvas, centered at (64,60), bottom near y108. Sparse separated broad curved fragments of muted lavender, indigo and steel blue form the shell; one or two tiny restrained arcane marks at its sides. Huge completely TRANSPARENT EMPTY CENTER so the mage remains readable when this is layered over them. It is an energy outline and small panels, NOT a solid object. Large crisp clusters, simple elegant low-detail construction, narrow light edge, no random sparkle noise. Gentle ordinary defensive ability, not an ultimate. No person, silhouette or dummy inside, no hero, no face, no stone, no floor, no rune circle under feet, no wings, no crown, no giant halo, no rays or white fill, no opaque glowing disk, no heavy bloom. Only the hollow shield on transparency. The feet anchor is (64,108); keep all parts inside14px margins.",
+      "palette": [
+        "#2f3155",
+        "#4f4c83",
+        "#7266af",
+        "#9b84ce",
+        "#b58cfa",
+        "#a5c4ff",
+        "#d9ddf8"
+      ],
+      "palette_name": "Pixel Survivor restrained arcane lavender and steel blue",
+      "seed": 2026111101
+    }
+  },
+  {
+    "id": "frost-nova-seed",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 8,
+      "style_image": {
+        "url": "upload:590e0553-12b3-417e-b0fa-a1e682b37d7b",
+        "usage_description": "Match the approved mage's crisp pixel clusters, restrained dark fantasy silhouette and broad shading only. Do not draw the mage or any person."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "One SMALL FROST NOVA IGNITION SEED, a game VFX first frame, on a large128x128 transparent canvas. A very small jagged circular frost ripple centered exactly at (64,64), diameter about28px, seen directly from above. Only a thin cold cyan rim, with an empty transparent center and four tiny angular ice chips beginning to sprout along the rim. Keep most of the canvas empty so this seed can expand later. Simple readable pixel clusters, mint cyan #91c9d2, pale frost #d9f3f7, one narrow bright edge and muted slate-blue shade. This is the ORDINARY mage Frost Nova, a modest ground-level freezing pulse, NOT any ultimate. No character, no sphere, no protective bubble, no tall ice dome, no snowstorm, avalanche, giant icicle, white disk, opaque floor patch, blinding flash, runes or ornate glyphs. No landscape, target, text, sheet, beams or dramatic backdrop. A compact chilly starter ripple only, isolated on transparency.",
+      "palette": [
+        "#274353",
+        "#3f677c",
+        "#6395ac",
+        "#91c9d2",
+        "#bde6ed",
+        "#d9f3f7",
+        "#f1fbf9"
+      ],
+      "palette_name": "Pixel Survivor ordinary Frost Nova mint cyan",
+      "seed": 2026111102
+    }
+  }
+]

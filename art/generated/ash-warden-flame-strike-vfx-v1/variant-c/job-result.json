@@ -1,0 +1,60 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "You've used this month's plan usage, so this job was paid from your balance.\n\n{\"notice\":\"You've used this month's plan usage, so this job was paid from your balance.\",\"status\":\"succeeded\",\"task_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"created_at\":1794063474,\"updated_at\":1794063532,\"result\":{\"created_at\":1794063532,\"credit_cost\":1,\"balance_cost\":0.25,\"output_urls\":[\"https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/99039f75-70ab-474f-8dbf-a49844354337/0-ef9e4c8b9d6b4b1fa398fb783b4632fb.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=i0iLdmSXpXLKSJn9WnU%2B5drqnO4%3D&Expires=1794064439\"],\"model\":\"rd_fast\",\"remaining_credits\":0,\"remaining_balance\":7.49,\"request_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"outputs_retained_until\":1794149874,\"output_url_expires_at\":1794064439,\"warnings\":[{\"code\":\"plan_usage_balance\"}],\"billing\":{\"reason\":\"usage_exhausted\",\"source\":\"balance\",\"balance_left\":7.49,\"plan_job_limit\":2,\"balance_charged\":0.25,\"plan_jobs_running\":0,\"plan_usage_left_pct\":0},\"base64_images_count\":1,\"output_images_count\":0},\"billing\":{\"source\":\"balance\",\"reason\":\"usage_exhausted\",\"plan_jobs_running\":0,\"plan_job_limit\":2,\"plan_usage_left_pct\":0,\"balance_charged\":0.25,\"balance_left\":7.49},\"warnings\":[{\"code\":\"plan_usage_balance\"}]}"
+    }
+  ],
+  "structuredContent": {
+    "notice": "You've used this month's plan usage, so this job was paid from your balance.",
+    "status": "succeeded",
+    "task_id": "99039f75-70ab-474f-8dbf-a49844354337",
+    "created_at": 1794063474,
+    "updated_at": 1794063532,
+    "result": {
+      "created_at": 1794063532,
+      "credit_cost": 1,
+      "balance_cost": 0.25,
+      "output_urls": [
+        "https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/99039f75-70ab-474f-8dbf-a49844354337/0-ef9e4c8b9d6b4b1fa398fb783b4632fb.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=i0iLdmSXpXLKSJn9WnU%2B5drqnO4%3D&Expires=1794064439"
+      ],
+      "model": "rd_fast",
+      "remaining_credits": 0,
+      "remaining_balance": 7.49,
+      "request_id": "99039f75-70ab-474f-8dbf-a49844354337",
+      "outputs_retained_until": 1794149874,
+      "output_url_expires_at": 1794064439,
+      "warnings": [
+        {
+          "code": "plan_usage_balance"
+        }
+      ],
+      "billing": {
+        "reason": "usage_exhausted",
+        "source": "balance",
+        "balance_left": 7.49,
+        "plan_job_limit": 2,
+        "balance_charged": 0.25,
+        "plan_jobs_running": 0,
+        "plan_usage_left_pct": 0
+      },
+      "base64_images_count": 1,
+      "output_images_count": 0
+    },
+    "billing": {
+      "source": "balance",
+      "reason": "usage_exhausted",
+      "plan_jobs_running": 0,
+      "plan_job_limit": 2,
+      "plan_usage_left_pct": 0,
+      "balance_charged": 0.25,
+      "balance_left": 7.49
+    },
+    "warnings": [
+      {
+        "code": "plan_usage_balance"
+      }
+    ]
+  },
+  "isError": false
+}

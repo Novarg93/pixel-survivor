@@ -1,0 +1,124 @@
+{
+  "candidate": "B",
+  "name": "Powerful Baseball Swing",
+  "seed": 6110642,
+  "before": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 73,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 73,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 1,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "request": {
+    "width": 192,
+    "height": 192,
+    "num_images": 1,
+    "prompt_style": "rd_advanced_animation__custom_action",
+    "frames_duration": 12,
+    "input_image": "input-opaque.png",
+    "bypass_prompt_expansion": true,
+    "return_spritesheet": false,
+    "prompt": "Animate ONE POWERFUL TWO-HANDED BASEBALL-BAT SWING using this huge greatsword. Fixed low top-down south camera. Start exactly in this low diagonal VIEWER-LEFT sword guard. Make a strong full-body coil: hips rotate, chest and BOTH shoulders draw back, both elbows and hands pull the same handle behind the left side; feet stay wide with a heel pivot. Uncoil forcefully from the hips, transfer weight across the legs, turn the ribcage and drive BOTH arms through a LARGE roughly 150-degree lateral arc ACROSS THE WHOLE FRONT of the character from viewer left to right. The sword MUST travel far beyond the centerline and finish HIGH OVER THE VIEWER-RIGHT SHOULDER like a batter's full follow-through, with both hands beside that opposite shoulder and the torso visibly turned after the strike. Show that extended high finish, then return the same sword to the original low-left guard. One broad rigid heavy blade, both gauntlets always on ONE grip. Keep the same massive charcoal Ash Warden armor, visor, roots, modest branches and torn tabard. This is a committed wide side swing with a high FINISH, NOT a wrist twitch, thrust, or vertical downward overhead slam. No sword duplication, jumping, running, 360 spin, fire trail, ground cracks, flash or scenery. Full figure and sword inside frame.",
+    "seed": 6110642,
+    "remove_bg": true,
+    "upload_outputs": true
+  },
+  "estimate": {
+    "created_at": 1793994631,
+    "credit_cost": 0,
+    "balance_cost": 0.25,
+    "output_images": [],
+    "base64_images": [],
+    "output_urls": [],
+    "model": "check_cost",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "would_use": "plan",
+    "balance_cost_if_balance": 0.25,
+    "resolved_prompt_style": "rd_advanced_animation__custom_action",
+    "used_input_image": true,
+    "reference_images_count": 0,
+    "used_extra_input_image": false,
+    "used_input_palette": false,
+    "used_strength": false,
+    "effective_timeout_seconds": 180
+  },
+  "job": {
+    "status": "accepted",
+    "task_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+    "request_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+    "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+  },
+  "result": {
+    "created_at": 1793994685,
+    "credit_cost": 1,
+    "balance_cost": 0,
+    "model": "rd_fast",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "request_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+    "outputs_retained_until": 1794081041,
+    "output_url_expires_at": 1793995616,
+    "billing": {
+      "source": "plan",
+      "balance_left": 10,
+      "plan_job_limit": 2,
+      "balance_charged": 0,
+      "plan_jobs_running": 1,
+      "plan_usage_left_pct": 69
+    },
+    "base64_images_count": 1,
+    "output_images_count": 0
+  },
+  "after": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 70,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 70,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  }
+}

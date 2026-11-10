@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-06",
+  "status": "Recommended static south base; stopped for manual art acceptance",
+  "outputs": {
+    "main": "art/final-boss/ash-warden-base-final.png",
+    "alt": "art/final-boss/ash-warden-base-alt.png",
+    "mainSHA256": "f6efd392171071f8519a3870d78f6595229e195117518aa0ddd7a800111903a5",
+    "altSHA256": "dabdd1ab29ac7f21754cb4f609dd770d8cf933ad8db05f94480cfb6e248d3330",
+    "dimensions": [
+      128,
+      128
+    ],
+    "mainPalette": 32
+  },
+  "generation": {
+    "imagegenCalls": 1,
+    "pixelLabPaidCalls": 1,
+    "pixelLabGenerationsSpent": 1,
+    "pixelLabBefore": 37,
+    "pixelLabAfter": 36,
+    "workbenchOperations": 3,
+    "workbenchGenerationsSpent": 0,
+    "finalCandidates": 2,
+    "designsGenerated": 1,
+    "animationCalls": 0,
+    "directionSetCalls": 0
+  },
+  "aseprite": {
+    "executable": null,
+    "batch": "unavailable",
+    "liveConnected": false,
+    "sourceFileCreated": false
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "unitTests": 655,
+    "unitFiles": 82,
+    "build": "passed",
+    "npmCheckExit": 0,
+    "buildWarning": "Existing minified Phaser chunk over 500 kB",
+    "gitDiffCheckExit": 0,
+    "pixelQA": {
+      "size": [
+        128,
+        128
+      ],
+      "occupied": 3146,
+      "transparent": 13238,
+      "partialAlpha": 0,
+      "edge": 0,
+      "colors": 32,
+      "backgroundResidue": 0,
+      "bounds": {
+        "minX": 37,
+        "minY": 21,
+        "maxX": 90,
+        "maxY": 109,
+        "width": 54,
+        "height": 89
+      },
+      "alphaComponentSizes": [
+        3146
+      ]
+    },
+    "altPixelQA": {
+      "size": [
+        128,
+        128
+      ],
+      "occupied": 3012,
+      "partialAlpha": 0,
+      "edge": 0,
+      "colors": 32
+    },
+    "reportLinksChecked": 10,
+    "previewImagesViewed": [
+      "ash-warden-base-review.png",
+      "comparison-canvas-screenshot.png",
+      "work/alt-nearest-x4.png"
+    ],
+    "previewType": "Static Canvas comparison on current map screenshot, actual zoom values; not live encounter integration",
+    "e2eRun": false
+  },
+  "protected": {
+    "fileCount": 440,
+    "before": "d34badae389687113e889c0df54dc6c8c05b8d77d6390538f0377e7d0cb9dab0",
+    "after": "d34badae389687113e889c0df54dc6c8c05b8d77d6390538f0377e7d0cb9dab0",
+    "changed": [],
+    "unchanged": true
+  },
+  "artifacts": [
+    {
+      "path": "art/final-boss/ash-warden-base-alt.png",
+      "sha256": "dabdd1ab29ac7f21754cb4f609dd770d8cf933ad8db05f94480cfb6e248d3330"
+    },
+    {
+      "path": "art/final-boss/ash-warden-base-final.png",
+      "sha256": "f6efd392171071f8519a3870d78f6595229e195117518aa0ddd7a800111903a5"
+    },
+    {
+      "path": "art/final-boss/ash-warden-base-review.png",
+      "sha256": "eaf8403dc41a01738a519e0420967103efcea6cc60a7aea8eee15bd44696fb1d"
+    },
+    {
+      "path": "art/final-boss/base-metadata.json",
+      "sha256": "9939e8952369d43c22437fadc6158768407507efd7415b9604e256443c70a3e2"
+    },
+    {
+      "path": "art/final-boss/comparison-canvas-screenshot.png",
+      "sha256": "16d260a305b1d74f0d5b4a1ae6a391de0c5056bf3938c88d7025554111c0e0a2"
+    },
+    {
+      "path": "art/final-boss/comparison-desktop.png",
+      "sha256": "e2e7df82bb8fbd205739566579b7e55f6e02fc57b7b468e288468bf527445699"
+    },
+    {
+      "path": "art/final-boss/comparison-mobile-landscape.png",
+      "sha256": "e014304493a698211e865ead092e3804673d25621d25b1edd33296afc359a0da"
+    },
+    {
+      "path": "art/final-boss/comparison-sheet.png",
+      "sha256": "62e188dc2a2cff50038634720ad08fbaa23344212a4d171110116a0ce5ca2075"
+    },
+    {
+      "path": "art/final-boss/work/01-imagegen-master.png",
+      "sha256": "803764c34b4ce7b9593a8d8ebc2a68acae996315ad617bf69b474774a54c836e"
+    },
+    {
+      "path": "art/final-boss/work/02-padded-conversion-input.png",
+      "sha256": "46c6ac6f8bdac8833546f885932511659fda281c0efcab7f797f111866507b92"
+    },
+    {
+      "path": "art/final-boss/work/03-pixellab-native-raw.png",
+      "sha256": "de732b77e7a1754da61a872d79b250da3eba86860ec4cec7127058ec7ad2f207"
+    },
+    {
+      "path": "art/final-boss/work/alt-nearest-x4.png",
+      "sha256": "505a45e4ce5123b11e8a7f4b6aa8969ed4c93e90cb5b55c8416e4bf5d8154e74"
+    },
+    {
+      "path": "art/final-boss/work/alt-preparation.json",
+      "sha256": "7e4beea5ceebc0557c68c9071ee4ba05fb32888f3d1ed1c991f0df22b95a4db4"
+    },
+    {
+      "path": "art/final-boss/work/generation-record.json",
+      "sha256": "bcb281c736a99e4fdaf85f66ace3a68126ddd021ecf6e8d3826bca47109c5521"
+    },
+    {
+      "path": "art/final-boss/work/input-preparation.json",
+      "sha256": "916e3da4bcb80979661ed2883c7e0fb3c738182f5905b0035f70fffe1f8fe49d"
+    },
+    {
+      "path": "art/final-boss/work/pixel-cleanup.json",
+      "sha256": "bf159989a4977f0d3faa0bb86b00d6c426461efefe7ecfb657cb8d668519ce15"
+    },
+    {
+      "path": "art/final-boss/work/pixel-qa.json",
+      "sha256": "acf76ecda4d4e640e511f9004050fd1e8e2c063fc08b6e876e6f6852b7d6faef"
+    },
+    {
+      "path": "art/final-boss/work/prepare-alt.mjs",
+      "sha256": "218d957dd89e61ea6e121e192a9ad496d725ae3a9d09145ec7f699b4b1c891a0"
+    },
+    {
+      "path": "art/final-boss/work/prepare-cleanup.mjs",
+      "sha256": "2be127e32e7fa0d53bdef91e42d196a1b87d7e11f64ac6ecda5658bfd5e24525"
+    },
+    {
+      "path": "art/final-boss/work/prepare-pixel-input.mjs",
+      "sha256": "d4b5b773afb8e7940fa609da3ab23f268c2111113d13ba8991c30137843fbe6d"
+    },
+    {
+      "path": "art/final-boss/work/prompt.txt",
+      "sha256": "55fde08c44fbeeb1af33a94725e806f8029b3f9b9aed8894a2a25c6afd94511f"
+    },
+    {
+      "path": "art/final-boss/work/protected-baseline.json",
+      "sha256": "e4ce49e7b705c902d0112793b71fe21529cf3d71f5091fbcf8336e6d30f334ec"
+    },
+    {
+      "path": "art/final-boss/work/results.json",
+      "sha256": "d1377b347c35b8222f24477e0008f441bc4d3bac538137b936ee320acb79a3aa"
+    },
+    {
+      "path": "art/final-boss/work/review-base.mjs",
+      "sha256": "e91b2eb1a7c204b515a66d9e1d2b9f433537fa9efdf2933382596c5271299409"
+    }
+  ],
+  "gitActions": {
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "deploy": false
+  },
+  "next": "Manual south idle approval, then a separately authorized directions/attack pack"
+}

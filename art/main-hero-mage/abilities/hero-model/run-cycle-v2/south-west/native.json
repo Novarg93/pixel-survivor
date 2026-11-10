@@ -1,0 +1,25 @@
+{
+  "motion": "run",
+  "direction": "south-west",
+  "frames": 8,
+  "sourceFiles": [
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/00.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/01.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/02.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/03.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/04.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/05.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/06.png",
+    "art/main-hero-mage/abilities/hero-model/run-cycle-v2/south-west/raw/07.png"
+  ],
+  "canvas": 256,
+  "columns": 4,
+  "durationMs": 60,
+  "loop": true,
+  "endpointExcluded": true,
+  "gif": {
+    "file": "native.gif",
+    "durationMs": 480
+  },
+  "gifNote": null
+}

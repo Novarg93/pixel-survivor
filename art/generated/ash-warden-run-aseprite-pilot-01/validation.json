@@ -1,0 +1,155 @@
+{
+  "result": "PASS",
+  "protectedFiles": 593,
+  "clips": {
+    "source": {
+      "frames": 8,
+      "cycleMs": 509.3130630630631,
+      "nativeFPS": 15.70743140159639,
+      "strideWorld": 36.6705405416,
+      "batchPixelDifferences": 0,
+      "upperPixelDifferences": 0,
+      "changedPixelsAgainstOriginal": 0,
+      "edgePixels": 0,
+      "maxBoneLengthError": 0,
+      "maxJointStep": 0,
+      "closureJointStep": 0
+    },
+    "walk": {
+      "frames": 8,
+      "cycleMs": 640,
+      "nativeFPS": 12.5,
+      "strideWorld": 41.9091891904,
+      "batchPixelDifferences": 0,
+      "upperPixelDifferences": 0,
+      "changedPixelsAgainstOriginal": 27625,
+      "edgePixels": 0,
+      "maxBoneLengthError": 6.391331908162101e-12,
+      "maxJointStep": 14.616650326317938,
+      "closureJointStep": 8
+    },
+    "run": {
+      "frames": 12,
+      "cycleMs": 600,
+      "nativeFPS": 20,
+      "strideWorld": 125.7275675712,
+      "batchPixelDifferences": 0,
+      "upperPixelDifferences": 0,
+      "changedPixelsAgainstOriginal": 73940,
+      "edgePixels": 0,
+      "maxBoneLengthError": 5.503153488461976e-12,
+      "maxJointStep": 23.288709775479933,
+      "closureJointStep": 8.06225774829855
+    }
+  },
+  "speedTests": [
+    {
+      "clip": "source",
+      "speed": 72,
+      "requestedFPS": 15.707431401142584,
+      "effectiveFPS": 15.707431401142584,
+      "nominalFootSpeed": 72,
+      "residualSlipWorldPerSecond": 0,
+      "residualSlipPercent": 0
+    },
+    {
+      "clip": "source",
+      "speed": 120,
+      "requestedFPS": 26.179052335237643,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 91.67635135399999,
+      "residualSlipWorldPerSecond": 28.32364864600001,
+      "residualSlipPercent": 23.603040538333342
+    },
+    {
+      "clip": "source",
+      "speed": 180,
+      "requestedFPS": 39.268578502856464,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 91.67635135399999,
+      "residualSlipWorldPerSecond": 88.32364864600001,
+      "residualSlipPercent": 49.06869369222223
+    },
+    {
+      "clip": "source",
+      "speed": 255,
+      "requestedFPS": 55.630486212379985,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 91.67635135399999,
+      "residualSlipWorldPerSecond": 163.323648646,
+      "residualSlipPercent": 64.04848966509805
+    },
+    {
+      "clip": "walk",
+      "speed": 72,
+      "requestedFPS": 13.74400247599976,
+      "effectiveFPS": 13.74400247599976,
+      "nominalFootSpeed": 72,
+      "residualSlipWorldPerSecond": 0,
+      "residualSlipPercent": 0
+    },
+    {
+      "clip": "walk",
+      "speed": 120,
+      "requestedFPS": 22.906670793332935,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 104.772972976,
+      "residualSlipWorldPerSecond": 15.227027023999995,
+      "residualSlipPercent": 12.68918918666666
+    },
+    {
+      "clip": "walk",
+      "speed": 180,
+      "requestedFPS": 34.3600061899994,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 104.772972976,
+      "residualSlipWorldPerSecond": 75.227027024,
+      "residualSlipPercent": 41.79279279111111
+    },
+    {
+      "clip": "walk",
+      "speed": 255,
+      "requestedFPS": 48.676675435832486,
+      "effectiveFPS": 20,
+      "nominalFootSpeed": 104.772972976,
+      "residualSlipWorldPerSecond": 150.227027024,
+      "residualSlipPercent": 58.9125596172549
+    },
+    {
+      "clip": "run",
+      "speed": 72,
+      "requestedFPS": 6.87200123799988,
+      "effectiveFPS": 6.87200123799988,
+      "nominalFootSpeed": 72,
+      "residualSlipWorldPerSecond": 0,
+      "residualSlipPercent": 0
+    },
+    {
+      "clip": "run",
+      "speed": 120,
+      "requestedFPS": 11.453335396666468,
+      "effectiveFPS": 11.453335396666468,
+      "nominalFootSpeed": 120.00000000000001,
+      "residualSlipWorldPerSecond": -1.4210854715202004e-14,
+      "residualSlipPercent": -2.220446049250313e-14
+    },
+    {
+      "clip": "run",
+      "speed": 180,
+      "requestedFPS": 17.1800030949997,
+      "effectiveFPS": 17.1800030949997,
+      "nominalFootSpeed": 180,
+      "residualSlipWorldPerSecond": 0,
+      "residualSlipPercent": 0
+    },
+    {
+      "clip": "run",
+      "speed": 255,
+      "requestedFPS": 24.338337717916243,
+      "effectiveFPS": 24,
+      "nominalFootSpeed": 251.4551351424,
+      "residualSlipWorldPerSecond": 3.544864857600004,
+      "residualSlipPercent": 1.3901430814117655
+    }
+  ]
+}

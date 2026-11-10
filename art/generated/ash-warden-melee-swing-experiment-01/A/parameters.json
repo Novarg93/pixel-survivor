@@ -1,0 +1,124 @@
+{
+  "candidate": "A",
+  "name": "Heavy Golf Swing",
+  "seed": 6110641,
+  "before": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 79,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 79,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "request": {
+    "width": 192,
+    "height": 192,
+    "num_images": 1,
+    "prompt_style": "rd_advanced_animation__custom_action",
+    "frames_duration": 12,
+    "input_image": "input-opaque.png",
+    "bypass_prompt_expansion": true,
+    "return_spritesheet": false,
+    "prompt": "ONE FULL HEAVY GOLF SWING with a greatsword, then return to idle. Start in the supplied south-facing guard, sword low diagonally to VIEWER LEFT. Load weight onto the left leg and coil hips, chest and shoulders into a real backswing. Drive BOTH hands and elbows together with the whole torso through a VERY LARGE 150-degree arc ACROSS THE ENTIRE FRONT of the body from viewer left to viewer right. Continue the momentum well beyond the center: the greatsword finishes HIGH BESIDE OR ABOVE THE VIEWER-RIGHT SHOULDER, hands beside that shoulder, torso visibly turned right, weight on the opposite leg, rear foot pivots. Hold the unmistakable high golf follow-through briefly. Then CONTROLLED RECOVERY from the high finish back to the original low-left two-handed idle guard. This high opposite-shoulder FINISH is essential. One uninterrupted wide swing, not a tiny wrist movement, not a thrust, not a vertical overhead downward slam. Both gauntlets grip ONE handle of ONE huge broad greatsword throughout. Preserve this same massive charcoal Ash Warden, helmet, orange cracks, moderate dry branches and tabard; low top-down south camera, planted wide stance, no running, no full-body spin, no VFX, no ground fissure or fire trail. Entire blade and figure in frame.",
+    "seed": 6110641,
+    "remove_bg": true,
+    "upload_outputs": true
+  },
+  "estimate": {
+    "created_at": 1793994319,
+    "credit_cost": 0,
+    "balance_cost": 0.25,
+    "output_images": [],
+    "base64_images": [],
+    "output_urls": [],
+    "model": "check_cost",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "would_use": "plan",
+    "balance_cost_if_balance": 0.25,
+    "resolved_prompt_style": "rd_advanced_animation__custom_action",
+    "used_input_image": true,
+    "reference_images_count": 0,
+    "used_extra_input_image": false,
+    "used_input_palette": false,
+    "used_strength": false,
+    "effective_timeout_seconds": 180
+  },
+  "job": {
+    "status": "accepted",
+    "task_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+    "request_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+    "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+  },
+  "result": {
+    "created_at": 1793994481,
+    "credit_cost": 1,
+    "balance_cost": 0,
+    "model": "rd_fast",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "request_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+    "outputs_retained_until": 1794080776,
+    "output_url_expires_at": 1793995407,
+    "billing": {
+      "source": "plan",
+      "balance_left": 10,
+      "plan_job_limit": 2,
+      "balance_charged": 0,
+      "plan_jobs_running": 1,
+      "plan_usage_left_pct": 75
+    },
+    "base64_images_count": 1,
+    "output_images_count": 0
+  },
+  "after": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 75,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 75,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  }
+}

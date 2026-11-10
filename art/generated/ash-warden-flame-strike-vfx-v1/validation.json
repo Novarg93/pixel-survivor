@@ -1,0 +1,50 @@
+{
+  "technicalResult": "PASS",
+  "rawFadeoutResult": "FAIL: all three retain ground residue; raw untouched",
+  "preparedFadeoutResult": "PASS: documented pixel-dither extinction in frames10–12",
+  "frameCount": 36,
+  "gifRoundtripFrames": 108,
+  "protectedFiles": 4367,
+  "administrativeLogExceptions": [
+    "docs/PROGRESS.md",
+    "docs/DECISIONS.md"
+  ],
+  "metrics": [
+    {
+      "id": "a",
+      "minTransparentPaddingPx": 14,
+      "peakFrame": 5,
+      "rawLastOccupied": 631,
+      "rawFullyFades": false,
+      "preparedFullyFades": true,
+      "lowerBandCentroidSpan": [
+        3.5687206065841224,
+        6.45388925407002
+      ]
+    },
+    {
+      "id": "b",
+      "minTransparentPaddingPx": 34,
+      "peakFrame": 7,
+      "rawLastOccupied": 803,
+      "rawFullyFades": false,
+      "preparedFullyFades": true,
+      "lowerBandCentroidSpan": [
+        1.937706729915945,
+        6.417162818464902
+      ]
+    },
+    {
+      "id": "c",
+      "minTransparentPaddingPx": 18,
+      "peakFrame": 6,
+      "rawLastOccupied": 709,
+      "rawFullyFades": false,
+      "preparedFullyFades": true,
+      "lowerBandCentroidSpan": [
+        2.1702031669029083,
+        4.601446355202398
+      ]
+    }
+  ]
+}

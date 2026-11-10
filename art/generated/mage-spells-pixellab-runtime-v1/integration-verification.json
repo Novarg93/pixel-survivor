@@ -1,0 +1,38 @@
+{
+  "runtimeIntegration": true,
+  "approval": "User explicitly approved the PixelLab Fireball/Meteor demo and asked for game integration.",
+  "originalProtectedFiles": 401,
+  "unchangedProtectedFiles": 395,
+  "changed": [
+    "src/game/art/MageAbilityArt.ts",
+    "src/game/art/MageMeteorPresentation.ts",
+    "src/game/art/assetRegistry.ts",
+    "src/game/art/fireballPack.ts",
+    "src/game/art/mageMeteorPack.ts",
+    "src/game/config/mageAbilityTuning.json"
+  ],
+  "added": [
+    "public/assets/hd/mage-fireball-pixellab-v1/atlas.json",
+    "public/assets/hd/mage-fireball-pixellab-v1/atlas.png",
+    "public/assets/hd/mage-meteor-pixellab-v1/atlas.json",
+    "public/assets/hd/mage-meteor-pixellab-v1/atlas.png",
+    "src/game/art/fireballManifestPixellab.json",
+    "src/game/art/mageMeteorManifestPixellab.json"
+  ],
+  "currentSHA256": {
+    "src/game/art/MageAbilityArt.ts": "7d075b03497877221df23be95138b4d21f528c51383a127e578c420cd95cc553",
+    "src/game/art/MageMeteorPresentation.ts": "4bf5711e10236b90c45579bb3454ba20be646eda4f67314dcd182e9cd9fdb7a8",
+    "src/game/art/assetRegistry.ts": "c4fb46da20f26d42b3ce5e4fc267f0dd3d46bcd54089d01d0af66a9f132c4bb8",
+    "src/game/art/fireballPack.ts": "66d713073c41086a1569dcba326b3ba67eb278e1b49e9eea7690066ad7608a2d",
+    "src/game/art/mageMeteorPack.ts": "36881c4d163cc1b8d9a6d1d161bad2caeec566ae854d3124b46510880a6f53da",
+    "src/game/config/mageAbilityTuning.json": "afc00a9ee91f6670229353b8821c23f4976082b4e092d6bb7f5c4cbe15ff64e6",
+    "public/assets/hd/mage-fireball-pixellab-v1/atlas.json": "eb85af01ad1185c53e6f39c4e3987f9d914d985c6ef014d6e23ebf7e0d7fe9b6",
+    "public/assets/hd/mage-fireball-pixellab-v1/atlas.png": "c8de5f44e68c69db71a335a3172bd21671c0465e2a97dbed794b3368bad50af2",
+    "public/assets/hd/mage-meteor-pixellab-v1/atlas.json": "184b12ce790cdca1ab5abfb345a01891a56e6f923da1e919c6bae551fa252d94",
+    "public/assets/hd/mage-meteor-pixellab-v1/atlas.png": "a3d28cc98e69ba78a84bbc7c56d6e92432a4f3c7acee678b978691a21f35dad7",
+    "src/game/art/fireballManifestPixellab.json": "0cd3309b8986137c9699d145b98b5fd26e6929a8656953d9c2b8640df1e321c5",
+    "src/game/art/mageMeteorManifestPixellab.json": "600d47cea648ad4e0fec22222403a8b79d4d82efd4917913dba687d8f42d40b9"
+  },
+  "ultimateUnchanged": true,
+  "otherProtectedArtUnchanged": true
+}

@@ -1,0 +1,3327 @@
+{
+  "name": "Rune Warden · projectile / Blink rune review",
+  "runtimeIntegration": true,
+  "approval": "User accepted the PixelLab variants and asked for game integration and projectile speed +100%.",
+  "oldFrames": {
+    "sorcerer-1-right-walk-0": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-0": {
+      "frame": {
+        "x": 134,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-1": {
+      "frame": {
+        "x": 266,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-1": {
+      "frame": {
+        "x": 398,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-2": {
+      "frame": {
+        "x": 530,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-2": {
+      "frame": {
+        "x": 662,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-3": {
+      "frame": {
+        "x": 794,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-3": {
+      "frame": {
+        "x": 926,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-4": {
+      "frame": {
+        "x": 2,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-4": {
+      "frame": {
+        "x": 134,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-5": {
+      "frame": {
+        "x": 266,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-5": {
+      "frame": {
+        "x": 398,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-6": {
+      "frame": {
+        "x": 530,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-6": {
+      "frame": {
+        "x": 662,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-7": {
+      "frame": {
+        "x": 794,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-7": {
+      "frame": {
+        "x": 926,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-8": {
+      "frame": {
+        "x": 2,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-8": {
+      "frame": {
+        "x": 134,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-9": {
+      "frame": {
+        "x": 266,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-9": {
+      "frame": {
+        "x": 398,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-10": {
+      "frame": {
+        "x": 530,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-10": {
+      "frame": {
+        "x": 662,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-walk-11": {
+      "frame": {
+        "x": 794,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-walk-11": {
+      "frame": {
+        "x": 926,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-0": {
+      "frame": {
+        "x": 2,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-0": {
+      "frame": {
+        "x": 134,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-1": {
+      "frame": {
+        "x": 266,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-1": {
+      "frame": {
+        "x": 398,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-2": {
+      "frame": {
+        "x": 530,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-2": {
+      "frame": {
+        "x": 662,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-3": {
+      "frame": {
+        "x": 794,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-3": {
+      "frame": {
+        "x": 926,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-4": {
+      "frame": {
+        "x": 2,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-4": {
+      "frame": {
+        "x": 134,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-5": {
+      "frame": {
+        "x": 266,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-5": {
+      "frame": {
+        "x": 398,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-6": {
+      "frame": {
+        "x": 530,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-6": {
+      "frame": {
+        "x": 662,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-7": {
+      "frame": {
+        "x": 794,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-7": {
+      "frame": {
+        "x": 926,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-8": {
+      "frame": {
+        "x": 2,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-8": {
+      "frame": {
+        "x": 134,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-9": {
+      "frame": {
+        "x": 266,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-9": {
+      "frame": {
+        "x": 398,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-10": {
+      "frame": {
+        "x": 530,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-10": {
+      "frame": {
+        "x": 662,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-right-cast-11": {
+      "frame": {
+        "x": 794,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "sorcerer-1-left-cast-11": {
+      "frame": {
+        "x": 926,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-0": {
+      "frame": {
+        "x": 2,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-1": {
+      "frame": {
+        "x": 134,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-2": {
+      "frame": {
+        "x": 266,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-3": {
+      "frame": {
+        "x": 398,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-4": {
+      "frame": {
+        "x": 530,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-5": {
+      "frame": {
+        "x": 662,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-6": {
+      "frame": {
+        "x": 794,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-7": {
+      "frame": {
+        "x": 926,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-8": {
+      "frame": {
+        "x": 2,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-9": {
+      "frame": {
+        "x": 134,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-10": {
+      "frame": {
+        "x": 266,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-11": {
+      "frame": {
+        "x": 398,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-0": {
+      "frame": {
+        "x": 530,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-1": {
+      "frame": {
+        "x": 662,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-2": {
+      "frame": {
+        "x": 794,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-3": {
+      "frame": {
+        "x": 926,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-4": {
+      "frame": {
+        "x": 2,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-5": {
+      "frame": {
+        "x": 134,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-6": {
+      "frame": {
+        "x": 266,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-7": {
+      "frame": {
+        "x": 398,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-8": {
+      "frame": {
+        "x": 530,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-9": {
+      "frame": {
+        "x": 662,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-10": {
+      "frame": {
+        "x": 794,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-0": {
+      "frame": {
+        "x": 926,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-1": {
+      "frame": {
+        "x": 2,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-2": {
+      "frame": {
+        "x": 134,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-3": {
+      "frame": {
+        "x": 266,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-4": {
+      "frame": {
+        "x": 398,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-5": {
+      "frame": {
+        "x": 530,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-6": {
+      "frame": {
+        "x": 662,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-7": {
+      "frame": {
+        "x": 794,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-8": {
+      "frame": {
+        "x": 926,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-9": {
+      "frame": {
+        "x": 2,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-10": {
+      "frame": {
+        "x": 134,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-11": {
+      "frame": {
+        "x": 266,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-12": {
+      "frame": {
+        "x": 398,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-13": {
+      "frame": {
+        "x": 530,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-14": {
+      "frame": {
+        "x": 662,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-15": {
+      "frame": {
+        "x": 794,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-0": {
+      "frame": {
+        "x": 926,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-1": {
+      "frame": {
+        "x": 2,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-2": {
+      "frame": {
+        "x": 134,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-3": {
+      "frame": {
+        "x": 266,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-4": {
+      "frame": {
+        "x": 398,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-5": {
+      "frame": {
+        "x": 530,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-6": {
+      "frame": {
+        "x": 662,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-7": {
+      "frame": {
+        "x": 794,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-8": {
+      "frame": {
+        "x": 926,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-9": {
+      "frame": {
+        "x": 2,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-10": {
+      "frame": {
+        "x": 134,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-11": {
+      "frame": {
+        "x": 266,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "judgement-rune": {
+      "frame": {
+        "x": 398,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "blink-rune": {
+      "frame": {
+        "x": 530,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    }
+  },
+  "variants": [
+    {
+      "id": "current",
+      "label": "До rework",
+      "method": "Архивные игровые PNG",
+      "color": "#b4a5c7"
+    },
+    {
+      "id": "code",
+      "label": "Мой вариант",
+      "method": "Оригинальный пиксельный рисунок кодом",
+      "color": "#d7b580"
+    },
+    {
+      "id": "ai",
+      "label": "PixelLab AI",
+      "method": "Pro Flash / MiniMax / Animate Image",
+      "color": "#a5c9ba"
+    }
+  ],
+  "palette": [
+    "#2d2b40",
+    "#4d405e",
+    "#756187",
+    "#9d80ae",
+    "#bf9dc8",
+    "#ddd0df",
+    "#b87896"
+  ],
+  "jobs": [
+    {
+      "id": "projectile-model",
+      "tool": "create_image_pro_flash",
+      "jobId": "ab22d064-a59b-4bc4-8c33-2ec87e1832a8",
+      "chargedGenerations": 6,
+      "selected": true
+    },
+    {
+      "id": "blink-model",
+      "tool": "create_image_pro_flash",
+      "jobId": "ac085c4a-ae2d-48fa-95cc-0a75290f4658",
+      "chargedGenerations": 6,
+      "selected": true
+    },
+    {
+      "id": "projectile-flight",
+      "tool": "animate_image_pixminimax",
+      "jobId": "bfa1a776-3f1c-4f0a-9f4f-0a324492bcae",
+      "chargedGenerations": 1,
+      "selected": true
+    },
+    {
+      "id": "projectile-impact",
+      "tool": "animate_image_pixminimax",
+      "jobId": "231403ba-8744-49e7-bfaf-155897011d90",
+      "chargedGenerations": 1,
+      "selected": false
+    },
+    {
+      "id": "blink-idle",
+      "tool": "animate_image_pixminimax",
+      "jobId": "89bd945e-bd22-4687-821e-922ba6a8da99",
+      "chargedGenerations": 1,
+      "selected": false
+    },
+    {
+      "id": "blink-fade",
+      "tool": "animate_image_pixminimax",
+      "jobId": "e20b864e-3233-44c3-92b7-31070cc4a87b",
+      "chargedGenerations": 1,
+      "selected": true
+    },
+    {
+      "id": "blink-idle-soft",
+      "tool": "animate_image",
+      "jobId": "cf715e7f-085e-4721-8621-b67e5e28007a",
+      "chargedGenerations": 2,
+      "selected": true
+    },
+    {
+      "id": "projectile-impact-soft",
+      "tool": "animate_image",
+      "jobId": "48326e27-d56a-455c-9fed-cd7fc36d06d2",
+      "chargedGenerations": 2,
+      "selected": false
+    },
+    {
+      "id": "projectile-vanish",
+      "tool": "animate_image",
+      "jobId": "5d1df139-cfde-44cf-bf84-e2430e0adc70",
+      "chargedGenerations": 2,
+      "selected": false
+    }
+  ],
+  "chargedGenerations": 22,
+  "clips": {
+    "code-projectile-flight": {
+      "key": "code-projectile-flight",
+      "id": "projectile-flight",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "code/projectile-flight/00.png",
+          "sha256": "2c7dd811303fd18a8a8f726202bc8623f15bb3f81a06e94d6e864a31830a2cff",
+          "pixelSHA256": "d39e4b36d8fdaad8cf6cec0210df67d623afd83fe78f7041d408dc3859a1f5d7",
+          "visible": 544,
+          "edge": 0,
+          "centre": 100
+        },
+        {
+          "file": "code/projectile-flight/01.png",
+          "sha256": "cc75c86bc131e29ac05e8b42a1b69631aa263c373d6d077261a2ad3de4a1d894",
+          "pixelSHA256": "f944adc8b6179c5a0e8a3dcba510322fe0602a9bafa2d614c844c596fa26ca61",
+          "visible": 544,
+          "edge": 0,
+          "centre": 100
+        },
+        {
+          "file": "code/projectile-flight/02.png",
+          "sha256": "2f6b2a324dd4e3f5701fd79ad376a5dbba9067e0a099561c71025308ce77ad30",
+          "pixelSHA256": "747973e53262113aa8a35493ec3f706a825e97eec6256f994f645fbb74a1b174",
+          "visible": 540,
+          "edge": 0,
+          "centre": 100
+        },
+        {
+          "file": "code/projectile-flight/03.png",
+          "sha256": "cc75c86bc131e29ac05e8b42a1b69631aa263c373d6d077261a2ad3de4a1d894",
+          "pixelSHA256": "f944adc8b6179c5a0e8a3dcba510322fe0602a9bafa2d614c844c596fa26ca61",
+          "visible": 544,
+          "edge": 0,
+          "centre": 100
+        },
+        {
+          "file": "code/projectile-flight/04.png",
+          "sha256": "2c7dd811303fd18a8a8f726202bc8623f15bb3f81a06e94d6e864a31830a2cff",
+          "pixelSHA256": "d39e4b36d8fdaad8cf6cec0210df67d623afd83fe78f7041d408dc3859a1f5d7",
+          "visible": 544,
+          "edge": 0,
+          "centre": 100
+        },
+        {
+          "file": "code/projectile-flight/05.png",
+          "sha256": "2280bdca601a0383b474a60c02fa295511d536621b4685d486d7e48d9eeca10c",
+          "pixelSHA256": "439476444f74b4c4ae332dc79b0a538527dd5aa503cc415a4e8f996e0f5bbd40",
+          "visible": 544,
+          "edge": 0,
+          "centre": 92
+        }
+      ],
+      "sheet": "prepared/code-projectile-flight.png",
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "pivot": [
+        104,
+        64
+      ],
+      "size": 52,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gif": "prepared/code-projectile-flight.gif",
+      "aseprite": "prepared/code-projectile-flight.aseprite"
+    },
+    "code-projectile-impact": {
+      "key": "code-projectile-impact",
+      "id": "projectile-impact",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "code/projectile-impact/00.png",
+          "sha256": "fae05c16c61ae8554e24c08c6665db59607804448dfddd61a408a0ecfc981f8c",
+          "pixelSHA256": "46f3ef05eeb352572eacf40530084ec5f8caf0d22a98438aaf0cee6e876095a3",
+          "visible": 80,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/projectile-impact/01.png",
+          "sha256": "62181228bb8739dba2fe7dd562c516cc136ff3e319d21c49b6ea3fd261db08aa",
+          "pixelSHA256": "86ad38e32127057b01471ce8120c48e364f8dfe979b25239973880bbf6304ab2",
+          "visible": 128,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/projectile-impact/02.png",
+          "sha256": "d1128649cfed743e023d3453cb237983045b926d97d1c9ef25b73844f216d63d",
+          "pixelSHA256": "3b46891a4f76c3fca484dee19ff6f037eedac9ad68348071eade08bd191c9a86",
+          "visible": 192,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/projectile-impact/03.png",
+          "sha256": "ae3d02a1229c31246b350f3675633a3d57b46b97754786acd7f1dff1b5912457",
+          "pixelSHA256": "7beb9b306972092856376a4bcf4f46e17e412676980e66fede3f99bac8537924",
+          "visible": 40,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/projectile-impact/04.png",
+          "sha256": "9c40f689e5aebdf2088308de300cb80b5b8eb64399d4b4298fc537ed6f7a29da",
+          "pixelSHA256": "8f6b246bcd7d7e6387d51835f2a9d14acb8896250a23d851d10fc0af8a4be290",
+          "visible": 40,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/projectile-impact/05.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/code-projectile-impact.png",
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop": false,
+      "pivot": [
+        104,
+        64
+      ],
+      "size": 52,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gif": "prepared/code-projectile-impact.gif",
+      "aseprite": "prepared/code-projectile-impact.aseprite"
+    },
+    "code-blink-idle": {
+      "key": "code-blink-idle",
+      "id": "blink-idle",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 8,
+      "frames": [
+        {
+          "file": "code/blink-idle/00.png",
+          "sha256": "09f0fcf0691136b53d961a705da965769ef7dee463a863114e3c31c423f48959",
+          "pixelSHA256": "41406ea24c2008642873ddf1424f98fcb28b786b869321d524ef6967f020a242",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/01.png",
+          "sha256": "f461d2734cdaeaa8851cd63be1aa5dcad09bc5063c5582abf56f2b3651f082ed",
+          "pixelSHA256": "0d49700dbabff2182bb15216f9e403ae94141f1f84ff1755348723d7dfce7e85",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/02.png",
+          "sha256": "77a8b77072d5b1e0d8e2ac92cc7e8fd61675aa729acc0ff25acb8925b00309b9",
+          "pixelSHA256": "447f4c193a0aee46d20ce277223a0683f817c1267549840a98cbb42ad39cd390",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/03.png",
+          "sha256": "f70483bdb83dd698ed0e82ca20d1e8cf3503f5c42b655b1a2652aea7d19689c7",
+          "pixelSHA256": "769dfb4fe5e38e2d2aff433cdc1078f7df8c9ff10440833c257b11af2de55aaa",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/04.png",
+          "sha256": "a48c5acf3a60b1447f225921832cc7987d21c625feaa0593a01703e8b055af9a",
+          "pixelSHA256": "d7ad9eeca960f418e292e9093866bfc4e1438f73d6604d1e1791a82b752a16c8",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/05.png",
+          "sha256": "dc8c72f7c8e512d9a77488f20cb9103f104408a57e6c868f0e741b794d7a6392",
+          "pixelSHA256": "754128c66c56e09b712843f0976f0ea64bcd580b3a1ae09715abdff08b3429e2",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/06.png",
+          "sha256": "60eaa4ffd587702160314457c0303b4b25da6dc2062299a04d7b0dd050ad3de3",
+          "pixelSHA256": "ad17a34b19d42e62f830185b75cf1de2b153da7d70a5571a17586a367cd4d1ad",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-idle/07.png",
+          "sha256": "d8accf3ef70b4eb69bcba020b5bab273f049c7bdefe808f7374d9c10c4b9b665",
+          "pixelSHA256": "475893d5643c5d4ebe57e1c2e0a7024ec5e471fad88a39346f889e5374f9c8e6",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/code-blink-idle.png",
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": true,
+      "pivot": [
+        64,
+        64
+      ],
+      "size": 62,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "gif": "prepared/code-blink-idle.gif",
+      "aseprite": "prepared/code-blink-idle.aseprite"
+    },
+    "code-blink-fade": {
+      "key": "code-blink-fade",
+      "id": "blink-fade",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "code/blink-fade/00.png",
+          "sha256": "09f0fcf0691136b53d961a705da965769ef7dee463a863114e3c31c423f48959",
+          "pixelSHA256": "41406ea24c2008642873ddf1424f98fcb28b786b869321d524ef6967f020a242",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/01.png",
+          "sha256": "d6443f2c23729a0eff58545967726b83b664f0d5561ab9b979a7f5ec08fb64f5",
+          "pixelSHA256": "b0a20f0fd08be93c0dce3c87eb7547030cbd15d3b7de8b3ebbc2296f36d04b7b",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/02.png",
+          "sha256": "3b8a64864130d5e94400beafa2c71ca9f1534064a22654ab4ad70ff0bd0fbebd",
+          "pixelSHA256": "56be94f94fcbd0a069f58142cecb5f9cf88218d122f3102e3b1314991bf700b1",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/03.png",
+          "sha256": "b0984920e5eb6c602409db55f2736995e00002824a5e3ca28337370fae31cd65",
+          "pixelSHA256": "49745107b2b503d9634266631524a61e555d574330c3157d9c73ea46d6d23e4c",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/04.png",
+          "sha256": "8c4b8c03491d0e55dd24f69741d47fc81dd2e1e672c83e3b7a625f33924a0e1a",
+          "pixelSHA256": "2379ef3f0981c52a758b78f9881fd82f6ac3c7bcb6208bc56e13066bb386a46d",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/05.png",
+          "sha256": "ab4761893e3be87f6b6d071a5248bfa107faf2b319f858883d64b5b1728bd8b9",
+          "pixelSHA256": "a097a7569d06395f0e8b85740d851d1c613ecaeefd145ec5fa5ffe6758b035ba",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/06.png",
+          "sha256": "c60a5d592fbbbf3b71082ffc099af6f717c18eb7ce112078fa43f061ab01f167",
+          "pixelSHA256": "524fde465b3cf5b55895d1c81697c4ad8ce549001e9e848eeba396c0fda5f9f7",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/07.png",
+          "sha256": "0fe0cd34e3feedd7730aa474d38a8e97cf6b8689aeab24ca781763d1a0663bb2",
+          "pixelSHA256": "3d75bfb5e0c884669bd6cb7de69dbb58602b0692beee33e367237f408a8232fc",
+          "visible": 360,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "code/blink-fade/08.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/code-blink-fade.png",
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "loop": false,
+      "pivot": [
+        64,
+        64
+      ],
+      "size": 62,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gif": "prepared/code-blink-fade.gif",
+      "aseprite": "prepared/code-blink-fade.aseprite"
+    },
+    "ai-projectile-flight": {
+      "key": "ai-projectile-flight",
+      "id": "projectile-flight",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/projectile-flight/00.png",
+          "sha256": "35a9972bc9599e5267d587ba9ae8d57e5f491e975f63b48b3a6b6427a7d1c750",
+          "pixelSHA256": "839a44ce81a805da4885ce578d0a7be722be07eac8ba379760b2adf299251222",
+          "visible": 581,
+          "edge": 0,
+          "centre": 255
+        },
+        {
+          "file": "raw/projectile-flight/01.png",
+          "sha256": "7c0db79058d882cac5504bf2edc536deb5537d51f85ac1861e668892383957ed",
+          "pixelSHA256": "c10da6c9dbaa122f94921377ad7f158d0f41db8a6bfa792d70e3bae5db1520fa",
+          "visible": 579,
+          "edge": 0,
+          "centre": 247
+        },
+        {
+          "file": "raw/projectile-flight/02.png",
+          "sha256": "08ee929fc3b3689097511602854269bf7c184f7fc8608f414980710cbb473278",
+          "pixelSHA256": "500c37ea75c6b676357c101a294f455fec9a1f4770f25cb1995bd728e7ced1b2",
+          "visible": 581,
+          "edge": 0,
+          "centre": 234
+        },
+        {
+          "file": "raw/projectile-flight/03.png",
+          "sha256": "d7b6594a41ac87f5666fe5ee92f296628127c5f95e702cdb68ee83ce6ddcc6eb",
+          "pixelSHA256": "e92efe8c6610b300806cb15d45dcd71f18c35708c402714a77460930b28f319c",
+          "visible": 519,
+          "edge": 0,
+          "centre": 225
+        },
+        {
+          "file": "raw/projectile-flight/04.png",
+          "sha256": "16b60b601009c56f566758c34eccee5163dd33b38cab5850669c6b6a58a49552",
+          "pixelSHA256": "6da8ca6144c7c3f3b8664cff8ad710c84f494412788c0dddea4e60eb852aae55",
+          "visible": 516,
+          "edge": 0,
+          "centre": 237
+        },
+        {
+          "file": "raw/projectile-flight/05.png",
+          "sha256": "d7252407f24835acd3f112839149cc70ca968b6ed63fde8477a4e8a5e74e8638",
+          "pixelSHA256": "18810cd965b4f55b921cec639a223322d6db57997490a0ee44d872e5f2f2c9a8",
+          "visible": 526,
+          "edge": 0,
+          "centre": 231
+        },
+        {
+          "file": "raw/projectile-flight/06.png",
+          "sha256": "83f322f1bafb14f0138c7038a7adf822008a7241575e65edef70168c45602f3d",
+          "pixelSHA256": "a0e512bcf8722bdda852876430cd3b5e222c26e3be70c6b2642d392b026526e6",
+          "visible": 537,
+          "edge": 0,
+          "centre": 231
+        },
+        {
+          "file": "raw/projectile-flight/07.png",
+          "sha256": "aafbba199e233f30a81cc9f60c2815d75eda6076254fb924826dc5b240757359",
+          "pixelSHA256": "53204732f01804dba5864a586ecb21116bfbc1e3dd06c99e66faaf9f6e8c414c",
+          "visible": 565,
+          "edge": 0,
+          "centre": 236
+        },
+        {
+          "file": "raw/projectile-flight/08.png",
+          "sha256": "d1421f74b955d02094340952216f660f7baec971c26eeaa2b8059c666b24f62d",
+          "pixelSHA256": "28a486816247578834aa3fad6c219d66497295f5e5c191ba8f46345a1d70dace",
+          "visible": 584,
+          "edge": 0,
+          "centre": 256
+        }
+      ],
+      "sheet": "prepared/ai-projectile-flight.png",
+      "method": "PixelLab AI",
+      "sourceJobId": "bfa1a776-3f1c-4f0a-9f4f-0a324492bcae",
+      "loop": true,
+      "pivot": [
+        95,
+        61
+      ],
+      "size": 52,
+      "playbackIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "providerNormalizedHiddenRgbPixels": 15803,
+      "gif": "prepared/ai-projectile-flight.gif",
+      "aseprite": "prepared/ai-projectile-flight.aseprite"
+    },
+    "ai-blink-fade": {
+      "key": "ai-blink-fade",
+      "id": "blink-fade",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/blink-fade/00.png",
+          "sha256": "dadac00ec1e70573aa6bb9599a8d76a3ae36e716ce02a28aa10e8826b33a1886",
+          "pixelSHA256": "9799ade5f1a959d288ed0d9fc37e175387d2c7b0b1597c8a5a6f97735817d50c",
+          "visible": 1065,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/01.png",
+          "sha256": "bd9fd7b3aca7e2ec7b751a484bc04504768aa90f34877d63582cc783be1e4291",
+          "pixelSHA256": "4488eeeac77fa04117ea80ea88ea15deab55ef70938f3db8b619ba5d4dc8468a",
+          "visible": 842,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/02.png",
+          "sha256": "288a27432d3dc5532a4bdad106ed7ad2cb8e730ef4490ac797a22329d44795c4",
+          "pixelSHA256": "f0ad9fb923623a8a76071d21855aa982546a5d77112dabdd169e92a88eab1c30",
+          "visible": 502,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/03.png",
+          "sha256": "d126628ff59a4ef359a37bc69108c3d60d77fc13a2938eb271625eb2c25d279e",
+          "pixelSHA256": "36c432f3fac0df5ac17186fabe4d2878f9c5c841e1356e0aa75ff01cf0b3e3ac",
+          "visible": 150,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/04.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/05.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/06.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/07.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-fade/08.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/ai-blink-fade.png",
+      "method": "PixelLab AI",
+      "sourceJobId": "e20b864e-3233-44c3-92b7-31070cc4a87b",
+      "loop": false,
+      "pivot": [
+        64,
+        64
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "providerNormalizedHiddenRgbPixels": 15319,
+      "gif": "prepared/ai-blink-fade.gif",
+      "aseprite": "prepared/ai-blink-fade.aseprite"
+    },
+    "ai-blink-idle": {
+      "key": "ai-blink-idle",
+      "id": "blink-idle",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/blink-idle-soft/00.png",
+          "sha256": "966c4c2cb5f39e9be3d4471ac60c21a03d2d33bae88e3f46b58d54b332e46d25",
+          "pixelSHA256": "744698edfb57fb4bf604dd11059f9459696cfdeaec03007192d3a38643a6c418",
+          "visible": 1065,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/01.png",
+          "sha256": "15c11cbbd00296ccd2a52a949053f72262e5c16753a2286142f530c9976c00c8",
+          "pixelSHA256": "c67c4ccdcbcf727774a98f3641507bc1a69008c4db9bfd15e6aeb28cb7e2039c",
+          "visible": 1020,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/02.png",
+          "sha256": "5db43e3fa69c8c32b5b9b6d2ec74861210a0eca9b399c24f22d8a406895f7147",
+          "pixelSHA256": "edc3edc02961c6368dcac1df5ced2b54cb0eb85541053748ba870c19808c98b8",
+          "visible": 929,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/03.png",
+          "sha256": "d044a8699a7c58db8cd892e63cf557de88fab2fdedd2af0539b0e3b005d069c3",
+          "pixelSHA256": "90a2a24d8a5919a9e707a7d79210993af4c4fdd9d9df9be1464ba5cdef2e81e4",
+          "visible": 967,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/04.png",
+          "sha256": "16c3667df6b5c405b72f796bf9a0a43b19bfaefc4bbc44c71d379f810d868eed",
+          "pixelSHA256": "969384695ef8f8f27411040118bfbd5f33afebdb3ebc7bb2c242cb87d1ff24ce",
+          "visible": 956,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/05.png",
+          "sha256": "554249bd35fb588896e21879ccf39bb2126f66a39ecdd37583cc60a545b2b25c",
+          "pixelSHA256": "b16c503a6898155dd0a48a9641186a295518c7293922b38ea9d530a2269501bc",
+          "visible": 977,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/06.png",
+          "sha256": "39afc041121506de1acadada28f0b8049adf26149b80c1bc07dbaaada62920a0",
+          "pixelSHA256": "61601711c2980dd8e2a6c9ee9166707c92a601e35095dfdd1e961ea7be5c9514",
+          "visible": 985,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/07.png",
+          "sha256": "ad9cbf0f6801f5906fc71afb27ff00e51963abb7a2e29444687b7f274b1467fa",
+          "pixelSHA256": "fd477332b587101197ea2acaf1a106e4a16b3538025cfcfe30b5471795dbb360",
+          "visible": 1003,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "raw/blink-idle-soft/08.png",
+          "sha256": "87503c10f311ff71ef0d35ecf6ac0a3469a7b1b9abb9f112ebd0b5b4dbe04183",
+          "pixelSHA256": "1789692dc5d6da7f4d7ee60a59caeac2a7cf45f92727dbcaf0d086e94783bdac",
+          "visible": 1060,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/ai-blink-idle.png",
+      "method": "PixelLab AI",
+      "sourceJobId": "cf715e7f-085e-4721-8621-b67e5e28007a",
+      "loop": true,
+      "pivot": [
+        64,
+        64
+      ],
+      "size": 62,
+      "playbackIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "providerNormalizedHiddenRgbPixels": 0,
+      "gif": "prepared/ai-blink-idle.gif",
+      "aseprite": "prepared/ai-blink-idle.aseprite"
+    },
+    "ai-projectile-impact": {
+      "key": "ai-projectile-impact",
+      "id": "projectile-impact",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 1,
+      "frames": [
+        {
+          "file": "raw/projectile-model/00.png",
+          "sha256": "453aa8a563676b7fd7820840c3e9ed22a785049a460f81187af4fb4e137671f1",
+          "pixelSHA256": "c48294597c513bd157a373cb13fd4131403158d05d7004fd09562fef6c13daa0",
+          "visible": 581,
+          "edge": 0,
+          "centre": 255
+        }
+      ],
+      "sheet": "prepared/ai-projectile-impact.png",
+      "method": "PixelLab source PNG + preview opacity fade",
+      "opacityFade": true,
+      "loop": false,
+      "pivot": [
+        95,
+        61
+      ],
+      "size": 52,
+      "playbackIndices": [
+        0
+      ],
+      "durationsMs": [
+        540
+      ]
+    },
+    "current-projectile-flight": {
+      "key": "current-projectile-flight",
+      "id": "projectile-flight",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 12,
+      "frames": [
+        {
+          "file": "current/projectile-flight/00.png",
+          "sha256": "9cd003cf227df22e5c073f18371bd1d248219e9cb7d60725c920c05e694fc45d",
+          "pixelSHA256": "584261fa9b7bb7e3365b3551a7ef04805e70b33dd4a2983c4d0a8425c055e34c",
+          "visible": 1301,
+          "edge": 0,
+          "centre": 302
+        },
+        {
+          "file": "current/projectile-flight/01.png",
+          "sha256": "422dc8c57b3ca4a9df4a1e87d0bd23a1ebf47c191a4c4b89d896ee1880b74796",
+          "pixelSHA256": "c0bcfe5e18c72a1a3e5cba873e54139e31701d704e30f9aac331b2ffe944b61f",
+          "visible": 1238,
+          "edge": 0,
+          "centre": 285
+        },
+        {
+          "file": "current/projectile-flight/02.png",
+          "sha256": "8d2ab11770564432b2b969c1d57af59dbe93ed8d0f2feaaa9265597bc973210a",
+          "pixelSHA256": "01138a26f3f82a86a5bc87034dbcdc50093a7429e0be8fd8c2f4031630411d25",
+          "visible": 1317,
+          "edge": 0,
+          "centre": 326
+        },
+        {
+          "file": "current/projectile-flight/03.png",
+          "sha256": "9812d72f7ccfe2f625e13457c1a651c10fffd323f78a8c5a5993bd055764bb45",
+          "pixelSHA256": "0ac436ce89e2deb8aea397f949856ff19f76a148403430943fe2c8d65b8ef6d4",
+          "visible": 1356,
+          "edge": 0,
+          "centre": 319
+        },
+        {
+          "file": "current/projectile-flight/04.png",
+          "sha256": "7074efd11abaafc12413a88f57afed358238a332e9e7d7df23cb80ee57ebae16",
+          "pixelSHA256": "a8b42301d1779edc2faab1c1832586971396ad8e823ea581d307deb2ebfa1102",
+          "visible": 1318,
+          "edge": 0,
+          "centre": 325
+        },
+        {
+          "file": "current/projectile-flight/05.png",
+          "sha256": "d052126e751a1acf0d29c884b989a7d6e04bf5587c1e01f6083809bd3956399c",
+          "pixelSHA256": "bbd997b9da161003be4943bef6a5b6558318671f937374107c60caf0229678d5",
+          "visible": 1317,
+          "edge": 0,
+          "centre": 322
+        },
+        {
+          "file": "current/projectile-flight/06.png",
+          "sha256": "216ae400862146952eba5a029d0f2d68dbeb62e69ad9995f32cb3081aba2d4e9",
+          "pixelSHA256": "ac0de3329df5738afc6291e9b7ae5797498e514e65036586d23c7ea83903ad18",
+          "visible": 1301,
+          "edge": 0,
+          "centre": 316
+        },
+        {
+          "file": "current/projectile-flight/07.png",
+          "sha256": "39788e696a4a072d503b4a897cbcbe8dc4c67e4968585f9212aafb1f45c219a0",
+          "pixelSHA256": "1d77b4004d090e3da0c3a9ac6334b129f26bbe9032e1ecffeb40b7e13c5cd7ed",
+          "visible": 1226,
+          "edge": 0,
+          "centre": 309
+        },
+        {
+          "file": "current/projectile-flight/08.png",
+          "sha256": "113366754462d71a275f1d916f6aedf0b72694015fdb11da161caa26cda1f310",
+          "pixelSHA256": "1c8dd8094aa41505316680498a917e1db83e707ec7b3960e8446656538963984",
+          "visible": 1254,
+          "edge": 0,
+          "centre": 287
+        },
+        {
+          "file": "current/projectile-flight/09.png",
+          "sha256": "3a148c8a84e74273c7e9a8ad61c9a8242efd5459ac8922a3b3e79c33052f768c",
+          "pixelSHA256": "666fce97f87a125f912d176194d806e471c7442bcf398623d634e60592234da8",
+          "visible": 1276,
+          "edge": 0,
+          "centre": 289
+        },
+        {
+          "file": "current/projectile-flight/10.png",
+          "sha256": "34a0496e3c040e2e411f91471be385dab441e7ee98016658c7c04d3de227b109",
+          "pixelSHA256": "b4a3254d0868bfa664a246cc0c3738de737cfec4639619c830299b27f0f38188",
+          "visible": 1386,
+          "edge": 0,
+          "centre": 344
+        },
+        {
+          "file": "current/projectile-flight/11.png",
+          "sha256": "05fea07817ca30fb195ababd0faab137d82701930d9bbcdfddc6528242520aa9",
+          "pixelSHA256": "3e79b346fd30b83f99a1fed0cc32b41a36d748f403b15813f020e913158d870c",
+          "visible": 220,
+          "edge": 0,
+          "centre": 14
+        }
+      ],
+      "sheet": "prepared/current-projectile-flight.png",
+      "method": "Current Rune Warden atlas",
+      "loop": true,
+      "size": 52,
+      "pivot": [
+        104,
+        64
+      ],
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ]
+    },
+    "current-projectile-impact": {
+      "key": "current-projectile-impact",
+      "id": "projectile-impact",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 11,
+      "frames": [
+        {
+          "file": "current/projectile-impact/00.png",
+          "sha256": "9094b1fe9de9806f42173cee4df660302f195e2cb1f4f175347d89ad81f2362d",
+          "pixelSHA256": "1b918798e73823dd0d2fe031451319b46c2ff023feab1aa34560efb5bce98d1f",
+          "visible": 1683,
+          "edge": 0,
+          "centre": 339
+        },
+        {
+          "file": "current/projectile-impact/01.png",
+          "sha256": "592402eda05f771a125a570a0b87729c194191108b6122fdcb000a7eb77fbccb",
+          "pixelSHA256": "3d518158df8290e8ccff120ead26b59a96b9fa52b96a30f81d27a906905644d2",
+          "visible": 1790,
+          "edge": 0,
+          "centre": 321
+        },
+        {
+          "file": "current/projectile-impact/02.png",
+          "sha256": "cfea2368afc1cbe76833bd168e24dade4e644d141edfab67096966715395e2ef",
+          "pixelSHA256": "e461bc118bc02c56822d1d8b973d551f7c4d514c9700ccf87a7020696d2c190a",
+          "visible": 1482,
+          "edge": 0,
+          "centre": 159
+        },
+        {
+          "file": "current/projectile-impact/03.png",
+          "sha256": "b143493c04c6d2c93362594a4ec495001907a99e266b4ce4b617c72b33c4e5f0",
+          "pixelSHA256": "dbd77c40ca23349dc2e8174503c4d01776c757604e2b96ffddad260a256b1598",
+          "visible": 629,
+          "edge": 0,
+          "centre": 21
+        },
+        {
+          "file": "current/projectile-impact/04.png",
+          "sha256": "33101cf807788e2a2806f955c5e54e810b5f2e43779a83fb3614d42af41d1dce",
+          "pixelSHA256": "2ba5d8da45a744acf6bccc6d811835517afaaf1f743debf4684993679d46491e",
+          "visible": 761,
+          "edge": 0,
+          "centre": 56
+        },
+        {
+          "file": "current/projectile-impact/05.png",
+          "sha256": "18840a6dd573a195830ef8009cb63787e82a0277cfba2eebed0ec20c2fb8ef01",
+          "pixelSHA256": "3c656bf9862ba2bc22d6d1808af0e94c3e9c0d2c26557154d53921540f37fea7",
+          "visible": 413,
+          "edge": 0,
+          "centre": 8
+        },
+        {
+          "file": "current/projectile-impact/06.png",
+          "sha256": "35a007f04ccf44f5fe060609d5f14c27715a14289944e749e6f15f52b1e7b0b6",
+          "pixelSHA256": "76aa967f15aa0b3e198115d7fe7d386b546b002a77824029efb24bf69bc8cdde",
+          "visible": 528,
+          "edge": 0,
+          "centre": 6
+        },
+        {
+          "file": "current/projectile-impact/07.png",
+          "sha256": "1e91d35e2d4abb6172babf1409c549ea7138612bffd128f92cc444529d796513",
+          "pixelSHA256": "b64b7f086a6c46efcae6a705e13122033352dfb6ba328e349d1634dc706d31cd",
+          "visible": 3778,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/projectile-impact/08.png",
+          "sha256": "b5cb0d5518c2154f6786200939b610f9b9a75bbf383ae1b6853a977fe3548797",
+          "pixelSHA256": "7daaef423fa7274738edcc8916f6a8d8b144a77c502e919db9f4f10920e12330",
+          "visible": 648,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "current/projectile-impact/09.png",
+          "sha256": "11c6903115e80b61d0123485b09f9bf97b2028a0b15398906b813b6b698de065",
+          "pixelSHA256": "519929376a5c76b33b0d1131421318d3049ef42b0a5904e6ac7493a48a7e3437",
+          "visible": 147,
+          "edge": 0,
+          "centre": 0
+        },
+        {
+          "file": "current/projectile-impact/10.png",
+          "sha256": "36e68f61ce072f675fcc98b9f3fe7ae09d540b0b65063fd397e6cd4884c67241",
+          "pixelSHA256": "d13e1892d7a2203145a6369b30702b8907463e5e167fe58a672221c15a13582d",
+          "visible": 14,
+          "edge": 0,
+          "centre": 0
+        }
+      ],
+      "sheet": "prepared/current-projectile-impact.png",
+      "method": "Current Rune Warden atlas",
+      "loop": false,
+      "size": 52,
+      "pivot": [
+        104,
+        64
+      ],
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ]
+    },
+    "current-blink-idle": {
+      "key": "current-blink-idle",
+      "id": "blink-idle",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 1,
+      "frames": [
+        {
+          "file": "current/blink-idle/00.png",
+          "sha256": "4688d6e094ed34497099c7061e3e9f78a7c9accb5a0496f6897f8459ac39ab9b",
+          "pixelSHA256": "ea4474da74b0211f3f92df825f2034086611712bc8b8092c5c2bc039f88feb6f",
+          "visible": 11028,
+          "edge": 0,
+          "centre": 357
+        }
+      ],
+      "sheet": "prepared/current-blink-idle.png",
+      "method": "Current Rune Warden atlas",
+      "loop": true,
+      "size": 62,
+      "pivot": [
+        64,
+        64
+      ],
+      "playbackIndices": [
+        0
+      ],
+      "durationsMs": [
+        720
+      ]
+    },
+    "current-blink-fade": {
+      "key": "current-blink-fade",
+      "id": "blink-fade",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 12,
+      "frames": [
+        {
+          "file": "current/blink-fade/00.png",
+          "sha256": "033c643026698b7dbaddededdc73ba410d38c5e5ed869990525eaa74b711c106",
+          "pixelSHA256": "e4302b1137e89a414be43636d233ff6a0258f5b0d240cab8c4251ba0e6c44bfd",
+          "visible": 11020,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/01.png",
+          "sha256": "d26763e34b102b75f4bec5e7465640cad7280821883c871be93196b731339683",
+          "pixelSHA256": "6c359a757da8dd79843c0154a0ef872010c3a2aead20d46d3c42baa69af0ca30",
+          "visible": 11023,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/02.png",
+          "sha256": "94b13ea0fc9d77e6b80451f093e450d9819d7b3245c5a2b0e30618939f196047",
+          "pixelSHA256": "856fae89efaff33b8255f74b528f9e840b8466bb734a095846db9a08c62ea157",
+          "visible": 11022,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/03.png",
+          "sha256": "5ed45c6c949efc4005e18ff83a2ab739a68ba64845c60c7881b6e2ca5a755285",
+          "pixelSHA256": "be9c09d8afb730e383209de766596c766613cf0e7bea6e5c423d9e001baa9338",
+          "visible": 11022,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/04.png",
+          "sha256": "c2ba8c6ed6e8a9e326a5483e53844b91cdc3558064db9ce200b4f4e70362a29a",
+          "pixelSHA256": "7fb43ed791bda362d4f1b501d5c5b4b81ccbe6f4089480f70217166683b9f197",
+          "visible": 11012,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/05.png",
+          "sha256": "12e3749a60a3e89ba61158de33cc3846c890d4df60fa11f6c5a72ab285423db6",
+          "pixelSHA256": "c1c7ac7fe60ea38044cdf024256ef50f9a7d31dfa8b223b32037466992eb36e9",
+          "visible": 11021,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/06.png",
+          "sha256": "dc0d5aafcc52c9acfe74177c5d9a789d0f12b12ce8c6feec6400d03cc2893ed5",
+          "pixelSHA256": "ccc71feaa692e25eb2d33952d5a7c4745fe6ec1d49579f3ae488e3d3ebb26a85",
+          "visible": 11021,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/07.png",
+          "sha256": "d84552bfb0d18d87009cfb0255f96232f33e00233f50a5e0f04295088a993eee",
+          "pixelSHA256": "e8c8faf439d768e1f67dedf588dec416f379595412163a944153f5d3ce8b22dd",
+          "visible": 11021,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/08.png",
+          "sha256": "e553490983e220035f7cb2a74a72421fed66af76081235cf65ac21b39a981a2c",
+          "pixelSHA256": "77f57ebc24a45f6cbcb73755f6c2ab2c24012c995ac92454547d0d61fdba72c6",
+          "visible": 10991,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/09.png",
+          "sha256": "9b5a53408a788c8435508ca73d90e61c0a3b5e154cf92fe3c9fd2af4a3980cd2",
+          "pixelSHA256": "6ddd8aaac848fa6287f9683943056f0d4c1dba11d9b45cbd04527745e7f8f1d2",
+          "visible": 11000,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/10.png",
+          "sha256": "70be41d1a5c1009f5f7ef15fb577788788a637f1d44bc040bbddafcdc13b07e6",
+          "pixelSHA256": "7cd4afd6b1c72c37ecb0ae935d43b9aed10db1e11b85c2b90b5ceb79f8879a91",
+          "visible": 11003,
+          "edge": 0,
+          "centre": 357
+        },
+        {
+          "file": "current/blink-fade/11.png",
+          "sha256": "a7999e08b6ff3439fa4d1ac736a1a541a5812e22d8efd9b446c9bd71193c6225",
+          "pixelSHA256": "07205d9cd729cf7d090560fc534b85a07978ac6fd777b00bad48ec3fa17c05bc",
+          "visible": 10997,
+          "edge": 0,
+          "centre": 357
+        }
+      ],
+      "sheet": "prepared/current-blink-fade.png",
+      "method": "Current Rune Warden atlas",
+      "loop": false,
+      "size": 62,
+      "pivot": [
+        64,
+        64
+      ],
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ]
+    }
+  },
+  "notes": [
+    "Initial preview runtime verification is historical; approved AI variants are integrated when runtimeIntegration=true.",
+    "AI pixels are preserved; local code-art is independently authored.",
+    "AI projectile pivot95,61 measured from source; old/local pivot104,64. No per-frame fitting.",
+    "Blink appearance reverses its own fade; demo timeline is illustrative, not a gameplay change."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "imagegen": {
+    "calls": 1,
+    "master": "01-imagegen-master.png",
+    "prompt": "prompt.txt",
+    "seedAvailable": false
+  },
+  "pixelLab": {
+    "generationCalls": 1,
+    "tool": "image_to_pixelart",
+    "request": {
+      "image_url": "upload:7a9517d4-cf07-4d13-9bc5-4a0b155132aa",
+      "faithful": true,
+      "init_image_strength": 150,
+      "output_width": 128,
+      "output_height": 128,
+      "seed": 260110611
+    },
+    "receipt": {
+      "content": [
+        {
+          "type": "text",
+          "text": "id: 054571a2-6600-48d2-9aac-813db33393a6\njob_id: 054571a2-6600-48d2-9aac-813db33393a6\nsource: 1536x1536px\noutput: 128x128px\nfaithful: True\ninit_image_strength: 150\nseed: 260110611\nasset_id: 0cf9d07d-05fb-561e-b711-c1a382da853d\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~20-60s)\n\nhint: get_image(job_id=\"054571a2-6600-48d2-9aac-813db33393a6\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/054571a2-6600-48d2-9aac-813db33393a6/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+        }
+      ],
+      "isError": false
+    },
+    "result": {
+      "job_id": "054571a2-6600-48d2-9aac-813db33393a6",
+      "status": "completed",
+      "frames": 1,
+      "download_url": "https://api.pixellab.ai/mcp/images/054571a2-6600-48d2-9aac-813db33393a6/download",
+      "download_urls": [
+        "https://api.pixellab.ai/mcp/images/054571a2-6600-48d2-9aac-813db33393a6/download"
+      ],
+      "asset": {
+        "id": "0cf9d07d-05fb-561e-b711-c1a382da853d",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 1
+    },
+    "balanceBefore": 37,
+    "balanceAfter": 36,
+    "workbench": {
+      "sourceImageId": "e3d0e309-12fc-4d96-a6a0-d01249452da8",
+      "editedImageId": "cf6c6968-85b9-4ffd-a09a-cdbfe01a14df",
+      "paidGenerations": 0,
+      "changes": [
+        {
+          "operation": "flood_fill",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "seed": [
+            0,
+            0
+          ],
+          "expected": "#818282ff",
+          "color": "#00000000",
+          "reason": "Remove the observed flat opaque conversion background."
+        },
+        {
+          "operation": "patch_pixels",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "pixels": [
+            [
+              80,
+              33,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              71,
+              87,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              71,
+              88,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              71,
+              89,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              72,
+              89,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              70,
+              90,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              71,
+              90,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              72,
+              90,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              70,
+              91,
+              "#818282ff",
+              "#00000000"
+            ],
+            [
+              71,
+              91,
+              "#818282ff",
+              "#00000000"
+            ]
+          ],
+          "reason": "Remove the same background color trapped in enclosed leg and sword gaps."
+        },
+        {
+          "operation": "map_colors",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "region": [
+            0,
+            0,
+            127,
+            127
+          ],
+          "colors": {
+            "#463946": "#3d323e",
+            "#221924": "#281f29",
+            "#302630": "#281f29",
+            "#20151b": "#19131b",
+            "#170f15": "#19131b",
+            "#362c39": "#3d323e",
+            "#110b12": "#0d080d",
+            "#130d12": "#0d080d",
+            "#120e16": "#19131b",
+            "#4c3232": "#3d323e",
+            "#3d2a2e": "#432423",
+            "#5a3f41": "#68423d",
+            "#2e1c20": "#281f29",
+            "#a48687": "#93899a",
+            "#0e0a12": "#0d080d",
+            "#856767": "#936458",
+            "#7a5855": "#81524a",
+            "#130a0d": "#0d080d",
+            "#6b4c4b": "#68423d",
+            "#a99fae": "#bca7af",
+            "#e66c14": "#ee5e09",
+            "#7e7373": "#817687",
+            "#864a37": "#81524a",
+            "#06060a": "#0d080d",
+            "#9d5436": "#aa491b",
+            "#ba5f30": "#cf5a1a",
+            "#7a382b": "#91381b",
+            "#d36e20": "#cf5a1a",
+            "#7a8095": "#817687",
+            "#b0390f": "#aa491b",
+            "#4b1a14": "#432423",
+            "#ccaba9": "#bca7af",
+            "#e6e0e5": "#d5ced8",
+            "#c6866d": "#b17e6c",
+            "#dba038": "#f99422",
+            "#ffc97c": "#fecd4f",
+            "#ffdf80": "#fecd4f"
+          },
+          "reason": "Merge near-duplicate shades onto 32 existing colors without dithering or changing silhouette."
+        }
+      ],
+      "exteriorErased": 13228,
+      "enclosedErased": 10,
+      "recolored": 1698
+    }
+  },
+  "candidateCount": 2,
+  "main": "../ash-warden-base-final.png",
+  "alternative": "../ash-warden-base-alt.png",
+  "recommendation": "main: sharper pixel clusters and clearer material contrast; alt: softer direct master conversion",
+  "noAnimationOrDirections": true
+}

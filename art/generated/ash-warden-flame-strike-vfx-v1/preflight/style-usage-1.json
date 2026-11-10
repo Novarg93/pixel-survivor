@@ -1,0 +1,34 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"prompt_style\":\"rd_animation__vfx\",\"style_found\":true,\"source\":\"public_selector\",\"public_read_supported\":true,\"is_user_style\":false,\"require_input_image\":false,\"supports_reference_images\":false,\"min_width\":24,\"max_width\":96,\"min_height\":24,\"max_height\":96,\"max_number_of_images\":1,\"example_prompt\":\"Example: A magic blue portal glowing with intricate swirling patterns and emitting sparks\",\"guidance\":[\"Use `input_image` for the main image being edited, animated, varied, or used as the required starting frame.\",\"Use `reference_images` for extra per-inference guidance images only when the selected public style supports them.\",\"Use `style_reference_images` only on create_user_style or update_user_style when defining a custom style.\",\"This style does not support per-inference `reference_images`.\"],\"limitations\":[]}"
+      }
+    ],
+    "structuredContent": {
+      "prompt_style": "rd_animation__vfx",
+      "style_found": true,
+      "source": "public_selector",
+      "public_read_supported": true,
+      "is_user_style": false,
+      "require_input_image": false,
+      "supports_reference_images": false,
+      "min_width": 24,
+      "max_width": 96,
+      "min_height": 24,
+      "max_height": 96,
+      "max_number_of_images": 1,
+      "example_prompt": "Example: A magic blue portal glowing with intricate swirling patterns and emitting sparks",
+      "guidance": [
+        "Use `input_image` for the main image being edited, animated, varied, or used as the required starting frame.",
+        "Use `reference_images` for extra per-inference guidance images only when the selected public style supports them.",
+        "Use `style_reference_images` only on create_user_style or update_user_style when defining a custom style.",
+        "This style does not support per-inference `reference_images`."
+      ],
+      "limitations": []
+    },
+    "isError": false
+  }
+}

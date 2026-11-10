@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"created_at\":1794067109,\"credit_cost\":0,\"balance_cost\":0.07,\"output_images\":[],\"base64_images\":[],\"output_urls\":[],\"model\":\"check_cost\",\"remaining_credits\":0,\"remaining_balance\":7.489999999999995,\"would_use\":\"balance\",\"balance_cost_if_balance\":0.07,\"resolved_prompt_style\":\"rd_animation__vfx\",\"used_input_image\":false,\"reference_images_count\":0,\"used_extra_input_image\":false,\"used_input_palette\":false,\"used_strength\":false,\"effective_timeout_seconds\":180.0}"
+    }
+  ],
+  "structuredContent": {
+    "created_at": 1794067109,
+    "credit_cost": 0,
+    "balance_cost": 0.07,
+    "output_images": [],
+    "base64_images": [],
+    "output_urls": [],
+    "model": "check_cost",
+    "remaining_credits": 0,
+    "remaining_balance": 7.489999999999995,
+    "would_use": "balance",
+    "balance_cost_if_balance": 0.07,
+    "resolved_prompt_style": "rd_animation__vfx",
+    "used_input_image": false,
+    "reference_images_count": 0,
+    "used_extra_input_image": false,
+    "used_input_palette": false,
+    "used_strength": false,
+    "effective_timeout_seconds": 180
+  },
+  "isError": false
+}

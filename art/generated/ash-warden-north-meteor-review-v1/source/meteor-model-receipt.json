@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"14a36da0-e28c-4823-af66-f85652a16302\",\n  \"image_id\": \"f9112ec3-198f-5ac7-b2d6-ad018ecc5f11\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"f9112ec3-198f-5ac7-b2d6-ad018ecc5f11\",\n  \"job_id\": \"14a36da0-e28c-4823-af66-f85652a16302\",\n  \"description\": \"Single isolated BOSS METEOR sprite for Ash Warden, low top-down fantasy pixel-art game. An irregular chunky dark charcoal basalt rock with THREE broad readable stone facets, 34 pixels wide, centered at x58 y87 on a 128x128 transparent canvas. Two short warm orange molten fissures and a small pale gold leading edge. A tapered orange/copper flame tail points UP and slightly RIGHT from the rock toward x82 y28, so the rock falls DOWN-LEFT at about 67 degrees below horizontal. Three broad separated flame tongues, dark gaps, only two tiny ember pixels. Restrained flat palette charcoal #302d30, ash #5e5552, muted rust #99513a, copper #cf6839, amber #ee9d51, tiny pale gold #f1c97b. Bold silhouette, coarse clean pixel clusters, 2-3 shade levels. Heavier and larger than a mage projectile but not a giant screen-filling explosion. Keep clear margins. No magic circle, no ground, no smoke cloud, no text, no blur, no bloom, no photorealistic texture.\",\n  \"seed\": 110104,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/14a36da0-e28c-4823-af66-f85652a16302/download\"\n}\nPoll get_image(job_id=\"14a36da0-e28c-4823-af66-f85652a16302\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "14a36da0-e28c-4823-af66-f85652a16302",
+    "image_id": "f9112ec3-198f-5ac7-b2d6-ad018ecc5f11",
+    "status": "processing",
+    "source_image_id": "f9112ec3-198f-5ac7-b2d6-ad018ecc5f11",
+    "job_id": "14a36da0-e28c-4823-af66-f85652a16302",
+    "description": "Single isolated BOSS METEOR sprite for Ash Warden, low top-down fantasy pixel-art game. An irregular chunky dark charcoal basalt rock with THREE broad readable stone facets, 34 pixels wide, centered at x58 y87 on a 128x128 transparent canvas. Two short warm orange molten fissures and a small pale gold leading edge. A tapered orange/copper flame tail points UP and slightly RIGHT from the rock toward x82 y28, so the rock falls DOWN-LEFT at about 67 degrees below horizontal. Three broad separated flame tongues, dark gaps, only two tiny ember pixels. Restrained flat palette charcoal #302d30, ash #5e5552, muted rust #99513a, copper #cf6839, amber #ee9d51, tiny pale gold #f1c97b. Bold silhouette, coarse clean pixel clusters, 2-3 shade levels. Heavier and larger than a mage projectile but not a giant screen-filling explosion. Keep clear margins. No magic circle, no ground, no smoke cloud, no text, no blur, no bloom, no photorealistic texture.",
+    "seed": 110104,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/14a36da0-e28c-4823-af66-f85652a16302/download"
+  },
+  "isError": false
+}

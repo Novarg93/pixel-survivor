@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "status": "in-progress",
+  "models": [
+    {
+      "enemy": "charger",
+      "variant": "a",
+      "name": "Thornwood Juggernaut",
+      "seed": 83101,
+      "design": "An ancient enormous bipedal forest juggernaut, NOT a knight. Massive barrel chest of charred wood, layered natural bark armor, wide asymmetrical thorn-grown shoulders, thick root forearms ending in blunt claws, two stout trunk legs, a small menacing face recessed into its trunk with two dim amber eyes. Huge forward-driving shoulder mass, long thick thorns swept backward. Burnt umber wood, coal bark, restrained desaturated moss, bone thorns. Grounded neutral braced posture, both large arms readable, powerful feet.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient enormous bipedal forest juggernaut, NOT a knight. Massive barrel chest of charred wood, layered natural bark armor, wide asymmetrical thorn-grown shoulders, thick root forearms ending in blunt claws, two stout trunk legs, a small menacing face recessed into its trunk with two dim amber eyes. Huge forward-driving shoulder mass, long thick thorns swept backward. Burnt umber wood, coal bark, restrained desaturated moss, bone thorns. Grounded neutral braced posture, both large arms readable, powerful feet.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient enormous bipedal forest juggernaut, NOT a knight. Massive barrel chest of charred wood, layered natural bark armor, wide asymmetrical thorn-grown shoulders, thick root forearms ending in blunt claws, two stout trunk legs, a small menacing face recessed into its trunk with two dim amber eyes. Huge forward-driving shoulder mass, long thick thorns swept backward. Burnt umber wood, coal bark, restrained desaturated moss, bone thorns. Grounded neutral braced posture, both large arms readable, powerful feet.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83101,
+        "upload_outputs": true
+      }
+    },
+    {
+      "enemy": "charger",
+      "variant": "b",
+      "name": "Armored Briar Beast",
+      "seed": 83102,
+      "design": "A unique low-slung QUADRUPED dark forest briar beast, NOT a bull, boar, wolf or ordinary animal. Broad wedge-shaped heavy armored head, blunt crooked thorn horns, a massive chest and two enormous armored forelimbs, two smaller sturdy hind legs. Segmented blackened natural armor, bristled briar ridges along the back, deep rust-brown bark, cold slate plates and sparse ochre highlights. Low center of gravity and aggressive hunched silhouette, weight on its giant foreclaws, ready to ram. Four distinct limbs, not humanoid armor.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A unique low-slung QUADRUPED dark forest briar beast, NOT a bull, boar, wolf or ordinary animal. Broad wedge-shaped heavy armored head, blunt crooked thorn horns, a massive chest and two enormous armored forelimbs, two smaller sturdy hind legs. Segmented blackened natural armor, bristled briar ridges along the back, deep rust-brown bark, cold slate plates and sparse ochre highlights. Low center of gravity and aggressive hunched silhouette, weight on its giant foreclaws, ready to ram. Four distinct limbs, not humanoid armor.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A unique low-slung QUADRUPED dark forest briar beast, NOT a bull, boar, wolf or ordinary animal. Broad wedge-shaped heavy armored head, blunt crooked thorn horns, a massive chest and two enormous armored forelimbs, two smaller sturdy hind legs. Segmented blackened natural armor, bristled briar ridges along the back, deep rust-brown bark, cold slate plates and sparse ochre highlights. Low center of gravity and aggressive hunched silhouette, weight on its giant foreclaws, ready to ram. Four distinct limbs, not humanoid armor.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83102,
+        "upload_outputs": true
+      }
+    },
+    {
+      "enemy": "sorcerer",
+      "variant": "a",
+      "name": "Ancient Rune Archmage",
+      "seed": 83103,
+      "design": "An imposing ancient rune archmage boss, large heavy layered robe, broad rune-engraved armor plates at shoulders and chest, faceless dark hood with a cold violet slit, one expressive tall crooked rune staff held in his right hand, free left hand open for spell casting. Weighted violet-black robe with stepped torn hem, aged silver plates and crisp pale blue and purple rune inlays. A dignified arcane silhouette with clear staff and hand, not a tiny human wizard. Grounded neutral summoning-ready stance.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An imposing ancient rune archmage boss, large heavy layered robe, broad rune-engraved armor plates at shoulders and chest, faceless dark hood with a cold violet slit, one expressive tall crooked rune staff held in his right hand, free left hand open for spell casting. Weighted violet-black robe with stepped torn hem, aged silver plates and crisp pale blue and purple rune inlays. A dignified arcane silhouette with clear staff and hand, not a tiny human wizard. Grounded neutral summoning-ready stance.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An imposing ancient rune archmage boss, large heavy layered robe, broad rune-engraved armor plates at shoulders and chest, faceless dark hood with a cold violet slit, one expressive tall crooked rune staff held in his right hand, free left hand open for spell casting. Weighted violet-black robe with stepped torn hem, aged silver plates and crisp pale blue and purple rune inlays. A dignified arcane silhouette with clear staff and hand, not a tiny human wizard. Grounded neutral summoning-ready stance.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83103,
+        "upload_outputs": true
+      }
+    },
+    {
+      "enemy": "sorcerer",
+      "variant": "b",
+      "name": "Rune-Bound Construct",
+      "seed": 83104,
+      "design": "A nonhuman rune-bound arcane construct boss imprisoned in ancient segmented stone and dark metal armor. A floating angular head-shaped rune cage above a broad stone torso; precisely two articulated heavy stone arms and two short stone legs, tiny contained violet energy gaps connecting the segments. One geometric hexagonal rune focus held low in one hand instead of a staff, the other hand has three broad stone fingers. Stepped squared silhouette, slate basalt, tarnished silver and blue-violet carved runes. No robe, no ordinary face, no giant attached spell effects.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A nonhuman rune-bound arcane construct boss imprisoned in ancient segmented stone and dark metal armor. A floating angular head-shaped rune cage above a broad stone torso; precisely two articulated heavy stone arms and two short stone legs, tiny contained violet energy gaps connecting the segments. One geometric hexagonal rune focus held low in one hand instead of a staff, the other hand has three broad stone fingers. Stepped squared silhouette, slate basalt, tarnished silver and blue-violet carved runes. No robe, no ordinary face, no giant attached spell effects.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A nonhuman rune-bound arcane construct boss imprisoned in ancient segmented stone and dark metal armor. A floating angular head-shaped rune cage above a broad stone torso; precisely two articulated heavy stone arms and two short stone legs, tiny contained violet energy gaps connecting the segments. One geometric hexagonal rune focus held low in one hand instead of a staff, the other hand has three broad stone fingers. Stepped squared silhouette, slate basalt, tarnished silver and blue-violet carved runes. No robe, no ordinary face, no giant attached spell effects.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83104,
+        "upload_outputs": true
+      }
+    },
+    {
+      "enemy": "eclipse",
+      "variant": "a",
+      "name": "Eclipse Herald",
+      "seed": 83105,
+      "design": "An ancient large armored eclipse herald boss, distinctly nonhuman and celestial. Tall dark blue-black plated torso, enormous angular crescent-shaped shoulder armor, a vertical moon-disc helmet with a dark central eclipse and narrow cyan eye, exactly two strong armored arms and two grounded armored legs. A small geometric astral focus held low between the hands. Pale turquoise rune edges and aged cold silver on black armor, long split dark ceremonial tabard. A menacing broad geometric silhouette, heavier and taller than a robed wizard, no staff and no hood. Restrained lunar symbols, no big energy halo behind the entire sprite.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient large armored eclipse herald boss, distinctly nonhuman and celestial. Tall dark blue-black plated torso, enormous angular crescent-shaped shoulder armor, a vertical moon-disc helmet with a dark central eclipse and narrow cyan eye, exactly two strong armored arms and two grounded armored legs. A small geometric astral focus held low between the hands. Pale turquoise rune edges and aged cold silver on black armor, long split dark ceremonial tabard. A menacing broad geometric silhouette, heavier and taller than a robed wizard, no staff and no hood. Restrained lunar symbols, no big energy halo behind the entire sprite.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient large armored eclipse herald boss, distinctly nonhuman and celestial. Tall dark blue-black plated torso, enormous angular crescent-shaped shoulder armor, a vertical moon-disc helmet with a dark central eclipse and narrow cyan eye, exactly two strong armored arms and two grounded armored legs. A small geometric astral focus held low between the hands. Pale turquoise rune edges and aged cold silver on black armor, long split dark ceremonial tabard. A menacing broad geometric silhouette, heavier and taller than a robed wizard, no staff and no hood. Restrained lunar symbols, no big energy halo behind the entire sprite.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83105,
+        "upload_outputs": true,
+        "return_non_bg_removed": true
+      }
+    },
+    {
+      "enemy": "eclipse",
+      "variant": "b",
+      "name": "Astral Revenant",
+      "seed": 83106,
+      "design": "A semi-material nonhuman astral revenant boss in ancient dark floating plate armor. An unusual hollow inverted-crescent helmet with a black void face, broad offset fin-like shoulders, a ribbed armored chest surrounding one small dim turquoise celestial core. Exactly two armored arms holding a small orbit-shaped celestial focus low; lower body is a tapered cluster of jagged astral armor plates above a short wispy dark ash base, NOT a person in a cape. Charcoal navy, cool teal fissures and pale moon-silver highlights. Powerful wide upper body and eerie tapered silhouette, no purple sorcerer robe and no giant flames.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A semi-material nonhuman astral revenant boss in ancient dark floating plate armor. An unusual hollow inverted-crescent helmet with a black void face, broad offset fin-like shoulders, a ribbed armored chest surrounding one small dim turquoise celestial core. Exactly two armored arms holding a small orbit-shaped celestial focus low; lower body is a tapered cluster of jagged astral armor plates above a short wispy dark ash base, NOT a person in a cape. Charcoal navy, cool teal fissures and pale moon-silver highlights. Powerful wide upper body and eerie tapered silhouette, no purple sorcerer robe and no giant flames.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A semi-material nonhuman astral revenant boss in ancient dark floating plate armor. An unusual hollow inverted-crescent helmet with a black void face, broad offset fin-like shoulders, a ribbed armored chest surrounding one small dim turquoise celestial core. Exactly two armored arms holding a small orbit-shaped celestial focus low; lower body is a tapered cluster of jagged astral armor plates above a short wispy dark ash base, NOT a person in a cape. Charcoal navy, cool teal fissures and pale moon-silver highlights. Powerful wide upper body and eerie tapered silhouette, no purple sorcerer robe and no giant flames.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83106,
+        "upload_outputs": true,
+        "return_non_bg_removed": true
+      }
+    },
+    {
+      "enemy": "guardian",
+      "variant": "a",
+      "name": "Ancient Stone Altar",
+      "seed": 83107,
+      "design": "An ancient immovable magical STONE ALTAR monument, absolutely NOT a humanoid creature. Broad low stepped basalt plinth, two squat chipped stone buttresses and a heavy carved altar slab, ancient turquoise rune grooves, a single clearly visible round blue crystal core set in the center front of the altar, suitable as an orb and shield-beam emission point. Heavy irregular stone outcrops, tiny root traces around the base. Dark grove grey stone, muted moss and restrained pale cyan core, clean asymmetrical ruined details. Compact sturdy nonhuman silhouette, no legs, arms, face, staff or detached projectile.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient immovable magical STONE ALTAR monument, absolutely NOT a humanoid creature. Broad low stepped basalt plinth, two squat chipped stone buttresses and a heavy carved altar slab, ancient turquoise rune grooves, a single clearly visible round blue crystal core set in the center front of the altar, suitable as an orb and shield-beam emission point. Heavy irregular stone outcrops, tiny root traces around the base. Dark grove grey stone, muted moss and restrained pale cyan core, clean asymmetrical ruined details. Compact sturdy nonhuman silhouette, no legs, arms, face, staff or detached projectile.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient immovable magical STONE ALTAR monument, absolutely NOT a humanoid creature. Broad low stepped basalt plinth, two squat chipped stone buttresses and a heavy carved altar slab, ancient turquoise rune grooves, a single clearly visible round blue crystal core set in the center front of the altar, suitable as an orb and shield-beam emission point. Heavy irregular stone outcrops, tiny root traces around the base. Dark grove grey stone, muted moss and restrained pale cyan core, clean asymmetrical ruined details. Compact sturdy nonhuman silhouette, no legs, arms, face, staff or detached projectile.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83107,
+        "upload_outputs": true,
+        "return_non_bg_removed": true
+      }
+    },
+    {
+      "enemy": "guardian",
+      "variant": "b",
+      "name": "Rootbound Arcane Totem",
+      "seed": 83108,
+      "design": "An ancient immovable ROOTBOUND ARCANE TOTEM monument, absolutely NOT a humanoid creature. Tall crooked wooden and stone pillar tightly wrapped in thick intertwined old roots, a distinct large faceted turquoise crystal suspended in its central carved stone cradle, rune fissures down the wood, a broad stable root base. Two short broken branch-prongs frame the crystal without resembling arms. Dark weathered umber, grey stone, muted moss and cool cyan crystal. A vertical magical monument silhouette different from a low altar, clear central crystal as the orb and shield-beam origin. No face, legs, hands or detached projectile.",
+      "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient immovable ROOTBOUND ARCANE TOTEM monument, absolutely NOT a humanoid creature. Tall crooked wooden and stone pillar tightly wrapped in thick intertwined old roots, a distinct large faceted turquoise crystal suspended in its central carved stone cradle, rune fissures down the wood, a broad stable root base. Two short broken branch-prongs frame the crystal without resembling arms. Dark weathered umber, grey stone, muted moss and cool cyan crystal. A vertical magical monument silhouette different from a low altar, clear central crystal as the orb and shield-beam origin. No face, legs, hands or detached projectile.",
+      "parameters": {
+        "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. An ancient immovable ROOTBOUND ARCANE TOTEM monument, absolutely NOT a humanoid creature. Tall crooked wooden and stone pillar tightly wrapped in thick intertwined old roots, a distinct large faceted turquoise crystal suspended in its central carved stone cradle, rune fissures down the wood, a broad stable root base. Two short broken branch-prongs frame the crystal without resembling arms. Dark weathered umber, grey stone, muted moss and cool cyan crystal. A vertical magical monument silhouette different from a low altar, clear central crystal as the orb and shield-beam origin. No face, legs, hands or detached projectile.",
+        "prompt_style": "rd_pro__default",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "remove_bg": true,
+        "seed": 83108,
+        "upload_outputs": true,
+        "return_non_bg_removed": true
+      }
+    }
+  ]
+}

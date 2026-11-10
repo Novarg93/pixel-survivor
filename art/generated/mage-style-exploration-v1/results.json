@@ -1,0 +1,72 @@
+{
+  "tool": "PixelLab create_image_pro_flash",
+  "referencesUploaded": false,
+  "referenceAttempt": {
+    "status": "auto-review rejected before execution",
+    "asset": "Early Ash Warden base concept (subsequently corrected locally to the current game atlas)",
+    "fallback": "Text-only generation; no art reference supplied"
+  },
+  "outputs": [
+    {
+      "id": "a",
+      "name": "Наследник",
+      "job_id": "161b23a6-b52f-40cc-af09-d643131d29a3",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "5108c491-1dd8-5ffe-addc-fab4fe1f45db",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    },
+    {
+      "id": "b",
+      "name": "Капюшон",
+      "job_id": "948d96db-042b-4267-9428-9c54c73316a1",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "b005a8f2-9d79-5b5f-b26d-57f165f20ae9",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    },
+    {
+      "id": "c",
+      "name": "Боевой маг",
+      "job_id": "a3b9e555-24dd-4e7a-8c59-ef74ded415ac",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "2e6a56e5-913b-5a72-b967-445b077d8413",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    },
+    {
+      "id": "d",
+      "name": "Пепельный плащ",
+      "job_id": "a4b681b2-3a52-4c5a-8028-cbe2c1bec266",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "be7a34c5-f6d1-5806-a65d-bfd7ae18e05b",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    }
+  ],
+  "billing": {
+    "generationsBefore": 1626.9,
+    "generationsAfter": 1606.9,
+    "subscriptionGenerationsCharged": 20,
+    "cashCreditsBefore": 0,
+    "cashCreditsAfter": 0
+  },
+  "selection": null,
+  "productionIntegrated": false
+}

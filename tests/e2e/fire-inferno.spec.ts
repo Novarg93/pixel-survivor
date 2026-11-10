@@ -31,7 +31,8 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Living Inferno real Canv
   expect(new Set(result.rows.map(r=>r.hp)).size).toBe(1);expect(result.rows.every(r=>r.absorb===0&&r.charge===0)).toBe(true);
   expect(result.rows[5].art.glowAlpha).toBeGreaterThan(0);expect(result.rows[5].art.glowAlpha).toBeLessThan(result.rows[4].art.glowAlpha);
   expect(result.rows[6].art).toMatchObject({glowAlpha:0,bodyFlames:0,heatColumns:0,burning:0,bursts:0});
-  expect(result.audio.played['ultimate.fire']).toBe(1);expect(result.audio.played['ultimate.singe']).toBe(1);expect(result.audio.peakLoops).toBeLessThanOrEqual(3);expect(result.audio.tracks).toBe(2);
+  expect(result.audio.played['ultimate.fire']).toBe(1);expect(result.audio.played['ultimate.singe']).toBe(1);expect(result.audio.peakLoops).toBeLessThanOrEqual(3);
+  expect(result.audio.tracks).toBe(0);expect(result.audio.music).toMatchObject({current:'dying',playing:1,players:2});
   for(const [i,r]of result.rows.entries())writeFileSync(`${images}/${['01-ignition','02-form-ground-burn','03-projectile-singe','04-heat','07-end','08-fade','09-clear'][i]}-${width}.png`,Buffer.from(r.png.split(',')[1],'base64'));
   writeFileSync(`${report}/timeline-${width}.json`,JSON.stringify({...result,rows:result.rows.map(({png,...r})=>({...r,bytes:png.length})),errors},null,2));
   await page.keyboard.down('d');const x=await page.evaluate(()=>window.__PIXEL__!.world.player.x);await page.waitForTimeout(180);await page.keyboard.up('d');expect(await page.evaluate(()=>window.__PIXEL__!.world.player.x)).toBeGreaterThan(x);

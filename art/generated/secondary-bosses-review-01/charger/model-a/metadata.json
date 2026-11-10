@@ -1,0 +1,37 @@
+{
+  "folder": "charger/model-a",
+  "kind": "model",
+  "sourceSHA256": "6b78742788ec29961c93bad334cc7474a11f7dd2933e007f7882506e8ec0087c",
+  "logicalCanvas": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    64
+  ],
+  "worldScale": 0.45,
+  "perFrameFitting": false,
+  "durationMs": 0,
+  "presentation": null,
+  "frames": [
+    {
+      "index": 0,
+      "durationMs": 0,
+      "width": 128,
+      "height": 128,
+      "sourceWidth": 128,
+      "sourceHeight": 128,
+      "visible": 9405,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        3,
+        10,
+        124,
+        115
+      ],
+      "colors": 35
+    }
+  ]
+}

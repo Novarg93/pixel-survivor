@@ -1,0 +1,17 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {Buffer} from 'node:buffer';
+import ts from 'typescript';
+const root='art/generated/ash-warden-close-melee-speed-v1/',json=p=>JSON.parse(readFileSync(p,'utf8'));
+const files=json(root+'protected-assets.json'),previous=json('art/generated/ash-warden-melee-b-refinement-v2/protected-baseline.json');
+for(const[p,h]of Object.entries(previous))if(p.includes('flameStrike')||p.includes('FlameStrike'))files[p]=h;
+for(const p of ['src/game/art/ashWardenManifest.json','src/game/art/flameStrikeManifest.json','src/game/art/meleeComboManifest.json'])Object.assign(files,json(p).sources??{});
+const changed=[];for(const[p,h]of Object.entries(files))if(createHash('sha256').update(readFileSync(p)).digest('hex')!==h)changed.push(p);
+if(changed.length)throw Error('Changed protected assets: '+changed.join(', '));
+const js=ts.transpileModule(readFileSync('src/game/config/finalBoss.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const {FINAL_BOSS:C}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const originalA=json('src/game/art/meleeComboManifest.json').bodyA.durationsMs,originalB=json('src/game/art/ashWardenManifest.json').clips['east-melee'].durationsMs;
+const a=originalA.map(ms=>ms/(C.meleeASpeedMultiplier*C.meleeSpeedMultiplier)),b=originalB.map((ms,i)=>ms/(C.meleeSpeedMultiplier*(i<7?1:2)));
+const screenshots=readdirSync(root,{recursive:true}).filter(p=>p.endsWith('.png')).map(file=>{const png=readFileSync(root+file),width=png.readUInt32BE(16),height=png.readUInt32BE(20),name=file.split(/[\\/]/).at(-1);if(name.startsWith('1280-')&&(width!==1280||height!==720)||name.startsWith('844-')&&(width!==844||height!==390))throw Error('Wrong screenshot viewport: '+file);return{file:file.replaceAll('\\','/'),width,height};});
+writeFileSync(root+'metadata.json',JSON.stringify({movement:{increase:1.15,baseSpeed:C.speed,chaseMin:C.chaseMin,chaseMax:C.chaseMax,playerSpeedMultiplier:C.chaseMultiplier,nearDistance:C.chaseNear,nearSlowdown:.55,example135:{oldFar:148.5,newFar:135*C.chaseMultiplier}},melee:{startDistance:C.meleeRange,previousStopDistance:105,previousStartSlack:4,damageRadius:C.meleeRadius,damage:C.meleeDamage,cooldown:C.meleeCooldown,speedIncrease:C.meleeSpeedMultiplier,a:{durationsMs:a,durationMs:a.reduce((a,b)=>a+b),hitMs:1000*C.meleeHit/(C.meleeASpeedMultiplier*C.meleeSpeedMultiplier)},b:{durationsMs:b,visualDurationMs:b.reduce((a,b)=>a+b),stateDurationMs:1000*C.meleeDuration/C.meleeSpeedMultiplier,hitMs:1000*C.meleeHit/C.meleeSpeedMultiplier},south:{hitMs:1000*C.meleeHit/C.meleeSpeedMultiplier,stateDurationMs:1000*C.meleeDuration/C.meleeSpeedMultiplier},slash:{speedIncrease:C.meleeSpeedMultiplier,peak:'At B hit; no A/South/North slash'}},sourceArtModified:false,screenshots},null,2)+'\n');
+writeFileSync(root+'asset-validation.json',JSON.stringify({files:Object.keys(files).length,changed,screenshots:screenshots.length},null,2)+'\n');

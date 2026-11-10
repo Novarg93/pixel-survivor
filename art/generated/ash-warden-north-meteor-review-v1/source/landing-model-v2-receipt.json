@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"45ac1896-ae1f-4595-b208-fe969b323fb6\",\n  \"image_id\": \"6e7cb9be-6833-55ba-9ba7-5b486f4d39ab\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"6e7cb9be-6833-55ba-9ba7-5b486f4d39ab\",\n  \"job_id\": \"45ac1896-ae1f-4595-b208-fe969b323fb6\",\n  \"description\": \"Only a sparse quiet copper ember GROUND WARNING RIM, an open flat ellipse viewed from above, width90 height42 centered at x64 y76 on a transparent 128x128 canvas. Most of the entire sprite and the INSIDE of the ellipse are fully transparent EMPTY holes. Broken thin rusty orange arcs 2-4 pixels thick, separated into six short asymmetrical segments, a few dim scattered ember pixels immediately around the rim create a soft dissolving edge. Four very short inward cracks at the rim. No fill of any kind inside the ellipse. No disk, no white, no pale yellow, no bright core, no star, no runes, no solid base, no smoke, no rock, no vertical flame, no character, no text. Simple readable chunky pixel clusters, restrained muted rusty orange and copper colors only, calm low intensity, no bloom.\",\n  \"seed\": 110107,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/45ac1896-ae1f-4595-b208-fe969b323fb6/download\"\n}\nPoll get_image(job_id=\"45ac1896-ae1f-4595-b208-fe969b323fb6\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "45ac1896-ae1f-4595-b208-fe969b323fb6",
+    "image_id": "6e7cb9be-6833-55ba-9ba7-5b486f4d39ab",
+    "status": "processing",
+    "source_image_id": "6e7cb9be-6833-55ba-9ba7-5b486f4d39ab",
+    "job_id": "45ac1896-ae1f-4595-b208-fe969b323fb6",
+    "description": "Only a sparse quiet copper ember GROUND WARNING RIM, an open flat ellipse viewed from above, width90 height42 centered at x64 y76 on a transparent 128x128 canvas. Most of the entire sprite and the INSIDE of the ellipse are fully transparent EMPTY holes. Broken thin rusty orange arcs 2-4 pixels thick, separated into six short asymmetrical segments, a few dim scattered ember pixels immediately around the rim create a soft dissolving edge. Four very short inward cracks at the rim. No fill of any kind inside the ellipse. No disk, no white, no pale yellow, no bright core, no star, no runes, no solid base, no smoke, no rock, no vertical flame, no character, no text. Simple readable chunky pixel clusters, restrained muted rusty orange and copper colors only, calm low intensity, no bloom.",
+    "seed": 110107,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/45ac1896-ae1f-4595-b208-fe969b323fb6/download"
+  },
+  "isError": false
+}

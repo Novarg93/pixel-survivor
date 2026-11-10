@@ -1,0 +1,30 @@
+{
+  "single": {
+    "castStart": 0,
+    "warningStart": 0,
+    "targetLock": 0,
+    "meteorRelease": 550,
+    "fall": 600,
+    "impact": 900,
+    "aftermath": 1080,
+    "castEnd": 1440,
+    "vfxEnd": 1400,
+    "explanation": "Warning begins with cast, release precedes fall by50ms; accepted Cast B timing unchanged."
+  },
+  "phase2": {
+    "ritualEnter": 0,
+    "channel": 900,
+    "armageddonCast": 1700,
+    "release": 2030,
+    "firstGroup": 1700,
+    "secondGroup": 3250,
+    "returnToChannel": 2900,
+    "end": 6000
+  },
+  "phase3": {
+    "automatic": true,
+    "periodMs": 15000,
+    "requiresCast": false,
+    "end": 19000
+  }
+}

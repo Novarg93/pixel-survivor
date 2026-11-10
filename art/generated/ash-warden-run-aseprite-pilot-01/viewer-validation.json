@@ -1,0 +1,395 @@
+{
+  "result": "PASS",
+  "gifFrames": 28,
+  "viewports": [
+    [
+      1280,
+      900
+    ],
+    [
+      844,
+      620
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "scrubbedFrames": 84,
+  "speedTests": 12,
+  "rateTests": [
+    0.5,
+    1,
+    2
+  ],
+  "onionPixelChange": true,
+  "states": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 167.03999999999965,
+      "rendered": 160,
+      "frames": {
+        "source": 4,
+        "walk": 7,
+        "run": 3
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 280.4399999999995,
+      "rendered": 312,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 2
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 11.453335396666468
+      },
+      "speed": 120,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 417.7799999999995,
+      "rendered": 462,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 3
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 17.1800030949997
+      },
+      "speed": 180,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 591.8550000000001,
+      "rendered": 612,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 7
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 24
+      },
+      "speed": 255,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        844,
+        620
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 168.19199999999967,
+      "rendered": 829,
+      "frames": {
+        "source": 4,
+        "walk": 0,
+        "run": 4
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        844,
+        620
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 280.3199999999994,
+      "rendered": 980,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 2
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 11.453335396666468
+      },
+      "speed": 120,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        844,
+        620
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 417.5999999999995,
+      "rendered": 1130,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 3
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 17.1800030949997
+      },
+      "speed": 180,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        844,
+        620
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 595.4250000000002,
+      "rendered": 1281,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 8
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 24
+      },
+      "speed": 255,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 168.11999999999966,
+      "rendered": 1498,
+      "frames": {
+        "source": 4,
+        "walk": 0,
+        "run": 4
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 280.0799999999995,
+      "rendered": 1649,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 2
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 11.453335396666468
+      },
+      "speed": 120,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 417.5999999999995,
+      "rendered": 1799,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 3
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 17.1800030949997
+      },
+      "speed": 180,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 595.4250000000002,
+      "rendered": 1950,
+      "frames": {
+        "source": 6,
+        "walk": 6,
+        "run": 8
+      },
+      "fps": {
+        "source": 20,
+        "walk": 20,
+        "run": 24
+      },
+      "speed": 255,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "rateTest": true,
+      "ready": true,
+      "playing": false,
+      "rate": 0.5,
+      "distance": 36.864000000000026,
+      "rendered": 2094,
+      "frames": {
+        "source": 0,
+        "walk": 7,
+        "run": 3
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "rateTest": true,
+      "ready": true,
+      "playing": false,
+      "rate": 1,
+      "distance": 110.59200000000008,
+      "rendered": 2161,
+      "frames": {
+        "source": 0,
+        "walk": 5,
+        "run": 10
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    },
+    {
+      "rateTest": true,
+      "ready": true,
+      "playing": false,
+      "rate": 2,
+      "distance": 258.04800000000023,
+      "rendered": 2228,
+      "frames": {
+        "source": 0,
+        "walk": 1,
+        "run": 0
+      },
+      "fps": {
+        "source": 15.707431401142584,
+        "walk": 13.74400247599976,
+        "run": 6.87200123799988
+      },
+      "speed": 72,
+      "onion": false,
+      "gameScale": 0.6548310811
+    }
+  ],
+  "screenshots": [
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-1280-72.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-1280-120.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-1280-180.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-1280-255.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-844-72.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-844-120.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-844-180.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-844-255.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-390-72.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-390-120.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-390-180.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/viewer-390-255.png",
+    "art/generated/ash-warden-run-aseprite-pilot-01/screenshots/onion-joints-1280.png"
+  ],
+  "errors": []
+}

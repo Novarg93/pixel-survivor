@@ -1,6 +1,8 @@
 import { SOUND_CATALOG, AUDIO_BUDGET, type SoundEvent, type AssetId, type AudioBus } from './catalog';
 import type { AudioBackend, AudioVoice } from './AudioBackend';
 import type { Settings } from '../services/storage';
+import { audioSampleForEvent, audioSampleRange } from './samples';
+import type {MusicTrackId} from './musicTracks';
 
 export class AudioController {
   private enabled = false; private dead = false; private generation = 0;
@@ -19,6 +21,7 @@ export class AudioController {
     this.volumes = { master: s.volume, music: s.musicVolume ?? .32, sfx: s.sfxVolume ?? .8, ui: (s.sfxVolume ?? .8) * .8, ambient: (s.musicVolume ?? .32) * .55 }; this.muted = s.muted;
     for (const bus of Object.keys(this.volumes) as AudioBus[]) this.backend.bus(bus, bus === 'master' && this.muted ? 0 : this.volumes[bus]);
     if (this.muted || !s.volume) this.stop();
+    else if(!this.volumes.music)this.backend.music?.(null);
   }
   play(event: SoundEvent, strength = 1) {
     this.requested[event] = (this.requested[event] ?? 0) + 1;
@@ -39,26 +42,28 @@ export class AudioController {
     const id = ++this.serial;
     try {
       const rate = 1 + (this.random() - .5) * .06, gain = c.gain * Math.max(.1, Math.min(1, strength)) * (1 + (this.random() - .5) * .08);
-      const voice = this.backend.start(c.asset, c.bus, gain, rate, false, () => this.voices.delete(id));
+      const voice = this.backend.start(c.asset, c.bus, gain, rate, false, () => this.voices.delete(id), audioSampleForEvent(event), audioSampleRange(event));
       if (!voice) { this.rejected.unavailable++; return false; }
       this.voices.set(id, { voice, bus: c.bus, priority: c.priority, event }); this.last.set(event, now); this.last.set(group, now); this.played[event] = (this.played[event] ?? 0) + 1;
       this.peakVoices = Math.max(this.peakVoices, this.voices.size); return true;
     } catch { this.rejected.unavailable++; return false; }
   }
-  update(status: string, biome: string, frostField=false,fireField=false) {
+  update(status: string, biome: string, frostField=false,fireField=false,track:MusicTrackId='normal') {
     if (this.status !== status) { this.stop(status === 'paused' || status === 'upgrade' ? .06 : 0); this.status = status; }
     const audible = this.enabled && !this.dead && this.backend.running && !this.muted && this.volumes.master > 0 && status === 'playing';
-    const desired: AssetId[] = audible && this.volumes.music ? ['underscore', biome === 'dark-forest' ? 'forest' : 'grove'] : [];
+    const musicAudible=audible&&this.volumes.music>0;
+    const streaming=this.backend.music?.(musicAudible?track:null)??false;
+    const desired: AssetId[] = musicAudible&&!streaming ? ['underscore', biome === 'dark-forest' ? 'forest' : 'grove'] : [];
     if(audible&&frostField&&this.volumes.sfx)desired.push('frostAir');
     else if(audible&&fireField&&this.volumes.sfx)desired.push('embers');
-    for (const [key, voice] of this.loops) if (!desired.includes(key)) { voice.stop(.25); this.loops.delete(key); }
+    for (const [key, voice] of this.loops) if (!desired.includes(key)) { voice.stop(streaming?0:.25); this.loops.delete(key); }
     for (const asset of desired) if (!this.loops.has(asset)) {
       try { const voice = this.backend.start(asset, asset === 'underscore' ? 'music' : asset==='frostAir'||asset==='embers'?'sfx':'ambient', asset==='frostAir'?.09:asset==='embers'?.11:1, 1, true, () => { if (this.loops.get(asset) === voice) this.loops.delete(asset); }); if (voice) this.loops.set(asset, voice); } catch { this.rejected.unavailable++; }
     }
     this.peakLoops = Math.max(this.peakLoops, this.backend.diagnostics().loops);
   }
   stopEvent(event:SoundEvent){for(const [id,v]of this.voices)if(v.event===event){v.voice.stop(.05);this.voices.delete(id);}}
-  stop(fade = 0) { if (!fade) this.backend.stopAll(); else { for (const { voice } of this.voices.values()) voice.stop(fade); for (const voice of this.loops.values()) voice.stop(fade); } this.voices.clear(); this.loops.clear(); }
+  stop(fade = 0) { this.backend.music?.(null); if (!fade) this.backend.stopAll(); else { for (const { voice } of this.voices.values()) voice.stop(fade); for (const voice of this.loops.values()) voice.stop(fade); } this.voices.clear(); this.loops.clear(); }
   reset() { this.stop(); this.last.clear(); this.generation++; }
   diagnostics() { return { unlocked: this.enabled, supported: this.backend.supported, running: this.backend.running, status: this.status, voices: this.voices.size, tracks: this.loops.size, peakVoices: this.peakVoices, peakLoops: this.peakLoops, requested: { ...this.requested }, played: { ...this.played }, rejected: { ...this.rejected }, volumes: { ...this.volumes }, muted: this.muted, ...this.backend.diagnostics() }; }
   destroy() { this.reset(); this.dead = true; this.enabled = false; this.backend.destroy(); }

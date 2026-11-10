@@ -1,0 +1,266 @@
+{
+  "flowId": "yjvrw2c6hHxBAVyZw6YL",
+  "model": "eleven_music_v2_5",
+  "specs": [
+    {
+      "id": "01-first-sparks",
+      "stage": "0–5 минут",
+      "title": "Первые искры",
+      "phase": "normal",
+      "seconds": 60,
+      "bpm": 72,
+      "description": "Мягкое начало: прозрачная флейта, редкие звуки дульцимера и тёплые струнные. Спокойствие с лёгкой тайной.",
+      "prompt": "Instrumental organic dark-fantasy ambient game underscore in D Dorian at 72 BPM, gentle, curious and quietly hopeful, with breathy wooden flute, sparse hammered dulcimer, warm low strings and soft airy pads. A restrained D-A-E-F four-note figure appears occasionally above a very light hand-drum pulse, with spacious natural reverb and plenty of silence between phrases. Keep a stable circular arrangement suitable for repeated background play, restrained dynamics and an uncluttered midrange, with no vocals, choir, sound effects, dramatic drops or final resolving cadence.",
+      "nodeId": "ZdFKBcUWejRYwMwQfvx5"
+    },
+    {
+      "id": "02-dusk-grove",
+      "stage": "5–10 минут",
+      "title": "Сумеречная роща",
+      "phase": "dusk",
+      "seconds": 60,
+      "bpm": 84,
+      "description": "Лес становится тревожнее: пульсирующие виолончели, приглушённые барабаны и холодные отзвуки знакомой темы.",
+      "prompt": "Instrumental dark-fantasy ambient underscore in D minor at 84 BPM, watchful and uneasy but still spacious, using pulsing low cellos, muted frame drums, faint wooden flute echoes and sparse hammered dulcimer. Let a subtle D-A-E-F four-note figure drift through suspended harmonies and a quiet repeating bass pulse, with organic acoustic textures and dark natural reverb. Maintain steady moderate energy and a circular background arrangement with room for game sound effects, no vocals or choir, no diegetic sounds, no big drop and no final resolving cadence.",
+      "nodeId": "ngsKk8z2RRhhM2ZWYMSs"
+    },
+    {
+      "id": "03-withered-roots",
+      "stage": "10–15 минут",
+      "title": "Умирающая роща",
+      "phase": "dying",
+      "seconds": 60,
+      "bpm": 98,
+      "description": "Холодное давление: смычковые дроны, сухая перкуссия и напряжённый неровный пульс.",
+      "prompt": "Instrumental dark-fantasy drone ambient with a restrained 98 BPM pulse in D minor, bleak, tense and slowly suffocating, built from bowed low strings, brittle dulcimer fragments, bass clarinet and dry irregular frame-drum accents. Fragment a sparse D-A-E-F motif into suspended minor seconds above a steady low ostinato, using thin airy textures rather than loud high-frequency noise. Keep controlled dynamics and consistent low-to-medium intensity throughout a circular underscore, leave space for gameplay sound effects, and avoid vocals, choir, sound effects, trailer impacts, a big drop or a resolved ending.",
+      "nodeId": "xaYhPCVuqKJH0UXWzi4M"
+    },
+    {
+      "id": "04-embers-rising",
+      "stage": "15–20 минут",
+      "title": "Горящая роща",
+      "phase": "burning",
+      "seconds": 60,
+      "bpm": 112,
+      "description": "Последний отрезок: настойчивое струнное остинато, низкие томы и нарастающая тревога без перегруженного микса.",
+      "prompt": "Instrumental dark-fantasy action ambient underscore in D minor at 112 BPM, urgent and relentless with controlled intensity, driven by low cello ostinatos, rounded toms, muted frame drums, granular airy pads and restrained hammered dulcimer accents. Transform a D-A-E-F four-note figure into a repeating syncopated pattern above a firm low pulse, with organic textures, restrained brass swells and clear transient space for gameplay sound effects. Sustain pressure in a circular arrangement without turning into a pop song or trailer climax, no vocals or choir, no sound effects, no harsh piercing lead, no giant drop and no final resolving cadence.",
+      "nodeId": "3c0XsMN0TdxcguEkgoiE"
+    },
+    {
+      "id": "05-ash-warden",
+      "stage": "Бой с боссом",
+      "title": "Страж Пепельной Рощи",
+      "phase": "boss",
+      "seconds": 60,
+      "bpm": 132,
+      "description": "Тяжёлый ритуальный бой: низкие барабаны, пульсирующие струнные, тёмная медь и металлические акценты.",
+      "prompt": "Instrumental ritual dark-fantasy boss battle underscore at 132 BPM in D minor with occasional Phrygian tension, imposing and dangerous, combining deep taiko-like drums, aggressive low string ostinatos, sparse low brass, resonant dulcimer and restrained metallic percussion. Develop a D-A-E-F four-note motif into a weighty rhythmic call and response with short breathers between drum phrases, emphasizing menace and forward momentum rather than heroic triumph. Keep a repeatable circular structure and controlled peaks with space for combat sound effects, no vocals or choir, no rock guitar or EDM drop, no diegetic sounds, no victory fanfare and no final resolving cadence.",
+      "nodeId": "8Hzs0Rw4J6ChoDOrSkK9"
+    }
+  ],
+  "estimate": {
+    "credits": 30000,
+    "price_cents": 600,
+    "generations_count": 4,
+    "currency": "usd",
+    "estimated_runtime_seconds": 71
+  },
+  "run": {
+    "summary": {
+      "nodes_run": 5,
+      "generations_started": 20,
+      "failed": 0,
+      "generations_by_node": {
+        "ZdFKBcUWejRYwMwQfvx5": 4,
+        "ngsKk8z2RRhhM2ZWYMSs": 4,
+        "xaYhPCVuqKJH0UXWzi4M": 4,
+        "3c0XsMN0TdxcguEkgoiE": 4,
+        "8Hzs0Rw4J6ChoDOrSkK9": 4
+      }
+    },
+    "session_ids": [
+      "71imh9UEBconWXdfNhbo",
+      "Ue3aOUY2aNKFOfJ5Pgzy",
+      "s6LuSzdhnLHkc3dm9jKO",
+      "8mOlEPMGsOyiFtxLd15I",
+      "uosw3RobBTSlGZSCXot3",
+      "ZAdk2ZUYXx9K6yHTCtDy",
+      "ra0XF6XsVV1vJ2ZYsLhH",
+      "HDJCa5GpC4mvwm7OZ136",
+      "Sj5mKi8UG0uCZze3fzL0",
+      "nz5RDoPZrXvUzTDKQxdV",
+      "jEmF1NtAZDZzQ2J05RQO",
+      "fx7ImLGx3gUXJiP3MEk4",
+      "A2fh6NuQtj0mUrcNHdbM",
+      "iFdhWDvgLiIuLTaY02pW",
+      "4D0qehh1ZeQ82ZZodNJD",
+      "sG0FMtQszsejSjUpR5TQ",
+      "zikFNCJQQQkWSOI3Alhj",
+      "TdllYGezOY7wczw7Ud8E",
+      "or6TvisOOZu3Ukhasow9",
+      "JAbwKU2JOkYTpXhXlsNR"
+    ],
+    "results": [
+      {
+        "success": true,
+        "node_id": "ZdFKBcUWejRYwMwQfvx5",
+        "session_id": "71imh9UEBconWXdfNhbo",
+        "credit_costs": {
+          "Xd5al7u4p3TSVNi2VEfb": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ZdFKBcUWejRYwMwQfvx5",
+        "session_id": "Ue3aOUY2aNKFOfJ5Pgzy",
+        "credit_costs": {
+          "gotVKPzN9WsaaEMFajBS": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ZdFKBcUWejRYwMwQfvx5",
+        "session_id": "s6LuSzdhnLHkc3dm9jKO",
+        "credit_costs": {
+          "RPNpfbjSieQuOadVxU3f": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ZdFKBcUWejRYwMwQfvx5",
+        "session_id": "8mOlEPMGsOyiFtxLd15I",
+        "credit_costs": {
+          "nlfnc0D7dgWpPqhCUGmf": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ngsKk8z2RRhhM2ZWYMSs",
+        "session_id": "uosw3RobBTSlGZSCXot3",
+        "credit_costs": {
+          "k3k2if7sSw5yYa8ch4Ft": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ngsKk8z2RRhhM2ZWYMSs",
+        "session_id": "ZAdk2ZUYXx9K6yHTCtDy",
+        "credit_costs": {
+          "UGH1OtQmf8ZfZZslMqmX": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ngsKk8z2RRhhM2ZWYMSs",
+        "session_id": "ra0XF6XsVV1vJ2ZYsLhH",
+        "credit_costs": {
+          "8jmQm5Dx7m1Qr0pTmpN0": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "ngsKk8z2RRhhM2ZWYMSs",
+        "session_id": "HDJCa5GpC4mvwm7OZ136",
+        "credit_costs": {
+          "H338XQSngdVEt5rcEOM3": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "xaYhPCVuqKJH0UXWzi4M",
+        "session_id": "Sj5mKi8UG0uCZze3fzL0",
+        "credit_costs": {
+          "OIgdrlxnnDO9XuwN7znl": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "xaYhPCVuqKJH0UXWzi4M",
+        "session_id": "nz5RDoPZrXvUzTDKQxdV",
+        "credit_costs": {
+          "kltUwop3g7LiG9j6rodc": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "xaYhPCVuqKJH0UXWzi4M",
+        "session_id": "jEmF1NtAZDZzQ2J05RQO",
+        "credit_costs": {
+          "MqVQrnrjXJV1qEbUw7wB": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "xaYhPCVuqKJH0UXWzi4M",
+        "session_id": "fx7ImLGx3gUXJiP3MEk4",
+        "credit_costs": {
+          "Lpvf4twgXWlYqu8i2eJd": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "3c0XsMN0TdxcguEkgoiE",
+        "session_id": "A2fh6NuQtj0mUrcNHdbM",
+        "credit_costs": {
+          "PwdX6huIknBkZmf65haV": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "3c0XsMN0TdxcguEkgoiE",
+        "session_id": "iFdhWDvgLiIuLTaY02pW",
+        "credit_costs": {
+          "TjwKpUtWMO09xJLdRp61": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "3c0XsMN0TdxcguEkgoiE",
+        "session_id": "4D0qehh1ZeQ82ZZodNJD",
+        "credit_costs": {
+          "nLrUGyWVZOuRDcwbB74S": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "3c0XsMN0TdxcguEkgoiE",
+        "session_id": "sG0FMtQszsejSjUpR5TQ",
+        "credit_costs": {
+          "KtLXMCJxUMbFDYDakKyi": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "8Hzs0Rw4J6ChoDOrSkK9",
+        "session_id": "zikFNCJQQQkWSOI3Alhj",
+        "credit_costs": {
+          "TUSdLssJFdIyp3uVxYU1": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "8Hzs0Rw4J6ChoDOrSkK9",
+        "session_id": "TdllYGezOY7wczw7Ud8E",
+        "credit_costs": {
+          "sFirbuSIPmgTQNfCG0VP": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "8Hzs0Rw4J6ChoDOrSkK9",
+        "session_id": "or6TvisOOZu3Ukhasow9",
+        "credit_costs": {
+          "TqbvCP3z8fpcllEb2eck": 900
+        }
+      },
+      {
+        "success": true,
+        "node_id": "8Hzs0Rw4J6ChoDOrSkK9",
+        "session_id": "JAbwKU2JOkYTpXhXlsNR",
+        "credit_costs": {
+          "L4KZK7RAtNKnq8WvvL00": 900
+        }
+      }
+    ]
+  }
+}

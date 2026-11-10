@@ -1,0 +1,1357 @@
+{
+  "viewport": [
+    844,
+    390
+  ],
+  "rows": [
+    {
+      "face": "east",
+      "tracked": {
+        "attack": {
+          "kind": "chargeWindup",
+          "age": 0.43999999999999995,
+          "duration": 0.65,
+          "direction": {
+            "x": 0.9922778767136677,
+            "y": 0.12403473458920847
+          },
+          "from": {
+            "x": 172.56,
+            "y": -40
+          },
+          "to": {
+            "x": 412.56,
+            "y": -10
+          },
+          "contacted": false,
+          "id": 4,
+          "chargeTargetLocked": false
+        },
+        "boss": {
+          "x": 172.56,
+          "y": -40
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 4,
+            "clock": 2.323876666666666,
+            "bossClock": 2.323876666666666,
+            "x": 172.56,
+            "y": -40
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-idle",
+            "age": 2.3138766666666664,
+            "index": 1,
+            "frame": {
+              "flipX": false,
+              "layers": [
+                {
+                  "frame": "d8cc884fd0e61afac24e8292",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "overlay": {
+                "frame": "b6e07ecf9f546782c683330c",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "south",
+            "presentationDirection": "south"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-0",
+              "frame": "d8cc884fd0e61afac24e8292",
+              "flipX": false,
+              "x": 170,
+              "y": -40,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [],
+          "pooledImages": 5,
+          "activeImages": 1,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      },
+      "locked": {
+        "x": 412.56,
+        "y": 10
+      },
+      "start": {
+        "attack": {
+          "kind": "chargeTravel",
+          "age": 0.039999999999999994,
+          "duration": 0.32307692307692304,
+          "direction": {
+            "x": 0.9789804197376051,
+            "y": 0.20395425411200105
+          },
+          "from": {
+            "x": 172.56,
+            "y": -40
+          },
+          "to": {
+            "x": 412.56,
+            "y": 10
+          },
+          "contacted": false,
+          "id": 5,
+          "chargeTargetLocked": true
+        },
+        "boss": {
+          "x": 202.27428571428572,
+          "y": -33.80952380952381
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 4,
+            "clock": 2.323876666666666,
+            "bossClock": 2.323876666666666,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "directionLock",
+            "instance": 4,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "chargeTargetLock",
+            "instance": 4,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "chargeStart",
+            "instance": 5,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40,
+            "direction": {
+              "x": 0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          },
+          {
+            "name": "chargeTravel",
+            "instance": 5,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-chargeTravel",
+            "age": 0.05199999999999999,
+            "index": 0,
+            "frame": {
+              "layers": [
+                {
+                  "frame": "2b46ab7024a9994e327bf7f0",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "flipX": false,
+              "overlay": {
+                "frame": "e53c2e13443fe0eb355a4edc",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "east",
+            "presentationDirection": "south"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-2",
+              "frame": "2b46ab7024a9994e327bf7f0",
+              "flipX": false,
+              "x": 202.27428571428572,
+              "y": -33.80952380952381,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [
+            {
+              "name": "ash-warden-charge-start-ground",
+              "frame": "d53bd9f25e455baab459adf2",
+              "flipX": false,
+              "x": 175.1793243244,
+              "y": -41.3096621622
+            },
+            {
+              "name": "ash-warden-charge-start-back",
+              "frame": "0628f51b5146146a999b2e74",
+              "flipX": false,
+              "x": 175.1793243244,
+              "y": -41.3096621622
+            },
+            {
+              "name": "ash-warden-charge-start-front",
+              "frame": "4af46fcf6fb4bb4f49c49bd0",
+              "flipX": false,
+              "x": 175.1793243244,
+              "y": -41.3096621622
+            }
+          ],
+          "pooledImages": 7,
+          "activeImages": 4,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      },
+      "stop": {
+        "attack": {
+          "kind": "chargeBrake",
+          "age": 0,
+          "duration": 0.3,
+          "direction": {
+            "x": 0.9789804197376051,
+            "y": 0.20395425411200105
+          },
+          "from": {
+            "x": 0,
+            "y": 0
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          },
+          "contacted": false,
+          "id": 6
+        },
+        "boss": {
+          "x": 412.56,
+          "y": 10
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 4,
+            "clock": 2.323876666666666,
+            "bossClock": 2.323876666666666,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "directionLock",
+            "instance": 4,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "chargeTargetLock",
+            "instance": 4,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "chargeStart",
+            "instance": 5,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40,
+            "direction": {
+              "x": 0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          },
+          {
+            "name": "chargeTravel",
+            "instance": 5,
+            "clock": 2.9738766666666523,
+            "bossClock": 2.9738766666666523,
+            "x": 172.56,
+            "y": -40
+          },
+          {
+            "name": "chargeStop",
+            "instance": 6,
+            "clock": 3.2969535897435684,
+            "bossClock": 3.2969535897435684,
+            "x": 412.56,
+            "y": 10,
+            "direction": {
+              "x": 0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-chargeBrake",
+            "age": 0,
+            "index": 0,
+            "frame": {
+              "layers": [
+                {
+                  "frame": "352661bbfc56d9e11da18755",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "flipX": false,
+              "overlay": {
+                "frame": "73ba3b368e052655ca815df5",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "east",
+            "presentationDirection": "south"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-1",
+              "frame": "352661bbfc56d9e11da18755",
+              "flipX": false,
+              "x": 412.56,
+              "y": 10,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [
+            {
+              "name": "ash-warden-charge-stop-ground",
+              "frame": "046701ad552ea4861d1ecd7e",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-back",
+              "frame": "32d768495749589e67cd66a3",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-front",
+              "frame": "b9e1eebf68c854810536aeaa",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            }
+          ],
+          "pooledImages": 7,
+          "activeImages": 4,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      }
+    },
+    {
+      "face": "west",
+      "tracked": {
+        "attack": {
+          "kind": "chargeWindup",
+          "age": 0.43999999999999995,
+          "duration": 0.65,
+          "direction": {
+            "x": -0.9922778767136677,
+            "y": 0.12403473458920847
+          },
+          "from": {
+            "x": 410,
+            "y": 10
+          },
+          "to": {
+            "x": 170,
+            "y": 40
+          },
+          "contacted": false,
+          "id": 7,
+          "chargeTargetLocked": false
+        },
+        "boss": {
+          "x": 410,
+          "y": 10
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 7,
+            "clock": 3.3069535897435682,
+            "bossClock": 3.3069535897435682,
+            "x": 410,
+            "y": 10
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-chargeBrake",
+            "age": 0,
+            "index": 0,
+            "frame": {
+              "layers": [
+                {
+                  "frame": "352661bbfc56d9e11da18755",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "flipX": false,
+              "overlay": {
+                "frame": "73ba3b368e052655ca815df5",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "east",
+            "presentationDirection": "south"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-1",
+              "frame": "352661bbfc56d9e11da18755",
+              "flipX": false,
+              "x": 412.56,
+              "y": 10,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [
+            {
+              "name": "ash-warden-charge-stop-ground",
+              "frame": "046701ad552ea4861d1ecd7e",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-back",
+              "frame": "32d768495749589e67cd66a3",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-front",
+              "frame": "b9e1eebf68c854810536aeaa",
+              "flipX": false,
+              "x": 415.1793243244,
+              "y": 8.6903378378
+            }
+          ],
+          "pooledImages": 7,
+          "activeImages": 4,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      },
+      "locked": {
+        "x": 170,
+        "y": 60
+      },
+      "start": {
+        "attack": {
+          "kind": "chargeTravel",
+          "age": 0.039999999999999994,
+          "duration": 0.32307692307692304,
+          "direction": {
+            "x": -0.9789804197376051,
+            "y": 0.20395425411200105
+          },
+          "from": {
+            "x": 410,
+            "y": 10
+          },
+          "to": {
+            "x": 170,
+            "y": 60
+          },
+          "contacted": false,
+          "id": 8,
+          "chargeTargetLocked": true
+        },
+        "boss": {
+          "x": 380.2857142857143,
+          "y": 16.19047619047619
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 7,
+            "clock": 3.3069535897435682,
+            "bossClock": 3.3069535897435682,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "directionLock",
+            "instance": 7,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "chargeTargetLock",
+            "instance": 7,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "chargeStart",
+            "instance": 8,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10,
+            "direction": {
+              "x": -0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          },
+          {
+            "name": "chargeTravel",
+            "instance": 8,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-chargeTravel",
+            "age": 0,
+            "index": 0,
+            "frame": {
+              "layers": [
+                {
+                  "frame": "2b46ab7024a9994e327bf7f0",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "flipX": true,
+              "overlay": {
+                "frame": "e53c2e13443fe0eb355a4edc",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "west",
+            "presentationDirection": "west"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-2",
+              "frame": "2b46ab7024a9994e327bf7f0",
+              "flipX": true,
+              "x": 410,
+              "y": 10,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [
+            {
+              "name": "ash-warden-charge-start-ground",
+              "frame": "761050aa38ec0c4b5d16f249",
+              "flipX": true,
+              "x": 407.3806756756,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-start-back",
+              "frame": "92bb36cab576f785f815b377",
+              "flipX": true,
+              "x": 407.3806756756,
+              "y": 8.6903378378
+            },
+            {
+              "name": "ash-warden-charge-start-front",
+              "frame": "2fd13247ccf910e5ddbcaaf1",
+              "flipX": true,
+              "x": 407.3806756756,
+              "y": 8.6903378378
+            }
+          ],
+          "pooledImages": 7,
+          "activeImages": 4,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      },
+      "stop": {
+        "attack": {
+          "kind": "chargeBrake",
+          "age": 0,
+          "duration": 0.3,
+          "direction": {
+            "x": -0.9789804197376051,
+            "y": 0.20395425411200105
+          },
+          "from": {
+            "x": 0,
+            "y": 0
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          },
+          "contacted": false,
+          "id": 9
+        },
+        "boss": {
+          "x": 170,
+          "y": 60
+        },
+        "events": [
+          {
+            "name": "chargeWindupStart",
+            "instance": 7,
+            "clock": 3.3069535897435682,
+            "bossClock": 3.3069535897435682,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "directionLock",
+            "instance": 7,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "chargeTargetLock",
+            "instance": 7,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "chargeStart",
+            "instance": 8,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10,
+            "direction": {
+              "x": -0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          },
+          {
+            "name": "chargeTravel",
+            "instance": 8,
+            "clock": 3.9569535897435544,
+            "bossClock": 3.9569535897435544,
+            "x": 410,
+            "y": 10
+          },
+          {
+            "name": "chargeStop",
+            "instance": 9,
+            "clock": 4.2800305128204705,
+            "bossClock": 4.2800305128204705,
+            "x": 170,
+            "y": 60,
+            "direction": {
+              "x": -0.9789804197376051,
+              "y": 0.20395425411200105
+            }
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "south-chargeBrake",
+            "age": 0,
+            "index": 0,
+            "frame": {
+              "layers": [
+                {
+                  "frame": "352661bbfc56d9e11da18755",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "flipX": true,
+              "overlay": {
+                "frame": "73ba3b368e052655ca815df5",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "west",
+            "presentationDirection": "west"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-1",
+              "frame": "352661bbfc56d9e11da18755",
+              "flipX": true,
+              "x": 170,
+              "y": 60,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [
+            {
+              "name": "ash-warden-charge-stop-ground",
+              "frame": "046701ad552ea4861d1ecd7e",
+              "flipX": true,
+              "x": 167.3806756756,
+              "y": 58.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-back",
+              "frame": "32d768495749589e67cd66a3",
+              "flipX": true,
+              "x": 167.3806756756,
+              "y": 58.6903378378
+            },
+            {
+              "name": "ash-warden-charge-stop-front",
+              "frame": "b9e1eebf68c854810536aeaa",
+              "flipX": true,
+              "x": 167.3806756756,
+              "y": 58.6903378378
+            }
+          ],
+          "pooledImages": 7,
+          "activeImages": 4,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "melee-ground-light",
+              "flipX": false,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      }
+    },
+    {
+      "variant": "b",
+      "duration": 1.0434782608695652,
+      "hit": {
+        "attack": {
+          "kind": "basicMelee",
+          "age": 0.5652173913043478,
+          "duration": 1.0434782608695652,
+          "direction": {
+            "x": 1,
+            "y": 0
+          },
+          "from": {
+            "x": 0,
+            "y": 0
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          },
+          "contacted": true,
+          "id": 10,
+          "meleeVariant": "b"
+        },
+        "boss": {
+          "x": 170,
+          "y": 60
+        },
+        "events": [
+          {
+            "name": "directionLock",
+            "instance": 10,
+            "clock": 4.29003051282047,
+            "bossClock": 4.29003051282047,
+            "x": 170,
+            "y": 60
+          },
+          {
+            "name": "attackStart",
+            "instance": 10,
+            "clock": 4.29003051282047,
+            "bossClock": 4.29003051282047,
+            "x": 170,
+            "y": 60
+          },
+          {
+            "name": "hitFrame",
+            "instance": 10,
+            "clock": 4.855247904124806,
+            "bossClock": 4.855247904124806,
+            "x": 170,
+            "y": 60
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "east-melee",
+            "age": 0.6499999999999999,
+            "index": 7,
+            "frame": {
+              "flipX": false,
+              "layers": [
+                {
+                  "frame": "53fa16cca637b93457a9d615",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                },
+                {
+                  "frame": "c6e83ea610103dee29b33984",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811
+                }
+              ],
+              "overlay": {
+                "frame": "4bbf8d206c886dff35354d92",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            },
+            "combatDirection": "east",
+            "presentationDirection": "east"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-v1-3",
+              "frame": "53fa16cca637b93457a9d615",
+              "flipX": false,
+              "x": 170,
+              "y": 60,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            },
+            {
+              "texture": "ash-warden-v1-2",
+              "frame": "c6e83ea610103dee29b33984",
+              "flipX": false,
+              "x": 170,
+              "y": 60,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [],
+          "pooledImages": 7,
+          "activeImages": 3,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": {
+              "variant": "b",
+              "side": true,
+              "origin": {
+                "x": 170,
+                "y": 60
+              },
+              "rotation": 0,
+              "glowAlpha": 0,
+              "glowScale": 1.9166666666666667,
+              "slash": {
+                "frame": "slash-8",
+                "index": 8,
+                "x": 220,
+                "y": 32,
+                "flipX": false
+              }
+            },
+            "activeImages": 1,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": true,
+              "frame": "slash-8",
+              "flipX": false,
+              "x": 220,
+              "y": 32
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      }
+    },
+    {
+      "variant": "a",
+      "duration": 0.802675585284281,
+      "hit": {
+        "attack": {
+          "kind": "basicMelee",
+          "age": 0.4347826086956522,
+          "duration": 0.802675585284281,
+          "direction": {
+            "x": 1,
+            "y": 0
+          },
+          "from": {
+            "x": 0,
+            "y": 0
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          },
+          "contacted": true,
+          "id": 11,
+          "meleeVariant": "a"
+        },
+        "boss": {
+          "x": 170,
+          "y": 60
+        },
+        "events": [
+          {
+            "name": "directionLock",
+            "instance": 11,
+            "clock": 4.865247904124805,
+            "bossClock": 4.865247904124805,
+            "x": 170,
+            "y": 60
+          },
+          {
+            "name": "attackStart",
+            "instance": 11,
+            "clock": 4.865247904124805,
+            "bossClock": 4.865247904124805,
+            "x": 170,
+            "y": 60
+          },
+          {
+            "name": "hitFrame",
+            "instance": 11,
+            "clock": 5.300030512820448,
+            "bossClock": 5.300030512820448,
+            "x": 170,
+            "y": 60
+          }
+        ],
+        "art": {
+          "deathAge": 0,
+          "pose": {
+            "clip": "east-melee-a",
+            "age": 0.5,
+            "index": 5,
+            "frame": {
+              "flipX": false,
+              "layers": [
+                {
+                  "frame": "body-a-5",
+                  "pivot": [
+                    96,
+                    154
+                  ],
+                  "scale": 0.6548310811,
+                  "texture": "ash-warden-melee-combo-v1"
+                }
+              ],
+              "overlay": {
+                "frame": "emission-a-5",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811,
+                "texture": "ash-warden-melee-combo-v1"
+              }
+            },
+            "combatDirection": "east",
+            "presentationDirection": "east"
+          },
+          "bodyImages": [
+            {
+              "texture": "ash-warden-melee-combo-v1",
+              "frame": "body-a-5",
+              "flipX": false,
+              "x": 170,
+              "y": 60,
+              "originX": 0.5,
+              "originY": 0.8020833333333334,
+              "scale": 0.6548310811
+            }
+          ],
+          "telegraphCommands": 0,
+          "meteorWarnings": [],
+          "chargeImages": [],
+          "pooledImages": 7,
+          "activeImages": 1,
+          "ghosts": 0,
+          "labels": 0,
+          "atlasBytes": 16777216,
+          "atlasPages": 4,
+          "pixellabAtlasBytes": 8466240,
+          "meteorImages": [],
+          "flameStrike": {
+            "view": null,
+            "activeImages": 0,
+            "pooledImages": 1,
+            "atlasBytes": 1048576,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1,
+              "rotation": 0
+            },
+            "groundLights": [],
+            "segments": []
+          },
+          "meleeCombo": {
+            "view": {
+              "variant": "a",
+              "side": true,
+              "origin": {
+                "x": 170,
+                "y": 60
+              },
+              "rotation": 0,
+              "glowAlpha": 0,
+              "glowScale": 1.9166666666666667,
+              "slash": null
+            },
+            "activeImages": 0,
+            "pooledImages": 2,
+            "atlasBytes": 2097152,
+            "groundLight": {
+              "visible": false,
+              "alpha": 1
+            },
+            "slash": {
+              "visible": false,
+              "frame": "slash-8",
+              "flipX": false,
+              "x": 220,
+              "y": 32
+            }
+          },
+          "totalAtlasBytes": 28389184
+        }
+      }
+    }
+  ],
+  "freezeHeld": true,
+  "pauseHeld": true,
+  "errors": []
+}

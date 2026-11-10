@@ -1,0 +1,14 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const root='art/generated/ash-warden-uploaded-sounds-v1';
+const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')),manifest=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8'));
+const allowedChanged=['src/game/audio/AudioBackend.ts','src/game/audio/AudioController.ts','src/game/audio/AudioPresentation.ts','src/game/audio/PhaserAudioBackend.ts','src/game/audio/README.md','src/game/audio/catalog.ts','src/game/events/gameFeedback.ts','src/game/systems/FinalEncounter.ts'].sort();
+const allowedAdded=['src/game/audio/ashWardenSamples.ts','src/game/audio/samples.ts',...manifest.entries.map(e=>e.file)].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort(),sha=f=>createHash('sha256').update(readFileSync(f)).digest('hex');
+const changed=Object.keys(baseline).filter(f=>sha(f)!==baseline[f]).sort(),added=files.filter(f=>!(f in baseline));
+if(JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded)||files.length!==Object.keys(baseline).length+added.length)throw new Error(JSON.stringify({unexpectedScope:{changed,added}}));
+for(const e of manifest.entries)if(sha(e.source)!==e.sha256||sha(e.file)!==e.sha256)throw new Error(`Source changed: ${e.source}`);
+const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,previousSHA256:Object.fromEntries(changed.map(f=>[f,baseline[f]])),currentSHA256:Object.fromEntries([...changed,...added].map(f=>[f,sha(f)]))};
+writeFileSync(`${root}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({baselineFiles:report.baselineFiles,changed:changed.length,added:added.length,unchanged:report.unchanged}));

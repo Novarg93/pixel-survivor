@@ -4,20 +4,27 @@ import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
 import { BRIAR_BEAST_TEXTURE, briarBodyFrame } from './briarBeastPack';
 import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
 import {ASTRAL_VFX} from '../config/astralRevenant';
+import {ASTRAL_PROJECTILE as AP,ASTRAL_PROJECTILE_TEXTURE} from './astralProjectilePixellabPack';
 import { ARCANE_VOLLEY } from '../config/runeWarden';
+import {RUNE_VFX,RUNE_VFX_TEXTURE} from './runeWardenVfxPack';
 import type { CharacterId } from '../config/characters';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
 import type { LootKind } from '../loot/types';
 import { HD_CORE_TEXTURE } from './hdCoreLayout';
 import { RUNNER_TEXTURE, RUNNER_CLIPS, runnerFrame, type RunnerPlayback } from './runnerPack';
-import { MAGE_TEXTURE, MAGE_CLIPS, mageFrame } from './magePack';
-import { MAGE_CAST_TEXTURE } from './mageCastingPack';
+import {MAGE_HERO,MAGE_HERO_ORIGIN,mageHeroSelection,mageHeroTexture} from './mageHeroPack';
+import {MAGE_IDLE} from './mageIdlePack';
+import {MAGE_RUN_V2} from './mageRunPackV2';
+import {MAGE_BLINK,MAGE_BLINK_TEXTURE} from './mageBlinkPack';
 import { ENEMY_TEXTURE, ENEMY_CLIPS, isHdEnemy, packedEnemyFrame } from './enemyPack';
 import { GUARDIAN_TEXTURE, guardianFrame } from './guardianPack';
 import { BOSS_TEXTURE, BOSS_CLIPS, isHdBoss, type BossFacing, type BossPose } from './bossPack';
 import { LOOT_TEXTURE } from './lootPack';
+import {MAGE_SHIELD_NOVA as SHIELD_NOVA,MAGE_SHIELD_NOVA_TEXTURE} from './mageShieldNovaPack';
+import {MAGE_METEOR,MAGE_METEOR_TEXTURE} from './mageMeteorPack';
 import type { ArtifactId } from '../loot/ArtifactSystem';
+import {MAGE_PHANTOM,MAGE_PHANTOM_TEXTURE} from './magePhantomPack';
 
 export interface AssetSpec {
   status: 'hd-integrated' | 'legacy';
@@ -26,7 +33,7 @@ export interface AssetSpec {
   logicalSize: { width: number; height: number } | null;
   origin: { x: number; y: number };
   worldScale: number;
-  clips: { idle: number; walk: number; hurt: number; death: number };
+  clips: { idle: number; walk: number; run?:number; runStart?:number; runStop?:number; hurt: number; death: number };
   adornment?: string;
   retainedReason?: string;
 }
@@ -45,8 +52,8 @@ function bossActor(multiplier=1) { return { ...hd(32, 32, 1.8*multiplier, 'actor
 function lootAsset(size = 16, scale = 1): AssetSpec { return { ...hd(size, size, scale, 'pickup'), source: { kind: 'atlas', key: LOOT_TEXTURE, width: size === 6 ? 24 : 64, height: size === 6 ? 24 : 64 }, clips: { ...single, idle: 3 } }; }
 // One catalog: integrated art and explicit legacy fallbacks. No gameplay radii.
 export const ASSET_REGISTRY = {
-  mage: { ...hd(16, 20, 1.5, 'actor'), source: { kind: 'atlas', key: MAGE_TEXTURE, width: 64, height: 80 }, origin: { x: 0.5, y: 0.75 }, clips: { idle: MAGE_CLIPS.idle.frames, walk: MAGE_CLIPS.walk.frames, hurt: MAGE_CLIPS.hurt.frames, death: MAGE_CLIPS.death.frames } },
-  mageCasting: { ...hd(16,20,1.5,'effect'), source:{kind:'atlas',key:MAGE_CAST_TEXTURE,width:64,height:80},origin:{x:.5,y:.75},clips:{idle:3,walk:6,hurt:0,death:0} },
+  magePhantom:{...hd(MAGE_PHANTOM.canvas,MAGE_PHANTOM.canvas,MAGE_PHANTOM.displaySize/MAGE_PHANTOM.canvas,'effect'),source:{kind:'atlas',key:MAGE_PHANTOM_TEXTURE,width:MAGE_PHANTOM.canvas,height:MAGE_PHANTOM.canvas},origin:{x:.5,y:.25},clips:{...single,idle:12}},
+  mage: {...hd(MAGE_HERO.canvas,MAGE_HERO.canvas,MAGE_HERO.displaySize/MAGE_HERO.canvas,'actor'),source:{kind:'atlas',key:mageHeroTexture(0),width:MAGE_HERO.canvas,height:MAGE_HERO.canvas},origin:MAGE_HERO_ORIGIN,clips:{idle:MAGE_IDLE.clips.front.frames.length,walk:0,runStart:MAGE_RUN_V2.clips.south['run-start'].frames.length,run:MAGE_RUN_V2.clips.south.run.frames.length,runStop:MAGE_RUN_V2.clips.south['run-stop'].frames.length,hurt:0,death:13}},
   warrior: { ...hd(16, 20, 1.5, 'actor', { idle: 2, walk: 4, hurt: 2, death: 0 }), origin: { x: 0.5, y: 0.75 } },
   grunt: hd(16, 16, 1, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
   gruntElite: hd(16, 16, 1.4, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
@@ -58,16 +65,18 @@ export const ASSET_REGISTRY = {
   guardian: { ...hd(128, 128, .525, 'actor', { idle: 13, walk: 0, hurt: 0, death: 0 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 128, height: 128 } },
   ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
   charger: { ...bossActor(), source:{kind:'atlas',key:BRIAR_BEAST_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: {...bossActor(ASTRAL_VFX.bodyScale),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},clips:{idle:1,walk:16,hurt:0,death:0}},
-  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, origin:{x:104/128,y:.5} },
+  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_VFX_TEXTURE,width:RUNE_VFX.canvas,height:RUNE_VFX.canvas}, origin:{x:RUNE_VFX.clips.flight.pivot.x/RUNE_VFX.canvas,y:RUNE_VFX.clips.flight.pivot.y/RUNE_VFX.canvas} },
   astralVolley:{...hd(32,32,ASTRAL_VFX.projectileSize/32,'projectile'),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},origin:{x:ASTRAL_VFX.projectilePivot,y:.5}},
+  eclipseVolley:{...hd(32,32,AP.clips.flight.size/32,'projectile'),source:{kind:'atlas',key:ASTRAL_PROJECTILE_TEXTURE,width:AP.canvas,height:AP.canvas},origin:{x:AP.clips.flight.pivot.x/AP.canvas,y:AP.clips.flight.pivot.y/AP.canvas}},
   fireball: { ...hd(FIREBALL_MANIFEST.canvas.width,FIREBALL_MANIFEST.canvas.height,FIREBALL_VFX.scale,'projectile'),source:{kind:'atlas',key:FIREBALL_TEXTURE,width:FIREBALL_MANIFEST.canvas.width,height:FIREBALL_MANIFEST.canvas.height},origin:{x:FIREBALL_VFX.originX,y:FIREBALL_VFX.originY},clips:{...single,idle:FIREBALL_MANIFEST.clips.idle.frameCount} }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
   xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
   artifactHealth: lootAsset(16, 1.15), artifactDamage: lootAsset(16, 1.15), artifactSpeed: lootAsset(16, 1.15), artifactCooldown: lootAsset(16, 1.15), artifactExperience: lootAsset(16, 1.15),
+  mageBlink:{...hd(MAGE_BLINK.canvas,MAGE_BLINK.canvas,MAGE_BLINK.displaySize/MAGE_BLINK.canvas,'effect',{idle:8,walk:0,hurt:0,death:0}),source:{kind:'atlas',key:MAGE_BLINK_TEXTURE,width:MAGE_BLINK.width,height:MAGE_BLINK.height},origin:{x:.5,y:104/128}},
   shadow: hd(20, 8, 1, 'effect'), cleave: hd(48, 48, 1, 'effect', { idle: 4, walk: 0, hurt: 0, death: 0 }),
   grove: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
   darkForest: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
-  frost: { ...drawn('MageMagic:frost'), status: 'hd-integrated' }, lightning: { ...drawn('RegularLightningArt'), status: 'hd-integrated' }, meteor: { ...drawn('MageMagic:meteor'), status: 'hd-integrated' },
-  shield: { ...drawn('MageMagic:shield'), status: 'hd-integrated' }, whirlwind: { ...drawn('WarriorMagic:whirlwind'), status: 'hd-integrated' }, slam: { ...drawn('WarriorMagic:slam'), status: 'hd-integrated' },
+  frost: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,1,'effect',{idle:SHIELD_NOVA.clips['frost-nova'].frameCount,walk:0,hurt:0,death:0}),source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, lightning: { ...drawn('RegularLightningArt'), status: 'hd-integrated' }, meteor: {...hd(MAGE_METEOR.canvas,MAGE_METEOR.canvas,MAGE_METEOR.flightSize/MAGE_METEOR.canvas,'effect'),source:{kind:'atlas',key:MAGE_METEOR_TEXTURE,width:MAGE_METEOR.canvas,height:MAGE_METEOR.canvas},origin:{x:.5,y:MAGE_METEOR.flightPivot.y/MAGE_METEOR.canvas},clips:{...single,idle:MAGE_METEOR.clips.flight.frameCount}},
+  shield: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,SHIELD_NOVA.shieldScale,'effect',{idle:SHIELD_NOVA.clips['shield-loop'].frameCount,walk:0,hurt:0,death:0}),origin:{x:64/128,y:108/128},source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, whirlwind: { ...drawn('WarriorMagic:whirlwind'), status: 'hd-integrated' }, slam: { ...drawn('WarriorMagic:slam'), status: 'hd-integrated' },
   blades: { ...drawn('WarriorMagic:blades'), status: 'hd-integrated' }, iron: { ...drawn('WarriorMagic:iron'), status: 'hd-integrated' }, hit: { ...drawn('CombatFeedback:hit'), status: 'hd-integrated' }, death: { ...drawn('CombatFeedback:death'), status: 'hd-integrated' },
   buffHaste: { ...drawn('LootPresentation:haste'), status: 'hd-integrated' }, buffFury: { ...drawn('LootPresentation:fury'), status: 'hd-integrated' },
   hostileImpact: { ...drawn('CombatFeedback:hostileImpact'), status: 'hd-integrated' },
@@ -89,7 +98,7 @@ export type Facing = 'down' | 'up' | 'side';
 export interface VisualSelection { asset: AssetId; texture: string; frame?: string; scale: number }
 export function selectAsset(asset: AssetId, frame?: string, scale = ASSET_REGISTRY[asset].worldScale): VisualSelection { return { asset, texture: ASSET_REGISTRY[asset].source.key, frame, scale }; }
 export function heroVisual(character: CharacterId, facing: Facing, moving: boolean, hurt: boolean, elapsed: number): VisualSelection {
-  if (character === 'mage') return selectAsset('mage', mageFrame(facing, hurt ? 'hurt' : moving ? 'walk' : 'idle', elapsed));
+  if(character==='mage')return {...selectAsset('mage'),...mageHeroSelection({motion:moving?'run':'idle',direction:facing==='up'?'north':facing==='down'?'south':'east',age:elapsed,casting:false})};
   const pose = hurt ? 'hurt' : moving ? 'walk' : 'idle', clip = ASSET_REGISTRY.warrior.clips[pose], rate = pose === 'walk' ? 9 : pose === 'hurt' ? 12 : 2;
   return selectAsset('warrior', `warrior-${facing}-${pose}-${Math.floor(elapsed * rate) % clip}`);
 }

@@ -1,0 +1,78 @@
+{
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "events": null,
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/00.png",
+      "durationMs": 450,
+      "startMs": 0,
+      "render": {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 1,
+      "file": "frames/01.png",
+      "durationMs": 450,
+      "startMs": 450,
+      "render": {
+        "layers": [
+          {
+            "texture": "07d4a5eba25b82e70234",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 2,
+      "file": "frames/02.png",
+      "durationMs": 450,
+      "startMs": 900,
+      "render": {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 3,
+      "file": "frames/03.png",
+      "durationMs": 450,
+      "startMs": 1350,
+      "render": {
+        "layers": [
+          {
+            "texture": "d945e19e787c1b11d652",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    }
+  ]
+}

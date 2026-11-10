@@ -1,0 +1,164 @@
+{
+  "motion": "death",
+  "direction": "north-west",
+  "sourceFiles": [
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/00.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/01.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/02.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/03.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/04.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/05.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/06.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/07.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/08.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/09.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/10.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/11.png",
+    "art/main-hero-mage/casting/directions-pixminimax-v2/death/north-west/raw/12.png"
+  ],
+  "frameCount": 13,
+  "canvas": 256,
+  "columns": 4,
+  "rows": 4,
+  "durationsMs": [
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5,
+    62.5
+  ],
+  "playback": "Review timing; game casting follows simulation-owned ability timing.",
+  "gif": {
+    "file": "native.gif",
+    "paletteColors": 76,
+    "durationMs": 810
+  },
+  "gifNote": null,
+  "frames": [
+    {
+      "index": 0,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 1,
+      "frame": {
+        "x": 256,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 2,
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 3,
+      "frame": {
+        "x": 768,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 4,
+      "frame": {
+        "x": 0,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 5,
+      "frame": {
+        "x": 256,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 6,
+      "frame": {
+        "x": 512,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 7,
+      "frame": {
+        "x": 768,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 8,
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 9,
+      "frame": {
+        "x": 256,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 10,
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 11,
+      "frame": {
+        "x": 768,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      }
+    },
+    {
+      "index": 12,
+      "frame": {
+        "x": 0,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      }
+    }
+  ]
+}

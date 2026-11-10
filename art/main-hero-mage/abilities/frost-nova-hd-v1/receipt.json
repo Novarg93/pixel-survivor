@@ -1,0 +1,22 @@
+{
+  "tool": "PixelLab MCP vfx_workbench",
+  "method": "deterministic procedural renderer, not AI generation",
+  "effectId": "04626972-53e6-4f16-ae09-a24bc50631cb",
+  "stepId": "17f28167-d9fe-4537-89ff-ac4b7229b0aa",
+  "imageId": "2c05e88a-64c8-4ff7-a9b5-d9ed57dd3c78",
+  "editorUrl": "https://pixellab.ai/create-vfx?effect=04626972-53e6-4f16-ae09-a24bc50631cb",
+  "description": "512px-native detailed regular Frost Nova; 24 frames at 20fps; transparent PNG and clear last frame; fine ice veins and snow crystals.",
+  "exportText": "saved to My effects: 'Pixel Survivor - Frost Nova HD 512 v1' (effect id 04626972-53e6-4f16-ae09-a24bc50631cb); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=04626972-53e6-4f16-ae09-a24bc50631cb\n512x512, 24 frames @ 20 fps, plays once; anchor (origin) at 256,256\nstill warns: up to 424 colours in one frame; pixel VFX usually stay under ~24. The user gets it as saved: fix it on step 17f28167-d9fe-4537-89ff-ac4b7229b0aa and export again with --replace 04626972-53e6-4f16-ae09-a24bc50631cb, or say why it is right as it is.\ndownload https://api.pixellab.ai/mcp/pixel-tools/2c05e88a-64c8-4ff7-a9b5-d9ed57dd3c78/: pixel-survivor-frost-nova-hd-512-v1.gif, pixel-survivor-frost-nova-hd-512-v1.json, pixel-survivor-frost-nova-hd-512-v1.png\nno game pack (it renders every part again, so only when asked): export again with --replace 04626972-53e6-4f16-ae09-a24bc50631cb and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 2c05e88a-64c8-4ff7-a9b5-d9ed57dd3c78 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nthe GIF uses the nearest 255 colours (a GIF frame can't hold more); the spritesheet keeps every colour\nnext: vfx_workbench(argv=['17f28167-d9fe-4537-89ff-ac4b7229b0aa', 'export', '--name', \"Pixel Survivor - Frost Nova HD 512 v1\", '--replace', '04626972-53e6-4f16-ae09-a24bc50631cb'])",
+  "gamePractice": {
+    "level": 54,
+    "novaRank": 4,
+    "area": 1.45,
+    "radiusWorld": 127.02,
+    "sourceCanvas": 146,
+    "zoom2Diameter": 508.08,
+    "zoom2SourcePixel": 3.48,
+    "zoom3Diameter": 762.12,
+    "newSourceCanvas": 512,
+    "newZoom2SourcePixel": 0.99234375
+  }
+}

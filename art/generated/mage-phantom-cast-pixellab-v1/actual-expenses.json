@@ -1,0 +1,33 @@
+{
+  "budgetCreditEquivalentUsd": 2,
+  "before": {
+    "creditsUsd": 0,
+    "generations": 1657.9
+  },
+  "after": {
+    "creditsUsd": 0,
+    "generations": 1650.9
+  },
+  "creditsDebitedUsd": 0,
+  "subscriptionGenerationsDebited": 7,
+  "perJob": [
+    {
+      "id": "3a3a65d6-58fe-4d0d-964e-11b991e59130",
+      "generations": 1
+    },
+    {
+      "id": "b68094e6-5ae9-4562-b8f4-241f49139b9a",
+      "generations": 3
+    },
+    {
+      "id": "862e529f-d057-4064-8743-b3e7f9b5baa5",
+      "generations": 3
+    }
+  ],
+  "estimatedApiCreditEquivalentUsdRange": [
+    0.1257,
+    0.1475
+  ],
+  "priceSource": "https://www.pixellab.ai/pixellab-api",
+  "note": "All cash-credit charges are zero. Subscription-generation equivalents are estimates from the official API pricing, not an actual USD invoice. No further generation calls planned."
+}

@@ -1,0 +1,17 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const directory='art/generated/mage-sfx-elevenlabs-v1';
+const previous=JSON.parse(readFileSync('art/generated/ash-warden-animation-library-v1/source/runtime-baseline.json','utf8'));
+const warden=JSON.parse(readFileSync('art/generated/ash-warden-pixellab-runtime-v1/integration-verification.json','utf8'));
+const baseline={...previous,...warden.currentSHA256};
+const manifest=JSON.parse(readFileSync(`${directory}/manifest.json`,'utf8'));
+const allowedChanged=['src/game/audio/AudioBackend.ts','src/game/audio/AudioController.ts','src/game/audio/PhaserAudioBackend.ts','src/game/audio/README.md','src/game/audio/catalog.ts','src/game/bootstrap/preparePracticeMage.ts','src/ui/components/MainMenu.vue'].sort();
+const allowedAdded=['src/game/audio/mageSamples.ts',...manifest.entries.map(e=>`public/assets/audio/mage-sfx-v1/${e.file}`)].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort(),sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>sha(file)!==baseline[file]).sort(),added=files.filter(file=>!(file in baseline));
+if(JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw new Error(JSON.stringify({unexpectedScope:{changed,added}}));
+const report={baselineFiles:Object.keys(baseline).length,changed,added,previousSHA256:Object.fromEntries(changed.map(file=>[file,baseline[file]])),currentSHA256:Object.fromEntries([...changed,...added].map(file=>[file,sha(file)])),unchanged:Object.keys(baseline).length-changed.length};
+writeFileSync(`${directory}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({baselineFiles:report.baselineFiles,changed:changed.length,added:added.length,unchanged:report.unchanged}));

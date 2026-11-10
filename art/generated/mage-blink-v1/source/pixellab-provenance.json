@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "tool": "PixelLab vfx_workbench",
+  "chargedUSD": 0,
+  "notes": "Free exact renderer per tool describe start, no generation jobs or credits charged. Rendering original authored recipes, not AI image generation.",
+  "initialStep": "7ab75acd-bad8-445a-b858-3b9e33c17944",
+  "departure": {
+    "step": "447d52ce-5572-46d4-8906-8aff325f93c1",
+    "export": "saved to My effects: 'Pixel Survivor Mage Blink Departure A v1' (effect id c3d0627e-bb05-4e57-ba29-9f6d43efc2b3); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=c3d0627e-bb05-4e57-ba29-9f6d43efc2b3\n128x128, 8 frames @ 25 fps, plays once; anchor (origin) at 64,104\ndownload https://api.pixellab.ai/mcp/pixel-tools/7048127f-53ef-4a0d-9d89-56b62e92f1e4/: pixel-survivor-mage-blink-departure-a-v1-game.zip, pixel-survivor-mage-blink-departure-a-v1.gif, pixel-survivor-mage-blink-departure-a-v1.json, pixel-survivor-mage-blink-departure-a-v1.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 7048127f-53ef-4a0d-9d89-56b62e92f1e4 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['447d52ce-5572-46d4-8906-8aff325f93c1', 'export', '--name', \"Pixel Survivor Mage Blink Departure A v1\", '--replace', 'c3d0627e-bb05-4e57-ba29-9f6d43efc2b3'])"
+  },
+  "arrival": {
+    "step": "f6cbaead-6946-4f82-bd2d-91ad176faf9e",
+    "export": "saved to My effects: 'Pixel Survivor Mage Blink Arrival B v1' (effect id 536520a8-96b2-4e4a-a76b-9e213b1d1bd2); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=536520a8-96b2-4e4a-a76b-9e213b1d1bd2\n128x128, 8 frames @ 25 fps, plays once; anchor (origin) at 64,104\ndownload https://api.pixellab.ai/mcp/pixel-tools/66bbacb0-0de1-418f-9576-018eee93768c/: pixel-survivor-mage-blink-arrival-b-v1-game.zip, pixel-survivor-mage-blink-arrival-b-v1.gif, pixel-survivor-mage-blink-arrival-b-v1.json, pixel-survivor-mage-blink-arrival-b-v1.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 66bbacb0-0de1-418f-9576-018eee93768c (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['f6cbaead-6946-4f82-bd2d-91ad176faf9e', 'export', '--name', \"Pixel Survivor Mage Blink Arrival B v1\", '--replace', '536520a8-96b2-4e4a-a76b-9e213b1d1bd2'])"
+  }
+}

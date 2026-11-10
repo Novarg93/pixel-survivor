@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"status\":\"running\",\"task_id\":\"95e50c5f-52d1-437c-8dd5-7cfc2a09bb02\",\"created_at\":1794063364,\"updated_at\":1794063377,\"billing\":{\"source\":\"balance\",\"reason\":\"usage_exhausted\",\"plan_jobs_running\":0,\"plan_job_limit\":2,\"plan_usage_left_pct\":0,\"balance_charged\":0.25,\"balance_left\":7.99}}"
+    }
+  ],
+  "structuredContent": {
+    "status": "running",
+    "task_id": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+    "created_at": 1794063364,
+    "updated_at": 1794063377,
+    "billing": {
+      "source": "balance",
+      "reason": "usage_exhausted",
+      "plan_jobs_running": 0,
+      "plan_job_limit": 2,
+      "plan_usage_left_pct": 0,
+      "balance_charged": 0.25,
+      "balance_left": 7.99
+    }
+  },
+  "isError": false
+}

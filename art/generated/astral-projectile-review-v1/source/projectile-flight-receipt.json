@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: a3fe0afa-b6cd-4fd9-a799-630368f85a1c\njob_id: a3fe0afa-b6cd-4fd9-a799-630368f85a1c\ndescription: Seamless flight idle loop, locked camera. The projectile stays in place pointing east. Keep the hooked crescent head, dark central hole, size and head anchor fixed at x75 y62 throughout. Only the two short tail wisps gently flicker backwards, one restrained pale mint edge pulse. Preserve the input colors and clean coarse pixel clusters. No translation, spinning, growing, extra projectiles, spark clouds, white flash or expanding orb.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110111\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"a3fe0afa-b6cd-4fd9-a799-630368f85a1c\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/a3fe0afa-b6cd-4fd9-a799-630368f85a1c/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: bb9f0d54-d5c8-5816-b16b-320043116e1c\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

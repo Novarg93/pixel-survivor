@@ -1,0 +1,69 @@
+{
+  "parameters": {
+    "prompt": "Native HD pixel art dark-fantasy top-down action RPG enemy sprite for Pixel Survivor, low top-down 3/4 camera looking slightly down at the front, facing South toward the viewer. ONE isolated full character/object only, centered in a 128x128 transparent canvas. Crisp hand-placed-looking pixel clusters and hard pixel edges, detailed but readable at small game zoom, controlled compact palette, dark contour and restrained highlights. Entire silhouette visible with at least 10px transparent margin; contact/base around pixel y=112, centerline x=64. No background, floor, scenery, shadow rectangle, text, frame, sprite sheet, multiple views, motion blur, painterly brush strokes, extra heads or extra limbs. Stationary neutral reference pose. A nonhuman rune-bound arcane construct boss imprisoned in ancient segmented stone and dark metal armor. A floating angular head-shaped rune cage above a broad stone torso; precisely two articulated heavy stone arms and two short stone legs, tiny contained violet energy gaps connecting the segments. One geometric hexagonal rune focus held low in one hand instead of a staff, the other hand has three broad stone fingers. Stepped squared silhouette, slate basalt, tarnished silver and blue-violet carved runes. No robe, no ordinary face, no giant attached spell effects.",
+    "prompt_style": "rd_pro__default",
+    "width": 128,
+    "height": 128,
+    "num_images": 1,
+    "remove_bg": true,
+    "seed": 83104,
+    "upload_outputs": true
+  },
+  "preflight": {
+    "balance": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 42,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 42,
+        "api_job_slots": {
+          "in_use": 1,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "active": [
+      {
+        "task_id": "9b04938e-05a3-4b91-9823-4b751fdd8cd5",
+        "status": "running"
+      }
+    ],
+    "estimate": {
+      "created_at": 1794039450,
+      "credit_cost": 0,
+      "balance_cost": 0.18,
+      "output_images": [],
+      "base64_images": [],
+      "output_urls": [],
+      "model": "check_cost",
+      "remaining_credits": 0,
+      "remaining_balance": 10,
+      "would_use": "plan",
+      "balance_cost_if_balance": 0.18,
+      "resolved_prompt_style": "rd_pro__default",
+      "used_input_image": false,
+      "reference_images_count": 0,
+      "used_extra_input_image": false,
+      "used_input_palette": false,
+      "used_strength": false,
+      "effective_timeout_seconds": 180
+    }
+  }
+}

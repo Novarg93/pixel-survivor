@@ -1,0 +1,3250 @@
+{
+  "pngFiles": 462,
+  "pngCRCErrors": [],
+  "gifFiles": 43,
+  "usableModels": 8,
+  "motions": 14,
+  "motionFrames": 168,
+  "sourceMotionAtlasBaseRGBABytes": 24772608,
+  "sourceMotionAtlasBaseMiB": 23.625,
+  "modelBaseRGBABytes": 524288,
+  "totalStagingFileBytes": 33322596,
+  "privateReferences": [],
+  "errors": [],
+  "pngs": [
+    {
+      "file": "charger/charge-a/attempt-2/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-a/attempt-2/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/charge-b/attempt-2/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-a/attempt-2/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/melee-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/attempt-2/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/attempt-2/raw-1.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/selected.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-a/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "charger/model-b/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "comparisons/charger-models-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-models-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-motion-charge-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-motion-charge-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-motion-melee-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-motion-melee-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-silhouette-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/charger-silhouette-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-models-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-models-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-motion-cast-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-motion-cast-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-motion-teleport-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-motion-teleport-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-silhouette-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/eclipse-silhouette-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-models-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-models-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-motion-orb-cast-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-motion-orb-cast-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-silhouette-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/guardian-silhouette-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/models-overview.png",
+      "width": 768,
+      "height": 1120,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "comparisons/sorcerer-models-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-models-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-motion-cast-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-motion-cast-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-motion-teleport-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-motion-teleport-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-silhouette-1280-canvas.png",
+      "width": 1280,
+      "height": 466,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "comparisons/sorcerer-silhouette-844-canvas.png",
+      "width": 844,
+      "height": 187,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "context/charger-1-right-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/eclipse-1-right-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/eclipse-2-right-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/grove-burning.png",
+      "width": 1280,
+      "height": 768,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/grove-normal.png",
+      "width": 1280,
+      "height": 768,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/guardian-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/mage-down-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "context/sorcerer-1-right-idle-0.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-a/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/cast-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/raw-1.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-a/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/raw-1.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/model-b/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/presentation/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-a/teleport-composition-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/presentation/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "eclipse/teleport-b/teleport-composition-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/raw-1.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-a/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/raw-1.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/model-b/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-a/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "guardian/orb-cast-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "screenshots/charger-models-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-models-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-motion-charge-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-motion-charge-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-motion-melee-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-motion-melee-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-silhouette-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/charger-silhouette-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-models-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-models-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-cast-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-cast-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-1280-1350ms.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-1280-450ms.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-844-1350ms.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-844-450ms.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-motion-teleport-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-silhouette-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/eclipse-silhouette-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-models-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-models-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-motion-orb-cast-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-motion-orb-cast-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-silhouette-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/guardian-silhouette-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-models-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-models-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-cast-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-cast-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-1280-1350ms.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-1280-450ms.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-844-1350ms.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-844-450ms.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-motion-teleport-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-silhouette-1280.png",
+      "width": 1280,
+      "height": 720,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "screenshots/sorcerer-silhouette-844.png",
+      "width": 844,
+      "height": 390,
+      "bitDepth": 8,
+      "colorType": 2
+    },
+    {
+      "file": "sorcerer/cast-a/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-a/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/cast-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-a/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/animation-input-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/animation-sheet.png",
+      "width": 128,
+      "height": 152,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/animation-strip.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/model.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/nearest-x4.png",
+      "width": 512,
+      "height": 608,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/original.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/reference-192.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/model-b/spritesheet.png",
+      "width": 128,
+      "height": 128,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/presentation/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-a/teleport-composition-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/animation-sheet.png",
+      "width": 768,
+      "height": 648,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/animation-strip.png",
+      "width": 2304,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/key-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/nearest-x4.png",
+      "width": 3072,
+      "height": 2592,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/08.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/09.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/10.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/presentation/frames/11.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/spritesheet.png",
+      "width": 768,
+      "height": 576,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "sorcerer/teleport-b/teleport-composition-poses.png",
+      "width": 960,
+      "height": 216,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/eclipse/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/orb/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/00.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/01.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/02.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/03.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/04.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/05.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/06.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    },
+    {
+      "file": "vfx/rune/frames/07.png",
+      "width": 192,
+      "height": 192,
+      "bitDepth": 8,
+      "colorType": 6
+    }
+  ]
+}

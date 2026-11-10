@@ -1,0 +1,13 @@
+import {readFileSync,readdirSync,writeFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/rune-warden-vfx-review-v1',baseline=JSON.parse(readFileSync(`${root}/source/runtime-baseline.json`,'utf8'));
+const digest=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>!existsSync(file)||digest(file)!==baseline[file]).sort();
+const allowed=['src/game/art/assetRegistry.ts','src/game/art/GameArt.ts','src/game/art/RuneWardenArt.ts','src/game/art/runeWardenPack.ts','src/game/config/runeWarden.ts'].sort();
+const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
+const added=[...walk('src'),...walk('public')].filter(file=>!(file in baseline)).sort();
+const allowedAdded=['src/game/art/runeWardenVfxManifestPixellab.json','src/game/art/runeWardenVfxPack.ts','public/assets/hd/rune-warden-pixellab-v1/atlas.json','public/assets/hd/rune-warden-pixellab-v1/atlas.png'].sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowed)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw Error('Unexpected integration scope: '+JSON.stringify({changed,added}));
+const report={runtimeIntegration:true,approval:JSON.parse(readFileSync(`${root}/source/approval.json`,'utf8')),protectedFiles:Object.keys(baseline).length,unchangedProtectedFiles:Object.keys(baseline).length-changed.length,changed,added,currentSHA256:Object.fromEntries([...changed,...added].map(file=>[file,digest(file)])),oldRuneAtlasUnchanged:true,otherBossAssetsUnchanged:true,worldAndDamageUnchanged:true};
+writeFileSync('art/generated/rune-warden-pixellab-runtime-v1/integration-verification.json',JSON.stringify(report,null,2)+'\n');
+globalThis.console.log(JSON.stringify({approvedScopeVerified:true,changed:changed.length,added:added.length,unchanged:report.unchangedProtectedFiles}));

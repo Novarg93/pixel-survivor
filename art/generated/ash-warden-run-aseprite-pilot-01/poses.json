@@ -1,0 +1,1306 @@
+{
+  "walk": [
+    {
+      "durationMs": 80,
+      "frame": 1,
+      "legs": {
+        "left": {
+          "ankle": [
+            98,
+            145
+          ],
+          "hip": [
+            87,
+            113
+          ],
+          "knee": [
+            105.61619662811,
+            126.50693240909
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 1,
+          "roll": 0,
+          "sole": [
+            100,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            103,
+            139
+          ],
+          "hip": [
+            108,
+            113
+          ],
+          "knee": [
+            119.48231744745,
+            131.76583027836
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 5,
+          "roll": -0.08,
+          "sole": [
+            106,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -2,
+        0
+      ],
+      "phase": "left contact / right toe-off",
+      "upper": [
+        -1,
+        0
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 2,
+      "legs": {
+        "left": {
+          "ankle": [
+            90,
+            145
+          ],
+          "hip": [
+            88,
+            115.5
+          ],
+          "knee": [
+            104.64192086208,
+            131.37597146698
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 2,
+          "roll": 0,
+          "sole": [
+            92,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            105,
+            135
+          ],
+          "hip": [
+            109,
+            116.5
+          ],
+          "knee": [
+            122.93910325809,
+            133.52061692067
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 6,
+          "roll": -0.15,
+          "sole": [
+            108,
+            145
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        -1,
+        3
+      ],
+      "phase": "left load / right recovery",
+      "upper": [
+        -1,
+        2
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 3,
+      "legs": {
+        "left": {
+          "ankle": [
+            82,
+            145
+          ],
+          "hip": [
+            90,
+            112.5
+          ],
+          "knee": [
+            98.593087209207,
+            133.83445223611
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 3,
+          "roll": 0,
+          "sole": [
+            84,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            117,
+            132
+          ],
+          "hip": [
+            111,
+            115.5
+          ],
+          "knee": [
+            132.00155209948,
+            122.05246590322
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 7,
+          "roll": 0,
+          "sole": [
+            120,
+            142
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        1,
+        1
+      ],
+      "phase": "left support / right passing",
+      "upper": [
+        0,
+        1
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 4,
+      "legs": {
+        "left": {
+          "ankle": [
+            74,
+            145
+          ],
+          "hip": [
+            91,
+            110
+          ],
+          "knee": [
+            89.983107173975,
+            132.97750919879
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 4,
+          "roll": 0,
+          "sole": [
+            76,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            131,
+            136
+          ],
+          "hip": [
+            112,
+            114
+          ],
+          "knee": [
+            133.5976187724,
+            118.18842015111
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 8,
+          "roll": 0.06,
+          "sole": [
+            134,
+            146
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        2,
+        -1
+      ],
+      "phase": "left push / right reach",
+      "upper": [
+        1,
+        -1
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 5,
+      "legs": {
+        "left": {
+          "ankle": [
+            66,
+            145
+          ],
+          "hip": [
+            91,
+            111
+          ],
+          "knee": [
+            80.907990308312,
+            131.66763993258
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 5,
+          "roll": -0.08,
+          "sole": [
+            68,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            135,
+            139
+          ],
+          "hip": [
+            112,
+            115
+          ],
+          "knee": [
+            133.13841068115,
+            121.09652309723
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 1,
+          "roll": 0,
+          "sole": [
+            138,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        2,
+        0
+      ],
+      "phase": "right contact / left toe-off",
+      "upper": [
+        1,
+        0
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 6,
+      "legs": {
+        "left": {
+          "ankle": [
+            68,
+            141
+          ],
+          "hip": [
+            90,
+            114.5
+          ],
+          "knee": [
+            87.669969742654,
+            137.3816729939
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 6,
+          "roll": -0.15,
+          "sole": [
+            70,
+            149
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            127,
+            139
+          ],
+          "hip": [
+            111,
+            117.5
+          ],
+          "knee": [
+            132.55956386383,
+            121.88009200831
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 2,
+          "roll": 0,
+          "sole": [
+            130,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        1,
+        3
+      ],
+      "phase": "right load / left recovery",
+      "upper": [
+        1,
+        2
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 7,
+      "legs": {
+        "left": {
+          "ankle": [
+            80,
+            138
+          ],
+          "hip": [
+            88,
+            113.5
+          ],
+          "knee": [
+            99.471988006556,
+            133.43473077765
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 7,
+          "roll": 0,
+          "sole": [
+            82,
+            146
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            119,
+            139
+          ],
+          "hip": [
+            109,
+            114.5
+          ],
+          "knee": [
+            128.86868007824,
+            123.94645711092
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 3,
+          "roll": 0,
+          "sole": [
+            122,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -1,
+        1
+      ],
+      "phase": "right support / left passing",
+      "upper": [
+        0,
+        1
+      ]
+    },
+    {
+      "durationMs": 80,
+      "frame": 8,
+      "legs": {
+        "left": {
+          "ankle": [
+            94,
+            142
+          ],
+          "hip": [
+            87,
+            112
+          ],
+          "knee": [
+            105.51395020556,
+            125.64674495204
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 8,
+          "roll": 0.06,
+          "sole": [
+            96,
+            150
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            111,
+            139
+          ],
+          "hip": [
+            108,
+            112
+          ],
+          "knee": [
+            124.2563099721,
+            126.82337296606
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 4,
+          "roll": 0,
+          "sole": [
+            114,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -2,
+        -1
+      ],
+      "phase": "right push / left reach",
+      "upper": [
+        -1,
+        -1
+      ]
+    }
+  ],
+  "run": [
+    {
+      "durationMs": 50,
+      "frame": 1,
+      "legs": {
+        "left": {
+          "ankle": [
+            111,
+            145
+          ],
+          "hip": [
+            90,
+            112.5
+          ],
+          "knee": [
+            109.25726878436,
+            125.0760724778
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 1,
+          "roll": 0,
+          "sole": [
+            113,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            91,
+            129
+          ],
+          "hip": [
+            111,
+            115.5
+          ],
+          "knee": [
+            107.0527743918,
+            137.14299909897
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 7,
+          "roll": 0,
+          "sole": [
+            94,
+            139
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        1,
+        1
+      ],
+      "phase": "left impact",
+      "upper": [
+        0,
+        1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 2,
+      "legs": {
+        "left": {
+          "ankle": [
+            95,
+            145
+          ],
+          "hip": [
+            89,
+            116
+          ],
+          "knee": [
+            107.62790679401,
+            129.49077790469
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 2,
+          "roll": 0,
+          "sole": [
+            97,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            105,
+            129
+          ],
+          "hip": [
+            110,
+            118
+          ],
+          "knee": [
+            121.13838131366,
+            136.97199150621
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 8,
+          "roll": 0,
+          "sole": [
+            108,
+            139
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        0,
+        4
+      ],
+      "phase": "left compression",
+      "upper": [
+        1,
+        3
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 3,
+      "legs": {
+        "left": {
+          "ankle": [
+            79,
+            145
+          ],
+          "hip": [
+            88,
+            113.5
+          ],
+          "knee": [
+            96.293178806479,
+            134.95281299233
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 3,
+          "roll": 0,
+          "sole": [
+            81,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            123,
+            132
+          ],
+          "hip": [
+            109,
+            114.5
+          ],
+          "knee": [
+            130.95824272983,
+            115.85483438756
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 9,
+          "roll": 0,
+          "sole": [
+            126,
+            142
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        -1,
+        1
+      ],
+      "phase": "left drive",
+      "upper": [
+        1,
+        1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 4,
+      "legs": {
+        "left": {
+          "ankle": [
+            63,
+            145
+          ],
+          "hip": [
+            88,
+            111.5
+          ],
+          "knee": [
+            78.608773674419,
+            132.49535348837
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 4,
+          "roll": -0.12,
+          "sole": [
+            65,
+            153
+          ],
+          "support": true
+        },
+        "right": {
+          "ankle": [
+            135,
+            135
+          ],
+          "hip": [
+            109,
+            112.5
+          ],
+          "knee": [
+            130.40133247627,
+            117.59734913853
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 10,
+          "roll": 0.08,
+          "sole": [
+            138,
+            145
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        -1,
+        -1
+      ],
+      "phase": "left toe-off",
+      "upper": [
+        0,
+        -1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 5,
+      "legs": {
+        "left": {
+          "ankle": [
+            61,
+            140
+          ],
+          "hip": [
+            89,
+            109
+          ],
+          "knee": [
+            77.739268066215,
+            129.05482276948
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 5,
+          "roll": -0.22,
+          "sole": [
+            63,
+            148
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            135,
+            137
+          ],
+          "hip": [
+            110,
+            111
+          ],
+          "knee": [
+            130.23102248306,
+            119.64324761245
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 11,
+          "roll": 0.08,
+          "sole": [
+            138,
+            147
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        0,
+        -3
+      ],
+      "phase": "left heel recovery",
+      "upper": [
+        -1,
+        -3
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 6,
+      "legs": {
+        "left": {
+          "ankle": [
+            63,
+            136
+          ],
+          "hip": [
+            90,
+            110.5
+          ],
+          "knee": [
+            82.653882718639,
+            132.29528758444
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 6,
+          "roll": -0.18,
+          "sole": [
+            65,
+            144
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            134,
+            138
+          ],
+          "hip": [
+            111,
+            113.5
+          ],
+          "knee": [
+            131.98243454991,
+            120.11342878988
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 12,
+          "roll": 0.08,
+          "sole": [
+            137,
+            148
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        1,
+        -1
+      ],
+      "phase": "short suspension / right reach",
+      "upper": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 7,
+      "legs": {
+        "left": {
+          "ankle": [
+            71,
+            135
+          ],
+          "hip": [
+            88,
+            113.5
+          ],
+          "knee": [
+            90.957109781989,
+            136.30911006018
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 7,
+          "roll": 0,
+          "sole": [
+            73,
+            143
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            131,
+            139
+          ],
+          "hip": [
+            109,
+            114.5
+          ],
+          "knee": [
+            130.0093938176,
+            121.02727902093
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 1,
+          "roll": 0,
+          "sole": [
+            134,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -1,
+        1
+      ],
+      "phase": "right impact",
+      "upper": [
+        0,
+        1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 8,
+      "legs": {
+        "left": {
+          "ankle": [
+            85,
+            135
+          ],
+          "hip": [
+            87,
+            117
+          ],
+          "knee": [
+            104.71969651196,
+            131.66329961244
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 8,
+          "roll": 0,
+          "sole": [
+            87,
+            143
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            115,
+            139
+          ],
+          "hip": [
+            108,
+            117
+          ],
+          "knee": [
+            127.87892015574,
+            126.42488904136
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 2,
+          "roll": 0,
+          "sole": [
+            118,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -2,
+        4
+      ],
+      "phase": "right compression",
+      "upper": [
+        -1,
+        3
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 9,
+      "legs": {
+        "left": {
+          "ankle": [
+            103,
+            138
+          ],
+          "hip": [
+            88,
+            113.5
+          ],
+          "knee": [
+            110.24172406038,
+            119.35710771813
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 9,
+          "roll": 0,
+          "sole": [
+            105,
+            146
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            99,
+            139
+          ],
+          "hip": [
+            109,
+            114.5
+          ],
+          "knee": [
+            116.58378182762,
+            135.15154360311
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 3,
+          "roll": 0,
+          "sole": [
+            102,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        -1,
+        1
+      ],
+      "phase": "right drive",
+      "upper": [
+        -1,
+        1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 10,
+      "legs": {
+        "left": {
+          "ankle": [
+            115,
+            141
+          ],
+          "hip": [
+            89,
+            111
+          ],
+          "knee": [
+            109.28925130333,
+            121.83264887045
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 10,
+          "roll": 0.08,
+          "sole": [
+            117,
+            149
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            83,
+            139
+          ],
+          "hip": [
+            110,
+            113
+          ],
+          "knee": [
+            99.778067693546,
+            132.48107029714
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 4,
+          "roll": -0.12,
+          "sole": [
+            86,
+            149
+          ],
+          "support": true
+        }
+      },
+      "pelvis": [
+        0,
+        -1
+      ],
+      "phase": "right toe-off",
+      "upper": [
+        0,
+        -1
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 11,
+      "legs": {
+        "left": {
+          "ankle": [
+            115,
+            143
+          ],
+          "hip": [
+            90,
+            108.5
+          ],
+          "knee": [
+            105.73458001572,
+            125.27566665528
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 11,
+          "roll": 0.08,
+          "sole": [
+            117,
+            151
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            81,
+            134
+          ],
+          "hip": [
+            111,
+            111.5
+          ],
+          "knee": [
+            98.445332851638,
+            129.56599935774
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 5,
+          "roll": -0.22,
+          "sole": [
+            84,
+            144
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        1,
+        -3
+      ],
+      "phase": "right heel recovery",
+      "upper": [
+        1,
+        -3
+      ]
+    },
+    {
+      "durationMs": 50,
+      "frame": 12,
+      "legs": {
+        "left": {
+          "ankle": [
+            114,
+            144
+          ],
+          "hip": [
+            91,
+            110
+          ],
+          "knee": [
+            108.66983414322,
+            124.72334749135
+          ],
+          "lengths": [
+            23,
+            20
+          ],
+          "phase": 12,
+          "roll": 0.08,
+          "sole": [
+            116,
+            152
+          ],
+          "support": false
+        },
+        "right": {
+          "ankle": [
+            83,
+            130
+          ],
+          "hip": [
+            112,
+            114
+          ],
+          "knee": [
+            100.76263856866,
+            132.9135324057
+          ],
+          "lengths": [
+            22,
+            18
+          ],
+          "phase": 6,
+          "roll": -0.18,
+          "sole": [
+            86,
+            140
+          ],
+          "support": false
+        }
+      },
+      "pelvis": [
+        2,
+        -1
+      ],
+      "phase": "short suspension / left reach",
+      "upper": [
+        1,
+        -1
+      ]
+    }
+  ]
+}

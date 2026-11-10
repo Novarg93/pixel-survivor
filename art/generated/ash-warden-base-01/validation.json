@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-06",
+  "status": "draft requires manual review; required visual identity and two-hand grip not achieved",
+  "authorizedLimit": 3,
+  "generationsSpent": 3,
+  "remainingGenerations": 37,
+  "animationsGenerated": 0,
+  "directionSetsGenerated": 0,
+  "technicalChecks": {
+    "PNG": "128x128 transparent hard-alpha PNGs with no occupied edge pixels",
+    "pixelChecks": "passed",
+    "referenceCopy": "identical",
+    "candidateCopy": "identical",
+    "selectedIsUntouchedRawOutput": true,
+    "scaleComparison": "Static Canvas screenshot using current world scales at desktop and touch zoom; not a live Phaser encounter",
+    "asepriteEditing": false
+  },
+  "qualityChecks": {
+    "neutralSprite": true,
+    "referenceIdentity": "partial",
+    "massiveBossSilhouette": false,
+    "twoHandGrip": false,
+    "branchMotifPreserved": false,
+    "acceptedForIntegration": false
+  },
+  "projectChecks": {
+    "npmCheckExitCode": 0,
+    "typecheck": "passed",
+    "lint": "passed",
+    "unitTests": 655,
+    "unitTestFiles": 82,
+    "build": "passed",
+    "buildWarning": "Existing large Phaser chunk warning",
+    "e2e": "not run; gameplay not changed",
+    "protectedFiles": {
+      "protectedFileCount": 419,
+      "protectedBefore": "12bd423820a4305333108ca17e8caf176263debfb02e974ef6b1f411889fc7a6",
+      "protectedAfter": "12bd423820a4305333108ca17e8caf176263debfb02e974ef6b1f411889fc7a6",
+      "changed": [],
+      "pixelChecks": "passed",
+      "referenceCopy": "identical",
+      "candidateCopy": "identical",
+      "artifacts": [
+        {
+          "file": "01-concept-pixelart-96x128.png",
+          "sha256": "b73d06c7aed514952ff8990991cde64ab13acfca971cf1f57e62700b14af6688"
+        },
+        {
+          "file": "02-img2img-guide-128.png",
+          "sha256": "26eea9d6855dc350b12a52c1938df34218d27cd6427319f3de732e5db0deba03"
+        },
+        {
+          "file": "03-pixflux-attempt-01-raw.png",
+          "sha256": "4c9c286f4d682272bb437a858c5aa8fc15b278ff10f1a617923c8aab590e10a0"
+        },
+        {
+          "file": "04-pixflux-attempt-02-raw.png",
+          "sha256": "057ef10a6cdff5892dd2b9c044632ea1e4b5ec7fa872bd1e1ac7aa65f90f313b"
+        },
+        {
+          "file": "ash-warden-base-candidate.png",
+          "sha256": "4c9c286f4d682272bb437a858c5aa8fc15b278ff10f1a617923c8aab590e10a0"
+        },
+        {
+          "file": "attempt-01.json",
+          "sha256": "63e16a99d3125d3cfb35c23bca22a645eb4d0488b0d3c618fcc470118c679d22"
+        },
+        {
+          "file": "attempt-02.json",
+          "sha256": "a06cadaf984cea3e47e78ea590e125a0a7bef46f1b9935d34aa9351533fc461b"
+        },
+        {
+          "file": "attempts-nearest-x4.png",
+          "sha256": "4d43bded561c66a05af92684b2c9086a412360351fe1772eb47f8ed3713bf410"
+        },
+        {
+          "file": "comparison-canvas-screenshot.png",
+          "sha256": "b0cc894d7519276fc64709b621f4e4363b5794521d179086afd82aac93384fc4"
+        },
+        {
+          "file": "comparison-metadata.json",
+          "sha256": "a08d58302010190b953a7bfcf8e38358dff49237f37facba3827b7c1dc245e94"
+        },
+        {
+          "file": "comparison-world-scale.png",
+          "sha256": "1575b5bcad8105a9961b5bdf588c501528cdb1ea773652ff976c45720c213b0e"
+        },
+        {
+          "file": "generation-record.json",
+          "sha256": "022e356aed41ed0a6c7e885ac76f5ccaaef5ad5c588e9b68b722f669997f15e2"
+        },
+        {
+          "file": "input-preparation.json",
+          "sha256": "45688fd1f7141641fac26218536932afdb6c6897724efa27ed12e7249c586e2f"
+        },
+        {
+          "file": "inspect-attempts.mjs",
+          "sha256": "f29add86a05d1c9c2ec128599c127c33365b0a5845186d7687e02ba7e4f350a1"
+        },
+        {
+          "file": "make-comparison.mjs",
+          "sha256": "51e87e0780f309dc95c041c3ab4eea8a7621a0827c974974cad84a51fef5dfbd"
+        },
+        {
+          "file": "pixel-metrics.json",
+          "sha256": "2f3de199f5465947634e5b0d48be1cb3a7727b3101f96af7b0811c72b53a4135"
+        },
+        {
+          "file": "prepare-input.mjs",
+          "sha256": "e68311ef642b066cf144b2e4e3f7be86b621b277cf7707ba6e424c6ad75dbe60"
+        },
+        {
+          "file": "protected-baseline.json",
+          "sha256": "c529ddf600acef4712b0c43566a7067a59816ad895918fa1098f4876691fcf3e"
+        },
+        {
+          "file": "reference-original.png",
+          "sha256": "64ac95bc510ae073d0b7128f99092c716eecc69de864be8287e1515ae9bccbc1"
+        },
+        {
+          "file": "results.json",
+          "sha256": "3a1e9be02fccfeefc3a7b45b41fb9683000f0caf554a1dd1207029ebec3c7ec8"
+        }
+      ]
+    }
+  },
+  "git": {
+    "commit": false,
+    "push": false,
+    "deploy": false
+  },
+  "next": "Stop for manual review; no additional generation, directions, animation, integration or paid cleanup authorized in this stage"
+}

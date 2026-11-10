@@ -1,0 +1,44 @@
+{
+  "baselineFiles": 363,
+  "changed": [
+    "src/game/audio/AudioBackend.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/PhaserAudioBackend.ts",
+    "src/game/audio/README.md",
+    "src/game/audio/catalog.ts"
+  ],
+  "added": [
+    "public/assets/audio/music-v1/boss.mp3",
+    "public/assets/audio/music-v1/burning.mp3",
+    "public/assets/audio/music-v1/dusk.mp3",
+    "public/assets/audio/music-v1/dying.mp3",
+    "public/assets/audio/music-v1/normal.mp3",
+    "src/game/audio/StreamingMusic.ts",
+    "src/game/audio/musicTracks.ts"
+  ],
+  "unchanged": 357,
+  "previousSHA256": {
+    "src/game/audio/AudioBackend.ts": "f0861129b0a626387fbba9043fd1bfbc83b772081a68287f6cf2cfede51b556c",
+    "src/game/audio/AudioController.ts": "ac55822ed622987a4e377a0f8e5e0fb01e7e251600838f00997674fb9fd83d16",
+    "src/game/audio/AudioPresentation.ts": "d3843a9f38eeddec8ee93fccb57a03477b08b85672ed221012a904afae967dcf",
+    "src/game/audio/PhaserAudioBackend.ts": "7a89e241266c78b21a320d04e9450dcec722e05ddee1bbff2ea07cfb17aa9380",
+    "src/game/audio/README.md": "baf4923dd4f8f9cc8e8b0558db39773a01ba6e5d32e4a958d23f77b04008f5a4",
+    "src/game/audio/catalog.ts": "fbffb8a65cb877321bdb0f9ffbcb17e1947e85dfd657f5d512e0f34fe7aca849"
+  },
+  "currentSHA256": {
+    "src/game/audio/AudioBackend.ts": "dad1acdb7f893073ad97afb6daccf3afedef12e55e29eab3a68854ff6eb99468",
+    "src/game/audio/AudioController.ts": "2a3325bcb3aee7f691d933bfea321307b2a0b84a5c638b1c1f0d5eae84461a5c",
+    "src/game/audio/AudioPresentation.ts": "01fef62957a179e1bb794f12cba314b41f75d7f1db20864fe7b19a41cb3af865",
+    "src/game/audio/PhaserAudioBackend.ts": "bb53f2bd8253e06415aa01edcb794a7075bed39186b792a6c04151bf55b7077b",
+    "src/game/audio/README.md": "efd253e92d6d5f696c63a62b16af0f13d0aaf00905cb7f6f9e06c94ea7c4059e",
+    "src/game/audio/catalog.ts": "0cbf85bc6d7eaa4fdfa48b3f840e6a2bb1c7fa4f0283306645e6e8dc1bb43091",
+    "public/assets/audio/music-v1/boss.mp3": "2eb9a2f3d7fc82c355f5282344e18f803a24fea41e7b5b93d9336cdd26d550e6",
+    "public/assets/audio/music-v1/burning.mp3": "2ada0c1347ffe0202785f1d1bd47dbf43398518c669b0e28a24415b90b5ae84b",
+    "public/assets/audio/music-v1/dusk.mp3": "9f1f3d7b7245738cb750f8ae0494cca0b78f475cd3ebc957e8e55403de6b4654",
+    "public/assets/audio/music-v1/dying.mp3": "42616cb86859253b00438e846819f3188f2f3c04c5d8af6210daa424ba5b94df",
+    "public/assets/audio/music-v1/normal.mp3": "7d04e41d46db426dffea65551fa179b52e9dd1dead20ef27c06b3d706a114d70",
+    "src/game/audio/StreamingMusic.ts": "a86b5830778713454aac03ce8fc7c7b1f23ad7623e67129005c8b42ef394c473",
+    "src/game/audio/musicTracks.ts": "e58147f13d474505c2042f39f7b011451f7ba87306cd10f3b03c64e597a2d59c"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "source": "art/main-hero-mage/abilities/hero-model/8-directions.png",
+  "crop": {
+    "x": 256,
+    "y": 256,
+    "width": 256,
+    "height": 256
+  },
+  "direction": "north",
+  "view": "low top-down",
+  "firstFrame": "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/first-frame-north.png",
+  "firstFrameSHA256": "ebb63906cb0f6ad214dd28ef364f7e07db904f657fd7a8af6913560be9627440",
+  "bounds": {
+    "minX": 54,
+    "minY": 31,
+    "maxX": 196,
+    "maxY": 252
+  },
+  "opaque": 18626,
+  "transparent": 46910,
+  "sources": {
+    "art/main-hero-mage/abilities/hero-model/8-directions.png": "f6832fe1a023076ee40d4374679d92b46814363b430f8d351d4dc59bece022d1",
+    "art/main-hero-mage/abilities/hero-model/idle-animation.png": "a4232216d885652a354fd92cca46cbd850f387bcf91e6fee5ae7cfbb96881dbc",
+    "art/main-hero-mage/abilities/hero-model/idle.gif": "bb9b4d1ebe6421bd90d1b24de7ae8fc2c864b7ef06fd76230e2b9083f1bc1f05",
+    "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.gif": "02cace84a99896594e07c6f8ce1f70440e5f8f2be327b8e37446cff9c7d4de22",
+    "art/main-hero-mage/abilities/hero-model/run/pixellab-Initiate-a-dynamic-running-cyc-1794153708733.png": "79ba7047cee66e8691ca350d07a63e0097629918ab02693a5c6c459b48b63d6b",
+    "art/main-hero-mage/abilities/hero-model/static.png": "fba5f9cd01988c3981c3a00dc22b9b6d6742841da215bb7d0bcd3e7a357cde60",
+    "art/main-hero-mage/abilities/hero-model/walking/walking.gif": "20cdb4d71c94648269dbbc0a8641374a7b0029a28a04b7dab03e948d7bc650d0",
+    "art/main-hero-mage/abilities/hero-model/walking/walking.png": "fc41fb69809c3add3bf784061cd121f51f7beab7453d4cc36e0b5424b99e1cac"
+  }
+}

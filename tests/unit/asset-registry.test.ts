@@ -24,12 +24,12 @@ it('preserves the approved B PNG and all 37 in-bounds nonoverlapping frames', ()
 it('catalogs every current hero, enemy, consumable and ability with explicit migration status', () => {
   expect(Object.keys(ENEMY_ART).sort()).toEqual(Object.keys(ENEMIES).sort()); expect(Object.keys(CHARACTER_ART).sort()).toEqual(Object.keys(CHARACTERS).sort());
   expect(Object.keys(LOOT_ART).sort()).toEqual(Object.keys(LOOT_PIXELS).filter(k => k !== 'chest').sort()); expect(Object.keys(ABILITY_ART).sort()).toEqual(ABILITIES.map(a => a.id).sort());
-  expect(new Set(Object.values(ASSET_REGISTRY).filter(a => a.source.kind === 'atlas').map(a => a.source.key))).toEqual(new Set(['mage-fireball-v1','astral-revenant-v1','briar-beast-v1','rune-warden-v1','ash-warden-v1-0','hd-core', 'hd-runner', 'hd-mage', 'hd-mage-casting', 'hd-enemies', 'hd-guardian', 'hd-bosses', 'hd-loot']));
+  expect(new Set(Object.values(ASSET_REGISTRY).filter(a => a.source.kind === 'atlas').map(a => a.source.key))).toEqual(new Set(['mage-blink-v1','mage-phantom-v1','mage-shield-nova-pixellab-v1','mage-hero-v2-0','mage-fireball-pixellab-v1','mage-meteor-pixellab-v1','astral-revenant-v1','astral-projectile-pixellab-v1','briar-beast-v1','rune-warden-v1','rune-warden-pixellab-v1','ash-warden-v1-0','hd-core', 'hd-runner', 'hd-enemies', 'hd-guardian', 'hd-bosses', 'hd-loot']));
   expect(ASSET_REGISTRY.guardian.status).toBe('hd-integrated'); expect(ASSET_REGISTRY.darkForest.status).toBe('hd-integrated');
 });
 it('preserves world footprints and existing elite/tank/boss scale precedence', () => {
   expect(visualDimensions(heroVisual('warrior', 'down', false, false, 0))).toEqual({ width: 24, height: 30 });
-  expect(visualDimensions(heroVisual('mage', 'down', true, false, 1))).toEqual({ width: 24, height: 30 });
+  expect(visualDimensions(heroVisual('mage', 'down', true, false, 1))).toEqual({ width: 40, height: 40 });
   expect(visualDimensions(enemyVisual('grunt', true, 0, 1)).width).toBeCloseTo(22.4);
   expect(visualDimensions(enemyVisual('tank', true, 0, 1)).width).toBeCloseTo(25.6);
   expect(visualDimensions(enemyVisual('charger', false, 0, 1)).width).toBeCloseTo(57.6);

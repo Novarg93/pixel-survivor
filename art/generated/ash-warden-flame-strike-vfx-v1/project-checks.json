@@ -1,0 +1,12 @@
+{
+  "command": "npm.cmd run check",
+  "exitCode": 0,
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "testFiles": 84,
+  "tests": 673,
+  "testsPassed": 673,
+  "productionBuild": "PASS",
+  "existingBuildWarning": "Vite reports chunks larger than500kB; not suppressed.",
+  "gitDiffCheck": "PASS"
+}

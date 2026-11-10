@@ -1,0 +1,11 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/mage-spells-pixellab-ai-v1',baseline=JSON.parse(readFileSync(`${root}/source/protected.json`,'utf8'));
+const changed=[];for(const [file,digest]of Object.entries(baseline))if(createHash('sha256').update(readFileSync(file)).digest('hex')!==digest)changed.push(file);
+const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
+const existing=Object.keys(baseline).filter(p=>p.startsWith('src/')||p.startsWith('public/')).sort(),current=[...walk('src'),...walk('public')].sort();
+const inventoryUnchanged=JSON.stringify(existing)===JSON.stringify(current);
+const report={runtimeIntegration:false,protectedFiles:Object.keys(baseline).length,changed,inventoryUnchanged};
+writeFileSync(`${root}/source/protected-verification.json`,JSON.stringify(report,null,2)+'\n');
+if(changed.length||!inventoryUnchanged)throw Error('Game/art changed during preview generation: '+changed.join(', '));
+globalThis.console.log(JSON.stringify(report));

@@ -1,0 +1,328 @@
+{
+  "boundariesIncluded": true,
+  "stationary": "native full body",
+  "nativePerFacing": 3,
+  "phantomPerFacing": 5,
+  "matrix": [
+    {
+      "movement": "north",
+      "target": "north",
+      "mode": "native"
+    },
+    {
+      "movement": "north",
+      "target": "north-east",
+      "mode": "native"
+    },
+    {
+      "movement": "north",
+      "target": "east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north",
+      "target": "south-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north",
+      "target": "south",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north",
+      "target": "south-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north",
+      "target": "west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north",
+      "target": "north-west",
+      "mode": "native"
+    },
+    {
+      "movement": "north-east",
+      "target": "north",
+      "mode": "native"
+    },
+    {
+      "movement": "north-east",
+      "target": "north-east",
+      "mode": "native"
+    },
+    {
+      "movement": "north-east",
+      "target": "east",
+      "mode": "native"
+    },
+    {
+      "movement": "north-east",
+      "target": "south-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-east",
+      "target": "south",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-east",
+      "target": "south-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-east",
+      "target": "west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-east",
+      "target": "north-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "east",
+      "target": "north",
+      "mode": "phantom"
+    },
+    {
+      "movement": "east",
+      "target": "north-east",
+      "mode": "native"
+    },
+    {
+      "movement": "east",
+      "target": "east",
+      "mode": "native"
+    },
+    {
+      "movement": "east",
+      "target": "south-east",
+      "mode": "native"
+    },
+    {
+      "movement": "east",
+      "target": "south",
+      "mode": "phantom"
+    },
+    {
+      "movement": "east",
+      "target": "south-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "east",
+      "target": "west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "east",
+      "target": "north-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-east",
+      "target": "north",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-east",
+      "target": "north-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-east",
+      "target": "east",
+      "mode": "native"
+    },
+    {
+      "movement": "south-east",
+      "target": "south-east",
+      "mode": "native"
+    },
+    {
+      "movement": "south-east",
+      "target": "south",
+      "mode": "native"
+    },
+    {
+      "movement": "south-east",
+      "target": "south-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-east",
+      "target": "west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-east",
+      "target": "north-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south",
+      "target": "north",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south",
+      "target": "north-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south",
+      "target": "east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south",
+      "target": "south-east",
+      "mode": "native"
+    },
+    {
+      "movement": "south",
+      "target": "south",
+      "mode": "native"
+    },
+    {
+      "movement": "south",
+      "target": "south-west",
+      "mode": "native"
+    },
+    {
+      "movement": "south",
+      "target": "west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south",
+      "target": "north-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-west",
+      "target": "north",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-west",
+      "target": "north-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-west",
+      "target": "east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-west",
+      "target": "south-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "south-west",
+      "target": "south",
+      "mode": "native"
+    },
+    {
+      "movement": "south-west",
+      "target": "south-west",
+      "mode": "native"
+    },
+    {
+      "movement": "south-west",
+      "target": "west",
+      "mode": "native"
+    },
+    {
+      "movement": "south-west",
+      "target": "north-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "north",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "north-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "south-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "south",
+      "mode": "phantom"
+    },
+    {
+      "movement": "west",
+      "target": "south-west",
+      "mode": "native"
+    },
+    {
+      "movement": "west",
+      "target": "west",
+      "mode": "native"
+    },
+    {
+      "movement": "west",
+      "target": "north-west",
+      "mode": "native"
+    },
+    {
+      "movement": "north-west",
+      "target": "north",
+      "mode": "native"
+    },
+    {
+      "movement": "north-west",
+      "target": "north-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-west",
+      "target": "east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-west",
+      "target": "south-east",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-west",
+      "target": "south",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-west",
+      "target": "south-west",
+      "mode": "phantom"
+    },
+    {
+      "movement": "north-west",
+      "target": "west",
+      "mode": "native"
+    },
+    {
+      "movement": "north-west",
+      "target": "north-west",
+      "mode": "native"
+    }
+  ]
+}

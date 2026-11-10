@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: e03f7bce-adcf-405f-89df-ac9dcf2eca65\njob_id: e03f7bce-adcf-405f-89df-ac9dcf2eca65\ndescription: Seamless in-place walking cycle toward south, toward the camera. Calm even steps, alternating left and right feet with grounded footfalls and natural opposite arm swing. Upright torso, modest vertical bob, long coat tails sway gently with the stride. Keep the same facing angle, costume, proportions and scale throughout. Keep the entire character and boots inside the canvas. Fixed camera, no turning or sideways drift; the final pose flows smoothly back into the first.\nenhanced_prompt: Step forward with a steady, grounded gait, alternating feet while maintaining an upright posture. Sync a subtle vertical bob with the stride, swinging arms in opposition to the legs. Allow the coat tails to sway rhythmically before returning to the start.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8110901\ncost: 2.05 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"e03f7bce-adcf-405f-89df-ac9dcf2eca65\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/e03f7bce-adcf-405f-89df-ac9dcf2eca65/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 960be552-436d-5cc9-9703-64c0f8f102b4\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

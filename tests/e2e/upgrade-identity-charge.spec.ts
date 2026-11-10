@@ -74,7 +74,10 @@ for (const width of [1280, 390]) test(`Charger visible preparation/flash without
   await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(50);
   await page.screenshot({ path: `${directory}/charger-preparation-${width}.png` }); await page.locator('canvas').screenshot({ path: `${directory}/charger-preparation-canvas-${width}.png` });
   const frozen = await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world.bosses[0])); await page.waitForTimeout(150); expect(await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world.bosses[0]))).toBe(frozen);
-  expect(await page.evaluate(() => window.__PIXEL__!.art().actors.some(a => String(a.frame).includes('charger-') && String(a.frame).includes('-windup-')))).toBe(true);
+  const preparing=await page.evaluate(()=>window.__PIXEL__!.art().actors.some(a=>{
+    return a.texture==='briar-beast-v1'&&/^charger-1-(left|right)-charge-[0-2]$/.test(String(a.frame));
+  }));
+  expect(preparing).toBe(true);
   await page.evaluate(() => window.__PIXEL__!.world.resume());
   await page.waitForFunction(() => { const w = window.__PIXEL__!.world, b = w.bosses[0]?.boss; return b?.phase === 'windup' && b.until - w.elapsed < .1; });
   await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.waitForTimeout(40); await page.locator('canvas').screenshot({ path: `${directory}/charger-flash-canvas-${width}.png` });

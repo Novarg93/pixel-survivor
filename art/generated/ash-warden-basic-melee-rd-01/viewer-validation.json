@@ -1,0 +1,737 @@
+{
+  "status": "passed",
+  "checks": [
+    "real Canvas screenshots desktop/mobile",
+    "all 8 frames scrubbed",
+    "Idle-Attack-Idle: one visual hit per cycle",
+    "2 melee loops: two notifications",
+    "unequal timing scales proportionally with FPS",
+    "unsupported melee directions disabled",
+    "accepted 4-direction Walk at 72/100/144 unchanged",
+    "no browser errors"
+  ],
+  "states": {
+    "1280-paused": {
+      "version": "v1",
+      "key": "south-melee",
+      "index": 6,
+      "playing": false,
+      "loops": 0,
+      "rendered": 303,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 10.526315789473683,
+      "requestedFPS": 10.526315789473683,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        1280,
+        633
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 1,
+      "hitCount": 0,
+      "hitLog": [],
+      "frameDurationMs": 60.00000000000001
+    },
+    "1280-transition": {
+      "version": "v1",
+      "key": "south-idle",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 603,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 2.2222222222222223,
+      "requestedFPS": 2.2222222222222223,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        1280,
+        633
+      ],
+      "sequence": null,
+      "transitionComplete": true,
+      "attackInstance": 2,
+      "hitCount": 1,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 450
+    },
+    "844-paused": {
+      "version": "v1",
+      "key": "south-melee",
+      "index": 6,
+      "playing": false,
+      "loops": 0,
+      "rendered": 606,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 10.526315789473683,
+      "requestedFPS": 10.526315789473683,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 3,
+      "hitCount": 1,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 60.00000000000001
+    },
+    "844-transition": {
+      "version": "v1",
+      "key": "south-idle",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 905,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 2.2222222222222223,
+      "requestedFPS": 2.2222222222222223,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": true,
+      "attackInstance": 4,
+      "hitCount": 2,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 450
+    },
+    "meleeLoops": {
+      "version": "v1",
+      "key": "south-melee",
+      "index": 0,
+      "playing": true,
+      "loops": 2,
+      "rendered": 1017,
+      "distance": 0,
+      "elapsed": 64,
+      "fps": 10.526315789473683,
+      "requestedFPS": 10.526315789473683,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 70
+    },
+    "south-72": {
+      "version": "v1",
+      "key": "south-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1022,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 15.707,
+      "requestedFPS": 15.707431401596391,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        308
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 63.66588145412873
+    },
+    "south-100": {
+      "version": "v1",
+      "key": "south-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1023,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 21.815876946661653,
+      "capped": true,
+      "speed": 100,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        308
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "south-144": {
+      "version": "v1",
+      "key": "south-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1024,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 31.414862803192783,
+      "capped": true,
+      "speed": 144,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        308
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "north-72": {
+      "version": "v1",
+      "key": "north-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1025,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 15.707,
+      "requestedFPS": 15.707431401596391,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 63.66588145412873
+    },
+    "north-100": {
+      "version": "v1",
+      "key": "north-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1026,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 21.815876946661653,
+      "capped": true,
+      "speed": 100,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "north-144": {
+      "version": "v1",
+      "key": "north-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1027,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 31.414862803192783,
+      "capped": true,
+      "speed": 144,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "east-72": {
+      "version": "v1",
+      "key": "east-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1029,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 15.707,
+      "requestedFPS": 15.707431401596391,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 63.66588145412873
+    },
+    "east-100": {
+      "version": "v1",
+      "key": "east-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1030,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 21.815876946661653,
+      "capped": true,
+      "speed": 100,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "east-144": {
+      "version": "v1",
+      "key": "east-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1032,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 31.414862803192783,
+      "capped": true,
+      "speed": 144,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "west-72": {
+      "version": "v1",
+      "key": "west-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1033,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 15.707,
+      "requestedFPS": 15.707431401596391,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 63.66588145412873
+    },
+    "west-100": {
+      "version": "v1",
+      "key": "west-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1034,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 21.815876946661653,
+      "capped": true,
+      "speed": 100,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    },
+    "west-144": {
+      "version": "v1",
+      "key": "west-walk",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 1037,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 20,
+      "requestedFPS": 31.414862803192783,
+      "capped": true,
+      "speed": 144,
+      "strideWorld": 36.67054054054054,
+      "viewport": [
+        844,
+        301
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 8,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 2,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 4,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 6,
+          "frame": 6,
+          "timeMs": 330
+        },
+        {
+          "attackInstance": 7,
+          "frame": 6,
+          "timeMs": 330
+        }
+      ],
+      "frameDurationMs": 50
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 186b6382-2a8c-49b3-adb9-1d9abe44f5b4\njob_id: 186b6382-2a8c-49b3-adb9-1d9abe44f5b4\ndescription: The ground flame dies down in place. The three narrow mint tongues become shorter and thinner, curl and sink toward the fixed floor contact at x60 y116; a few small mint tips detach and vanish. Fade completely to transparent empty canvas. Keep the same muted colors and sparse negative space. No shrinking orb, no circular ring, no flash, no large smoky cloud, no explosion and no camera movement. A quiet end to ground fire.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110124\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"186b6382-2a8c-49b3-adb9-1d9abe44f5b4\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/186b6382-2a8c-49b3-adb9-1d9abe44f5b4/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 7c658126-1ee6-5463-a008-2aab4c3e3a5e\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

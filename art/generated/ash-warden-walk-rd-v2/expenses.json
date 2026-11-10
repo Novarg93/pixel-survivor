@@ -1,0 +1,35 @@
+{
+  "budgetUSD": 0.4,
+  "plannedPaidGenerations": 2,
+  "startedPaidGenerations": 2,
+  "automaticRetries": 0,
+  "westGenerationCalls": 0,
+  "startingBalance": 9.36,
+  "endingBalance": 9.08,
+  "actualBalanceChargeUSD": 0.28,
+  "remainingMonetaryBudgetUSD": 0.12,
+  "additionalVariantsAuthorized": false,
+  "style": "rd_advanced_animation__walking",
+  "jobs": [
+    {
+      "direction": "south",
+      "taskId": "bef70c10-dccb-4538-a88b-b3f89b7e68d5",
+      "seed": 6110741,
+      "estimatedUSD": 0.14,
+      "chargedUSD": 0.14,
+      "source": "balance",
+      "status": "succeeded"
+    },
+    {
+      "direction": "north",
+      "taskId": "d04e43e0-caf6-419f-9071-e0c745bbc760",
+      "seed": 6110742,
+      "estimatedUSD": 0.14,
+      "chargedUSD": 0.14,
+      "source": "balance",
+      "status": "succeeded"
+    }
+  ],
+  "billingNotice": "Plan usage exhausted; both jobs paid from balance. No extra paid processing.",
+  "downloadFailuresDidNotRestartJobs": true
+}

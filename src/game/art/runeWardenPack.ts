@@ -1,5 +1,6 @@
 import manifest from './runeWardenManifest.json';
 import type { BossFacing, BossPose } from './bossPack';
+import {runeVfxFrame} from './runeWardenVfxPack';
 export const RUNE_WARDEN_TEXTURE = 'rune-warden-v1';
 export const RUNE_WARDEN_URLS = { image: 'assets/hd/rune-warden-v1/atlas.png', data: 'assets/hd/rune-warden-v1/atlas.json' } as const;
 export const RUNE_WARDEN_MANIFEST = manifest;
@@ -18,8 +19,7 @@ export function runeBodyFrame(facing: BossFacing, pose: BossPose, age: number, r
   return `sorcerer-1-${facing}-${cast?'cast':'walk'}-${index}`;
 }
 export function runeVolleyFrame(age: number) {
-  // The last source frame is a dissipation pose; flight loops the eleven live poses.
-  return `volley-${runeFrameIndex('volley',age,true,manifest.clips.volley.frameCount-1)}`;
+  return runeVfxFrame('flight',age);
 }
 export function runeJudgementFrame(phase:'charge'|'impact',progress:number){
   const hit=manifest.judgementHitFrame,charge=manifest.clips.judgement.durationsMs.slice(0,hit).reduce((a,b)=>a+b,0)/1000;

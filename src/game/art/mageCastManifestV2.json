@@ -1,0 +1,1674 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-cast-v2.mjs",
+  "canvas": 96,
+  "frameCount": 91,
+  "displaySize": 46.35814889336016,
+  "width": 768,
+  "height": 1152,
+  "rgbaBytes": 3538944,
+  "sourcePixelsUnmodified": true,
+  "sources": {
+    "art/main-hero-mage-v2/animation/casting/north/north.png": "12adcfa17a2b074789c9850ce78a91dbfc41dfc06e6bdd54bc1c983a6ce65c3a",
+    "art/main-hero-mage-v2/animation/casting/north/north.gif": "6df93fcf8038438d7b19133a91da89d3ea17568d38f00f23aa5cd8ff5d451177",
+    "art/main-hero-mage-v2/animation/casting/north/north-east.png": "2076a9a88526b44204f501ff9a12d178762c017ad6b11db7d99322870cb6d09e",
+    "art/main-hero-mage-v2/animation/casting/north/north-east.gif": "a19b8fbc1edfbe45b6291da41da921061038e27b963c92c130bf3674869bb4fd",
+    "art/main-hero-mage-v2/animation/casting/north/north-west.png": "18fbd27d689f9151cb4c9b501b0b68e7c1827a2bde5088c85831624a2452c6d5",
+    "art/main-hero-mage-v2/animation/casting/north/north-west.gif": "0e5f6f1a340ffddae963b2c28efeedaef7d6ed6a3fbb77f295919ccb75931d4c",
+    "art/main-hero-mage-v2/animation/casting/south/v1.png": "e4f5172aadf510131699b151f8bb0a85c1c722e71afadd5532742025fb5c4385",
+    "art/main-hero-mage-v2/animation/casting/south/v1.gif": "c2acd55fe8aab81c1c920133afa090e28d674dd49c041c4703389c3c9957be9b",
+    "art/main-hero-mage-v2/animation/casting/south/v2.png": "0bec5cb7b1a368ac4252a29260ead01404e3a498f764d3c7e415701a1675fbb4",
+    "art/main-hero-mage-v2/animation/casting/south/v2.gif": "b7b1c3b22dd448a7cd20e2eb9c1f95349e6a494f0179a2f6a011343c98473e33",
+    "art/main-hero-mage-v2/animation/casting/east/v1.png": "ff954f6d1ede60ae697de9eefc09ab2b9e6d1022c3286f27e9c3c91c0684702e",
+    "art/main-hero-mage-v2/animation/casting/east/v1.gif": "2d2b400854a76bf3785aa60bf6711c0af5ecec352d4076407a3fd79553b8f451",
+    "art/main-hero-mage-v2/animation/casting/east/v2.png": "4cd0ecba71ee51ca5694cbf3a7284be433caf9f88f6593319ad64c978b7942dd",
+    "art/main-hero-mage-v2/animation/casting/east/v2.gif": "2710f0e5287f7fbdc4e1fea7006b8bf5fb02100567b6c0e0870e2a844afce5fc"
+  },
+  "clips": {
+    "north": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/north/north.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/north/north.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-north-0",
+          "durationMs": 130,
+          "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-1",
+          "durationMs": 130,
+          "pixelSha256": "0fcfdffe064e7cfa6d070e104c0729ffeec66990c97790c29003e7bc0c35b8ed",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 70,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 68.42307692307692,
+            "y": 45.11538461538461,
+            "pixels": 13
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-2",
+          "durationMs": 130,
+          "pixelSha256": "2d2c30f7c2f5f1bbeb7d32cdb9cf9455aef031ea1af9a6bebe17d2b0d1c99961",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 69,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 67.78571428571429,
+            "y": 27.785714285714285,
+            "pixels": 7
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-3",
+          "durationMs": 130,
+          "pixelSha256": "5646d312708403359b550461be4bf851ef74d19b129333015efe8ad290660ee4",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.76086956521739,
+            "y": 16.97826086956522,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-4",
+          "durationMs": 130,
+          "pixelSha256": "eea98cf99703a22d342bae41731e5640ddd84004075559a8db2353d2c874aa8a",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.76086956521739,
+            "y": 16.97826086956522,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-5",
+          "durationMs": 130,
+          "pixelSha256": "3e2f597dc49b8a44f94e2f8b2830eb0187c7fd0d167bb21e6ca06adf2464e2dd",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.76086956521739,
+            "y": 16.97826086956522,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-6",
+          "durationMs": 130,
+          "pixelSha256": "1b1767df0fe151911707446799bb6ff6ab5b9b6b92d161aa5e326f319fbea266",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.76086956521739,
+            "y": 16.97826086956522,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-7",
+          "durationMs": 130,
+          "pixelSha256": "9f9f798082a4f5e4362da32c3c7bead1e3df8fe83ef005b14d108fa77472ad1a",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.76086956521739,
+            "y": 16.97826086956522,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-8",
+          "durationMs": 130,
+          "pixelSha256": "1a56e3a294f0b8064ff38450a52b238b90025a1d0c896c7c36c531be2aa84359",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.23684210526316,
+            "y": 17.973684210526315,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-9",
+          "durationMs": 130,
+          "pixelSha256": "2c933037e5d529ba5f8940ec09b99efd59d86cd2f0f85d3aa4205242f9d5d19c",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 67,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 64.22727272727273,
+            "y": 24.863636363636363,
+            "pixels": 11
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-10",
+          "durationMs": 130,
+          "pixelSha256": "dad289af2057662da2227ea84694bdb7378c7e6a093de1382ed71de723938cbc",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 68,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 67.5,
+            "y": 37.5,
+            "pixels": 3
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-11",
+          "durationMs": 130,
+          "pixelSha256": "f0f15a046251cb6fc98ceddd4e5b6c3208343893853718f28f1b81f0bc17da65",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 67,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 65.61111111111111,
+            "y": 47.833333333333336,
+            "pixels": 9
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-12",
+          "durationMs": 130,
+          "pixelSha256": "f6cf3b1f935a7a23b5d82d497569293ddb95d7d5deecf0fa1167bf60b3aea811",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3,
+            "pixels": 10
+          }
+        }
+      ],
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "periodMs": 1690,
+      "releaseFrame": 3,
+      "holdEndFrame": 8,
+      "firstPoseMatchesIdle": true
+    },
+    "north-east": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/north/north-east.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/north/north-east.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-north-east-0",
+          "durationMs": 130,
+          "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-1",
+          "durationMs": 130,
+          "pixelSha256": "cf3d882aba740eb32926f2150d0471688848a0f3cbb5dd2777c3c630bfd05b2f",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 66,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 64.7,
+            "y": 50.3,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-2",
+          "durationMs": 130,
+          "pixelSha256": "539804f6514dad11c679c01a67940c89d9d79289da3152515c10f50a7eb5d994",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.72222222222223,
+            "y": 43.05555555555556,
+            "pixels": 9
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-3",
+          "durationMs": 130,
+          "pixelSha256": "9e3f2b541b0df9565b7f544e7b5aa947d5e26bf602c8756062546131940d6e46",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 76,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 72.38235294117646,
+            "y": 21.205882352941178,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-4",
+          "durationMs": 130,
+          "pixelSha256": "c7d0f2be7709329fd89554c20caf23b48f74f87a297ca4e561a73a4a940dceb1",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 74,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.05,
+            "y": 18.25,
+            "pixels": 20
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-5",
+          "durationMs": 130,
+          "pixelSha256": "21af2444e5010ee3b7f21338cc2a434c8dc2be0beb3a3ed986a9f67194576714",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70,
+            "y": 17.1,
+            "pixels": 20
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-6",
+          "durationMs": 130,
+          "pixelSha256": "8aa858923dc4a5ca614841626ba4b36dce1f04b3a4fd9f110d757abc4291910e",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70,
+            "y": 17.1,
+            "pixels": 20
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-7",
+          "durationMs": 130,
+          "pixelSha256": "eb1e6b69693040343b0ddce32f5ebc79fc21de4e1e47a1ec9c00f5023890927e",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70,
+            "y": 17.1,
+            "pixels": 20
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-8",
+          "durationMs": 130,
+          "pixelSha256": "a545312513ca468cde85cb207e4cb7c5d5d9825405fdbbfcc8ccbcb1c73eda2e",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 74,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.07142857142857,
+            "y": 18.11904761904762,
+            "pixels": 21
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-9",
+          "durationMs": 130,
+          "pixelSha256": "1e0f8eb2944c4e5025a2e10d8dd9c0fa8f4e291c1b341a2cb183bb8391dd376e",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 77,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 74.1923076923077,
+            "y": 29.884615384615383,
+            "pixels": 13
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-10",
+          "durationMs": 130,
+          "pixelSha256": "0dd1c51b96464faf72fa4f3ec2073eaedc0043b7fe43493cffd8eedf004f144e",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.72222222222223,
+            "y": 43.05555555555556,
+            "pixels": 9
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-11",
+          "durationMs": 130,
+          "pixelSha256": "f1a3c46321b590ef00715f183a7bb4c31b7dbeca9de4ab34aba617f9c9adc5ff",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 66,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 64.7,
+            "y": 50.3,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-east-12",
+          "durationMs": 130,
+          "pixelSha256": "b6e30180fb53d5d8510197f1b1d5131aff1b7ff39a4d75197150a037c88a08df",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3,
+            "pixels": 10
+          }
+        }
+      ],
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "periodMs": 1690,
+      "releaseFrame": 3,
+      "holdEndFrame": 8,
+      "firstPoseMatchesIdle": true
+    },
+    "north-west": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/north/north-west.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/north/north-west.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-north-west-0",
+          "durationMs": 130,
+          "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 31.2,
+            "y": 51.2,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-1",
+          "durationMs": 130,
+          "pixelSha256": "12bb9677d1e57c346f316e9c47f293682afddd2a5243f8f78d124339c649a9ea",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 31.2,
+            "y": 51.2,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-2",
+          "durationMs": 130,
+          "pixelSha256": "ad5830148fd420030f1e44c9730ffb0359576152fb45641d0ae8b62375099e56",
+          "bounds": {
+            "left": 30,
+            "top": 13,
+            "right": 68,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 32.2,
+            "y": 50.2,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-3",
+          "durationMs": 130,
+          "pixelSha256": "3ea245e7785bc46a7e86e0fba9b6797cdd3155b0820fb20de65438fed119bdc3",
+          "bounds": {
+            "left": 30,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.25,
+            "y": 44.625,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-4",
+          "durationMs": 130,
+          "pixelSha256": "28d77be98bc8217f686dcb7788efa463ea63f6eb2197b175ade87f6a475c9568",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 73,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70.1923076923077,
+            "y": 23.423076923076923,
+            "pixels": 13
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-5",
+          "durationMs": 130,
+          "pixelSha256": "4c081ee007f657f358eb99daf3f69f02066f06f4247abd67ae15c7fb3a8be23c",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 61,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 29.07894736842105,
+            "y": 16.55263157894737,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-6",
+          "durationMs": 130,
+          "pixelSha256": "d7dbf6fe0e1373fcf713901fa1dc7dcba962585dba462869a0c4bf1495c33d7a",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 62,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 29.81578947368421,
+            "y": 18.763157894736842,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-7",
+          "durationMs": 130,
+          "pixelSha256": "482caccca7ece152f341808b724da07dd83731574f22c786f3d8ad17c012eb8d",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 62,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 34.75,
+            "y": 20.75,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-8",
+          "durationMs": 130,
+          "pixelSha256": "e3a84f704c7d5bc524ca9839e248d708d6db0c3a47add3184e9af563b98dfb2f",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 63,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 29.576923076923077,
+            "y": 51.19230769230769,
+            "pixels": 13
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-9",
+          "durationMs": 130,
+          "pixelSha256": "2e74e656091c9af3523fded251c2458a36db0d379f6607a875d14a22e64f9b7d",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 63,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 30.318181818181817,
+            "y": 51.40909090909091,
+            "pixels": 11
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-10",
+          "durationMs": 130,
+          "pixelSha256": "810ac2fab8f948c759089a33a1f7dc82d4eac30090d2d4f644411db37b216325",
+          "bounds": {
+            "left": 28,
+            "top": 13,
+            "right": 63,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 48.5,
+            "pixels": 3
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-11",
+          "durationMs": 130,
+          "pixelSha256": "eda3a6bcace74fe18c5638ccce9552e7c571c325f9ca00102e5770da5e8650fa",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 31.2,
+            "y": 51.2,
+            "pixels": 10
+          }
+        },
+        {
+          "frame": "mage-cast-v2-north-west-12",
+          "durationMs": 130,
+          "pixelSha256": "b820d8e0c11c0568dd8d0fb3517e64b48a6ed609dc7049f09aca4500c28970d8",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 31.2,
+            "y": 51.2,
+            "pixels": 10
+          }
+        }
+      ],
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "periodMs": 1690,
+      "releaseFrame": 5,
+      "holdEndFrame": 8,
+      "firstPoseMatchesIdle": true
+    },
+    "south-v1": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/south/v1.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/south/v1.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-south-v1-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-1",
+          "durationMs": 130,
+          "pixelSha256": "4da8da61d94d8ba84aad2a58d2c2213015ebc7416fe77b3a45a5ce99e84a3a8d",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-2",
+          "durationMs": 130,
+          "pixelSha256": "91445dce0476bad8a75492cd6e4e4c3b6290a9d594966d72df9678c257a3d6f2",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-3",
+          "durationMs": 130,
+          "pixelSha256": "e062869cb830bc7092d0e23c7e7c61364cc06b8b1dd74da56b0686ddbe2cd66d",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.32608695652174,
+            "y": 49.41304347826087,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-4",
+          "durationMs": 130,
+          "pixelSha256": "1920e34954535cb676b5704c6ffc438e13f3932cb80910712b279669588d085f",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.23076923076923,
+            "y": 47.65384615384615,
+            "pixels": 26
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-5",
+          "durationMs": 130,
+          "pixelSha256": "16f543489220ae4338776c6e7c746fc3e1f18bde4d0cd0b1a0ea6db5417fb02c",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 72,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 67.8103448275862,
+            "y": 49.53448275862069,
+            "pixels": 29
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-6",
+          "durationMs": 130,
+          "pixelSha256": "62b98cc53bded96b6a71c94df02366111b0e671aecd6f30aa318a6c5e913eaad",
+          "bounds": {
+            "left": 22,
+            "top": 15,
+            "right": 74,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 71.14,
+            "y": 55.38,
+            "pixels": 25
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-7",
+          "durationMs": 130,
+          "pixelSha256": "e944b42e1c85d12c64cc10b524fbb65fe2842501976755ea10ba25136139da29",
+          "bounds": {
+            "left": 24,
+            "top": 14,
+            "right": 73,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70.38,
+            "y": 54.74,
+            "pixels": 25
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-8",
+          "durationMs": 130,
+          "pixelSha256": "b18107b927d58a9090db32d5e0d514bfa88fda147f04ec21a78003db06302995",
+          "bounds": {
+            "left": 26,
+            "top": 14,
+            "right": 71,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 68,
+            "y": 53.18181818181818,
+            "pixels": 22
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-9",
+          "durationMs": 130,
+          "pixelSha256": "39321fc8faf0448f908cced2003c63a2bed68ee114ffdab187b5fad056b3e77a",
+          "bounds": {
+            "left": 27,
+            "top": 14,
+            "right": 68,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 64.8157894736842,
+            "y": 52.86842105263158,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-10",
+          "durationMs": 130,
+          "pixelSha256": "c8a9fa20cabfa8b99713566639f14682c989faef3a350b816c3847d40634f001",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 66,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-11",
+          "durationMs": 130,
+          "pixelSha256": "85c3d1bd108dcb5e306631448a2619720a03edb5761cd912aa97bee1c4c3a01b",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v1-12",
+          "durationMs": 130,
+          "pixelSha256": "ab860f7e1c5b3ae54d66de618b7d962f60f8d55be37729adf54020bc7190cae9",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690,
+      "releaseFrame": 5,
+      "holdEndFrame": 7,
+      "firstPoseMatchesIdle": true
+    },
+    "south-v2": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/south/v2.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/south/v2.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-south-v2-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-1",
+          "durationMs": 130,
+          "pixelSha256": "4d479feeb9e247629b91bfc1fde1f8866dbc5e0bde6b24b1802e8ad673d78286",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.833333333333336,
+            "y": 51.388888888888886,
+            "pixels": 18
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-2",
+          "durationMs": 130,
+          "pixelSha256": "25197197b275eee40c5b58be0e900c3b65e9fe33149f95254eaf9e2d6d49694f",
+          "bounds": {
+            "left": 24,
+            "top": 14,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.125,
+            "y": 51.3125,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-3",
+          "durationMs": 130,
+          "pixelSha256": "195a0f303c6e9949f6446a01e32f34d170bb9851238cbb45905907d456d109bf",
+          "bounds": {
+            "left": 25,
+            "top": 15,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.04054054054054,
+            "y": 54.527027027027025,
+            "pixels": 37
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-4",
+          "durationMs": 130,
+          "pixelSha256": "9959895eaef27b422f99241609fad3bbbeb90c4fcb3dc2339d290adce3c28ee6",
+          "bounds": {
+            "left": 27,
+            "top": 15,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.04054054054054,
+            "y": 54.527027027027025,
+            "pixels": 37
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-5",
+          "durationMs": 130,
+          "pixelSha256": "41e755447aa8c71ee521fae83b92bb60362a733a2fd041b3b87c854a5142fcd3",
+          "bounds": {
+            "left": 29,
+            "top": 15,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.04054054054054,
+            "y": 54.527027027027025,
+            "pixels": 37
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-6",
+          "durationMs": 130,
+          "pixelSha256": "77beb2c45467444de2eb3b3309086edd3aa5b97bdef006a9e4564d46166ce1f4",
+          "bounds": {
+            "left": 29,
+            "top": 15,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.04054054054054,
+            "y": 54.527027027027025,
+            "pixels": 37
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-7",
+          "durationMs": 130,
+          "pixelSha256": "cea970fdbc56b3f38afb7882625dd8af53dc55bd4c438c46d51a2c76f4ad1042",
+          "bounds": {
+            "left": 29,
+            "top": 15,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.04054054054054,
+            "y": 54.527027027027025,
+            "pixels": 37
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-8",
+          "durationMs": 130,
+          "pixelSha256": "fc3069d3ff95d9da30a30c51a503640fb793d52b354a0d99603c13e08859f25c",
+          "bounds": {
+            "left": 29,
+            "top": 15,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 52.5,
+            "y": 54.72857142857143,
+            "pixels": 35
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-9",
+          "durationMs": 130,
+          "pixelSha256": "ba9e48a16a41f6f1f7aa1f412d14ad79615c25c3575ce51b2b8294ea8311e272",
+          "bounds": {
+            "left": 29,
+            "top": 14,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.833333333333336,
+            "y": 51.388888888888886,
+            "pixels": 18
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-10",
+          "durationMs": 130,
+          "pixelSha256": "2c7cea3991080ad9cfea83d43e33f50cb25066f3b16ab43775fb407f40fe59f3",
+          "bounds": {
+            "left": 27,
+            "top": 14,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-11",
+          "durationMs": 130,
+          "pixelSha256": "9d30b029e455f3cf0085a2dc9a4885b2f5eb43e7bdd63161f35315c7507fde28",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-south-v2-12",
+          "durationMs": 130,
+          "pixelSha256": "484c304268890694f206b50bfea0b4319a4e5d9c304cd2b44b851f79d0bae47e",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690,
+      "releaseFrame": 3,
+      "holdEndFrame": 6,
+      "firstPoseMatchesIdle": true
+    },
+    "east-v1": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/east/v1.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/east/v1.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-east-v1-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-1",
+          "durationMs": 130,
+          "pixelSha256": "ed0641217a8d62779f5f2c6c23b1e44446c07b9dfa59aed354bdb1a18eba681c",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.9,
+            "y": 35.9,
+            "pixels": 5
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-2",
+          "durationMs": 130,
+          "pixelSha256": "17e7bd9c7f28f00d894b542f7ac20d0c524a5347eaa87cd295a0be0cf3055ed1",
+          "bounds": {
+            "left": 24,
+            "top": 12,
+            "right": 82,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 76.79629629629629,
+            "y": 32.53703703703704,
+            "pixels": 27
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-3",
+          "durationMs": 130,
+          "pixelSha256": "025a204ae8259ba0c99bf62831815dd01111ba0c6aa67f2819f6b41c66a55c4e",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-4",
+          "durationMs": 130,
+          "pixelSha256": "b8e57545b3b24cd95debed74936097bbc4ecdb933def02b22f5b8f01d5993116",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-5",
+          "durationMs": 130,
+          "pixelSha256": "7fee102f1c245f26d99ef84d93cebc335fe0a56e3beacc18fb469930e8ec01a8",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-6",
+          "durationMs": 130,
+          "pixelSha256": "663621de849e6e4fceac913ace3d17e37439ca3a35515f90eeeff7c172feaad8",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-7",
+          "durationMs": 130,
+          "pixelSha256": "b690310ebef78c6010b06bcf30fef590b7139946e6bfd8d905b8e2b9fd6834cd",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-8",
+          "durationMs": 130,
+          "pixelSha256": "bec7d4dd4cc870fe5db04bf7bfb52a74be78dba2299c55dc158f6cfb6f57afd8",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-9",
+          "durationMs": 130,
+          "pixelSha256": "e7f1de5edfd6a9ab78783b86b84e3887c1d628db23abb1ede4e2549144bebea5",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 79,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 77.5,
+            "y": 34,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-10",
+          "durationMs": 130,
+          "pixelSha256": "af8c98c1de52699f5e9a598ebaa83aa803c1508f99b4f6cd160e1f9e61e1cd7f",
+          "bounds": {
+            "left": 22,
+            "top": 12,
+            "right": 74,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70.15217391304348,
+            "y": 42.54347826086956,
+            "pixels": 23
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-11",
+          "durationMs": 130,
+          "pixelSha256": "1164a49246384187edeb8b8ec07b7668fe29a9bb8add563c150f770b30d4a48d",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 66,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.71052631578947,
+            "y": 50.55263157894737,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v1-12",
+          "durationMs": 130,
+          "pixelSha256": "78bc441ed6b9bcbf486d172c55eecd3cb5302bcc03344dbadef5eff027552838",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690,
+      "releaseFrame": 2,
+      "holdEndFrame": 8,
+      "firstPoseMatchesIdle": true
+    },
+    "east-v2": {
+      "sourcePng": "art/main-hero-mage-v2/animation/casting/east/v2.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/casting/east/v2.gif",
+      "frames": [
+        {
+          "frame": "mage-cast-v2-east-v2-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177,
+            "pixels": 17
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-1",
+          "durationMs": 130,
+          "pixelSha256": "4f17fa1ad09f099d549e1bf2ed448ea1d59c62a1826b02ee3fce96fdddd1a4ef",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.666666666666664,
+            "y": 49.666666666666664,
+            "pixels": 18
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-2",
+          "durationMs": 130,
+          "pixelSha256": "20b6f72a6313b1eda882948d63731560dcd12ba130ae8392c8d7f66d1de491fc",
+          "bounds": {
+            "left": 22,
+            "top": 13,
+            "right": 66,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.833333333333336,
+            "y": 47.833333333333336,
+            "pixels": 12
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-3",
+          "durationMs": 130,
+          "pixelSha256": "7efe4928f3cea33061c259699570776d42fdb81d957b8f7e7f49c8560e30d747",
+          "bounds": {
+            "left": 22,
+            "top": 14,
+            "right": 76,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 70.85,
+            "y": 40.1,
+            "pixels": 40
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-4",
+          "durationMs": 130,
+          "pixelSha256": "ee02d2733c4e3cf6e1f3ca9cba3e2a16edca627ff63585ef07a7a7ab0e1a8422",
+          "bounds": {
+            "left": 24,
+            "top": 14,
+            "right": 73,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 69.5,
+            "y": 36,
+            "pixels": 2
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-5",
+          "durationMs": 130,
+          "pixelSha256": "5d5d2494202daba6cf3f69ec9d52ad96b58c4165fba03dd7a2c58b36e4dc738e",
+          "bounds": {
+            "left": 29,
+            "top": 14,
+            "right": 66,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.85,
+            "y": 42.5,
+            "pixels": 20
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-6",
+          "durationMs": 130,
+          "pixelSha256": "920f14d91835c43250b6be193753c839dcd8e6c36c31ef48b24696c1f7cc02aa",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.875,
+            "y": 49.9375,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-7",
+          "durationMs": 130,
+          "pixelSha256": "15c83ca5d3ddddba9f42851c8f773b74d63dc902ececa3eeecbec115111a03b2",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.86842105263158,
+            "y": 51.3421052631579,
+            "pixels": 19
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-8",
+          "durationMs": 130,
+          "pixelSha256": "0df08092ce93bb3ec63e0e546554ee6193304537ce3872d07f6680e98b52bc02",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 64,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-9",
+          "durationMs": 130,
+          "pixelSha256": "e5dd29b656f01e47464c16733aed2af7a09a7c9f0d088e147d5f53a1a9a785ad",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-10",
+          "durationMs": 130,
+          "pixelSha256": "51d1fa4b085698f465c07c522584badc680404253e589025d08af06d5e5b78dc",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-11",
+          "durationMs": 130,
+          "pixelSha256": "329cbff5e532050ade089dc4a8a18ec21a4b22394db8e67439d0a6b78df1fe58",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375,
+            "pixels": 16
+          }
+        },
+        {
+          "frame": "mage-cast-v2-east-v2-12",
+          "durationMs": 130,
+          "pixelSha256": "74238346e470cfe23992d85bcec8b547d880d5ec54f7d371d663330ce6e4170a",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375,
+            "pixels": 16
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690,
+      "releaseFrame": 3,
+      "holdEndFrame": 4,
+      "firstPoseMatchesIdle": true
+    }
+  }
+}

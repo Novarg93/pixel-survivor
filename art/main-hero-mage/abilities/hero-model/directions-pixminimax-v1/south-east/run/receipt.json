@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: f5aee90b-15a8-4856-b62b-626f2feb8649\njob_id: f5aee90b-15a8-4856-b62b-626f2feb8649\ndescription: Seamless in-place running cycle diagonally toward the lower right (south-east), toward and to the right of the camera. Energetic alternating strides with bent elbows and strong opposite arm drives, a slight forward lean and brief airborne phases between footfalls. The long coat tails lift and trail naturally with the running motion. Keep the same facing angle, costume, proportions and scale throughout. Keep the entire character and boots inside the canvas. Fixed camera, no turning or sideways drift; the final pose flows smoothly back into the first.\nenhanced_prompt: Drive knees high with rhythmic, powerful strides while pumping arms in opposition. Lean forward into the momentum, catching brief airborne pauses between footfalls as the coat tails rise and snap rhythmically, settling back into the initial stance.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8110904\ncost: 2.05 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"f5aee90b-15a8-4856-b62b-626f2feb8649\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/f5aee90b-15a8-4856-b62b-626f2feb8649/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: d098eec8-d219-5e57-a116-076b7ebd7913\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

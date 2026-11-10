@@ -1,0 +1,73 @@
+{
+  "groups": [
+    {
+      "at": 0,
+      "points": [
+        [
+          -100,
+          -52
+        ],
+        [
+          -30,
+          -52
+        ],
+        [
+          40,
+          -52
+        ],
+        [
+          110,
+          -52
+        ],
+        [
+          -65,
+          52
+        ],
+        [
+          70,
+          52
+        ]
+      ]
+    },
+    {
+      "at": 1550,
+      "points": [
+        [
+          -110,
+          52
+        ],
+        [
+          -40,
+          52
+        ],
+        [
+          30,
+          52
+        ],
+        [
+          100,
+          52
+        ],
+        [
+          0,
+          -80
+        ]
+      ]
+    }
+  ],
+  "withinGroupStaggerMs": 50,
+  "groupDelayMs": 1550,
+  "phase3PeriodMs": 15000,
+  "previewOnly": true,
+  "danger": {
+    "shape": "circle",
+    "radiusWorld": 25.5384121629,
+    "requiredPreviewOutline": true,
+    "existingGameplayRadius": 42,
+    "integrationStatus": "Must reconcile radius and projected ring with actual damage before production; no balance change.",
+    "maxWarnings": 6,
+    "maxInstances": 11,
+    "playerPadding": 6,
+    "safeCorridorHalfWidth": 18
+  }
+}

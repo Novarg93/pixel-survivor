@@ -1,0 +1,417 @@
+{
+  "movement": {
+    "increaseFromPrevious": 1.5,
+    "baseSpeed": 124.19999999999999,
+    "min": 206.99999999999997,
+    "max": 439.87499999999994,
+    "playerMultiplier": 1.8975,
+    "farAt135": 256.1625,
+    "nearAt135": 140.88937500000003,
+    "meleeStart": 85
+  },
+  "flameStrike": {
+    "castSpeedIncrease": 1.5,
+    "windupMs": 600,
+    "activeMs": 150,
+    "recoveryMs": 750,
+    "sourceWindupMs": 900,
+    "sourceFirstSixFrameMs": 150,
+    "runtimeFirstSixFrameMs": 100,
+    "runtimeLastSixFrameMs": 75
+  },
+  "meteors": {
+    "target": "Current player world position at each warning release; then fixed through impact",
+    "intervalMs": 150,
+    "warningMs": 1300,
+    "phase2Count": 3,
+    "phase2ReleaseMs": [
+      0,
+      150,
+      300
+    ],
+    "phase2ImpactMs": [
+      1300,
+      1450,
+      1600
+    ],
+    "otherNormalCastCounts": {
+      "phase1": 1,
+      "phase3": 1
+    },
+    "massCounts": {
+      "shielded": 11,
+      "arena": 9
+    },
+    "maxReserved": 12,
+    "pendingPositions": "Unknown until released; reserved in cap, omitted from geometric dangers",
+    "damagePerGroup": 54
+  },
+  "acceptedArtChanged": false,
+  "screenshots": [
+    {
+      "file": "screenshots/1280-arena-release-1.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-arena-release-2.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-arena-release-3.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-arena-release-4.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-first-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-release-1.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-release-2.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-phase2-release-3.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/844-arena-release-1.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-arena-release-2.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-arena-release-3.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-arena-release-4.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-first-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-release-1.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-release-2.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-phase2-release-3.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/production-practice.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/1280-faster-release.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/1280-faster-return.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/1280-finished.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/1280-follow-through.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/1280-windup-faster.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-timing/screenshots/844-faster-release.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-timing/screenshots/844-faster-return.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-timing/screenshots/844-finished.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-timing/screenshots/844-follow-through.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-timing/screenshots/844-windup-faster.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-east-decay.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-east-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-east-warning.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-north-decay.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-north-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-north-warning.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-south-decay.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-south-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-south-warning.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-west-decay.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-west-impact.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-west-warning.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/1280-zero-effects-warning.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "flame-vfx/screenshots/844-east-decay.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-east-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-east-warning.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-north-decay.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-north-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-north-warning.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-south-decay.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-south-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-south-warning.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-west-decay.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-west-impact.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-west-warning.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "flame-vfx/screenshots/844-zero-effects-warning.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/1280-approaching-inside-old-range.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-faster-pursuit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-north-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-north-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-south-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-south-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/844-approaching-inside-old-range.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-faster-pursuit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-north-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-north-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-south-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-south-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-windup.png",
+      "width": 844,
+      "height": 390
+    }
+  ]
+}

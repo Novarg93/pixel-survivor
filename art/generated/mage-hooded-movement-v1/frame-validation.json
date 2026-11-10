@@ -1,0 +1,1563 @@
+{
+  "sourceFrames": 32,
+  "mirroredFrames": 32,
+  "sourceMetrics": [
+    {
+      "file": "prepared/walk-front-0.png",
+      "sha256": "d62f9f7e6d6821dc6621937a4a2e13572c0ff23b262bf628a68d013388381ccf",
+      "bbox": {
+        "left": 23,
+        "top": 14,
+        "right": 64,
+        "bottom": 86
+      },
+      "margin": 9,
+      "colors": 26,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 56,
+      "shoeMaskSha256": "efa399e81313751fa0715f53e90dc03ca3a9033895f03630ee5ef10e7051210b",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 74,
+        "right": 34,
+        "bottom": 79
+      },
+      "screenRightShoe": {
+        "left": 51,
+        "top": 78,
+        "right": 57,
+        "bottom": 85
+      },
+      "clip": "walk-front",
+      "index": 0,
+      "rawIndex": 0,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-00.png"
+    },
+    {
+      "file": "prepared/walk-front-1.png",
+      "sha256": "9c939eaf6cc0fd7320693f6d3a97ecaa5455232297e821f08f5172aca00523b6",
+      "bbox": {
+        "left": 23,
+        "top": 13,
+        "right": 64,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 55,
+      "shoeMaskSha256": "11d22a383934793a5425b73af2b310443e6f3da622a5bb1124f2b00332b7e8ad",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 74,
+        "right": 34,
+        "bottom": 79
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 77,
+        "right": 57,
+        "bottom": 84
+      },
+      "clip": "walk-front",
+      "index": 1,
+      "rawIndex": 1,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-01.png"
+    },
+    {
+      "file": "prepared/walk-front-2.png",
+      "sha256": "ca95440e5e7b1b4ed1d2291f7c5d997c1f1fa4c526563db98ee6f372c8501950",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 63,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 15,
+      "handBottom": 55,
+      "shoeMaskSha256": "bd03e7608d767142ceb7246a132c393c687975ea3485ba1847526564f91392b5",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 57,
+        "bottom": 82
+      },
+      "clip": "walk-front",
+      "index": 2,
+      "rawIndex": 2,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-02.png"
+    },
+    {
+      "file": "prepared/walk-front-3.png",
+      "sha256": "95edf597bfdc2e2dc2f51783f971227c453f75ed2b493b22409cba94fc093da0",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 63,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 55,
+      "shoeMaskSha256": "3de7b17427ba2edf1c6c4bd3c9aac89bc436931b0d0bfb5bd1cfb236cea560bc",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 59,
+        "bottom": 80
+      },
+      "clip": "walk-front",
+      "index": 3,
+      "rawIndex": 3,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-03.png"
+    },
+    {
+      "file": "prepared/walk-front-4.png",
+      "sha256": "2b5cc23fbe0cbbf81db8a7565b2cafeb6cb1a576dc564cfb45b8c85eca3cdc4c",
+      "bbox": {
+        "left": 26,
+        "top": 14,
+        "right": 65,
+        "bottom": 86
+      },
+      "margin": 9,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 15,
+      "handBottom": 56,
+      "shoeMaskSha256": "d430024f37e4c6dec288eb3c1cd5e6def8eb11ce30621dd1eb1bec4129b2a307",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 79,
+        "right": 36,
+        "bottom": 85
+      },
+      "screenRightShoe": {
+        "left": 54,
+        "top": 74,
+        "right": 57,
+        "bottom": 79
+      },
+      "clip": "walk-front",
+      "index": 4,
+      "rawIndex": 4,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-04.png"
+    },
+    {
+      "file": "prepared/walk-front-5.png",
+      "sha256": "c0631cc5f175e50fede0d3f9f26195e766014aaa009228c9aaa167da37b9623d",
+      "bbox": {
+        "left": 26,
+        "top": 14,
+        "right": 65,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 13,
+      "handBottom": 56,
+      "shoeMaskSha256": "2903a58279e6e7fdb8071bc2dc66ba798ba796559d0e53da0412a87188db60f8",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 78,
+        "right": 36,
+        "bottom": 85
+      },
+      "screenRightShoe": {
+        "left": 54,
+        "top": 74,
+        "right": 57,
+        "bottom": 79
+      },
+      "clip": "walk-front",
+      "index": 5,
+      "rawIndex": 5,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-05.png"
+    },
+    {
+      "file": "prepared/walk-front-6.png",
+      "sha256": "e981ff04063de1605ec4b13adc964c9e52919df93b94d8c1bcd57249d422c458",
+      "bbox": {
+        "left": 24,
+        "top": 12,
+        "right": 64,
+        "bottom": 84
+      },
+      "margin": 11,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 54,
+      "shoeMaskSha256": "b402ebcc723b0d030bf762fd0071a5a2761a2b9c0ee0f1c389ac3980d70db6e5",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 76,
+        "right": 36,
+        "bottom": 83
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 58,
+        "bottom": 80
+      },
+      "clip": "walk-front",
+      "index": 6,
+      "rawIndex": 6,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-06.png"
+    },
+    {
+      "file": "prepared/walk-front-7.png",
+      "sha256": "b18c43a95f142fe745aba4ca635e2bfdc176e7a01f3025e3747c09c0f4f2f502",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 63,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 55,
+      "shoeMaskSha256": "66d368a29fb2157d92551c2e3a557e679c26611c45b5ed392bab022e87ec0a77",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 57,
+        "bottom": 82
+      },
+      "clip": "walk-front",
+      "index": 7,
+      "rawIndex": 7,
+      "rawFile": "repairs/front-facing-rig-v1/walk-front/frame-07.png"
+    },
+    {
+      "file": "prepared/walk-north-0.png",
+      "sha256": "62c286eb6c289a1f55c5a5d771b9e6b87cb7c0c89b50e9a8e23a4f2afd1b0b95",
+      "bbox": {
+        "left": 29,
+        "top": 12,
+        "right": 66,
+        "bottom": 82
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "e898534a28bf7f1863a789b3f98fbc85bad14dc9b0a1cb48c1e59e0bda4988a8",
+      "screenLeftShoe": {
+        "left": 34,
+        "top": 74,
+        "right": 40,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 57,
+        "bottom": 81
+      },
+      "clip": "walk-north",
+      "index": 0,
+      "rawIndex": 1,
+      "rawFile": "raw/walk-north/frame-01.png"
+    },
+    {
+      "file": "prepared/walk-north-1.png",
+      "sha256": "31b56a8383ab723e121f75f75de532f1b48f504fe856c1a112b90678c6cfe76e",
+      "bbox": {
+        "left": 29,
+        "top": 11,
+        "right": 67,
+        "bottom": 83
+      },
+      "margin": 11,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 51,
+      "shoeMaskSha256": "9c7716ba83f673bba46fe0b8ed035b988abc9d77c79efe1087a46616645c290c",
+      "screenLeftShoe": {
+        "left": 38,
+        "top": 72,
+        "right": 43,
+        "bottom": 83
+      },
+      "screenRightShoe": {
+        "left": 48,
+        "top": 74,
+        "right": 53,
+        "bottom": 76
+      },
+      "clip": "walk-north",
+      "index": 1,
+      "rawIndex": 2,
+      "rawFile": "raw/walk-north/frame-02.png"
+    },
+    {
+      "file": "prepared/walk-north-2.png",
+      "sha256": "603e53d7a869c4ef8289c4800ee8ece18100a920d2474bc93a4beeb11849ac46",
+      "bbox": {
+        "left": 29,
+        "top": 12,
+        "right": 66,
+        "bottom": 84
+      },
+      "margin": 11,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "06ef0e4ccd7bebfc9d103f7c85ecbf84f0bb7f3d7dfd4711e093c69c1fa764a1",
+      "screenLeftShoe": {
+        "left": 41,
+        "top": 75,
+        "right": 45,
+        "bottom": 84
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 75,
+        "right": 51,
+        "bottom": 83
+      },
+      "clip": "walk-north",
+      "index": 2,
+      "rawIndex": 3,
+      "rawFile": "raw/walk-north/frame-03.png"
+    },
+    {
+      "file": "prepared/walk-north-3.png",
+      "sha256": "d773e203e5db8ce525abe406ba0595d2575fb6a26dcacc056549d3d7675ddd61",
+      "bbox": {
+        "left": 29,
+        "top": 13,
+        "right": 64,
+        "bottom": 84
+      },
+      "margin": 11,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "6644ebf1a35de7b0d64a251879b822135f22c191a8c277372c9a8eeb18618e40",
+      "screenLeftShoe": {
+        "left": 42,
+        "top": 76,
+        "right": 45,
+        "bottom": 83
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 76,
+        "right": 50,
+        "bottom": 81
+      },
+      "clip": "walk-north",
+      "index": 3,
+      "rawIndex": 4,
+      "rawFile": "raw/walk-north/frame-04.png"
+    },
+    {
+      "file": "prepared/walk-north-4.png",
+      "sha256": "30b68aa9287adbdd575f65cb86d71f6338f0bc4092fdd6f105b15e7e8b19d8f9",
+      "bbox": {
+        "left": 27,
+        "top": 12,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "804551458c2cda17a42426ed3e7f4d7d984b7b08cec5f7f873baede9b8868504",
+      "screenLeftShoe": {
+        "left": 40,
+        "top": 75,
+        "right": 41,
+        "bottom": 79
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 75,
+        "right": 51,
+        "bottom": 82
+      },
+      "clip": "walk-north",
+      "index": 4,
+      "rawIndex": 5,
+      "rawFile": "raw/walk-north/frame-05.png"
+    },
+    {
+      "file": "prepared/walk-north-5.png",
+      "sha256": "93b7a132c8fae94fbdd973ae859ec9fecab7d3318ff3a56d478a4829ce14d7a0",
+      "bbox": {
+        "left": 26,
+        "top": 11,
+        "right": 64,
+        "bottom": 83
+      },
+      "margin": 11,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 51,
+      "shoeMaskSha256": "32d504f489d5704b351a333857232ff299e8e1e034ad4f330c01acc9da10f29d",
+      "screenLeftShoe": {
+        "left": 38,
+        "top": 74,
+        "right": 42,
+        "bottom": 77
+      },
+      "screenRightShoe": {
+        "left": 48,
+        "top": 75,
+        "right": 54,
+        "bottom": 83
+      },
+      "clip": "walk-north",
+      "index": 5,
+      "rawIndex": 6,
+      "rawFile": "raw/walk-north/frame-06.png"
+    },
+    {
+      "file": "prepared/walk-north-6.png",
+      "sha256": "9a5dc63dfbc971c6af19cc542537f2c8a7d34f171e11fa30e8ec333549786fb7",
+      "bbox": {
+        "left": 26,
+        "top": 12,
+        "right": 64,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "ea2b53fd90c2917c7ccd56040083124c2a17685ff1323b0fbb438516cf9d56af",
+      "screenLeftShoe": {
+        "left": 33,
+        "top": 75,
+        "right": 39,
+        "bottom": 81
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 58,
+        "bottom": 83
+      },
+      "clip": "walk-north",
+      "index": 6,
+      "rawIndex": 7,
+      "rawFile": "raw/walk-north/frame-07.png"
+    },
+    {
+      "file": "prepared/walk-north-7.png",
+      "sha256": "134676098cc22412545485556716dc5ddadfc4d73d3ab4163cf012cbe3a66805",
+      "bbox": {
+        "left": 28,
+        "top": 13,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 13,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "7a18ac09c55b62c7741a9a9df477b19ab8f438bc3646de535e70edc5e5d3df55",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 75,
+        "right": 37,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 54,
+        "top": 75,
+        "right": 61,
+        "bottom": 82
+      },
+      "clip": "walk-north",
+      "index": 7,
+      "rawIndex": 8,
+      "rawFile": "raw/walk-north/frame-08.png"
+    },
+    {
+      "file": "prepared/run-front-0.png",
+      "sha256": "25ecf1b9a64664cdbde7f8cac53a8dc5e34c4546fe9eca570d0c466afe3fadba",
+      "bbox": {
+        "left": 21,
+        "top": 16,
+        "right": 65,
+        "bottom": 86
+      },
+      "margin": 9,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 50,
+      "shoeMaskSha256": "af4958d31bb09814a6ab4bc8455789f14bac85ebb463659b7ecf79072c68c7d1",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 75,
+        "right": 35,
+        "bottom": 81
+      },
+      "screenRightShoe": {
+        "left": 50,
+        "top": 78,
+        "right": 57,
+        "bottom": 85
+      },
+      "clip": "run-front",
+      "index": 0,
+      "rawIndex": 0,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-00.png"
+    },
+    {
+      "file": "prepared/run-front-1.png",
+      "sha256": "e9ab1599df4ff5379bdfd48afc687f1c945572740aa3dcfcca2144912f7c9bfe",
+      "bbox": {
+        "left": 22,
+        "top": 15,
+        "right": 65,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 18,
+      "handBottom": 48,
+      "shoeMaskSha256": "6f1f4008e65e4cebd87646ca8d73d69653bec31b4654821dd1b0944258cd8600",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 74,
+        "right": 35,
+        "bottom": 79
+      },
+      "screenRightShoe": {
+        "left": 51,
+        "top": 77,
+        "right": 57,
+        "bottom": 84
+      },
+      "clip": "run-front",
+      "index": 1,
+      "rawIndex": 1,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-01.png"
+    },
+    {
+      "file": "prepared/run-front-2.png",
+      "sha256": "99bbd816210ff4783be73b0a02153d4908fedb16c4538ea2d329a7363a575cff",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 62,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 18,
+      "handBottom": 46,
+      "shoeMaskSha256": "f35d76a615695e1432d8a8b315c04ceec055de9129d6d9f33a470e103cd79cee",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 59,
+        "bottom": 80
+      },
+      "clip": "run-front",
+      "index": 2,
+      "rawIndex": 2,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-02.png"
+    },
+    {
+      "file": "prepared/run-front-3.png",
+      "sha256": "10174f5d91dc6de14313df17a78a38fb51a8e83bf354c7bb3cce23cb0a6780ef",
+      "bbox": {
+        "left": 21,
+        "top": 14,
+        "right": 65,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 18,
+      "handBottom": 48,
+      "shoeMaskSha256": "fb443df21b34ebbc39ab874ace6c421f5e608a50ccf6a9fb45f709fb7ed069b0",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 77,
+        "right": 36,
+        "bottom": 84
+      },
+      "screenRightShoe": {
+        "left": 53,
+        "top": 73,
+        "right": 57,
+        "bottom": 79
+      },
+      "clip": "run-front",
+      "index": 3,
+      "rawIndex": 3,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-03.png"
+    },
+    {
+      "file": "prepared/run-front-4.png",
+      "sha256": "c602ae43f711f238ea6d7bf93b0c9f0957207ca000e72b80e30812c2ade6279d",
+      "bbox": {
+        "left": 21,
+        "top": 16,
+        "right": 65,
+        "bottom": 86
+      },
+      "margin": 9,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 16,
+      "handBottom": 49,
+      "shoeMaskSha256": "15a4a75f264e200992a6bd87581a611aa8a9338535a27a8aea3e3be4c161dabd",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 77,
+        "right": 36,
+        "bottom": 85
+      },
+      "screenRightShoe": {
+        "left": 53,
+        "top": 74,
+        "right": 57,
+        "bottom": 79
+      },
+      "clip": "run-front",
+      "index": 4,
+      "rawIndex": 4,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-04.png"
+    },
+    {
+      "file": "prepared/run-front-5.png",
+      "sha256": "6bb7006a3eec012cdf7e52ceff2b91b23a14cd68afe5c5d41f76655885b6c7fe",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 63,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 19,
+      "handBottom": 55,
+      "shoeMaskSha256": "2ed09a11ddfe8cd0edb92f9cbb0c90acf7dbeffc5c989f3172d62776de8fa3b1",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 59,
+        "bottom": 80
+      },
+      "clip": "run-front",
+      "index": 5,
+      "rawIndex": 5,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-05.png"
+    },
+    {
+      "file": "prepared/run-front-6.png",
+      "sha256": "40e77864861a7437cec1a5be9be73cf48a427d255bb0f12ecea06d91211fb735",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 63,
+        "bottom": 83
+      },
+      "margin": 12,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 18,
+      "handBottom": 55,
+      "shoeMaskSha256": "2ed09a11ddfe8cd0edb92f9cbb0c90acf7dbeffc5c989f3172d62776de8fa3b1",
+      "screenLeftShoe": {
+        "left": 30,
+        "top": 75,
+        "right": 35,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 75,
+        "right": 59,
+        "bottom": 80
+      },
+      "clip": "run-front",
+      "index": 6,
+      "rawIndex": 6,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-06.png"
+    },
+    {
+      "file": "prepared/run-front-7.png",
+      "sha256": "21baddef1ef15173024c79e54fdacd28cf8aa6d69b1d1e3b76f5dbe63a8712b9",
+      "bbox": {
+        "left": 24,
+        "top": 13,
+        "right": 62,
+        "bottom": 82
+      },
+      "margin": 13,
+      "colors": 27,
+      "partialAlpha": 0,
+      "headSkin": 19,
+      "handBottom": 50,
+      "shoeMaskSha256": "f6f653bfd4197c3da3b3efdb4030a5e6fb73b1d821692515cbe96d7506ec32b9",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 74,
+        "right": 35,
+        "bottom": 79
+      },
+      "screenRightShoe": {
+        "left": 51,
+        "top": 75,
+        "right": 59,
+        "bottom": 81
+      },
+      "clip": "run-front",
+      "index": 7,
+      "rawIndex": 7,
+      "rawFile": "repairs/front-facing-rig-v1/run-front/frame-07.png"
+    },
+    {
+      "file": "prepared/run-north-0.png",
+      "sha256": "c433a604df0a71ec5dd0906e342df5fdd305f1c73989eb53520566ce6ebeb277",
+      "bbox": {
+        "left": 29,
+        "top": 12,
+        "right": 65,
+        "bottom": 82
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "d4020a9ba88c1b7da1a4fada33ed2d5cef26eb6962b8157b9ba40ddbcea021b0",
+      "screenLeftShoe": {
+        "left": 34,
+        "top": 74,
+        "right": 40,
+        "bottom": 82
+      },
+      "screenRightShoe": null,
+      "clip": "run-north",
+      "index": 0,
+      "rawIndex": 1,
+      "rawFile": "raw/run-north/frame-01.png"
+    },
+    {
+      "file": "prepared/run-north-1.png",
+      "sha256": "27c89856ee7b9e63478f29934c26b05b98f6d2c7234fd6eb32f019e4e53fea07",
+      "bbox": {
+        "left": 30,
+        "top": 10,
+        "right": 66,
+        "bottom": 83
+      },
+      "margin": 10,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 51,
+      "shoeMaskSha256": "22149d9dc649052a87513d7c210048f9fa2e419dcebb10af8fcaf6ac23a88dc3",
+      "screenLeftShoe": {
+        "left": 39,
+        "top": 73,
+        "right": 44,
+        "bottom": 83
+      },
+      "screenRightShoe": {
+        "left": 48,
+        "top": 73,
+        "right": 51,
+        "bottom": 73
+      },
+      "clip": "run-north",
+      "index": 1,
+      "rawIndex": 2,
+      "rawFile": "raw/run-north/frame-02.png"
+    },
+    {
+      "file": "prepared/run-north-2.png",
+      "sha256": "da27de8dd797e7f2cffd5c74338575fdd8e2d76980cbecce370a894bf244a36d",
+      "bbox": {
+        "left": 30,
+        "top": 11,
+        "right": 65,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "b6841239f7c9f55dc1b7fc8a4eed5d9c7e8e76ebb42944c54a8606387a605ed2",
+      "screenLeftShoe": {
+        "left": 41,
+        "top": 75,
+        "right": 45,
+        "bottom": 84
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 74,
+        "right": 49,
+        "bottom": 82
+      },
+      "clip": "run-north",
+      "index": 2,
+      "rawIndex": 3,
+      "rawFile": "raw/run-north/frame-03.png"
+    },
+    {
+      "file": "prepared/run-north-3.png",
+      "sha256": "d784905f07bf54d6ef6be6015faf10215ad98ca138ba915480d69cbb8479d148",
+      "bbox": {
+        "left": 29,
+        "top": 13,
+        "right": 64,
+        "bottom": 85
+      },
+      "margin": 10,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "66661dfeb786adc78dfe98d1b36398e84b4e042266ab1b001a2ca0d464c6dbc1",
+      "screenLeftShoe": {
+        "left": 43,
+        "top": 76,
+        "right": 45,
+        "bottom": 84
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 76,
+        "right": 48,
+        "bottom": 78
+      },
+      "clip": "run-north",
+      "index": 3,
+      "rawIndex": 4,
+      "rawFile": "raw/run-north/frame-04.png"
+    },
+    {
+      "file": "prepared/run-north-4.png",
+      "sha256": "f7a89c60ac2cdb26c0ddfac4b63faffda6a7de223ac5cf25415f0148adc83284",
+      "bbox": {
+        "left": 28,
+        "top": 12,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "99a31d7053d10d69c206a5928958be0dd27144d0380db960450711e543b91574",
+      "screenLeftShoe": {
+        "left": 44,
+        "top": 75,
+        "right": 44,
+        "bottom": 75
+      },
+      "screenRightShoe": {
+        "left": 46,
+        "top": 75,
+        "right": 49,
+        "bottom": 82
+      },
+      "clip": "run-north",
+      "index": 4,
+      "rawIndex": 5,
+      "rawFile": "raw/run-north/frame-05.png"
+    },
+    {
+      "file": "prepared/run-north-5.png",
+      "sha256": "8035e4be8f8539bfa25b7ddd592ff5ac97453064845b14df08ab4a324183ca43",
+      "bbox": {
+        "left": 28,
+        "top": 10,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 10,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 51,
+      "shoeMaskSha256": "6de739eb8f6abe3d93df52d3a340e4ffb818d2c7125d60c2a7db7c7583d570e9",
+      "screenLeftShoe": null,
+      "screenRightShoe": {
+        "left": 48,
+        "top": 73,
+        "right": 53,
+        "bottom": 82
+      },
+      "clip": "run-north",
+      "index": 5,
+      "rawIndex": 6,
+      "rawFile": "raw/run-north/frame-06.png"
+    },
+    {
+      "file": "prepared/run-north-6.png",
+      "sha256": "1dcfda3b4a673eb22cf429d994b9730226822ddbd7c02f4c4114455ef9a01005",
+      "bbox": {
+        "left": 28,
+        "top": 12,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 12,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 52,
+      "shoeMaskSha256": "6a7f52cf3cbc6d006dfb42d89a9d959800088589475fac3aadf48d1806adb58e",
+      "screenLeftShoe": {
+        "left": 34,
+        "top": 73,
+        "right": 38,
+        "bottom": 78
+      },
+      "screenRightShoe": {
+        "left": 52,
+        "top": 74,
+        "right": 58,
+        "bottom": 82
+      },
+      "clip": "run-north",
+      "index": 6,
+      "rawIndex": 7,
+      "rawFile": "raw/run-north/frame-07.png"
+    },
+    {
+      "file": "prepared/run-north-7.png",
+      "sha256": "3ba038eb5ccb58a8ceb3b377e978a7735fab69586c46c4ae4640797885d6e318",
+      "bbox": {
+        "left": 29,
+        "top": 13,
+        "right": 64,
+        "bottom": 82
+      },
+      "margin": 13,
+      "colors": 10,
+      "partialAlpha": 0,
+      "headSkin": 0,
+      "handBottom": 53,
+      "shoeMaskSha256": "db68e2cae09f47a5a7b5f188ea431be59ed9ee66c4e12f1f02d94319ebece82f",
+      "screenLeftShoe": {
+        "left": 31,
+        "top": 75,
+        "right": 37,
+        "bottom": 82
+      },
+      "screenRightShoe": {
+        "left": 54,
+        "top": 75,
+        "right": 61,
+        "bottom": 82
+      },
+      "clip": "run-north",
+      "index": 7,
+      "rawIndex": 8,
+      "rawFile": "raw/run-north/frame-08.png"
+    }
+  ],
+  "distinctPerLoop": 8,
+  "loopMetrics": [
+    {
+      "clip": "walk-front",
+      "adjacentPixelChanges": [
+        969,
+        901,
+        209,
+        1524,
+        289,
+        1361,
+        1111,
+        1391
+      ],
+      "distinctShoeMasks": 8,
+      "shoeExtents": [
+        {
+          "index": 0,
+          "left": {
+            "left": 31,
+            "top": 74,
+            "right": 34,
+            "bottom": 79
+          },
+          "right": {
+            "left": 51,
+            "top": 78,
+            "right": 57,
+            "bottom": 85
+          }
+        },
+        {
+          "index": 1,
+          "left": {
+            "left": 31,
+            "top": 74,
+            "right": 34,
+            "bottom": 79
+          },
+          "right": {
+            "left": 52,
+            "top": 77,
+            "right": 57,
+            "bottom": 84
+          }
+        },
+        {
+          "index": 2,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 57,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 3,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 59,
+            "bottom": 80
+          }
+        },
+        {
+          "index": 4,
+          "left": {
+            "left": 30,
+            "top": 79,
+            "right": 36,
+            "bottom": 85
+          },
+          "right": {
+            "left": 54,
+            "top": 74,
+            "right": 57,
+            "bottom": 79
+          }
+        },
+        {
+          "index": 5,
+          "left": {
+            "left": 30,
+            "top": 78,
+            "right": 36,
+            "bottom": 85
+          },
+          "right": {
+            "left": 54,
+            "top": 74,
+            "right": 57,
+            "bottom": 79
+          }
+        },
+        {
+          "index": 6,
+          "left": {
+            "left": 31,
+            "top": 76,
+            "right": 36,
+            "bottom": 83
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 58,
+            "bottom": 80
+          }
+        },
+        {
+          "index": 7,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 57,
+            "bottom": 82
+          }
+        }
+      ]
+    },
+    {
+      "clip": "walk-north",
+      "adjacentPixelChanges": [
+        1056,
+        1153,
+        1179,
+        1314,
+        1068,
+        903,
+        1302,
+        1506
+      ],
+      "distinctShoeMasks": 8,
+      "shoeExtents": [
+        {
+          "index": 0,
+          "left": {
+            "left": 34,
+            "top": 74,
+            "right": 40,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 57,
+            "bottom": 81
+          }
+        },
+        {
+          "index": 1,
+          "left": {
+            "left": 38,
+            "top": 72,
+            "right": 43,
+            "bottom": 83
+          },
+          "right": {
+            "left": 48,
+            "top": 74,
+            "right": 53,
+            "bottom": 76
+          }
+        },
+        {
+          "index": 2,
+          "left": {
+            "left": 41,
+            "top": 75,
+            "right": 45,
+            "bottom": 84
+          },
+          "right": {
+            "left": 46,
+            "top": 75,
+            "right": 51,
+            "bottom": 83
+          }
+        },
+        {
+          "index": 3,
+          "left": {
+            "left": 42,
+            "top": 76,
+            "right": 45,
+            "bottom": 83
+          },
+          "right": {
+            "left": 46,
+            "top": 76,
+            "right": 50,
+            "bottom": 81
+          }
+        },
+        {
+          "index": 4,
+          "left": {
+            "left": 40,
+            "top": 75,
+            "right": 41,
+            "bottom": 79
+          },
+          "right": {
+            "left": 46,
+            "top": 75,
+            "right": 51,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 5,
+          "left": {
+            "left": 38,
+            "top": 74,
+            "right": 42,
+            "bottom": 77
+          },
+          "right": {
+            "left": 48,
+            "top": 75,
+            "right": 54,
+            "bottom": 83
+          }
+        },
+        {
+          "index": 6,
+          "left": {
+            "left": 33,
+            "top": 75,
+            "right": 39,
+            "bottom": 81
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 58,
+            "bottom": 83
+          }
+        },
+        {
+          "index": 7,
+          "left": {
+            "left": 31,
+            "top": 75,
+            "right": 37,
+            "bottom": 82
+          },
+          "right": {
+            "left": 54,
+            "top": 75,
+            "right": 61,
+            "bottom": 82
+          }
+        }
+      ]
+    },
+    {
+      "clip": "run-front",
+      "adjacentPixelChanges": [
+        978,
+        1329,
+        1282,
+        1368,
+        1445,
+        91,
+        1188,
+        1413
+      ],
+      "distinctShoeMasks": 7,
+      "shoeExtents": [
+        {
+          "index": 0,
+          "left": {
+            "left": 31,
+            "top": 75,
+            "right": 35,
+            "bottom": 81
+          },
+          "right": {
+            "left": 50,
+            "top": 78,
+            "right": 57,
+            "bottom": 85
+          }
+        },
+        {
+          "index": 1,
+          "left": {
+            "left": 31,
+            "top": 74,
+            "right": 35,
+            "bottom": 79
+          },
+          "right": {
+            "left": 51,
+            "top": 77,
+            "right": 57,
+            "bottom": 84
+          }
+        },
+        {
+          "index": 2,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 59,
+            "bottom": 80
+          }
+        },
+        {
+          "index": 3,
+          "left": {
+            "left": 31,
+            "top": 77,
+            "right": 36,
+            "bottom": 84
+          },
+          "right": {
+            "left": 53,
+            "top": 73,
+            "right": 57,
+            "bottom": 79
+          }
+        },
+        {
+          "index": 4,
+          "left": {
+            "left": 31,
+            "top": 77,
+            "right": 36,
+            "bottom": 85
+          },
+          "right": {
+            "left": 53,
+            "top": 74,
+            "right": 57,
+            "bottom": 79
+          }
+        },
+        {
+          "index": 5,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 59,
+            "bottom": 80
+          }
+        },
+        {
+          "index": 6,
+          "left": {
+            "left": 30,
+            "top": 75,
+            "right": 35,
+            "bottom": 82
+          },
+          "right": {
+            "left": 52,
+            "top": 75,
+            "right": 59,
+            "bottom": 80
+          }
+        },
+        {
+          "index": 7,
+          "left": {
+            "left": 31,
+            "top": 74,
+            "right": 35,
+            "bottom": 79
+          },
+          "right": {
+            "left": 51,
+            "top": 75,
+            "right": 59,
+            "bottom": 81
+          }
+        }
+      ]
+    },
+    {
+      "clip": "run-north",
+      "adjacentPixelChanges": [
+        1218,
+        1065,
+        1037,
+        1075,
+        942,
+        884,
+        1157,
+        1138
+      ],
+      "distinctShoeMasks": 8,
+      "shoeExtents": [
+        {
+          "index": 0,
+          "left": {
+            "left": 34,
+            "top": 74,
+            "right": 40,
+            "bottom": 82
+          },
+          "right": null
+        },
+        {
+          "index": 1,
+          "left": {
+            "left": 39,
+            "top": 73,
+            "right": 44,
+            "bottom": 83
+          },
+          "right": {
+            "left": 48,
+            "top": 73,
+            "right": 51,
+            "bottom": 73
+          }
+        },
+        {
+          "index": 2,
+          "left": {
+            "left": 41,
+            "top": 75,
+            "right": 45,
+            "bottom": 84
+          },
+          "right": {
+            "left": 46,
+            "top": 74,
+            "right": 49,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 3,
+          "left": {
+            "left": 43,
+            "top": 76,
+            "right": 45,
+            "bottom": 84
+          },
+          "right": {
+            "left": 46,
+            "top": 76,
+            "right": 48,
+            "bottom": 78
+          }
+        },
+        {
+          "index": 4,
+          "left": {
+            "left": 44,
+            "top": 75,
+            "right": 44,
+            "bottom": 75
+          },
+          "right": {
+            "left": 46,
+            "top": 75,
+            "right": 49,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 5,
+          "left": null,
+          "right": {
+            "left": 48,
+            "top": 73,
+            "right": 53,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 6,
+          "left": {
+            "left": 34,
+            "top": 73,
+            "right": 38,
+            "bottom": 78
+          },
+          "right": {
+            "left": 52,
+            "top": 74,
+            "right": 58,
+            "bottom": 82
+          }
+        },
+        {
+          "index": 7,
+          "left": {
+            "left": 31,
+            "top": 75,
+            "right": 37,
+            "bottom": 82
+          },
+          "right": {
+            "left": 54,
+            "top": 75,
+            "right": 61,
+            "bottom": 82
+          }
+        }
+      ]
+    }
+  ],
+  "mirrorPairs": 32,
+  "mirrorExact": true,
+  "atlasRoundtrip": "32/32 PASS",
+  "atlasRgbaBytes": 1179648,
+  "clipping": 0,
+  "minMargin": 9
+}

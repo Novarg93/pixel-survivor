@@ -1,0 +1,413 @@
+{
+  "sources": {
+    "model": {
+      "file": "reference/mage-approved-model.png",
+      "source": "art/main-hero-mage/abilities/hero-model/static.png",
+      "sha256": "fba5f9cd01988c3981c3a00dc22b9b6d6742841da215bb7d0bcd3e7a357cde60"
+    },
+    "south": {
+      "file": "reference/mage-south.png",
+      "source": "art/generated/mage-hero-v2/first-frames/south.png",
+      "sha256": "f7ec9dafc00dfbf30387ac58b208475b81ab090eac7be5dbb339b7c5321d37f8"
+    },
+    "north": {
+      "file": "reference/mage-north.png",
+      "source": "art/generated/mage-hero-v2/first-frames/north.png",
+      "sha256": "ebb63906cb0f6ad214dd28ef364f7e07db904f657fd7a8af6913560be9627440"
+    },
+    "directions": {
+      "file": "reference/directions.png",
+      "source": "art/main-hero-mage/abilities/hero-model/8-directions.png",
+      "sha256": "f6832fe1a023076ee40d4374679d92b46814363b430f8d351d4dc59bece022d1"
+    },
+    "idle": [
+      {
+        "file": "reference/idle-south-00.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/01.png",
+        "sha256": "587f5e52477f2670154ebf1bee98b9fd716e1c4eb6ed3960f6abb4054540a1b7"
+      },
+      {
+        "file": "reference/idle-south-01.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/02.png",
+        "sha256": "c75087020df5f001317e609fc69a5ee3868cc7b92cb5de6efc3710b20962d993"
+      },
+      {
+        "file": "reference/idle-south-02.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/03.png",
+        "sha256": "8ea23698a0db9526016c9be7fdc9b7d4fd27c10ffac620fa07a16da0dda2e851"
+      },
+      {
+        "file": "reference/idle-south-03.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/04.png",
+        "sha256": "c7e8b22f70789503f8f218aba19f9ce2511814aa630df8dae35b80a638e81726"
+      },
+      {
+        "file": "reference/idle-south-04.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/05.png",
+        "sha256": "11f5a1e172cc04c6c01ec55497e96616fc1dcfba3e31de752acbca296f4ab05a"
+      },
+      {
+        "file": "reference/idle-south-05.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/06.png",
+        "sha256": "f6ab9cec8702fd04a8fa88e3015f23d60509b809fd9019519832267d2588419b"
+      },
+      {
+        "file": "reference/idle-south-06.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/07.png",
+        "sha256": "c194ae17e55c1ac4abcbde96d9d829817c7e76fce0c71771443fa6605d2ed5f0"
+      },
+      {
+        "file": "reference/idle-south-07.png",
+        "source": "art/generated/mage-hero-v2/originals/idle-south/08.png",
+        "sha256": "c189bd4dee09eb72d00b06168c2385eaed83bbd14dde2cfef99c6b5850b9a967"
+      }
+    ],
+    "run": [
+      {
+        "file": "reference/run-north/00.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/00.png",
+        "sha256": "ec38d832952663a3951b388ae189fcb791d4e374b52a4091ea4aabf0d423d29f"
+      },
+      {
+        "file": "reference/run-north/01.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/01.png",
+        "sha256": "0d62b50aa537c86f39179d48907c573d783ccbac56040e334dda0930fd12aa81"
+      },
+      {
+        "file": "reference/run-north/02.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/02.png",
+        "sha256": "51b1e982ae70237c71aade8a516500f4c3e6b6d64a259b386b80fd726a7c5063"
+      },
+      {
+        "file": "reference/run-north/03.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/03.png",
+        "sha256": "a10b30efcb4f8f7ba60d04e393d4cbae356ae41fc9726a2b6e100251f4d7b5bd"
+      },
+      {
+        "file": "reference/run-north/04.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/04.png",
+        "sha256": "53fea10c38c20d5bd082de27b5347ce43ac2b853e0f08567f7aa0bcd39a76c7c"
+      },
+      {
+        "file": "reference/run-north/05.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/05.png",
+        "sha256": "f95ae96052079dbc7664a9306ff8d9afd0f09fd43fe6e44333c065f68a460084"
+      },
+      {
+        "file": "reference/run-north/06.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/06.png",
+        "sha256": "316769d119b1c3468c93d961ac1b28a73495062b5eb5febea67875694ca4d876"
+      },
+      {
+        "file": "reference/run-north/07.png",
+        "source": "art/main-hero-mage/abilities/hero-model/run-cycle-v2/north/raw/07.png",
+        "sha256": "20a1faa9dcb702392ce6a65905670412fc248abe86403babcb03a566c09d8ec9"
+      }
+    ],
+    "castNorth": [
+      {
+        "file": "reference/cast-north/00.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/00.png",
+        "sha256": "5bcfd1bed39bc00f69b176ad51c55ce86d9040ccce39e26b950bcbf749b1b269"
+      },
+      {
+        "file": "reference/cast-north/01.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/01.png",
+        "sha256": "4039a7811e981f3c6f8bfaa1a1c6c0c00e520e7415c51f0cfd47755e5ecf37df"
+      },
+      {
+        "file": "reference/cast-north/02.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/02.png",
+        "sha256": "f22a749aada175b74d267f8400c1422a9caa2d7ad8a1fd84f51039dbcb902aec"
+      },
+      {
+        "file": "reference/cast-north/03.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/03.png",
+        "sha256": "a8a20c79ebc91b7ea423f91b796269bfee2cc08ff1a72d6d3da7640fba95d029"
+      },
+      {
+        "file": "reference/cast-north/04.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/04.png",
+        "sha256": "9b265303d5ec1179a727fba3d0ad5965570d891c9a437398e140a31586111a14"
+      },
+      {
+        "file": "reference/cast-north/05.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/05.png",
+        "sha256": "fe826a721ef3191730d8f21874c50f988e4cddfd9e59cee45c390b38473764c5"
+      },
+      {
+        "file": "reference/cast-north/06.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/06.png",
+        "sha256": "e6aea380491bb38a77fbb708faf012b65221a546a9b0c69e28d8463c98d436db"
+      },
+      {
+        "file": "reference/cast-north/07.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/07.png",
+        "sha256": "0dd050ff7c03a33a6aea5f7d34cb49e59a9b7038f4a9f099e01d0c42c2dc331c"
+      },
+      {
+        "file": "reference/cast-north/08.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/08.png",
+        "sha256": "87d411992f781878121f4d95702f5bd6623a00a68adc25d199a621ace436330e"
+      },
+      {
+        "file": "reference/cast-north/09.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/09.png",
+        "sha256": "04e9c877a27666e4865e1823fd79aec32685764c6e4c9f64d10029fe1f15b9a0"
+      },
+      {
+        "file": "reference/cast-north/10.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/10.png",
+        "sha256": "d2e1facdcae5ad499f60c1db2dc8457ac3d9edad078de1c9d44fb7c83bbefd06"
+      },
+      {
+        "file": "reference/cast-north/11.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/11.png",
+        "sha256": "e37358a8afdfcd3184ec4c2329781319575a730b59cf5b1db73f2726a59f38b5"
+      },
+      {
+        "file": "reference/cast-north/12.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/12.png",
+        "sha256": "884a145539c3bcd6e63fcc102a680e1a0ced0d290e61399c98e40f485e18edb0"
+      },
+      {
+        "file": "reference/cast-north/13.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/13.png",
+        "sha256": "9cc2b0561ca4d94cc705b26d65228ed37661664b09e24e77bc9c937141d5319f"
+      },
+      {
+        "file": "reference/cast-north/14.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/14.png",
+        "sha256": "a60685fa5cf2f81ed0a7250467168ff9fc7ef0723c75850217e72d7cf1b6459a"
+      },
+      {
+        "file": "reference/cast-north/15.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/15.png",
+        "sha256": "8d833297b100321bba07306a7fd31eb4299543ba433aca4f96485765c6ef0989"
+      },
+      {
+        "file": "reference/cast-north/16.png",
+        "source": "art/main-hero-mage/casting/directions-pixminimax-v2/fireball/north/attempt-02/raw/16.png",
+        "sha256": "66bf1de93c07ce0cbae04653b2e5ff430f736d73b59f983b04f9e608273d4d40"
+      }
+    ],
+    "castSouth": [
+      {
+        "file": "reference/cast-south/00.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/00.png",
+        "sha256": "b3730da0df8f948a63e4ed2aa4095f61c155032020dcdd6572beaa088d9b3b5c"
+      },
+      {
+        "file": "reference/cast-south/01.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/01.png",
+        "sha256": "2be5654d0dc235ef58d320c647f0cb532129df8ca34f2d26d02d3bbc0a0214b0"
+      },
+      {
+        "file": "reference/cast-south/02.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/02.png",
+        "sha256": "584a19fd4272d2b031744b35f0e443ab0319d9e057e93a140e2ad639face5bfc"
+      },
+      {
+        "file": "reference/cast-south/03.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/03.png",
+        "sha256": "89268b9949864f16d51b5d8874d79aacf49d7164b26e5b681333d03b15d1a104"
+      },
+      {
+        "file": "reference/cast-south/04.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/04.png",
+        "sha256": "f2e7442c4b76665b4d14d62579189c1ab4172092784406793dc2f308effc5096"
+      },
+      {
+        "file": "reference/cast-south/05.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/05.png",
+        "sha256": "6fafceb2ade439395202bd2880e9891e6f400296bfe1adbb217a425804ed503c"
+      },
+      {
+        "file": "reference/cast-south/06.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/06.png",
+        "sha256": "93f1ce78f42fd93f7c616ec1896142561776ed0cb3feeec93c27928b5d9bba7e"
+      },
+      {
+        "file": "reference/cast-south/07.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/07.png",
+        "sha256": "5baa379434b9725b84187469056d7f2d0574689b284c2c021c4e74dda11084df"
+      },
+      {
+        "file": "reference/cast-south/08.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/08.png",
+        "sha256": "fabb914c90234d1228e9022840d7b53c41c9234bf9482fe41ce71bb834cd02ac"
+      },
+      {
+        "file": "reference/cast-south/09.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/09.png",
+        "sha256": "b0c5e998779b7f45434e0e71ee230b84f0d8e708f98af408538b780883fd2189"
+      },
+      {
+        "file": "reference/cast-south/10.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/10.png",
+        "sha256": "c03cb1a57f6f1136df6d849196f566a88a7102f861e71f549ed5d69608650907"
+      },
+      {
+        "file": "reference/cast-south/11.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/11.png",
+        "sha256": "345bb2d98d96fc322f15452d3b8b01106378c39064bc80c966e817a82119c782"
+      },
+      {
+        "file": "reference/cast-south/12.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/12.png",
+        "sha256": "584f0018cb1679d7fbbcfae0a90aceb0cd96daf54a1c823cca9065cf90baaf67"
+      },
+      {
+        "file": "reference/cast-south/13.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/13.png",
+        "sha256": "ec59422a4a2e2be9cf8429de53f45bb0c5c2142e3b42e03ea7f7b34b92f7e96b"
+      },
+      {
+        "file": "reference/cast-south/14.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/14.png",
+        "sha256": "9cafb12b4284522585bc3d369c2d2452dabd412384b0972e7d7caef161416f3f"
+      },
+      {
+        "file": "reference/cast-south/15.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/15.png",
+        "sha256": "670e46963c7f303b86cce619458a979aa9a9696d33f1a8019bc9bd1982d26b57"
+      },
+      {
+        "file": "reference/cast-south/16.png",
+        "source": "art/generated/mage-hero-v2/originals/fireball/16.png",
+        "sha256": "a28bc3fd50669238e3d501638451fbf6956e5a9e010cc85643f99a6c37ed5b9c"
+      }
+    ],
+    "east": {
+      "file": "reference/mage-east.png",
+      "source": "art/generated/mage-hero-v2/first-frames/east.png",
+      "sha256": "3df1dd69418512faf8613fcec9c95a083fc2e86e9f8862bcd8ac535f45579cee"
+    }
+  },
+  "sourceCanvas": 256,
+  "runtimeCanvas": 112,
+  "displaySizeWorld": 40,
+  "pivotRuntime": {
+    "x": 56,
+    "y": 110.25
+  },
+  "pivotNative": {
+    "x": 128,
+    "y": 252
+  },
+  "nativeWorldScale": 0.15625,
+  "runFrameDurationsMs": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+  ],
+  "upperLowerSystem": "Existing moving cast uses independently timed Run lower body and direction-of-movement cast upper body, aligned by authored waist landmarks; the accepted production system stays untouched.",
+  "waists": {
+    "mage-v2-run-north-0": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-run-north-1": {
+      "x": 55,
+      "y": 56
+    },
+    "mage-v2-run-north-2": {
+      "x": 55,
+      "y": 55
+    },
+    "mage-v2-run-north-3": {
+      "x": 54,
+      "y": 56
+    },
+    "mage-v2-run-north-4": {
+      "x": 55,
+      "y": 60
+    },
+    "mage-v2-run-north-5": {
+      "x": 56,
+      "y": 57
+    },
+    "mage-v2-run-north-6": {
+      "x": 55,
+      "y": 54
+    },
+    "mage-v2-run-north-7": {
+      "x": 57,
+      "y": 55
+    },
+    "mage-v2-fireball-north-0": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-fireball-north-1": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-fireball-north-2": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-fireball-north-3": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-4": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-5": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-6": {
+      "x": 58,
+      "y": 58
+    },
+    "mage-v2-fireball-north-7": {
+      "x": 58,
+      "y": 58
+    },
+    "mage-v2-fireball-north-8": {
+      "x": 58,
+      "y": 58
+    },
+    "mage-v2-fireball-north-9": {
+      "x": 58,
+      "y": 58
+    },
+    "mage-v2-fireball-north-10": {
+      "x": 58,
+      "y": 58
+    },
+    "mage-v2-fireball-north-11": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-12": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-13": {
+      "x": 57,
+      "y": 58
+    },
+    "mage-v2-fireball-north-14": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-fireball-north-15": {
+      "x": 56,
+      "y": 58
+    },
+    "mage-v2-fireball-north-16": {
+      "x": 56,
+      "y": 58
+    }
+  },
+  "scene": "Shard Grove / Роща осколков"
+}

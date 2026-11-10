@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "testedWith": "Playwright MCP against separate local server 127.0.0.1:5202",
+  "viewports": [[1280,720],[844,390],[390,844]],
+  "scrubCases": 24,
+  "simultaneouslyRenderedClips": 3,
+  "sources": ["raw", "prepared"],
+  "rateControls": [0.5,1,2],
+  "backgrounds": ["ground", "checker", "dark", "light"],
+  "scales": [0.6548310811,1,2],
+  "horizontalOverflow": false,
+  "oneShotStopped": true,
+  "terminalFrameIndices": [11,11,11],
+  "errors": [],
+  "screenshots": ["comparisons/viewer-desktop-1280.png", "comparisons/viewer-mobile-844.png", "comparisons/viewer-mobile-390.png", "comparisons/viewer-prepared-extinguished.png"],
+  "initialIssueFixed": "Browser favicon request returned404; inline favicon added before final verification."
+}

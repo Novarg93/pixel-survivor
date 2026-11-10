@@ -1,0 +1,1246 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-run-v2.mjs",
+  "canvas": 96,
+  "frameCount": 59,
+  "displaySize": 46.35814889336016,
+  "referenceSpeed": 135,
+  "width": 768,
+  "height": 768,
+  "rgbaBytes": 2359296,
+  "sourcePixelsUnmodified": true,
+  "sources": {
+    "art/main-hero-mage-v2/animation/runing/animation.json": "a05c37f1ccd884605ac351aeb47234a13784e9f457d36794432fa16f18543865",
+    "art/main-hero-mage-v2/animation/runing/run-start.png": "a7d687527a1e8979de94cf6925b02b2cfb27dabf8b9a87cee4c5959ea8356a62",
+    "art/main-hero-mage-v2/animation/runing/run-loop.png": "3b7f165990536169a6bb4dd2d86db72c2a0e49af072b1fc69a5af28efe4ae598",
+    "art/main-hero-mage-v2/animation/runing/run-stop.png": "125e570e914ea9906550c86d9b390b6461b9425634c1cebe092fde3f775d8699",
+    "art/main-hero-mage-v2/animation/runing/prepared/run-start.png": "47149820d519b8f523642e6c5e9d4ab3177df35ee7c9335e6146d40b26c00a74",
+    "art/main-hero-mage-v2/animation/runing/prepared/run-loop.png": "272f664a9fef4413147e8cdfbbf20532e5d0df5d752f5fdada0a4e8401ec4653",
+    "art/main-hero-mage-v2/animation/runing/prepared/run-stop.png": "6aa633c8a5cc1231882656b272f421e2c3d0decd9c845e508aa45efee11da466",
+    "art/main-hero-mage-v2/animation/runing/north/animation.json": "7b0ca3e1fb7bb4d80d7e60684150bf131e2f87195689082c6f85b35d6c8a3637",
+    "art/main-hero-mage-v2/animation/runing/north/north.png": "47f9ec01ef970934cd8641a368c23e0b525f749f53c53d342724af37eadbd6e9",
+    "art/main-hero-mage-v2/animation/runing/north/prepared/run-start.png": "0d6295ddb5b232681391136298f244dc432d23a2a57d435b8f8a0f9207215d56",
+    "art/main-hero-mage-v2/animation/runing/north/prepared/run-loop.png": "44526b534f8e63dc70de699c930e2d19ee61e76db32ebfc52fddb9000b675a0b",
+    "art/main-hero-mage-v2/animation/runing/north/prepared/run-stop.png": "c5724d5804c30d8df237c7badc84c11c4c35829254a1d948b6f21527312b95e5",
+    "art/main-hero-mage-v2/animation/runing/north-east/animation.json": "82685ca69aa72f3d42d7f5ba119c139b4b3ac4c658fa853e06d935d4f760e1f1",
+    "art/main-hero-mage-v2/animation/runing/north-east/run-start-end.png": "67f3194c50563ffe630bf7dc55dd294af17b1f9a3a763340c4c032c684b5de8d",
+    "art/main-hero-mage-v2/animation/runing/north-east/run-loop.png": "6f9a4212a5a38bfb2c7184676b59a45083e554c1cdfde868c17a3960bc0283f9",
+    "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-start.png": "e9a75a5676591af0e7ed6f6386f33bb7e7d65e7dd51b1b28c9cccda32f757957",
+    "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-loop.png": "11088ac031fbaee0f6bb93895174d70fb7fd5b78df8e4d207ebd73b8ebc3d5fa",
+    "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-stop.png": "0828ab14f60a6ea4414c5d5fcb2330d022428957d89bd24141e1983d1ad3a952"
+  },
+  "clips": {
+    "south": {
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "loopEntry": 11,
+      "stopAfter": 5,
+      "run-start": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/run-start.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/prepared/run-start.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-south-run-start-0",
+            "durationMs": 100,
+            "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+            "sourceFrame": 1,
+            "hand": {
+              "x": 60.794117647058826,
+              "y": 51.55882352941177
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 13,
+              "right": 63,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-1",
+            "durationMs": 100,
+            "pixelSha256": "5dc72cb722df99181e538fdfce9a10ddea2b25f2045ca77ccf5a828e352f155f",
+            "sourceFrame": 2,
+            "hand": {
+              "x": 59.3,
+              "y": 50.85
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 13,
+              "right": 64,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-2",
+            "durationMs": 100,
+            "pixelSha256": "343121ea765db0fe21ff3937a2cea259c4730e95411a9d33a54c045328e060ee",
+            "sourceFrame": 3,
+            "hand": {
+              "x": 57.54761904761905,
+              "y": 50.976190476190474
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 23,
+              "top": 14,
+              "right": 65,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-3",
+            "durationMs": 100,
+            "pixelSha256": "fdf5a2685e52b1273697e75ce832748f6508a42a5c333d97a6cdc04e00585b2d",
+            "sourceFrame": 4,
+            "hand": {
+              "x": 53.2,
+              "y": 46.3
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 21,
+              "top": 15,
+              "right": 66,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-4",
+            "durationMs": 100,
+            "pixelSha256": "c95c9688c7b0c01c08c42f2e044fa0a6623129c9b683f259f36cf1c5092d91c5",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 51.166666666666664,
+              "y": 42.333333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 16,
+              "right": 65,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-5",
+            "durationMs": 100,
+            "pixelSha256": "c07461c26da426886152289264c3a4f01828a762e50a4ef98d71ea28f6564f24",
+            "sourceFrame": 6,
+            "hand": {
+              "x": 51.166666666666664,
+              "y": 41.333333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 19,
+              "top": 15,
+              "right": 65,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-6",
+            "durationMs": 100,
+            "pixelSha256": "ea7781fb705d1cf2d00b44d3cd90b60dbcf7c0dff81ad8818c601c5ed12c032b",
+            "sourceFrame": 7,
+            "hand": {
+              "x": 54.86842105263158,
+              "y": 46.18421052631579
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 14,
+              "right": 64,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-7",
+            "durationMs": 100,
+            "pixelSha256": "0c1484f34fe947595e84db043052059f58ca7dde91fa0783bc061e53cbd83b54",
+            "sourceFrame": 8,
+            "hand": {
+              "x": 57.892857142857146,
+              "y": 47.642857142857146
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 13,
+              "right": 63,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-8",
+            "durationMs": 100,
+            "pixelSha256": "33c1d5d2b73f0e75901d72aad4683fdfe39255afbfec1386a5850f89352d193d",
+            "sourceFrame": 9,
+            "hand": {
+              "x": 59.46296296296296,
+              "y": 47.94444444444444
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 14,
+              "right": 65,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-9",
+            "durationMs": 100,
+            "pixelSha256": "67f84793cb96c1f93c3ed22efc81947e772accb9673a39d9572120e08e464b29",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 58.15384615384615,
+              "y": 49.30769230769231
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 15,
+              "right": 65,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-10",
+            "durationMs": 100,
+            "pixelSha256": "2d14edd3cf4ac8393f8f4784240fc0c68ebd36494082e58f02343fd1ddde6ed0",
+            "sourceFrame": 11,
+            "hand": {
+              "x": 53.86363636363637,
+              "y": 44.77272727272727
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 15,
+              "right": 65,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-11",
+            "durationMs": 100,
+            "pixelSha256": "0affc0795269325b5f6ca7f8db5d7228a8b082d4f17b2aeff394fba9e87981ae",
+            "sourceFrame": 12,
+            "hand": {
+              "x": 52.166666666666664,
+              "y": 45.404761904761905
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 19,
+              "top": 14,
+              "right": 72,
+              "bottom": 80,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-start-12",
+            "durationMs": 100,
+            "pixelSha256": "0716868724f70f39b7648438bd1328ac797b313d0da30edd6c38449de0f71192",
+            "sourceFrame": 13,
+            "hand": {
+              "x": 53.06666666666667,
+              "y": 46.56666666666667
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 17,
+              "top": 13,
+              "right": 71,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 1300
+      },
+      "run": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/run-loop.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/prepared/run-loop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-south-run-0",
+            "durationMs": 90,
+            "pixelSha256": "5216b90a7e1cc42649435ec654d99e5f417b2764c2b8813d0aaaab390ed600ef",
+            "sourceFrame": 4,
+            "hand": {
+              "x": 58.871428571428574,
+              "y": 46.9
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 19,
+              "right": 68,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-1",
+            "durationMs": 90,
+            "pixelSha256": "cee720e1cb79646e3c96259be9f1de3d66438524f6e3b96c6c21bda5fc997c2e",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 61.5,
+              "y": 42.24193548387097
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 23,
+              "top": 15,
+              "right": 69,
+              "bottom": 79,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-2",
+            "durationMs": 90,
+            "pixelSha256": "630453dbe306fbf76f4e0c3fe4587a4674be6da734012b329c20074c70475941",
+            "sourceFrame": 6,
+            "hand": {
+              "x": 59.229729729729726,
+              "y": 39.229729729729726
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 14,
+              "right": 69,
+              "bottom": 79,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-3",
+            "durationMs": 90,
+            "pixelSha256": "994af6dc10b3bec276f4b55f404fc7e67d6eab79046b4bede0aeee0c18b2fcf1",
+            "sourceFrame": 7,
+            "hand": {
+              "x": 59.025,
+              "y": 41.3
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 17,
+              "right": 69,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-4",
+            "durationMs": 90,
+            "pixelSha256": "7955ada5175dfe75ce239b21696efd2e99988f79bc3ff55a904783dd1423e700",
+            "sourceFrame": 8,
+            "hand": {
+              "x": 60.13636363636363,
+              "y": 44.166666666666664
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 17,
+              "top": 18,
+              "right": 68,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-5",
+            "durationMs": 90,
+            "pixelSha256": "73c383f19a0bdbbf0ca121dade297d56ad3eda61357fcc9a757d9f3bf89467cf",
+            "sourceFrame": 9,
+            "hand": {
+              "x": 56.23170731707317,
+              "y": 42.9390243902439
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 18,
+              "top": 15,
+              "right": 64,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-6",
+            "durationMs": 90,
+            "pixelSha256": "aeecf4cd635e0620be197292bda3e2401e5fb8088a4f536c84422fa9e105239a",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 58.525,
+              "y": 39.575
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 19,
+              "top": 14,
+              "right": 73,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-7",
+            "durationMs": 90,
+            "pixelSha256": "f7f80e2a14f209c8a102f1da985d705eb2e7f161608cb723f4539ad12acb7c3d",
+            "sourceFrame": 11,
+            "hand": {
+              "x": 57.82432432432432,
+              "y": 42.472972972972975
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 19,
+              "top": 17,
+              "right": 71,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 720
+      },
+      "run-stop": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/run-stop.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/prepared/run-stop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-south-run-stop-0",
+            "durationMs": 100,
+            "pixelSha256": "49ffead0a55e0adde8c63ee102126effdd5c2957589a88c1cf450fe9d1ce3fb5",
+            "sourceFrame": 4,
+            "hand": {
+              "x": 63.41304347826087,
+              "y": 40.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 13,
+              "right": 72,
+              "bottom": 81,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-1",
+            "durationMs": 100,
+            "pixelSha256": "4d1b2e108ed4dd9179211940454669b12e81ccc1ebafecd9a24333a34fd073e0",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 64.08333333333333,
+              "y": 39.625
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 21,
+              "top": 13,
+              "right": 73,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-2",
+            "durationMs": 100,
+            "pixelSha256": "0a1ed98c91b9068b179852a1c8d90bf4da29f01bb90cb3236cea825164c7e558",
+            "sourceFrame": 6,
+            "hand": {
+              "x": 66.53225806451613,
+              "y": 42.11290322580645
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 17,
+              "right": 75,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-3",
+            "durationMs": 100,
+            "pixelSha256": "9734f27fad2748fdd15735326b464913d3c805742d632d38867bfd1fe1efd548",
+            "sourceFrame": 7,
+            "hand": {
+              "x": 64.87142857142857,
+              "y": 40.81428571428572
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 19,
+              "right": 74,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-4",
+            "durationMs": 100,
+            "pixelSha256": "dcda372e3620c02aa89877388249abf3f18f38f2ddc415d82fe874797435187d",
+            "sourceFrame": 8,
+            "hand": {
+              "x": 64.23076923076923,
+              "y": 42.23076923076923
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 19,
+              "right": 74,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-5",
+            "durationMs": 100,
+            "pixelSha256": "3fc1aa15f5b7d76ba940619721cff2021da660b90a5875c666b6f14ea629e734",
+            "sourceFrame": 9,
+            "hand": {
+              "x": 61.22727272727273,
+              "y": 43.833333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 18,
+              "right": 73,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-6",
+            "durationMs": 100,
+            "pixelSha256": "e5dbcee815136b0ea7ef407412d6c7449d1f26b1f8996550a672704f26798c47",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 58.86363636363637,
+              "y": 46.36363636363637
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 21,
+              "top": 18,
+              "right": 73,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-7",
+            "durationMs": 100,
+            "pixelSha256": "e617680bb461dfc12f1a46c78750b1e1f5deb62e239fb9dc8c87da7220a75e82",
+            "sourceFrame": 11,
+            "hand": {
+              "x": 59.9,
+              "y": 45.925
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 21,
+              "top": 19,
+              "right": 72,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-8",
+            "durationMs": 100,
+            "pixelSha256": "88fd7b6c5f2b9724f874ff16f19fa593730f64096d0b89d2bc3d64d127d910f1",
+            "sourceFrame": 12,
+            "hand": {
+              "x": 59.90625,
+              "y": 46.09375
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 16,
+              "right": 69,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-south-run-stop-9",
+            "durationMs": 100,
+            "pixelSha256": "278946eb6106421986ee1d04376a313aa2e7be564a1bd4ee22a9ad5b2f7afc5b",
+            "sourceFrame": 13,
+            "hand": {
+              "x": 59.916666666666664,
+              "y": 48.083333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 23,
+              "top": 13,
+              "right": 65,
+              "bottom": 83,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 1000
+      }
+    },
+    "north": {
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "loopEntry": 4,
+      "stopAfter": 9,
+      "run-start": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north/north.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north/prepared/run-start.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-run-start-0",
+            "durationMs": 100,
+            "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+            "sourceFrame": 1,
+            "hand": {
+              "x": 62.7,
+              "y": 51.3
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 29,
+              "top": 13,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-start-1",
+            "durationMs": 100,
+            "pixelSha256": "ee5193c59a1e8e5636e01cc56cbd92e62e00cbbb030b4394a1fb3364c7572d73",
+            "sourceFrame": 2,
+            "hand": {
+              "x": 61.75,
+              "y": 46.75
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 28,
+              "top": 14,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-start-2",
+            "durationMs": 100,
+            "pixelSha256": "1ddb24c19ccd1c9641295d7bdafc2f2d25afc374624ced6acbe471a9ddfbf05c",
+            "sourceFrame": 3,
+            "hand": {
+              "x": 31.954545454545453,
+              "y": 44.22727272727273
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 27,
+              "top": 14,
+              "right": 66,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 300
+      },
+      "run": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north/north.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north/prepared/run-loop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-run-0",
+            "durationMs": 90,
+            "pixelSha256": "047090f9297d9a56a3fac419b7afe5097bb892ca4943b473a33ad265e6d983c8",
+            "sourceFrame": 4,
+            "hand": {
+              "x": 31.954545454545453,
+              "y": 42.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 26,
+              "top": 13,
+              "right": 70,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-1",
+            "durationMs": 90,
+            "pixelSha256": "d27ba189882b6b35e42bb74aac9399554dbf5b2a769579ebc64598bc8812330a",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 62.7,
+              "y": 51.3
+            },
+            "handVisible": false,
+            "bounds": {
+              "left": 27,
+              "top": 15,
+              "right": 73,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-2",
+            "durationMs": 90,
+            "pixelSha256": "cc0841b1daa7a0fc5af8757c5423679865ca931cf5e41d30429a18167d901ae1",
+            "sourceFrame": 6,
+            "hand": {
+              "x": 63.2,
+              "y": 43.3
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 27,
+              "top": 13,
+              "right": 70,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-3",
+            "durationMs": 90,
+            "pixelSha256": "2b1ea09f7fa1090ac2a91f16f2fc5ee6e30485c91ce97e9f604d6742e2348fff",
+            "sourceFrame": 7,
+            "hand": {
+              "x": 62.75,
+              "y": 42.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 13,
+              "right": 68,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-4",
+            "durationMs": 90,
+            "pixelSha256": "b7ebecbbe2d40dd176965712268601ebbda8374eadffaece8327173fe85dad2b",
+            "sourceFrame": 8,
+            "hand": {
+              "x": 62.7,
+              "y": 51.3
+            },
+            "handVisible": false,
+            "bounds": {
+              "left": 19,
+              "top": 15,
+              "right": 66,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-5",
+            "durationMs": 90,
+            "pixelSha256": "d20de50279d75b35e6db476ff121d9d329a4eccb6d3199db9d68b14ad3fbd7be",
+            "sourceFrame": 9,
+            "hand": {
+              "x": 31.72222222222222,
+              "y": 42.833333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 21,
+              "top": 13,
+              "right": 66,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 540
+      },
+      "run-stop": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north/north.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north/prepared/run-stop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-run-stop-0",
+            "durationMs": 100,
+            "pixelSha256": "432ea34e110f2f56fd6c08a91881f222b8f7215e8c78fd0880d9ef80d593033e",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 31.833333333333332,
+              "y": 42.333333333333336
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 13,
+              "right": 70,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-stop-1",
+            "durationMs": 100,
+            "pixelSha256": "4d369e5cef6f69e7ae42140fcd916572701b81dfadb8ed4fceea7b64069b9d8d",
+            "sourceFrame": 11,
+            "hand": {
+              "x": 62.7,
+              "y": 51.3
+            },
+            "handVisible": false,
+            "bounds": {
+              "left": 23,
+              "top": 15,
+              "right": 73,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-stop-2",
+            "durationMs": 100,
+            "pixelSha256": "844ba53a4fa5933c2bfee55a73d3760b6ff53de18f2aea3b280aeca8a8837853",
+            "sourceFrame": 12,
+            "hand": {
+              "x": 62.5,
+              "y": 47
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 25,
+              "top": 14,
+              "right": 70,
+              "bottom": 80,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-run-stop-3",
+            "durationMs": 100,
+            "pixelSha256": "4cecefd902cda0a30963dc299fe0db65768f7ee9c1e5218073c1af595af7a6b8",
+            "sourceFrame": 13,
+            "hand": {
+              "x": 62.7,
+              "y": 51.3
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 29,
+              "top": 13,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 400
+      }
+    },
+    "north-east": {
+      "pivot": {
+        "x": 46,
+        "y": 83
+      },
+      "loopEntry": 10,
+      "stopAfter": 7,
+      "run-start": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north-east/run-start-end.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-start.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-east-run-start-0",
+            "durationMs": 100,
+            "pixelSha256": "b68ee99f101f623538b8469e499f9fda1443e9e48bf9649e1e6e4f14c5c73d2c",
+            "sourceFrame": 1,
+            "hand": {
+              "x": 62.77272727272727,
+              "y": 51.95454545454545
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 27,
+              "top": 11,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-start-1",
+            "durationMs": 100,
+            "pixelSha256": "f206267302056d23d7146bcb150d047d3112245f324a3df5dd1e51582d59afdf",
+            "sourceFrame": 2,
+            "hand": {
+              "x": 62.77272727272727,
+              "y": 51.95454545454545
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 27,
+              "top": 11,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-start-2",
+            "durationMs": 100,
+            "pixelSha256": "e541db8cbdbed982732d33adece58598916bb9fd0d62a2047dbae310ce6c3100",
+            "sourceFrame": 3,
+            "hand": {
+              "x": 65.875,
+              "y": 51.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 26,
+              "top": 13,
+              "right": 67,
+              "bottom": 83,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-start-3",
+            "durationMs": 100,
+            "pixelSha256": "b4c68eb5d6af594369f4700272dc93f2bfe0ab225ad11653ad9be8a6f9578687",
+            "sourceFrame": 4,
+            "hand": {
+              "x": 69.5,
+              "y": 42
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 25,
+              "top": 13,
+              "right": 70,
+              "bottom": 84,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-start-4",
+            "durationMs": 100,
+            "pixelSha256": "67e671432c31e3540dbd3a419ffb2630657222b04e034a739c322f3ca17899d1",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 67,
+              "y": 31.75
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 23,
+              "top": 11,
+              "right": 69,
+              "bottom": 84,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 500
+      },
+      "run": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north-east/run-loop.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-loop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-east-run-0",
+            "durationMs": 90,
+            "pixelSha256": "892bbd963db8ac13fea50578dda66496630b8da6dc061b97f72827bf79ef32c1",
+            "sourceFrame": 5,
+            "hand": {
+              "x": 67.5,
+              "y": 31.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 12,
+              "right": 70,
+              "bottom": 79,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-1",
+            "durationMs": 90,
+            "pixelSha256": "57f26fd3861c5f9f56fb836c2d25f4fcbb9fb5f4644280a0f35f2b926450ae46",
+            "sourceFrame": 6,
+            "hand": {
+              "x": 62.77272727272727,
+              "y": 51.95454545454545
+            },
+            "handVisible": false,
+            "bounds": {
+              "left": 23,
+              "top": 14,
+              "right": 69,
+              "bottom": 80,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-2",
+            "durationMs": 90,
+            "pixelSha256": "29696798eef5b2be4e6f6ab668a55f191883d864756cb46ba1ec284eecd6a19d",
+            "sourceFrame": 7,
+            "hand": {
+              "x": 65.875,
+              "y": 44.375
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 23,
+              "top": 11,
+              "right": 67,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-3",
+            "durationMs": 90,
+            "pixelSha256": "bb5f50a400e6a0eccf048521de4b70f97226ae361cac1c2486095f68bbe555bb",
+            "sourceFrame": 8,
+            "hand": {
+              "x": 64.25,
+              "y": 45
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 12,
+              "right": 67,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-4",
+            "durationMs": 90,
+            "pixelSha256": "709d22647f91554aaeb8e146b8b4914ac37d44041600f2b66ac9371ac602edcf",
+            "sourceFrame": 9,
+            "hand": {
+              "x": 69,
+              "y": 46
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 14,
+              "right": 70,
+              "bottom": 80,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-5",
+            "durationMs": 90,
+            "pixelSha256": "03466d09be6d5294c018040c47788eba44a26fa5bc48152d17eda8bba4859c4f",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 70.33333333333333,
+              "y": 33.166666666666664
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 22,
+              "top": 11,
+              "right": 72,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 540
+      },
+      "run-stop": {
+        "sourcePng": "art/main-hero-mage-v2/animation/runing/north-east/run-start-end.png",
+        "preparedPng": "art/main-hero-mage-v2/animation/runing/north-east/prepared/run-stop.png",
+        "frames": [
+          {
+            "frame": "mage-run-v2-north-east-run-stop-0",
+            "durationMs": 100,
+            "pixelSha256": "227ec545d68f9e11ce9584a3469391a7758e29c6893c1628847b3e6a8499e75d",
+            "sourceFrame": 10,
+            "hand": {
+              "x": 65.1875,
+              "y": 47.3125
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 12,
+              "right": 69,
+              "bottom": 78,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-stop-1",
+            "durationMs": 100,
+            "pixelSha256": "3335cdc57fe5e4b5e61a1c55417f0800b657999ea5f34d037d8a3279067eb0ee",
+            "sourceFrame": 11,
+            "hand": {
+              "x": 68.31818181818181,
+              "y": 49.31818181818182
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 20,
+              "top": 13,
+              "right": 70,
+              "bottom": 80,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-stop-2",
+            "durationMs": 100,
+            "pixelSha256": "ab6133208e271a0c5205cf93d8098c89a5c683e26a31897a302dabc7caa2679a",
+            "sourceFrame": 12,
+            "hand": {
+              "x": 65.875,
+              "y": 50.5
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 19,
+              "top": 11,
+              "right": 67,
+              "bottom": 82,
+              "partial": 0
+            }
+          },
+          {
+            "frame": "mage-run-v2-north-east-run-stop-3",
+            "durationMs": 100,
+            "pixelSha256": "8ba852ccab67681e2c9b7636438b37c455d5773af7101d558a46e2feadc49848",
+            "sourceFrame": 13,
+            "hand": {
+              "x": 62.77272727272727,
+              "y": 51.95454545454545
+            },
+            "handVisible": true,
+            "bounds": {
+              "left": 24,
+              "top": 11,
+              "right": 64,
+              "bottom": 82,
+              "partial": 0
+            }
+          }
+        ],
+        "periodMs": 400
+      }
+    }
+  },
+  "stopEntries": {
+    "mage-run-v2-south-run-start-0": 9,
+    "mage-run-v2-south-run-start-1": 9,
+    "mage-run-v2-south-run-start-2": 9,
+    "mage-run-v2-south-run-start-3": 9,
+    "mage-run-v2-south-run-start-4": 9,
+    "mage-run-v2-south-run-start-5": 9,
+    "mage-run-v2-south-run-start-6": 9,
+    "mage-run-v2-south-run-start-7": 9,
+    "mage-run-v2-south-run-start-8": 9,
+    "mage-run-v2-south-run-start-9": 9,
+    "mage-run-v2-south-run-start-10": 9,
+    "mage-run-v2-south-run-start-11": 8,
+    "mage-run-v2-south-run-start-12": 8,
+    "mage-run-v2-south-run-0": 0,
+    "mage-run-v2-south-run-1": 0,
+    "mage-run-v2-south-run-2": 0,
+    "mage-run-v2-south-run-3": 0,
+    "mage-run-v2-south-run-4": 0,
+    "mage-run-v2-south-run-5": 0,
+    "mage-run-v2-south-run-6": 0,
+    "mage-run-v2-south-run-7": 2,
+    "mage-run-v2-north-run-start-0": 3,
+    "mage-run-v2-north-run-start-1": 3,
+    "mage-run-v2-north-run-start-2": 2,
+    "mage-run-v2-north-run-0": 0,
+    "mage-run-v2-north-run-1": 1,
+    "mage-run-v2-north-run-2": 0,
+    "mage-run-v2-north-run-3": 0,
+    "mage-run-v2-north-run-4": 0,
+    "mage-run-v2-north-run-5": 0,
+    "mage-run-v2-north-east-run-start-0": 3,
+    "mage-run-v2-north-east-run-start-1": 3,
+    "mage-run-v2-north-east-run-start-2": 3,
+    "mage-run-v2-north-east-run-start-3": 2,
+    "mage-run-v2-north-east-run-start-4": 2,
+    "mage-run-v2-north-east-run-0": 1,
+    "mage-run-v2-north-east-run-1": 0,
+    "mage-run-v2-north-east-run-2": 1,
+    "mage-run-v2-north-east-run-3": 0,
+    "mage-run-v2-north-east-run-4": 1,
+    "mage-run-v2-north-east-run-5": 0
+  },
+  "resumes": {
+    "mage-run-v2-south-run-stop-0": 1,
+    "mage-run-v2-south-run-stop-1": 1,
+    "mage-run-v2-south-run-stop-2": 7,
+    "mage-run-v2-south-run-stop-3": 7,
+    "mage-run-v2-south-run-stop-4": 7,
+    "mage-run-v2-south-run-stop-5": 7,
+    "mage-run-v2-south-run-stop-6": 0,
+    "mage-run-v2-south-run-stop-7": 0,
+    "mage-run-v2-south-run-stop-8": 0,
+    "mage-run-v2-south-run-stop-9": 0,
+    "mage-run-v2-north-run-stop-0": 0,
+    "mage-run-v2-north-run-stop-1": 1,
+    "mage-run-v2-north-run-stop-2": 1,
+    "mage-run-v2-north-run-stop-3": 1,
+    "mage-run-v2-north-east-run-stop-0": 3,
+    "mage-run-v2-north-east-run-stop-1": 4,
+    "mage-run-v2-north-east-run-stop-2": 2,
+    "mage-run-v2-north-east-run-stop-3": 2
+  }
+}

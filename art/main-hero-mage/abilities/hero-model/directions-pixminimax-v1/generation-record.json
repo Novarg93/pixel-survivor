@@ -1,0 +1,183 @@
+{
+  "model": "PixMiniMax (MiniMax H3)",
+  "parameters": {
+    "frame_count": 16,
+    "view": "low top-down",
+    "no_background": true
+  },
+  "firstFrameSource": "8-directions.png",
+  "directions": [
+    {
+      "id": "south",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "firstFrame": "first-frame-south.png"
+    },
+    {
+      "id": "south-east",
+      "crop": {
+        "x": 256,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "firstFrame": "first-frame-south-east.png"
+    },
+    {
+      "id": "north-east",
+      "crop": {
+        "x": 0,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "firstFrame": "first-frame-north-east.png"
+    },
+    {
+      "id": "north-west",
+      "crop": {
+        "x": 512,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "firstFrame": "first-frame-north-west.png"
+    },
+    {
+      "id": "south-west",
+      "crop": {
+        "x": 256,
+        "y": 512,
+        "width": 256,
+        "height": 256
+      },
+      "firstFrame": "first-frame-south-west.png"
+    }
+  ],
+  "acceptedJobs": [
+    {
+      "id": "south/walk",
+      "direction": "south",
+      "motion": "walk",
+      "job": "e03f7bce-adcf-405f-89df-ac9dcf2eca65",
+      "quotedCost": 2.05,
+      "assetId": "960be552-436d-5cc9-9703-64c0f8f102b4"
+    },
+    {
+      "id": "south/run",
+      "direction": "south",
+      "motion": "run",
+      "job": "162a57f5-5c74-4e26-8832-bf1fb4b73337",
+      "quotedCost": 2.05,
+      "assetId": "7c8de0f2-395b-5924-b64d-9ac56860e03e"
+    },
+    {
+      "id": "south-east/walk",
+      "direction": "south-east",
+      "motion": "walk",
+      "job": "5581e9f9-107a-4868-8546-6b767b0ba249",
+      "quotedCost": 2.05,
+      "assetId": "aa6b9b7d-629d-5fbd-b7f0-7dd8eca21c9c"
+    },
+    {
+      "id": "south-east/run",
+      "direction": "south-east",
+      "motion": "run",
+      "job": "f5aee90b-15a8-4856-b62b-626f2feb8649",
+      "quotedCost": 2.05,
+      "assetId": "d098eec8-d219-5e57-a116-076b7ebd7913"
+    },
+    {
+      "id": "north-east/walk",
+      "direction": "north-east",
+      "motion": "walk",
+      "job": "d6f2172f-e944-4440-bc36-a37891246d91",
+      "quotedCost": 2.05,
+      "assetId": "61f8784d-82a4-52a6-a90f-78c1f43acaec"
+    },
+    {
+      "id": "north-east/run",
+      "direction": "north-east",
+      "motion": "run",
+      "job": "b3222990-d418-49ff-b015-74e5026d933a",
+      "quotedCost": 2.05,
+      "assetId": "f6a5c16b-661b-5328-8d35-cd03b95dfa6e"
+    },
+    {
+      "id": "north-west/walk",
+      "direction": "north-west",
+      "motion": "walk",
+      "job": "40b54af4-5db0-4935-a2a0-b107c8979498",
+      "quotedCost": 2.05,
+      "assetId": "4626072d-fcfd-59bb-95e0-1bb0a9075bad"
+    },
+    {
+      "id": "north-west/run",
+      "direction": "north-west",
+      "motion": "run",
+      "job": "89f08063-73d0-4d37-aeb8-3fafbf7c51b4",
+      "quotedCost": 2.05,
+      "assetId": "3ca1a6ad-c0d2-566d-9bd2-4109c6947d74"
+    },
+    {
+      "id": "south-west/walk",
+      "direction": "south-west",
+      "motion": "walk",
+      "job": "42eb3d69-5654-4988-8742-691c197e5411",
+      "quotedCost": 2.05,
+      "assetId": "21778553-bc9c-5c91-92a8-f1ccdd7143e6"
+    },
+    {
+      "id": "south-west/run",
+      "direction": "south-west",
+      "motion": "run",
+      "job": "ae44a533-bdf6-47d4-a6a6-ee45d8114f43",
+      "quotedCost": 2.05,
+      "assetId": "85627d1d-2013-57fc-937f-913bcff4c5f0"
+    },
+    {
+      "id": "south-west/walk/attempt-02",
+      "direction": "south-west",
+      "motion": "walk",
+      "job": "7b16ae5d-c81e-463b-8af2-a5260e723f34",
+      "quotedCost": 2,
+      "assetId": "f3610e21-7be9-5b1b-ab27-a1651851699e"
+    }
+  ],
+  "billing": {
+    "quotedSuccessfulTotal": 22.5,
+    "completedAnimationCharges": 22,
+    "successfulPromptEnhancements": 0.5,
+    "balanceBefore": 1823.6,
+    "balanceAfter": 1795.05,
+    "balanceDelta": 28.55,
+    "unreconciledDifference": 6.05,
+    "usdCreditsBefore": 0,
+    "usdCreditsAfter": 0,
+    "interpretation": "Account delta is larger than this task receipts. The provider data does not establish the cause; no extra charge is attributed to another user action or to a particular failed call."
+  },
+  "rateLimitRefusals": 1,
+  "observedJobLimit": 8,
+  "retries": {
+    "south-west/walk": {
+      "reason": "First result had insufficient foot articulation; one additional attempt without prompt enhancement",
+      "selected": "south-west/walk/attempt-02",
+      "seed": 8110911
+    }
+  },
+  "protectedFiles": 69,
+  "rawFramePolicy": "Input+16 generated frames retained per job; exports use exactly16 generated pictures1..16",
+  "previewDurationsMs": {
+    "walk": 80,
+    "run": 60
+  },
+  "qualityNotes": [
+    "Several diagonal run clips twist the torso toward a side profile mid-cycle; review before integration.",
+    "Clips return to standing at the loop boundary.",
+    "Initial south-west walk is kept; second attempt selected for clearer steps."
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><title>Ash Warden locomotion review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#15232b;color:#f0e6ce;font:13px Consolas,monospace;overflow:hidden}header{padding:8px 12px;background:#15232b;display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-height:64px}label{white-space:nowrap}button,select,input{font:inherit}input[type=number]{width:58px}input[type=range]{width:100px}canvas{display:block;image-rendering:pixelated}#status{font-size:11px;color:#bfcfc4} @media(max-width:900px){header{gap:5px;font-size:11px;padding:4px 8px;min-height:68px}input[type=range]{width:65px}}
+</style>
+<header><strong>Ash Warden · review</strong><label>Ракурс <select id="direction"><option value="south">South</option><option value="north" disabled>North — нет</option><option value="east" disabled>East — нет</option><option value="west" disabled>West — нет</option></select></label><label>Клип <select id="pose"><option value="idle">Idle</option><option value="walk">Walk</option></select></label><button id="play">Пауза</button><button id="previous">◀</button><button id="next">▶</button><label>Кадр <input id="frame" type="range" min="0" max="3" value="0"></label><label>FPS <input id="fps" type="number" min="0.5" max="40" step="0.5" value="2"></label><label>× <input id="rate" type="number" min="0.25" max="4" step="0.25" value="1"></label><label>World speed <input id="speed" type="number" min="0" max="240" step="12" value="72"></label><label><input id="travel" type="checkbox">Движение</label><span id="status">Загрузка…</span></header>
+<canvas id="view"></canvas><script src="viewer-data.js"></script><script src="../ash-warden-south-polish-01/viewer-extension.js"></script><script src="../ash-warden-directions-v1/viewer-data.js"></script><script>
+const data=globalThis.LOCOMOTION_REVIEW,polish=globalThis.LOCOMOTION_POLISH,v1=globalThis.ASH_WARDEN_DIRECTIONS_V1,canvas=document.querySelector('#view'),ctx=canvas.getContext('2d');
+const versions=document.createElement('select');versions.id='version';versions.innerHTML='<option value="v1">Directions V1</option><option value="polished">South accepted</option><option value="original">Before RD</option>';document.querySelector('header').insertBefore(versions,document.querySelector('#direction').parentElement);
+const tempo=document.createElement('label');tempo.innerHTML='<input id="autoTempo" type="checkbox" checked>Stride timing';document.querySelector('header').append(tempo);const autoTempo=document.querySelector('#autoTempo');
+const ui=Object.fromEntries(['direction','pose','play','previous','next','frame','fps','rate','speed','travel','status'].map(id=>[id,document.getElementById(id)]));
+let images={},directionBases={},base,mage,ground,index=0,playing=true,last=0,elapsed=0,distance=0,raf,loops=0,rendered=0;
+function load(src){const i=new Image();i.src=src;return i.decode().then(()=>i);}
+function key(){return ui.direction.value+'-'+ui.pose.value;}function available(){return versions.value==='v1'?v1.clips:versions.value==='polished'?polish.clips:data.clips;}function clip(){return available()[key()];}
+function requestedFPS(){return ui.pose.value==='walk'&&clip().strideWorld?Number(ui.speed.value)/clip().strideWorld*clip().frames.length:Number(ui.fps.value);}
+function effectiveFPS(){const c=clip();if(autoTempo.checked&&ui.pose.value==='walk'&&c.strideWorld){const requested=requestedFPS();ui.fps.value=(versions.value==='v1'?Math.min(v1.maxPreviewFPS,requested):requested).toFixed(3);}return Number(ui.fps.value)*Number(ui.rate.value);}
+function reset(){index=0;elapsed=0;distance=0;last=0;loops=0;ui.frame.max=clip().frames.length-1;ui.fps.value=clip().previewFPS;}
+function pause(){playing=false;ui.play.textContent='Пуск';}
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight-document.querySelector('header').offsetHeight;ctx.imageSmoothingEnabled=false;}
+function draw(){
+ const w=canvas.width,h=canvas.height,z=w<=900?2*.83/1.3:2,s=data.worldScale,foot=data.foot[1],baseline=h*.75;
+ ctx.imageSmoothingEnabled=false;ctx.fillStyle='#28353c';ctx.fillRect(0,0,w,h);
+ const tileW=ground.width*z/2,tileH=ground.height*z/2,vec={south:[0,-1],north:[0,1],east:[-1,0],west:[1,0]}[ui.direction.value],dx=(distance*z*vec[0])%tileW,dy=(distance*z*vec[1])%tileH;
+ for(let yy=dy-tileH;yy<h;yy+=tileH)for(let xx=dx-tileW;xx<w;xx+=tileW)ctx.drawImage(ground,Math.round(xx),Math.round(yy),Math.ceil(tileW),Math.ceil(tileH));
+ ctx.strokeStyle='#b9c9b8';ctx.beginPath();ctx.moveTo(0,baseline+.5);ctx.lineTo(w,baseline+.5);ctx.stroke();
+ const mf=data.mageFrame;ctx.drawImage(mage,mf.x,mf.y,mf.w,mf.h,w*.13-mf.w*.375*z/2,baseline-75*.375*z,mf.w*.375*z,mf.h*.375*z);
+ for(const [im,x,label] of [[versions.value==='v1'?directionBases[ui.direction.value]:base,w*.37,'RD static'],[images[versions.value+'-'+key()][index],w*.68,versions.value+' '+key()+' #'+index]]){
+  ctx.drawImage(im,x-im.width*s*z/2,baseline-foot*s*z,im.width*s*z,im.height*s*z);ctx.fillStyle='#14252ce8';ctx.fillRect(x-w*.15,baseline+24,w*.3,26);ctx.fillStyle='#fff1d0';ctx.textAlign='center';ctx.font=(w<=900?'11':'16')+'px monospace';ctx.fillText(label,x,baseline+43);
+ }
+ ctx.fillStyle='#f3e5cc';ctx.textAlign='left';ctx.font=(w<=900?'10':'13')+'px monospace';ctx.fillText('Mage scale marker · shared anchor (96,154) · zoom '+z.toFixed(3),10,h-30);
+ ctx.fillText('Preview only · no per-frame fitting · no gameplay changes',10,h-12);ui.frame.value=index;
+ ui.status.textContent='frame '+index+'/'+(clip().frames.length-1)+' · '+effectiveFPS().toFixed(1)+'fps · loops '+loops+(ui.pose.value==='walk'&&Number(ui.rate.value)!==1?' / manual rate':'')+(versions.value==='v1'&&ui.pose.value==='walk'&&autoTempo.checked&&requestedFPS()>v1.maxPreviewFPS?' / V1 cap20: contact mismatch':'');
+ rendered++;
+}
+function tick(t){const dt=last?Math.min(t-last,100):0;last=t;if(playing){elapsed+=dt;const ms=1000/Math.max(.1,effectiveFPS());while(elapsed>=ms){elapsed-=ms;index=(index+1)%clip().frames.length;if(!index)loops++;}if(ui.travel.checked&&ui.pose.value==='walk')distance+=Number(ui.speed.value)*dt/1000;}draw();raf=requestAnimationFrame(tick);}
+ui.play.onclick=()=>{playing=!playing;last=0;ui.play.textContent=playing?'Пауза':'Пуск';};ui.previous.onclick=()=>{pause();index=(index-1+clip().frames.length)%clip().frames.length;};ui.next.onclick=()=>{pause();index=(index+1)%clip().frames.length;};ui.frame.oninput=()=>{pause();index=Number(ui.frame.value);elapsed=0;};ui.pose.onchange=reset;ui.direction.onchange=reset;
+document.addEventListener('visibilitychange',()=>{last=0;elapsed=0;});window.addEventListener('resize',resize);window.addEventListener('pagehide',()=>cancelAnimationFrame(raf));
+function syncDirections(){for(const option of ui.direction.options){option.disabled=!Object.keys(available()).some(k=>k.startsWith(option.value+'-'));option.textContent=option.value+(option.disabled?' — нет':'');}if(!available()[key()])ui.direction.value='south';}
+versions.onchange=()=>{syncDirections();reset();};ui.fps.oninput=()=>{autoTempo.checked=false;};autoTempo.onchange=()=>{elapsed=0;};ui.speed.oninput=()=>{elapsed=0;};
+globalThis.reviewState=()=>({version:versions.value,key:key(),index,playing,loops,rendered,distance,elapsed,fps:effectiveFPS(),requestedFPS:requestedFPS(),capped:versions.value==='v1'&&ui.pose.value==='walk'&&autoTempo.checked&&requestedFPS()>v1.maxPreviewFPS,speed:Number(ui.speed.value),strideWorld:clip().strideWorld??null,viewport:[canvas.width,canvas.height]});
+(async()=>{
+ for(const [id,c]of Object.entries(data.clips))images['original-'+id]=await Promise.all(c.frames.map(load));
+ for(const [id,c]of Object.entries(polish.clips))images['polished-'+id]=await Promise.all(c.frames.map(load));
+ for(const [id,c]of Object.entries(v1.clips))images['v1-'+id]=await Promise.all(c.frames.map(load));
+ for(const [id,src]of Object.entries(v1.bases))directionBases[id]=await load(src);
+ [base,mage,ground]=await Promise.all([data.base,data.mage,data.ground].map(load));
+ syncDirections();
+ resize();reset();raf=requestAnimationFrame(tick);
+})().catch(e=>{ui.status.textContent=e.message;throw e;});
+</script></html>

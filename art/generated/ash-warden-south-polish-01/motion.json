@@ -1,0 +1,346 @@
+[
+  {
+    "index": 0,
+    "body": [
+      -1,
+      0
+    ],
+    "clothTailLag": 0,
+    "left": {
+      "phase": 0,
+      "stance": true,
+      "sole": [
+        49,
+        135
+      ],
+      "knee": [
+        49.36,
+        103.5
+      ],
+      "hip": [
+        56,
+        80
+      ],
+      "lift": 0
+    },
+    "right": {
+      "phase": 4,
+      "stance": true,
+      "sole": [
+        94,
+        101
+      ],
+      "knee": [
+        86.24,
+        89
+      ],
+      "hip": [
+        77,
+        82
+      ],
+      "lift": 0
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 1,
+    "body": [
+      -1,
+      1
+    ],
+    "clothTailLag": 0,
+    "left": {
+      "phase": 1,
+      "stance": true,
+      "sole": [
+        49,
+        128
+      ],
+      "knee": [
+        49.36,
+        100.5
+      ],
+      "hip": [
+        56,
+        81
+      ],
+      "lift": 0
+    },
+    "right": {
+      "phase": 5,
+      "stance": false,
+      "sole": [
+        94,
+        99
+      ],
+      "knee": [
+        86.24,
+        86.7
+      ],
+      "hip": [
+        77,
+        83
+      ],
+      "lift": 6
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 2,
+    "body": [
+      0,
+      0
+    ],
+    "clothTailLag": 1,
+    "left": {
+      "phase": 2,
+      "stance": true,
+      "sole": [
+        49,
+        121
+      ],
+      "knee": [
+        49.84,
+        96.5
+      ],
+      "hip": [
+        57,
+        80
+      ],
+      "lift": 0
+    },
+    "right": {
+      "phase": 6,
+      "stance": false,
+      "sole": [
+        94,
+        105
+      ],
+      "knee": [
+        86.72,
+        88
+      ],
+      "hip": [
+        78,
+        82
+      ],
+      "lift": 10
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 3,
+    "body": [
+      1,
+      -1
+    ],
+    "clothTailLag": 1,
+    "left": {
+      "phase": 3,
+      "stance": true,
+      "sole": [
+        49,
+        114
+      ],
+      "knee": [
+        50.32,
+        92.5
+      ],
+      "hip": [
+        58,
+        79
+      ],
+      "lift": 0
+    },
+    "right": {
+      "phase": 7,
+      "stance": false,
+      "sole": [
+        94,
+        123
+      ],
+      "knee": [
+        87.2,
+        98.3
+      ],
+      "hip": [
+        79,
+        81
+      ],
+      "lift": 4
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 4,
+    "body": [
+      1,
+      0
+    ],
+    "clothTailLag": 0,
+    "left": {
+      "phase": 4,
+      "stance": true,
+      "sole": [
+        49,
+        107
+      ],
+      "knee": [
+        50.32,
+        89.5
+      ],
+      "hip": [
+        58,
+        80
+      ],
+      "lift": 0
+    },
+    "right": {
+      "phase": 0,
+      "stance": true,
+      "sole": [
+        94,
+        129
+      ],
+      "knee": [
+        87.2,
+        103
+      ],
+      "hip": [
+        79,
+        82
+      ],
+      "lift": 0
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 5,
+    "body": [
+      1,
+      1
+    ],
+    "clothTailLag": 0,
+    "left": {
+      "phase": 5,
+      "stance": false,
+      "sole": [
+        49,
+        105
+      ],
+      "knee": [
+        50.32,
+        87.2
+      ],
+      "hip": [
+        58,
+        81
+      ],
+      "lift": 6
+    },
+    "right": {
+      "phase": 1,
+      "stance": true,
+      "sole": [
+        94,
+        122
+      ],
+      "knee": [
+        87.2,
+        100
+      ],
+      "hip": [
+        79,
+        83
+      ],
+      "lift": 0
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 6,
+    "body": [
+      0,
+      0
+    ],
+    "clothTailLag": -1,
+    "left": {
+      "phase": 6,
+      "stance": false,
+      "sole": [
+        49,
+        111
+      ],
+      "knee": [
+        49.84,
+        88.5
+      ],
+      "hip": [
+        57,
+        80
+      ],
+      "lift": 10
+    },
+    "right": {
+      "phase": 2,
+      "stance": true,
+      "sole": [
+        94,
+        115
+      ],
+      "knee": [
+        86.72,
+        96
+      ],
+      "hip": [
+        78,
+        82
+      ],
+      "lift": 0
+    },
+    "legOverlapPixels": 0
+  },
+  {
+    "index": 7,
+    "body": [
+      -1,
+      -1
+    ],
+    "clothTailLag": -1,
+    "left": {
+      "phase": 7,
+      "stance": false,
+      "sole": [
+        49,
+        129
+      ],
+      "knee": [
+        49.36,
+        98.8
+      ],
+      "hip": [
+        56,
+        79
+      ],
+      "lift": 4
+    },
+    "right": {
+      "phase": 3,
+      "stance": true,
+      "sole": [
+        94,
+        108
+      ],
+      "knee": [
+        86.24,
+        92
+      ],
+      "hip": [
+        77,
+        81
+      ],
+      "lift": 0
+    },
+    "legOverlapPixels": 0
+  }
+]

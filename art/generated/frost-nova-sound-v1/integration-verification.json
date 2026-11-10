@@ -1,0 +1,18 @@
+{
+  "baselineFiles": 384,
+  "changed": [
+    "src/game/audio/README.md",
+    "src/game/audio/mageSamples.ts",
+    "src/game/audio/mageUploadedSamples.ts"
+  ],
+  "added": [
+    "public/assets/audio/mage-sfx-uploaded-v1/frost-nova.wav"
+  ],
+  "unchanged": 381,
+  "currentSHA256": {
+    "src/game/audio/README.md": "e6c74a0c13d40a9da6e2615fba87bc974902d7a6a01c75229211e29809f7ded8",
+    "src/game/audio/mageSamples.ts": "c03a1f03f151f85e6872294b9a30d1633920da270bab55af63d7731fa25ddcbe",
+    "src/game/audio/mageUploadedSamples.ts": "1997ceec5d61d72986e6af2b9e4d8cded23b772e206ddabd73ba74df9be6e3e4",
+    "public/assets/audio/mage-sfx-uploaded-v1/frost-nova.wav": "76dac62a3c047837ed04ec5bf1035f38f1a2166745c32fbf8199c0a0ef58c82f"
+  }
+}

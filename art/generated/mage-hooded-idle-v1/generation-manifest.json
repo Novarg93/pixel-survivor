@@ -1,0 +1,69 @@
+{
+  "sources": [
+    {
+      "id": "front",
+      "file": "source/front.png",
+      "original": "../mage-hooded-front-back-cast-v2/source/front.png"
+    },
+    {
+      "id": "north",
+      "file": "source/north.png",
+      "original": "../mage-hooded-front-back-cast-v2/source/north.png"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "front",
+      "jobId": "1382997c-2ebf-4a4c-8d45-a64941355f13",
+      "request": {
+        "action": "One very subtle seamless IDLE BREATHING cycle only. Stand in exactly the same relaxed stance with both feet firmly planted and the same natural arm lengths. A small inhale lifts the upper chest and shoulders by at most ONE pixel, then a soft exhale returns them to the original position. Hands stay relaxed at the sides with only minimal breathing follow-through. The long cloak makes a tiny, slow settling movement, not a gust of wind. Feet, ground contact, lower legs, body scale, head size and camera angle stay fixed. No stepping, walking, turning, arm gesture, casting, magic, particles or added details. Keep the pixel clusters and colours consistent. Start and finish at the provided same standing pose. Four evenly spaced motion frames for one calm cycle. Preserve the original front/slightly three-quarter stance and visible face under the hood throughout; do not convert it to a side profile.",
+        "frame_count": 4,
+        "no_background": true,
+        "seed": 261109501,
+        "sourceJob": "948d96db-042b-4267-9428-9c54c73316a1"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 1382997c-2ebf-4a4c-8d45-a64941355f13\njob_id: 1382997c-2ebf-4a4c-8d45-a64941355f13\naction: One very subtle seamless IDLE BREATHING cycle only. Stand in exactly the same relaxed stance with both feet firmly planted and the same natural arm lengths. A small inhale lifts the upper chest and shoulders by at most ONE pixel, then a soft exhale returns them to the original position. Hands stay relaxed at the sides with only minimal breathing follow-through. The long cloak makes a tiny, slow settling movement, not a gust of wind. Feet, ground contact, lower legs, body scale, head size and camera angle stay fixed. No stepping, walking, turning, arm gesture, casting, magic, particles or added details. Keep the pixel clusters and colours consistent. Start and finish at the provided same standing pose. Four evenly spaced motion frames for one calm cycle. Preserve the original front/slightly three-quarter stance and visible face under the hood throughout; do not convert it to a side profile.\nframes: 4\nsize: 96x96px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 261109501\nasset_id: 907cb820-2df5-594d-a3e4-b000bd1f8844\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"1382997c-2ebf-4a4c-8d45-a64941355f13\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/1382997c-2ebf-4a4c-8d45-a64941355f13/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "id": "north",
+      "jobId": "16658903-f104-4adb-b227-24de16876058",
+      "request": {
+        "action": "One very subtle seamless IDLE BREATHING cycle only. Stand in exactly the same relaxed stance with both feet firmly planted and the same natural arm lengths. A small inhale lifts the upper chest and shoulders by at most ONE pixel, then a soft exhale returns them to the original position. Hands stay relaxed at the sides with only minimal breathing follow-through. The long cloak makes a tiny, slow settling movement, not a gust of wind. Feet, ground contact, lower legs, body scale, head size and camera angle stay fixed. No stepping, walking, turning, arm gesture, casting, magic, particles or added details. Keep the pixel clusters and colours consistent. Start and finish at the provided same standing pose. Four evenly spaced motion frames for one calm cycle. Remain strictly facing NORTH away from the camera. Only the back of the hood and cloak are visible at all times; no face, eyes, nose or beard, and no looking over a shoulder.",
+        "frame_count": 4,
+        "no_background": true,
+        "seed": 261109502,
+        "sourceJob": "b641ab3f-dfd1-4263-8589-ab46efd2fb9e"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 16658903-f104-4adb-b227-24de16876058\njob_id: 16658903-f104-4adb-b227-24de16876058\naction: One very subtle seamless IDLE BREATHING cycle only. Stand in exactly the same relaxed stance with both feet firmly planted and the same natural arm lengths. A small inhale lifts the upper chest and shoulders by at most ONE pixel, then a soft exhale returns them to the original position. Hands stay relaxed at the sides with only minimal breathing follow-through. The long cloak makes a tiny, slow settling movement, not a gust of wind. Feet, ground contact, lower legs, body scale, head size and camera angle stay fixed. No stepping, walking, turning, arm gesture, casting, magic, particles or added details. Keep the pixel clusters and colours consistent. Start and finish at the provided same standing pose. Four evenly spaced motion frames for one calm cycle. Remain strictly facing NORTH away from the camera. Only the back of the hood and cloak are visible at all times; no face, eyes, nose or beard, and no looking over a shoulder.\nframes: 4\nsize: 96x96px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 261109502\nasset_id: bc439eaa-4660-582c-902a-b0a752dbe0cd\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"16658903-f104-4adb-b227-24de16876058\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/16658903-f104-4adb-b227-24de16876058/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      }
+    }
+  ],
+  "balanceBefore": {
+    "generations": 1562.9,
+    "cashUsd": 0
+  },
+  "requestedUniqueFrames": 4,
+  "frameSelection": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "rawClosingFrame": 4,
+  "productionIntegrated": false
+}

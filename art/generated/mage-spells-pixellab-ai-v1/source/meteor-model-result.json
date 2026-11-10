@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "status: completed\nid: e9c46c01-5289-4fc6-8848-a7f5a7113dd5\njob_id: e9c46c01-5289-4fc6-8848-a7f5a7113dd5\nframes: 1\ntransparent: yes\nasset_id: 0409261f-a86d-5204-a1b6-ea5542f686ff\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 6 generations\ndownload: https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download"
+    }
+  ],
+  "structuredContent": {
+    "job_id": "e9c46c01-5289-4fc6-8848-a7f5a7113dd5",
+    "status": "completed",
+    "frames": 1,
+    "download_url": "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download",
+    "download_urls": [
+      "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download"
+    ],
+    "asset": {
+      "id": "0409261f-a86d-5204-a1b6-ea5542f686ff",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 6
+  }
+}

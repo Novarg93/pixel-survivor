@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: c7312daf-b964-424e-aed5-54e3f6104416\njob_id: c7312daf-b964-424e-aed5-54e3f6104416\naction: This small low dark scorch patch crumbles and fades IN PLACE into fewer and fewer tiny dark ember pixels until it disappears completely. Last frame FULLY EMPTY TRANSPARENT. Only shrink and dissolve the existing patch at its fixed center. No new shapes, no sparks, no new fire, no ring, no flash, no white or gray replacement patch, no movement, no zoom. Preserve original muted rust/charcoal colors and crisp pixel clusters.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 110115\nasset_id: 51945450-6e5e-5283-a6fa-93f22d08c792\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"c7312daf-b964-424e-aed5-54e3f6104416\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/c7312daf-b964-424e-aed5-54e3f6104416/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ],
+  "isError": false
+}

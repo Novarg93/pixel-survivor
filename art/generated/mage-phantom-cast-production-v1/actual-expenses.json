@@ -1,0 +1,16 @@
+{
+  "before": {"subscriptionGenerations":1650.9,"creditsUsd":0},
+  "after": {"subscriptionGenerations":1626.9,"creditsUsd":0},
+  "subscriptionGenerationsDebited":24,
+  "creditsDebitedUsd":0,
+  "paidRequests":8,
+  "generationsPerRequest":3,
+  "rejectedRequests":1,
+  "estimatedNewApiEquivalentUsdRange":[0.4104,0.4976],
+  "pilotGenerations":7,
+  "combinedGenerations":31,
+  "combinedApiEquivalentUsdRange":[0.5361,0.6451],
+  "budgetUsd":2,
+  "priceSource":"https://www.pixellab.ai/pixellab-api",
+  "note":"USD equivalents are conservative official API-price estimates, not a subscription invoice. Actual USD-credit debit is zero. Validation-only failed request was not a generation."
+}

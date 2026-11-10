@@ -1,0 +1,29 @@
+{
+  "description": "Preview backgrounds from actual runtime terrain painters, native 2 texels per world unit; no gameplay screenshot.",
+  "canvas": [
+    2048,
+    1024
+  ],
+  "texelsPerWorldUnit": 2,
+  "grove": {
+    "tileOrigin": [
+      -32,
+      -16
+    ],
+    "phase": "normal"
+  },
+  "forest": {
+    "chunkOrigin": [
+      -4,
+      -2
+    ],
+    "chunksWide": 8,
+    "chunksHigh": 4
+  },
+  "sources": {
+    "src/game/art/groveArtPack.ts": "bc9bd9507f8bc338226c3a06a3940a9e47cba36135475363d46c4ebe9111a189",
+    "src/game/art/hdForest.ts": "d6148af5f63df1d86bbf19ec164513a056ddebc55ead262e94f1a9a1c73c8e78",
+    "src/game/config/biomes.ts": "e649352200516e65048078ec87814cda31ae283200761831c91e00782606c5bd",
+    "src/game/utils/worldTiles.ts": "218a2c37c9f9b8c24b9024efa42bfa6f1626ad5aa45ebf32ec9c0294430e4d48"
+  }
+}

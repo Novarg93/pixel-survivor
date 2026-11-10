@@ -1,0 +1,13 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const directory='art/generated/mage-uploaded-sounds-v1',baseline=JSON.parse(readFileSync(`${directory}/runtime-baseline.json`,'utf8')),manifest=JSON.parse(readFileSync(`${directory}/manifest.json`,'utf8'));
+const allowedChanged=['src/game/audio/PhaserAudioBackend.ts','src/game/audio/README.md','src/game/audio/catalog.ts','src/game/audio/mageSamples.ts'].sort();
+const allowedAdded=['src/game/audio/mageUploadedSamples.ts',...manifest.entries.map(e=>e.file)].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort(),sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>sha(file)!==baseline[file]).sort(),added=files.filter(file=>!(file in baseline));
+if(JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded)||files.length!==Object.keys(baseline).length+added.length)throw new Error(JSON.stringify({unexpectedScope:{changed,added}}));
+for(const entry of manifest.entries)if(sha(entry.source)!==entry.sha256||sha(entry.file)!==entry.sha256)throw new Error('Uploaded source mismatch');
+const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,previousSHA256:Object.fromEntries(changed.map(file=>[file,baseline[file]])),currentSHA256:Object.fromEntries([...changed,...added].map(file=>[file,sha(file)]))};
+writeFileSync(`${directory}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({baselineFiles:report.baselineFiles,changed:changed.length,added:added.length,unchanged:report.unchanged}));

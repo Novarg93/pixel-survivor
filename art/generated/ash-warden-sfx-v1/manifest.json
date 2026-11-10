@@ -1,0 +1,531 @@
+{
+  "version": 1,
+  "flowId": "LjY7XGjtTMS1RezHULHp",
+  "flowUrl": "https://elevenlabs.io/app/flows/LjY7XGjtTMS1RezHULHp",
+  "model": "eleven_text_to_sound_v2",
+  "promptVariant": "A",
+  "runtimeIntegration": false,
+  "artisticStatus": "Awaiting Review",
+  "estimateCredits": 112,
+  "runReceiptCredits": 36,
+  "generationPriceCredits": 37.33333333333332,
+  "totalBytes": 468628,
+  "attacks": [
+    {
+      "id": "melee",
+      "label": "Basic Melee",
+      "seconds": 0.6,
+      "prompt": "A single heavy two-handed sword strike. A fast, weighty blade whoosh and a low steel whistle lead into a short, solid impact, with a little metal rattle and a quickly fading ring. Keep it dry, punchy and clear enough for repeated attacks. No voices, music, background ambience, long reverb or retro game tones. Duration: 0.6 seconds.",
+      "nodeId": "YbMu3prO9F86ZFk0g8a1",
+      "takes": [
+        {
+          "attackId": "melee",
+          "label": "Basic Melee",
+          "variant": 1,
+          "generationId": "Qe0i94UTibrMFqE2gTcQ",
+          "nodeId": "YbMu3prO9F86ZFk0g8a1",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.6,
+          "reportedSeconds": 0.6,
+          "reportedPrice": {
+            "credits": 2,
+            "price_cents": 0.04,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-melee-a-take-1.mp3",
+          "bytes": 27618,
+          "sha256": "080ddd83e2c4751fdc0c7c1373e1b7ba066c5d8ef68dec128e4d860fc852c2ea",
+          "analysis": {
+            "seconds": 0.6,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.7473791241645813,
+            "rms": 0.05909582247179663,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        },
+        {
+          "attackId": "melee",
+          "label": "Basic Melee",
+          "variant": 2,
+          "generationId": "JVYQZOZ17v9pXi0BqqMj",
+          "nodeId": "YbMu3prO9F86ZFk0g8a1",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.6,
+          "reportedSeconds": 0.6,
+          "reportedPrice": {
+            "credits": 2,
+            "price_cents": 0.04,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-melee-a-take-2.mp3",
+          "bytes": 27618,
+          "sha256": "4261fa8cc309a7e7245ed3d59097fd0e3b5c4774780b190b97b43192b4f4fdd6",
+          "analysis": {
+            "seconds": 0.6,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.13398888191808475,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00017006802721088434
+          }
+        },
+        {
+          "attackId": "melee",
+          "label": "Basic Melee",
+          "variant": 3,
+          "generationId": "FHmfb6S7hCRItGHzImtw",
+          "nodeId": "YbMu3prO9F86ZFk0g8a1",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.6,
+          "reportedSeconds": 0.6,
+          "reportedPrice": {
+            "credits": 2,
+            "price_cents": 0.04,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-melee-a-take-3.mp3",
+          "bytes": 27618,
+          "sha256": "538963c07a5b48dcc198d3dd96d57118dc742abc676d877c8a48f88bc28a369b",
+          "analysis": {
+            "seconds": 0.6,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.13153906411641111,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00035903250188964477
+          }
+        },
+        {
+          "attackId": "melee",
+          "label": "Basic Melee",
+          "variant": 4,
+          "generationId": "9DvlyRNsR04ABE46fk2A",
+          "nodeId": "YbMu3prO9F86ZFk0g8a1",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.6,
+          "reportedSeconds": 0.6,
+          "reportedPrice": {
+            "credits": 2,
+            "price_cents": 0.04,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-melee-a-take-4.mp3",
+          "bytes": 27618,
+          "sha256": "4df1c2a66d2414b9bd4dbd5fcd49586fa7389256ea6cabb1a780e3579a1b2b33",
+          "analysis": {
+            "seconds": 0.6,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.5778772830963135,
+            "rms": 0.03820985387787701,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "charge",
+      "label": "Charge",
+      "seconds": 0.7,
+      "prompt": "One sudden forward charge by a heavily armored warrior. A sharp push-off leads into heavy armor rattle and an aggressive air whoosh for about a third of a second, then a firm foot plant and a short scrape as the warrior brakes. Fast and forceful, with no collision or explosion. No voices, music, background ambience or long reverb. Duration: 0.7 seconds.",
+      "nodeId": "QMryxbJAUuNPkJurytP0",
+      "takes": [
+        {
+          "attackId": "charge",
+          "label": "Charge",
+          "variant": 1,
+          "generationId": "7qTFNgALoGYQ8FDW5vbA",
+          "nodeId": "QMryxbJAUuNPkJurytP0",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-charge-a-take-1.mp3",
+          "bytes": 29289,
+          "sha256": "07c708ed3d0d1f4ba4bd876826a468879a67b5b0d3c7391979047e19a7ddb0a5",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.13135095228766347,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00001666722224074136
+          }
+        },
+        {
+          "attackId": "charge",
+          "label": "Charge",
+          "variant": 2,
+          "generationId": "RCtS9eWcjgAfzNCDyeta",
+          "nodeId": "QMryxbJAUuNPkJurytP0",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-charge-a-take-2.mp3",
+          "bytes": 29289,
+          "sha256": "c193f9f76caa780b78ce1194e930645fad17810ac5f675d59ef54c8dc8084208",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.19755919377679998,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00003333444448148272
+          }
+        },
+        {
+          "attackId": "charge",
+          "label": "Charge",
+          "variant": 3,
+          "generationId": "oH29rKlxRbWTUHjt0gxO",
+          "nodeId": "QMryxbJAUuNPkJurytP0",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-charge-a-take-3.mp3",
+          "bytes": 29289,
+          "sha256": "bcc517953df4fb0cf9cfab58f250bcecd1b92fa4d469d1d0dccf4ff27a65b428",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.1179274055212734,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00003333444448148272
+          }
+        },
+        {
+          "attackId": "charge",
+          "label": "Charge",
+          "variant": 4,
+          "generationId": "rBgQOZXaU9Aa0tYVhqpk",
+          "nodeId": "QMryxbJAUuNPkJurytP0",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-charge-a-take-4.mp3",
+          "bytes": 29289,
+          "sha256": "f78dcd03749dae01c20d2704dac7121ac51e0e0d7d353f61f89d98bc0bbf2272",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.20369083407992805,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.0016667222240741358
+          }
+        }
+      ]
+    },
+    {
+      "id": "flame-strike",
+      "label": "Flame Strike",
+      "seconds": 0.7,
+      "prompt": "One heavy greatsword strike that releases a broad wave of fire forward. A solid weapon impact triggers instant ignition, followed by a fast spreading rush of flames and a short crackling tail. Keep the strike crisp and the fire low and wide, with controlled bass and a quick natural decay. No fireball launch, explosive boom, voices, music, background ambience or long reverb. Duration: 0.7 seconds.",
+      "nodeId": "p9fw5VgFDylzjAmTpfD3",
+      "takes": [
+        {
+          "attackId": "flame-strike",
+          "label": "Flame Strike",
+          "variant": 1,
+          "generationId": "in18U4ZMlSQJM3XDkV4v",
+          "nodeId": "p9fw5VgFDylzjAmTpfD3",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-flame-strike-a-take-1.mp3",
+          "bytes": 29289,
+          "sha256": "89bd8cfa00c853ef050f0f9efcdb43d277a013adafef31e87e0aeb912ca42269",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.16973933610493772,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00006666888896296543
+          }
+        },
+        {
+          "attackId": "flame-strike",
+          "label": "Flame Strike",
+          "variant": 2,
+          "generationId": "dNeuGixJlskM0nD7eBfr",
+          "nodeId": "p9fw5VgFDylzjAmTpfD3",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-flame-strike-a-take-2.mp3",
+          "bytes": 29289,
+          "sha256": "2d9f0fa2c367ce931ec0798ff6108bb2a5807d0e161e4e97644478735bf9836e",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.9566108584403992,
+            "rms": 0.08227415969588574,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        },
+        {
+          "attackId": "flame-strike",
+          "label": "Flame Strike",
+          "variant": 3,
+          "generationId": "l90Wd6rpp0gkSfxQDi8P",
+          "nodeId": "p9fw5VgFDylzjAmTpfD3",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-flame-strike-a-take-3.mp3",
+          "bytes": 29289,
+          "sha256": "a30596b5f8f7ef7f5416624168f8b839368ed7c5e0e68f2a1db9fae9284905e5",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.19946698233655488,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.0014667155571852395
+          }
+        },
+        {
+          "attackId": "flame-strike",
+          "label": "Flame Strike",
+          "variant": 4,
+          "generationId": "dOsR0XoBLkMg2uEAIX7h",
+          "nodeId": "p9fw5VgFDylzjAmTpfD3",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.7,
+          "reportedSeconds": 0.6802494331065759,
+          "reportedPrice": {
+            "credits": 2.333333333333333,
+            "price_cents": 0.04666666666666666,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 2,
+          "file": "source/ash-warden-flame-strike-a-take-4.mp3",
+          "bytes": 29289,
+          "sha256": "99a5f1a18a1318e90e8d13553d9068834c9868b6d0edb99fec8c0baedc83b760",
+          "analysis": {
+            "seconds": 0.6802494331065759,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.8914531469345093,
+            "rms": 0.16377956429498444,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "meteor",
+      "label": "Meteor",
+      "seconds": 0.8,
+      "prompt": "A single flaming meteor drops fast and strikes the ground. About 0.3 seconds of deep hot-air whistle leads into a heavy rocky impact, cracking stone and a brief burst of fire, then a short gritty decay. Give it solid weight without a cinematic sub-bass boom. No repeated impacts, long rumble, voices, music, background ambience or long reverb. Duration: 0.8 seconds.",
+      "nodeId": "4Te3rDJPUwIJ1wJzgUoF",
+      "takes": [
+        {
+          "attackId": "meteor",
+          "label": "Meteor",
+          "variant": 1,
+          "generationId": "20NvPnOn05hE4m9DsbmS",
+          "nodeId": "4Te3rDJPUwIJ1wJzgUoF",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.8,
+          "reportedSeconds": 0.8,
+          "reportedPrice": {
+            "credits": 2.666666666666667,
+            "price_cents": 0.05333333333333334,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 3,
+          "file": "source/ash-warden-meteor-a-take-1.mp3",
+          "bytes": 30961,
+          "sha256": "b53fcc7ea5b5eb9391253a7b9cf53fcdf19a221392ab1a543ad4ba963a955c19",
+          "analysis": {
+            "seconds": 0.8,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.9073553681373596,
+            "rms": 0.0954081576610417,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        },
+        {
+          "attackId": "meteor",
+          "label": "Meteor",
+          "variant": 2,
+          "generationId": "CSr6tsbAdGSpvZF8s1y9",
+          "nodeId": "4Te3rDJPUwIJ1wJzgUoF",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.8,
+          "reportedSeconds": 0.8,
+          "reportedPrice": {
+            "credits": 2.666666666666667,
+            "price_cents": 0.05333333333333334,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 3,
+          "file": "source/ash-warden-meteor-a-take-2.mp3",
+          "bytes": 30961,
+          "sha256": "c9eb47f505cac890ec822995bdf17ee548d53f71a1b98d46696367ab94c2b15d",
+          "analysis": {
+            "seconds": 0.8,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 0.3027157485485077,
+            "rms": 0.04530038457788127,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0
+          }
+        },
+        {
+          "attackId": "meteor",
+          "label": "Meteor",
+          "variant": 3,
+          "generationId": "Wt831OvYtndDPUvfa92Z",
+          "nodeId": "4Te3rDJPUwIJ1wJzgUoF",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.8,
+          "reportedSeconds": 0.8,
+          "reportedPrice": {
+            "credits": 2.666666666666667,
+            "price_cents": 0.05333333333333334,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 3,
+          "file": "source/ash-warden-meteor-a-take-3.mp3",
+          "bytes": 30961,
+          "sha256": "0e98f8f832658b3ebacee967ba730b9065a5e2f333ca3882e8cc0d2d7b18fecd",
+          "analysis": {
+            "seconds": 0.8,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.1305825586827305,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.0007227891156462585
+          }
+        },
+        {
+          "attackId": "meteor",
+          "label": "Meteor",
+          "variant": 4,
+          "generationId": "bpST4Pq0oA2PMWaJfmTf",
+          "nodeId": "4Te3rDJPUwIJ1wJzgUoF",
+          "status": "completed",
+          "model": "eleven_text_to_sound_v2",
+          "requestedSeconds": 0.8,
+          "reportedSeconds": 0.8,
+          "reportedPrice": {
+            "credits": 2.666666666666667,
+            "price_cents": 0.05333333333333334,
+            "cost_fiat_currency": "usd"
+          },
+          "runCredits": 3,
+          "file": "source/ash-warden-meteor-a-take-4.mp3",
+          "bytes": 30961,
+          "sha256": "00f10dc03b847fb314851935ae94b28e4e27ff8726feccc5918c478d73518433",
+          "analysis": {
+            "seconds": 0.8,
+            "analysisSampleRate": 44100,
+            "channels": 2,
+            "peak": 1,
+            "rms": 0.12509843173330146,
+            "invalidSamples": 0,
+            "overFullScaleSamples": 0,
+            "atFullScaleFraction": 0.00001417233560090703
+          }
+        }
+      ]
+    }
+  ]
+}

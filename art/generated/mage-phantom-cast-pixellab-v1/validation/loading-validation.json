@@ -1,0 +1,75 @@
+{
+  "metadataMatches": true,
+  "successful": [
+    {
+      "protocol": "file",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "ready": true,
+      "runAdvances": true,
+      "scrub": true,
+      "pause": true,
+      "errors": []
+    },
+    {
+      "protocol": "http",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "ready": true,
+      "runAdvances": true,
+      "scrub": true,
+      "pause": true,
+      "errors": []
+    },
+    {
+      "protocol": "file",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "ready": true,
+      "runAdvances": true,
+      "scrub": true,
+      "pause": true,
+      "errors": []
+    },
+    {
+      "protocol": "http",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "ready": true,
+      "runAdvances": true,
+      "scrub": true,
+      "pause": true,
+      "errors": []
+    }
+  ],
+  "failures": [
+    {
+      "failure": "missing-image",
+      "target": "reference/shard-grove.png",
+      "visibleError": "Ошибка загрузки: reference/shard-grove.png: The source image cannot be decoded."
+    },
+    {
+      "failure": "stalled-image",
+      "target": "reference/shard-grove.png",
+      "visibleError": "Ошибка загрузки: reference/shard-grove.png: превышено время ожидания"
+    },
+    {
+      "failure": "missing-data-script",
+      "target": "viewer-data.js",
+      "visibleError": "Ошибка загрузки: не загружен viewer-data.js. Сохраните всю папку Viewer рядом с HTML."
+    },
+    {
+      "failure": "missing-viewer-script",
+      "target": "viewer.js",
+      "visibleError": "Не найден viewer.js. Откройте HTML из полной папки Viewer."
+    }
+  ]
+}

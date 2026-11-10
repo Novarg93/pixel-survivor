@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: e20b864e-3233-44c3-92b7-31070cc4a87b\njob_id: e20b864e-3233-44c3-92b7-31070cc4a87b\ndescription: One gentle Blink rune dismissal. The existing sparse broken lavender ground seal loses its light in a few broad segments, with at most two small dim pixel chips close to the original rim, then disappears completely into the supplied transparent last frame. Fixed centre and footprint. Hollow centre remains fully transparent throughout. No rune growth, no spinning, no new concentric rings, no sphere, no bright core, no blue-white flare, no vertical portal or smoke. Quiet soft fade preserving the original coarse pixel shapes and muted palette, finish with zero visible pixels.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111214\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"e20b864e-3233-44c3-92b7-31070cc4a87b\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/e20b864e-3233-44c3-92b7-31070cc4a87b/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 15ad59b5-9ffc-5c29-a8e0-dac9bda80ea4\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

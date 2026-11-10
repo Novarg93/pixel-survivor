@@ -23,7 +23,7 @@ test('Thorn Ram live melee, charge preparation, travel and arrival', async ({ pa
   await start(page);
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.spawn('charger', { x: 28, y: 0 })!.boss!.until = w.elapsed + 2; });
   await page.waitForFunction(() => {
-    if (!window.__PIXEL__!.art().actors.some(a => String(a.frame).includes('-slam-1'))) return false;
+    if (!window.__PIXEL__!.art().actors.some(a => a.texture==='briar-beast-v1' && String(a.frame).endsWith('-attack-1'))) return false;
     window.__PIXEL__!.world.pause(); return true;
   }, undefined, { polling: 'raf' });
   await shot(page, 'thorn-melee-windup');
@@ -88,16 +88,18 @@ test('Guardian actual charge, release, hit reaction and immediate reward/death b
 
 for (const kind of ['sorcerer', 'eclipse'] as const) test(kind + ' live cast telegraph and release', async ({ page }) => {
   await start(page);
-  await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.spawn(kind, { x: 95, y: -25 })!.boss!.until = w.elapsed; }, kind);
+  await page.evaluate(kind => { const w = window.__PIXEL__!.world; w.spawn(kind, { x: 180, y: -25 })!.boss!.until = w.elapsed; }, kind);
   await page.waitForFunction(() => {
     const w = window.__PIXEL__!.world, e = w.bosses[0];
-    if (e.boss!.phase !== 'windup' || !window.__PIXEL__!.art().actors.some(a => String(a.frame).endsWith('-windup-1'))) return false;
+    if (e.boss!.phase !== 'windup' || !window.__PIXEL__!.art().actors.some(a => String(a.frame).endsWith('-cast-1'))) return false;
     w.pause(); return true;
   }, undefined, { polling: 'raf' });
   await shot(page, `${kind}-attack-telegraph`);
   await page.waitForFunction(() => {
-    if (!window.__PIXEL__!.art().encounterFeedback.bursts.some(b => b.kind === 'cast')) return false;
-    window.__PIXEL__!.world.pause(); return true;
+    const w=window.__PIXEL__!.world,boss=w.bosses[0];
+    // Accepted Rune/Astral art replaces the old generic cast flash. Verify the real release.
+    if(!boss||!w.projectiles.some(p=>p.hostile&&p.ownerId===boss.id))return false;
+    w.pause();return true;
   }, undefined, { polling: 'raf' });
   await shot(page, `${kind}-release`);
 });

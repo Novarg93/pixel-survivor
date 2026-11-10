@@ -1,0 +1,57 @@
+{
+  "maxUSD": 2,
+  "maxStarterPercentagePoints": 10,
+  "before": 91,
+  "afterGetBalance": 85,
+  "minimumJobSnapshot": 84,
+  "usedPercentagePoints": 6,
+  "worstObservedPercentagePoints": 7,
+  "USDCharged": 0,
+  "balanceBeforeUSD": 10,
+  "balanceAfterUSD": 10,
+  "hypotheticalBalanceUSD": 0.42,
+  "operations": [
+    {
+      "id": "south-idle",
+      "estimateIfBalanceUSD": 0.14,
+      "actualUSD": 0,
+      "billing": {
+        "source": "plan",
+        "balance_left": 10,
+        "plan_job_limit": 2,
+        "balance_charged": 0,
+        "plan_jobs_running": 1,
+        "plan_usage_left_pct": 88
+      },
+      "getBalanceAfter": 89
+    },
+    {
+      "id": "south-walk",
+      "estimateIfBalanceUSD": 0.14,
+      "actualUSD": 0,
+      "billing": {
+        "source": "plan",
+        "balance_left": 10,
+        "plan_job_limit": 2,
+        "balance_charged": 0,
+        "plan_jobs_running": 1,
+        "plan_usage_left_pct": 86
+      },
+      "getBalanceAfter": 87
+    },
+    {
+      "id": "south-walk-retry",
+      "estimateIfBalanceUSD": 0.14,
+      "actualUSD": 0,
+      "billing": {
+        "source": "plan",
+        "balance_left": 10,
+        "plan_job_limit": 2,
+        "balance_charged": 0,
+        "plan_jobs_running": 1,
+        "plan_usage_left_pct": 84
+      },
+      "getBalanceAfter": 85
+    }
+  ]
+}

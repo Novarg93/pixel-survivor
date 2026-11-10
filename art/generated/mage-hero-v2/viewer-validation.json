@@ -1,0 +1,47 @@
+{
+  "records": [
+    {
+      "motion": "idle",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "walk",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "run",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "fireball",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "lightning",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "meteor",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "defensive",
+      "scrub": 6,
+      "pauseFrozen": true
+    },
+    {
+      "motion": "death",
+      "scrub": 6,
+      "pauseFrozen": true
+    }
+  ],
+  "playback": true,
+  "speed": 0.25,
+  "errors": []
+}

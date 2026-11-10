@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "arcane-shield-loop",
+    "tool": "animate_image_pixminimax",
+    "args": {
+      "description": "Quiet seamless protective-shield sustain loop. The oval outline stays fixed at exactly the same size and location, hollow center stays completely transparent. Soft lavender light gently flows along the separated curved panels; the two tiny side marks pulse subtly out of phase. Very small motion only, no spinning of the whole oval, no growth, no breathing shape distortion. Keep the sparse shell quiet and elegant, ordinary mage protection. No actor or face appears inside, no solid fill, no expanding rings, no new glyphs, no particles flying away, no white flash. Return to the same initial shield silhouette.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/8ef82cf8-421b-4132-a036-d1e799114294/download",
+      "last_frame_url": "https://api.pixellab.ai/mcp/images/8ef82cf8-421b-4132-a036-d1e799114294/download",
+      "frame_count": 8,
+      "view": "high top-down",
+      "subject_description": "one thin hollow lavender and steel-blue arcane protective oval shell with sparse separated panels",
+      "initial_pose": "fixed shield centered at(64,60), empty transparent center, feet anchor(64,108)",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111111
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 0db56ea7-3229-4854-8176-84c2dee5d90e\njob_id: 0db56ea7-3229-4854-8176-84c2dee5d90e\ndescription: Quiet seamless protective-shield sustain loop. The oval outline stays fixed at exactly the same size and location, hollow center stays completely transparent. Soft lavender light gently flows along the separated curved panels; the two tiny side marks pulse subtly out of phase. Very small motion only, no spinning of the whole oval, no growth, no breathing shape distortion. Keep the sparse shell quiet and elegant, ordinary mage protection. No actor or face appears inside, no solid fill, no expanding rings, no new glyphs, no particles flying away, no white flash. Return to the same initial shield silhouette.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111111\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"0db56ea7-3229-4854-8176-84c2dee5d90e\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/0db56ea7-3229-4854-8176-84c2dee5d90e/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 18ae171e-59e8-5131-bab2-ed723aaa0c5c\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "approval": {
+    "accepted": true,
+    "selectedVariant": 2,
+    "userInstruction": "везде второй вариант принимаем и накатываем",
+    "runtimeVersion": "music-v1"
+  },
+  "sourceFlowId": "yjvrw2c6hHxBAVyZw6YL",
+  "originalBytesPreserved": true,
+  "crossfadeSeconds": 1.5,
+  "entries": [
+    {
+      "id": "normal",
+      "title": "Первые искры",
+      "stage": "0–5 минут",
+      "variant": 2,
+      "file": "public/assets/audio/music-v1/normal.mp3",
+      "source": "art/generated/music-ambient-review-v1/source/01-first-sparks-2.mp3",
+      "generationId": "gotVKPzN9WsaaEMFajBS",
+      "sha256": "7d04e41d46db426dffea65551fa179b52e9dd1dead20ef27c06b3d706a114d70",
+      "bytes": 1458322,
+      "seconds": 59.999977324263035,
+      "gain": 0.76536
+    },
+    {
+      "id": "dusk",
+      "title": "Сумеречная роща",
+      "stage": "5–10 минут",
+      "variant": 2,
+      "file": "public/assets/audio/music-v1/dusk.mp3",
+      "source": "art/generated/music-ambient-review-v1/source/02-dusk-grove-2.mp3",
+      "generationId": "UGH1OtQmf8ZfZZslMqmX",
+      "sha256": "9f1f3d7b7245738cb750f8ae0494cca0b78f475cd3ebc957e8e55403de6b4654",
+      "bytes": 1458322,
+      "seconds": 59.999977324263035,
+      "gain": 0.621284
+    },
+    {
+      "id": "dying",
+      "title": "Умирающая роща",
+      "stage": "10–15 минут",
+      "variant": 2,
+      "file": "public/assets/audio/music-v1/dying.mp3",
+      "source": "art/generated/music-ambient-review-v1/source/03-withered-roots-2.mp3",
+      "generationId": "kltUwop3g7LiG9j6rodc",
+      "sha256": "42616cb86859253b00438e846819f3188f2f3c04c5d8af6210daa424ba5b94df",
+      "bytes": 1458322,
+      "seconds": 59.999977324263035,
+      "gain": 1.49735
+    },
+    {
+      "id": "burning",
+      "title": "Горящая роща",
+      "stage": "15–20 минут",
+      "variant": 2,
+      "file": "public/assets/audio/music-v1/burning.mp3",
+      "source": "art/generated/music-ambient-review-v1/source/04-embers-rising-2.mp3",
+      "generationId": "TjwKpUtWMO09xJLdRp61",
+      "sha256": "2ada0c1347ffe0202785f1d1bd47dbf43398518c669b0e28a24415b90b5ae84b",
+      "bytes": 1458322,
+      "seconds": 59.999977324263035,
+      "gain": 0.644956
+    },
+    {
+      "id": "boss",
+      "title": "Страж Пепельной Рощи",
+      "stage": "Бой с боссом",
+      "variant": 2,
+      "file": "public/assets/audio/music-v1/boss.mp3",
+      "source": "art/generated/music-ambient-review-v1/source/05-ash-warden-2.mp3",
+      "generationId": "sFirbuSIPmgTQNfCG0VP",
+      "sha256": "2eb9a2f3d7fc82c355f5282344e18f803a24fea41e7b5b93d9336cdd26d550e6",
+      "bytes": 1458322,
+      "seconds": 59.999977324263035,
+      "gain": 0.801074
+    }
+  ]
+}

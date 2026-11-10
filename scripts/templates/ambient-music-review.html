@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Survivor · Музыка рощи</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif;color:#e3e9e0;background:#0c1518;font-synthesis:none}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#23423677,transparent 42%),radial-gradient(ellipse at 95% 65%,#50262233,transparent 50%)}main{max-width:1120px;margin:auto;padding:40px 28px 28px}.eyebrow{color:#9bb5a2;font:11px/1.5 monospace;letter-spacing:.19em}h1{font:400 clamp(34px,5vw,56px)/1.1 Georgia,serif;color:#eee3c7;margin:16px 0}header>p{max-width:700px;color:#a8b9b1;line-height:1.65;font-size:15px}.toolbar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:24px 0 32px}.toolbar button{background:#d9c088;color:#162321;border:0;font-weight:700;padding:13px 20px}.toolbar>a{font-size:13px;color:#a9bdaf}.loop{font-size:13px;color:#bac7bf;display:flex;gap:7px;align-items:center}button,a,input{touch-action:manipulation}button{cursor:pointer;font:inherit;border-radius:5px}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #efddaa;outline-offset:4px}.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.track{--accent:#a6c8a3;position:relative;min-width:0;padding:24px;background:linear-gradient(140deg,#19292c,#101e24);border:1px solid #354a49;border-top:2px solid var(--accent);border-radius:8px}.track[data-phase=dusk]{--accent:#aaa9d6}.track[data-phase=dying]{--accent:#8db6c9}.track[data-phase=burning]{--accent:#d7a16d}.track[data-phase=boss]{--accent:#d58f83;grid-column:1/-1;background:linear-gradient(110deg,#2c2223,#152127)}.track.is-playing{box-shadow:0 0 0 1px var(--accent),0 10px 28px #0003}.track-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font:11px monospace;color:var(--accent);letter-spacing:.08em}.take-status{font-size:10px;color:#879d94;letter-spacing:0}.is-playing .take-status{color:var(--accent)}h2{font:400 27px/1.15 Georgia,serif;margin:16px 0 12px;color:#ede6d6}.description{font-size:13px;line-height:1.65;color:#a8bbb5;min-height:64px;margin:0 0 20px}.variants{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.variants button{padding:9px 4px;font:12px monospace;color:#a6bbb4;background:#112126;border:1px solid #3d5555}.variants button[aria-pressed=true]{background:color-mix(in srgb,var(--accent) 16%,#132429);border-color:var(--accent);color:#f4ecda}.wave{display:block;width:100%;height:34px;margin:14px 0 6px;color:var(--accent);opacity:.7}audio{display:block;width:100%;height:42px}.track-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;font:11px monospace;color:#8ba198}.download{color:var(--accent);font-size:12px}.track[data-phase=boss] .description{min-height:0;max-width:800px}.track[data-phase=boss] .variants{max-width:480px}.track[data-phase=boss] audio{max-width:700px}footer{color:#889d94;font-size:12px;line-height:1.7;margin:28px 0 8px;max-width:850px}footer a{color:#c0cbbb}@media(max-width:650px){main{padding:28px 16px 20px}.tracks{grid-template-columns:1fr}.track{padding:20px}.description{min-height:0}.toolbar{gap:16px;margin-bottom:24px}.track-head{font-size:10px}h2{font-size:25px}.toolbar button{width:100%}.track-foot{font-size:10px}.variants button{font-size:11px}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">PIXEL SURVIVOR / МУЗЫКАЛЬНЫЕ ПРОБЫ · 01</div><h1>Музыка рощи</h1><p>Пять состояний одного мира: от первых искр до боя со Стражем. Выбери вариант каждой темы и сравни, как меняются ритм, тембры и напряжение.</p></header>
+<div class="toolbar"><button id="sequence" type="button" aria-pressed="false">▶ Слушать пять тем по порядку</button><label class="loop"><input id="repeat" type="checkbox">Повторять трек</label><a id="playlist" href="five-themes.m3u" download>Плейлист первых вариантов</a></div>
+<section class="tracks" aria-label="Пять музыкальных тем"></section>
+<footer><span id="review-note">Минутные инструментальные эскизы · по четыре исходных варианта каждой темы. Повтор помогает оценить стык; бесшовные игровые петли и переходы между фазами подготовим после выбора звучания.</span> <a href="manifest.json" download>Данные набора</a></footer>
+</main>
+<script type="application/json" id="music-data">__MUSIC_DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('music-data').textContent),container=document.querySelector('.tracks'),sequence=document.getElementById('sequence'),repeat=document.getElementById('repeat');
+const localFiles=location.protocol==='file:';
+if(data.acceptedForIntegration){document.querySelector('.eyebrow').textContent='PIXEL SURVIVOR / ПРИНЯТО · ВАРИАНТ 2';document.getElementById('playlist').textContent='Плейлист принятых вариантов';document.getElementById('review-note').textContent='Во всех пяти темах принят вариант 2 и подключён к игре. Все исходные варианты сохранены для сравнения; здесь воспроизводятся оригинальные MP3.';}
+if(localFiles)document.querySelectorAll('a[download]').forEach(link=>{link.removeAttribute('download');link.target='_blank';link.rel='noopener';});
+let playlist=false;
+const players=[];
+const stopPlaylist=()=>{playlist=false;sequence.setAttribute('aria-pressed','false');sequence.textContent='▶ Слушать пять тем по порядку';};
+const time=s=>{const seconds=Math.round(s);return Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');};
+for(const [index,track]of data.tracks.entries()){
+ const card=document.createElement('article');card.className='track';card.dataset.phase=track.phase;card.dataset.track=track.id;
+ card.innerHTML='<div class="track-head"><span class="stage"></span><span class="take-status">Готово к прослушиванию</span></div><h2></h2><p class="description"></p><div class="variants" role="group" aria-label="Варианты темы"></div><svg class="wave" viewBox="0 0 600 34" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="currentColor" stroke-width="1.5"/></svg><audio controls preload="none"></audio><div class="track-foot"><span class="format"></span><a class="download" download>Скачать MP3 ↓</a></div>';
+ card.querySelector('.stage').textContent=String(index+1).padStart(2,'0')+' / '+track.stage;
+ card.querySelector('h2').textContent=track.title;card.querySelector('.description').textContent=track.description;
+ const audio=card.querySelector('audio'),variants=card.querySelector('.variants'),download=card.querySelector('.download'),status=card.querySelector('.take-status'),format=card.querySelector('.format');audio.volume=.35;audio.setAttribute('aria-label',track.title);
+ let selected=0;
+ function select(variant){
+  const wasPlaying=!audio.paused,take=track.takes[variant];selected=variant;audio.pause();audio.src=take.file;audio.dataset.variant=String(take.variant);audio.load();download.href=take.file;download.download=track.id+'-v'+take.variant+'.mp3';format.textContent=time(take.analysis.seconds)+' · MP3 · вариант '+take.variant;
+  if(localFiles){download.removeAttribute('download');download.target='_blank';download.rel='noopener';download.textContent='Открыть MP3 ↗';}
+  variants.querySelectorAll('button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===variant)));
+  const level=Math.max(.001,...take.analysis.envelope),points=take.analysis.envelope.map((v,i)=>(i*600/(take.analysis.envelope.length-1)).toFixed(1)+','+(32-v/level*28).toFixed(1)).join(' ');card.querySelector('polyline').setAttribute('points',points);
+  if(wasPlaying)audio.play().catch(()=>{status.textContent='Нажми ▶ для прослушивания';});
+ }
+ for(let i=0;i<track.takes.length;i++){const button=document.createElement('button');button.type='button';button.textContent='Вариант '+(i+1)+(track.takes[i].variant===data.acceptedVariant?' ✓':'');button.addEventListener('click',()=>{stopPlaylist();select(i);});variants.append(button);}
+ audio.addEventListener('play',()=>{players.forEach(p=>{if(p.audio!==audio)p.audio.pause();});card.classList.add('is-playing');status.textContent='Играет · вариант '+(selected+1);});
+ audio.addEventListener('pause',()=>{card.classList.remove('is-playing');status.textContent='Пауза · вариант '+(selected+1);});
+ audio.addEventListener('ended',()=>{card.classList.remove('is-playing');status.textContent='Прослушано · вариант '+(selected+1);if(playlist){if(players[index+1])players[index+1].audio.play().catch(stopPlaylist);else stopPlaylist();}});
+ audio.addEventListener('error',()=>{status.textContent='Не удалось открыть аудиофайл';stopPlaylist();});
+ select(Math.max(0,track.takes.findIndex(t=>t.variant===data.acceptedVariant)));players.push({audio,card});container.append(card);
+}
+sequence.addEventListener('click',()=>{if(playlist){players.forEach(p=>p.audio.pause());stopPlaylist();return;}players.forEach(p=>{p.audio.pause();p.audio.loop=false;});repeat.checked=false;playlist=true;sequence.setAttribute('aria-pressed','true');sequence.textContent='■ Остановить последовательность';players[0].audio.currentTime=0;players[0].audio.play().catch(stopPlaylist);});
+repeat.addEventListener('change',()=>{stopPlaylist();players.forEach(p=>p.audio.loop=repeat.checked);});
+</script></body></html>

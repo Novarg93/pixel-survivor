@@ -1,0 +1,29 @@
+{
+  "credits": 0,
+  "balance": 9.079999999999998,
+  "usage": {
+    "balance": 9.08,
+    "plan": {
+      "key": "starter",
+      "name": "Starter",
+      "status": "active",
+      "interval": "month",
+      "usage_left_pct": 0,
+      "period_end": "2026-12-06T16:41:29+00:00",
+      "cancel_at_period_end": false,
+      "pending_plan_key": null,
+      "plan_covers_any_job": false
+    },
+    "plan_usage_left_pct": 0,
+    "api_job_slots": {
+      "in_use": 0,
+      "limit": 2
+    },
+    "web_job_slots": {
+      "in_use": 0,
+      "limit": 5
+    },
+    "free_usage_left_pct": 0,
+    "plans_enabled": true
+  }
+}

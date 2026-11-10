@@ -1,0 +1,43 @@
+{
+  "status": "experimental-manual-review-pending",
+  "directions": [
+    "east"
+  ],
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310811,
+  "perFrameFitting": false,
+  "background": "transparent",
+  "gameplayChanged": false,
+  "generatorsUsed": [],
+  "authoringBackend": "aseprite-mcp live",
+  "editableFiles": [
+    "source/east-walk-source.aseprite",
+    "walk/east-walk.aseprite",
+    "run/east-run.aseprite"
+  ],
+  "layerOrder": [
+    "Reference (locked, hidden on variants)",
+    "Right Leg",
+    "Left Leg",
+    "Pelvis",
+    "Upper Body"
+  ],
+  "recommendation": {
+    "walkToRunEnterWorldSpeed": 110,
+    "runToWalkExitWorldSpeed": 95,
+    "productionIntegration": false
+  },
+  "limitations": [
+    "Original timing stored as float63.6641328829ms; editable source quantized to64ms by Aseprite format",
+    "Run stride is inferred from consecutive planted anchors; not a guarantee of continuous contact locking",
+    "24 FPS Run cap leaves approximately1.4% nominal slip at255world/s",
+    "Hand-restored hidden armor and the forward knee silhouette require manual aesthetic review"
+  ]
+}

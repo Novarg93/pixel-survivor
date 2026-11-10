@@ -1,0 +1,110 @@
+{
+  "status": {
+    "executable": "C:\\Program Files\\Aseprite\\Aseprite.exe",
+    "batch": {
+      "apiVersion": 41,
+      "mode": "batch",
+      "os": "Windows NT 10.0.19045",
+      "runtime": "0.1.1",
+      "sprites": 0,
+      "ui": false,
+      "version": "1.3.18.6"
+    },
+    "live": {
+      "port": 41234,
+      "listening": true,
+      "connected": true,
+      "aseprite": {
+        "apiVersion": 41,
+        "mode": "live",
+        "os": "Windows NT 10.0.19045",
+        "runtime": "0.1.1",
+        "sprites": 0,
+        "ui": true,
+        "version": "1.3.18.6"
+      }
+    },
+    "extensionInstalled": true,
+    "workDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor"
+  },
+  "state": {
+    "activeFrame": 3,
+    "activeLayer": "Left Leg",
+    "activeSprite": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\art\\generated\\ash-warden-run-aseprite-pilot-01\\run\\east-run.aseprite",
+    "apiVersion": 41,
+    "bgColor": "#000000ff",
+    "brush": {
+      "angle": 0,
+      "size": 1,
+      "type": "CIRCLE"
+    },
+    "editor": {
+      "scroll": {
+        "x": 100,
+        "y": 107
+      },
+      "zoom": 4
+    },
+    "fgColor": "#ffffffff",
+    "mode": "live",
+    "range": {
+      "frames": [
+        3
+      ],
+      "layers": [
+        "Left Leg"
+      ],
+      "type": "EMPTY"
+    },
+    "sprites": [
+      {
+        "active": true,
+        "colorMode": "rgb",
+        "filename": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\art\\generated\\ash-warden-run-aseprite-pilot-01\\run\\east-run.aseprite",
+        "frames": 12,
+        "hasFile": true,
+        "height": 192,
+        "id": 219,
+        "layers": 5,
+        "modified": false,
+        "width": 192
+      },
+      {
+        "colorMode": "rgb",
+        "filename": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\art\\generated\\ash-warden-run-aseprite-pilot-01\\walk\\east-walk.aseprite",
+        "frames": 8,
+        "hasFile": true,
+        "height": 192,
+        "id": 127,
+        "layers": 5,
+        "modified": false,
+        "width": 192
+      },
+      {
+        "colorMode": "rgb",
+        "filename": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\art\\generated\\ash-warden-run-aseprite-pilot-01\\source\\east-walk-source.aseprite",
+        "frames": 8,
+        "hasFile": true,
+        "height": 192,
+        "id": 99,
+        "layers": 5,
+        "modified": false,
+        "width": 192
+      },
+      {
+        "colorMode": "rgb",
+        "filename": "C:\\Users\\Novarg\\AppData\\Local\\Temp\\pixel-survivor-aseprite-live-88728f0e863949489518297b4509bc22\\live-probe.aseprite",
+        "frames": 3,
+        "hasFile": true,
+        "height": 32,
+        "id": 6,
+        "layers": 1,
+        "modified": false,
+        "width": 32
+      }
+    ],
+    "tool": "pencil",
+    "ui": true,
+    "version": "1.3.18.6"
+  }
+}

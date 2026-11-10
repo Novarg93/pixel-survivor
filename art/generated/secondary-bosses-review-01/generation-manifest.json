@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "status": "awaiting-manual-art-review",
+  "budgetUSD": 5,
+  "maxRequestUSD": 0.5,
+  "preserveUSD": 5,
+  "initialBalanceUSD": 10,
+  "initialStarterRemainingPct": 44,
+  "jobs": [
+    {
+      "enemy": "charger",
+      "variant": "a",
+      "kind": "model",
+      "taskId": "27dbeba0-c1ef-43c7-a1ba-798219b76958",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83101,
+      "request": "charger/model-a/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 42,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "charger/model-a/original.png",
+      "quality": "invalid-empty-2-visible-pixels"
+    },
+    {
+      "enemy": "charger",
+      "variant": "b",
+      "kind": "model",
+      "taskId": "4b19776e-472f-48ff-b7b2-da11ca476535",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83102,
+      "request": "charger/model-b/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 42,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "charger/model-b/original.png",
+      "quality": "pending-full-QA"
+    },
+    {
+      "enemy": "sorcerer",
+      "variant": "a",
+      "kind": "model",
+      "taskId": "9b04938e-05a3-4b91-9823-4b751fdd8cd5",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83103,
+      "request": "sorcerer/model-a/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 1,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 40,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/model-a/original.png",
+      "qa": {
+        "width": 128,
+        "height": 128,
+        "visible": 8554,
+        "partial": 0,
+        "edge": 0,
+        "bounds": [
+          12,
+          3,
+          121,
+          120
+        ],
+        "colors": 47
+      }
+    },
+    {
+      "enemy": "sorcerer",
+      "variant": "b",
+      "kind": "model",
+      "taskId": "7abf9b0b-1889-44d4-a1c2-64374ebea645",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83104,
+      "request": "sorcerer/model-b/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 40,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/model-b/original.png",
+      "qa": {
+        "width": 128,
+        "height": 128,
+        "visible": 7185,
+        "partial": 0,
+        "edge": 0,
+        "bounds": [
+          6,
+          7,
+          121,
+          118
+        ],
+        "colors": 44
+      }
+    },
+    {
+      "enemy": "eclipse",
+      "variant": "a",
+      "kind": "model",
+      "taskId": "80fa2da5-5fbd-4b20-995b-c9334909cfae",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83105,
+      "request": "eclipse/model-a/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 39,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/model-a/original.png",
+      "outputCount": 2
+    },
+    {
+      "enemy": "eclipse",
+      "variant": "b",
+      "kind": "model",
+      "taskId": "dfc5ba99-a908-4368-a7d6-68d4c22d23f4",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83106,
+      "request": "eclipse/model-b/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 39,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/model-b/original.png",
+      "outputCount": 2
+    },
+    {
+      "enemy": "guardian",
+      "variant": "a",
+      "kind": "model",
+      "taskId": "904acd7f-3228-4c86-860c-2e3dcacfad6a",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83107,
+      "request": "guardian/model-a/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 37,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "guardian/model-a/original.png",
+      "outputCount": 2
+    },
+    {
+      "enemy": "guardian",
+      "variant": "b",
+      "kind": "model",
+      "taskId": "dd7da100-456f-447e-8c7b-d0866e5c1ea3",
+      "status": "downloaded",
+      "estimatedBalanceFallbackUSD": 0.18,
+      "reservedUSD": 0,
+      "seed": 83108,
+      "request": "guardian/model-b/request.json",
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 37,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "guardian/model-b/original.png",
+      "outputCount": 2
+    },
+    {
+      "enemy": "charger",
+      "variant": "a",
+      "kind": "model-functional-replacement",
+      "taskId": "104bf78c-778a-4130-8279-b1e209f3c213",
+      "status": "downloaded",
+      "seed": 83109,
+      "request": "charger/model-a/attempt-2/request.json",
+      "reservedUSD": 0,
+      "estimatedBalanceFallbackUSD": 0.18,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 36,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "charger/model-a/attempt-2/original.png"
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/charge-a",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "b1d03cd1-d46f-4cd3-bb3b-ff6948548bc4",
+      "status": "failed",
+      "seed": 83201,
+      "request": "charger/charge-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 36,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "error": {
+        "status_code": 502,
+        "code": "inference_failed",
+        "message": "Unable to run inference.",
+        "request_id": "b1d03cd1-d46f-4cd3-bb3b-ff6948548bc4"
+      }
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/charge-b",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "374e8f5b-aa96-454f-bf43-3c6c7f1803d1",
+      "status": "failed",
+      "seed": 83202,
+      "request": "charger/charge-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 36,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "error": {
+        "status_code": 502,
+        "code": "inference_failed",
+        "message": "Unable to run inference.",
+        "request_id": "374e8f5b-aa96-454f-bf43-3c6c7f1803d1"
+      }
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/melee-a",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "246b1bfe-d454-4d9a-8c1e-abd02e7b00d9",
+      "status": "failed",
+      "seed": 83203,
+      "request": "charger/melee-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.14,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 1,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 33,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "error": {
+        "status_code": 502,
+        "code": "inference_failed",
+        "message": "Unable to run inference.",
+        "request_id": "246b1bfe-d454-4d9a-8c1e-abd02e7b00d9"
+      }
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/melee-b",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "18e1adad-a166-470f-910c-62c8eae0d71b",
+      "status": "downloaded",
+      "seed": 83204,
+      "request": "charger/melee-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 1,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 29,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "charger/melee-b/original.gif"
+    },
+    {
+      "enemy": "sorcerer",
+      "folder": "sorcerer/cast-a",
+      "kind": "motion",
+      "base": "sorcerer/model-a",
+      "taskId": "a55f3bbd-51be-44dd-b145-454dd8b96f18",
+      "status": "downloaded",
+      "seed": 83205,
+      "request": "sorcerer/cast-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 26,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/cast-a/original.gif"
+    },
+    {
+      "enemy": "sorcerer",
+      "folder": "sorcerer/cast-b",
+      "kind": "motion",
+      "base": "sorcerer/model-a",
+      "taskId": "ae2eb232-a54a-4c56-919d-5de3c299d233",
+      "status": "downloaded",
+      "seed": 83206,
+      "request": "sorcerer/cast-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 26,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/cast-b/original.gif"
+    },
+    {
+      "enemy": "sorcerer",
+      "folder": "sorcerer/teleport-a",
+      "kind": "motion",
+      "base": "sorcerer/model-a",
+      "taskId": "fe5a8a30-ce46-4a77-a949-b38ad5200e64",
+      "status": "downloaded",
+      "seed": 83207,
+      "request": "sorcerer/teleport-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 1,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 19,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/teleport-a/original.gif"
+    },
+    {
+      "enemy": "sorcerer",
+      "folder": "sorcerer/teleport-b",
+      "kind": "motion",
+      "base": "sorcerer/model-a",
+      "taskId": "50b418cb-86fa-454f-9ba9-048937ef75b2",
+      "status": "downloaded",
+      "seed": 83208,
+      "request": "sorcerer/teleport-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 19,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "sorcerer/teleport-b/original.gif"
+    },
+    {
+      "enemy": "eclipse",
+      "folder": "eclipse/cast-a",
+      "kind": "motion",
+      "base": "eclipse/model-a",
+      "taskId": "80218fb8-802e-4667-a49b-aa181af6206c",
+      "status": "downloaded",
+      "seed": 83209,
+      "request": "eclipse/cast-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 13,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/cast-a/original.gif"
+    },
+    {
+      "enemy": "eclipse",
+      "folder": "eclipse/cast-b",
+      "kind": "motion",
+      "base": "eclipse/model-a",
+      "taskId": "7296c86f-34e2-4c3c-8b2b-f5f414743059",
+      "status": "downloaded",
+      "seed": 83210,
+      "request": "eclipse/cast-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 13,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/cast-b/original.gif"
+    },
+    {
+      "enemy": "eclipse",
+      "folder": "eclipse/teleport-a",
+      "kind": "motion",
+      "base": "eclipse/model-a",
+      "taskId": "55c60ea8-8b91-477a-b757-3b193dc08aeb",
+      "status": "downloaded",
+      "seed": 83211,
+      "request": "eclipse/teleport-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 1,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 6,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/teleport-a/original.gif"
+    },
+    {
+      "enemy": "eclipse",
+      "folder": "eclipse/teleport-b",
+      "kind": "motion",
+      "base": "eclipse/model-a",
+      "taskId": "4fdb34d7-3f93-46ba-a28c-eb6d593729c4",
+      "status": "downloaded",
+      "seed": 83212,
+      "request": "eclipse/teleport-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 2,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "eclipse/teleport-b/original.gif"
+    },
+    {
+      "enemy": "guardian",
+      "folder": "guardian/orb-cast-a",
+      "kind": "motion",
+      "base": "guardian/model-a",
+      "taskId": "721f7e40-3f98-4d56-a172-9ca7dbe18fdf",
+      "status": "downloaded",
+      "seed": 83213,
+      "request": "guardian/orb-cast-a/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "guardian/orb-cast-a/original.gif"
+    },
+    {
+      "enemy": "guardian",
+      "folder": "guardian/orb-cast-b",
+      "kind": "motion",
+      "base": "guardian/model-b",
+      "taskId": "d4454414-7728-4dd9-afb0-dbd1d6137a58",
+      "status": "downloaded",
+      "seed": 83214,
+      "request": "guardian/orb-cast-b/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "guardian/orb-cast-b/original.gif"
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/charge-a/attempt-2",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "644101ca-44fc-4af5-b24a-c53abfc7b84b",
+      "status": "downloaded",
+      "seed": 83201,
+      "request": "charger/charge-a/attempt-2/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "plan",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0,
+        "balance_left": 10
+      },
+      "original": "charger/charge-a/attempt-2/original.gif"
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/charge-b/attempt-2",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "28cbe3ef-ff90-4a18-8874-fc696e4d862e",
+      "status": "downloaded",
+      "seed": 83202,
+      "request": "charger/charge-b/attempt-2/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "balance",
+        "reason": "usage_exhausted",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0.25,
+        "balance_left": 9.75
+      },
+      "original": "charger/charge-b/attempt-2/original.gif"
+    },
+    {
+      "enemy": "charger",
+      "folder": "charger/melee-a/attempt-2",
+      "kind": "motion",
+      "base": "charger/model-b",
+      "taskId": "2c640476-0712-4abd-bcdc-80e4aaa7443b",
+      "status": "downloaded",
+      "seed": 83203,
+      "request": "charger/melee-a/attempt-2/request.json",
+      "estimatedBalanceFallbackUSD": 0.25,
+      "reservedUSD": 0,
+      "billing": {
+        "source": "balance",
+        "reason": "usage_exhausted",
+        "plan_jobs_running": 0,
+        "plan_job_limit": 2,
+        "plan_usage_left_pct": 0,
+        "balance_charged": 0.25,
+        "balance_left": 9.5
+      },
+      "original": "charger/melee-a/attempt-2/original.gif"
+    }
+  ],
+  "finalBalanceUSD": 9.5,
+  "finalStarterRemainingPct": 0,
+  "cashSpentUSD": 0.5
+}

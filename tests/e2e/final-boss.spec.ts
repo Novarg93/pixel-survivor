@@ -48,11 +48,12 @@ for(const [width,height]of [[1280,720],[1920,1080],[844,390],[740,360],[1024,768
   await page.screenshot({path:`${dir}/shield-break-${width}.png`});
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.damageEnemy(w.finalEncounter.boss!,1e9);});await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase3');
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.attack.kind==='approach');
-  await page.evaluate(()=>{const w=window.__PIXEL__!.world,e=w.finalEncounter.boss!;w.player.x=e.x+80;w.player.y=e.y;});
-  await expect.poll(()=>page.evaluate(()=>!!window.__PIXEL__!.art().finalBoss.pose?.clip.endsWith('-idle'))).toBe(true);
+  // Isolate the stance/walk visual probe from the already-tested combo and melee timers.
+  await page.evaluate(()=>{const w=window.__PIXEL__!.world,f=w.finalEncounter,e=f.boss!;f.nextCombo=f.nextMelee=Infinity;w.player.x=e.x+40;w.player.y=e.y;});
+  await page.waitForFunction(()=>window.__PIXEL__!.art().finalBoss.pose?.clip.endsWith('-idle'),undefined,{polling:'raf'});
   await page.screenshot({path:`${dir}/phase3-stance-${width}.png`});
   await page.evaluate(()=>{const w=window.__PIXEL__!.world,e=w.finalEncounter.boss!;w.player.x=e.x+220;w.player.y=e.y;});
-  await expect.poll(()=>page.evaluate(()=>!!window.__PIXEL__!.art().finalBoss.pose?.clip.endsWith('-walk'))).toBe(true);
+  await page.waitForFunction(()=>window.__PIXEL__!.art().finalBoss.pose?.clip.endsWith('-walk'),undefined,{polling:'raf'});
   await page.screenshot({path:`${dir}/phase3-walk-${width}.png`});
   await page.evaluate(async()=>{const w=window.__PIXEL__!.world,e=w.finalEncounter.boss!,module='/src/game/systems/UltimateFreeze.ts',{freezeForUltimate}=await import(module);w.player.x=e.x+80;w.player.y=e.y;freezeForUltimate(e,w.elapsed,w.elapsed+8);});
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.meteors.some(m=>m.owner==='arena'));

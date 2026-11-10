@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 231403ba-8744-49e7-bfaf-155897011d90\njob_id: 231403ba-8744-49e7-bfaf-155897011d90\ndescription: One small restrained collision at the shard's leading point near(95,61). The existing right-pointing shard stops and splits into just four short coarse lilac chips, moving only a few pixels outward near its nose, then all chips dim and disappear entirely to the supplied transparent ending. Remove the tail quickly. Keep most of the canvas empty and finish with no visible pixels. Small repeatable hostile bolt hit, not a blast. No white orb, no expanding circle, no energy dome, no bloom, no smoke, no giant sparks, no cyan or neon magenta flare, no character or terrain. Fixed camera and anchor, preserve pixel palette.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111212\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"231403ba-8744-49e7-bfaf-155897011d90\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/231403ba-8744-49e7-bfaf-155897011d90/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 3ac0ee20-c83f-562b-a367-2075075273d7\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

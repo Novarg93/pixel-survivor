@@ -1,0 +1,52 @@
+[
+  {
+    "file": "phantom-cast.gif",
+    "width": 512,
+    "height": 512,
+    "frames": 12,
+    "durationsMs": [
+      20,
+      20,
+      20,
+      30,
+      30,
+      30,
+      40,
+      40,
+      30,
+      30,
+      30,
+      20
+    ],
+    "durationMs": 340,
+    "removedLoopExtensions": [
+      0
+    ],
+    "oneShot": true
+  },
+  {
+    "file": "phantom-cast-alpha.gif",
+    "width": 256,
+    "height": 256,
+    "frames": 12,
+    "durationsMs": [
+      20,
+      20,
+      20,
+      30,
+      30,
+      30,
+      40,
+      40,
+      30,
+      30,
+      30,
+      20
+    ],
+    "durationMs": 340,
+    "removedLoopExtensions": [
+      0
+    ],
+    "oneShot": true
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"ab22d064-a59b-4bc4-8c33-2ec87e1832a8\",\n  \"image_id\": \"45c2b7e7-0fd0-5900-ba94-d59e4ce13afd\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"45c2b7e7-0fd0-5900-ba94-d59e4ce13afd\",\n  \"job_id\": \"ab22d064-a59b-4bc4-8c33-2ec87e1832a8\",\n  \"description\": \"One isolated small hostile RUNIC SHARD PROJECTILE flying horizontally to the RIGHT, for Pixel Survivor top-down dark fantasy. Large128x128 transparent canvas with a modest compact sprite only. A thick pointed chisel-like lavender energy shard, dark slate outer contour, muted purple body, narrow bone-lilac leading edge and a tiny dull rose threat accent. The pointed leading nose is near(104,64), short sparse broken block tail extends left to about(40,64). Total visible height about20px and visible width about64px; most of canvas stays EMPTY. A simple angular rune notch can sit in the shard body. Coarse clean pixel clusters at least2px thick, only5-7 colours, no tiny stippled sparkle noise. Keep a single readable silhouette, a weak short tail, limited narrow highlights. This is a repeatable miniboss projectile, not an ultimate weapon. No white orb, no white filled flame, no neon magenta streaks, no broad bloom, no circular energy bands, no lightning spaghetti, no giant glowing halo, no smoky cloud, no background, no character, no text, no sprite sheet. Preserve24px margins at top/bottom and12px at left/right. One projectile only, a horizontal sprite with its tip pointing right.\",\n  \"seed\": 2026111201,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/ab22d064-a59b-4bc4-8c33-2ec87e1832a8/download\"\n}\nPoll get_image(job_id=\"ab22d064-a59b-4bc4-8c33-2ec87e1832a8\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "ab22d064-a59b-4bc4-8c33-2ec87e1832a8",
+    "image_id": "45c2b7e7-0fd0-5900-ba94-d59e4ce13afd",
+    "status": "processing",
+    "source_image_id": "45c2b7e7-0fd0-5900-ba94-d59e4ce13afd",
+    "job_id": "ab22d064-a59b-4bc4-8c33-2ec87e1832a8",
+    "description": "One isolated small hostile RUNIC SHARD PROJECTILE flying horizontally to the RIGHT, for Pixel Survivor top-down dark fantasy. Large128x128 transparent canvas with a modest compact sprite only. A thick pointed chisel-like lavender energy shard, dark slate outer contour, muted purple body, narrow bone-lilac leading edge and a tiny dull rose threat accent. The pointed leading nose is near(104,64), short sparse broken block tail extends left to about(40,64). Total visible height about20px and visible width about64px; most of canvas stays EMPTY. A simple angular rune notch can sit in the shard body. Coarse clean pixel clusters at least2px thick, only5-7 colours, no tiny stippled sparkle noise. Keep a single readable silhouette, a weak short tail, limited narrow highlights. This is a repeatable miniboss projectile, not an ultimate weapon. No white orb, no white filled flame, no neon magenta streaks, no broad bloom, no circular energy bands, no lightning spaghetti, no giant glowing halo, no smoky cloud, no background, no character, no text, no sprite sheet. Preserve24px margins at top/bottom and12px at left/right. One projectile only, a horizontal sprite with its tip pointing right.",
+    "seed": 2026111201,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/ab22d064-a59b-4bc4-8c33-2ec87e1832a8/download"
+  },
+  "isError": false
+}

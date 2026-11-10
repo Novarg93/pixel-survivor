@@ -1,0 +1,31 @@
+{
+  "tool": "animate_image_pixminimax",
+  "referenceFile": "reference/mage-south.png",
+  "parameters": {
+    "description": "One expressive upper-body Fireball cast, facing SOUTH toward the viewer. From the exact neutral reference, twist the shoulders in anticipation and draw the RIGHT hand inward to the chest. Strongly extend that forearm forward toward the viewer and slightly downward, opening the palm; clear foreshortened arm and readable fingers. Make one firm palm-push release with a tiny orange spark, then retract and relax. Subtle shoulder/torso participation; feet planted. Preserve the exact face, short hair, beard, head size, gold pauldrons, blue sleeves, green tabard and red belt. Stable anatomy, costume and pixel density. No new equipment, extra limbs, circles, smoke or large fireball. Fixed low top-down camera, fixed canvas, no zoom or root translation. One cast, not a loop; visibly different arm poses.",
+    "direction": "south",
+    "enhance_prompt": false,
+    "frame_count": 8,
+    "no_background": true,
+    "seed": 9110901,
+    "subject_description": "the exact reference bearded human Mage with short dark brown hair, ornate gold shoulder armor, deep blue sleeves and coat, green tabard, red belt, gold armored gauntlets; keep the reference design",
+    "initial_pose": "standing upright with the arms relaxed, facing the viewer south; matching the reference pixels",
+    "view": "low top-down"
+  },
+  "preflight": {
+    "frameCanvas": [
+      256,
+      256
+    ],
+    "expectedGeneratedFrames": 8,
+    "expectedReturnedFrames": 9,
+    "subscriptionGenerations": 1,
+    "estimatedCreditEquivalentUsd": 0.0231,
+    "maxPilotBudgetUsd": 2,
+    "balanceBefore": {
+      "creditsUsd": 0,
+      "generations": 1657.9
+    },
+    "pricingSource": "https://www.pixellab.ai/pixellab-api"
+  }
+}

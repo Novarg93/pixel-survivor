@@ -1,0 +1,43 @@
+(()=>{
+const doc=globalThis.document,$=id=>doc.getElementById(id),data=globalThis.RUNE_VFX_REVIEW,clips=data.clips,canvas=$('stage'),g=canvas.getContext('2d'),images={};
+let loaded=false,time=0,paused=globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches,mode='both',variant='all',background='grove',zoom='3',speed=1,source='code',clip='projectile-flight',index=0,previous=0,raf=0;
+const duration=c=>c.durationsMs.reduce((a,b)=>a+b,0)/1000;
+function at(c,age,reverse=false,fit){let t=Math.max(0,age)*1000;if(fit)t=t/fit*duration(c);if(c.loop)t%=duration(c)*1000;for(let n=0;n<c.playbackIndices.length;n++){const k=reverse?c.playbackIndices.length-1-n:n;if(t<c.durationsMs[k]-1e-7)return c.playbackIndices[k];t-=c.durationsMs[k];}return c.playbackIndices[reverse?0:c.playbackIndices.length-1];}
+function drawClip(id,n,x,y,worldSize){const c=clips[id],z=zoom==='native'?2:(worldSize??c.size)/128*Number(zoom);g.drawImage(images[id],n*128,0,128,128,Math.round(x-c.pivot[0]*z),Math.round(y-c.pivot[1]*z),128*z,128*z);if($('origins').checked){g.strokeStyle='#e7c78e';g.beginPath();g.moveTo(x-7,y);g.lineTo(x+7,y);g.moveTo(x,y-7);g.lineTo(x,y+7);g.stroke();}}
+function body(x,y,age,alpha=1){if(!$('body').checked)return;const frame=images.oldFrames['sorcerer-1-right-cast-'+Math.min(11,Math.floor(age/.15))].frame,z=zoom==='native'?2:.45*Number(zoom);g.save();g.globalAlpha=alpha;g.drawImage(images.old,frame.x,frame.y,128,128,x-64*z,y-64*z,128*z,128*z);g.restore();}
+function floor(p){g.fillStyle='#26323b';g.fillRect(p.x,p.y,p.w,p.h);if(images[background]){const z=zoom==='native'?2:Number(zoom);g.drawImage(images[background],0,0,2048,1024,p.x,p.y,2048*z,1024*z);}else if(background==='checker'){for(let y=p.y;y<p.y+p.h;y+=20)for(let x=p.x;x<p.x+p.w;x+=20){g.fillStyle=((Math.floor((x-p.x)/20)+Math.floor((y-p.y)/20))%2)?'#31414a':'#233039';g.fillRect(x,y,20,20);}}}
+function panel(v,effect,p,narrow){g.save();g.beginPath();g.rect(p.x,p.y,p.w,p.h);g.clip();floor(p);g.fillStyle='#0a151de8';g.fillRect(p.x,p.y,p.w,narrow?67:57);g.fillStyle=v.color;g.font=`${narrow?23:15}px system-ui`;g.fillText(v.label,p.x+16,p.y+(narrow?28:24));g.fillStyle='#b9cbd0';g.font=`${narrow?18:11}px system-ui`;g.fillText(effect==='projectile'?'Снаряд → попадание':'Руна Blink · появление / уход',p.x+16,p.y+(narrow?53:44));
+ const z=zoom==='native'?2:Number(zoom),y=p.y+p.h*.64;let active=[];
+ if(effect==='projectile'){
+  body(p.x+p.w*.23,y,time);const flight=clips[v.id+'-projectile-flight'],hit=clips[v.id+'-projectile-impact'];
+  if(time<.72){const n=at(flight,time);drawClip(flight.key,n,p.x+p.w*(.48+.35*time/.72),y);active.push({key:flight.key,index:n});}
+  else if(time<1.28){const n=at(hit,time-.72,false,.56);g.save();if(hit.opacityFade)g.globalAlpha=Math.max(0,1-(time-.72)/.56);drawClip(hit.key,n,p.x+p.w*.83,y);g.restore();active.push({key:hit.key,index:n});}
+ }else{
+  const c=clips[v.id+'-blink-idle'],fade=clips[v.id+'-blink-fade'],x=p.x+p.w*.53,offset=v.id==='current'?0:23*z;let n,id;
+  if(time<.36){id=fade.key;n=at(fade,time,v.id!=='current',.36);}else if(time<1.08){id=c.key;n=at(c,time-.36);}else if(time<1.44){id=fade.key;n=at(fade,time-1.08,false,.36);}
+  if(v.id==='current'&&time<1.44&&id!==c.key)drawClip(c.key,0,x,y);
+  if(id){drawClip(id,n,x,y+offset);active.push({key:id,index:n});}
+  const opacity=time<1.08?1:Math.max(0,1-(time-1.08)/.18);body(x,y,time,opacity);
+ }
+ g.restore();return active;
+}
+function controls(){$('play').textContent=paused?'Продолжить':'Пауза';}
+function statusText(){return (paused?'Пауза':'Просмотр')+(data.runtimeIntegration?' · PixelLab в игре · скорость снаряда +100%':' · отдельное сравнение для приёмки');}
+function usageText(){return data.jobs.length+' AI-заданий · '+data.chargedGenerations+' подписочных генераций.'+(data.runtimeIntegration?' Выбранные PixelLab-варианты подключены к игре.':' Варианты показаны для приёмки.');}
+function draw(){if(!loaded)return;const narrow=canvas.clientWidth<650,vs=variant==='all'?data.variants:data.variants.filter(v=>v.id===variant),effects=mode==='both'?['projectile','blink']:[mode],w=narrow?640:1120,h=mode==='frames'?480:narrow?320*vs.length*effects.length:effects.length===2?680:440;if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}g.imageSmoothingEnabled=false;let views=[];
+ if(mode==='frames'){floor({x:0,y:0,w,h});const c=clips[source+'-'+clip];drawClip(c.key,index,w/2,h*.55);views.push({key:c.key,index});}
+ else for(const [row,effect]of effects.entries())for(const [col,v]of vs.entries()){const p=narrow?{x:0,y:(row*vs.length+col)*320,w,h:320}:{x:col*w/vs.length,y:row*h/effects.length,w:w/vs.length,h:h/effects.length};views.push(...panel(v,effect,p,narrow));}
+ $('seek').value=String(time);$('time').textContent=time.toFixed(2)+' с';$('status').textContent=statusText();canvas.dataset.ready='true';globalThis.RUNE_VFX_STATE={loaded,time,paused,mode,variant,source,clip,index,background,zoom,speed,views,runtimeIntegration:data.runtimeIntegration};}
+function inspector(){const c=clips[source+'-'+clip];$('frames').replaceChildren();for(let i=0;i<c.frameCount;i++){const b=doc.createElement('button'),cv=doc.createElement('canvas'),s=doc.createElement('span');b.className='frame';b.dataset.index=String(i);b.setAttribute('aria-label','Кадр '+i);cv.width=cv.height=128;const ctx=cv.getContext('2d');ctx.fillStyle='#293843';ctx.fillRect(0,0,128,128);ctx.drawImage(images[c.key],i*128,0,128,128,0,0,128,128);s.textContent=source==='ai'&&i===0?'0 · входной':i+' · '+(source==='ai'?'AI':'PNG');b.append(cv,s);b.onclick=()=>{index=i;paused=true;mode='frames';$('mode').value=mode;controls();links();draw();};$('frames').append(b);}links();}
+function links(){const c=clips[source+'-'+clip];$('raw').href=c.frames[index].file;$('sheet').href=c.sheet;$('gif').hidden=!c.gif;if(c.gif)$('gif').href=c.gif;$('frame-label').textContent=data.variants.find(v=>v.id===source).label+' · '+clip+' · '+index+'/'+(c.frameCount-1);for(const b of $('frames').children)b.classList.toggle('selected',Number(b.dataset.index)===index);}
+for(const v of data.variants){const b=doc.createElement('button');b.className='boss-card';b.style.setProperty('--accent',v.color);const title=doc.createElement('strong'),small=doc.createElement('span');title.textContent=v.label;small.textContent=v.method;b.append(title,small);b.onclick=()=>{variant=v.id;$('variant').value=variant;mode='both';$('mode').value=mode;time=0;draw();};$('variant-cards').append(b);}
+$('mode').onchange=()=>{mode=$('mode').value;time=0;draw();};$('variant').onchange=()=>{variant=$('variant').value;draw();};$('background').onchange=()=>{background=$('background').value;draw();};$('zoom').onchange=()=>{zoom=$('zoom').value;draw();};$('speed').onchange=()=>{speed=Number($('speed').value);draw();};$('body').onchange=draw;$('origins').onchange=draw;$('play').onclick=()=>{if(time>=1.8)time=0;paused=!paused;controls();draw();};$('restart').onclick=()=>{time=0;draw();};$('seek').oninput=()=>{time=Number($('seek').value);paused=true;controls();draw();};
+for(const id of ['source','clip'])$(id).onchange=()=>{source=$('source').value;clip=$('clip').value;index=0;inspector();draw();};
+function step(d){const c=clips[source+'-'+clip];index=(index+d+c.frameCount)%c.frameCount;paused=true;mode='frames';$('mode').value=mode;controls();links();draw();}$('prev').onclick=()=>step(-1);$('next').onclick=()=>step(1);
+function tick(now){if(previous&&!paused){time+=Math.min(.05,(now-previous)/1000)*speed;if(time>=1.8){if($('repeat').checked)time%=1.8;else{time=1.8;paused=true;controls();}}}previous=now;draw();raf=globalThis.requestAnimationFrame(tick);}
+function stop(){globalThis.cancelAnimationFrame(raf);raf=0;previous=0;}doc.addEventListener('visibilitychange',()=>{if(doc.hidden)stop();else if(loaded&&!raf)raf=globalThis.requestAnimationFrame(tick);});globalThis.addEventListener('pagehide',stop);globalThis.addEventListener('pageshow',()=>{if(loaded&&!raf)raf=globalThis.requestAnimationFrame(tick);});globalThis.addEventListener('resize',draw);
+const paths={old:'assets/old-atlas.png',grove:'assets/grove.png',forest:'assets/forest.png',...Object.fromEntries(Object.values(clips).map(c=>[c.key,c.sheet]))};images.oldFrames=null;
+// Atlas JSON is embedded below by the build, so file:// needs no fetch.
+images.oldFrames=data.oldFrames;
+Promise.all(Object.entries(paths).map(([id,path])=>new Promise((resolve,reject)=>{const image=new globalThis.Image();image.onload=()=>{images[id]=image;resolve();};image.onerror=()=>reject(Error(path));image.src=path;}))).then(()=>{loaded=true;inspector();controls();$('usage').textContent=usageText();draw();if(!doc.hidden)raf=globalThis.requestAnimationFrame(tick);}).catch(e=>{$('status').textContent='Ошибка: '+e.message;});
+})();

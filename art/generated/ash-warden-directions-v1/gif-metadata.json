@@ -1,0 +1,50 @@
+[
+  {
+    "direction": "south",
+    "pose": "idle",
+    "durationMs": 1800,
+    "paletteColors": 62
+  },
+  {
+    "direction": "south",
+    "pose": "walk",
+    "durationMs": 510,
+    "paletteColors": 44
+  },
+  {
+    "direction": "north",
+    "pose": "idle",
+    "durationMs": 1800,
+    "paletteColors": 28
+  },
+  {
+    "direction": "north",
+    "pose": "walk",
+    "durationMs": 510,
+    "paletteColors": 24
+  },
+  {
+    "direction": "east",
+    "pose": "idle",
+    "durationMs": 1800,
+    "paletteColors": 30
+  },
+  {
+    "direction": "east",
+    "pose": "walk",
+    "durationMs": 510,
+    "paletteColors": 24
+  },
+  {
+    "direction": "west",
+    "pose": "idle",
+    "durationMs": 1800,
+    "paletteColors": 30
+  },
+  {
+    "direction": "west",
+    "pose": "walk",
+    "durationMs": 510,
+    "paletteColors": 24
+  }
+]

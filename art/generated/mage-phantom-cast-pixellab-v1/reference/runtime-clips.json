@@ -1,0 +1,372 @@
+{
+  "canvas": 112,
+  "pivot": {
+    "x": 56,
+    "y": 110.25
+  },
+  "displaySizeWorld": 40,
+  "runDurationsMs": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+  ],
+  "clips": {
+    "run-north": [
+      {
+        "file": "reference/runtime/run-north-00.png",
+        "key": "mage-v2-run-north-0",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-01.png",
+        "key": "mage-v2-run-north-1",
+        "waist": {
+          "x": 55,
+          "y": 56
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-02.png",
+        "key": "mage-v2-run-north-2",
+        "waist": {
+          "x": 55,
+          "y": 55
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-03.png",
+        "key": "mage-v2-run-north-3",
+        "waist": {
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-04.png",
+        "key": "mage-v2-run-north-4",
+        "waist": {
+          "x": 55,
+          "y": 60
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-05.png",
+        "key": "mage-v2-run-north-5",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-06.png",
+        "key": "mage-v2-run-north-6",
+        "waist": {
+          "x": 55,
+          "y": 54
+        }
+      },
+      {
+        "file": "reference/runtime/run-north-07.png",
+        "key": "mage-v2-run-north-7",
+        "waist": {
+          "x": 57,
+          "y": 55
+        }
+      }
+    ],
+    "idle-north": [
+      {
+        "file": "reference/runtime/idle-north-00.png",
+        "key": "mage-v2-idle-north-0",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      }
+    ],
+    "fireball-north": [
+      {
+        "file": "reference/runtime/fireball-north-00.png",
+        "key": "mage-v2-fireball-north-0",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-01.png",
+        "key": "mage-v2-fireball-north-1",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-02.png",
+        "key": "mage-v2-fireball-north-2",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-03.png",
+        "key": "mage-v2-fireball-north-3",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-04.png",
+        "key": "mage-v2-fireball-north-4",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-05.png",
+        "key": "mage-v2-fireball-north-5",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-06.png",
+        "key": "mage-v2-fireball-north-6",
+        "waist": {
+          "x": 58,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-07.png",
+        "key": "mage-v2-fireball-north-7",
+        "waist": {
+          "x": 58,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-08.png",
+        "key": "mage-v2-fireball-north-8",
+        "waist": {
+          "x": 58,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-09.png",
+        "key": "mage-v2-fireball-north-9",
+        "waist": {
+          "x": 58,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-10.png",
+        "key": "mage-v2-fireball-north-10",
+        "waist": {
+          "x": 58,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-11.png",
+        "key": "mage-v2-fireball-north-11",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-12.png",
+        "key": "mage-v2-fireball-north-12",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-13.png",
+        "key": "mage-v2-fireball-north-13",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-14.png",
+        "key": "mage-v2-fireball-north-14",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-15.png",
+        "key": "mage-v2-fireball-north-15",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-north-16.png",
+        "key": "mage-v2-fireball-north-16",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      }
+    ],
+    "fireball-south": [
+      {
+        "file": "reference/runtime/fireball-south-00.png",
+        "key": "mage-v2-fireball-south-0",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-01.png",
+        "key": "mage-v2-fireball-south-1",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-02.png",
+        "key": "mage-v2-fireball-south-2",
+        "waist": {
+          "x": 56,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-03.png",
+        "key": "mage-v2-fireball-south-3",
+        "waist": {
+          "x": 57,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-04.png",
+        "key": "mage-v2-fireball-south-4",
+        "waist": {
+          "x": 58,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-05.png",
+        "key": "mage-v2-fireball-south-5",
+        "waist": {
+          "x": 61,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-06.png",
+        "key": "mage-v2-fireball-south-6",
+        "waist": {
+          "x": 61,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-07.png",
+        "key": "mage-v2-fireball-south-7",
+        "waist": {
+          "x": 61,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-08.png",
+        "key": "mage-v2-fireball-south-8",
+        "waist": {
+          "x": 60,
+          "y": 62
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-09.png",
+        "key": "mage-v2-fireball-south-9",
+        "waist": {
+          "x": 59,
+          "y": 60
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-10.png",
+        "key": "mage-v2-fireball-south-10",
+        "waist": {
+          "x": 57,
+          "y": 58
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-11.png",
+        "key": "mage-v2-fireball-south-11",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-12.png",
+        "key": "mage-v2-fireball-south-12",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-13.png",
+        "key": "mage-v2-fireball-south-13",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-14.png",
+        "key": "mage-v2-fireball-south-14",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-15.png",
+        "key": "mage-v2-fireball-south-15",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      },
+      {
+        "file": "reference/runtime/fireball-south-16.png",
+        "key": "mage-v2-fireball-south-16",
+        "waist": {
+          "x": 56,
+          "y": 57
+        }
+      }
+    ]
+  }
+}

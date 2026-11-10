@@ -1,0 +1,9 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {Buffer} from 'node:buffer';
+import {resolve} from 'node:path';
+import process from 'node:process';
+process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');const{chromium}=await import('@playwright/test');
+const dir='art/generated/ash-warden-meteor-v1/',meta=JSON.parse(readFileSync(dir+'metadata.json'));
+const plans=[{file:'cast-a-vs-b-sheet.png',size:192,rows:Object.entries(meta.casts).map(([k,c])=>[0,2,5,8,11,c.frames.length-1].map(i=>({label:'Cast '+k.toUpperCase()+' #'+i,path:c.frames[i]})))},{file:'meteor-a-vs-b-vs-c-sheet.png',size:128,rows:Object.entries(meta.meteors).map(([k,m])=>Object.entries(m.components).map(([name,c])=>({label:k.toUpperCase()+' '+name,path:c.frames[name==='telegraph'?4:name==='fall'||name==='impact'?2:1]})))}];
+const browser=await chromium.launch({channel:'chromium',headless:true});try{const page=await browser.newPage();for(const plan of plans){const rows=plan.rows.map(row=>row.map(cell=>({...cell,src:'data:image/png;base64,'+readFileSync(dir+cell.path).toString('base64')})));const url=await page.evaluate(async({size,rows})=>{const c=globalThis.document.createElement('canvas');c.width=rows[0].length*size;c.height=rows.length*(size+28);const x=c.getContext('2d');x.imageSmoothingEnabled=false;for(let y=0;y<c.height;y+=8)for(let xx=0;xx<c.width;xx+=8){x.fillStyle=((y+xx)/8)%2?'#334139':'#28352f';x.fillRect(xx,y,8,8);}for(let r=0;r<rows.length;r++)for(let col=0;col<rows[r].length;col++){const cell=rows[r][col],im=new globalThis.Image();im.src=cell.src;await im.decode();x.drawImage(im,col*size,r*(size+28)+28);x.fillStyle='#ffe6bd';x.font='12px monospace';x.fillText(cell.label,col*size+5,r*(size+28)+20);}return c.toDataURL();},{size:plan.size,rows});writeFileSync(dir+'comparisons/'+plan.file,Buffer.from(url.split(',')[1],'base64'));}}finally{await browser.close();}
+globalThis.console.log('Cast and meteor comparison sheets written');

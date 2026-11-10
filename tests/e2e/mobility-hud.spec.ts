@@ -26,7 +26,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) for (co
   await expect(page.getByRole('list', { name: 'Способности' }).getByRole('listitem')).toHaveCount(5);
   await expect(page.getByRole('progressbar', { name: 'Здоровье', exact: true })).toHaveAttribute('aria-valuenow', hero === 'Warrior' ? '90' : '60');
   const before = await page.evaluate(() => { const w = window.__PIXEL__!.world; return { bar: window.__PIXEL__!.art().playerHealth, player: { ...w.player }, absorb: w.mobility.absorbValue(w.elapsed), textures: window.__PIXEL__!.art().textures.filter(t => !t.startsWith('chunk-')) }; });
-  expect(before.bar.objects).toBe(1); expect(before.bar.depth).toBe(11); expect(before.bar.x! + before.bar.width! / 2).toBeCloseTo(before.player.x); expect(before.bar.y! - before.player.y).toBe(-33);
+  expect(before.bar.objects).toBe(1); expect(before.bar.depth).toBe(11); expect(before.bar.x! + before.bar.width! / 2).toBeCloseTo(before.player.x); expect(before.bar.y! - before.player.y).toBe(hero==='Mage'?-44:-33);
   expect(before.bar.hp).toBeCloseTo(.6); expect(before.bar.absorb).toBe(hero === 'Warrior' ? .25 : 0);
   if (hero === 'Warrior') await expect(page.getByRole('progressbar', { name: 'Absorb', exact: true })).toHaveAttribute('aria-valuenow', '37.5');
   await page.evaluate(() => window.__PIXEL__!.world.pause()); await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(80);

@@ -1,0 +1,4513 @@
+{
+  "name": "Eclipse necrotic flame review",
+  "runtimeIntegration": true,
+  "variants": [
+    {
+      "id": "current",
+      "label": "До rework",
+      "method": "Archived game PNGs",
+      "color": "#b4c5cd"
+    },
+    {
+      "id": "code",
+      "label": "Мой вариант",
+      "method": "Рисунок кодом · сетка2px · 8цветов",
+      "color": "#d7b580"
+    },
+    {
+      "id": "ai",
+      "label": "PixelLab AI",
+      "method": "Pro Flash + PixMiniMax",
+      "color": "#a5c9ba"
+    }
+  ],
+  "palette": [
+    "#202f3b",
+    "#24494b",
+    "#31675f",
+    "#438e7c",
+    "#64b39a",
+    "#90cdb0",
+    "#c0dfc3",
+    "#506b70"
+  ],
+  "jobs": [
+    {
+      "id": "flame-model",
+      "jobId": "d01bec79-7cc4-455b-98b7-206dc9c45c1d",
+      "tool": "create_image_pro_flash",
+      "chargedGenerations": 6
+    },
+    {
+      "id": "flame-spawn",
+      "jobId": "703e0907-9b92-4117-8082-863b191b6a6f",
+      "tool": "animate_image_pixminimax",
+      "chargedGenerations": 1
+    },
+    {
+      "id": "flame-idle",
+      "jobId": "48aecefc-876a-4574-b73c-65c8fab55083",
+      "tool": "animate_image_pixminimax",
+      "chargedGenerations": 1
+    },
+    {
+      "id": "flame-vanish",
+      "jobId": "186b6382-2a8c-49b3-adb9-1d9abe44f5b4",
+      "tool": "animate_image_pixminimax",
+      "chargedGenerations": 1
+    }
+  ],
+  "chargedGenerations": 9,
+  "clips": {
+    "code-spawn": {
+      "key": "code-spawn",
+      "id": "spawn",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 8,
+      "frames": [
+        {
+          "file": "code/spawn/00.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        },
+        {
+          "file": "code/spawn/01.png",
+          "sha256": "431c75f9c9491489329addf74bf01f6004c2a3dc5e2f698a51745699bec02605",
+          "pixelSHA256": "0ed86c8effb92104a79061ffbbc871577c231a606b9bf3afdda7dbf640423713",
+          "visible": 408,
+          "edge": 0,
+          "bounds": [
+            24,
+            98,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/02.png",
+          "sha256": "94d5089c11240f5a6421021446a90c6f4321ddc177c55ec33c03bc2edde3d2a5",
+          "pixelSHA256": "17e4159fa1504f2a18df5a2dec6b9f56e65593179524bfb09bd5b0eb2a13def9",
+          "visible": 768,
+          "edge": 0,
+          "bounds": [
+            24,
+            88,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/03.png",
+          "sha256": "d030fd67b63a7259370e52ea1eafd66810346a9b7566a6bbd9c342bd8bf54eb4",
+          "pixelSHA256": "2632dfe9db6801b2d043b63f52ef90e3f14c28ce6f08f2ce91c9d332416b756a",
+          "visible": 1328,
+          "edge": 0,
+          "bounds": [
+            24,
+            72,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/04.png",
+          "sha256": "2cfed885640b2b021632da2afe1b1dbead1c6bc6154977438cda5bea78688aca",
+          "pixelSHA256": "f5491c480bfa646727ee171a5257c4ef52d2290ad281066828eaaba6cf086765",
+          "visible": 2020,
+          "edge": 0,
+          "bounds": [
+            24,
+            52,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/05.png",
+          "sha256": "50508ddbab29d7ca9251b8a3969b921732cc9373b587f40b5e7f718a30a7833a",
+          "pixelSHA256": "c003cd68785faf826ee0bb0841b2b3a29864ebd66f6be213df9e36d380aace2c",
+          "visible": 2708,
+          "edge": 0,
+          "bounds": [
+            24,
+            32,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/06.png",
+          "sha256": "8935a5bcb7ca50f6e67b71b2a3bb9e3800bd01b070237d63563a05a24aded1a8",
+          "pixelSHA256": "c23b419a3c144dd004622acd326bfbe2e04320fbf9a8eafd9adb0b256b986329",
+          "visible": 3000,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/spawn/07.png",
+          "sha256": "7586c5aeb3094b459a030c0370346bead799e803d8a303c935e62cff8525cdbd",
+          "pixelSHA256": "e1415c7e1d677125083d04bc7241bce0abff173163bf7b3248723d3870f5a9c3",
+          "visible": 2988,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        }
+      ],
+      "sheet": "prepared/code-spawn.png",
+      "contact": "prepared/code-spawn-contact.png",
+      "gif": "prepared/code-spawn.gif",
+      "aseprite": "prepared/code-spawn.aseprite",
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": false,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "code-idle": {
+      "key": "code-idle",
+      "id": "idle",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 8,
+      "frames": [
+        {
+          "file": "code/idle/00.png",
+          "sha256": "5b48a35a24105a72b249c426f21a2a6d13e5d980c24a287285f85b3f53b0f3d5",
+          "pixelSHA256": "f787bc7aabce1f0b7cb5a9860a3206c1e9fb363143bafb1a9235409f68c1531c",
+          "visible": 2992,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/01.png",
+          "sha256": "a81444f805ea64508f3d3981f69542fff7c2a1be0f0754b25aef5ad42aef3781",
+          "pixelSHA256": "d9ef99b480a99558f433d7dcae8f7ab39a7415fa4de98013e1a4312e2d157bee",
+          "visible": 2972,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/02.png",
+          "sha256": "3b1697b2bceb0852d4c8143f0b75a9875c3335ddd027c93858e8c356a6168dcc",
+          "pixelSHA256": "5c019616f8d65db309a34770afd65a297c48b0c4ca1354301d50e8d072a0ea19",
+          "visible": 2972,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/03.png",
+          "sha256": "06271163b15206077abbc11592589347c4a0783daa0698903fbacf5f367580e0",
+          "pixelSHA256": "d8583a4dad71333e0e80e2d9de6be699c709b03184491d6661b5d92ecdea48bd",
+          "visible": 2980,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/04.png",
+          "sha256": "911cda87abf91106dc3e6e2e264323f5d67710ed86869921afe175be5ab65189",
+          "pixelSHA256": "f11dc9f6a6b046a52e843bda85f5399a4c7c4c0d0b6dbe2e56e29d28f52f3fac",
+          "visible": 3000,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/05.png",
+          "sha256": "254613151626bbc721c4e8f615cde2d68a673c574364264539c793d91c09f2f8",
+          "pixelSHA256": "856b20ad65a279bfc021feb5776fc9becdc8d0f680e9efb192798a9711233cbd",
+          "visible": 2996,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/06.png",
+          "sha256": "8935a5bcb7ca50f6e67b71b2a3bb9e3800bd01b070237d63563a05a24aded1a8",
+          "pixelSHA256": "c23b419a3c144dd004622acd326bfbe2e04320fbf9a8eafd9adb0b256b986329",
+          "visible": 3000,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/idle/07.png",
+          "sha256": "7586c5aeb3094b459a030c0370346bead799e803d8a303c935e62cff8525cdbd",
+          "pixelSHA256": "e1415c7e1d677125083d04bc7241bce0abff173163bf7b3248723d3870f5a9c3",
+          "visible": 2988,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        }
+      ],
+      "sheet": "prepared/code-idle.png",
+      "contact": "prepared/code-idle-contact.png",
+      "gif": "prepared/code-idle.gif",
+      "aseprite": "prepared/code-idle.aseprite",
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "code-vanish": {
+      "key": "code-vanish",
+      "id": "vanish",
+      "variant": "code",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "code/vanish/00.png",
+          "sha256": "5b48a35a24105a72b249c426f21a2a6d13e5d980c24a287285f85b3f53b0f3d5",
+          "pixelSHA256": "f787bc7aabce1f0b7cb5a9860a3206c1e9fb363143bafb1a9235409f68c1531c",
+          "visible": 2992,
+          "edge": 0,
+          "bounds": [
+            24,
+            24,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/01.png",
+          "sha256": "1fe497f225656e704b60ca53c73ea4105848006e02820c621d0f890598f6288a",
+          "pixelSHA256": "c161a4cc6907108f1385d8e17617f1fdd44f9f273f415f8b0ac0ec7237cc6d8c",
+          "visible": 2824,
+          "edge": 0,
+          "bounds": [
+            24,
+            28,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/02.png",
+          "sha256": "f97c5fa1d85003b92af13cb5b54ec6426075641a4085cf9c2b34b2c178035843",
+          "pixelSHA256": "0f6535a050c8971d5e139e8b7f91e6573d74823b63f8cce436acaf0c8364267c",
+          "visible": 2420,
+          "edge": 0,
+          "bounds": [
+            24,
+            40,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/03.png",
+          "sha256": "80c19d2ebc0007df3f81eff31875b33ff46286eb49c4f128bd798e30f1abec45",
+          "pixelSHA256": "d74011d090870851d69b5da5c8946547d41b47409a378a008f031d165cac9c88",
+          "visible": 1872,
+          "edge": 0,
+          "bounds": [
+            24,
+            56,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/04.png",
+          "sha256": "ffb7ab08bf328b61d0edfd21a38927257627abfb5eb752367ff3c1f2ca65d12c",
+          "pixelSHA256": "b1024810cafd30363cf67ad360f6a53270f17e09b14bebe036e2cb142088b4b8",
+          "visible": 1332,
+          "edge": 0,
+          "bounds": [
+            24,
+            72,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/05.png",
+          "sha256": "da02799d2d2673ea073a9b84b323abb0c3249e4c0baa092a50c364648de81ba6",
+          "pixelSHA256": "6a353734ac3d26f8b864791cae5e68fbea2467d4c241395453917e44beb3a585",
+          "visible": 824,
+          "edge": 0,
+          "bounds": [
+            24,
+            86,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/06.png",
+          "sha256": "23e9fc422e91e195230b3e53973bfc08ce1a1cc05a9e8c21692497e6246a077d",
+          "pixelSHA256": "7c6a9fe30a067239d702ca8ccac05aae976d1fa2fb908ab6eab9efdf38b67d0d",
+          "visible": 540,
+          "edge": 0,
+          "bounds": [
+            24,
+            94,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/07.png",
+          "sha256": "941cc27db746464a3477b702032a50f244505265affc7bfb131b29edc5605114",
+          "pixelSHA256": "8289e144a8e874b792ce65ffadd5f6cc048bbab87b3964408feba223a56028dd",
+          "visible": 316,
+          "edge": 0,
+          "bounds": [
+            24,
+            100,
+            103,
+            105
+          ]
+        },
+        {
+          "file": "code/vanish/08.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        }
+      ],
+      "sheet": "prepared/code-vanish.png",
+      "contact": "prepared/code-vanish-contact.png",
+      "gif": "prepared/code-vanish.gif",
+      "aseprite": "prepared/code-vanish.aseprite",
+      "durationsMs": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": false,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "method": "Original local code pixel art",
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "ai-spawn": {
+      "key": "ai-spawn",
+      "id": "spawn",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/flame-spawn/00.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        },
+        {
+          "file": "raw/flame-spawn/01.png",
+          "sha256": "ee91a58bb861abb9856ba0e68435543f426e31dd8c8243382987615e14f4fd13",
+          "pixelSHA256": "6037d93bb2bf80e2a9cb22b1c5a92fea43fe2a6e6cb5e635b65b9d9260fcde7f",
+          "visible": 39,
+          "edge": 0,
+          "bounds": [
+            56,
+            111,
+            65,
+            116
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/02.png",
+          "sha256": "3824ffe0a2b0bfebc19553ac26786a4780aa00b7f45bfbf4a1c9c299d290ab93",
+          "pixelSHA256": "64624e80bdeff3e81c1aef2869d7a0edc417f5276eed0f0f54fae2d118b35a14",
+          "visible": 228,
+          "edge": 0,
+          "bounds": [
+            48,
+            101,
+            76,
+            117
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/03.png",
+          "sha256": "3909046191e1d1a1e195d6259779add647a76ac0af3a3ee2cd4e8107a688f72c",
+          "pixelSHA256": "5bf396907b01995033d8fe7b3d00fa470b0ffc543941a6ac8847b1fa7a64d986",
+          "visible": 761,
+          "edge": 0,
+          "bounds": [
+            32,
+            86,
+            92,
+            119
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/04.png",
+          "sha256": "d446c6c1fb7288dac2104d79ddd97e4f5fa9da3248b3704c2738489e59b4630b",
+          "pixelSHA256": "06685ada5df00a7b25f78e0352d23cbb88afe49639c537e512e3a69c5f979c9a",
+          "visible": 1760,
+          "edge": 0,
+          "bounds": [
+            18,
+            56,
+            107,
+            122
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/05.png",
+          "sha256": "d78c3f6acc19fd6ded03d0268c4d401ae4d322d8f7aa0b61960f10f6158caff8",
+          "pixelSHA256": "bf147cc6633772ba66b1b65e321fd5628c3f65df3fd8910857117fede9a57a14",
+          "visible": 2174,
+          "edge": 0,
+          "bounds": [
+            17,
+            30,
+            108,
+            123
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/06.png",
+          "sha256": "1cca8c2fe534add15dec0cfa9a48ff331cc161a4126618460b80dcc5d53c5d20",
+          "pixelSHA256": "beeb5baab82bb9c2dc76a4fc153780760f2a21c17766b34c79c5e38b33c96a7d",
+          "visible": 2617,
+          "edge": 0,
+          "bounds": [
+            26,
+            14,
+            94,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/07.png",
+          "sha256": "74c7aad6cefe00c5a7c8cce4098ef44a2688292bbc37e2876d32a632922c5780",
+          "pixelSHA256": "6519837386369c01b313182a61228d1dc279af610ba105560bc263e0a4ac01c5",
+          "visible": 2745,
+          "edge": 0,
+          "bounds": [
+            23,
+            13,
+            97,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-spawn/08.png",
+          "sha256": "a0595e3667ca8a4c3e4eeed4798db579e82c3948695632cf4e8ff2b304bf9620",
+          "pixelSHA256": "1629ed52163e411f0116c13a1036873ad4387dd352c32c78997e771207263fef",
+          "visible": 2824,
+          "edge": 0,
+          "bounds": [
+            20,
+            14,
+            100,
+            120
+          ]
+        }
+      ],
+      "sheet": "prepared/ai-spawn.png",
+      "contact": "prepared/ai-spawn-contact.png",
+      "gif": "prepared/ai-spawn.gif",
+      "aseprite": "prepared/ai-spawn.aseprite",
+      "method": "PixelLab AI",
+      "sourceJobId": "703e0907-9b92-4117-8082-863b191b6a6f",
+      "loop": false,
+      "pivot": [
+        60,
+        116
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ]
+    },
+    "ai-idle": {
+      "key": "ai-idle",
+      "id": "idle",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/flame-idle/00.png",
+          "sha256": "7253a9a99a5c8b8850fee85f1d58247d1f36c7e204216846bc6a13cb7928f092",
+          "pixelSHA256": "c3956c0cf3497af3517f79feb67e101c960639f79d5dc0712f96b450cbc55067",
+          "visible": 2825,
+          "edge": 0,
+          "bounds": [
+            20,
+            14,
+            100,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/01.png",
+          "sha256": "169d775480014d12869bd3667513c1473248f2de58f893c33e87930136122f97",
+          "pixelSHA256": "179208e9c86494a6b4ceccb9832003b0c49772a69bce4eda7730a774fd1c056e",
+          "visible": 2591,
+          "edge": 0,
+          "bounds": [
+            18,
+            9,
+            102,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/02.png",
+          "sha256": "09845d8ae33ab9aeb2fabf4d6ca4a2ca6c42c073f8552d5a70611963ce745d95",
+          "pixelSHA256": "1e27b2a273db2cc1387bc356dc6427697c05244d0151d1a2a51cbb9e1ad91742",
+          "visible": 2529,
+          "edge": 0,
+          "bounds": [
+            18,
+            7,
+            103,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/03.png",
+          "sha256": "f04fa6724edd6dd0be11a9338e9ca45cef979ca6e459fec623cc0959544d3db1",
+          "pixelSHA256": "21e5c8680f62751073df63edac77cdffac597150e39aaac2a3199dc731f1dcbe",
+          "visible": 2514,
+          "edge": 0,
+          "bounds": [
+            22,
+            19,
+            104,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/04.png",
+          "sha256": "e0242397fa51d27b0e47e03b7f77db934d850a80cbfdbd204110bb45e0c2155d",
+          "pixelSHA256": "41b0b45a6562a95ccd293ae5f0f1138d878fb1e6501f953f3748ff43fdf5a2de",
+          "visible": 2607,
+          "edge": 0,
+          "bounds": [
+            30,
+            19,
+            90,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/05.png",
+          "sha256": "3651b46e85b12c73b480d8e08fa1fa8b023722a8f3ad6a4b94bbc29e50516b60",
+          "pixelSHA256": "a8e9090b34b542f1a2484447e9d2da9dfa2c6eb50dfc2e4d5f6cf77c0fbf02fa",
+          "visible": 2656,
+          "edge": 0,
+          "bounds": [
+            29,
+            20,
+            92,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/06.png",
+          "sha256": "a6bd45a36e85f985fbf451cd51321d129a5ab97535aac00721243a0887f674b0",
+          "pixelSHA256": "568a7dad19f180384a6a06a1e85db1bea056e9fd1404c304eae2ddb7b5fa706c",
+          "visible": 2686,
+          "edge": 0,
+          "bounds": [
+            26,
+            19,
+            94,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/07.png",
+          "sha256": "98c1c1ff14f904f7d0358e4914e9921d429e78916ab9c14520d6fc811a4a7de9",
+          "pixelSHA256": "08efda3c593be5590d9a3e68dc729f6b8b7fc6c29265e536f55d184e07534b58",
+          "visible": 2732,
+          "edge": 0,
+          "bounds": [
+            23,
+            17,
+            97,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-idle/08.png",
+          "sha256": "ad0b519f4c5af051104bc6142b013ac663e719d116ecb382fe08ae3f628a5553",
+          "pixelSHA256": "d0c5d4758752de09652bb4e73b462214e545b566fca63238d9d97de6ee310a3f",
+          "visible": 2822,
+          "edge": 0,
+          "bounds": [
+            20,
+            14,
+            100,
+            120
+          ]
+        }
+      ],
+      "sheet": "prepared/ai-idle.png",
+      "contact": "prepared/ai-idle-contact.png",
+      "gif": "prepared/ai-idle.gif",
+      "aseprite": "prepared/ai-idle.aseprite",
+      "method": "PixelLab AI",
+      "sourceJobId": "48aecefc-876a-4574-b73c-65c8fab55083",
+      "loop": true,
+      "pivot": [
+        60,
+        116
+      ],
+      "size": 62,
+      "playbackIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "ai-vanish": {
+      "key": "ai-vanish",
+      "id": "vanish",
+      "variant": "ai",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "raw/flame-vanish/00.png",
+          "sha256": "7253a9a99a5c8b8850fee85f1d58247d1f36c7e204216846bc6a13cb7928f092",
+          "pixelSHA256": "c3956c0cf3497af3517f79feb67e101c960639f79d5dc0712f96b450cbc55067",
+          "visible": 2825,
+          "edge": 0,
+          "bounds": [
+            20,
+            14,
+            100,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/01.png",
+          "sha256": "44d02173e74bfd4ddb64264d38ac7aaf09cf5fb1fe8c65197ac8f2661452e4d6",
+          "pixelSHA256": "319584f4f54ad2172ff8936658119a57d2ad676acde3d51b1bd1cfd68ab0ef79",
+          "visible": 2201,
+          "edge": 0,
+          "bounds": [
+            18,
+            8,
+            101,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/02.png",
+          "sha256": "9a608e44780f08edb1ac6c219d789163bd1197245b654a4aa5a88589f72a11c3",
+          "pixelSHA256": "c346a2e2348939b55003ffe33d231f3ccaf7d1a9651a91f9ee344bb2d4cde439",
+          "visible": 1787,
+          "edge": 0,
+          "bounds": [
+            17,
+            23,
+            102,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/03.png",
+          "sha256": "822fb87f7047f6bf89f19ea37f8b26411ed156dd64e46d2eb5051d0979d57c5f",
+          "pixelSHA256": "0d7b8cfc1d9415f64a9050088bd0aec68f97f93306dcfc387cf88764722ac79f",
+          "visible": 1392,
+          "edge": 0,
+          "bounds": [
+            25,
+            31,
+            102,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/04.png",
+          "sha256": "a61e027e52b946c66f6650de7afce1061141707b5cf89c682527c071e916bb3b",
+          "pixelSHA256": "c81417df63160d3d5095b63ad0942d5cc73d9312976e491f2dae1b4e27c0d768",
+          "visible": 867,
+          "edge": 0,
+          "bounds": [
+            27,
+            51,
+            92,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/05.png",
+          "sha256": "82a6f57411931b1e4815bd8325eaf85fd30bf0da088f6d7ad0bffa6f608b135b",
+          "pixelSHA256": "f9598ee88e990eabc12fde231f8995da297ce71b0e424303beea737da8e6225f",
+          "visible": 623,
+          "edge": 0,
+          "bounds": [
+            29,
+            63,
+            91,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/06.png",
+          "sha256": "2c9fd95fb15dd33ff4e1afc6fe82c9977824702951c57d40a917d35c9fc29487",
+          "pixelSHA256": "e2db97a79c743c620c72146a2d8dab6aa505fdcc189c923db392322282365529",
+          "visible": 429,
+          "edge": 0,
+          "bounds": [
+            24,
+            79,
+            99,
+            120
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/07.png",
+          "sha256": "3f180409135a6a41649f8ca843203eb8ecb24e72cf8ed8974efdbefb44c664b3",
+          "pixelSHA256": "389f7269a9b6c0e16c840391c47f69fcb81cfa27caa8bae9cc4d68e50d8f4667",
+          "visible": 157,
+          "edge": 0,
+          "bounds": [
+            20,
+            103,
+            105,
+            121
+          ]
+        },
+        {
+          "file": "raw/flame-vanish/08.png",
+          "sha256": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        }
+      ],
+      "sheet": "prepared/ai-vanish.png",
+      "contact": "prepared/ai-vanish-contact.png",
+      "gif": "prepared/ai-vanish.gif",
+      "aseprite": "prepared/ai-vanish.aseprite",
+      "method": "PixelLab AI",
+      "sourceJobId": "186b6382-2a8c-49b3-adb9-1d9abe44f5b4",
+      "loop": false,
+      "pivot": [
+        60,
+        116
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ]
+    },
+    "current-spawn": {
+      "key": "current-spawn",
+      "id": "spawn",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 9,
+      "frames": [
+        {
+          "file": "current/spawn/00.png",
+          "sha256": "7b3ff5d095af35bb0b80e9029350fb23fc06cf3d35216ec51821972c4bf8a444",
+          "pixelSHA256": "6b7c1f7c603975a6154447cee1382a16edb493db2a7c63af4b210cd870959267",
+          "visible": 16,
+          "edge": 0,
+          "bounds": [
+            50,
+            88,
+            52,
+            94
+          ]
+        },
+        {
+          "file": "current/spawn/01.png",
+          "sha256": "8d594e6331a0f617b1d7735639f0a8eecdf1683f4dc0c16e4d4f963549422897",
+          "pixelSHA256": "4fa6f6db15092e3992d0e70af63761826bbdf5dbc50e207211fbeed13b805f11",
+          "visible": 258,
+          "edge": 0,
+          "bounds": [
+            45,
+            61,
+            61,
+            90
+          ]
+        },
+        {
+          "file": "current/spawn/02.png",
+          "sha256": "beb2347cf567fcdc8d4b9b91b7274fafad6766f951398e54e3f65de3ce9e6838",
+          "pixelSHA256": "b294d44d2a1f025c87da08c8eea3e5fff5ad0073bcfdfdd5c4d537e955de6621",
+          "visible": 689,
+          "edge": 0,
+          "bounds": [
+            37,
+            52,
+            79,
+            113
+          ]
+        },
+        {
+          "file": "current/spawn/03.png",
+          "sha256": "db1240722fa8459e66a605e57c268e7521fc561eb8de9de3e686bcab0f6113d8",
+          "pixelSHA256": "93a231a4878be40a34b309dcf0045c170a4a081264b7fcc94710d6b8ed7f3fc7",
+          "visible": 541,
+          "edge": 0,
+          "bounds": [
+            37,
+            42,
+            84,
+            116
+          ]
+        },
+        {
+          "file": "current/spawn/04.png",
+          "sha256": "7a40be198bc5a3ee6e84d2466399935fbd86a73824123c9476560965f4966a05",
+          "pixelSHA256": "6f1e4a9e1975eaa121094fe85ab9bab3bebf2d4cca97dd74a89074c011c5e437",
+          "visible": 337,
+          "edge": 0,
+          "bounds": [
+            38,
+            40,
+            83,
+            119
+          ]
+        },
+        {
+          "file": "current/spawn/05.png",
+          "sha256": "cfd737693168372e13baebe5cc2732690aefdd8963c3f782ecb90a17983fd5b5",
+          "pixelSHA256": "eb38ba07c269b4454203a3383835d18065c9d2d5a94301a4af879c254c43e062",
+          "visible": 3303,
+          "edge": 0,
+          "bounds": [
+            27,
+            31,
+            97,
+            118
+          ]
+        },
+        {
+          "file": "current/spawn/06.png",
+          "sha256": "74f1165b1f361ce836139ae7990f653ad59077f1505a91afc25ec7dba95d0dff",
+          "pixelSHA256": "9257456567acfbd36ae00357b3347c36ac51e1b1f2b690dc4cdecd1f4ac38328",
+          "visible": 4020,
+          "edge": 0,
+          "bounds": [
+            23,
+            16,
+            99,
+            99
+          ]
+        },
+        {
+          "file": "current/spawn/07.png",
+          "sha256": "6c38409133ef021503c0b226e71d42dacb83fbd5079a9338789584a48f4600e9",
+          "pixelSHA256": "28692977f299d33156b5546c4300d68d4b8fc44376785f787afa5e8597bff3f8",
+          "visible": 4522,
+          "edge": 0,
+          "bounds": [
+            24,
+            8,
+            103,
+            101
+          ]
+        },
+        {
+          "file": "current/spawn/08.png",
+          "sha256": "db0cd665ed08ef07fba40564f2a8f94188447a286390438c0df1e36ade7e7e03",
+          "pixelSHA256": "3202321a73b00a69980fda57e6c41b4177dd33bdd7e204b6ff8c4437fc2f3a4a",
+          "visible": 4650,
+          "edge": 0,
+          "bounds": [
+            23,
+            6,
+            105,
+            103
+          ]
+        }
+      ],
+      "sheet": "prepared/current-spawn.png",
+      "contact": "prepared/current-spawn-contact.png",
+      "gif": "prepared/current-spawn.gif",
+      "aseprite": "prepared/current-spawn.aseprite",
+      "method": "Current Astral flame atlas",
+      "loop": false,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        67,
+        66,
+        67,
+        67,
+        66,
+        67,
+        67,
+        66,
+        67
+      ]
+    },
+    "current-idle": {
+      "key": "current-idle",
+      "id": "idle",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 16,
+      "frames": [
+        {
+          "file": "current/idle/00.png",
+          "sha256": "78668418094a18a17673e290e4ff7188dc6cb816618759f6f883826bbe5a067b",
+          "pixelSHA256": "1ac8cae43b93b43a01db774732fe3eed944a1f3a8f42398800977316aa2cae78",
+          "visible": 4672,
+          "edge": 0,
+          "bounds": [
+            23,
+            6,
+            105,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/01.png",
+          "sha256": "49fa1d8ab2451d5eeb86036373514da98422634d6e9424b47fc560900ad74ed8",
+          "pixelSHA256": "58619fa99eee9c175498be314ece5e9cc54d0f4710adf6275aaef3a22927b66b",
+          "visible": 4646,
+          "edge": 0,
+          "bounds": [
+            22,
+            14,
+            105,
+            102
+          ]
+        },
+        {
+          "file": "current/idle/02.png",
+          "sha256": "9f6efb1851472fc9019db9b515efabf1d2e26c5cef40b872799ad45c364cb47d",
+          "pixelSHA256": "d0cfa0172fcc41ba68a863b6b748f9587e12d672d62854683a9701888ea67da9",
+          "visible": 4569,
+          "edge": 0,
+          "bounds": [
+            24,
+            9,
+            104,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/03.png",
+          "sha256": "7920a26981cb3ec877d46a4b4f6fd3a8fef8177f4f4aeb2873e7dca690c67d63",
+          "pixelSHA256": "9c44275ef588c7bdb510186d890a9960dc55d2c2489b660c3bea125b9a5d2fe7",
+          "visible": 4493,
+          "edge": 0,
+          "bounds": [
+            24,
+            5,
+            103,
+            102
+          ]
+        },
+        {
+          "file": "current/idle/04.png",
+          "sha256": "470b33b423775e2451a057e52fe3ff0e27a70420c00328a1abcbd5c8b4288e22",
+          "pixelSHA256": "2f9e3a2bf044d1ecac5f840fd4097d49d9da90932046e09666a0d71bb3b633d2",
+          "visible": 4471,
+          "edge": 0,
+          "bounds": [
+            24,
+            4,
+            102,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/05.png",
+          "sha256": "9ed1a1209b69e4e34fb2a0d68d0b46929f7c3a1bf857cbea8272291ecb83382d",
+          "pixelSHA256": "aa0ffd4735b5bcd5d1c2f97b6f0f725ab7db7a40cf2cf1b460f4381c61f8120b",
+          "visible": 4492,
+          "edge": 0,
+          "bounds": [
+            24,
+            18,
+            103,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/06.png",
+          "sha256": "10702a81df242cfffe4e92afb62bf51982e6c7d78a6d1e4541dea00da01ce392",
+          "pixelSHA256": "38ff7f26a47214bdcdf34a4e1b8c0b14aee8f270aaf6790e7477c208d2c352a7",
+          "visible": 4546,
+          "edge": 0,
+          "bounds": [
+            21,
+            11,
+            103,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/07.png",
+          "sha256": "83082d4d00e92df977338d2e3b92f4ec60b0c0d6719e4afa25666ce03b3d6b67",
+          "pixelSHA256": "91f060f161b7cb159436b793bd5741ad911de42f470e6eeea05014c550efa671",
+          "visible": 4560,
+          "edge": 0,
+          "bounds": [
+            21,
+            10,
+            104,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/08.png",
+          "sha256": "b8491974f6c36454940c813ed90f8bbb8c6bb9520bc77ba146e118b4b49bda37",
+          "pixelSHA256": "42ae6e30c05bc25c44b2a6d47f07d2ec946b3d48837586acef7e394a04b41d32",
+          "visible": 4608,
+          "edge": 0,
+          "bounds": [
+            23,
+            18,
+            105,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/09.png",
+          "sha256": "2e2f8dbb073c66831ac171343b7e2d00983ba95b0e227cbaecef4ede720d03bb",
+          "pixelSHA256": "2ef026dace93754396cf4b35270e1ad9848bca1ccddb103716abb97bda0a62db",
+          "visible": 4564,
+          "edge": 0,
+          "bounds": [
+            24,
+            13,
+            101,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/10.png",
+          "sha256": "372e2b8a38bf85209b853866ea7c6b51d1ac827a42fe15a94422b402c91a55cf",
+          "pixelSHA256": "7995365a511f52fe67d35101783f7cd80ae0e439dcdf44e8dd5d14efef20fff2",
+          "visible": 4691,
+          "edge": 0,
+          "bounds": [
+            21,
+            7,
+            104,
+            102
+          ]
+        },
+        {
+          "file": "current/idle/11.png",
+          "sha256": "fc1258e8058760bca459490ea31740577f5bc0b53af7f2c7c10d18e1ff61d620",
+          "pixelSHA256": "ffb840c87e72b3a6020927b21bf5ecde81a5ad75601c6f3d3188616e05bf6957",
+          "visible": 4610,
+          "edge": 0,
+          "bounds": [
+            19,
+            2,
+            104,
+            102
+          ]
+        },
+        {
+          "file": "current/idle/12.png",
+          "sha256": "5bef0fbb42f636288eee8ef782bcf189de2ca2369dda1a5ce98f826d6b25d0fa",
+          "pixelSHA256": "195717b6b8d5e74f29f46020be5901ac350181161471a525545d2b02a4fcdab9",
+          "visible": 4493,
+          "edge": 0,
+          "bounds": [
+            24,
+            5,
+            102,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/13.png",
+          "sha256": "a15ae60d2bbadced25e9e26f641d7d7478859b3dc2f87cba709d66f778e51f02",
+          "pixelSHA256": "b89d1760dd51d3b8a183de0d11bfa6f2a66f85c49b2d89fe735312164dc32bc6",
+          "visible": 4503,
+          "edge": 0,
+          "bounds": [
+            24,
+            17,
+            102,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/14.png",
+          "sha256": "0f363bdb180111aa6326ebeeed135508f6ce8fefcd867a17446c7d17fa860e37",
+          "pixelSHA256": "2c66b1109b843a12d48a415139b1b1fdb57717235d972053bf522550ed2838dc",
+          "visible": 4694,
+          "edge": 0,
+          "bounds": [
+            24,
+            13,
+            104,
+            103
+          ]
+        },
+        {
+          "file": "current/idle/15.png",
+          "sha256": "a2b0473d22f02adb910427e2dc589536d8b476ce83b59b97ec15e1e2c1e61c5c",
+          "pixelSHA256": "f6dc34757d5f7947477776d86459a1adeb6bdfe0ebe271ad4b4b9e8b7a50e0c0",
+          "visible": 4689,
+          "edge": 0,
+          "bounds": [
+            21,
+            10,
+            104,
+            103
+          ]
+        }
+      ],
+      "sheet": "prepared/current-idle.png",
+      "contact": "prepared/current-idle-contact.png",
+      "gif": "prepared/current-idle.gif",
+      "aseprite": "prepared/current-idle.aseprite",
+      "method": "Current Astral flame atlas",
+      "loop": true,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ]
+    },
+    "current-vanish": {
+      "key": "current-vanish",
+      "id": "vanish",
+      "variant": "current",
+      "canvas": 128,
+      "frameCount": 16,
+      "frames": [
+        {
+          "file": "current/vanish/00.png",
+          "sha256": "8baf6b7135367028b30705b087183c46aea5abea4b62b2870b5d1f30bafa9bc2",
+          "pixelSHA256": "de4fb5a3726c76366a427d8b865676c0a11236e2c807b4f8dd77391233f17a88",
+          "visible": 4739,
+          "edge": 0,
+          "bounds": [
+            20,
+            8,
+            105,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/01.png",
+          "sha256": "22df4503191f887c5957e73f252d30350774fafc7929588f6185a20325a901a4",
+          "pixelSHA256": "19c1664ac293961d0c02d445e32118e05bfd3afbba4ce0e0ef5858ad7d1443a8",
+          "visible": 4902,
+          "edge": 2,
+          "bounds": [
+            21,
+            0,
+            104,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/02.png",
+          "sha256": "a33f811527eddcac1f3f49aabbaf5914b6323d53cb2530da837275b88e80dcbf",
+          "pixelSHA256": "a67fac802065761171c3e211c3b98c0bcc1945faccb93e62554000085206893a",
+          "visible": 5277,
+          "edge": 2,
+          "bounds": [
+            21,
+            0,
+            101,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/03.png",
+          "sha256": "75990ad8fd918e3c97239ac9c14d08d929dfc64ef15c6d7ed9c9e1e3e621b63d",
+          "pixelSHA256": "118b222b364046884df933e34a4223980e547379cb0af0502dc4e2d1e3a6eebf",
+          "visible": 4808,
+          "edge": 0,
+          "bounds": [
+            26,
+            7,
+            101,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/04.png",
+          "sha256": "8bf8671910354bff9a13755ae7ed362c34ee1642fe47df6bf275e4771c728ad9",
+          "pixelSHA256": "37959bcaf64f23723ff690b843da2521433bc144c6006b998a3fa754d9f5452f",
+          "visible": 4692,
+          "edge": 0,
+          "bounds": [
+            21,
+            2,
+            105,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/05.png",
+          "sha256": "e504001918002d13c16d54f06684ae119789cb1dab6deda4bfb9ed60dd421c4c",
+          "pixelSHA256": "8886f0154cb12b74c7d241828bba2c90e85c67685cd4edbc821d67fc1308a96c",
+          "visible": 4678,
+          "edge": 0,
+          "bounds": [
+            24,
+            13,
+            102,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/06.png",
+          "sha256": "6acbbd47a866f74b0f7274673469f60934fa11ca76a484418d2c0f5518f2d094",
+          "pixelSHA256": "2722407052fbf324f0e11b100d59461a8b1a6aab751b687ccc9856373ad2d1d7",
+          "visible": 4639,
+          "edge": 0,
+          "bounds": [
+            25,
+            4,
+            101,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/07.png",
+          "sha256": "2bf80d4e7db6f3ee6cec5a71ac347b3d36dd4bb2319ab72dce2e98f20bcc2984",
+          "pixelSHA256": "7aa1e7add33a170b73f1546ebe214d21b9ae0cb449df252ce2b412651c20630e",
+          "visible": 4362,
+          "edge": 0,
+          "bounds": [
+            25,
+            2,
+            101,
+            103
+          ]
+        },
+        {
+          "file": "current/vanish/08.png",
+          "sha256": "cde8d4ef29057277f4f968d58a968af3599ccbc15745a52af700d228dc1e367c",
+          "pixelSHA256": "e6580960f954f629b2aa41b7655c838a376aa69c895191ea2b471714ef6bd271",
+          "visible": 4024,
+          "edge": 1,
+          "bounds": [
+            27,
+            0,
+            97,
+            102
+          ]
+        },
+        {
+          "file": "current/vanish/09.png",
+          "sha256": "547c479ebd70e3c3b5a2485a0fddfc6ea8bd77723cd4a21ec478f99b0de63ac1",
+          "pixelSHA256": "e8f764e02a62ac6f12e972a9aaad0d151f2b1f3fef86191aaf6af2905ee19267",
+          "visible": 3596,
+          "edge": 0,
+          "bounds": [
+            33,
+            4,
+            94,
+            102
+          ]
+        },
+        {
+          "file": "current/vanish/10.png",
+          "sha256": "2b520b7e434d51b8b6c39ad7cc250c54dec463ca5b0ae729eabd660734853cf3",
+          "pixelSHA256": "d4718d35d884ff77c437862c37418fc37a54633b43d226b04be43f61060fbf22",
+          "visible": 2478,
+          "edge": 0,
+          "bounds": [
+            38,
+            1,
+            89,
+            110
+          ]
+        },
+        {
+          "file": "current/vanish/11.png",
+          "sha256": "57d296d118711145afdc745d60c079c6985e9c4101bfc9e22af3f0dfacc67177",
+          "pixelSHA256": "8410170bafe31ef65e9881517ff092851ac4db23f740140920d255247a0b968f",
+          "visible": 1448,
+          "edge": 0,
+          "bounds": [
+            38,
+            33,
+            84,
+            109
+          ]
+        },
+        {
+          "file": "current/vanish/12.png",
+          "sha256": "7b3ff5d095af35bb0b80e9029350fb23fc06cf3d35216ec51821972c4bf8a444",
+          "pixelSHA256": "6b7c1f7c603975a6154447cee1382a16edb493db2a7c63af4b210cd870959267",
+          "visible": 16,
+          "edge": 0,
+          "bounds": [
+            50,
+            88,
+            52,
+            94
+          ]
+        },
+        {
+          "file": "current/vanish/13.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        },
+        {
+          "file": "current/vanish/14.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        },
+        {
+          "file": "current/vanish/15.png",
+          "sha256": "e1cabc0d8e1e6da0ae3da0f7505ad25fa945baae636baeb0bd3465bf7c5a60dc",
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+          "visible": 0,
+          "edge": 0,
+          "bounds": null
+        }
+      ],
+      "sheet": "prepared/current-vanish.png",
+      "contact": "prepared/current-vanish-contact.png",
+      "gif": "prepared/current-vanish.gif",
+      "aseprite": "prepared/current-vanish.aseprite",
+      "method": "Current Astral flame atlas",
+      "loop": false,
+      "pivot": [
+        64,
+        104
+      ],
+      "size": 62,
+      "playbackIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "durationsMs": [
+        38,
+        37,
+        38,
+        37,
+        38,
+        37,
+        38,
+        37,
+        38,
+        37,
+        38,
+        37,
+        38,
+        37,
+        38,
+        37
+      ]
+    }
+  },
+  "oldFrames": {
+    "eclipse-1-left-walk-0": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-0": {
+      "frame": {
+        "x": 134,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-1": {
+      "frame": {
+        "x": 266,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-1": {
+      "frame": {
+        "x": 398,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-2": {
+      "frame": {
+        "x": 530,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-2": {
+      "frame": {
+        "x": 662,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-3": {
+      "frame": {
+        "x": 794,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-3": {
+      "frame": {
+        "x": 926,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-4": {
+      "frame": {
+        "x": 2,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-4": {
+      "frame": {
+        "x": 134,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-5": {
+      "frame": {
+        "x": 266,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-5": {
+      "frame": {
+        "x": 398,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-6": {
+      "frame": {
+        "x": 530,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-6": {
+      "frame": {
+        "x": 662,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-7": {
+      "frame": {
+        "x": 794,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-7": {
+      "frame": {
+        "x": 926,
+        "y": 134,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-8": {
+      "frame": {
+        "x": 2,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-8": {
+      "frame": {
+        "x": 134,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-9": {
+      "frame": {
+        "x": 266,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-9": {
+      "frame": {
+        "x": 398,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-10": {
+      "frame": {
+        "x": 530,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-10": {
+      "frame": {
+        "x": 662,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-11": {
+      "frame": {
+        "x": 794,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-11": {
+      "frame": {
+        "x": 926,
+        "y": 266,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-12": {
+      "frame": {
+        "x": 2,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-12": {
+      "frame": {
+        "x": 134,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-13": {
+      "frame": {
+        "x": 266,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-13": {
+      "frame": {
+        "x": 398,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-14": {
+      "frame": {
+        "x": 530,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-14": {
+      "frame": {
+        "x": 662,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-walk-15": {
+      "frame": {
+        "x": 794,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-walk-15": {
+      "frame": {
+        "x": 926,
+        "y": 398,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-0": {
+      "frame": {
+        "x": 2,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-0": {
+      "frame": {
+        "x": 134,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-1": {
+      "frame": {
+        "x": 266,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-1": {
+      "frame": {
+        "x": 398,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-2": {
+      "frame": {
+        "x": 530,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-2": {
+      "frame": {
+        "x": 662,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-3": {
+      "frame": {
+        "x": 794,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-3": {
+      "frame": {
+        "x": 926,
+        "y": 530,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-4": {
+      "frame": {
+        "x": 2,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-4": {
+      "frame": {
+        "x": 134,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-5": {
+      "frame": {
+        "x": 266,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-5": {
+      "frame": {
+        "x": 398,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-6": {
+      "frame": {
+        "x": 530,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-6": {
+      "frame": {
+        "x": 662,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-7": {
+      "frame": {
+        "x": 794,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-7": {
+      "frame": {
+        "x": 926,
+        "y": 662,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-8": {
+      "frame": {
+        "x": 2,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-8": {
+      "frame": {
+        "x": 134,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-9": {
+      "frame": {
+        "x": 266,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-9": {
+      "frame": {
+        "x": 398,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-10": {
+      "frame": {
+        "x": 530,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-10": {
+      "frame": {
+        "x": 662,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-11": {
+      "frame": {
+        "x": 794,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-11": {
+      "frame": {
+        "x": 926,
+        "y": 794,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-12": {
+      "frame": {
+        "x": 2,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-12": {
+      "frame": {
+        "x": 134,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-13": {
+      "frame": {
+        "x": 266,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-13": {
+      "frame": {
+        "x": 398,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-14": {
+      "frame": {
+        "x": 530,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-14": {
+      "frame": {
+        "x": 662,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-left-cast-15": {
+      "frame": {
+        "x": 794,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "eclipse-1-right-cast-15": {
+      "frame": {
+        "x": 926,
+        "y": 926,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-0": {
+      "frame": {
+        "x": 2,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-1": {
+      "frame": {
+        "x": 134,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-2": {
+      "frame": {
+        "x": 266,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-3": {
+      "frame": {
+        "x": 398,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-4": {
+      "frame": {
+        "x": 530,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-5": {
+      "frame": {
+        "x": 662,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-6": {
+      "frame": {
+        "x": 794,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-7": {
+      "frame": {
+        "x": 926,
+        "y": 1058,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-8": {
+      "frame": {
+        "x": 2,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-9": {
+      "frame": {
+        "x": 134,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-10": {
+      "frame": {
+        "x": 266,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-flight-11": {
+      "frame": {
+        "x": 398,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-0": {
+      "frame": {
+        "x": 530,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-1": {
+      "frame": {
+        "x": 662,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-2": {
+      "frame": {
+        "x": 794,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-3": {
+      "frame": {
+        "x": 926,
+        "y": 1190,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-4": {
+      "frame": {
+        "x": 2,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-5": {
+      "frame": {
+        "x": 134,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-6": {
+      "frame": {
+        "x": 266,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-impact-7": {
+      "frame": {
+        "x": 398,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-0": {
+      "frame": {
+        "x": 530,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-1": {
+      "frame": {
+        "x": 662,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-2": {
+      "frame": {
+        "x": 794,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-3": {
+      "frame": {
+        "x": 926,
+        "y": 1322,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-4": {
+      "frame": {
+        "x": 2,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-5": {
+      "frame": {
+        "x": 134,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-6": {
+      "frame": {
+        "x": 266,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-7": {
+      "frame": {
+        "x": 398,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-8": {
+      "frame": {
+        "x": 530,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-9": {
+      "frame": {
+        "x": 662,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-10": {
+      "frame": {
+        "x": 794,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-11": {
+      "frame": {
+        "x": 926,
+        "y": 1454,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-12": {
+      "frame": {
+        "x": 2,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-13": {
+      "frame": {
+        "x": 134,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-14": {
+      "frame": {
+        "x": 266,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-spawn-15": {
+      "frame": {
+        "x": 398,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-0": {
+      "frame": {
+        "x": 530,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-1": {
+      "frame": {
+        "x": 662,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-2": {
+      "frame": {
+        "x": 794,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-3": {
+      "frame": {
+        "x": 926,
+        "y": 1586,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-4": {
+      "frame": {
+        "x": 2,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-5": {
+      "frame": {
+        "x": 134,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-6": {
+      "frame": {
+        "x": 266,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-7": {
+      "frame": {
+        "x": 398,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-8": {
+      "frame": {
+        "x": 530,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-9": {
+      "frame": {
+        "x": 662,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-10": {
+      "frame": {
+        "x": 794,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-11": {
+      "frame": {
+        "x": 926,
+        "y": 1718,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-12": {
+      "frame": {
+        "x": 2,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-13": {
+      "frame": {
+        "x": 134,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-14": {
+      "frame": {
+        "x": 266,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-idle-15": {
+      "frame": {
+        "x": 398,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-0": {
+      "frame": {
+        "x": 530,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-1": {
+      "frame": {
+        "x": 662,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-2": {
+      "frame": {
+        "x": 794,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-3": {
+      "frame": {
+        "x": 926,
+        "y": 1850,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-4": {
+      "frame": {
+        "x": 2,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-5": {
+      "frame": {
+        "x": 134,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-6": {
+      "frame": {
+        "x": 266,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-7": {
+      "frame": {
+        "x": 398,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "flame-appear-8": {
+      "frame": {
+        "x": 530,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "volley-static": {
+      "frame": {
+        "x": 662,
+        "y": 1982,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    }
+  },
+  "bossFrames": {
+    "eruption-8": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 114,
+        "h": 138
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 28,
+        "w": 114,
+        "h": 138
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-6": {
+      "frame": {
+        "x": 118,
+        "y": 2,
+        "w": 139,
+        "h": 133
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 32,
+        "w": 139,
+        "h": 133
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-7": {
+      "frame": {
+        "x": 259,
+        "y": 2,
+        "w": 152,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 34,
+        "w": 152,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-9": {
+      "frame": {
+        "x": 413,
+        "y": 2,
+        "w": 90,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 21,
+        "w": 90,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-10": {
+      "frame": {
+        "x": 2,
+        "y": 142,
+        "w": 75,
+        "h": 117
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 34,
+        "w": 75,
+        "h": 117
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-5": {
+      "frame": {
+        "x": 79,
+        "y": 142,
+        "w": 126,
+        "h": 106
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 57,
+        "w": 126,
+        "h": 106
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-4": {
+      "frame": {
+        "x": 207,
+        "y": 142,
+        "w": 108,
+        "h": 92
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 68,
+        "w": 108,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-3": {
+      "frame": {
+        "x": 317,
+        "y": 142,
+        "w": 95,
+        "h": 69
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 88,
+        "w": 95,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "ground-glow": {
+      "frame": {
+        "x": 2,
+        "y": 261,
+        "w": 256,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 64
+      }
+    },
+    "eruption-2": {
+      "frame": {
+        "x": 260,
+        "y": 261,
+        "w": 82,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 110,
+        "w": 82,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-1": {
+      "frame": {
+        "x": 344,
+        "y": 261,
+        "w": 76,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 115,
+        "w": 76,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    },
+    "eruption-0": {
+      "frame": {
+        "x": 422,
+        "y": 261,
+        "w": 76,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 126,
+        "w": 76,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 192
+      }
+    }
+  },
+  "boss": {
+    "version": 1,
+    "selectedVariant": "c",
+    "sourceCanvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      144
+    ],
+    "worldScale": 0.58,
+    "frames": [
+      "eruption-0",
+      "eruption-1",
+      "eruption-2",
+      "eruption-3",
+      "eruption-4",
+      "eruption-5",
+      "eruption-6",
+      "eruption-7",
+      "eruption-8",
+      "eruption-9",
+      "eruption-10",
+      null
+    ],
+    "sourceDurationsMs": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ],
+    "durationsMs": [
+      20,
+      20,
+      20,
+      25,
+      25,
+      60,
+      70,
+      80,
+      90,
+      80,
+      80,
+      30
+    ],
+    "loop": false,
+    "segments": 10,
+    "propagationMs": 90,
+    "leadMs": 110,
+    "rgbaBytes": 1048576,
+    "sources": {
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/00.png": "90e77da723cc43606dd4af1fac0e604be8983e6f7a07ebc8b134f6c5cd736780",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/01.png": "61b95e42d0a2c481c10ad7d95e83ddbdae2770327ae097df5ba38ae5c9048155",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/02.png": "3c130f03b2cc6d21d07cbfdfeb9d6aae95b0a5a8e19802c11689f059010915dd",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/03.png": "87d156644809bb928d1b1101049a801c9ca712d491d34e4021e5ded046f20138",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/04.png": "c1ebcfa20745728d15afa15332a4e55bba38c296bf705a32486dca32b846b8c8",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/05.png": "b3e0ffef480d0acfbaee272ef18201e355e0079d6d8b3425220b66626b1ada4a",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/06.png": "6c8d172a29895d6cc281888b5780ca14eaed328e578370e4c5eae61968b5111e",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/07.png": "45377a5acd8b182fae229ae3958bff4476de6c648ccf29e49deeeea853bea523",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/08.png": "18963067ddf4e332e303024cb537268a326b4b432e7481df82b7ce90092168be",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/09.png": "e578ec1d872e1162495cb50e23f88420c7a674409a2329da4bd5f4870c14a1db",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/10.png": "faa5231edac93a108be44e958fc664e44dbfa6c0708a71f934669d8e6e1f1c36",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/11.png": "3f428f0c48205e41707fe65ad63f707c1e371313c689fd02d96a5401135d5564",
+      "art/generated/ash-warden-flame-strike-vfx-v1/variant-c/raw/output.gif": "71f58cdce17f54c73e2a35a5631aa5781f509ed69e3be5c98cf8a08e723e7e8d"
+    },
+    "preparation": {
+      "kind": "deterministic pixel-dither extinction, no new drawing",
+      "alphaCoverage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.625,
+        0.25,
+        0
+      ],
+      "lastFrameFullyTransparent": true,
+      "rawPreserved": true
+    }
+  },
+  "bodySize": 66.24,
+  "warning": 1,
+  "spawn": 0.6,
+  "idle": 3,
+  "vanish": 0.6,
+  "duration": 5.2,
+  "spacing": 34,
+  "notes": [
+    "Flame preview only. Accepted Eclipse projectile and shared Rune Blink are already in runtime baseline.",
+    "Movement reference is the actual Ash Warden Flame Strike variant C eruption; new flame art is independently authored.",
+    "Common soft ground light is code-drawn preview context, not claimed as AI pixels.",
+    "Fixed128px canvases, display62world. Code/current pivot64,104; AI pivot60,116 measured from generated model.",
+    "Source AI PNGs are preserved, including hidden RGB; no masks, palette edits or per-frame fitting.",
+    "Demo warning1s is illustrative. Existing spawn600ms/idle3s/vanish600ms/spacing34 are shown without gameplay changes."
+  ]
+}

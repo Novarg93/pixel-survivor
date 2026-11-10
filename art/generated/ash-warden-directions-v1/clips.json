@@ -1,0 +1,146 @@
+{
+  "south-idle": {
+    "direction": "south",
+    "pose": "idle",
+    "frames": 4,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 1800,
+    "strideWorld": null,
+    "baseFPS": 2.2222222222222223,
+    "maxPreviewFPS": 20
+  },
+  "south-walk": {
+    "direction": "south",
+    "pose": "walk",
+    "frames": 8,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 510,
+    "strideWorld": 36.67054054054054,
+    "baseFPS": 15.707431401596391,
+    "maxPreviewFPS": 20
+  },
+  "north-idle": {
+    "direction": "north",
+    "pose": "idle",
+    "frames": 4,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 1800,
+    "strideWorld": null,
+    "baseFPS": 2.2222222222222223,
+    "maxPreviewFPS": 20
+  },
+  "north-walk": {
+    "direction": "north",
+    "pose": "walk",
+    "frames": 8,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 510,
+    "strideWorld": 36.67054054054054,
+    "baseFPS": 15.707431401596391,
+    "maxPreviewFPS": 20
+  },
+  "east-idle": {
+    "direction": "east",
+    "pose": "idle",
+    "frames": 4,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 1800,
+    "strideWorld": null,
+    "baseFPS": 2.2222222222222223,
+    "maxPreviewFPS": 20
+  },
+  "east-walk": {
+    "direction": "east",
+    "pose": "walk",
+    "frames": 8,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 510,
+    "strideWorld": 36.67054054054054,
+    "baseFPS": 15.707431401596391,
+    "maxPreviewFPS": 20
+  },
+  "west-idle": {
+    "direction": "west",
+    "pose": "idle",
+    "frames": 4,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 1800,
+    "strideWorld": null,
+    "baseFPS": 2.2222222222222223,
+    "maxPreviewFPS": 20
+  },
+  "west-walk": {
+    "direction": "west",
+    "pose": "walk",
+    "frames": 8,
+    "pivot": [
+      96,
+      154
+    ],
+    "canvas": [
+      192,
+      192
+    ],
+    "worldScale": 0.6548310810810811,
+    "sourceDurationMs": 510,
+    "strideWorld": 36.67054054054054,
+    "baseFPS": 15.707431401596391,
+    "maxPreviewFPS": 20
+  }
+}

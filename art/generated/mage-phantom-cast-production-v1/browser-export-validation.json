@@ -1,0 +1,168 @@
+{
+  "pass": true,
+  "protocols": [
+    {
+      "url": "http",
+      "loadedImages": 64
+    },
+    {
+      "url": "file",
+      "loadedImages": 64
+    }
+  ],
+  "gifs": [
+    {
+      "direction": "south",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "south-east",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "east",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "north-east",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "north",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "north-west",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "west",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    },
+    {
+      "direction": "south-west",
+      "frames": 12,
+      "durationMs": 340,
+      "durations": [
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        30,
+        20
+      ]
+    }
+  ],
+  "errors": []
+}

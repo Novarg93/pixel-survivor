@@ -49,6 +49,8 @@ export interface RunOptions { spawnRate?: number; character?: CharacterId; biome
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
+  private bossDamageSequence=0;
+  private bossDamageOrder=new Map<number,number>();
   readonly rng: SeededRandom;
   readonly buffs = new BuffSystem();
   readonly loot: LootSystem;
@@ -173,6 +175,11 @@ export class World {
     const resolved=Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
     enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - this.finalEncounter.limitDamage(enemy,resolved));
     this.finalEncounter.afterDamage(this,enemy); enemy.hitUntil = this.elapsed + 0.12;
+    if(enemy.boss&&enemy.finalRole!=='boss'&&enemy.hp<before){
+      // At most the live boss cap is retained, including a just-killed target.
+      for(const id of this.bossDamageOrder.keys())if(!this.bosses.some(e=>e.id===id))this.bossDamageOrder.delete(id);
+      this.bossDamageOrder.set(enemy.id,++this.bossDamageSequence);
+    }
     this.scoring.recordDamage(source, before-enemy.hp);
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
     if (!enemy.boss && enemy.kind !== 'guardian'&&!ultimateFrozen(enemy,this.elapsed)) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
@@ -337,7 +344,7 @@ export class World {
         return { id: c.id, name: c.name, description: c.description, category: MOBILITY_UPGRADES.find(u => `mobility-${u.id}` === c.id)?.category ?? null, tier: ability ? this.abilities[ability.id].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
       }),
       abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
-      bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase })),
+      bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase,damageOrder:this.bossDamageOrder.get(e.id)??0 })),
       wave: this.finalEncounter.phase!=='inactive'?'Финальная встреча':profileAt(this.elapsed).name,
     };
   }

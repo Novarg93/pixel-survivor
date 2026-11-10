@@ -6,6 +6,7 @@ import {ultimateFrozen} from '../systems/UltimateFreeze';
 import { enemyVisual } from './assetRegistry';
 import {FlameStrikeArt} from './FlameStrikeArt';
 import {MeleeComboArt} from './MeleeComboArt';
+import {WARDEN_AI,wardenMeteorView,wardenMeteorWarning} from './ashWardenPixellabPack';
 export class FinalBossArt {
   private ground:Phaser.GameObjects.Graphics;private tells:Phaser.GameObjects.Graphics;
   private images:Phaser.GameObjects.Image[]=[];private used=0;private ghosts:Phaser.GameObjects.Image[]=[];
@@ -14,6 +15,7 @@ export class FinalBossArt {
   private pose:ReturnType<typeof wardenPose>|null=null;
   private flameStrike:FlameStrikeArt;
   private meleeCombo:MeleeComboArt;
+  private meteorWarnings:NonNullable<ReturnType<typeof wardenMeteorWarning>>[]=[];
   constructor(private scene:Phaser.Scene){
     this.ground=scene.add.graphics().setName('final-arena').setDepth(-.8);
     this.tells=scene.add.graphics().setName('final-telegraphs').setDepth(20.2);
@@ -24,7 +26,7 @@ export class FinalBossArt {
     if(this.used>=48)return;
     const texture=layer.texture??wardenTexture(WARDEN.locations[layer.frame]!);
     const image=this.images[this.used]??this.scene.add.image(0,0,texture);this.images[this.used++]=image;
-    image.setTexture(texture,layer.frame).setName('ash-warden-layer').setOrigin(layer.pivot[0]!/image.frame.realWidth,layer.pivot[1]!/image.frame.realHeight).setPosition(x,y).setScale(layer.scale*scale,layer.scale*scaleY).setDepth(depth).setFlipX(flip).setAlpha(alpha).setTint(tint).setVisible(true);
+    image.setTexture(texture,layer.frame).setName('ash-warden-layer').setOrigin(layer.pivot[0]!/image.frame.realWidth,layer.pivot[1]!/image.frame.realHeight).setPosition(x,y).setScale(layer.scale*scale,layer.scale*scaleY).setDepth(depth).setFlipX(flip).setAlpha(alpha).setTint(tint).setBlendMode(0).setRotation(0).setVisible(true);
     return image;
   }
   private clip(id:string,age:number,x:number,y:number,depth:number,scale=1,alpha=1,scaleY=scale,flip=false){
@@ -53,23 +55,15 @@ export class FinalBossArt {
       const flip=wardenFacing(event.direction??f.attack.direction)==='west';
       for(const [i,layer]of ['ground','back','front'].entries())this.clip(`charge-${stop?'stop':'start'}-${layer}`,age,event.x+(flip?-1:1)*2.6193243244,event.y-1.3096621622,i===2?depth+.001:-.2+i*.001,1,decor,1,flip);
     }
-    for(const m of f.meteors){
-      if(m.age<0)continue;
-      const visualScale=C.meteorRadius/(39*.6548310811),warning=m.warning??C.meteorWarning;
-      if(!m.landed){
-        this.clip('meteor-telegraph',Math.min(.899,m.age),m.x,m.y,-.3,visualScale,.85,C.meteorRadius/(18*.6548310811));
-        if(m.age>=warning-.3){const age=m.age-(warning-.3),height=(1-age/.3)*180;this.clip('meteor-fall',age,m.x,m.y-height,18,visualScale);}
-      }else{
-        const age=m.age-warning;
-        if(age<.4)this.clip('meteor-impact',age,m.x,m.y,17,visualScale,contact);
-        if(age>=.18)this.clip('meteor-aftermath',age-.18,m.x,m.y,-.25,visualScale,decor);
-      }
+    for(const m of f.meteors)for(const v of wardenMeteorView(m)??[]){
+      const name=v.id==='meteor-flight'?'meteor-fall':'meteor-impact';
+      this.image(v.layer,v.x,v.y,v.id==='meteor-flight'?18:17,false,1,v.alpha*(v.id==='landing-impact'?contact:1))?.setName(`ash-warden-${name}`);
     }
   }
   render(w:World,intensity:number,reduced:boolean){
     this.flameStrike.render(w,intensity,reduced);
     this.meleeCombo.render(w);
-    const f=w.finalEncounter,e=f.boss,g=this.ground.clear(),t=this.tells.clear();this.used=0;for(const image of this.images)image.setVisible(false);
+    const f=w.finalEncounter,e=f.boss,g=this.ground.clear(),t=this.tells.clear();this.used=0;this.meteorWarnings=[];for(const image of this.images)image.setVisible(false);
     this.deathAge=f.attack.kind==='death'?f.attack.age:0;
     for(const image of this.ghosts)image.setVisible(false);for(const label of this.labels)label.setVisible(false);
     if(f.phase==='inactive'||w.status==='menu'||!e)return;
@@ -100,10 +94,15 @@ export class FinalBossArt {
     if(a.kind==='shieldBreak'){
       const p=Math.min(1,a.age/.7);for(let i=0;i<12;i++){const angle=i*Math.PI/6,drift=35+p*60;g.lineStyle(2,0xc8f0f4,(1-p)*.9).lineBetween(e.x+Math.cos(angle)*drift,e.y-25+Math.sin(angle)*drift,e.x+Math.cos(angle)*drift+4,e.y-34+Math.sin(angle)*drift);}
     }
-    for(const m of f.meteors)if(m.age>=0&&!m.landed){
-      // Exact world danger boundary: art ellipse is decorative, gameplay circle is authoritative.
-      t.lineStyle(1.5,0xffd29a,.95).strokeCircle(m.x,m.y,C.meteorRadius);
-      t.lineStyle(1,0xffe9c1,.9).beginPath().arc(m.x,m.y,C.meteorRadius-3,-Math.PI/2,-Math.PI/2+Math.min(1,m.age/(m.warning??C.meteorWarning))*Math.PI*2).strokePath();
+    for(const m of f.meteors){
+      const marker=wardenMeteorWarning(m);if(!marker)continue;
+      this.meteorWarnings.push(marker);
+      const {x,y,radius:r,alpha}=marker;
+      // Four short ticks mark the real radial extent; the center stays open.
+      const lines=[[x-r,y-5,x-r,y+5],[x+r,y-5,x+r,y+5],[x-5,y-r,x+5,y-r],[x-5,y+r,x+5,y+r],[x-4,y,x+4,y],[x,y-4,x,y+4]] as const;
+      for(const [width,color,opacity]of [[3.5,0x15212a,.9],[1.5,0xffd29a,alpha]]as const){
+        t.lineStyle(width,color,opacity);for(const[x1,y1,x2,y2]of lines)t.lineBetween(x1,y1,x2,y2);
+      }
     }
     // Quantized direction buckets group nearby offscreen markers. They are world-space UI only.
     const buckets=new Map<number,{x:number;y:number;count:number;boss:boolean}>();
@@ -119,6 +118,6 @@ export class FinalBossArt {
       label.setPosition(marker.x,marker.y).setText(marker.boss?'СТРАЖ':`ЩИТ${marker.count>1?' ×'+marker.count:''}`).setVisible(true);
     }
   }
-  diagnostics(){const flameStrike=this.flameStrike.diagnostics(),meleeCombo=this.meleeCombo.diagnostics();return{deathAge:this.deathAge,pose:this.used?this.pose:null,bodyImages:this.images.filter(i=>i.visible&&i.name==='ash-warden-layer').map(i=>({frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y})),telegraphCommands:this.tells.commandBuffer.length,meteorWarnings:this.images.filter(i=>i.visible&&i.name==='ash-warden-meteor-telegraph').map(i=>({x:i.x,y:i.y,frame:i.frame.name})),chargeImages:this.images.filter(i=>i.visible&&i.name.startsWith('ash-warden-charge-')).map(i=>({name:i.name,frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y})),pooledImages:this.images.length+flameStrike.pooledImages+meleeCombo.pooledImages,activeImages:this.used+flameStrike.activeImages+meleeCombo.activeImages,ghosts:this.ghosts.length,labels:this.labels.length,atlasBytes:WARDEN.rgbaBytes,atlasPages:WARDEN.pages,flameStrike,meleeCombo,totalAtlasBytes:WARDEN.rgbaBytes+flameStrike.atlasBytes+meleeCombo.atlasBytes};}
+  diagnostics(){const flameStrike=this.flameStrike.diagnostics(),meleeCombo=this.meleeCombo.diagnostics();return{deathAge:this.deathAge,pose:this.used?this.pose:null,bodyImages:this.images.filter(i=>i.visible&&i.name==='ash-warden-layer').map(i=>({texture:i.texture.key,frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y,originX:i.originX,originY:i.originY,scale:i.scaleX})),telegraphCommands:this.tells.commandBuffer.length,meteorWarnings:this.meteorWarnings.map(marker=>({...marker})),chargeImages:this.images.filter(i=>i.visible&&i.name.startsWith('ash-warden-charge-')).map(i=>({name:i.name,frame:i.frame.name,flipX:i.flipX,x:i.x,y:i.y})),pooledImages:this.images.length+flameStrike.pooledImages+meleeCombo.pooledImages,activeImages:this.used+flameStrike.activeImages+meleeCombo.activeImages,ghosts:this.ghosts.length,labels:this.labels.length,atlasBytes:WARDEN.rgbaBytes,atlasPages:WARDEN.pages,pixellabAtlasBytes:WARDEN_AI.rgbaBytes,meteorImages:this.images.filter(i=>i.visible&&i.name.startsWith('ash-warden-meteor-')).map(i=>({name:i.name,texture:i.texture.key,frame:i.frame.name,x:i.x,y:i.y,alpha:i.alpha,originX:i.originX,originY:i.originY,scale:i.scaleX,depth:i.depth})),flameStrike,meleeCombo,totalAtlasBytes:WARDEN.rgbaBytes+WARDEN_AI.rgbaBytes+flameStrike.atlasBytes+meleeCombo.atlasBytes};}
   destroy(){this.meleeCombo.destroy();this.flameStrike.destroy();this.ground.destroy();this.tells.destroy();for(const image of this.images)image.destroy();for(const image of this.ghosts)image.destroy();for(const label of this.labels)label.destroy();}
 }

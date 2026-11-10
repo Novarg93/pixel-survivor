@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "fireball-impact",
+    "args": {
+      "description": "One small single-hit impact, in place. The short tail retracts into the existing round head near (77,61). The amber core makes a compact three-tongue pop, then breaks into just a few tiny orange embers, cooling and disappearing completely by the final transparent frame. Short restrained ordinary mage fire hit, not an explosion spell. Preserve initial rendering style and limited warm palette. Keep the contact point fixed, nothing drifts across the canvas, no camera movement, no new rock, no smoke cloud, no concentric ring, no shockwave, no huge white flash. Leave ample transparent margins throughout, visible spread under 56px diameter.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/6daa7422-dbec-47a1-8f17-382823e28bd9/download",
+      "last_frame_url": "upload:3dfb9cc2-3363-4ad1-b40b-31b5da1723a9",
+      "frame_count": 8,
+      "direction": "east",
+      "view": "high top-down",
+      "subject_description": "one compact copper amber mage fireball producing a small fading fire hit",
+      "initial_pose": "small warm fireball head held near (77,61) with a short left-facing tail on transparency",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111013
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 46bc95ea-e613-4915-9662-d3d4135be419\njob_id: 46bc95ea-e613-4915-9662-d3d4135be419\ndescription: One small single-hit impact, in place. The short tail retracts into the existing round head near (77,61). The amber core makes a compact three-tongue pop, then breaks into just a few tiny orange embers, cooling and disappearing completely by the final transparent frame. Short restrained ordinary mage fire hit, not an explosion spell. Preserve initial rendering style and limited warm palette. Keep the contact point fixed, nothing drifts across the canvas, no camera movement, no new rock, no smoke cloud, no concentric ring, no shockwave, no huge white flash. Leave ample transparent margins throughout, visible spread under 56px diameter.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111013\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"46bc95ea-e613-4915-9662-d3d4135be419\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/46bc95ea-e613-4915-9662-d3d4135be419/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: a77924f8-f27f-5086-a88f-f23b85f68fc2\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "protectedFiles": 581,
+  "metrics": {
+    "start": {
+      "frames": 6,
+      "durationMs": 160,
+      "occupancy": [
+        189,
+        517,
+        527,
+        397,
+        322,
+        0
+      ]
+    },
+    "stop": {
+      "frames": 7,
+      "durationMs": 240,
+      "occupancy": [
+        270,
+        631,
+        664,
+        597,
+        460,
+        326,
+        0
+      ]
+    }
+  },
+  "errors": [],
+  "results": [
+    {
+      "pixelComparison": "start",
+      "diff": {
+        "a": 130,
+        "b": 0,
+        "c": 0,
+        "d": 130
+      }
+    },
+    {
+      "pixelComparison": "stop",
+      "diff": {
+        "a": 0,
+        "b": 258,
+        "c": 258,
+        "d": 0
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "zoom": "1",
+      "event": "start",
+      "state": {
+        "ready": true,
+        "time": 1150,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 7.142857142857142,
+        "start": {
+          "frame": 2,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": -1,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          },
+          {
+            "name": "chargeStop",
+            "timeMs": 1520
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 1,
+        "frame": 5
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "zoom": "1",
+      "event": "stop",
+      "state": {
+        "ready": true,
+        "time": 1580,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 60,
+        "start": {
+          "frame": -1,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": 2,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          },
+          {
+            "name": "chargeStop",
+            "timeMs": 1520
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 1,
+        "frame": 9
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "zoom": "2",
+      "event": "start",
+      "state": {
+        "ready": true,
+        "time": 1150,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 7.142857142857142,
+        "start": {
+          "frame": 2,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": -1,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          },
+          {
+            "name": "chargeStop",
+            "timeMs": 1520
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 2,
+        "frame": 5
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "zoom": "2",
+      "event": "stop",
+      "state": {
+        "ready": true,
+        "time": 1580,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 60,
+        "start": {
+          "frame": -1,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": 2,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          },
+          {
+            "name": "chargeStop",
+            "timeMs": 1520
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 2,
+        "frame": 9
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": "1",
+      "event": "start",
+      "state": {
+        "ready": true,
+        "time": 1150,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 7.142857142857142,
+        "start": {
+          "frame": 2,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": -1,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 1,
+        "frame": 5
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": "1",
+      "event": "stop",
+      "state": {
+        "ready": true,
+        "time": 1580,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 60,
+        "start": {
+          "frame": -1,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": 2,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 1,
+        "frame": 9
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": "2",
+      "event": "start",
+      "state": {
+        "ready": true,
+        "time": 1150,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 7.142857142857142,
+        "start": {
+          "frame": 2,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": -1,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 2,
+        "frame": 5
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": "2",
+      "event": "stop",
+      "state": {
+        "ready": true,
+        "time": 1580,
+        "playing": false,
+        "completed": false,
+        "startMs": 1100,
+        "stopMs": 1520,
+        "distance": 60,
+        "start": {
+          "frame": -1,
+          "eventMs": 1100,
+          "worldY": 0
+        },
+        "stop": {
+          "frame": 2,
+          "eventMs": 1520,
+          "worldY": 60
+        },
+        "eventLog": [
+          {
+            "name": "chargeStart",
+            "timeMs": 1100
+          }
+        ],
+        "variants": [
+          {
+            "id": "none",
+            "label": "Без VFX",
+            "start": false,
+            "stop": false
+          },
+          {
+            "id": "start",
+            "label": "Только Start",
+            "start": true,
+            "stop": false
+          },
+          {
+            "id": "stop",
+            "label": "Только Stop",
+            "start": false,
+            "stop": true
+          },
+          {
+            "id": "both",
+            "label": "Start + Stop",
+            "start": true,
+            "stop": true
+          }
+        ],
+        "zoom": 2,
+        "frame": 9
+      }
+    }
+  ],
+  "gifVerification": "All source RGBA pixels and per-frame timings exact",
+  "rates": [
+    1,
+    0.5,
+    2
+  ],
+  "viewports": [
+    [
+      1280,
+      720
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "productionChanged": false
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 04c4c37e-b3a7-4d2c-90b9-424fd2d274d0\njob_id: 04c4c37e-b3a7-4d2c-90b9-424fd2d274d0\ndescription: A heavy meteor strikes the EXACT CENTER of this ground ellipse. At the start, a short powerful burst of three chunky orange fire tongues rises upward from its center with a few angular dark stone chips kicking sideways. A brief pale amber accent only at the tiny impact point, never a white disk. The broken copper rim shudders once. Fire immediately collapses downward into a low dark scorched patch and a few dim embers. The embers and scorch then dissipate entirely to fully transparent by the final frame. Ground contact stays FIXED at the original ellipse center, camera fixed, no panning or growth of canvas, all fire inside margins. Coarse crisp flat pixel-art clusters, charcoal/rust/copper/amber, no smooth smoke, no white flash, no giant radial ring, no text.\nframes: 16\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110110\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"04c4c37e-b3a7-4d2c-90b9-424fd2d274d0\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/04c4c37e-b3a7-4d2c-90b9-424fd2d274d0/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 47d7e2e5-9024-5d41-91f1-50d673885c9e\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

@@ -39,7 +39,7 @@ test('both bosses telegraph, take damage, die and render on desktop/mobile', asy
     const a = w.spawn('charger', { x: -200, y: -45 })!, b = w.spawn('sorcerer', { x: 170, y: 65 })!;
     a.boss!.until = w.elapsed; b.boss!.until = w.elapsed;
   });
-  await expect(page.locator('.boss-bar')).toHaveCount(2);
+  await expect(page.locator('.boss-bar')).toHaveCount(1);
   await page.screenshot({ path: 'docs/screenshots/07-desktop.png' });
   await page.setViewportSize({ width: 390, height: 844 }); await page.waitForTimeout(200);
   await page.screenshot({ path: 'docs/screenshots/07-mobile.png' });

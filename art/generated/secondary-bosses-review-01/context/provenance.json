@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "src/game/art/groveArtPack.ts",
+    "src/game/config/biomes.ts",
+    "src/game/utils/worldTiles.ts",
+    "public/assets/hd/bosses.png",
+    "public/assets/hd/guardian.png",
+    "public/assets/hd/mage.png"
+  ],
+  "method": "Existing Grove renderer bundled temporarily in memory. Original atlas frame cropped at native size and padded symmetrically to128; no resize.",
+  "scales": {
+    "boss": 0.45,
+    "guardian": 0.35,
+    "mage": 0.375
+  },
+  "pivots": {
+    "native128": [
+      64,
+      64
+    ],
+    "motion192": [
+      96,
+      96
+    ]
+  }
+}

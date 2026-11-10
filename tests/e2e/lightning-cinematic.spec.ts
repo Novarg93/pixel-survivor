@@ -48,7 +48,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Divine Storm real eight-
   for(const f of [invocation,sky,overload]){expect(f.protected).toBe(true);expect(f.kills).toBe(0);expect(f.x).toBeCloseTo(invocation.x,3);}
   expect(release.protected).toBe(false);expect(release.state.activeAura).toBe(0);expect(release.kills).toBe(64);
   expect(flash.state.flash).toBeGreaterThan(.1);expect(flash.state.flash).toBeGreaterThan(flash.state.dim);expect(capture.webCompletedAt).toBeGreaterThanOrEqual(.075);expect(capture.webCompletedAt).toBeLessThanOrEqual(.1);
-  expect(recoil.casting.bodyFrame).toContain('lean');expect(Math.abs(recoil.casting.rotation)).toBeGreaterThan(.1);expect(recoil.state.activeAsh).toBeGreaterThan(0);
+  expect(recoil.casting.castFrame).toContain('mage-cast-v2-');expect(recoil.casting.pose?.casting).toBe(true);expect(recoil.casting.rotation).toBe(0);expect(recoil.casting.castFrame).not.toBe(invocation.casting.castFrame);expect(recoil.state.activeAsh).toBeGreaterThan(0);
   expect(restored.state).toMatchObject({dim:0,flash:0,activeAura:0});expect(restored.x).toBeGreaterThan(invocation.x);
   expect(capture.hits).toHaveLength(64);expect(new Set(capture.hits.map(h=>h.id)).size).toBe(64);expect(new Set(capture.hits.map(h=>h.at)).size).toBe(1);
   for(const event of ['ultimate.charge','ultimate.sky','ultimate.overload','ultimate.lightning'] as const)expect(capture.audio.played[event]).toBe(1);

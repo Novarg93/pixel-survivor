@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "states": {
+    "1280-hit": {
+      "version": "v1",
+      "meleeVariant": "simple",
+      "key": "south-melee",
+      "index": 4,
+      "playing": false,
+      "loops": 0,
+      "rendered": 286,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 12.307692307692308,
+      "requestedFPS": 12.307692307692308,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        1280,
+        633
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 2,
+      "hitCount": 0,
+      "hitLog": [],
+      "frameDurationMs": 90.00000000000001
+    },
+    "1280-transition": {
+      "version": "v1",
+      "meleeVariant": "simple",
+      "key": "south-idle",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 579,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 2.2222222222222223,
+      "requestedFPS": 2.2222222222222223,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        1280,
+        633
+      ],
+      "sequence": null,
+      "transitionComplete": true,
+      "attackInstance": 3,
+      "hitCount": 1,
+      "hitLog": [
+        {
+          "attackInstance": 3,
+          "frame": 4,
+          "timeMs": 280
+        }
+      ],
+      "frameDurationMs": 450
+    },
+    "844-hit": {
+      "version": "v1",
+      "meleeVariant": "simple",
+      "key": "south-melee",
+      "index": 4,
+      "playing": false,
+      "loops": 0,
+      "rendered": 583,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 12.307692307692308,
+      "requestedFPS": 12.307692307692308,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        299
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 5,
+      "hitCount": 1,
+      "hitLog": [
+        {
+          "attackInstance": 3,
+          "frame": 4,
+          "timeMs": 280
+        }
+      ],
+      "frameDurationMs": 90.00000000000001
+    },
+    "844-transition": {
+      "version": "v1",
+      "meleeVariant": "simple",
+      "key": "south-idle",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 874,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 2.2222222222222223,
+      "requestedFPS": 2.2222222222222223,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        299
+      ],
+      "sequence": null,
+      "transitionComplete": true,
+      "attackInstance": 6,
+      "hitCount": 2,
+      "hitLog": [
+        {
+          "attackInstance": 3,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 6,
+          "frame": 4,
+          "timeMs": 280
+        }
+      ],
+      "frameDurationMs": 450
+    },
+    "loops": {
+      "version": "v1",
+      "meleeVariant": "simple",
+      "key": "south-melee",
+      "index": 0,
+      "playing": true,
+      "loops": 2,
+      "rendered": 973,
+      "distance": 0,
+      "elapsed": 75.99999999999999,
+      "fps": 12.307692307692308,
+      "requestedFPS": 12.307692307692308,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        299
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 10,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 3,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 6,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 8,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 9,
+          "frame": 4,
+          "timeMs": 280
+        }
+      ],
+      "frameDurationMs": 80
+    },
+    "oldDraft": {
+      "version": "v1",
+      "meleeVariant": "rd",
+      "key": "south-melee",
+      "index": 0,
+      "playing": false,
+      "loops": 0,
+      "rendered": 976,
+      "distance": 0,
+      "elapsed": 0,
+      "fps": 10.526315789473683,
+      "requestedFPS": 10.526315789473683,
+      "capped": false,
+      "speed": 72,
+      "strideWorld": null,
+      "viewport": [
+        844,
+        299
+      ],
+      "sequence": null,
+      "transitionComplete": false,
+      "attackInstance": 11,
+      "hitCount": 4,
+      "hitLog": [
+        {
+          "attackInstance": 3,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 6,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 8,
+          "frame": 4,
+          "timeMs": 280
+        },
+        {
+          "attackInstance": 9,
+          "frame": 4,
+          "timeMs": 280
+        }
+      ],
+      "frameDurationMs": 70
+    }
+  },
+  "errors": [],
+  "checks": [
+    "actual Canvas desktop/mobile screenshots",
+    "8 frames scrub",
+    "neutral endpoints equal approved static",
+    "PNG hard alpha, no cropped edge, helmet stable",
+    "GIF lossless roundtrip and timing",
+    "one visual hit in Idle-Attack-Idle",
+    "two loop hits for two cycles",
+    "scrub emits no hits",
+    "relative timing preserved at half rate",
+    "old RD draft selectable",
+    "accepted 4-direction Walk remains available",
+    "other melee directions disabled"
+  ]
+}

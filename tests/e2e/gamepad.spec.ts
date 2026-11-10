@@ -213,7 +213,14 @@ test('unsupported mapping and denied Gamepad API show a bounded notice without b
 
 test('direct scene DESTROY removes controller subscriptions and prevents later polling', async ({ page }) => {
   await start(page);
-  const scene = await page.evaluateHandle(async () => { const path = '/src/game/scenes/GameScene.ts', { GameScene } = await import(path), create = GameScene.prototype.create; const ready = new Promise<GameScene>(resolve => { GameScene.prototype.create = function(this: GameScene) { GameScene.prototype.create = create; create.call(this); resolve(this); }; }); window.__PIXEL__!.restartScene(); return ready; });
+  const scene = await page.evaluateHandle(async () => {
+    const path='/src/game/scenes/GameScene.ts';
+    // Reused Vite servers can load the live class with an HMR timestamp.
+    const liveUrl=performance.getEntriesByType('resource').map(e=>e.name).find(url=>new URL(url).pathname===path)??path;
+    const {GameScene}=await import(liveUrl),create=GameScene.prototype.create;
+    const ready=new Promise<GameScene>(resolve=>{GameScene.prototype.create=function(this:GameScene){GameScene.prototype.create=create;create.call(this);resolve(this);};});
+    window.__PIXEL__!.restartScene();return ready;
+  });
   const controller = await scene.evaluateHandle(s => Object.getOwnPropertyDescriptor(s, 'gamepad')!.value as GamepadInputController);
   const before = await page.evaluate(() => window.__GAMEPAD_MOCK__.listeners());
   await scene.evaluate(s => s.scene.remove('field'));

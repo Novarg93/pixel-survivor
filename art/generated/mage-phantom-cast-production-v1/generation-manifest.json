@@ -1,0 +1,83 @@
+{
+  "purpose": "Eight facings of ONE shared directional Phantom Cast for Fireball and regular Lightning",
+  "pilot": "../mage-phantom-cast-pixellab-v1",
+  "south": "Reuse accepted pilot; no regeneration",
+  "budgetUsd": 2,
+  "maxNewEquivalentUsd": 0.4976,
+  "maxCombinedEquivalentUsd": 0.6451,
+  "pricing": "https://www.pixellab.ai/pixellab-api",
+  "before": {
+    "generations": 1650.9,
+    "creditsUsd": 0
+  },
+  "jobs": [
+    {
+      "direction": "east",
+      "id": "59e62abf-fec2-453c-a9f4-8934be6a0e05",
+      "assetId": "d11ead9d-e64f-533e-87d1-ed8adc5a001c",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "south-east",
+      "id": "540a31ad-4517-4f51-9333-ca2ea9cb6275",
+      "assetId": "78f367d8-df02-5498-9bfb-eb8831d199dd",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "north-east",
+      "id": "43bc9ae6-1fba-4d1e-bb2c-2c6406797bb4",
+      "assetId": "a0f4bd59-e9f7-5e6d-96d9-4ef857c1a758",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "north-rejected-turn",
+      "id": "c9b1427d-44f4-46ef-bb3c-fae01997ed26",
+      "assetId": "df8c4418-9571-5acb-8e36-49851bef45ac",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3,
+      "selected": false,
+      "defect": "Body turns front at frames 3-11; rejected"
+    },
+    {
+      "direction": "north-west",
+      "id": "851c0c66-fc63-4840-a8b7-0c98d14d3d29",
+      "assetId": "ed8011ea-0d15-563c-9fb2-020609b2c706",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "west",
+      "id": "f5fe9d32-4d25-4309-a7f6-47c1a7e9fee2",
+      "assetId": "4b989193-283b-52fd-87ed-93c85d7ea80f",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "south-west",
+      "id": "94506cf2-4a90-4b78-88cb-3d8b8b7053c9",
+      "assetId": "513d294f-361d-5cf3-b144-320b2d5f4e0b",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "generations": 3
+    },
+    {
+      "direction": "north",
+      "id": "bd32e8b1-daa7-4a24-9ec8-d8095dfde1db",
+      "assetId": "31e63469-6f85-5db0-b5c1-a959d00d1cc8",
+      "frames": 12,
+      "generations": 3,
+      "tool": "animate_with_skeleton_v3",
+      "requestFile": "requests/north-attempt02.json",
+      "selected": true
+    }
+  ]
+}

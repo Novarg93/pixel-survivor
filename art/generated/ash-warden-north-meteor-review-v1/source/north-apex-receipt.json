@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"0bd68430-154d-410a-ba2d-f2fb4c44d8ed\",\n  \"image_id\": \"db5379a0-328d-5373-a359-9a06295cefd9\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"db5379a0-328d-5373-a359-9a06295cefd9\",\n  \"job_id\": \"0bd68430-154d-410a-ba2d-f2fb4c44d8ed\",\n  \"description\": \"Keep EXACT same back-facing NORTH knight, same camera, size, armor, crown, cloth, planted boots and original positions on 256x256 transparent canvas. Change ONLY arms and sword into the anticipation apex of a two-handed overhead SLAM. Both hands together directly ABOVE the center of the helmet, elbows raised symmetrically to both sides. ONE same straight greatsword points almost vertically UP toward top-center of canvas, clearly above helmet. We see the BACK of his helmet and shoulders and tabard exactly as original, no face or chest. Feet remain at same x/y. An upright blade centered over the head, NOT a horizontal sword on shoulder, NOT a sideways swing. Dark charcoal metal and restrained rusty orange edge of original sword. No effect, no background, no glow halo, no extra weapons.\",\n  \"seed\": 110109,\n  \"image_size\": {\n    \"width\": 256,\n    \"height\": 256\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 9,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/0bd68430-154d-410a-ba2d-f2fb4c44d8ed/download\"\n}\nPoll get_image(job_id=\"0bd68430-154d-410a-ba2d-f2fb4c44d8ed\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "0bd68430-154d-410a-ba2d-f2fb4c44d8ed",
+    "image_id": "db5379a0-328d-5373-a359-9a06295cefd9",
+    "status": "processing",
+    "source_image_id": "db5379a0-328d-5373-a359-9a06295cefd9",
+    "job_id": "0bd68430-154d-410a-ba2d-f2fb4c44d8ed",
+    "description": "Keep EXACT same back-facing NORTH knight, same camera, size, armor, crown, cloth, planted boots and original positions on 256x256 transparent canvas. Change ONLY arms and sword into the anticipation apex of a two-handed overhead SLAM. Both hands together directly ABOVE the center of the helmet, elbows raised symmetrically to both sides. ONE same straight greatsword points almost vertically UP toward top-center of canvas, clearly above helmet. We see the BACK of his helmet and shoulders and tabard exactly as original, no face or chest. Feet remain at same x/y. An upright blade centered over the head, NOT a horizontal sword on shoulder, NOT a sideways swing. Dark charcoal metal and restrained rusty orange edge of original sword. No effect, no background, no glow halo, no extra weapons.",
+    "seed": 110109,
+    "image_size": {
+      "width": 256,
+      "height": 256
+    },
+    "output_count": 1,
+    "estimated_generations": 9,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/0bd68430-154d-410a-ba2d-f2fb4c44d8ed/download"
+  },
+  "isError": false
+}

@@ -1,0 +1,26 @@
+{
+  "enemy": "charger",
+  "folder": "charger/charge-b",
+  "kind": "motion",
+  "base": "charger/model-b",
+  "taskId": "374e8f5b-aa96-454f-bf43-3c6c7f1803d1",
+  "status": "failed",
+  "seed": 83202,
+  "request": "charger/charge-b/request.json",
+  "estimatedBalanceFallbackUSD": 0.25,
+  "reservedUSD": 0,
+  "billing": {
+    "source": "plan",
+    "plan_jobs_running": 0,
+    "plan_job_limit": 2,
+    "plan_usage_left_pct": 36,
+    "balance_charged": 0,
+    "balance_left": 10
+  },
+  "error": {
+    "status_code": 502,
+    "code": "inference_failed",
+    "message": "Unable to run inference.",
+    "request_id": "374e8f5b-aa96-454f-bf43-3c6c7f1803d1"
+  }
+}

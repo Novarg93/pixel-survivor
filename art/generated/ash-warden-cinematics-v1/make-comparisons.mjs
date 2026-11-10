@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {Buffer} from 'node:buffer';
+import {resolve} from 'node:path';
+import process from 'node:process';
+process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');const{chromium}=await import('@playwright/test');
+const dir='art/generated/ash-warden-cinematics-v1/',meta=JSON.parse(readFileSync(dir+'metadata.json'));
+const review=JSON.parse(readFileSync(dir+'death-review.json'));
+const plans=[{file:'cinematic-keyposes-sheet.png',size:192,rows:[['spawn',[2,4,7,9]],['shield-break',[0,2,5,7]],['transformation',[0,3,6,9]]].map(([k,indices])=>indices.map(i=>({label:k+' #'+i,path:meta.clips[k].frames[i]}))).concat([[0,4,7,11].map(i=>({label:'Death A composite #'+i,path:review.frames[i]}))])},{file:'death-a-stages-sheet.png',size:192,rows:[[0,2,4,5],[6,7,9,11]].map(indices=>indices.map(i=>({label:'Death A #'+i,path:review.frames[i]})))}];
+const browser=await chromium.launch({channel:'chromium',headless:true});try{const page=await browser.newPage();for(const plan of plans){const rows=plan.rows.map(row=>row.map(cell=>({...cell,src:'data:image/png;base64,'+readFileSync(dir+cell.path).toString('base64')})));const url=await page.evaluate(async({size,rows})=>{const c=globalThis.document.createElement('canvas');c.width=rows[0].length*size;c.height=rows.length*(size+28);const x=c.getContext('2d');x.imageSmoothingEnabled=false;for(let y=0;y<c.height;y+=8)for(let xx=0;xx<c.width;xx+=8){x.fillStyle=((y+xx)/8)%2?'#334139':'#28352f';x.fillRect(xx,y,8,8);}for(let r=0;r<rows.length;r++)for(let col=0;col<rows[r].length;col++){const cell=rows[r][col],im=new globalThis.Image();im.src=cell.src;await im.decode();x.drawImage(im,col*size,r*(size+28)+28);x.fillStyle='#ffe6bd';x.font='12px monospace';x.fillText(cell.label,col*size+5,r*(size+28)+20);}return c.toDataURL();},{size:plan.size,rows});writeFileSync(dir+'comparisons/'+plan.file,Buffer.from(url.split(',')[1],'base64'));}}finally{await browser.close();}
+globalThis.console.log('Cast and meteor comparison sheets written');

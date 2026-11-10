@@ -1,0 +1,565 @@
+{
+  "provider": "PixelLab MCP PixMiniMax",
+  "jobs": 46,
+  "generatedFrames": 704,
+  "chargedGenerations": 92,
+  "balanceBefore": 1782.85,
+  "balanceAfter": 1690.85,
+  "creditsBefore": 0,
+  "creditsAfter": 0,
+  "activeJobs": 0,
+  "details": [
+    {
+      "id": "fireball/south-east",
+      "job": "54ea93dc-836c-4c16-840e-9e212d5d2c16",
+      "asset": {
+        "id": "852d7daa-15e0-55fd-b22e-ef4658bd074e",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/east",
+      "job": "332edc9c-4b4b-45e5-9e63-5837b975679e",
+      "asset": {
+        "id": "b53214ff-6b92-510f-94f6-fbf52055f298",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/north-east",
+      "job": "2c5ef0a5-8184-4e2a-b11a-5b50ae038fb7",
+      "asset": {
+        "id": "a219b466-f48d-5303-aed5-62aa3dc0c8f9",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/north",
+      "job": "143aa051-30d5-40b4-8101-e1baf7bf46bb",
+      "asset": {
+        "id": "0387a0bb-cf03-5e15-a2b2-c447520fe9ba",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/north-west",
+      "job": "e8172b53-8278-43c3-9cd0-3893a27e86e0",
+      "asset": {
+        "id": "951f57ae-fb47-599f-b927-17029721eba7",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/west",
+      "job": "b4c7da43-e33f-4f60-a8f8-027bd79b3731",
+      "asset": {
+        "id": "192eeb17-cb22-593f-bd59-5c330b9e805a",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/south-west",
+      "job": "a276ccf3-cb87-47e0-bb69-18fd0b15b39e",
+      "asset": {
+        "id": "cff5e83e-68c3-5538-9c14-2c5d2f56ab29",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/south-east",
+      "job": "7e402c5c-6299-454c-8f31-21f495035f83",
+      "asset": {
+        "id": "f6b54446-1c8a-5cba-bdea-68af905dbb01",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/east",
+      "job": "d652807f-0f7a-45e4-bdcb-768d73f57774",
+      "asset": {
+        "id": "f5128231-9d2a-5fb2-a1a4-b3668a404015",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/north-east",
+      "job": "eed90d8d-98d6-42aa-b841-cb2a67d3407c",
+      "asset": {
+        "id": "3120fd80-9a54-57f9-bee5-462a6dbe46f2",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/north",
+      "job": "644c8eef-d323-46c0-9d84-d1c5348068d7",
+      "asset": {
+        "id": "53844eba-1e80-5b13-8cd4-6fd04d5bcbf0",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/north-west",
+      "job": "948840f9-b2e9-4b28-9e5c-82f1a6d467d7",
+      "asset": {
+        "id": "8ab3df2d-fa15-5d0a-9484-8df3aa82dccc",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/west",
+      "job": "dd24f446-3288-45b7-b34f-81bb88e6394b",
+      "asset": {
+        "id": "819d469c-e0b4-5a55-bb31-bd75f5c456c3",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/south-west",
+      "job": "6360d43f-6de1-43b8-a958-be4bb5703e66",
+      "asset": {
+        "id": "dea63db2-4048-59cb-8521-22b21e7c44e4",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/south-east",
+      "job": "7b945789-b351-4325-a9a4-9a39037c33ce",
+      "asset": {
+        "id": "c74cc0c7-fae7-5b64-bc9d-4a6ab81516a3",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/east",
+      "job": "83942725-e3bd-403e-b1c3-503edcdaaecc",
+      "asset": {
+        "id": "c90fd401-0653-57a5-8f9b-b64d9ade15da",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/north-east",
+      "job": "b9edff46-ff35-4f21-904b-f23fc34144fc",
+      "asset": {
+        "id": "85aefb72-c4fc-57c1-a066-f12a52f4c55b",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/north",
+      "job": "17585fd4-ef26-4017-aecb-81a23c361227",
+      "asset": {
+        "id": "faaff9df-badf-53c6-a51f-5980448b83ca",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/north-west",
+      "job": "8eb8c82c-ab85-471d-82cc-68a644c19cd4",
+      "asset": {
+        "id": "d80ac0fb-75cd-517c-be46-bd7270a3d3c1",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/west",
+      "job": "e9f01cf7-0c8f-429c-9ee7-e34cd35cd57c",
+      "asset": {
+        "id": "6138239f-0a56-5d02-98f4-442fe8dcb295",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/south-west",
+      "job": "cb1bd2fe-973e-418d-9c03-946c8d76a8a2",
+      "asset": {
+        "id": "7b173981-cfe4-5833-9774-cc97256c54b5",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/south-east",
+      "job": "182b4a3b-d20a-49b0-81ad-4dbd20a42cbd",
+      "asset": {
+        "id": "db0c7e75-325d-54ce-b752-57a6f2c11403",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/east",
+      "job": "019c18f8-4f36-494f-9d51-b108b0f30269",
+      "asset": {
+        "id": "1f63868b-95a0-5b47-99ef-ce5ff4180164",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/north-east",
+      "job": "22e5f4c2-714a-43c1-b70a-1231e4e0cbf7",
+      "asset": {
+        "id": "a735da84-6833-511a-a7f9-b8a3bc684351",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/north",
+      "job": "6182b48a-7dbd-41a4-be94-d23d26e61edb",
+      "asset": {
+        "id": "7e4a280f-e4d5-573e-a04e-a7698050fca4",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/north-west",
+      "job": "eae93807-87a5-40c2-b91c-3221c7709ecb",
+      "asset": {
+        "id": "73c69099-c7ba-52eb-b5f2-48fd6172933a",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/west",
+      "job": "c3bde63d-9ac7-4d4f-b33b-796ab7d36646",
+      "asset": {
+        "id": "a4e930b8-950e-5ce3-8e9c-58fee57affa8",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/south-west",
+      "job": "6c752864-c4d0-4ea4-b0e5-bfaf2bb25894",
+      "asset": {
+        "id": "eb1fed56-da36-5811-b1b6-e9e1a2b54999",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "walk/east",
+      "job": "d511fdbf-5f78-425b-b589-ca313c0129a1",
+      "asset": {
+        "id": "79af70af-420b-522b-9a6b-03038d3c7015",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "walk/west",
+      "job": "0257c2b5-53cf-4641-bb84-9dc4565069cd",
+      "asset": {
+        "id": "1aa8ef6c-e4b2-5d6a-b721-6ee954fac686",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "run/east",
+      "job": "5be6d451-d31f-4597-bef7-30ae2096a8c8",
+      "asset": {
+        "id": "baf589cd-5dd8-582a-8417-bfd2297b0b8a",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "run/west",
+      "job": "73b985a6-2e0e-4871-9025-89181da82956",
+      "asset": {
+        "id": "dbb260b8-7f80-5a85-aa0c-a98e97bd251f",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "death/south",
+      "job": "e0b78633-b88d-415c-a6fd-176110c54e13",
+      "asset": {
+        "id": "29316fd9-620c-59c5-abb9-2fd897e7b15c",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/south-east",
+      "job": "c70a8293-cefe-43ea-b882-87a7bf78d84d",
+      "asset": {
+        "id": "afd7adf1-cb88-5b5f-b3f5-cc1884170b9e",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/east",
+      "job": "b05f33f2-b173-436e-9a3d-72b754ebc95a",
+      "asset": {
+        "id": "bdcb6b9c-7ed5-5e89-a5c8-504c1472dcfa",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/north-east",
+      "job": "878fcf6e-90ee-4aa8-a728-cf9ef3b7a4bc",
+      "asset": {
+        "id": "ef071d68-8814-5231-a721-5e3eec505f29",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/north",
+      "job": "7841b044-2c96-49da-874b-03abf6b7efe5",
+      "asset": {
+        "id": "c0f421f3-0f7d-53d6-b9a1-dddf46881160",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/north-west",
+      "job": "811925bc-d69c-4e0d-a38c-42fb6fea3079",
+      "asset": {
+        "id": "eb24fb96-10b4-5c90-be02-ab8d2cc53f2f",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/west",
+      "job": "a82e4bfe-5e4b-4ba1-a256-9a585621eedc",
+      "asset": {
+        "id": "083fdf21-25ea-5382-860b-c94673c98903",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "death/south-west",
+      "job": "8474fce4-bd59-4769-81e8-9a9dd30ee4b3",
+      "asset": {
+        "id": "a37c1f54-744a-5a71-b655-09fb62fdac8d",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 13,
+      "charged": 2
+    },
+    {
+      "id": "fireball/north/attempt-02",
+      "job": "20d0b6cc-a07e-446f-8ce4-1b9977fc66ee",
+      "asset": {
+        "id": "554111e3-2a6d-5746-b133-2ebd03fb46b9",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "lightning/north/attempt-02",
+      "job": "c3b70515-32ae-4d6a-a24b-d077b610318b",
+      "asset": {
+        "id": "f0b5dfcc-80e2-5206-9c91-df1f5eed9c59",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "meteor/north/attempt-02",
+      "job": "e79af12e-0350-4689-95ab-4e719ffb11ae",
+      "asset": {
+        "id": "99f97a63-9dcd-5921-aa00-44d7562ff8e1",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/north/attempt-02",
+      "job": "39092f74-d362-4166-8f04-204974e3895f",
+      "asset": {
+        "id": "c03dc0c2-0202-5c7e-a42e-3f7409a010cc",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "fireball/north-east/attempt-02",
+      "job": "5e686feb-10f1-4236-9787-1dcd261aa774",
+      "asset": {
+        "id": "be5794b3-9b64-5852-a83e-c881fd97de9e",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    },
+    {
+      "id": "defensive/north-east/attempt-02",
+      "job": "174864f0-682a-4788-8931-6b741f3fb366",
+      "asset": {
+        "id": "09dc8de3-c393-544a-ba08-298c37ec9ac3",
+        "type": "image",
+        "status": "saved"
+      },
+      "status": "completed",
+      "frames": 17,
+      "charged": 2
+    }
+  ]
+}

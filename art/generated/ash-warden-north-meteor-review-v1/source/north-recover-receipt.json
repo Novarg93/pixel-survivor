@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: f9cd037e-dc9f-4439-add2-06e338106ada\njob_id: f9cd037e-dc9f-4439-add2-06e338106ada\ndescription: Recovery ONLY: the BACK-facing NORTH knight slowly straightens torso after overhead slam, relaxes both arms and lowers the same sword to his RIGHT at rest to match the final original idle EXACTLY. Always keep back towards viewer and feet at same pixels. No strike, no new swing, no body turning, no stepping, no effects, no smoke, no new weapons. Same camera, size, armor and cloth; transparent background.\nframes: 8\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110114\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"f9cd037e-dc9f-4439-add2-06e338106ada\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/f9cd037e-dc9f-4439-add2-06e338106ada/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 1f105490-cd70-5a29-ad88-76200617da17\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

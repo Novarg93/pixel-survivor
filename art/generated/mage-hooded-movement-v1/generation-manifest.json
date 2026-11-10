@@ -1,0 +1,130 @@
+{
+  "specs": [
+    {
+      "id": "walk-front",
+      "gait": "walk",
+      "body": "front",
+      "jobId": "a93d507f-a152-43e0-8174-a0b8bbde3668",
+      "request": {
+        "description": "Brisk WALK: upright torso, modest strides, heel contact and weight transfer, about1px bob. No running flight or jumps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay original DOWN/front/slight-three-quarter B view, visible face under hood. Never turn into a side profile.",
+        "direction": "south",
+        "frame_count": 8,
+        "no_background": true,
+        "seed": 261109600,
+        "subject_description": "Hooded male mage B, long muted indigo cloak, slate-teal robe, brown belt and boots, bare hands. Medium-detail pixel art, broad folds, restrained colours. No weapon, magic, particles or ornaments. Original front view.",
+        "initial_pose": "Standing in the accepted front/slight-three-quarter stance, relaxed arms, planted boots.",
+        "view": "low top-down",
+        "enhance_prompt": false,
+        "sourceReference": "948d96db-042b-4267-9428-9c54c73316a1"
+      },
+      "initial": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: a93d507f-a152-43e0-8174-a0b8bbde3668\njob_id: a93d507f-a152-43e0-8174-a0b8bbde3668\ndescription: Brisk WALK: upright torso, modest strides, heel contact and weight transfer, about1px bob. No running flight or jumps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay original DOWN/front/slight-three-quarter B view, visible face under hood. Never turn into a side profile.\nframes: 8\nsize: 96x96px\ntransparent: True\nseed: 261109600\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"a93d507f-a152-43e0-8174-a0b8bbde3668\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/a93d507f-a152-43e0-8174-a0b8bbde3668/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 1a59226f-7bef-53ea-a9ab-56087fae69af\nasset_status: pending (saved to your gallery when generation completes)"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "id": "walk-north",
+      "gait": "walk",
+      "body": "north",
+      "jobId": "1866c02a-c909-4121-a0b4-617c33fdd40d",
+      "request": {
+        "description": "Brisk WALK: upright torso, modest strides, heel contact and weight transfer, about1px bob. No running flight or jumps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay strictly NORTH/BACK. No face, eyes, nose, beard or looking back.",
+        "direction": "north",
+        "frame_count": 8,
+        "no_background": true,
+        "seed": 261109601,
+        "subject_description": "Hooded male mage B, long muted indigo cloak, slate-teal robe, brown belt and boots, bare hands. Medium-detail pixel art, broad folds, restrained colours. No weapon, magic, particles or ornaments. Strict back view, no face.",
+        "initial_pose": "Standing strictly with back to camera, relaxed arms, planted boots.",
+        "view": "low top-down",
+        "enhance_prompt": false,
+        "sourceReference": "b641ab3f-dfd1-4263-8589-ab46efd2fb9e"
+      },
+      "initial": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 1866c02a-c909-4121-a0b4-617c33fdd40d\njob_id: 1866c02a-c909-4121-a0b4-617c33fdd40d\ndescription: Brisk WALK: upright torso, modest strides, heel contact and weight transfer, about1px bob. No running flight or jumps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay strictly NORTH/BACK. No face, eyes, nose, beard or looking back.\nframes: 8\nsize: 96x96px\ntransparent: True\nseed: 261109601\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"1866c02a-c909-4121-a0b4-617c33fdd40d\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/1866c02a-c909-4121-a0b4-617c33fdd40d/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 868e37fe-c378-5a60-ba7f-e92888fb7492\nasset_status: pending (saved to your gallery when generation completes)"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "id": "run-front",
+      "gait": "run",
+      "body": "front",
+      "jobId": "da633f70-b0f4-4765-bab7-a1256496873c",
+      "request": {
+        "description": "Light RUN/JOG: compact quick strides, bent knees/elbows, tiny flight phase, about2px bob and mild forward lean in the current front/back view. No high leaps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay original DOWN/front/slight-three-quarter B view, visible face under hood. Never turn into a side profile.",
+        "direction": "south",
+        "frame_count": 8,
+        "no_background": true,
+        "seed": 261109602,
+        "subject_description": "Hooded male mage B, long muted indigo cloak, slate-teal robe, brown belt and boots, bare hands. Medium-detail pixel art, broad folds, restrained colours. No weapon, magic, particles or ornaments. Original front view.",
+        "initial_pose": "Standing in the accepted front/slight-three-quarter stance, relaxed arms, planted boots.",
+        "view": "low top-down",
+        "enhance_prompt": false,
+        "sourceReference": "948d96db-042b-4267-9428-9c54c73316a1"
+      },
+      "initial": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: da633f70-b0f4-4765-bab7-a1256496873c\njob_id: da633f70-b0f4-4765-bab7-a1256496873c\ndescription: Light RUN/JOG: compact quick strides, bent knees/elbows, tiny flight phase, about2px bob and mild forward lean in the current front/back view. No high leaps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay original DOWN/front/slight-three-quarter B view, visible face under hood. Never turn into a side profile.\nframes: 8\nsize: 96x96px\ntransparent: True\nseed: 261109602\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"da633f70-b0f4-4765-bab7-a1256496873c\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/da633f70-b0f4-4765-bab7-a1256496873c/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: aaaa0023-eeb8-53cc-a993-50ab040854c3\nasset_status: pending (saved to your gallery when generation completes)"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "id": "run-north",
+      "gait": "run",
+      "body": "north",
+      "jobId": "8dedc0a1-f774-474e-aaf2-5c6bb6fcbefb",
+      "request": {
+        "description": "Light RUN/JOG: compact quick strides, bent knees/elbows, tiny flight phase, about2px bob and mild forward lean in the current front/back view. No high leaps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay strictly NORTH/BACK. No face, eyes, nose, beard or looking back.",
+        "direction": "north",
+        "frame_count": 8,
+        "no_background": true,
+        "seed": 261109603,
+        "subject_description": "Hooded male mage B, long muted indigo cloak, slate-teal robe, brown belt and boots, bare hands. Medium-detail pixel art, broad folds, restrained colours. No weapon, magic, particles or ornaments. Strict back view, no face.",
+        "initial_pose": "Standing strictly with back to camera, relaxed arms, planted boots.",
+        "view": "low top-down",
+        "enhance_prompt": false,
+        "sourceReference": "b641ab3f-dfd1-4263-8589-ab46efd2fb9e"
+      },
+      "initial": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 8dedc0a1-f774-474e-aaf2-5c6bb6fcbefb\njob_id: 8dedc0a1-f774-474e-aaf2-5c6bb6fcbefb\ndescription: Light RUN/JOG: compact quick strides, bent knees/elbows, tiny flight phase, about2px bob and mild forward lean in the current front/back view. No high leaps. One complete seamless 8-pose left/right gait ON THE SPOT. Keep pelvis/root centred; no travel, camera shift, turns, start/stop or idle pause. Alternate legs: contact, backward plant, passing, push-off, swap. Show boots below the long robe. Arms counter-swing with natural short forearms, hands above mid-thigh. Restrained cloth lag, not billowing. Keep head/body size, colours and original view, fully inside 96x96 with margin. Last pose flows into first. Stay strictly NORTH/BACK. No face, eyes, nose, beard or looking back.\nframes: 8\nsize: 96x96px\ntransparent: True\nseed: 261109603\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"8dedc0a1-f774-474e-aaf2-5c6bb6fcbefb\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/8dedc0a1-f774-474e-aaf2-5c6bb6fcbefb/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 8afa5005-e018-5c28-af3c-1034ca0eaed2\nasset_status: pending (saved to your gallery when generation completes)"
+          }
+        ],
+        "isError": false
+      }
+    }
+  ],
+  "balanceBefore": {
+    "generations": 1560.9,
+    "cashUsd": 0
+  },
+  "preSubmissionValidationErrors": 1,
+  "rawFramesPerJob": 9,
+  "selectedIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "requestedFramesPerLoop": 8,
+  "productionIntegrated": false
+}

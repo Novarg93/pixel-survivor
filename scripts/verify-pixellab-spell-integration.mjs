@@ -1,0 +1,14 @@
+import {readFileSync,readdirSync,existsSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/mage-spells-pixellab-ai-v1';
+const baseline=JSON.parse(readFileSync(`${root}/source/protected.json`,'utf8'));
+const digest=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>!existsSync(file)||digest(file)!==baseline[file]).sort();
+const allowedChanged=['src/game/art/assetRegistry.ts','src/game/art/fireballPack.ts','src/game/art/MageAbilityArt.ts','src/game/art/mageMeteorPack.ts','src/game/art/MageMeteorPresentation.ts','src/game/config/mageAbilityTuning.json'].sort();
+const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
+const added=[...walk('src'),...walk('public')].filter(file=>!(file in baseline)).sort();
+const allowedAdded=['src/game/art/fireballManifestPixellab.json','src/game/art/mageMeteorManifestPixellab.json','public/assets/hd/mage-fireball-pixellab-v1/atlas.json','public/assets/hd/mage-fireball-pixellab-v1/atlas.png','public/assets/hd/mage-meteor-pixellab-v1/atlas.json','public/assets/hd/mage-meteor-pixellab-v1/atlas.png'].sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw Error('Unexpected integration scope: '+JSON.stringify({changed,added}));
+const report={runtimeIntegration:true,approval:'User explicitly approved the PixelLab Fireball/Meteor demo and asked for game integration.',originalProtectedFiles:Object.keys(baseline).length,unchangedProtectedFiles:Object.keys(baseline).length-changed.length,changed,added,currentSHA256:Object.fromEntries([...changed,...added].map(file=>[file,digest(file)])),ultimateUnchanged:true,otherProtectedArtUnchanged:true};
+writeFileSync('art/generated/mage-spells-pixellab-runtime-v1/integration-verification.json',JSON.stringify(report,null,2)+'\n');
+globalThis.console.log(JSON.stringify({approvedScopeVerified:true,changed:changed.length,added:added.length,unchanged:report.unchangedProtectedFiles,ultimateUnchanged:true}));

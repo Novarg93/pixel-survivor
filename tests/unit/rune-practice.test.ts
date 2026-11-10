@@ -12,7 +12,7 @@ it('starts exactly one real Rune Warden with all three spells and the same lawfu
   expect(w.enemies).toHaveLength(1);const e=w.enemies[0]!;
   expect(e.kind).toBe('sorcerer');expect(e.boss!.enrageIndex).toBe(1);expect(e.boss!.magic?.nextAt).toBe(w.elapsed+3);
   expect(e.hp).toBe(ENEMIES.sorcerer.hp*scalesAt(RUNE_PRACTICE.at).hp);expect(e.damage).toBe(ENEMIES.sorcerer.damage*scalesAt(RUNE_PRACTICE.at).damage);
-  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('frost');expect(w.ultimate.charge).toBe(10);expect(w.finalEncounter.phase).toBe('inactive');
+  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('lightning');expect(w.ultimate.charge).toBe(10);expect(w.finalEncounter.phase).toBe('inactive');
   const ash=new World(42);startBossPractice(ash);expect(w.upgrades).toEqual(ash.upgrades);expect(w.stats).toEqual(ash.stats);expect(w.player.maxHp).toBe(ash.player.maxHp);
 });
 it('never spawns other mobs or encounters, including beyond20min and external director attempts',()=>{

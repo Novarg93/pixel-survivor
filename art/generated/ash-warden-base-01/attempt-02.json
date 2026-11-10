@@ -1,0 +1,44 @@
+{
+  "purpose": "Controlled correction of the first sprite: heavy proportions and two-hand grip",
+  "source": "02-img2img-guide-128.png",
+  "request": {
+    "description": "A MASSIVE BROAD HEAVY armored ancient ash guardian, a final boss, not a slim human knight. ONE full-body HD pixel art game sprite in neutral planted stance, SOUTH facing straight forward, low top-down overhead three-quarter game view. TWO HANDS TOGETHER grasp the SAME TWO-HANDED GREATSWORD handle in front of the lower chest; both elbows bend inward, both gauntlets clearly wrap the long grip, neither arm hangs at the side. Thick broad sword blade descends diagonally to lower right, fully inside the sprite. Huge square shoulders, wide barrel chest, thick waist, SHORT THICK armored legs, large planted boots, compact tank-like body proportions. Preserve the reference's distinctive jagged forked closed crown helmet and narrow blazing orange V visor eyes, charcoal BLACK split plate armor with cool ash-gray edge highlights, bright orange-red branching ember cracks in chest and shoulder plates. Torn dark ash cloth. Only two small dry branch spikes behind the shoulders, a secondary accent. Sword has a wide dark stone-metal blade with an orange fissure and the reference's gnarled branch guard. Readable bold clean pixel clusters, restrained details. Body about 76px high, compact sword about 55px, generous clear margins. Isolated transparent background, no ground, no shadow, no illustration scene, no text. Both hands remain connected to one sword hilt.",
+    "init_image_url": "upload:4dadac12-2d94-4de6-8565-c722d663f9f5",
+    "init_image_strength": 60,
+    "width": 128,
+    "height": 128,
+    "view": "low top-down",
+    "direction": "south",
+    "isometric": false,
+    "no_background": true,
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "detail": "medium detail",
+    "text_guidance_scale": 10,
+    "seed": 260110603
+  },
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "id: 5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\njob_id: 5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\ndescription: A MASSIVE BROAD HEAVY armored ancient ash guardian, a final boss, not a slim human knight. ONE full-body HD pixel art game sprite in neutral planted stance, SOUTH facing straight forward, low top-down overhead three-quarter game view. TWO HANDS TOGETHER grasp the SAME TWO-HANDED GREATSWORD handle in front of the lower chest; both elbows bend inward, both gauntlets clearly wrap the long grip, neither arm hangs at the side. Thick broad sword blade descends diagonally to lower right, fully inside the sprite. Huge square shoulders, wide barrel chest, thick waist, SHORT THICK armored legs, large planted boots, compact tank-like body proportions. Preserve the reference's distinctive jagged forked closed crown helmet and narrow blazing orange V visor eyes, charcoal BLACK split plate armor with cool ash-gray edge highlights, bright orange-red branching ember cracks in chest and shoulder plates. Torn dark ash cloth. Only two small dry branch spikes behind the shoulders, a secondary accent. Sword has a wide dark stone-metal blade with an orange fissure and the reference's gnarled branch guard. Readable bold clean pixel clusters, restrained details. Body about 76px high, compact sword about 55px, generous clear margins. Isolated transparent background, no ground, no shadow, no illustration scene, no text. Both hands remain connected to one sword hilt.\nsize: 128x128px\ntransparent: True\nasset_id: 83525dbb-4656-52af-b22d-a53af46e12aa\nasset_status: pending (saved when generation completes)\ninit_image: yes (strength 60)\nseed: 260110603\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/5ea5443e-a685-4a3b-ad2b-aedb1b7912f3/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+      }
+    ],
+    "isError": false
+  },
+  "previousSpriteResult": {
+    "job_id": "41dd2a54-b2e3-4455-b5a4-397397711f5b",
+    "status": "completed",
+    "frames": 1,
+    "download_url": "https://api.pixellab.ai/mcp/images/41dd2a54-b2e3-4455-b5a4-397397711f5b/download",
+    "download_urls": [
+      "https://api.pixellab.ai/mcp/images/41dd2a54-b2e3-4455-b5a4-397397711f5b/download"
+    ],
+    "asset": {
+      "id": "8d083b74-35e7-5e75-be57-8ad3c2a7029a",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 1
+  }
+}

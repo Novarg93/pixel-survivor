@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Минибоссы — библиотека анимаций</title><link rel="icon" href="data:,"><link rel="stylesheet" href="viewer.css"></head>
+<body><main>
+<header><div class="eyebrow">PIXEL SURVIVOR · ANIMATION LIBRARY</div><span class="badge">Актуальные игровые атласы</span><h1>Минибоссы<span>Все движения и заклинания</span></h1><p>Три противника, их анимации тела и отдельные эффекты. Исходные кадры из проекта — без новых генераций.</p></header>
+<section class="controls" aria-label="Управление просмотром">
+<label>Минибосс<select id="boss" aria-label="Минибосс"><option value="all">Все три рядом</option></select></label>
+<label>Набор<select id="collection" aria-label="Набор"><option value="current">В игре сейчас</option><option value="archive">Архивные модели</option></select></label>
+<label class="clip-control">Анимация<select id="clip" aria-label="Анимация"></select></label>
+</section><template id="advanced-controls">
+<label>Направление<select id="facing" aria-label="Направление"><option value="left">Влево</option><option value="right">Вправо</option></select></label>
+<label>Масштаб<select id="zoom" aria-label="Масштаб"><option value="1">Игровой ×1</option><option value="2">Игровой ×2</option><option value="3" selected>Игровой ×3</option><option value="native">Исходный ×2</option></select></label>
+<label>Темп<select id="speed" aria-label="Темп"><option value=".25">¼×</option><option value=".5">½×</option><option value="1" selected>1× · исходный</option><option value="2">2×</option></select></label>
+<label>Фон<select id="background" aria-label="Фон"><option value="grove">Роща</option><option value="forest">Тёмный лес</option><option value="plain">Нейтральный</option><option value="checker">Прозрачность</option></select></label>
+<label class="check"><input id="repeat" type="checkbox" checked>Повтор в демо</label><label class="check"><input id="hero" type="checkbox" checked>Маг для масштаба</label><label class="check"><input id="origins" type="checkbox">Показать pivot</label>
+</template>
+<section class="player"><div class="transport"><button id="play">Пауза</button><button id="restart" title="Начать клип заново">Сначала</button><button id="prev" aria-label="Предыдущий кадр">← кадр</button><button id="next" aria-label="Следующий кадр">кадр →</button><label class="seek">Время<input id="seek" aria-label="Время" type="range" min="0" max="2.4" step=".001" value="0"></label><output id="time">0.00 с</output></div>
+<canvas id="stage" width="1120" height="440" aria-label="Анимации минибоссов"></canvas><div id="status" role="status">Загрузка изображений…</div></section>
+<div id="boss-cards" class="boss-cards" aria-label="Выбор минибосса"></div>
+<details id="advanced"><summary>Направление, фон, масштаб и повтор</summary><div id="advanced-host" class="controls"></div></details>
+<p id="note" class="note"></p>
+<section class="inspector"><div class="inspector-head"><div><div class="eyebrow">FRAME INSPECTOR</div><h2 id="inspector-title">Кадры клипа</h2></div><button id="save-frame">Сохранить кадр PNG</button></div><div id="frames" class="filmstrip"></div><div id="frame-label" class="frame-label"></div></section>
+<details><summary>Что здесь показано</summary><p id="inventory"></p><p>Темп взят из исходных клипов. Игровое ускорение по фазам атак, оттенок второй фазы, реакции на попадания и маски ярких VFX здесь не симулируются. «Повтор в демо» позволяет повторять даже одноразовые атаки.</p><p>У Тернового зверя есть отдельная статичная idle-модель. У Хранителей idle — кадр ходьбы 0. Новых отдельных hurt/death-анимаций у этих моделей нет: старые движения доступны в наборе «Архивные модели» и принадлежат прежним моделям.</p><a href="manifest.json">Каталог кадров и SHA256</a></details>
+<footer>Отдельная библиотека анимаций · игра и исходные изображения не изменены.</footer>
+</main><script src="viewer-data.js"></script><script src="viewer.js"></script></body></html>

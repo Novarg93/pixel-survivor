@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 1497a069-ce6c-435a-ab49-2037b79f7dd2\njob_id: 1497a069-ce6c-435a-ab49-2037b79f7dd2\ndescription: One TWO-HANDED OVERHEAD SLAM, facing NORTH with BACK to camera throughout. Grasp the same sword hilt with BOTH hands, raise both elbows and lift the greatsword ABOVE the helmet, blade pointing UP. Pause at a clearly readable overhead apex. Drive the sword vertically DOWN and FORWARD into the ground NORTH of his feet, away from camera, bending torso and knees in a heavy follow-through. Brief narrow amber blade streak at contact. Recover to EXACT initial back-facing stance. Feet stay planted at original pixel positions; camera and character size fixed. Preserve same angular armor, torn ash-grey cloth, sword shape and muted colors. Clearly visible raised arms and overhead blade. No sideways sweep, spin, turning toward viewer, second weapon, explosion or fire wave. Transparent margin above sword.\nframes: 16\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110103\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"1497a069-ce6c-435a-ab49-2037b79f7dd2\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/1497a069-ce6c-435a-ab49-2037b79f7dd2/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 9c3b7c07-5d7f-5f53-9c51-f2d56ff5d06d\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

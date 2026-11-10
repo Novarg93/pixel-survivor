@@ -1,0 +1,8217 @@
+{
+  "protectedFiles": 1153,
+  "errors": [],
+  "peakWarnings": 6,
+  "peakActive": 6,
+  "gifExactClips": 7,
+  "sharedUpper": true,
+  "westMirror": true,
+  "southUnchanged": true,
+  "meteorCUnchanged": true,
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "allcasts",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "allcasts",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "allcasts",
+          "frame": -1,
+          "x": 0,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "meteor",
+      "time": 750,
+      "state": {
+        "ready": true,
+        "time": 750,
+        "mode": "meteor",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "meteor",
+          "frame": -1,
+          "x": 0,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "single",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 5,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 550,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "single",
+      "time": 750,
+      "state": {
+        "ready": true,
+        "time": 750,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 6,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "single",
+      "time": 960,
+      "state": {
+        "ready": true,
+        "time": 960,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 8,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 2,
+            "aftermath": -1,
+            "age": 960,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "single",
+      "time": 1450,
+      "state": {
+        "ready": true,
+        "time": 1450,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": -1,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "ritual-enter",
+      "time": 700,
+      "state": {
+        "ready": true,
+        "time": 700,
+        "mode": "ritual-enter",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-enter",
+          "frame": 5,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "ritual-channel",
+      "time": 400,
+      "state": {
+        "ready": true,
+        "time": 400,
+        "mode": "ritual-channel",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 2,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "armageddon-cast",
+      "time": 420,
+      "state": {
+        "ready": true,
+        "time": 420,
+        "mode": "armageddon-cast",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 3,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 700,
+      "state": {
+        "ready": true,
+        "time": 700,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-enter",
+          "frame": 5,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1000,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1050,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1250,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2550,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "time": 2050,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 3,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 250,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 200,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 150,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 100,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1250,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1300,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1350,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1400,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 2550,
+      "state": {
+        "ready": true,
+        "time": 2550,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 6,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 700,
+            "active": true,
+            "fallOffset": [
+              -9.333333333333334,
+              -63.333333333333336
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 0,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 650,
+            "active": true,
+            "fallOffset": [
+              -11.666666666666668,
+              -79.16666666666667
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 0,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 600,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -800,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -850,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -900,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 3500,
+      "state": {
+        "ready": true,
+        "time": 3500,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 1,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 250,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 200,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 150,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 100,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 50,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 5,
+        "safePoints": 156,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 4200,
+      "state": {
+        "ready": true,
+        "time": 4200,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 0,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 3,
+        "safePoints": 177,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "time": 5500,
+      "state": {
+        "ready": true,
+        "time": 5500,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 3,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2200,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2150,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2100,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 0,
+          "x": -181.07523931710594,
+          "y": -1.898901331361618,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 550,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 500,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 450,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 400,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1000,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1050,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 950,
+      "state": {
+        "ready": true,
+        "time": 950,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 6,
+          "x": -198.10052770377894,
+          "y": -22.98689370127417,
+          "ritual": false,
+          "direction": "west"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 700,
+            "active": true,
+            "fallOffset": [
+              -9.333333333333334,
+              -63.333333333333336
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -800,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 4,
+        "safePoints": 181,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "time": 2050,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 0,
+          "x": -208.1870058124604,
+          "y": 23.787454549643257,
+          "ritual": false,
+          "direction": "east"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 500,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 450,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 400,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 5,
+        "safePoints": 156,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 2500,
+      "state": {
+        "ready": true,
+        "time": 2500,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 7,
+          "x": -182.48800055740628,
+          "y": 8.31924762804062,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 3,
+        "safePoints": 177,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 15050,
+      "state": {
+        "ready": true,
+        "time": 15050,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 4,
+          "x": -182.923553628894,
+          "y": 9.414378132605552,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 50,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 0,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -50,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1500,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1550,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 15050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 15000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 2,
+        "safePoints": 185,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 18500,
+      "state": {
+        "ready": true,
+        "time": 18500,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 2,
+          "x": -225.80222978225822,
+          "y": 11.969429229755654,
+          "ritual": false,
+          "direction": "south"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "phase2",
+      "state": {
+        "ready": true,
+        "time": 6000,
+        "mode": "phase2",
+        "completed": true,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 1,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4200,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4150,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4100,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "state": {
+        "ready": true,
+        "time": 19000,
+        "mode": "phase3",
+        "completed": true,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 2,
+          "x": -194.5320458740522,
+          "y": 21.59680384726065,
+          "ritual": false,
+          "direction": "east"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 19000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rateSamples": [
+        {
+          "rate": "0.25",
+          "measured": 120.85000000000036
+        },
+        {
+          "rate": "0.5",
+          "measured": 241.65000000000055
+        },
+        {
+          "rate": "1",
+          "measured": 483.2999999999993
+        },
+        {
+          "rate": "2",
+          "measured": 966.5999999999985
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "allcasts",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "allcasts",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "allcasts",
+          "frame": -1,
+          "x": 0,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "meteor",
+      "time": 750,
+      "state": {
+        "ready": true,
+        "time": 750,
+        "mode": "meteor",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "meteor",
+          "frame": -1,
+          "x": 0,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "single",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 5,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 550,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "single",
+      "time": 750,
+      "state": {
+        "ready": true,
+        "time": 750,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 6,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 1,
+        "safePoints": 174,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "single",
+      "time": 960,
+      "state": {
+        "ready": true,
+        "time": 960,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": 8,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 2,
+            "aftermath": -1,
+            "age": 960,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "single",
+      "time": 1450,
+      "state": {
+        "ready": true,
+        "time": 1450,
+        "mode": "single",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "cast-south",
+          "frame": -1,
+          "x": -100,
+          "y": 0,
+          "ritual": false
+        },
+        "strikes": [
+          {
+            "id": "single",
+            "group": 0,
+            "spawnMs": 0,
+            "x": 45,
+            "y": 0,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "ritual-enter",
+      "time": 700,
+      "state": {
+        "ready": true,
+        "time": 700,
+        "mode": "ritual-enter",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-enter",
+          "frame": 5,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "ritual-channel",
+      "time": 400,
+      "state": {
+        "ready": true,
+        "time": 400,
+        "mode": "ritual-channel",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 2,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "armageddon-cast",
+      "time": 420,
+      "state": {
+        "ready": true,
+        "time": 420,
+        "mode": "armageddon-cast",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 3,
+          "x": 0,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 700,
+      "state": {
+        "ready": true,
+        "time": 700,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-enter",
+          "frame": 5,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1000,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1050,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1250,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2550,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -2750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "time": 2050,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 3,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 250,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 200,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 150,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 100,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1250,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1300,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1350,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1400,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 2550,
+      "state": {
+        "ready": true,
+        "time": 2550,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "armageddon-cast",
+          "frame": 6,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 700,
+            "active": true,
+            "fallOffset": [
+              -9.333333333333334,
+              -63.333333333333336
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 0,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 650,
+            "active": true,
+            "fallOffset": [
+              -11.666666666666668,
+              -79.16666666666667
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 0,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 600,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -800,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -850,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -900,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 3500,
+      "state": {
+        "ready": true,
+        "time": 3500,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 1,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 250,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 200,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 150,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 100,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 50,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 5,
+        "safePoints": 156,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 4200,
+      "state": {
+        "ready": true,
+        "time": 4200,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 0,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 3,
+        "safePoints": 177,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "time": 5500,
+      "state": {
+        "ready": true,
+        "time": 5500,
+        "mode": "phase2",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 3,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2200,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2150,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2100,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "time": 550,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 0,
+          "x": -181.07523931710594,
+          "y": -1.898901331361618,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 550,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 500,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 450,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 400,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1000,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1050,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 6,
+        "safePoints": 153,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 950,
+      "state": {
+        "ready": true,
+        "time": 950,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 6,
+          "x": -198.10052770377894,
+          "y": -22.98689370127417,
+          "ritual": false,
+          "direction": "west"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 4,
+            "fall": 1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 700,
+            "active": true,
+            "fallOffset": [
+              -9.333333333333334,
+              -63.333333333333336
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -750,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -800,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 4,
+        "safePoints": 181,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "time": 2050,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 0,
+          "x": -208.1870058124604,
+          "y": 23.787454549643257,
+          "ritual": false,
+          "direction": "east"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 500,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 3,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 450,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 400,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 350,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 2,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 300,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          }
+        ],
+        "warnings": 5,
+        "safePoints": 156,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 2500,
+      "state": {
+        "ready": true,
+        "time": 2500,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 7,
+          "x": -182.48800055740628,
+          "y": 8.31924762804062,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 1,
+            "aftermath": -1,
+            "age": 950,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": 0,
+            "aftermath": -1,
+            "age": 900,
+            "active": true,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 4,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 850,
+            "active": true,
+            "fallOffset": [
+              -2.333333333333332,
+              -15.833333333333329
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 3,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 800,
+            "active": true,
+            "fallOffset": [
+              -4.666666666666668,
+              -31.66666666666667
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": 5,
+            "fall": 2,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 750,
+            "active": true,
+            "fallOffset": [
+              -7,
+              -47.5
+            ]
+          }
+        ],
+        "warnings": 3,
+        "safePoints": 177,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 15050,
+      "state": {
+        "ready": true,
+        "time": 15050,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 4,
+          "x": -182.923553628894,
+          "y": 9.414378132605552,
+          "ritual": false,
+          "direction": "north"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 50,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": 0,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 0,
+            "active": true,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -50,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -100,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -150,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -200,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1500,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1550,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1600,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1650,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": -1700,
+            "active": false,
+            "fallOffset": [
+              -14,
+              -95
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 15050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 15000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 14800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 13300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 2,
+        "safePoints": 185,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 18500,
+      "state": {
+        "ready": true,
+        "time": 18500,
+        "mode": "phase3",
+        "completed": false,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 2,
+          "x": -225.80222978225822,
+          "y": 11.969429229755654,
+          "ritual": false,
+          "direction": "south"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 1750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18500,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 16750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "phase2",
+      "state": {
+        "ready": true,
+        "time": 6000,
+        "mode": "phase2",
+        "completed": true,
+        "playing": false,
+        "body": {
+          "clip": "ritual-channel",
+          "frame": 1,
+          "x": -205,
+          "y": 0,
+          "ritual": true
+        },
+        "strikes": [
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 1700,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 1750,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 1800,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4200,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 1850,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4150,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 1900,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4100,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 1950,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4050,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 3250,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 3300,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2700,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 3350,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2650,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 3400,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2600,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 3450,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2550,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "state": {
+        "ready": true,
+        "time": 19000,
+        "mode": "phase3",
+        "completed": true,
+        "playing": false,
+        "body": {
+          "clip": "existing-walk",
+          "frame": 2,
+          "x": -194.5320458740522,
+          "y": 21.59680384726065,
+          "ritual": false,
+          "direction": "east"
+        },
+        "strikes": [
+          {
+            "id": "1-0-0",
+            "group": 0,
+            "spawnMs": 15000,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 4000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-1",
+            "group": 0,
+            "spawnMs": 15050,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-2",
+            "group": 0,
+            "spawnMs": 15100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-3",
+            "group": 0,
+            "spawnMs": 15150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-4",
+            "group": 0,
+            "spawnMs": 15200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-0-5",
+            "group": 0,
+            "spawnMs": 15250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 3750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-0",
+            "group": 1,
+            "spawnMs": 16550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-1",
+            "group": 1,
+            "spawnMs": 16600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-2",
+            "group": 1,
+            "spawnMs": 16650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-3",
+            "group": 1,
+            "spawnMs": 16700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "1-1-4",
+            "group": 1,
+            "spawnMs": 16750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 2250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-0",
+            "group": 0,
+            "spawnMs": 0,
+            "x": -100,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 19000,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-1",
+            "group": 0,
+            "spawnMs": 50,
+            "x": -30,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18950,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-2",
+            "group": 0,
+            "spawnMs": 100,
+            "x": 40,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18900,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-3",
+            "group": 0,
+            "spawnMs": 150,
+            "x": 110,
+            "y": -52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18850,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-4",
+            "group": 0,
+            "spawnMs": 200,
+            "x": -65,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18800,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-0-5",
+            "group": 0,
+            "spawnMs": 250,
+            "x": 70,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 18750,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-0",
+            "group": 1,
+            "spawnMs": 1550,
+            "x": -110,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17450,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-1",
+            "group": 1,
+            "spawnMs": 1600,
+            "x": -40,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17400,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-2",
+            "group": 1,
+            "spawnMs": 1650,
+            "x": 30,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17350,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-3",
+            "group": 1,
+            "spawnMs": 1700,
+            "x": 100,
+            "y": 52,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17300,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "0-1-4",
+            "group": 1,
+            "spawnMs": 1750,
+            "x": 0,
+            "y": -80,
+            "targetLocked": true,
+            "telegraph": -1,
+            "fall": -1,
+            "impact": -1,
+            "aftermath": -1,
+            "age": 17250,
+            "active": false,
+            "fallOffset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "warnings": 0,
+        "safePoints": 213,
+        "meteorTextureCount": 23,
+        "loadedImages": 190,
+        "shield": true
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rateSamples": [
+        {
+          "rate": "0.25",
+          "measured": 120.82499999999982
+        },
+        {
+          "rate": "0.5",
+          "measured": 241.64999999999964
+        },
+        {
+          "rate": "1",
+          "measured": 500
+        },
+        {
+          "rate": "2",
+          "measured": 966.5999999999985
+        }
+      ]
+    }
+  ]
+}

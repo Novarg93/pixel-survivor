@@ -1,0 +1,26 @@
+{
+  "provider": "PixelLab MCP pixelart_workbench",
+  "inputImage": "2d555659-915c-4286-94ff-d5c2a4526bc6",
+  "outputImage": "2ffb7845-6950-4675-8af1-ded2c24ad864",
+  "job": "948840f9-b2e9-4b28-9e5c-82f1a6d467d7",
+  "oneBasedFrame": 7,
+  "operation": {
+    "operation": "flood_fill",
+    "layer": "image",
+    "frames": [
+      7
+    ],
+    "seed": [
+      180,
+      50
+    ],
+    "expected": "#7e7e7dff",
+    "color": "#00000000"
+  },
+  "changedPixels": 13432,
+  "nonArtifactChanges": 0,
+  "remainingGrayBootPixels": 5,
+  "originalSHA256": "756ab6ffa5c7eff89a72baf47b92ff4a46372fa4d76f2e80e961eabf3a738791",
+  "repairedSHA256": "dbcfea7601add4fa5a599505f8a1cb7f60592d655a22edff10dbd00294f72738",
+  "download": "https://api.pixellab.ai/mcp/pixel-tools/2ffb7845-6950-4675-8af1-ded2c24ad864/frames.png"
+}

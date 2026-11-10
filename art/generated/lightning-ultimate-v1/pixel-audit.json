@@ -1,0 +1,745 @@
+{
+  "version": 1,
+  "width": 1572,
+  "height": 1716,
+  "rgbaBytes": 10790208,
+  "padding": 2,
+  "columns": 6,
+  "frameCount": 74,
+  "sources": {
+    "art/main-hero-mage/abilities/ult-lightning/lightning-strike.gif": "086e433510551120d48779bb1a23db8d3bed72d44808cf765d143c98423f0bf0",
+    "art/main-hero-mage/abilities/ult-lightning/lightning-strike.png": "38083e4a956e643bca8d435d22731d276dd66572700869b0b57a7b3e50befbf4",
+    "art/main-hero-mage/abilities/ult-lightning/lightning-strike.json": "d76dbbd17eb0d7c6407dd80a7db609e3b825dade05860cc8a35d45d50163c926",
+    "art/main-hero-mage/abilities/ult-lightning/ultimate-hand-lightning.gif": "16db6b7f4c9fe37d3c15ba2286c6b0d48e810a01e45c243d2508dab3f779fbdd",
+    "art/main-hero-mage/abilities/ult-lightning/ultimate-hand-lightning.png": "90c709e203f3f2aa1c78a29a32e437a0001fbcea3103c340146bb2028e6e0dd9",
+    "art/main-hero-mage/abilities/ult-lightning/ultimate-hand-lightning.json": "ad801c51b80259db2d52ee2be35e2c2a1e959ef7e53df22d1841f2863fe1b3a3",
+    "art/main-hero-mage/abilities/ult-lightning/secondary-chain.gif": "b6dcf602a1d9e5891dc87262ea0c2f02e678db0647d8e91ba39cb9dc1e39b3fd",
+    "art/main-hero-mage/abilities/ult-lightning/secondary-chain.png": "03aefe7c61688d824360b8476484aa8372f6f0c9a9b65eebd2a1042d1084d876",
+    "art/main-hero-mage/abilities/ult-lightning/secondary-chain.json": "ad801c51b80259db2d52ee2be35e2c2a1e959ef7e53df22d1841f2863fe1b3a3",
+    "art/main-hero-mage/abilities/ult-lightning/electric-impact.gif": "e1803486892a8e350517a91be8c15fce5d2f04b94f1d847545b0be605012abab"
+  },
+  "clips": {
+    "sky": {
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 110
+      },
+      "frameCount": 10,
+      "durationsMs": [
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "46276126ff62c0fd359b35822e3bbec3656486ec868bd2d63a8169178b71c315"
+        },
+        {
+          "index": 1,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "9e60e28fd3d2abc6176c412f3c425d375af90ef432736dad1e94bef196bbd867"
+        },
+        {
+          "index": 2,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "3c7e0b0c9237d0156c6e4e58eb1a27752b3cce933c75a69c61bd2260c079ea91"
+        },
+        {
+          "index": 3,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "64a472d196b5672f67a3ed1fd8e2ab2c073bd810cbf51d45db42be4970991df6"
+        },
+        {
+          "index": 4,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "b9775c6ef8422409057507aa8f9a47073bd6ca0c632c91a973c1a32befefe91d"
+        },
+        {
+          "index": 5,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "32b3de78b3c29824c9cb5a63cb3926ade18988cd5941aed66921b16961c248c7"
+        },
+        {
+          "index": 6,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "b6c05fadfa7af1db71cbf86ea2c13761cf8f5fe9ee9d242ece6b3c72619022ab"
+        },
+        {
+          "index": 7,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "eba3583692b6511620abbc737333424d48dee262b84b7fa48f4aded9a7379d1d"
+        },
+        {
+          "index": 8,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606"
+        },
+        {
+          "index": 9,
+          "gifDurationMs": 70,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 71,
+          "pixelSHA256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606"
+        }
+      ],
+      "rgbaSource": "original PNG"
+    },
+    "beam": {
+      "width": 258,
+      "height": 105,
+      "pivot": {
+        "x": 7,
+        "y": 50
+      },
+      "frameCount": 16,
+      "durationsMs": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "55833bbecfddc99b8ecee9f116d0f256d2f351e6585918240284dacd8472294d"
+        },
+        {
+          "index": 1,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "a53c9118907a3e21119493019210de210b5cd053e382badab61bc0bd326424ff"
+        },
+        {
+          "index": 2,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "d42ddac3fd7071e202a86f78f6974f7311c6aac4a38afe246fd17ec49478e600"
+        },
+        {
+          "index": 3,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "bcf3abf03df726607f0f2e0b93f616e8d90f814e7ecab5ea2e3a081bdc80c712"
+        },
+        {
+          "index": 4,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "5cbadea647c537a55a7387497d63ecd151c14481d89998242a43fe4db58b8823"
+        },
+        {
+          "index": 5,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "88ac246ec68805482c0f1a30fe05c932e451d06e8921d2f950d4c1ebf8d4cf98"
+        },
+        {
+          "index": 6,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "fe2fed6ab74d7008ddfc15fbd030c33411077c511c5e6b30763cfee1bee9400b"
+        },
+        {
+          "index": 7,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "c13e464b5a110652f54510f91e9c89f6a29c013f004986bbf1408f34dc17c3d9"
+        },
+        {
+          "index": 8,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "ae0fa6c834b4ca66b61029bcafa2e7ec735cb847a7a32b65b8cc0e53a824a762"
+        },
+        {
+          "index": 9,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "431c4d5c0a06959c4fabd5683dd4e7355170a4fbbf9144bc5515f8716e122eb9"
+        },
+        {
+          "index": 10,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "65c5d6c7ee8315f1c230e350db7718c1f39a262902122c1576e0ec8123e11ebe"
+        },
+        {
+          "index": 11,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "fdefbc09a86fc2ab2606fb9d6650c619c7c780a6041eab26cf01b2c365110165"
+        },
+        {
+          "index": 12,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "970559d108e69fb4653bbf955aeb5472c9608780e152b9c9fd77fde856325ff8"
+        },
+        {
+          "index": 13,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "f46b51fddb611d5a8a1135676fc0b9cb22e24202e75fb7974157c264917e8ea8"
+        },
+        {
+          "index": 14,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "b89ba9f28df5ab92023db731f0c05f3f16d6baaceddbbafcc79ed2a37336d4c8"
+        },
+        {
+          "index": 15,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "e5a920e32f02d56b1e21199531ee088d2e8ca5785138b9ff594142fbff42600c"
+        }
+      ],
+      "rgbaSource": "original PNG"
+    },
+    "branch": {
+      "width": 258,
+      "height": 105,
+      "pivot": {
+        "x": 7,
+        "y": 50
+      },
+      "frameCount": 16,
+      "durationsMs": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "f906173380627e1c466117223243a1db1de45efdb9574ceb39b6099ddec59168"
+        },
+        {
+          "index": 1,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "c8300c4bae9a81f4b32b9fe2bbdf3a888c4c22c24c9b2f8ac4fe885bf105c390"
+        },
+        {
+          "index": 2,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "a865636d1ee5e8e5a1c60025f2986fa4bfff2c8c721ce0486ab4ddafafcf42d0"
+        },
+        {
+          "index": 3,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "1912ee3407e40e68be0ec2c3c78b3657009fc2b65b9508dcbf6cfb3360824355"
+        },
+        {
+          "index": 4,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "f919621f0d67f00034a452d7ecc586a797da2509232b6a24e655bf289e1f3829"
+        },
+        {
+          "index": 5,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "6b11789e6b316893a6537a354ee4fab940612e0351e9a57c58b86b222b10c356"
+        },
+        {
+          "index": 6,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "7970e567e5f7f49edfc5108309404e1314f61fd7f1e67602a9f05fca32579f28"
+        },
+        {
+          "index": 7,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "cbe862eda3e23fed5acd5b4c28e519c3409da3f6b0880f18305f30013eb57bb1"
+        },
+        {
+          "index": 8,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "833361ecc84ed78bbc6b9604b32f0c2fa22cb1330052ee323cd231eeb3ca71fc"
+        },
+        {
+          "index": 9,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "f8e746d374237e788f8db622d4e38e86b29361fac10bcd209d216bd64ee01a40"
+        },
+        {
+          "index": 10,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "8cd5ed5294e37e6f5b96449f9800c96ad172637520c846588af53f5939c0c617"
+        },
+        {
+          "index": 11,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "c29486ba5f2075adad27cc8627dfe555bc4e93462438b9ee198fbc0155a02db3"
+        },
+        {
+          "index": 12,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "cdf5be8fee078d572c033b4feb58190c399a7efdd68b2d954f9dadd477b6289a"
+        },
+        {
+          "index": 13,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "ede43a944569a583e3518f3a9d990b9abd632231a317f25f8b9b9e5d8790f572"
+        },
+        {
+          "index": 14,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "7fcfe2cef5cbacc2074cda14af80029d2206394e44b84abe5e8bf96d2c50a5cc"
+        },
+        {
+          "index": 15,
+          "gifDurationMs": 40,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 42,
+          "pixelSHA256": "e5a920e32f02d56b1e21199531ee088d2e8ca5785138b9ff594142fbff42600c"
+        }
+      ],
+      "rgbaSource": "original PNG"
+    },
+    "impact": {
+      "width": 200,
+      "height": 120,
+      "pivot": {
+        "x": 100,
+        "y": 60
+      },
+      "frameCount": 32,
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "a15216a3d86ba82dcf5fbd7b3df605ffcb4c4262c4d8a531ba8e98d8daedf883"
+        },
+        {
+          "index": 1,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "ae707898a5e8b54129921951c1f6c8dda5ed39f9eb0e4aad76b5ca2c79b4a161"
+        },
+        {
+          "index": 2,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "e204645515804fd81252dda5bb87488ba2f7a61fe990ff65439a13ebe96a99b1"
+        },
+        {
+          "index": 3,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "75e8b684808762ba966651434e04206c08bc6eabfc0b8075b4e3067482b9d3f8"
+        },
+        {
+          "index": 4,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "7352cb83c80c16be8cc71c237b9e96c9fdebfc89d833ef2d4807b1cc4dbe7a2e"
+        },
+        {
+          "index": 5,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "301ecc6d0853ea53e54e7a33d983a805d5df5198a8b7edba4db73c0817a937d5"
+        },
+        {
+          "index": 6,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "b0489957e6c68e3479ac690d6a5967c89a9d4c815c6ca1d75ebf2a37f1c7c07b"
+        },
+        {
+          "index": 7,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "308279ba88dfa71bcfa0bc97d4a352eee39a5ec577aff6ee8d55b5de050582e0"
+        },
+        {
+          "index": 8,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "dd3f3cfd86515e5bc6141bc90c59d27bb6e02f233f2f9934b2c15ae6dcd24123"
+        },
+        {
+          "index": 9,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "abd103713ebf64e351f1d70ee5c4b678356ea192520efc01bd4ff6327e1b1983"
+        },
+        {
+          "index": 10,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "aba1336251c3eb0c8436d435417c6a9c5ac64a28157b5ba206c399086fbfc52e"
+        },
+        {
+          "index": 11,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "c05e86ab924f35b033a494aca9400e7cc91c684f1eba8b698120b294bbc2f830"
+        },
+        {
+          "index": 12,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "58925d0b6247b098d71affdabf66c4d8c95976eb8593880218528e3aa9da06cc"
+        },
+        {
+          "index": 13,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "9ece3080c496d69c5e6b7368eecd91fb6c24b2ab996d0cd5db9bb1ed97e17434"
+        },
+        {
+          "index": 14,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "3b1b723ecebf5e3bb02a6cbc9e1600800b60ccc4ffd7d6e665859d59c444c92f"
+        },
+        {
+          "index": 15,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "db452429de5476f1a24f72ad3111a448f7d4d8fc8b94e01524b71a5825e39a0b"
+        },
+        {
+          "index": 16,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "d210cd72123efff8a367f0503edcbb5b761c0ee7ead82c898590ff03019d42b8"
+        },
+        {
+          "index": 17,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "c113c18ceac7de67a25a09ac817a160e4ae86560e0e90663fc02de16defcadda"
+        },
+        {
+          "index": 18,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "0dfe0aefb50d9f65b897ab1f9ab7d26df3b86bd7f69b8f3c78cc2db689cb9dc4"
+        },
+        {
+          "index": 19,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "15f47ba0fc1a18a8271a5a32d2be51789bb63892925f2e8800129d12d43d115d"
+        },
+        {
+          "index": 20,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "5a70d6a71d7936365a1568e6af6c3a024ba5ced472afb1dcc329e4491a3a254f"
+        },
+        {
+          "index": 21,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "963d6f35a839fe86a36ef95ed611f30b764491f9a61bb5460c2cd44c366c3941"
+        },
+        {
+          "index": 22,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "f82f24478be5db51850d1367a1eb1efbc04f3b86c5c6b0fac2b3b912bee8ef96"
+        },
+        {
+          "index": 23,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "aaf7f9f048aa8e1d5e2a4ff83ba56ce657302a6a7465d3b6985712cb9571bbe4"
+        },
+        {
+          "index": 24,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "7ef33ab31fc7dd8f294c08324cde05db81d41c01388cb13bcb6b8a30b377533a"
+        },
+        {
+          "index": 25,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "eff3b9d3c708d46bc3d67e0eff47c7c837d12292b894d1d00b741c7cb4cc9b7d"
+        },
+        {
+          "index": 26,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "62fea84e2e12bb9c5693ed9d8a81c7db4358cb14beca56049b35d9c9e4862351"
+        },
+        {
+          "index": 27,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "670f887bc5bd5c076af97e8f8d9293a6b4ae9b0ca7aa0a9dd9385df06da5377a"
+        },
+        {
+          "index": 28,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "72464737430cb86132f0cdf160f58f0b65a2a485f984175bb66454bb733acc36"
+        },
+        {
+          "index": 29,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "a79851639e3cdcebee8cf903f5f7ec37865d54124b596da454db5e686b7c03e0"
+        },
+        {
+          "index": 30,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "2604d2fbb00a133cd0be8bdc3e35f85774ef87bc5e589d4f89ef1f910411a327"
+        },
+        {
+          "index": 31,
+          "gifDurationMs": 50,
+          "alphaDifferences": 0,
+          "colorDifferences": 0,
+          "durationMs": 50,
+          "pixelSHA256": "55873fecc61a79e87ca550c7072e38ccdd7ecb600ace286fe4717952a97c42b0"
+        }
+      ],
+      "rgbaSource": "decoded original GIF"
+    }
+  }
+}

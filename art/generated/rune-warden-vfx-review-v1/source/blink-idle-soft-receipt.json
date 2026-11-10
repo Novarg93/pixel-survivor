@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: cf715e7f-085e-4721-8621-b67e5e28007a\njob_id: cf715e7f-085e-4721-8621-b67e5e28007a\naction: Subtle seamless brightness cycle of ONLY the EXISTING lavender line segments. Keep the original hollow ground rune fixed. Preserve the input transparent centre completely EMPTY in every frame: do not draw anything there. Preserve the original six colours, no cyan, turquoise, green, blue or white light. Do not summon an orb or portal. No new shapes, no particles, no fill, no concentric circles. Only the existing sparse lilac rim briefly becomes a little lighter then darker, and returns to the supplied identical first frame. Static footprint, no movement or growth.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 2026111221\nasset_id: 498d3508-0b84-5556-9084-4aec8ab24f05\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"cf715e7f-085e-4721-8621-b67e5e28007a\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/cf715e7f-085e-4721-8621-b67e5e28007a/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ],
+  "isError": false
+}

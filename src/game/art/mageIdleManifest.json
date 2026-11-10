@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-idle-v2.mjs",
+  "canvas": 96,
+  "frameCount": 26,
+  "displaySize": 46.35814889336016,
+  "visibleHeightWorld": 34.285714285714285,
+  "width": 384,
+  "height": 672,
+  "rgbaBytes": 1032192,
+  "sourcePixelsUnmodified": true,
+  "sources": {
+    "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238592009.png": "c59e8199f4e9e75e3067047d3412263ab8ab253e0534427d4fd24311932b2120",
+    "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238592009.gif": "01cdc73a4eec6033c9308025e1b5340872841821637a3f0c48f45922c86cab90",
+    "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238719415.png": "d350c1b5b38c0918c53ac8b87cb26264f348fe6f0ae09de22d2515e64b006de7",
+    "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238719415.gif": "9d456a5cef453bd24609d5ebf29f08ed092a1b662ef34bb5932329a18747783b"
+  },
+  "clips": {
+    "front": {
+      "sourcePng": "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238592009.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238592009.gif",
+      "frames": [
+        {
+          "frame": "mage-idle-v2-front-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-1",
+          "durationMs": 130,
+          "pixelSha256": "50dae323b0ede692700a04e8f266550125d204ae0779d1cf37ec76a00c853277",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6764705882353,
+            "y": 51.26470588235294
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-2",
+          "durationMs": 130,
+          "pixelSha256": "7a5342491d1d0e0acd8fbe95237348741eef277a58327d1e45186d68842038ab",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.77777777777778,
+            "y": 50.388888888888886
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-3",
+          "durationMs": 130,
+          "pixelSha256": "643a11bd7ccc0b5b33f1aa6cb3b7763c3e8e606aefc32db4242ae795f95cd7b9",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.77777777777778,
+            "y": 49.388888888888886
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-4",
+          "durationMs": 130,
+          "pixelSha256": "7e7f999ad13c8e156f2bdbe97f3bafee4b1d5928340dfbfee714f4acb0d88768",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.5,
+            "y": 49.3
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-5",
+          "durationMs": 130,
+          "pixelSha256": "6f94e18efdec81a6ed14c31737b176b71d12c0b3ddf1c5d7bffe35250e5453a2",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.4,
+            "y": 48.7
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-6",
+          "durationMs": 130,
+          "pixelSha256": "fdca2aca4606f2bacad462f42f8de14dd52cc578077bd7761b3f8edfe272f196",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.5,
+            "y": 48.55
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-7",
+          "durationMs": 130,
+          "pixelSha256": "a3201077462668f8d525e44150cf724824c3f254ddf92f021284efa14088950b",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.5,
+            "y": 48.55263157894737
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-8",
+          "durationMs": 130,
+          "pixelSha256": "d026ef01c977c0d0def9fe1e97419d37871e8fe6ce80d808430fb230bb5892ef",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.88095238095238,
+            "y": 48.30952380952381
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-9",
+          "durationMs": 130,
+          "pixelSha256": "9302c28e3f97f15f628cf9414b903bdf9040ea5f3160995b675e8cc5560dfc83",
+          "bounds": {
+            "left": 25,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 58.55882352941177,
+            "y": 49.44117647058823
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-10",
+          "durationMs": 130,
+          "pixelSha256": "e1282ca3b8a4bd6d966f92eb7fe347f7ed2958d71cac1826ed405b9c056b21f1",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.6764705882353,
+            "y": 50.26470588235294
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-11",
+          "durationMs": 130,
+          "pixelSha256": "9349027830b1c11a8997b6302ae582deafded3675de272d71ff61d35831d79fe",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375
+          }
+        },
+        {
+          "frame": "mage-idle-v2-front-12",
+          "durationMs": 130,
+          "pixelSha256": "6a2722fde99d771b0b5f639a9d26b60bad6e33c9a8d3e72ea1254bcdae244eb0",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.6875,
+            "y": 51.4375
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690
+    },
+    "north": {
+      "sourcePng": "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238719415.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238719415.gif",
+      "frames": [
+        {
+          "frame": "mage-idle-v2-north-0",
+          "durationMs": 130,
+          "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-1",
+          "durationMs": 130,
+          "pixelSha256": "c0833e18522fc36b923d0aee625d848b9f6ae9e6be735e0797812fc266a8d559",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-2",
+          "durationMs": 130,
+          "pixelSha256": "786e7a6e9713d6f5dac01f2e4d8697840667de124490738b0dba00e6cb80b2af",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62,
+            "y": 50.125
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-3",
+          "durationMs": 130,
+          "pixelSha256": "ba3623c43b58e753c498c8959cf782379a11af742887c49a69549fd39154e7a8",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.25,
+            "y": 49
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-4",
+          "durationMs": 130,
+          "pixelSha256": "2f89157784330f41a2e4aa9122ad1e77f5049e0bc3ac7cc621c77e742f9180cb",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 46.5
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-5",
+          "durationMs": 130,
+          "pixelSha256": "f35b097f404a3e209a670ff6f00a07b0f053da45672230faf825369021081454",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 45.5
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-6",
+          "durationMs": 130,
+          "pixelSha256": "21532bd09e3c938071c3b7237286aa3435904e2f84ef84d9ec43be78c5d6d430",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 45.5
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-7",
+          "durationMs": 130,
+          "pixelSha256": "750ebf90ed12c5546121db22882035d7dcd5bd21b77865494b99e28d7e129929",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 45.5
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-8",
+          "durationMs": 130,
+          "pixelSha256": "d1b1754917a8b5f624b00127fed6224b3b5d74f175e2f4ab00216da048aba52c",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.5,
+            "y": 46.5
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-9",
+          "durationMs": 130,
+          "pixelSha256": "2415e236743b67c4490348116c65f6cfdcd96bea22ed9768244c513cbda75dc2",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.3,
+            "y": 48.7
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-10",
+          "durationMs": 130,
+          "pixelSha256": "4ba7a850da638ec44c6af99169fbc9c25daacbd88e43d9b772a9c78aac5be602",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62,
+            "y": 50.125
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-11",
+          "durationMs": 130,
+          "pixelSha256": "6b05c5f6e89acaabd12c18feafd76311c76106873f1797fab592184533e57e6d",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        },
+        {
+          "frame": "mage-idle-v2-north-12",
+          "durationMs": 130,
+          "pixelSha256": "aed8ff9f8cfa3162d9868e766b8685c9c67137188e19a15c06e5e8a7e0490801",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        }
+      ],
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "periodMs": 1690
+    }
+  }
+}

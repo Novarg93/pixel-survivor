@@ -12,14 +12,23 @@ test('final meteor remains visible with zero effects, reduced motion/flash and m
  // Keep the paused simulation fixed, and remove the overlaid Vue dialog from
  // this Canvas pixel probe. Screenshot compositing includes occluding DOM.
  await page.addStyleTag({content:'.overlay{display:none!important}'});
+ await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().finalBoss.meteorWarnings.length)).toBeGreaterThan(0);
+ expect(await page.evaluate(()=>window.__PIXEL__!.art().finalBoss.meteorWarnings.every(m=>m.style==='crosshair'&&m.alpha>=.7))).toBe(true);
  const state=await page.evaluate(()=>({meteors:window.__PIXEL__!.world.finalEncounter.meteors,time:window.__PIXEL__!.world.elapsed,layers:window.__PIXEL__!.art().layers}));
  expect(state.meteors.every(m=>!m.landed)).toBe(true);
  mkdirSync('screenshots/final-boss',{recursive:true});const png=await page.locator('canvas').screenshot({path:'screenshots/final-boss/zero-effects.png'});
- const visibleBoundary=await page.evaluate(async(png)=>{
+ const visibleTicks=await page.evaluate(async(png)=>{
   const canvas=document.querySelector('canvas')!,image=new Image();image.src='data:image/png;base64,'+png;await image.decode();
   const sample=document.createElement('canvas');sample.width=canvas.width;sample.height=canvas.height;const ctx=sample.getContext('2d')!;ctx.drawImage(image,0,0);const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
-  const radius=42*canvas.width/window.__PIXEL__!.world.ultimate.viewport.width;let bright=0;
-  for(let i=0;i<360;i++){const a=i*Math.PI/180,x=Math.round(canvas.width/2+Math.cos(a)*radius),y=Math.round(canvas.height/2+Math.sin(a)*radius),p=(y*canvas.width+x)*4;if(pixels[p]!>210&&pixels[p+1]!>150&&pixels[p+2]!>110)bright++;}return bright;
- },Buffer.from(png).toString('base64'));expect(visibleBoundary).toBeGreaterThan(160);
+  // The accepted sparse reticle replaced the old full AoE circle. Check all four ticks.
+  const scale=canvas.width/window.__PIXEL__!.world.ultimate.viewport.width,radius=42*scale,pad=Math.ceil(3*scale);
+  return [[-radius,0],[radius,0],[0,-radius],[0,radius]].map(([dx,dy])=>{
+   const cx=Math.round(canvas.width/2+dx!),cy=Math.round(canvas.height/2+dy!);let bright=0;
+   for(let y=cy-pad;y<=cy+pad;y++)for(let x=cx-pad;x<=cx+pad;x++){
+    const p=(y*canvas.width+x)*4,r=pixels[p]!,g=pixels[p+1]!,b=pixels[p+2]!;
+    if(r>155&&g>125&&b>80&&r-g>12&&g-b>10)bright++;
+   }return bright;
+  });
+ },Buffer.from(png).toString('base64'));expect(visibleTicks).toHaveLength(4);for(const count of visibleTicks)expect(count).toBeGreaterThan(2);
  await page.waitForTimeout(150);expect(await page.evaluate(()=>window.__PIXEL__!.world.elapsed)).toBe(state.time);expect(await page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);
 });

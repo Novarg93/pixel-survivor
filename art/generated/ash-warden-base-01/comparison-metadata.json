@@ -1,0 +1,59 @@
+{
+  "selectedDraft": "03-pixflux-attempt-01-raw.png",
+  "candidate": "ash-warden-base-candidate.png",
+  "acceptedForIntegration": false,
+  "dimensions": [
+    128,
+    128
+  ],
+  "mage": {
+    "frame": "mage-down-idle-0",
+    "sourceScale": 0.375,
+    "origin": [
+      0.5,
+      0.75
+    ],
+    "measuredVisibleSourceHeight": 71,
+    "worldHeight": 26.625
+  },
+  "temporaryBoss": {
+    "frame": "ash-down-idle-0",
+    "sourceScale": 1,
+    "origin": [
+      0.5,
+      0.8125
+    ]
+  },
+  "bodyAnchorMethod": "Manual approximate helmet-to-boot bounds, excluding sword and decorative projections; comparison calibration only, not automatic body segmentation.",
+  "attempts": [
+    {
+      "file": "03-pixflux-attempt-01-raw.png",
+      "approximateBodyTop": 22,
+      "approximateBodyBottom": 99,
+      "approximateBodyHeight": 78,
+      "origin": [
+        0.5,
+        0.78125
+      ],
+      "sourceScale": 0.931875
+    },
+    {
+      "file": "04-pixflux-attempt-02-raw.png",
+      "approximateBodyTop": 28,
+      "approximateBodyBottom": 108,
+      "approximateBodyHeight": 81,
+      "origin": [
+        0.5,
+        0.8515625
+      ],
+      "sourceScale": 0.8973611111111112
+    }
+  ],
+  "targetBodyHeight": 72.68625,
+  "targetBodyRatio": 2.73,
+  "previewZooms": [
+    2,
+    1.2769230769230768
+  ],
+  "backdrop": "Ground crop from an existing gameplay screenshot; static scale comparison, not a new live encounter."
+}

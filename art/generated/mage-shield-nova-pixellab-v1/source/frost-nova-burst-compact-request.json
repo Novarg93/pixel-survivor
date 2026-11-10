@@ -1,0 +1,16 @@
+{
+  "id": "frost-nova-burst-compact",
+  "tool": "animate_image_pixminimax",
+  "args": {
+    "description": "One SMALL restrained ground frost pulse. From the input seed, the thin cyan icy rim expands only until its OUTER diameter INCLUDING ALL crystal tips is eighty pixels, radius forty pixels around (64,64). It stops growing there and dissolves into a few dim short chips, then disappears completely to the supplied transparent last frame. Maintain at least twenty transparent pixels of padding on ALL sides at ALL times. The entire effect remains inside the central eighty-by-eighty square. Tiny sparse crystals, not long spikes. Fixed center and camera. Hollow transparent interior. Ordinary repeatable mage skill, quiet and compact, no blizzard, no solid disk, no flash, no giant ultimate effect. Preserve the input pixel clusters and soft mint/slate palette. It is more important to keep the small fixed maximum size and transparent canvas margins than to make a dramatic burst.",
+    "first_frame_url": "https://api.pixellab.ai/mcp/images/0ab41fcf-91cf-4e6f-a906-4fd7924e81da/download",
+    "last_frame_url": "upload:3b099da6-a032-459c-a088-a30646aee792",
+    "frame_count": 16,
+    "view": "high top-down",
+    "subject_description": "a compact ordinary cyan frost wave with tiny sparse ice chips inside generous transparent margins",
+    "initial_pose": "small hollow frost seed centered at64,64, outer diameter28pixels",
+    "enhance_prompt": false,
+    "no_background": true,
+    "seed": 2026111114
+  }
+}

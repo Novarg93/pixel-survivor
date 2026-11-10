@@ -1,0 +1,49 @@
+{
+  "frames": [
+    {
+      "index": 3,
+      "rectangle": [
+        27,
+        33,
+        65,
+        75
+      ],
+      "modifiedPixels": 1240,
+      "outsideDifferences": 0,
+      "oldSkinBottom": 72,
+      "skinBottom": 49,
+      "restoredRobePixels": [
+        [
+          29,
+          50
+        ],
+        [
+          27,
+          61
+        ],
+        [
+          59,
+          67
+        ]
+      ],
+      "headAndFeetUnchanged": true
+    },
+    {
+      "index": 4,
+      "rectangle": [
+        27,
+        33,
+        65,
+        75
+      ],
+      "modifiedPixels": 1241,
+      "outsideDifferences": 0,
+      "oldSkinBottom": 64,
+      "skinBottom": 51,
+      "restoredRobePixels": [],
+      "headAndFeetUnchanged": true
+    }
+  ],
+  "pass": true,
+  "note": "Skin extents are a visual regression bound, not inferred skeleton joint measurements. Head, boots and all pixels outside the selected arm/robe region are exact originals."
+}

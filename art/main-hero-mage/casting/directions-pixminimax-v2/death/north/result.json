@@ -1,0 +1,40 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "status: completed\nid: 7841b044-2c96-49da-874b-03abf6b7efe5\njob_id: 7841b044-2c96-49da-874b-03abf6b7efe5\nframes: 13\ntransparent: yes\nasset_id: c0f421f3-0f7d-53d6-b9a1-dddf46881160\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=0 ... ?index=12"
+    },
+    {
+      "type": "text",
+      "text": "(9 more frames not shown — fetch them from the download URLs above)"
+    }
+  ],
+  "structuredContent": {
+    "job_id": "7841b044-2c96-49da-874b-03abf6b7efe5",
+    "status": "completed",
+    "frames": 13,
+    "download_url": "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=0",
+    "download_urls": [
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=0",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=1",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=2",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=3",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=4",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=5",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=6",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=7",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=8",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=9",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=10",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=11",
+      "https://api.pixellab.ai/mcp/images/7841b044-2c96-49da-874b-03abf6b7efe5/download?index=12"
+    ],
+    "asset": {
+      "id": "c0f421f3-0f7d-53d6-b9a1-dddf46881160",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 2
+  },
+  "isError": false
+}

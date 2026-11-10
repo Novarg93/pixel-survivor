@@ -1,0 +1,271 @@
+{
+  "folder": "eclipse/teleport-b",
+  "kind": "motion",
+  "sourceSHA256": "952d32ffe2b5ee8afe52de5fc3eb808066b2cd41eddca29a1f861c29044dd4be",
+  "logicalCanvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    96
+  ],
+  "worldScale": 0.45,
+  "perFrameFitting": false,
+  "durationMs": 1800,
+  "presentation": {
+    "method": "Separate local hard blink visibility gate over unchanged RD articulated frames; no PNG translation. NOT an RD-generated invisible pose.",
+    "visibility": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "relocationFrame": 4,
+    "departureFrames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "arrivalFrames": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "source": "../frames/*.png",
+    "bodyAndVfxSeparate": true
+  },
+  "frames": [
+    {
+      "index": 0,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6756,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        44,
+        35,
+        147,
+        157
+      ],
+      "colors": 19
+    },
+    {
+      "index": 1,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6916,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        44,
+        34,
+        147,
+        157
+      ],
+      "colors": 19
+    },
+    {
+      "index": 2,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6801,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        43,
+        34,
+        147,
+        157
+      ],
+      "colors": 18
+    },
+    {
+      "index": 3,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6738,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        44,
+        34,
+        148,
+        157
+      ],
+      "colors": 20
+    },
+    {
+      "index": 4,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6643,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        50,
+        34,
+        149,
+        157
+      ],
+      "colors": 20
+    },
+    {
+      "index": 5,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6563,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        56,
+        34,
+        150,
+        157
+      ],
+      "colors": 19
+    },
+    {
+      "index": 6,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 5805,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        56,
+        36,
+        135,
+        157
+      ],
+      "colors": 18
+    },
+    {
+      "index": 7,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 5817,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        54,
+        37,
+        136,
+        157
+      ],
+      "colors": 19
+    },
+    {
+      "index": 8,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6395,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        49,
+        37,
+        141,
+        157
+      ],
+      "colors": 20
+    },
+    {
+      "index": 9,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6789,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        42,
+        36,
+        145,
+        157
+      ],
+      "colors": 20
+    },
+    {
+      "index": 10,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6928,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        43,
+        35,
+        147,
+        157
+      ],
+      "colors": 20
+    },
+    {
+      "index": 11,
+      "durationMs": 150,
+      "width": 192,
+      "height": 192,
+      "sourceWidth": 192,
+      "sourceHeight": 192,
+      "visible": 6936,
+      "partialAlpha": 0,
+      "edge": 0,
+      "bounds": [
+        44,
+        35,
+        147,
+        157
+      ],
+      "colors": 22
+    }
+  ]
+}

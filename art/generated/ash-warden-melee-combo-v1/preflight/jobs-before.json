@@ -1,0 +1,153 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"tasks\":[{\"status\":\"succeeded\",\"task_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"created_at\":1794063474,\"updated_at\":1794063532,\"result\":{\"created_at\":1794063532,\"credit_cost\":1,\"balance_cost\":0.25,\"output_urls\":[\"https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/99039f75-70ab-474f-8dbf-a49844354337/0-ef9e4c8b9d6b4b1fa398fb783b4632fb.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=VoTgkVWDw6pzc5raPw9c7%2FSWHhY%3D&Expires=1794067814\"],\"model\":\"rd_fast\",\"remaining_credits\":0,\"remaining_balance\":7.49,\"request_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"outputs_retained_until\":1794149874,\"output_url_expires_at\":1794067814,\"warnings\":[{\"code\":\"plan_usage_balance\"}],\"billing\":{\"reason\":\"usage_exhausted\",\"source\":\"balance\",\"balance_left\":7.49,\"plan_job_limit\":2,\"balance_charged\":0.25,\"plan_jobs_running\":0,\"plan_usage_left_pct\":0},\"base64_images_count\":1,\"output_images_count\":0},\"billing\":{\"source\":\"balance\",\"reason\":\"usage_exhausted\",\"plan_jobs_running\":0,\"plan_job_limit\":2,\"plan_usage_left_pct\":0,\"balance_charged\":0.25,\"balance_left\":7.49}},{\"status\":\"succeeded\",\"task_id\":\"d987af5f-fafb-4082-9cb6-62a5c6563c73\",\"created_at\":1794063368,\"updated_at\":1794063478,\"result\":{\"created_at\":1794063478,\"credit_cost\":1,\"balance_cost\":0.25,\"output_urls\":[\"https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/d987af5f-fafb-4082-9cb6-62a5c6563c73/0-625fb24076a24ba9bfab738d7da56820.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=UNnuwCrFt6g425d4woljAG2b4ys%3D&Expires=1794067814\"],\"model\":\"rd_fast\",\"remaining_credits\":0,\"remaining_balance\":7.74,\"request_id\":\"d987af5f-fafb-4082-9cb6-62a5c6563c73\",\"outputs_retained_until\":1794149768,\"output_url_expires_at\":1794067814,\"warnings\":[{\"code\":\"plan_usage_balance\",\"message\":\"You've used this month's plan usage, so this job was paid from your balance ($0.25). Your usage resets on December 6, 2026.\"}],\"billing\":{\"reason\":\"usage_exhausted\",\"source\":\"balance\",\"balance_left\":7.74,\"plan_job_limit\":2,\"balance_charged\":0.25,\"plan_jobs_running\":0,\"plan_usage_left_pct\":0},\"base64_images_count\":1,\"output_images_count\":0},\"billing\":{\"source\":\"balance\",\"reason\":\"usage_exhausted\",\"plan_jobs_running\":0,\"plan_job_limit\":2,\"plan_usage_left_pct\":0,\"balance_charged\":0.25,\"balance_left\":7.74}},{\"status\":\"succeeded\",\"task_id\":\"95e50c5f-52d1-437c-8dd5-7cfc2a09bb02\",\"created_at\":1794063364,\"updated_at\":1794063457,\"result\":{\"created_at\":1794063456,\"credit_cost\":1,\"balance_cost\":0.25,\"output_urls\":[\"https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/95e50c5f-52d1-437c-8dd5-7cfc2a09bb02/0-c5b7b51ac9a94d97a1363e7258bacd4d.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=FQhESgkhdI2e3lYBLN8aB9EICpw%3D&Expires=1794067814\"],\"model\":\"rd_fast\",\"remaining_credits\":0,\"remaining_balance\":7.99,\"request_id\":\"95e50c5f-52d1-437c-8dd5-7cfc2a09bb02\",\"outputs_retained_until\":1794149764,\"output_url_expires_at\":1794067814,\"warnings\":[{\"code\":\"plan_usage_balance\",\"message\":\"You've used this month's plan usage, so this job was paid from your balance ($0.25). Your usage resets on December 6, 2026.\"}],\"billing\":{\"reason\":\"usage_exhausted\",\"source\":\"balance\",\"balance_left\":7.99,\"plan_job_limit\":2,\"balance_charged\":0.25,\"plan_jobs_running\":0,\"plan_usage_left_pct\":0},\"base64_images_count\":1,\"output_images_count\":0},\"billing\":{\"source\":\"balance\",\"reason\":\"usage_exhausted\",\"plan_jobs_running\":0,\"plan_job_limit\":2,\"plan_usage_left_pct\":0,\"balance_charged\":0.25,\"balance_left\":7.99}}]}"
+      }
+    ],
+    "structuredContent": {
+      "tasks": [
+        {
+          "status": "succeeded",
+          "task_id": "99039f75-70ab-474f-8dbf-a49844354337",
+          "created_at": 1794063474,
+          "updated_at": 1794063532,
+          "result": {
+            "created_at": 1794063532,
+            "credit_cost": 1,
+            "balance_cost": 0.25,
+            "output_urls": [
+              "https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/99039f75-70ab-474f-8dbf-a49844354337/0-ef9e4c8b9d6b4b1fa398fb783b4632fb.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=VoTgkVWDw6pzc5raPw9c7%2FSWHhY%3D&Expires=1794067814"
+            ],
+            "model": "rd_fast",
+            "remaining_credits": 0,
+            "remaining_balance": 7.49,
+            "request_id": "99039f75-70ab-474f-8dbf-a49844354337",
+            "outputs_retained_until": 1794149874,
+            "output_url_expires_at": 1794067814,
+            "warnings": [
+              {
+                "code": "plan_usage_balance"
+              }
+            ],
+            "billing": {
+              "reason": "usage_exhausted",
+              "source": "balance",
+              "balance_left": 7.49,
+              "plan_job_limit": 2,
+              "balance_charged": 0.25,
+              "plan_jobs_running": 0,
+              "plan_usage_left_pct": 0
+            },
+            "base64_images_count": 1,
+            "output_images_count": 0
+          },
+          "billing": {
+            "source": "balance",
+            "reason": "usage_exhausted",
+            "plan_jobs_running": 0,
+            "plan_job_limit": 2,
+            "plan_usage_left_pct": 0,
+            "balance_charged": 0.25,
+            "balance_left": 7.49
+          }
+        },
+        {
+          "status": "succeeded",
+          "task_id": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+          "created_at": 1794063368,
+          "updated_at": 1794063478,
+          "result": {
+            "created_at": 1794063478,
+            "credit_cost": 1,
+            "balance_cost": 0.25,
+            "output_urls": [
+              "https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/d987af5f-fafb-4082-9cb6-62a5c6563c73/0-625fb24076a24ba9bfab738d7da56820.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=UNnuwCrFt6g425d4woljAG2b4ys%3D&Expires=1794067814"
+            ],
+            "model": "rd_fast",
+            "remaining_credits": 0,
+            "remaining_balance": 7.74,
+            "request_id": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+            "outputs_retained_until": 1794149768,
+            "output_url_expires_at": 1794067814,
+            "warnings": [
+              {
+                "code": "plan_usage_balance",
+                "message": "You've used this month's plan usage, so this job was paid from your balance ($0.25). Your usage resets on December 6, 2026."
+              }
+            ],
+            "billing": {
+              "reason": "usage_exhausted",
+              "source": "balance",
+              "balance_left": 7.74,
+              "plan_job_limit": 2,
+              "balance_charged": 0.25,
+              "plan_jobs_running": 0,
+              "plan_usage_left_pct": 0
+            },
+            "base64_images_count": 1,
+            "output_images_count": 0
+          },
+          "billing": {
+            "source": "balance",
+            "reason": "usage_exhausted",
+            "plan_jobs_running": 0,
+            "plan_job_limit": 2,
+            "plan_usage_left_pct": 0,
+            "balance_charged": 0.25,
+            "balance_left": 7.74
+          }
+        },
+        {
+          "status": "succeeded",
+          "task_id": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+          "created_at": 1794063364,
+          "updated_at": 1794063457,
+          "result": {
+            "created_at": 1794063456,
+            "credit_cost": 1,
+            "balance_cost": 0.25,
+            "output_urls": [
+              "https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/95e50c5f-52d1-437c-8dd5-7cfc2a09bb02/0-c5b7b51ac9a94d97a1363e7258bacd4d.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=FQhESgkhdI2e3lYBLN8aB9EICpw%3D&Expires=1794067814"
+            ],
+            "model": "rd_fast",
+            "remaining_credits": 0,
+            "remaining_balance": 7.99,
+            "request_id": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+            "outputs_retained_until": 1794149764,
+            "output_url_expires_at": 1794067814,
+            "warnings": [
+              {
+                "code": "plan_usage_balance",
+                "message": "You've used this month's plan usage, so this job was paid from your balance ($0.25). Your usage resets on December 6, 2026."
+              }
+            ],
+            "billing": {
+              "reason": "usage_exhausted",
+              "source": "balance",
+              "balance_left": 7.99,
+              "plan_job_limit": 2,
+              "balance_charged": 0.25,
+              "plan_jobs_running": 0,
+              "plan_usage_left_pct": 0
+            },
+            "base64_images_count": 1,
+            "output_images_count": 0
+          },
+          "billing": {
+            "source": "balance",
+            "reason": "usage_exhausted",
+            "plan_jobs_running": 0,
+            "plan_job_limit": 2,
+            "plan_usage_left_pct": 0,
+            "balance_charged": 0.25,
+            "balance_left": 7.99
+          }
+        }
+      ]
+    },
+    "isError": false
+  }
+}

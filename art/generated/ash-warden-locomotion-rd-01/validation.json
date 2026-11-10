@@ -1,0 +1,154 @@
+{
+  "protectedFiles": 595,
+  "changedProtectedFiles": [],
+  "errors": [],
+  "externalRequests": [],
+  "observations": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "idle": {
+        "key": "south-idle",
+        "index": 3,
+        "playing": false,
+        "loops": 2,
+        "rendered": 239,
+        "distance": 0,
+        "fps": 2,
+        "speed": 72,
+        "viewport": [
+          1280,
+          656
+        ]
+      },
+      "nativeWalk": {
+        "key": "south-walk",
+        "index": 0,
+        "playing": true,
+        "loops": 3,
+        "rendered": 470,
+        "distance": 260.4023999999999,
+        "fps": 6.666666666666667,
+        "speed": 72,
+        "viewport": [
+          1280,
+          656
+        ]
+      },
+      "fastWalk": {
+        "key": "south-walk",
+        "index": 0,
+        "playing": true,
+        "loops": 6,
+        "rendered": 578,
+        "distance": 513.5975999999994,
+        "fps": 13.333333333333334,
+        "speed": 144,
+        "viewport": [
+          1280,
+          656
+        ]
+      },
+      "pausePassed": true,
+      "stepControlsPassed": true,
+      "directions": [
+        {
+          "value": "south",
+          "disabled": false
+        },
+        {
+          "value": "north",
+          "disabled": true
+        },
+        {
+          "value": "east",
+          "disabled": true
+        },
+        {
+          "value": "west",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "idle": {
+        "key": "south-idle",
+        "index": 3,
+        "playing": false,
+        "loops": 2,
+        "rendered": 244,
+        "distance": 0,
+        "fps": 2,
+        "speed": 72,
+        "viewport": [
+          844,
+          322
+        ]
+      },
+      "nativeWalk": {
+        "key": "south-walk",
+        "index": 0,
+        "playing": true,
+        "loops": 3,
+        "rendered": 473,
+        "distance": 260.3951999999999,
+        "fps": 6.666666666666667,
+        "speed": 72,
+        "viewport": [
+          844,
+          322
+        ]
+      },
+      "fastWalk": {
+        "key": "south-walk",
+        "index": 0,
+        "playing": true,
+        "loops": 6,
+        "rendered": 581,
+        "distance": 517.1831999999995,
+        "fps": 13.333333333333334,
+        "speed": 144,
+        "viewport": [
+          844,
+          322
+        ]
+      },
+      "pausePassed": true,
+      "stepControlsPassed": true,
+      "directions": [
+        {
+          "value": "south",
+          "disabled": false
+        },
+        {
+          "value": "north",
+          "disabled": true
+        },
+        {
+          "value": "east",
+          "disabled": true
+        },
+        {
+          "value": "west",
+          "disabled": true
+        }
+      ]
+    }
+  ],
+  "scope": "isolated artifact viewer, not gameplay E2E; visual acceptance remains separate",
+  "artifactChecks": {
+    "RGBAFrames": 18,
+    "uniqueFrames": 18,
+    "reportLinks": "passed",
+    "secretScan": "passed",
+    "screenshotsDimensions": "passed",
+    "check": "passed:655 tests, typecheck, lint, build",
+    "budget": "passed"
+  }
+}

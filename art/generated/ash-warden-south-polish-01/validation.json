@@ -1,0 +1,272 @@
+{
+  "protectedFiles": 657,
+  "changedProtectedFiles": [],
+  "contacts": [
+    {
+      "speed": 72,
+      "fps": 15.707431401596391,
+      "cycleMs": 509.3130630630631,
+      "contactKeyframeErrorWorld": 1.4210854715202004e-14,
+      "maxFrameHoldDriftWorld": 4.583817567567568
+    },
+    {
+      "speed": 100,
+      "fps": 21.815876946661653,
+      "cycleMs": 366.70540540540543,
+      "contactKeyframeErrorWorld": 1.4210854715202004e-14,
+      "maxFrameHoldDriftWorld": 4.583817567567568
+    },
+    {
+      "speed": 144,
+      "fps": 31.414862803192783,
+      "cycleMs": 254.65653153153156,
+      "contactKeyframeErrorWorld": 1.4210854715202004e-14,
+      "maxFrameHoldDriftWorld": 4.583817567567568
+    }
+  ],
+  "legLayerOverlapPixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "decoded": {
+    "gifs": [
+      {
+        "name": "south-idle.gif",
+        "frames": 4,
+        "durationMs": 1800,
+        "pixelMismatches": 0
+      },
+      {
+        "name": "south-walk-72.gif",
+        "frames": 8,
+        "durationMs": 510,
+        "pixelMismatches": 0
+      },
+      {
+        "name": "south-walk-100.gif",
+        "frames": 8,
+        "durationMs": 370,
+        "pixelMismatches": 0
+      },
+      {
+        "name": "south-walk-144.gif",
+        "frames": 8,
+        "durationMs": 250,
+        "pixelMismatches": 0
+      }
+    ],
+    "firstIdleMatchesAcceptedBase": true,
+    "stableArmorPixelMismatches": 0,
+    "walkWeaponPixelMismatches": 0,
+    "idleFootPixelMismatches": 0,
+    "metrics": [
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6536
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6518
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6536
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6520
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6316
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6152
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6162
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6332
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6279
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6134
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6135
+      },
+      {
+        "partial": 0,
+        "edge": 0,
+        "occupied": 6354
+      }
+    ]
+  },
+  "viewer": {
+    "errors": [],
+    "external": [],
+    "observations": [
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "speeds": [
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 4,
+            "rendered": 358,
+            "distance": 147.6,
+            "elapsed": 12.691793467880878,
+            "fps": 15.707,
+            "speed": 72,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              1280,
+              654
+            ]
+          },
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 8,
+            "rendered": 448,
+            "distance": 295.7323999999996,
+            "elapsed": 12.324569123579103,
+            "fps": 21.816,
+            "speed": 100,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              1280,
+              654
+            ]
+          },
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 12,
+            "rendered": 512,
+            "distance": 446.4023999999994,
+            "elapsed": 13.210249880629487,
+            "fps": 31.415,
+            "speed": 144,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              1280,
+              654
+            ]
+          }
+        ],
+        "wrapStep": true,
+        "pause": true
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "speeds": [
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 4,
+            "rendered": 355,
+            "distance": 147.59999999999994,
+            "elapsed": 12.691793467880423,
+            "fps": 15.707,
+            "speed": 72,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              844,
+              322
+            ]
+          },
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 8,
+            "rendered": 446,
+            "distance": 298.3303999999996,
+            "elapsed": 16.586651998533625,
+            "fps": 21.816,
+            "speed": 100,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              844,
+              322
+            ]
+          },
+          {
+            "version": "polished",
+            "key": "south-walk",
+            "index": 0,
+            "playing": true,
+            "loops": 12,
+            "rendered": 509,
+            "distance": 447.33039999999926,
+            "elapsed": 13.210249880629487,
+            "fps": 31.415,
+            "speed": 144,
+            "strideWorld": 36.67054054054054,
+            "viewport": [
+              844,
+              322
+            ]
+          }
+        ],
+        "wrapStep": true,
+        "pause": true
+      }
+    ]
+  },
+  "paidCalls": 0,
+  "USD": 0,
+  "finalChecks": {
+    "protectedFiles": 657,
+    "changed": [],
+    "reportLinks": "passed",
+    "dimensions": "passed",
+    "singleComponentSilhouettes": 12,
+    "USD": 0,
+    "check": "passed:655 tests,typecheck,lint,build",
+    "finalPixelQA": "passed",
+    "finalLint": "passed"
+  }
+}

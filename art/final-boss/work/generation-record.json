@@ -1,0 +1,51 @@
+{
+  "references": [
+    "art/references/ash-warden-concept-02.png",
+    "art/generated/ash-warden-base-01/ash-warden-base-candidate.png"
+  ],
+  "imagegen": {
+    "calls": 1,
+    "prompt": "prompt.txt",
+    "master": "01-imagegen-master.png",
+    "transparentBackground": true
+  },
+  "pixelLab": {
+    "upload": {
+      "ref": "upload:7a9517d4-cf07-4d13-9bc5-4a0b155132aa",
+      "upload_id": "7a9517d4-cf07-4d13-9bc5-4a0b155132aa",
+      "width": 1536,
+      "height": 1536,
+      "n_frames": 1,
+      "expires_in_days": 3
+    },
+    "request": {
+      "image_url": "upload:7a9517d4-cf07-4d13-9bc5-4a0b155132aa",
+      "faithful": true,
+      "init_image_strength": 150,
+      "output_width": 128,
+      "output_height": 128,
+      "seed": 260110611
+    },
+    "receipt": {
+      "content": [
+        {
+          "type": "text",
+          "text": "id: 054571a2-6600-48d2-9aac-813db33393a6\njob_id: 054571a2-6600-48d2-9aac-813db33393a6\nsource: 1536x1536px\noutput: 128x128px\nfaithful: True\ninit_image_strength: 150\nseed: 260110611\nasset_id: 0cf9d07d-05fb-561e-b711-c1a382da853d\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~20-60s)\n\nhint: get_image(job_id=\"054571a2-6600-48d2-9aac-813db33393a6\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/054571a2-6600-48d2-9aac-813db33393a6/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+        }
+      ],
+      "isError": false
+    },
+    "balanceBefore": 37
+  },
+  "Aseprite": {
+    "batch": "unavailable",
+    "liveConnected": false,
+    "executable": null
+  },
+  "scope": {
+    "baseCandidates": 1,
+    "animations": 0,
+    "directionSets": 0,
+    "gameplayIntegration": false
+  }
+}

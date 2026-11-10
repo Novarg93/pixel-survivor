@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "### Result\n{\"url\":\"http://127.0.0.1:5200/\",\"paused\":true,\"testBridgeUnavailable\":true,\"errors\":[]}\n### Ran Playwright code\n```js\nawait (async page => {const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:5200/');await page.getByRole('button',{name:/Бой со Стражем/}).click();await page.waitForTimeout(2800);await page.getByRole('button',{name:'Пауза',exact:true}).click();await page.screenshot({path:'C:/Users/Novarg/Desktop/PixelSurvivor/art/generated/ash-warden-melee-b-refinement-v2/screenshots/production-practice.png'});return {url:page.url(),paused:await page.getByRole('heading',{name:'Пауза',exact:true}).isVisible(),testBridgeUnavailable:await page.evaluate(()=>typeof window.__PIXEL__==='undefined'),errors};})(page);\n```"
+    }
+  ]
+}

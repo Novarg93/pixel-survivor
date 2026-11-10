@@ -12,7 +12,7 @@ for(const [width,height]of [[1280,720],[844,390],[740,360]])test(`menu boss prac
  if(width===1280){await button.focus();await page.keyboard.press('Enter');}else await button.tap();
  await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='intro');
  const entry=await page.evaluate(()=>{const w=window.__PIXEL__!.world;return{practice:w.snapshot().practice,level:w.experience.level,hp:w.player.hp,ultimate:w.ultimate.selected,charge:w.ultimate.charge,bossHp:w.finalEncounter.boss!.hp,enemies:w.enemies.length,protectedUntil:w.player.invulnerableUntil,run:w.runId};});
- expect(entry).toMatchObject({practice:true,level:54,hp:200,ultimate:'frost',charge:10,bossHp:108000,enemies:1,protectedUntil:0});
+ expect(entry).toMatchObject({practice:true,level:54,hp:200,ultimate:'lightning',charge:10,bossHp:108000,enemies:1,protectedUntil:0});
  await page.screenshot({path:`screenshots/final-boss/practice-intro-${width}.png`});await expect(page.locator('.run-clock')).toContainText('Тренировка Стража');
  await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
  await page.getByRole('button',{name:'Пауза',exact:true}).click();const clock=await page.evaluate(()=>window.__PIXEL__!.world.elapsed);await page.waitForTimeout(100);expect(await page.evaluate(()=>window.__PIXEL__!.world.elapsed)).toBe(clock);

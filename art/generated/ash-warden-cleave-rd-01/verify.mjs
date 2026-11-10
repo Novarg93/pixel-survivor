@@ -1,0 +1,33 @@
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import process from 'node:process';
+process.env.PLAYWRIGHT_BROWSERS_PATH ??= resolve('.browsers');
+const { chromium } = await import('@playwright/test');
+const dir='art/generated/ash-warden-cleave-rd-01/';
+const sha=path=>createHash('sha256').update(readFileSync(path)).digest('hex');
+const baseline=JSON.parse(readFileSync(dir+'protected-baseline.json','utf8'));
+const changed=Object.entries(baseline).filter(([file,hash])=>sha(file)!==hash).map(([file])=>file);
+if(changed.length)throw Error('Protected files changed: '+changed.join(', '));
+const best=JSON.parse(readFileSync(dir+'best-attempt.json','utf8'));
+const browser=await chromium.launch({channel:'chromium',headless:true});
+try {
+  const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(pathToFileURL(resolve(dir+best.folder+'/preview.html')).href);
+  await page.waitForFunction(()=>globalThis.document.querySelector('#label').textContent!=='');
+  await page.locator('#play').click();
+  const first=await page.locator('#label').textContent();
+  await page.locator('#frame').fill('6');
+  await page.waitForFunction(()=>globalThis.document.querySelector('#label').textContent==='6');
+  await page.screenshot({path:dir+'preview-screenshot.png',fullPage:true});
+  await page.locator('#play').click();
+  await page.waitForFunction(()=>globalThis.document.querySelector('#label').textContent!=='6');
+  if(errors.length)throw Error(errors.join('\n'));
+  const frames=JSON.parse(readFileSync(dir+best.folder+'/frame-metadata.json','utf8'));
+  if(frames.length!==12||frames.some(f=>f.width!==192||f.height!==192||!f.transparent||f.partialAlpha||f.edge))throw Error('Frame technical contract failed');
+  const pngs=readdirSync(dir+best.folder+'/frames').filter(f=>f.endsWith('.png'));
+  const result={protectedFiles:Object.keys(baseline).length,changedProtectedFiles:changed,best,frames:frames.length,totalDurationMs:frames.reduce((s,f)=>s+f.durationMs,0),frameHashes:Object.fromEntries(pngs.map(f=>[f,sha(dir+best.folder+'/frames/'+f)])),preview:{errors,controls:'pause, scrub to6, resume passed',initialFrame:first},checks:'typecheck/lint/unit/build reported separately; visual judgement in report'};
+  writeFileSync(dir+'validation.json',JSON.stringify(result,null,2));globalThis.console.log(JSON.stringify(result));
+} finally {await browser.close();}

@@ -1,0 +1,53 @@
+{
+  "sourceSize": [
+    128,
+    128
+  ],
+  "candidate": "ash-warden-base-final.png",
+  "alternative": "ash-warden-base-alt.png",
+  "estimatedBodyBounds": {
+    "top": 21,
+    "bottom": 100,
+    "height": 80,
+    "method": "Alpha bounds in visually selected helmet core and boot regions; excludes sword."
+  },
+  "previewWorldScale": 0.908578125,
+  "estimatedWorldBodyHeight": 72.68625,
+  "estimatedMageRatio": 2.73,
+  "suggestedOrigin": [
+    0.5,
+    0.7890625
+  ],
+  "grip": {
+    "upperGauntlet": [
+      59,
+      54,
+      66,
+      60
+    ],
+    "lowerGauntlet": [
+      62,
+      60,
+      70,
+      66
+    ],
+    "crossguard": [
+      48,
+      68,
+      78,
+      74
+    ]
+  },
+  "desktop": {
+    "width": 1280,
+    "height": 720,
+    "zoom": 2
+  },
+  "mobileLandscape": {
+    "width": 844,
+    "height": 390,
+    "zoom": 1.2769230769230768
+  },
+  "footAlignment": "Review places each actor by its boots on a common baseline; source-to-world scales stay constant. Runtime origins are not modified.",
+  "status": "Recommended south static base; awaiting user art acceptance. No runtime replacement."
+}

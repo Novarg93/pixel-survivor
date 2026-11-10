@@ -1,0 +1,15 @@
+{
+  "id": "south-west/walk/attempt-02",
+  "direction": "south-west",
+  "motion": "walk",
+  "first_frame_file": "first-frame-south-west.png",
+  "transport": "file encoded as data:image/png;base64 URL in first_frame_url",
+  "frame_count": 16,
+  "view": "low top-down",
+  "no_background": true,
+  "enhance_prompt": false,
+  "seed": 8110911,
+  "subject_description": "A bearded male fantasy battle mage with short dark hair, navy blue and gold armoured long coat, green front sash with red accents, gold shoulder armour and bracers, gold boots",
+  "initial_pose": "Standing upright with both feet planted and arms relaxed at the sides, three-quarter front view facing lower left (south-west)",
+  "description": "A clear continuous in-place WALK cycle facing diagonally south-west, toward the lower left. Show two unmistakable alternating steps: lift the left boot off the ground and bend that knee while the right leg supports the body, then plant the left boot forward and lift the right boot with a bent knee. Both boots must visibly leave the ground in alternation, with a clear forward and backward stride, while one foot remains planted at all times. Swing the empty arms naturally in opposition to the legs. Keep the original south-west three-quarter front heading throughout, the same size and costume, and the camera completely fixed. Keep the whole character within the frame. Gentle grounded walking, not idle swaying, no running and no hopping. End in the starting stance for a loop."
+}

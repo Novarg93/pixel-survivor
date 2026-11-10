@@ -1,0 +1,57 @@
+{
+  "south": {
+    "status": "candidate-awaiting-manual-review",
+    "loop": false,
+    "attackStart": {
+      "timeMs": 0,
+      "frame": 0
+    },
+    "directionLock": {
+      "timeMs": 0,
+      "forward": [
+        0,
+        1
+      ],
+      "policy": "Latch once per attack, no tracking during swing"
+    },
+    "windupEnd": {
+      "timeMs": 220,
+      "frame": 3
+    },
+    "hitFrame": {
+      "timeMs": 280,
+      "frame": 4,
+      "dispatch": "once-per-attack-instance",
+      "guardKey": "attackInstanceId"
+    },
+    "activeEnd": {
+      "timeMs": 370,
+      "frame": 5
+    },
+    "recoveryEnd": {
+      "timeMs": 650,
+      "frameExclusive": 8
+    },
+    "hitArea": {
+      "kind": "front-sector",
+      "forward": [
+        0,
+        1
+      ],
+      "radiusWorld": null,
+      "suggestedArcDegrees": 90,
+      "status": "visual proposal only; no gameplay hitbox"
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "neverApplyOnEachActiveFrame": true
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        540,
+        650
+      ],
+      "gameplayExitAllowedAfterMs": 650
+    }
+  }
+}

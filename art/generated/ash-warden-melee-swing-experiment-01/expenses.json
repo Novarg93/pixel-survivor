@@ -1,0 +1,46 @@
+{
+  "currency": "USD",
+  "cashBefore": 10,
+  "cashAfter": 10,
+  "actualCashSpent": 0,
+  "cashLimit": 1.5,
+  "starterBeforePct": 79,
+  "starterAfterPct": 70,
+  "starterAccountDecreasePoints": 9,
+  "lowestObservedStarterPct": 69,
+  "conservativeDecreasePoints": 10,
+  "starterLimitPoints": 10,
+  "betweenOperationsUnattributedPoints": 2,
+  "quotaNote": "A after75%, B before73% with one web job slot in use; the extra2points are not attributed to our two MCP calls. All account decrease is counted against the task ceiling.",
+  "operations": [
+    {
+      "candidate": "A",
+      "seed": 6110641,
+      "taskId": "4d578533-447b-4828-9ae8-35be58bd1d46",
+      "estimateUSDIfBalance": 0.25,
+      "billedUSD": 0,
+      "billingSource": "plan",
+      "starterBefore": 79,
+      "starterAfter": 75,
+      "jobSnapshot": 75
+    },
+    {
+      "candidate": "B",
+      "seed": 6110642,
+      "taskId": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+      "estimateUSDIfBalance": 0.25,
+      "billedUSD": 0,
+      "billingSource": "plan",
+      "starterBefore": 73,
+      "starterAfter": 70,
+      "jobSnapshot": 69
+    }
+  ],
+  "C": {
+    "generated": false,
+    "estimatedUSDIfBalance": 0.25,
+    "estimateWouldUse": "plan",
+    "reason": "Account Starter79% ->70%; job snapshot69% reaches the10-point ceiling. Only1point remains by account and a comparable job used3-4points. No C inference submitted."
+  },
+  "generatedJobs": 2
+}

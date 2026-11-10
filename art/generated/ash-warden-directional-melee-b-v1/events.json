@@ -1,0 +1,226 @@
+{
+  "south": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        0,
+        1
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 5,
+      "timeMs": 460
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        0,
+        1
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "front",
+    "combatFacing": "south",
+    "status": "visual metadata, not connected to gameplay"
+  },
+  "east": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        1,
+        0
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 5,
+      "timeMs": 460
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        1,
+        0
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "front",
+    "combatFacing": "east",
+    "status": "visual metadata, not connected to gameplay"
+  },
+  "west": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        -1,
+        0
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 5,
+      "timeMs": 460
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        -1,
+        0
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "front-mirror",
+    "combatFacing": "west",
+    "status": "visual metadata, not connected to gameplay"
+  },
+  "north": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        0,
+        -1
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 6,
+      "timeMs": 540
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        0,
+        -1
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "back",
+    "combatFacing": "north",
+    "status": "visual metadata, not connected to gameplay"
+  }
+}

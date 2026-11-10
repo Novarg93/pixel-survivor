@@ -11,7 +11,7 @@ it('starts one real Eclipse with both phases, teleport and the same lawful Mage5
   expect(w.snapshot()).toMatchObject({practice:true,practiceBoss:'astral-revenant',practiceElapsed:0,level:54,hp:200});
   expect(w.enemies).toEqual([e]);expect(e.kind).toBe('eclipse');expect(e.boss!.enrageIndex).toBe(1);expect(e.boss!.magic?.nextAt).toBe(w.elapsed+3);
   expect(e.hp).toBe(ENEMIES.eclipse.hp*scalesAt(ASTRAL_PRACTICE.at).hp);expect(e.damage).toBe(ENEMIES.eclipse.damage*scalesAt(ASTRAL_PRACTICE.at).damage);
-  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('frost');expect(w.ultimate.charge).toBe(10);
+  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('lightning');expect(w.ultimate.charge).toBe(10);
   const briar=new World(42);startBriarPractice(briar);expect(w.upgrades).toEqual(briar.upgrades);expect(w.stats).toEqual(briar.stats);
 });
 it('excludes all other spawns and encounters, including beyond20min and normal despawn distance',()=>{

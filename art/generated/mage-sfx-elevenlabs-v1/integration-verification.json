@@ -1,0 +1,57 @@
+{
+  "baselineFiles": 351,
+  "changed": [
+    "src/game/audio/AudioBackend.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/PhaserAudioBackend.ts",
+    "src/game/audio/README.md",
+    "src/game/audio/catalog.ts",
+    "src/game/bootstrap/preparePracticeMage.ts",
+    "src/ui/components/MainMenu.vue"
+  ],
+  "added": [
+    "public/assets/audio/mage-sfx-v1/mage-blink.wav",
+    "public/assets/audio/mage-sfx-v1/mage-fireball-cast.wav",
+    "public/assets/audio/mage-sfx-v1/mage-fireball-impact.wav",
+    "public/assets/audio/mage-sfx-v1/mage-frost-nova.wav",
+    "public/assets/audio/mage-sfx-v1/mage-lightning.wav",
+    "public/assets/audio/mage-sfx-v1/mage-meteor.wav",
+    "public/assets/audio/mage-sfx-v1/mage-shield.wav",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-charge.wav",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-overload.wav",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-release.wav",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-sky.wav",
+    "src/game/audio/mageSamples.ts"
+  ],
+  "previousSHA256": {
+    "src/game/audio/AudioBackend.ts": "db50081b00ad4aa53794c1c26b9e78de1c3cdc1d63bbd667afaaf2231383440c",
+    "src/game/audio/AudioController.ts": "ea69e388553ee0b462e89917e55b046fd67ca306c118a22d6ecb01f8aed29d87",
+    "src/game/audio/PhaserAudioBackend.ts": "0f60813f2c5a800a9184538f1b9b773c77bac4003f25fff5f0c73341e0209ce0",
+    "src/game/audio/README.md": "ddfcf6263217e863aec81c743929932480cde2538a4c6686a98287bf0d14c5a0",
+    "src/game/audio/catalog.ts": "58465c41301295192e0a7404d28b3cff4e3f2bb716750a1345c73c80eb716fcb",
+    "src/game/bootstrap/preparePracticeMage.ts": "57bf128bf39266cf737b39e40fd93bfde9c2d48b035fde18e3b9326a7fe238a2",
+    "src/ui/components/MainMenu.vue": "d9051ffc7a0601ca97ae1406ab86d895b243c99743f0372d67dd7e1911aab9c4"
+  },
+  "currentSHA256": {
+    "src/game/audio/AudioBackend.ts": "f0861129b0a626387fbba9043fd1bfbc83b772081a68287f6cf2cfede51b556c",
+    "src/game/audio/AudioController.ts": "ac55822ed622987a4e377a0f8e5e0fb01e7e251600838f00997674fb9fd83d16",
+    "src/game/audio/PhaserAudioBackend.ts": "7a89e241266c78b21a320d04e9450dcec722e05ddee1bbff2ea07cfb17aa9380",
+    "src/game/audio/README.md": "baf4923dd4f8f9cc8e8b0558db39773a01ba6e5d32e4a958d23f77b04008f5a4",
+    "src/game/audio/catalog.ts": "fbffb8a65cb877321bdb0f9ffbcb17e1947e85dfd657f5d512e0f34fe7aca849",
+    "src/game/bootstrap/preparePracticeMage.ts": "5e410813bcfb00c2a9197a69d0bdaaa0dd82519d20b3b8efa9f174f1cb459c8b",
+    "src/ui/components/MainMenu.vue": "d75eedf47b80d2cf6ece85f2a7aabfb13040f116e8d342fbde1fff1e5bd46d9d",
+    "public/assets/audio/mage-sfx-v1/mage-blink.wav": "c78f37bdc3648968a858b0a1e9fc8139acbe314dd0cdb0f8a70a831f69d7c96a",
+    "public/assets/audio/mage-sfx-v1/mage-fireball-cast.wav": "ee4152f594b71744317db45d0b10cadcf3e9fcc59783a58cb7b6e37de79ebcf7",
+    "public/assets/audio/mage-sfx-v1/mage-fireball-impact.wav": "0bf70b3395f5525b56656822672da81700a4dcf32e64c8e3b11ef17d6f4a9c78",
+    "public/assets/audio/mage-sfx-v1/mage-frost-nova.wav": "86c63c748fd2c46eb859bd41397b086cd5fb2afd7bdd4300024c00603e29470e",
+    "public/assets/audio/mage-sfx-v1/mage-lightning.wav": "9d809b361a2574c624fbe37fd4479675f9443ff5d7a20e4343f33b0099a352f8",
+    "public/assets/audio/mage-sfx-v1/mage-meteor.wav": "ec7858daed37e231612a27909f5a97a8ccbe148e6fe3c6ace542e1dccca1bb31",
+    "public/assets/audio/mage-sfx-v1/mage-shield.wav": "602476fd69b244f705758327abd47604dba8ba9e5399b7b195aca6c545db110a",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-charge.wav": "2c50678a6cac47b8d4fc9b7a555920007056326112f94855b5f40e06f030d15a",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-overload.wav": "d68f9df7d9506946ae1658a8a34c6e65ef738105ca7e333e189b95497616bebb",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-release.wav": "dfdd7146123055ce02f0654ef4b26dc49da5fd441392555f7682ef3fd2ffb0f5",
+    "public/assets/audio/mage-sfx-v1/mage-ultimate-sky.wav": "51ce5ef33beb8fbb22e38a94510bcdba111c50565755d3ac01ed3dc1413d5f02",
+    "src/game/audio/mageSamples.ts": "f476154b23f5d47874823321b745cc9afa340ef197c11e6f190ff25a702dae41"
+  },
+  "unchanged": 344
+}

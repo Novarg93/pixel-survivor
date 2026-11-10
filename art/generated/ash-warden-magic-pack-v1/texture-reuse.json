@@ -1,0 +1,447 @@
+{
+  "textures": 58,
+  "westExtraTextures": 0,
+  "meteorUniqueComponents": 4,
+  "meteorUniqueFrames": 23,
+  "allStrikesShareMeteorC": true,
+  "southEastSharedUpper": true,
+  "runtime": {
+    "cast-south": {
+      "frames": [
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "7a4ddcfa23c5de9bd5fb9e05",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "be9b8bcb74de8e6843b804de",
+          "lower": "46249c7af9e4e13445ebb9a2",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "083133b103f30a60b03a250d",
+          "lower": "5d74697070b74dcf09260529",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "7a158440af30e516abec4449",
+          "lower": "74be113aec2b28dd7b842796",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "9541568d6877c7fece42d65d",
+          "lower": "a966146db3b28794e3769b02",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "0f919741830f46c02dda4f8c",
+          "lower": "91ecba9c03a050d3214321e6",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "4ab1c47717f4f6b11306e3d3",
+          "lower": "5ee5e9833e6e74bcb1549bc3",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "d40088218fdaec0ca5d1352a",
+          "lower": "87aeca2fa682c9f1d7737c1a",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "bdbcfc67f94c6e54500598c3",
+          "lower": "9484617161d13684838192bb",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "45d3e9cf39afc8f17a58b978",
+          "lower": "29860a79eddef69b380dfa2d",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "af876db107954ea97426e20b",
+          "lower": "6915973c6e7b1d4e94fc1686",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "014115cbd98aed3606895b37",
+          "lower": "51c43d9ed5ab605d5c5547dd",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "7a4ddcfa23c5de9bd5fb9e05",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        }
+      ]
+    },
+    "cast-east": {
+      "frames": [
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "28e1606b0f0b9ad5a1cdda62",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "be9b8bcb74de8e6843b804de",
+          "lower": "0ed85b81d57490dd05fefa19",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "083133b103f30a60b03a250d",
+          "lower": "0efa0bf12f9d94b98288a59a",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "7a158440af30e516abec4449",
+          "lower": "d48a5216f6fbe622fbadca63",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "9541568d6877c7fece42d65d",
+          "lower": "89bad3747aa0d0080060db8f",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "0f919741830f46c02dda4f8c",
+          "lower": "9b023044f1c1453c6d29427e",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "4ab1c47717f4f6b11306e3d3",
+          "lower": "02e14d114073b0e509bd1c7e",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "d40088218fdaec0ca5d1352a",
+          "lower": "650ae9bce01d53d6002b12b1",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "bdbcfc67f94c6e54500598c3",
+          "lower": "b4a2062fb4a97c8347b8cc81",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "45d3e9cf39afc8f17a58b978",
+          "lower": "03c8ce86c6a44fc688c1bc63",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "af876db107954ea97426e20b",
+          "lower": "c6e1f76fd24ebe175cbfb26b",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "014115cbd98aed3606895b37",
+          "lower": "37d3e914d036d02d66c23d72",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "28e1606b0f0b9ad5a1cdda62",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        }
+      ]
+    },
+    "cast-west": {
+      "frames": [
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "28e1606b0f0b9ad5a1cdda62",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "be9b8bcb74de8e6843b804de",
+          "lower": "0ed85b81d57490dd05fefa19",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "083133b103f30a60b03a250d",
+          "lower": "0efa0bf12f9d94b98288a59a",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "7a158440af30e516abec4449",
+          "lower": "d48a5216f6fbe622fbadca63",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "9541568d6877c7fece42d65d",
+          "lower": "89bad3747aa0d0080060db8f",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "0f919741830f46c02dda4f8c",
+          "lower": "9b023044f1c1453c6d29427e",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "4ab1c47717f4f6b11306e3d3",
+          "lower": "02e14d114073b0e509bd1c7e",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "d40088218fdaec0ca5d1352a",
+          "lower": "650ae9bce01d53d6002b12b1",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "bdbcfc67f94c6e54500598c3",
+          "lower": "b4a2062fb4a97c8347b8cc81",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "45d3e9cf39afc8f17a58b978",
+          "lower": "03c8ce86c6a44fc688c1bc63",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "af876db107954ea97426e20b",
+          "lower": "c6e1f76fd24ebe175cbfb26b",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "014115cbd98aed3606895b37",
+          "lower": "37d3e914d036d02d66c23d72",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        },
+        {
+          "upper": "021baec9106c88403d5b8e29",
+          "lower": "28e1606b0f0b9ad5a1cdda62",
+          "order": [
+            "upper",
+            "lower"
+          ]
+        }
+      ],
+      "flipX": true
+    },
+    "cast-north": {
+      "frames": [
+        {
+          "full": "db459764bf269f0c4150aa46"
+        },
+        {
+          "full": "a2e5c57db9022ba1965ed588"
+        },
+        {
+          "full": "e4ed3a25b6728500af91badf"
+        },
+        {
+          "full": "623231f216e1633c989973ce"
+        },
+        {
+          "full": "9f5cb589b96258f56640326a"
+        },
+        {
+          "full": "aa505dc0e870262d3e24919a"
+        },
+        {
+          "full": "8095b17b4cb7372501db5a2d"
+        },
+        {
+          "full": "a382fae94df247b825877477"
+        },
+        {
+          "full": "b6faecac596bbd4a86aeb5d4"
+        },
+        {
+          "full": "3e2268811e1cccde709bbcff"
+        },
+        {
+          "full": "e5105580628a5f04465ed99b"
+        },
+        {
+          "full": "3016495634d370ef5e89a7f0"
+        },
+        {
+          "full": "db459764bf269f0c4150aa46"
+        }
+      ]
+    },
+    "ritual-enter": {
+      "frames": [
+        {
+          "full": "5905f9af3527ae8e711afc6f"
+        },
+        {
+          "full": "67998b2eb916adff8538b97a"
+        },
+        {
+          "full": "7c13f5fdee35af496b11734e"
+        },
+        {
+          "full": "afb11193d815d6676b94754b"
+        },
+        {
+          "full": "962188fb90309bc228bf55d4"
+        },
+        {
+          "full": "962188fb90309bc228bf55d4"
+        }
+      ]
+    },
+    "ritual-channel": {
+      "frames": [
+        {
+          "full": "962188fb90309bc228bf55d4"
+        },
+        {
+          "full": "2c5738d2dac871f0ab2ffb1c"
+        },
+        {
+          "full": "2ea7ea67a33fd323602945fe"
+        },
+        {
+          "full": "2c5738d2dac871f0ab2ffb1c"
+        }
+      ]
+    },
+    "armageddon-cast": {
+      "frames": [
+        {
+          "full": "962188fb90309bc228bf55d4"
+        },
+        {
+          "full": "44de48f4e89fa299ff29c55f"
+        },
+        {
+          "full": "487a40ab1358c22ee9851f96"
+        },
+        {
+          "full": "de2614ec695fc220ae83c0f4"
+        },
+        {
+          "full": "de2614ec695fc220ae83c0f4"
+        },
+        {
+          "full": "de2614ec695fc220ae83c0f4"
+        },
+        {
+          "full": "487a40ab1358c22ee9851f96"
+        },
+        {
+          "full": "44de48f4e89fa299ff29c55f"
+        },
+        {
+          "full": "962188fb90309bc228bf55d4"
+        }
+      ]
+    }
+  }
+}

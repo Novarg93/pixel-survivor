@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "provider": "PixelLab AI",
+  "approvedReview": "art/generated/astral-projectile-review-v1/manifest.json",
+  "canvas": 128,
+  "width": 528,
+  "height": 660,
+  "padding": 2,
+  "rgbaBytes": 1393920,
+  "frameCount": 17,
+  "sources": {
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/01.png": "30b11c1830f78a04834c1a59ed127f122c4fe878e2dbfd87afa0fbf0fb89128d",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/02.png": "29403b57f1cb43eec41db15519f5ba93d67154ad1a3cb22c1be3f96464723037",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/03.png": "f75e3ea1ef2ba4c841d8ff10e186aac5b7e7fbc1a9db2582b793cc9e1ec10043",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/04.png": "a6d17dc794f6482488b27d1014c8929747f52195a8f05cdce174ace83254b9fa",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/05.png": "17d4bddd846d922cae81dda9db31996276cf51cb38e58782c6479caa9ba048d9",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/06.png": "7554e39033969f05d188e3983b62a294c7ff66b2f42e703ad7828576dcee1c01",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/07.png": "804fcd2c062aa1d39eedf100d9731147b1c39c2b0da4d56952dfd0a69c776892",
+    "art/generated/astral-projectile-review-v1/raw/projectile-flight/08.png": "10bbdf074d28bfb5a80e79b501993af140b6fe42888cfb0f535285a88fe96d64",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/00.png": "cab4ea2e08b147a245987fc5adef3e48a9a0451a50c90f023f4199708b610cc5",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/01.png": "c92cf130e23e3344a303839db68ed1d0d7cc439e2490b773f691c58d5751d4dc",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/02.png": "3f44e9f1ae8d587b6040ecc4a39ba870b2ca45a85c733178fa0c051250e84816",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/03.png": "c45c21da08359e4ef38c157793ac0c1c48afe6c801c76fa0567ab48a5f0ed776",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/04.png": "d848cc7c5f291e820e336a0227e3f72a9ae462548079b3b20b1396017cfb28bf",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/05.png": "358cda72b6fdf67b11de9cd0572b8adc8f5ba12527dc9d46e2cf2651f6606d9e",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/06.png": "bc174e1dc2c538b4819eb279e354ae72b5ae019e2ce82aa4cef82403db6adb8e",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/07.png": "bc92616c8f19463574ad9411358a1661d22e945666a5e78acdfffae9025475f8",
+    "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/08.png": "933ada0d68a440f2cd936c410096d83bfb3e8bfb1f28a82765c31b450abfdd82"
+  },
+  "clips": {
+    "flight": {
+      "frames": [
+        {
+          "name": "eclipse-ai-flight-0",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "151f9cae357aed39e553914ca9488db410add0676c084c555ac0beb315f42ab1"
+        },
+        {
+          "name": "eclipse-ai-flight-1",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "14a44231f688e904aac0a11d8c37dcc1867231c1097e6180f5c20ae3ef6b3d29"
+        },
+        {
+          "name": "eclipse-ai-flight-2",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "ab96fa97b4d2afdf6db7886c60358c8316e6c8c4422f36d39f8e519d9db5ad07"
+        },
+        {
+          "name": "eclipse-ai-flight-3",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "e9609bd86c7e7062ab98ae7276006354d0edda31ebd5ee022d5abadcc734b495"
+        },
+        {
+          "name": "eclipse-ai-flight-4",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "fcb3dc3a5b4b9e222efa131c3086b78db34287db59787405c79ea6f5088b2dc9"
+        },
+        {
+          "name": "eclipse-ai-flight-5",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "89d4740a853a258421caa9fdc1bf63b20fc32f16beea14577668f37acd07bfca"
+        },
+        {
+          "name": "eclipse-ai-flight-6",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "7ca24c999389d437977f8ab248b569ce807f8f08e2643e78fd2ac3c349eb9f86"
+        },
+        {
+          "name": "eclipse-ai-flight-7",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-flight/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "a0e5b5dfecbac607af7f15a01e8f6424603c9285661b6275b5e4ed314e1e33e1"
+        }
+      ],
+      "frameCount": 8,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "pivot": {
+        "x": 75,
+        "y": 62
+      },
+      "size": 56
+    },
+    "impact": {
+      "frames": [
+        {
+          "name": "eclipse-ai-impact-0",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "177574f2f352906fa6cf5297ed82e643d40a8afb11eafdbd0ac51a439f2f9ded"
+        },
+        {
+          "name": "eclipse-ai-impact-1",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "ed884a0fd5f92ebce5fc53a948713207d93cbcc9f3f919b9088c84888b6ceaf9"
+        },
+        {
+          "name": "eclipse-ai-impact-2",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "4bae32ee61759b3b747cf522852ff8034f24544f95afba508034853e3bf4cf77"
+        },
+        {
+          "name": "eclipse-ai-impact-3",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "c24d83a9961c09f7e8bd1e16bec324a20f2b6d124fa63783354137407cace52b"
+        },
+        {
+          "name": "eclipse-ai-impact-4",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "2ced5a774ee610096ee117bbd23c5992e9f0f576e616c74dcc5b0b02d4c16caa"
+        },
+        {
+          "name": "eclipse-ai-impact-5",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "6c18532dd609f15cce9fd22c2a4cb5ade1350272c2ec866493546c59c8dddd90"
+        },
+        {
+          "name": "eclipse-ai-impact-6",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "dfe36a6bff68ba630ed913ffe133e61dad5126355c17380e9625ec3b1f70f55b"
+        },
+        {
+          "name": "eclipse-ai-impact-7",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "9ed893e255cb4608f772543202b28b28787f30fbf44fe12842be3ee877f94db6"
+        },
+        {
+          "name": "eclipse-ai-impact-8",
+          "source": "art/generated/astral-projectile-review-v1/raw/projectile-impact-soft/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "90f4609266a516ee3bf7946319db3ba6a32180c76eecf67b1d8bdf5954883c9e"
+        }
+      ],
+      "frameCount": 9,
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 75,
+        "y": 62
+      },
+      "size": 56
+    }
+  }
+}

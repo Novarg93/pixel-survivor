@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "provider": "PixelLab AI",
+  "authoring": "scripts/build-shield-nova-runtime.mjs",
+  "approvedReview": "art/generated/mage-shield-nova-pixellab-v1/manifest.json",
+  "canvas": 128,
+  "width": 792,
+  "height": 792,
+  "padding": 2,
+  "rgbaBytes": 2509056,
+  "frameCount": 34,
+  "shieldScale": 0.5,
+  "novaRadius": 48,
+  "sources": {
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/01.png": "8fc41dfbbd4eaddb1edd9e99a05ebcfcd5f2e3d819325d1898f8156d889fc3b2",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/02.png": "bb92c73979761a422c217816e1ef037b6dd35abb32be04cbd0b868d7107a96a9",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/03.png": "801b3dfd98753993dbb60dcc5cb3e195f7683adfc3a36126fb6a7c3671c5e16d",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/04.png": "8e73859191cadaea56719e8f966b26f856c1ebdd8f717e1367ae1e32547436b4",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/05.png": "4d77221bfd2d4d8119f48f70a4f331aab82dec0fb553b54c09857763bcb5457f",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/06.png": "1cc8ca83571fec55f6109b87b4fded43ee15a74ac5fcf9a558ee08e33cd7964e",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/07.png": "c226e4a44264f95114aeb67e257ef535b7286f3cb64fcedbb1fca8d542046fe4",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/08.png": "b094a0c920a6926b767df17d2bbb506288855600d7f6fec32c44faa9340e6049",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/00.png": "b771de29fb3588648637cd547a6dcdd7199ae7b010f6de4444fb70b32a51f59a",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/01.png": "1d43a2d6813631ea0375f5e34de1f735b1481b816d7b3239962f5827db334604",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/02.png": "342df20a397f23712067598440003e501edcc929907592b3abb0cc8d43da455e",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/03.png": "4aad507d0df002106ac2d49d5f187bd0e905d3d67fc07664b154f4cc70dbd1dc",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/04.png": "b1407fe692508433d285c75e44004259a6dc0c8f75950f2086dd74c226e0ce42",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/05.png": "1868b1460d72546e6661c079062be8938c1c5d29843a6b9c686000b924afd29c",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/06.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/07.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/08.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/00.png": "a4f60c6aaa402550cf2dfeeaf11b00a6d5916cfba8537ff9b419aa7586e79c54",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/01.png": "e2c05375243cb9b867de9f0dcff006d1b0f96052e3d55d521c38180736942dc1",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/02.png": "cc219893d2b36ac22ba130da70daccb9efae4ff061b10647074ef7196e6754e1",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/03.png": "bd976173b31075fb27efd7f2dbdd0a0f440a78a748ffc4310f8e59036ec26a89",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/04.png": "f53eba7af35e226ee74716b2ce783993decc71f9ff0d436b30cd3f227b5126f4",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/05.png": "6d339695f98fc92f63b0718586b3598e196166fea10c82b6a3f04ee9290bbc41",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/06.png": "74372b21f7d20bfd2fe35e0272112803a96cc337b36577251efce2f9e0e65389",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/07.png": "95f446af2c3b6e20230d083f57e1bd8566c1a5d8907db93dce3c90359a05a273",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/08.png": "c3c6ae303a616dbb70a7467e12c12f7b2c5fd3490fc708e23a43a3b07859acef",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/09.png": "dd5d1838112b376c914144b0da46458fecb2fb765fd5ad162fda0d1965e30981",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/10.png": "adb8ee86e88463082eba7714ca36c4493d18338b55fd1dfe7b0bb73647c1c490",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/11.png": "e41f946e1cff5c773dc69ab35c94b25fabc151a7ebe0344c5a594dde00aa7e26",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/12.png": "7a9a69963950c7ecb3aef884e2138d7414e8d6ceac2456ce78044ed48b234e42",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/13.png": "8135d8eeab9be5768189b570838e33bc485d6d7f31f8278187f7da3774b34fe0",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/14.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/15.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/16.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee"
+  },
+  "clips": {
+    "shield-loop": {
+      "source": "arcane-shield-loop",
+      "indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loop": true,
+      "pivot": {
+        "x": 64,
+        "y": 108
+      },
+      "frameCount": 8,
+      "frames": [
+        {
+          "name": "mage-shield-loop-0",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "20567c4d1e620cb56b4e667a8581bd5fe4c53ffc63544f19e355d52acf1ef3b4"
+        },
+        {
+          "name": "mage-shield-loop-1",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "f2b555123f0fe93758bacd41439b255823e810a0c8e04207737f35a69f9f2422"
+        },
+        {
+          "name": "mage-shield-loop-2",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "65b42910c8c85f829a14b27d980e02438fc6620e18925511554b5752e33f4e74"
+        },
+        {
+          "name": "mage-shield-loop-3",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "362596a44458f67a3f3e363e482c2fca30b7588245d7861a5f6242875d5a6dc3"
+        },
+        {
+          "name": "mage-shield-loop-4",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "3a964e7cf132d5f82211d143d93dfe82653dadddf4669086efc107b82b24ab77"
+        },
+        {
+          "name": "mage-shield-loop-5",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "734ad29ac7792b6962dba3379be5babd407610e2a186cc867d7ba5079b7a7412"
+        },
+        {
+          "name": "mage-shield-loop-6",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "f04f4b05e25dbcea35787edc32a00c5e50b3f319d9d7c18bd42f82e237e29368"
+        },
+        {
+          "name": "mage-shield-loop-7",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-loop/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "8b5de8417d077808c2211b7d64871d123fa9b3ee9f3606f7e1a9ae6456577314"
+        }
+      ],
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ]
+    },
+    "shield-fade": {
+      "source": "arcane-shield-fade",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 64,
+        "y": 108
+      },
+      "frameCount": 9,
+      "frames": [
+        {
+          "name": "mage-shield-fade-0",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "a3f7b6086d721b79e7addd22b83278ec6e8add8c32cfe1458253aec5eafaa215"
+        },
+        {
+          "name": "mage-shield-fade-1",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "804eee566ac3f22d2c2d03e7051e7df1fbbbd699f715c4620357e05affdb9ad0"
+        },
+        {
+          "name": "mage-shield-fade-2",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "fb89318a52e63332e9ecde42fe006213f8c3c6ffb4871f29be60d3b876b11b4e"
+        },
+        {
+          "name": "mage-shield-fade-3",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "d43966e3a51ac73cd3369655d804670ab12b4a13840ace8bda9f715863876659"
+        },
+        {
+          "name": "mage-shield-fade-4",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "b5de079362adc8d2dd933c80650909b3ca41eb98079b0d9273fc8ac5191f18ce"
+        },
+        {
+          "name": "mage-shield-fade-5",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "8ba7c0e359dfb670fad2ef95de9831144b097d0e40b7c51947911e7a70864cce"
+        },
+        {
+          "name": "mage-shield-fade-6",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "mage-shield-fade-7",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "mage-shield-fade-8",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/arcane-shield-fade/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "durationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    "frost-nova": {
+      "source": "frost-nova-burst-compact",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "loop": false,
+      "pivot": {
+        "x": 64,
+        "y": 64
+      },
+      "frameCount": 17,
+      "frames": [
+        {
+          "name": "mage-frost-nova-0",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/00.png",
+          "sourceIndex": 0,
+          "pixelSHA256": "a433ea93da12414305fb12bef0617efc61b5270789cce100f21c2bf3289eb833"
+        },
+        {
+          "name": "mage-frost-nova-1",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/01.png",
+          "sourceIndex": 1,
+          "pixelSHA256": "9ba18a8a6a563ea9502b7497d425cce5e10d27b243c7d609345b5d57b353f462"
+        },
+        {
+          "name": "mage-frost-nova-2",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/02.png",
+          "sourceIndex": 2,
+          "pixelSHA256": "9d7bbe246138e653b4b6f1a93b4626d6abd025eca461dcec9e58f6719ec97c70"
+        },
+        {
+          "name": "mage-frost-nova-3",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/03.png",
+          "sourceIndex": 3,
+          "pixelSHA256": "9faa95c4dee7c4624429226a9140d9a2237a802da24327b1869c5055f4414fd8"
+        },
+        {
+          "name": "mage-frost-nova-4",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/04.png",
+          "sourceIndex": 4,
+          "pixelSHA256": "730d2037e2063c8b160f884991656f7f0022bc2af9cef1df208c01fffa1991d5"
+        },
+        {
+          "name": "mage-frost-nova-5",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/05.png",
+          "sourceIndex": 5,
+          "pixelSHA256": "1126b0a42e8573bb60de51069343993cb1dd0013cb7e82d76e8087563ed55bcb"
+        },
+        {
+          "name": "mage-frost-nova-6",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/06.png",
+          "sourceIndex": 6,
+          "pixelSHA256": "e63fa1e9a994072bf49b59e1ace933d3a01bc48ebd4b6d647b7b31c95eff86dd"
+        },
+        {
+          "name": "mage-frost-nova-7",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/07.png",
+          "sourceIndex": 7,
+          "pixelSHA256": "4e01d5d8e9315d6666c076e26833f525fe024287777ac97a98d9e5d8f85b0b58"
+        },
+        {
+          "name": "mage-frost-nova-8",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/08.png",
+          "sourceIndex": 8,
+          "pixelSHA256": "42b9a2d2c1f419cd1221613a2740b655c19f3aaff9056a391e05d66cb2b5d4f6"
+        },
+        {
+          "name": "mage-frost-nova-9",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/09.png",
+          "sourceIndex": 9,
+          "pixelSHA256": "459d27bf89baa3b33eeaad80de851bd5f85d24807afea6056062de41705a26a1"
+        },
+        {
+          "name": "mage-frost-nova-10",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/10.png",
+          "sourceIndex": 10,
+          "pixelSHA256": "5bd27b0ad6255286d71059bdedba0812d42f8eaec873ab3d88b59aa8c84269ee"
+        },
+        {
+          "name": "mage-frost-nova-11",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/11.png",
+          "sourceIndex": 11,
+          "pixelSHA256": "ff9b0b356379163efd743e617442844481a0a3dcc7764d48c950321b921a54d8"
+        },
+        {
+          "name": "mage-frost-nova-12",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/12.png",
+          "sourceIndex": 12,
+          "pixelSHA256": "3c3bc6df57e271be1f2518bb5a9181ddc2370401a0312a3382c6021a7880a3f2"
+        },
+        {
+          "name": "mage-frost-nova-13",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/13.png",
+          "sourceIndex": 13,
+          "pixelSHA256": "0cc3469205c0308bf7a90e0c33639b2f97aba806ae6d08cd1238f3260f595996"
+        },
+        {
+          "name": "mage-frost-nova-14",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/14.png",
+          "sourceIndex": 14,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "mage-frost-nova-15",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/15.png",
+          "sourceIndex": 15,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        },
+        {
+          "name": "mage-frost-nova-16",
+          "source": "art/generated/mage-shield-nova-pixellab-v1/raw/frost-nova-burst-compact/16.png",
+          "sourceIndex": 16,
+          "pixelSHA256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        80
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "runtimeIntegration": true,
+  "protectedFiles": 345,
+  "unchangedProtectedFiles": 342,
+  "changed": [
+    "src/game/art/FinalBossArt.ts",
+    "src/game/art/GameArt.ts",
+    "src/game/art/ashWardenPack.ts"
+  ],
+  "added": [
+    "public/assets/hd/ash-warden-pixellab-v1/meteor.json",
+    "public/assets/hd/ash-warden-pixellab-v1/meteor.png",
+    "public/assets/hd/ash-warden-pixellab-v1/north.json",
+    "public/assets/hd/ash-warden-pixellab-v1/north.png",
+    "src/game/art/ashWardenPixellabManifest.json",
+    "src/game/art/ashWardenPixellabPack.ts"
+  ],
+  "currentSHA256": {
+    "src/game/art/FinalBossArt.ts": "18aa8a66ccc1b8e2acd8ac490f9b50c1d30c6470b1bc33a324a08b71f7044c59",
+    "src/game/art/GameArt.ts": "a50492ecb19b2296909dca3075dfa8db08cd1823f6bd64a4f3cd98406a1df223",
+    "src/game/art/ashWardenPack.ts": "780c73ef2039ff9178f5f387e04d7d577740c7b871655d33b742a145d32d0373",
+    "public/assets/hd/ash-warden-pixellab-v1/meteor.json": "4958e5cd25f4f99a872ba8f17e94f0d09ae526eb10a5a156ecb528f48fd1d409",
+    "public/assets/hd/ash-warden-pixellab-v1/meteor.png": "061dbc7b9366257d46a637f904cf1babe3d9a5457f6e72aa576062ae978e40bd",
+    "public/assets/hd/ash-warden-pixellab-v1/north.json": "b849f43b6b980042f21fd897943241fb4c5ebeba936babeca897c60d6880d684",
+    "public/assets/hd/ash-warden-pixellab-v1/north.png": "ebf550385a6ea5cf69c9bd47a25c20917f8d06dd81d34b8fb2786ef06a69116e",
+    "src/game/art/ashWardenPixellabManifest.json": "c90c102cb00e8a5bfebb1077619b1f50a1226306a2ab0dd7fafe85230ecb2f42",
+    "src/game/art/ashWardenPixellabPack.ts": "7e0a810b5ef3a198f7ef2a9ddd942c4a9d8852e1857e30f7cb326c177f4b7d70"
+  },
+  "worldAndDamageUnchanged": true,
+  "warningAndStageTimesUnchanged": true,
+  "otherAssetsUnchanged": true
+}

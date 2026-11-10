@@ -1,0 +1,19 @@
+{
+  "operations": 1,
+  "tool": "start_inference_job",
+  "style": "rd_advanced_animation__rotate",
+  "backendModel": "rd_fast",
+  "estimateIfBalanceUSD": 0.1,
+  "chargedUSD": 0,
+  "billingSource": "plan",
+  "balanceBeforeUSD": 10,
+  "balanceAfterUSD": 10,
+  "starterBefore": 85,
+  "starterAfter": 84,
+  "usedPercentagePoints": 1,
+  "limitUSD": 2,
+  "limitPercentagePoints": 10,
+  "extraWestGeneration": false,
+  "motionGenerations": 0,
+  "postprocessPaidCalls": 0
+}

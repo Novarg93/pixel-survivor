@@ -1,0 +1,51 @@
+[
+  {
+    "name": "chargeWindupStart",
+    "timeMs": 0,
+    "clip": "chargeWindup",
+    "frame": 0,
+    "provisional": true
+  },
+  {
+    "name": "directionLock",
+    "timeMs": 510,
+    "clip": "chargeWindup",
+    "frame": 3,
+    "provisional": true
+  },
+  {
+    "name": "chargeStart",
+    "timeMs": 650,
+    "clip": "chargeTravel",
+    "frame": 0,
+    "provisional": true
+  },
+  {
+    "name": "chargeTravel",
+    "timeMs": 730,
+    "clip": "chargeTravel",
+    "frame": 1,
+    "provisional": true
+  },
+  {
+    "name": "chargeStop",
+    "timeMs": 1070,
+    "clip": "chargeBrake",
+    "frame": 0,
+    "provisional": true
+  },
+  {
+    "name": "chargeBrakeEnd",
+    "timeMs": 1370,
+    "clip": "idle",
+    "frame": 0,
+    "provisional": true
+  },
+  {
+    "name": "recoveryEnd",
+    "timeMs": 1370,
+    "clip": "idle",
+    "frame": 0,
+    "provisional": true
+  }
+]

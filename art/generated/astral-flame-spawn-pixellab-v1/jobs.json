@@ -1,0 +1,105 @@
+{
+  "provider": "PixelLab",
+  "tool": "animate_image",
+  "canvas": 128,
+  "generatedFrames": 8,
+  "totalFrames": 9,
+  "totalChargedGenerations": 6,
+  "firstFrame": "start-ember.png",
+  "lastFrame": "reference-flame.png",
+  "variants": [
+    {
+      "id": "a-soft-ignition",
+      "label": "Плавное разгорание",
+      "seed": 84121,
+      "action": "A tiny cold ember sprouts slender wisps upward, gently widening and gaining height in a smooth organic ignition. The base stays planted; the tendrils unfurl upward and settle into the mature flame. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: dc923733-75d4-44a5-8939-1ac593e59073\njob_id: dc923733-75d4-44a5-8939-1ac593e59073\naction: A tiny cold ember sprouts slender wisps upward, gently widening and gaining height in a smooth organic ignition. The base stays planted; the tendrils unfurl upward and settle into the mature flame. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 84121\nasset_id: 3ce156e9-f485-5dad-b48e-9bf8b911d9d0\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"dc923733-75d4-44a5-8939-1ac593e59073\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/dc923733-75d4-44a5-8939-1ac593e59073/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "status: completed\nid: dc923733-75d4-44a5-8939-1ac593e59073\njob_id: dc923733-75d4-44a5-8939-1ac593e59073\nframes: 9\ntransparent: yes\nasset_id: 3ce156e9-f485-5dad-b48e-9bf8b911d9d0\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/dc923733-75d4-44a5-8939-1ac593e59073/download?index=0 ... ?index=8"
+        },
+        {
+          "type": "text",
+          "text": "(5 more frames not shown — fetch them from the download URLs above)"
+        }
+      ],
+      "pack": [
+        {
+          "type": "text",
+          "text": "image_id: 1628be9a-17fb-4d3e-b796-f1a08806080f\ncanvas: 128x128, 9 frame(s) — 9 pictures one after another\npalette (62): #91fae8ff x4860, #bcfef5ff x3131, #054546ff x3065, #76c8aeff x1674, #319083ff x1409, #145656ff x1019, #267770ff x862, #2c7e73ff x478, #a0fff6ff x415, #42a998ff x358, #2c857bff x329, #108271ff x303, #60bdacff x281, #3ab89bff x251, #81f0d6ff x245, #046359ff x234, … +46 more\ndownload https://api.pixellab.ai/mcp/pixel-tools/1628be9a-17fb-4d3e-b796-f1a08806080f/: frames.png, animation.gif\nnext: motion 1628be9a-17fb-4d3e-b796-f1a08806080f"
+        }
+      ]
+    },
+    {
+      "id": "b-upward-flare",
+      "label": "Вспышка снизу",
+      "seed": 84122,
+      "action": "A tiny cold ember ignites in a quick vertical jet from the floor. A compact upward flare grows rapidly, then the upper flame curls and settles into the mature flame. Keep the flash inside the flame's silhouette, with no outward explosion. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: d741db08-8db1-412b-8149-da4be717fb0a\njob_id: d741db08-8db1-412b-8149-da4be717fb0a\naction: A tiny cold ember ignites in a quick vertical jet from the floor. A compact upward flare grows rapidly, then the upper flame curls and settles into the mature flame. Keep the flash inside the flame's silhouette, with no outward explosion. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 84122\nasset_id: 1291a690-8d59-5183-99c4-b6515431c38f\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"d741db08-8db1-412b-8149-da4be717fb0a\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/d741db08-8db1-412b-8149-da4be717fb0a/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "status: completed\nid: d741db08-8db1-412b-8149-da4be717fb0a\njob_id: d741db08-8db1-412b-8149-da4be717fb0a\nframes: 9\ntransparent: yes\nasset_id: 1291a690-8d59-5183-99c4-b6515431c38f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/d741db08-8db1-412b-8149-da4be717fb0a/download?index=0 ... ?index=8"
+        },
+        {
+          "type": "text",
+          "text": "(5 more frames not shown — fetch them from the download URLs above)"
+        }
+      ],
+      "pack": [
+        {
+          "type": "text",
+          "text": "image_id: 57ad19d3-711b-403d-a4db-abdbfb9a4bc0\ncanvas: 128x128, 9 frame(s) — 9 pictures one after another\npalette (54): #91fae8ff x6087, #bcfef5ff x2905, #054546ff x1539, #145656ff x808, #76c8aeff x652, #07635dff x607, #319083ff x596, #a3fef7ff x582, #267770ff x469, #00525dff x420, #42a998ff x381, #60bdacff x361, #0e8678ff x301, #067168ff x256, #2c7e73ff x221, #097b70ff x193, … +38 more\ndownload https://api.pixellab.ai/mcp/pixel-tools/57ad19d3-711b-403d-a4db-abdbfb9a4bc0/: frames.png, animation.gif\nnext: motion 57ad19d3-711b-403d-a4db-abdbfb9a4bc0"
+        }
+      ]
+    },
+    {
+      "id": "c-spiral-ignition",
+      "label": "Спиральное появление",
+      "seed": 84123,
+      "action": "A tiny cold ember raises two thin wisps that twist around each other counterclockwise into an ascending spiral. The curling energy fills from bottom to top, opens out and settles into the mature flame while its base stays planted. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 03cee345-6b64-4c6f-8bf8-a5a748c145e4\njob_id: 03cee345-6b64-4c6f-8bf8-a5a748c145e4\naction: A tiny cold ember raises two thin wisps that twist around each other counterclockwise into an ascending spiral. The curling energy fills from bottom to top, opens out and settles into the mature flame while its base stays planted. One isolated pixel-art necrotic flame wall segment, mint white core and teal edges matching the supplied target flame. Grow from the tiny ember in the first frame into the exact full flame silhouette of the final reference. Keep the floor anchor fixed at x64 y104 on the 128x128 transparent canvas, locked camera, no translation, no floor decal, no circle, no ring, no ground glow, no character, no text. One-shot SPAWN only, never fade out at the end.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 84123\nasset_id: db2c219d-3676-5ffd-980e-568f25353237\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"03cee345-6b64-4c6f-8bf8-a5a748c145e4\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/03cee345-6b64-4c6f-8bf8-a5a748c145e4/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "status: completed\nid: 03cee345-6b64-4c6f-8bf8-a5a748c145e4\njob_id: 03cee345-6b64-4c6f-8bf8-a5a748c145e4\nframes: 9\ntransparent: yes\nasset_id: db2c219d-3676-5ffd-980e-568f25353237\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/03cee345-6b64-4c6f-8bf8-a5a748c145e4/download?index=0 ... ?index=8"
+        },
+        {
+          "type": "text",
+          "text": "(5 more frames not shown — fetch them from the download URLs above)"
+        }
+      ],
+      "pack": [
+        {
+          "type": "text",
+          "text": "image_id: 2006789f-6238-4d27-afd6-85069848a6bc\ncanvas: 128x128, 9 frame(s) — 9 pictures one after another\npalette (73): #054546ff x4853, #91fae8ff x3214, #bcfef5ff x2141, #145656ff x1938, #76c8aeff x1662, #319083ff x1432, #267770ff x1219, #a8fdf1ff x923, #2c7e73ff x681, #42a998ff x544, #70debbff x357, #81f0d6ff x337, #0e6f65ff x331, #60bdacff x309, #85d6baff x305, #046256ff x287, … +57 more\ndownload https://api.pixellab.ai/mcp/pixel-tools/2006789f-6238-4d27-afd6-85069848a6bc/: frames.png, animation.gif\nnext: motion 2006789f-6238-4d27-afd6-85069848a6bc"
+        }
+      ]
+    }
+  ]
+}

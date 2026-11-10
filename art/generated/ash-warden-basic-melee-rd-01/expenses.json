@@ -1,0 +1,40 @@
+{
+  "currency": "USD",
+  "cashBefore": 10,
+  "cashAfter": 10,
+  "actualCashSpent": 0,
+  "limitUSD": 2,
+  "starterBeforePct": 84,
+  "starterAfterPct": 79,
+  "starterUsedPercentagePointsByBalance": 5,
+  "starterLowestJobSnapshotPct": 78,
+  "starterMaxObservedDecreasePoints": 6,
+  "limitStarterPercentagePoints": 10,
+  "precision": "Starter values are integer API snapshots; job receipts and account balance snapshots differ by one point",
+  "operations": [
+    {
+      "id": "south-01",
+      "style": "rd_advanced_animation__custom_action",
+      "requestId": "c3f8115c-1d17-45be-ac8f-bdff5956998c",
+      "estimateUSDIfBalance": 0.25,
+      "expectedBilling": "plan",
+      "actualBalanceChargedUSD": 0,
+      "billingSource": "plan",
+      "accountStarterAfter": 81,
+      "jobStarterAfter": 80
+    },
+    {
+      "id": "south-02",
+      "style": "rd_advanced_animation__attack",
+      "requestId": "c9dc77f5-5006-4f59-b88e-9dd7202fea69",
+      "estimateUSDIfBalance": 0.14,
+      "expectedBilling": "plan",
+      "actualBalanceChargedUSD": 0,
+      "billingSource": "plan",
+      "accountStarterAfter": 79,
+      "jobStarterAfter": 78
+    }
+  ],
+  "additionalGenerations": 0,
+  "openJobs": 0
+}

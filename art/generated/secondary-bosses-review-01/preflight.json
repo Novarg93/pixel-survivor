@@ -1,0 +1,136 @@
+{
+  "recordedAt": "2026-11-07",
+  "balance": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 44,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 44,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "health": {
+    "status": {
+      "rd_fast": "ok",
+      "rd_pro": "ok",
+      "rd_plus": "ok",
+      "animations": "ok",
+      "background_removal": "ok"
+    },
+    "updated_at": 1794037865
+  },
+  "models": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "selectedStyles": [
+    {
+      "prompt_style": "rd_advanced_animation__custom_action",
+      "name": "Custom Action",
+      "description": "Add a starting frame then describe any animation to bring the image to life. Made in partnership with PixelEngine.",
+      "group_id": "RD Animation Advanced",
+      "required_model": null,
+      "required_tab": "tab:advanced-animation",
+      "min_width": 32,
+      "max_width": 256,
+      "min_height": 32,
+      "max_height": 256,
+      "max_number_of_images": 1,
+      "require_input_image": true,
+      "prompt_requirement": null,
+      "supports_reference_images": false,
+      "supports_frames_duration": true,
+      "example_prompt": "a knight walking, his steps are heavy because of his armor"
+    },
+    {
+      "prompt_style": "rd_pro__default",
+      "name": "Default",
+      "description": "Clean modern pixel art style model that allows multiple reference images and extremely detailed prompting.",
+      "group_id": "RD Pro",
+      "required_model": "rd_pro",
+      "required_tab": "tab:image",
+      "min_width": 12,
+      "max_width": 256,
+      "min_height": 12,
+      "max_height": 256,
+      "max_number_of_images": 16,
+      "require_input_image": null,
+      "prompt_requirement": null,
+      "supports_reference_images": true,
+      "supports_frames_duration": false,
+      "example_prompt": "Example: A raven standing on a branch with appalachian forests and mountains in the background"
+    },
+    {
+      "prompt_style": "rd_advanced_animation__attack",
+      "name": "Attack",
+      "description": "Upload a starting frame and generate to animate the character attack sequence. Best results when uploading a neutral pose.",
+      "group_id": "RD Animation Advanced",
+      "required_model": null,
+      "required_tab": "tab:advanced-animation",
+      "min_width": 32,
+      "max_width": 256,
+      "min_height": 32,
+      "max_height": 256,
+      "max_number_of_images": 1,
+      "require_input_image": true,
+      "prompt_requirement": null,
+      "supports_reference_images": false,
+      "supports_frames_duration": true,
+      "example_prompt": "Over head sword swing, big impact"
+    },
+    {
+      "prompt_style": "rd_pro__topdown",
+      "name": "Top Down",
+      "description": "Pixel art viewed from a 2/3 downwards angle, with simple shapes and shading.",
+      "group_id": "RD Pro",
+      "required_model": "rd_pro",
+      "required_tab": "tab:image",
+      "min_width": 12,
+      "max_width": 256,
+      "min_height": 12,
+      "max_height": 256,
+      "max_number_of_images": 16,
+      "require_input_image": null,
+      "prompt_requirement": null,
+      "supports_reference_images": true,
+      "supports_frames_duration": false,
+      "example_prompt": "Example: A martian colony with astronauts wandering around and bubbles for air and growing plants"
+    }
+  ],
+  "runningJobs": {
+    "tasks": []
+  },
+  "pendingJobs": {
+    "tasks": []
+  },
+  "budget": {
+    "maxUSD": 5,
+    "maxRequestUSD": 0.5,
+    "preserveUSD": 5,
+    "noAutomaticPaidRetries": true
+  }
+}

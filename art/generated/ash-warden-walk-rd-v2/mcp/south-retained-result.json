@@ -1,0 +1,25 @@
+{
+  "request_id": "bef70c10-dccb-4538-a88b-b3f89b7e68d5",
+  "status": "succeeded",
+  "mode": "async",
+  "output_status": "available",
+  "credit_cost": 1,
+  "balance_cost": 0.14,
+  "charged": true,
+  "http_status": 200,
+  "error": null,
+  "completed_at": 1794059525,
+  "output_urls": [
+    "https://retrodiffusionstack-retrodiffusionapioutputstorere-rg4v98h7gwoa.s3.amazonaws.com/api-activity/bef70c10-dccb-4538-a88b-b3f89b7e68d5/0-f366c037fc1e48d0be664f4dc5633e89.gif?AWSAccessKeyId=AKIA55GSYAHSFAUCTWD2&Signature=IQE46wtmlI7LUyMbaZZrEuR6NS4%3D&Expires=1794060493"
+  ],
+  "output_count": 1,
+  "outputs": [
+    {
+      "position": 0,
+      "media_type": "image/gif",
+      "available": true,
+      "url_expires_at": 1794060493,
+      "retained_until": 1794145881
+    }
+  ]
+}

@@ -1,0 +1,837 @@
+{
+  "stage": 1,
+  "date": "2026-11-06",
+  "status": "pilot quality gate failed; no further directions generated",
+  "budget": {
+    "maxUSD": 2,
+    "maxStarterPercentagePoints": 10,
+    "initialBalance": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 91,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 91,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "floorStarterPct": 81,
+    "finalBalance": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 85,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 85,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "actualUSD": 0,
+    "balanceCostIfBalanceUSD": 0.42,
+    "actualStarterPercentagePoints": 6,
+    "worstObservedJobPercentagePoints": 7
+  },
+  "sources": {
+    "base": "art/generated/ash-warden-retrodiffusion-01/best-candidate.png",
+    "cleave": "art/generated/ash-warden-cleave-rd-01/best-attempt.gif",
+    "concept": "art/references/ash-warden-concept-02.png"
+  },
+  "canvas": [
+    192,
+    192
+  ],
+  "baseOffset": [
+    32,
+    32
+  ],
+  "foot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "bodyWorldHeight": 72.68625,
+  "mageBodyWorldHeight": 26.625,
+  "perFrameScale": false,
+  "automaticCentering": false,
+  "flipX": false,
+  "models": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "styles": {
+    "styles": [
+      {
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "name": "Custom Action",
+        "description": "Add a starting frame then describe any animation to bring the image to life. Made in partnership with PixelEngine.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "a knight walking, his steps are heavy because of his armor"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__walking",
+        "name": "Walking",
+        "description": "Upload a starting frame and generate to animate the character walking. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Slow, heavy steps"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__idle",
+        "name": "Idle",
+        "description": "Upload a starting frame and generate to animate the character idle sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Slight weight shifting"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__jump",
+        "name": "Jump",
+        "description": "Upload a starting frame and generate to animate the character jump sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Wing flapping at apex"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__crouch",
+        "name": "Crouch",
+        "description": "Upload a starting frame and generate to animate the character crouching sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Stealthy pose"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__attack",
+        "name": "Attack",
+        "description": "Upload a starting frame and generate to animate the character attack sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Over head sword swing, big impact"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__destroy",
+        "name": "Destroy",
+        "description": "Upload a starting frame and generate to animate the content being destroyed. Add a description to specify how the content is broken.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Shattered into many small pieces"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__subtle_motion",
+        "name": "Subtle Motion",
+        "description": "Upload a starting frame and generate to animate the content with subtle motion, like rain falling, leaves rustling, etc. Ideal to bring landscapes to life. Made in partnership with PixelEngine.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Peaceful gentle breeze"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__rotate",
+        "name": "Rotate",
+        "description": "Upload a character or object and generate the other 8 directional views from that single image.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": "image",
+        "supports_reference_images": false,
+        "supports_frames_duration": false,
+        "example_prompt": "A knight in silver armor holding a shield"
+      }
+    ],
+    "models": [],
+    "tabs": [
+      "tab:advanced-animation"
+    ]
+  },
+  "operations": [
+    {
+      "id": "south-idle",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "input_image": "input-padded-rgb.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt_style": "rd_advanced_animation__idle",
+        "frames_duration": 4,
+        "prompt": "Seamless calm combat breathing loop, facing south in the same low top-down view. This exact massive charcoal-armored Ash Warden stands firmly in place, both boots absolutely planted. Only tiny slow chest breathing, minute shoulder movement, slight tabard flutter and faint orange crack pulsation. Preserve the exact helmet, broad heavy shoulder armor, roots, small dry branches and body proportions. BOTH gauntlets stay closed on the SAME long grip of this ONE huge broad greatsword. Sword stays in the original low diagonal guard, same length, width and crossguard. No lifting or swinging the sword, no stepping, no turning, no body rocking or size change. Keep branch tips inside canvas. No particles, shadows, ground or extra effects. Transparent background. Return naturally to the starting pose for a clean loop.",
+        "seed": 6110611,
+        "remove_bg": true,
+        "upload_outputs": true,
+        "estimate": {
+          "created_at": 1793986540,
+          "credit_cost": 0,
+          "balance_cost": 0.14,
+          "output_images": [],
+          "base64_images": [],
+          "output_urls": [],
+          "model": "check_cost",
+          "remaining_credits": 0,
+          "remaining_balance": 10,
+          "would_use": "plan",
+          "balance_cost_if_balance": 0.14,
+          "resolved_prompt_style": "rd_advanced_animation__idle",
+          "used_input_image": true,
+          "reference_images_count": 0,
+          "used_extra_input_image": false,
+          "used_input_palette": false,
+          "used_strength": false,
+          "effective_timeout_seconds": 180
+        }
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "41fabf17-c722-4fb3-b0fb-26ed550a105b",
+        "request_id": "41fabf17-c722-4fb3-b0fb-26ed550a105b",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "balanceBefore": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 91,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 91,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      },
+      "result": {
+        "created_at": 1793986658,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "41fabf17-c722-4fb3-b0fb-26ed550a105b",
+        "outputs_retained_until": 1794072959,
+        "output_url_expires_at": 1793987565,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 88
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 89,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 89,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "id": "south-walk",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "input_image": "input-padded-rgb.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt_style": "rd_advanced_animation__walking",
+        "frames_duration": 6,
+        "prompt": "Seamless heavy purposeful pursuit WALK cycle in place, facing south toward screen bottom, fixed low top-down camera. Alternate both legs through firm planted contact, bent-knee weight transfer, lift and forward step; strong deliberate steps, never a run. Small controlled torso bob, heavy armor inertia and restrained cloth motion. Preserve this exact broad charcoal-armored Ash Warden: same helmet, massive shoulders, roots, moderate dry branches, narrow orange visor and magma cracks. BOTH gauntlets remain on the SAME grip of this ONE huge broad greatsword held in the original low diagonal guard. Constant sword length, width, thick crossguard and hand assignment; no sword swing, no weapon through torso. Stable overall body size and center, no translation across the canvas, no rotation. Clean first-to-last loop, entire sword and branches inside canvas. Transparent background, no scene, shadow, particles or effects.",
+        "seed": 6110612,
+        "remove_bg": true,
+        "upload_outputs": true,
+        "estimate": {
+          "created_at": 1793986674,
+          "credit_cost": 0,
+          "balance_cost": 0.14,
+          "output_images": [],
+          "base64_images": [],
+          "output_urls": [],
+          "model": "check_cost",
+          "remaining_credits": 0,
+          "remaining_balance": 10,
+          "would_use": "plan",
+          "balance_cost_if_balance": 0.14,
+          "resolved_prompt_style": "rd_advanced_animation__walking",
+          "used_input_image": true,
+          "reference_images_count": 0,
+          "used_extra_input_image": false,
+          "used_input_palette": false,
+          "used_strength": false,
+          "effective_timeout_seconds": 180
+        }
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "06c24b56-7e2b-48fc-bf4c-114258ac1b57",
+        "request_id": "06c24b56-7e2b-48fc-bf4c-114258ac1b57",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "balanceBefore": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 89,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 89,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      },
+      "result": {
+        "created_at": 1793986762,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "06c24b56-7e2b-48fc-bf4c-114258ac1b57",
+        "outputs_retained_until": 1794073092,
+        "output_url_expires_at": 1793987680,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 86
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 87,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 87,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "id": "south-walk-retry",
+      "reason": "Initial walk has nearly stationary feet; shorter action prompt plus8frames at same seed.",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "input_image": "input-padded-rgb.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt_style": "rd_advanced_animation__walking",
+        "frames_duration": 8,
+        "prompt": "Heavy armored warrior WALKING SOUTH IN PLACE with a clear alternating two-step gait. Left foot lifts, advances, plants and bears weight; right knee bends and right foot swings forward, then swap legs. Complete repeating left-right walk cycle. Visible knee and hip motion, firm heavy footfalls, small weight shift. Keep this Ash Warden's charcoal armor, helmet, shoulder branches and broad two-handed sword recognizable. Both hands keep the same low sword guard. Not idle breathing, not running, no attack or turning. Fixed low top-down camera, transparent background.",
+        "seed": 6110612,
+        "remove_bg": true,
+        "upload_outputs": true,
+        "estimate": {
+          "created_at": 1793986815,
+          "credit_cost": 0,
+          "balance_cost": 0.14,
+          "output_images": [],
+          "base64_images": [],
+          "output_urls": [],
+          "model": "check_cost",
+          "remaining_credits": 0,
+          "remaining_balance": 10,
+          "would_use": "plan",
+          "balance_cost_if_balance": 0.14,
+          "resolved_prompt_style": "rd_advanced_animation__walking",
+          "used_input_image": true,
+          "reference_images_count": 0,
+          "used_extra_input_image": false,
+          "used_input_palette": false,
+          "used_strength": false,
+          "effective_timeout_seconds": 180
+        }
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "00144329-fa3b-4fb4-a0ea-585760c29b45",
+        "request_id": "00144329-fa3b-4fb4-a0ea-585760c29b45",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "balanceBefore": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 87,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 87,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      },
+      "result": {
+        "created_at": 1793986927,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "00144329-fa3b-4fb4-a0ea-585760c29b45",
+        "outputs_retained_until": 1794073244,
+        "output_url_expires_at": 1793987857,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 84
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 85,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 85,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "clips": [
+    {
+      "id": "south-idle",
+      "direction": "south",
+      "pose": "idle",
+      "frames": 4,
+      "sourceFrameDurationMs": 150,
+      "sourceFPS": 6.666666666666667,
+      "sourceDurationMs": 600,
+      "suggestedPreviewFPS": 2,
+      "foot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310810810811,
+      "status": "rough idle: recognizable model; loop/cloth/sword-tip drift needs polish"
+    },
+    {
+      "id": "south-walk",
+      "direction": "south",
+      "pose": "walk",
+      "frames": 6,
+      "sourceFrameDurationMs": 150,
+      "sourceFPS": 6.666666666666667,
+      "sourceDurationMs": 900,
+      "suggestedPreviewFPS": 6.666666666666667,
+      "foot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310810810811,
+      "status": "rejected: no alternating steps; stationary feet"
+    },
+    {
+      "id": "south-walk-retry",
+      "direction": "south",
+      "pose": "walk",
+      "frames": 8,
+      "sourceFrameDurationMs": 150,
+      "sourceFPS": 6.666666666666667,
+      "sourceDurationMs": 1200,
+      "suggestedPreviewFPS": 6.666666666666667,
+      "foot": [
+        96,
+        154
+      ],
+      "worldScale": 0.6548310810810811,
+      "status": "best walk candidate, unapproved: gait present but changing torso/helmet orientation, weapon shape and poor wrap"
+    }
+  ],
+  "directions": {
+    "south": "source plus unapproved idle and walk candidates",
+    "north": "not generated: pilot gate",
+    "east": "not generated: pilot gate",
+    "west": "not generated: pilot gate; flipX not evaluated"
+  },
+  "pilotRequests": [
+    {
+      "width": 192,
+      "height": 192,
+      "num_images": 1,
+      "input_image": "input-padded-rgb.png",
+      "bypass_prompt_expansion": true,
+      "return_spritesheet": false,
+      "prompt_style": "rd_advanced_animation__idle",
+      "frames_duration": 4,
+      "prompt": "Seamless calm combat breathing loop, facing south in the same low top-down view. This exact massive charcoal-armored Ash Warden stands firmly in place, both boots absolutely planted. Only tiny slow chest breathing, minute shoulder movement, slight tabard flutter and faint orange crack pulsation. Preserve the exact helmet, broad heavy shoulder armor, roots, small dry branches and body proportions. BOTH gauntlets stay closed on the SAME long grip of this ONE huge broad greatsword. Sword stays in the original low diagonal guard, same length, width and crossguard. No lifting or swinging the sword, no stepping, no turning, no body rocking or size change. Keep branch tips inside canvas. No particles, shadows, ground or extra effects. Transparent background. Return naturally to the starting pose for a clean loop.",
+      "seed": 6110611,
+      "remove_bg": true,
+      "upload_outputs": true,
+      "estimate": {
+        "created_at": 1793986540,
+        "credit_cost": 0,
+        "balance_cost": 0.14,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.14,
+        "resolved_prompt_style": "rd_advanced_animation__idle",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      }
+    },
+    {
+      "width": 192,
+      "height": 192,
+      "num_images": 1,
+      "input_image": "input-padded-rgb.png",
+      "bypass_prompt_expansion": true,
+      "return_spritesheet": false,
+      "prompt_style": "rd_advanced_animation__walking",
+      "frames_duration": 6,
+      "prompt": "Seamless heavy purposeful pursuit WALK cycle in place, facing south toward screen bottom, fixed low top-down camera. Alternate both legs through firm planted contact, bent-knee weight transfer, lift and forward step; strong deliberate steps, never a run. Small controlled torso bob, heavy armor inertia and restrained cloth motion. Preserve this exact broad charcoal-armored Ash Warden: same helmet, massive shoulders, roots, moderate dry branches, narrow orange visor and magma cracks. BOTH gauntlets remain on the SAME grip of this ONE huge broad greatsword held in the original low diagonal guard. Constant sword length, width, thick crossguard and hand assignment; no sword swing, no weapon through torso. Stable overall body size and center, no translation across the canvas, no rotation. Clean first-to-last loop, entire sword and branches inside canvas. Transparent background, no scene, shadow, particles or effects.",
+      "seed": 6110612,
+      "remove_bg": true,
+      "upload_outputs": true,
+      "estimate": {
+        "created_at": 1793986540,
+        "credit_cost": 0,
+        "balance_cost": 0.14,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.14,
+        "resolved_prompt_style": "rd_advanced_animation__walking",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      }
+    }
+  ],
+  "reviewClips": {
+    "south-idle": "south-idle",
+    "south-walk": "south-walk-retry"
+  },
+  "pilotGate": {
+    "passed": false,
+    "reasons": [
+      "Initial6-frame walk has stationary feet",
+      "8-frame retry moves legs but changes guard/helmet orientation and weapon proportions; loop seam needs pose reconstruction",
+      "Foot contact at current/high world speed is not calibrated; increasing playback does not repair missing consistent contact poses"
+    ],
+    "next": "Manual south locomotion correction and art acceptance before directions"
+  },
+  "sourceHashes": {
+    "base": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+    "cleave": "93fb17930fa043b4a0c985953a4a77fcade336314d5527dfcf954f7c59cf2e3c",
+    "concept": "64ac95bc510ae073d0b7128f99092c716eecc69de864be8287e1515ae9bccbc1",
+    "inputPrepared": "09248efd8ad706beb5ce889e9dff86ac1f260b9aa0715fb8c7ed779fc762ea2d"
+  },
+  "outputHashes": {
+    "best-south-idle.gif": "17c0de6d6a0a80bc86f14a5558565906e14178138e6a455be183ef3dd68afccc",
+    "best-south-walk.gif": "3a8aa5e11021623c8a9554ddd4c98796262608c31957b023123ebe02f5682379",
+    "comparison-desktop.png": "3e121ec47ea50011e269a51ec7278535b340b0e0a48f2a7f356311d12d53659a",
+    "comparison-mobile-landscape.png": "c79a3bd1a08d492417607616590bdb583e64b189580277e4b59b150911400fe7",
+    "comparison-sheet.png": "9f5e8fac3c43efb0d1158a8e778d939d73df886b0085e76be067a4c91ab2496e",
+    "idle-1280.png": "09a70bba3e9b922d2849d126c514f80c103a1e0c07c910cf94a3b8d6db46addb",
+    "idle-844.png": "3741ea641f0a57aec5243048a3ebcc7e3a7b36e88f5eae5d7dcd3e5bc53f633b",
+    "input-padded-rgb.png": "09248efd8ad706beb5ce889e9dff86ac1f260b9aa0715fb8c7ed779fc762ea2d",
+    "input-padded-rgba.png": "7691cf768e21ee5e30835f5e89be2428c881b39acf80578c13a3473f0e394219",
+    "south-idle-original.gif": "17c0de6d6a0a80bc86f14a5558565906e14178138e6a455be183ef3dd68afccc",
+    "south-walk-original.gif": "9ab0343cca5c36c48bd6ff5b5a7b353bf52ebbe9058841edd8236ea10ca72d93",
+    "south-walk-retry-original.gif": "3a8aa5e11021623c8a9554ddd4c98796262608c31957b023123ebe02f5682379",
+    "viewer-initial.png": "2193d4d13bd03c495ec0fc013dd36ea53d1704ee9f13c8aef6680bfda96e9617",
+    "walk-1280.png": "d34e09680266623b96aece7e22665e43bc9cdde808cd3bb367cab5af3d7fabb0",
+    "walk-844.png": "a003efc62359e1d97b560c907845d2e35e2d74a9b9c23fa5e1c5a326165dc92f",
+    "walk-fast-1280.png": "85e7ed00786835b712b31e1d40acb7573eb8193600667d26cc1de9094ef31e84",
+    "walk-fast-844.png": "21fa3f7066404421a62e66ca81b74577d54d6bfd1a0e38a198fe5b02587bb7f4",
+    "directions\\south.png": "7691cf768e21ee5e30835f5e89be2428c881b39acf80578c13a3473f0e394219",
+    "south-idle\\animation-sheet.png": "a40959b71015a5faa414adee5fe03c2d064b0170fa644b32ec61c5aed9bc1d81",
+    "south-idle\\animation-strip.png": "077194156d48ae276180b23004f814f6334537842fd2f9b44d57e2d8b6a9c0b2",
+    "south-idle\\canvas-screenshot.png": "60db713d358ca8d8284f5a342df0f1c8d903e9f339741419cbd374880cefa6c9",
+    "south-idle\\nearest-x4.png": "a4697ddb0b14756daadd8299d86232580121f7429e91f2f229331f9e57a2e7c4",
+    "south-walk\\animation-sheet.png": "397896e7e7cf5797ece2956170341ee82ed57de450a2debfae5bfe8ad540597e",
+    "south-walk\\animation-strip.png": "ad1c882ff0dec6bb93655515b4dcaa2a0e687362f1d21b5b58a845b6396c0bd4",
+    "south-walk\\canvas-screenshot.png": "3898159f041ad5143125842e4a385ddfdc044a6b8e7fbf3b3af0ccf78e160949",
+    "south-walk\\nearest-x4.png": "46ad581d88c2b705dc45b76e5a262649766bb70fa17006df395370efebaeb7b6",
+    "south-walk-retry\\animation-sheet.png": "b32306a7e9bbbd661a3a2a6e491f3b5959beb3f77f44acadee9d17ad79056437",
+    "south-walk-retry\\animation-strip.png": "7f8ff2467c6ed09323f6131cfb606bac6886dac7997b688529ce867886cf5339",
+    "south-walk-retry\\canvas-screenshot.png": "fd1175eb7a66868d9d234381042da50cfe1fecadd3b85218acfeed5f12d5f881",
+    "south-walk-retry\\nearest-x4.png": "3eba40ceba0f62b78b1b15b5b49319f800638e5426c4b53f87303fa0b5bb0bd7",
+    "south-walk-retry\\frames\\00.png": "41a838510ba097b694777b6e21f1b3b782145e8b42b1631ecc4f03c9def9bda9",
+    "south-walk-retry\\frames\\01.png": "f11cda4c8c44dbc901cb5cafffd1bcb35c277abd2d5874a987e90a99e8b7f1cd",
+    "south-walk-retry\\frames\\02.png": "787f1e3ba3440aabba30957036504cda4a25ceb4b870cc846fe3325c18344b9e",
+    "south-walk-retry\\frames\\03.png": "1100ea87af59b564a5dbb39d9dfac628bbe58c4ca07db32655b468112d72c547",
+    "south-walk-retry\\frames\\04.png": "037ba7d141eaa8a972a4bc7ea98a18380af1b3b3ee524ab4b6e8cb8685c3c562",
+    "south-walk-retry\\frames\\05.png": "17e93686224ab29d39f3e5e365bd58c4c5442f1b99051ad30406fd8338355c85",
+    "south-walk-retry\\frames\\06.png": "70ae722cbed2fcdad564246c97dba055140be37909b7fbe76c9aae1c7e8f3d0b",
+    "south-walk-retry\\frames\\07.png": "0c73cae8a4ffab94a47b714c5200acaf2f92e605b0eed45a1319ee72512f7691",
+    "south-walk\\frames\\00.png": "d636826f7a39673baa12fece222a463686e46d235de93f5b2ac8724e1dbff8c7",
+    "south-walk\\frames\\01.png": "7a2cd1773ef2b31376dcd03cb7ae3222aa38562943580e758fb2c722b82fd458",
+    "south-walk\\frames\\02.png": "1be4040aed5174cdba235a2e6e80f79bd1396fe643f289802df35a6a6f9b32d9",
+    "south-walk\\frames\\03.png": "0b6dfe387e4b37ae7cb7199902799dae9dee3208e948f63e69494a64457cfdce",
+    "south-walk\\frames\\04.png": "b65ff4a37292cbd143b4a466b4da58b3a51bf7386dd2bfb21280927072ff9db9",
+    "south-walk\\frames\\05.png": "7f3a2b813116e66fc6172b6a4e52f757456f962024761bc405c000728298c7ab",
+    "south-idle\\frames\\00.png": "8eb07bfe5a6778fcd806fcd94d01fb9eb4c62b691d2b831252bc9da33fc393a7",
+    "south-idle\\frames\\01.png": "adb000aca9d539b0b1a29a0d295296843d41ef59cdc9f3f32b665382f1fe50cc",
+    "south-idle\\frames\\02.png": "975071e31d0ef46cb3d88de93e34ae760e726c2f1d7c5954b34b64ae0f5b76ed",
+    "south-idle\\frames\\03.png": "d0feeedfdd4e6c1f9509f5e5304a60522109da41e09db94727b75cb231a55425"
+  }
+}

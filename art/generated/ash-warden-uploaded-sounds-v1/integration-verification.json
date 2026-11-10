@@ -1,0 +1,50 @@
+{
+  "baselineFiles": 376,
+  "changed": [
+    "src/game/audio/AudioBackend.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/PhaserAudioBackend.ts",
+    "src/game/audio/README.md",
+    "src/game/audio/catalog.ts",
+    "src/game/events/gameFeedback.ts",
+    "src/game/systems/FinalEncounter.ts"
+  ],
+  "added": [
+    "public/assets/audio/ash-warden-uploaded-v1/charge.wav",
+    "public/assets/audio/ash-warden-uploaded-v1/flamestrike.wav",
+    "public/assets/audio/ash-warden-uploaded-v1/meteor.wav",
+    "public/assets/audio/ash-warden-uploaded-v1/slam.wav",
+    "public/assets/audio/ash-warden-uploaded-v1/swing.wav",
+    "src/game/audio/ashWardenSamples.ts",
+    "src/game/audio/samples.ts"
+  ],
+  "unchanged": 368,
+  "previousSHA256": {
+    "src/game/audio/AudioBackend.ts": "dad1acdb7f893073ad97afb6daccf3afedef12e55e29eab3a68854ff6eb99468",
+    "src/game/audio/AudioController.ts": "2a3325bcb3aee7f691d933bfea321307b2a0b84a5c638b1c1f0d5eae84461a5c",
+    "src/game/audio/AudioPresentation.ts": "01fef62957a179e1bb794f12cba314b41f75d7f1db20864fe7b19a41cb3af865",
+    "src/game/audio/PhaserAudioBackend.ts": "3145025131017480032d7729c68982b2bf04f378d81785ba72bdafd2a9cc3201",
+    "src/game/audio/README.md": "b0ba23ac7943541818272817b00788fee7b0a71b05bb80eeb49e49fd5f6167bc",
+    "src/game/audio/catalog.ts": "14643facffeba0a7383b2ebf868a42e6caf455c589be1165ac72b8bede7106e0",
+    "src/game/events/gameFeedback.ts": "4f2cc3d768352e105372d30cc2fe95f3a8fceb6cf20282d7746d4abfebc8679c",
+    "src/game/systems/FinalEncounter.ts": "4fd0339cefa75d9dc14a2d436e96a840ce9fa51c1e3ab8437c1cc84a8ac8dae0"
+  },
+  "currentSHA256": {
+    "src/game/audio/AudioBackend.ts": "db019bfe1df64252e5b2f4547c02927a1dc9777826deb59f91b7202a8edc3c3a",
+    "src/game/audio/AudioController.ts": "dc07720b747ee34bfd4c8c295c5247028a07ab1a82cf13ab408912efe7161a72",
+    "src/game/audio/AudioPresentation.ts": "0b2f66f04ffe31c8e0f581bd758c6a72ad3ef9c56db151b77fbaee39edab67ac",
+    "src/game/audio/PhaserAudioBackend.ts": "984d01e4a21225d0b89a100e2b2440f6082717eaac2cfb4792f90d78b685eeb9",
+    "src/game/audio/README.md": "bec75280f3377a85b8b28a5963ab8660b2471e02ff2325107ecf3c75ff6f0506",
+    "src/game/audio/catalog.ts": "807c2c56e624cda05898845d9d12f5c9e55bb8c54a63b6f5c58f78a48fdf6203",
+    "src/game/events/gameFeedback.ts": "db541a3dcf75671cc1565ff7dfd6a6a5ec0ba05d4902fb95c22bc61410e4ddf7",
+    "src/game/systems/FinalEncounter.ts": "9a2ed117e4541b2824f070c4c3c637ce8bebc80eef281b932ae2fc1f7b7f71a2",
+    "public/assets/audio/ash-warden-uploaded-v1/charge.wav": "63a9a9ec50736412ac67a303a43cef7e8f956618e90d4bb5d8a298ac305ab69a",
+    "public/assets/audio/ash-warden-uploaded-v1/flamestrike.wav": "36df2616f2674506b036acf4ded5a2f327a1e36b76ad67ae36fd93cc1b9808a7",
+    "public/assets/audio/ash-warden-uploaded-v1/meteor.wav": "64a03ddf95406f97b3cd2cea15b79f826cf9aa2f42a360bae9466141d70dfcc0",
+    "public/assets/audio/ash-warden-uploaded-v1/slam.wav": "b47c7f89c2977581c0d03b841663310faff8c6ecead9e7f1d271d0beb689a667",
+    "public/assets/audio/ash-warden-uploaded-v1/swing.wav": "0635bdc2fd3a900ea0a38f3db7a0f7ffcb23abbc78475501c694430ba0ed13cd",
+    "src/game/audio/ashWardenSamples.ts": "11dc25c75b1769fad4c76a27d7b0421f840ec09c6a7279d5ffe5014299ac037f",
+    "src/game/audio/samples.ts": "88c597c48077f89971bb15bdd7669f81e577f7bdda65911f9510dad7cb183691"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "status": "awaiting manual art acceptance; no runtime integration",
+  "paidCalls": 0,
+  "USD": 0,
+  "StarterUsedPercentagePoints": 0,
+  "canvas": [
+    192,
+    192
+  ],
+  "source": "art/generated/ash-warden-retrodiffusion-01/best-candidate.png",
+  "sourceSHA256": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+  "worldScale": 0.6548310810810811,
+  "anchor": [
+    96,
+    154
+  ],
+  "perFrameBboxFit": false,
+  "clips": {
+    "south-idle": {
+      "frames": 4,
+      "frameDurationMs": 450,
+      "cycleMs": 1800,
+      "uniqueRasters": 3
+    },
+    "south-walk": {
+      "frames": 8,
+      "strideSourcePixels": 56,
+      "strideWorld": 36.67054054054054,
+      "timings": [
+        {
+          "worldSpeed": 72,
+          "FPS": 15.707431401596391,
+          "cycleMs": 509.3130630630631
+        },
+        {
+          "worldSpeed": 100,
+          "FPS": 21.815876946661653,
+          "cycleMs": 366.70540540540543
+        },
+        {
+          "worldSpeed": 144,
+          "FPS": 31.414862803192783,
+          "cycleMs": 254.65653153153156
+        }
+      ]
+    }
+  },
+  "poseOrder": [
+    "left contact / right toe-off",
+    "left load / right lift",
+    "right passing",
+    "right forward swing",
+    "right contact / left toe-off",
+    "right load / left lift",
+    "left passing",
+    "left forward swing"
+  ],
+  "layerOrder": [
+    "back leg",
+    "front leg",
+    "belt backfill",
+    "upper armor",
+    "chest",
+    "pinned cloth with1px lag",
+    "hands and sword"
+  ],
+  "viewerModified": "art/generated/ash-warden-locomotion-rd-01/viewer.html",
+  "unchanged": "runtime, AI, balance, production assets, source base, source generated clips, Cleave",
+  "outputSHA256": {
+    "before-idle-1280.png": "a06e33360d84a6a0e2ab0cb56d1d41c9a9880c24853a0d07f3e69e1716f6ceb0",
+    "before-idle-844.png": "3e3b4bf3942bec6b4353058cd8883f687331243739e08fdbecfe040dd7111665",
+    "comparison-canvas-screenshot.png": "15650d566195ea9d37a8f7af37830439d8c40840ac0401e9e74f0cac9fc91b0b",
+    "comparison-desktop.png": "45bca7cb004262bbed8d5d6bd06db421963854ebf4e33420af8f6c070873aec0",
+    "comparison-mobile-landscape.png": "f8af51b373d52aa4fccf0e02bffadf304fa456d1e24582933d3931d04b9967e8",
+    "comparison-nearest-x4.png": "be31ba15fc921a6c39f73d9cc1ee330f7892602a9668412e8513d4e3196ff0c0",
+    "comparison-sheet.png": "74b363c78e5a7863aba20ffca45619e68c3a2bdf3beb9574f00497a4bee6e11b",
+    "draft-sheet.png": "7757d06dc42eac1961d16b6a643a6ff77ce86c30fbe110064a9b561d0b65f497",
+    "idle-1280.png": "ac2d78d516693b5257e7165b3b917daca541e59e478707bae9626bdc4cf06b10",
+    "idle-844.png": "8437d7d5717b196552cb44f05407fc8d452324e360436fa4b377782890dd1c5e",
+    "source-grid-x8.png": "b045f6c62e2f8105a651e6195f087ec23c2c3825384751179668c8c7ef3dddae",
+    "south-idle.gif": "a71ae665f1f80761c3f58dc8debb3c7b862151e69c33ebbc23b22b560ea13094",
+    "south-walk-100.gif": "4ec446f8fe8c066b8fa2958f0fffdfc65d843f905d925e77265943ec662999ff",
+    "south-walk-144.gif": "82268b02f7ad4045ec177d665729bdd2c56877ffec55cddb03c8163363669d2f",
+    "south-walk-72.gif": "b152338d56d5adc9bd50c621ace6a3dcf1eec7761a10ba5766c41f14a5acd7ee",
+    "south-walk.gif": "b152338d56d5adc9bd50c621ace6a3dcf1eec7761a10ba5766c41f14a5acd7ee",
+    "walk-100-1280.png": "fe7dd4b05d4694ce4d8f6e844ebe5550d8fcf5009a3b9b7e3f6829fc52944f51",
+    "walk-100-844.png": "c3047a00883d4ca8b899aa32fedf613aada1e9a240c701c1c8f0bb36ff1d5ce0",
+    "walk-144-1280.png": "c4393b5ed4110055d23f5b0def7354b0ba0e05891893766fb35c2be03ba312a6",
+    "walk-144-844.png": "ffce1f0f31191f55bec9d9d08468095c26c5332d6f396b22d6458eaa05ad96d7",
+    "walk-72-1280.png": "31cbd5629f155d653a16f87c6ddf1a1cda2f45ce9f5f2589fd4042487648e323",
+    "walk-72-844.png": "319ef3351e11c1182040f6c099923c6ca0f28f053dfe3f3c9beaf1e52f2d015c",
+    "walk-detail.png": "b2cee448216478229dc70476bac94a555204b924f9560cbe872eff7c25a257cd",
+    "idle\\animation-sheet.png": "c787bcf2b268fead80ed7445b762d7a2b3b3c5e04f7c602549e25680025400cb",
+    "idle\\animation-strip.png": "0f3701f3c765c86dd4daed3d89bf19a6bf8fb79e1d2f826ad2a3cac366eab231",
+    "idle\\nearest-x4.png": "26d0af5d36376a7dcac3eaf82475fa9b3d0ba5f254f0dad26644512bc7a08940",
+    "layers\\chest.png": "1f5fc9d909518a55ac8c06f4a631d93e0bab8d41214df7a746e97563461d7c98",
+    "layers\\cloth.png": "21b245947c4984c9556422389f89c067cd5fe9831207518815000e5838e2284e",
+    "layers\\leftLeg.png": "2111b572b9da8e5f1cd47ea0d23d5dd6e3b9a871c6c39b4106fc71aac92004ba",
+    "layers\\rightLeg.png": "5f131d1dcc2ba0fac97af4b5b1c0ea1dbb0af9064e899a7182d93276879e6d56",
+    "layers\\segmentation.png": "e3e085d57e3722f13cdc35e2218598dec20fb6a6da8cdd76081a051d835398a4",
+    "layers\\upper.png": "158aa35c77118a9a1a8bb734108b4c2e7b804f9b5970ea800bf5525b2bcd88af",
+    "layers\\weapon.png": "7c26e9e8aab86190148aa60ff1678c1087c08b21f23853e3f0cd60ef67626d92",
+    "walk\\animation-sheet.png": "1b13d192ce341269d141fb10a1124f690e95f256796c409bafd2033bc7bc4b9c",
+    "walk\\animation-strip.png": "04650ee17efc9c5e359b7d56f6498819082d7317931f71f77a79d2cdaa49796d",
+    "walk\\nearest-x4.png": "faae26ed68b55577ec61df09531aaa8298f9423315a22a7a9b56f7cda39002e4",
+    "walk\\frames\\00.png": "835bca3a93a662c5766479cbd2d9b08d982659b74c3ecba9d129bb60e120bfec",
+    "walk\\frames\\01.png": "cd504e3e4bfbd27abfc12a0473fa834831433deb6a0455ced01634709d00bd59",
+    "walk\\frames\\02.png": "3c213b56e5aa760f1ad5c3149ab0a5e011be6a080a816a065da874b88c4ab1c4",
+    "walk\\frames\\03.png": "0b3066e76fda94819d5538c3873717244f616674a3e6dee77d0c5dbd2938f6ae",
+    "walk\\frames\\04.png": "fb264f38c9970bd28f7b724aaace79224bf4421510e97645fcb5c04686aba04b",
+    "walk\\frames\\05.png": "bae041113fdb17687c4e583fe6ca5474c0d740eeff644ceb2b38da6777232614",
+    "walk\\frames\\06.png": "11f71051ce5d3202941fe59eb52edcfe7cbfdaf9881335c6d9185ef00ce4c831",
+    "walk\\frames\\07.png": "e4552e2ad9c582c446804f55200cd969452db79e279aa2f1356ec3b6aaf1dab2",
+    "idle\\frames\\00.png": "7691cf768e21ee5e30835f5e89be2428c881b39acf80578c13a3473f0e394219",
+    "idle\\frames\\01.png": "0d9cbac518d9142e93a5177c75ab1a59c21ac38381bdb7ec64e51db00f2fa4fd",
+    "idle\\frames\\02.png": "7691cf768e21ee5e30835f5e89be2428c881b39acf80578c13a3473f0e394219",
+    "idle\\frames\\03.png": "3985300d77168ccba6c66f42011dce23adeb8ae0cb289c9e0bc83799e26135b8"
+  },
+  "viewerSHA256": "abdc35057b77a68304e9765fb8a30418a0a34d3e3a3f0e3385f5b61467bc7966"
+}

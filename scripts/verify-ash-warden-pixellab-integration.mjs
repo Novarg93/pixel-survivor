@@ -1,0 +1,10 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/ash-warden-north-meteor-review-v1',baseline=JSON.parse(readFileSync(`${root}/source/runtime-baseline.json`,'utf8')),approval=JSON.parse(readFileSync(`${root}/source/approval.json`,'utf8'));
+if(!approval.accepted||!approval.runtimeIntegrationRequested)throw Error('No user acceptance');
+const hash=f=>createHash('sha256').update(readFileSync(f)).digest('hex'),walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const changed=Object.keys(baseline).filter(f=>hash(f)!==baseline[f]).sort(),added=[...walk('src'),...walk('public')].filter(f=>!(f in baseline)).sort();
+const allowed=['src/game/art/FinalBossArt.ts','src/game/art/GameArt.ts','src/game/art/ashWardenPack.ts'].sort(),newFiles=['src/game/art/ashWardenPixellabPack.ts','src/game/art/ashWardenPixellabManifest.json',...['north','meteor'].flatMap(id=>['png','json'].map(ext=>`public/assets/hd/ash-warden-pixellab-v1/${id}.${ext}`))].sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowed)||JSON.stringify(added)!==JSON.stringify(newFiles))throw Error('Unexpected integration scope '+JSON.stringify({changed,added}));
+const report={runtimeIntegration:true,protectedFiles:Object.keys(baseline).length,unchangedProtectedFiles:Object.keys(baseline).length-changed.length,changed,added,currentSHA256:Object.fromEntries([...changed,...added].map(f=>[f,hash(f)])),worldAndDamageUnchanged:true,warningAndStageTimesUnchanged:true,otherAssetsUnchanged:true};
+writeFileSync('art/generated/ash-warden-pixellab-runtime-v1/integration-verification.json',JSON.stringify(report,null,2)+'\n');globalThis.console.log(JSON.stringify({approvedScopeVerified:true,changed:changed.length,added:added.length,unchanged:report.unchangedProtectedFiles}));

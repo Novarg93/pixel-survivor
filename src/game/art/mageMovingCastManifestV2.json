@@ -1,0 +1,1168 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-moving-cast-v2.mjs",
+  "canvas": 96,
+  "seam": 61,
+  "handBottom": 59,
+  "overlapRows": 1,
+  "width": 768,
+  "height": 412,
+  "rgbaBytes": 1265664,
+  "anchors": {
+    "mage-cast-v2-north-0": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-1": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-2": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-3": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-4": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-5": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-6": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-7": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-8": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-9": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-10": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-11": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-12": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-0": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-1": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-2": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-3": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-4": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-5": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-6": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-7": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-8": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-9": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-10": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-11": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-east-12": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-0": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-1": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-2": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-3": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-4": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-5": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-6": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-7": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-8": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-9": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-10": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-11": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-north-west-12": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-0": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-1": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-2": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-3": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-4": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-5": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-6": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-7": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-8": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-9": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-10": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-11": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-cast-v2-south-v1-12": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-0": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-1": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-2": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-3": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-4": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-5": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-6": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-7": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-8": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-9": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-10": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-11": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-south-v2-12": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-0": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-1": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-2": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-3": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-4": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-5": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-6": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-7": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-8": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-9": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-10": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-11": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v1-12": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-0": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-1": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-2": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-3": {
+      "x": 51,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-4": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-5": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-6": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-7": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-8": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-9": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-10": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-11": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-cast-v2-east-v2-12": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-0": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-1": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-2": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-3": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-4": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-5": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-6": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-7": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-8": {
+      "x": 44,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-9": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-10": {
+      "x": 45,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-11": {
+      "x": 43,
+      "y": 61
+    },
+    "mage-run-v2-south-run-start-12": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-run-v2-south-run-0": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-south-run-1": {
+      "x": 52,
+      "y": 61
+    },
+    "mage-run-v2-south-run-2": {
+      "x": 53,
+      "y": 61
+    },
+    "mage-run-v2-south-run-3": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-run-v2-south-run-4": {
+      "x": 52,
+      "y": 61
+    },
+    "mage-run-v2-south-run-5": {
+      "x": 52,
+      "y": 61
+    },
+    "mage-run-v2-south-run-6": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-run-v2-south-run-7": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-0": {
+      "x": 55,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-1": {
+      "x": 58,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-2": {
+      "x": 55,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-3": {
+      "x": 58,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-4": {
+      "x": 58,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-5": {
+      "x": 58,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-6": {
+      "x": 58,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-7": {
+      "x": 55,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-8": {
+      "x": 52,
+      "y": 61
+    },
+    "mage-run-v2-south-run-stop-9": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-north-run-start-0": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-run-start-1": {
+      "x": 47,
+      "y": 61
+    },
+    "mage-run-v2-north-run-start-2": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-run-0": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-run-v2-north-run-1": {
+      "x": 45,
+      "y": 61
+    },
+    "mage-run-v2-north-run-2": {
+      "x": 45,
+      "y": 61
+    },
+    "mage-run-v2-north-run-3": {
+      "x": 38,
+      "y": 61
+    },
+    "mage-run-v2-north-run-4": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-run-v2-north-run-5": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-north-run-stop-0": {
+      "x": 57,
+      "y": 61
+    },
+    "mage-run-v2-north-run-stop-1": {
+      "x": 55,
+      "y": 61
+    },
+    "mage-run-v2-north-run-stop-2": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-run-stop-3": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-start-0": {
+      "x": 45,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-start-1": {
+      "x": 45,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-start-2": {
+      "x": 44,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-start-3": {
+      "x": 42,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-start-4": {
+      "x": 41,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-0": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-1": {
+      "x": 51,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-2": {
+      "x": 50,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-3": {
+      "x": 51,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-4": {
+      "x": 48,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-5": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-stop-0": {
+      "x": 49,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-stop-1": {
+      "x": 46,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-stop-2": {
+      "x": 42,
+      "y": 61
+    },
+    "mage-run-v2-north-east-run-stop-3": {
+      "x": 44,
+      "y": 61
+    }
+  },
+  "sources": {
+    "public/assets/hd/mage-cast-v2/atlas.png": "a0f641a11e07821264a5a8362140af65726d91f056b05fd760e7cb43f32d93cc",
+    "public/assets/hd/mage-cast-v2/atlas.json": "f1146e593f66dcb104ae3265f4953d4932fe4d35aebd1f4be6e7420b4e4b0741",
+    "public/assets/hd/mage-run-v2/atlas.png": "32cac7de563b6591af0c54ab144a455a6df8519f89704054d3d267c0a790e66e",
+    "public/assets/hd/mage-run-v2/atlas.json": "3b4e7f29fae12eb0b8a29197915c425020e751d6f7054a8bcdbb33a78b935d91"
+  },
+  "frames": [
+    {
+      "frame": "mage-cast-v2-north-3",
+      "retained": 1501,
+      "removed": 419,
+      "pixelSha256": "5feabdf24494523b4e4d5ee3859abdcf990be7bf609152dfbc3cc502b07d542a"
+    },
+    {
+      "frame": "mage-cast-v2-north-4",
+      "retained": 1501,
+      "removed": 419,
+      "pixelSha256": "d3904065ed5f5093b1fe75f6b59c213ab4f9a13ed92f22d1507c487d5166ebe8"
+    },
+    {
+      "frame": "mage-cast-v2-north-5",
+      "retained": 1498,
+      "removed": 419,
+      "pixelSha256": "89fc8d9d6f572d4facfa1d7c190f720f0ac7fa49e2c1ba35ad79c87abe411e42"
+    },
+    {
+      "frame": "mage-cast-v2-north-6",
+      "retained": 1499,
+      "removed": 419,
+      "pixelSha256": "a08dd20ee592e0a359fb8ae7a5112b1002fcaf47b5422bae4017bf20477a8abd"
+    },
+    {
+      "frame": "mage-cast-v2-north-7",
+      "retained": 1501,
+      "removed": 419,
+      "pixelSha256": "d4fe6dee3d2524d48d482eef2b7fa770938b3ac24a5c5f17af7c7c0eeab2b17c"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-6",
+      "retained": 1094,
+      "removed": 431,
+      "pixelSha256": "d2195f7a88505e3650b1bca8f304953cfcd78390634853f3ceba8f840c7c3184"
+    },
+    {
+      "frame": "mage-cast-v2-north-0",
+      "retained": 1357,
+      "removed": 434,
+      "pixelSha256": "f340109902473498161ea3b412670a0793b7a54828e3f8d469cc6d29cfc10f19"
+    },
+    {
+      "frame": "mage-cast-v2-north-1",
+      "retained": 1409,
+      "removed": 437,
+      "pixelSha256": "6ac82d6ffb7d5f17c4e20ea8a2692b0140cf2519cde5d1ffde34e97cbfc87840"
+    },
+    {
+      "frame": "mage-cast-v2-north-10",
+      "retained": 1400,
+      "removed": 430,
+      "pixelSha256": "9392017ceaabe7ff5bfcb6c740a89581aa0ddd505c06230961c1c2179cd1352a"
+    },
+    {
+      "frame": "mage-cast-v2-north-11",
+      "retained": 1387,
+      "removed": 435,
+      "pixelSha256": "ec65e8b63f475ef81f1437c29c2d398b0c781968a7493b2cd6d8f6e5a57d928c"
+    },
+    {
+      "frame": "mage-cast-v2-north-12",
+      "retained": 1354,
+      "removed": 434,
+      "pixelSha256": "5d7fc0c479a24927c2ec2baabb81401a102d2ee63a8e6a3a12bf80dafbfe3672"
+    },
+    {
+      "frame": "mage-cast-v2-north-2",
+      "retained": 1423,
+      "removed": 432,
+      "pixelSha256": "6eeb9c3ef6f571d8ba119bcca531a6a4168489d6aef2b37cd4b3a1ea79a57478"
+    },
+    {
+      "frame": "mage-cast-v2-north-8",
+      "retained": 1494,
+      "removed": 419,
+      "pixelSha256": "02280adf1911631dd5c949d0d5aeaa6455e95d6342731a380912f94659cfe7bc"
+    },
+    {
+      "frame": "mage-cast-v2-north-9",
+      "retained": 1465,
+      "removed": 424,
+      "pixelSha256": "e9b2a9ec08582df48c82cbaa994d1155980bcd89e9a6be23a59762a76282bed6"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-0",
+      "retained": 1357,
+      "removed": 434,
+      "pixelSha256": "f340109902473498161ea3b412670a0793b7a54828e3f8d469cc6d29cfc10f19"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-1",
+      "retained": 1388,
+      "removed": 436,
+      "pixelSha256": "3d50d0004d31f395efa3274983854fb883169be41f182c4fe05dc96c3db45c42"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-10",
+      "retained": 1414,
+      "removed": 429,
+      "pixelSha256": "24b9acc91fb707531ec917863bf1368f5289d050fa45e077e51c5dfd5cdb58bc"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-11",
+      "retained": 1390,
+      "removed": 434,
+      "pixelSha256": "58f2d7713ec91af3120c72ecc252ed82b2252e0ff333611ad2e8ac76b91b6d48"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-12",
+      "retained": 1356,
+      "removed": 434,
+      "pixelSha256": "46bc95fe893ccc53c8f0796244368e5ebca48d23e8b338ccad2a6fd0da2be6d8"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-2",
+      "retained": 1415,
+      "removed": 432,
+      "pixelSha256": "f05bf21fb27f26dc10a2079858dc6c60c8e0987604b63c4d49abc7bc5acc966d"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-3",
+      "retained": 1465,
+      "removed": 425,
+      "pixelSha256": "2d0d8c29bef1feed35c4a53d47f598925d325186ef18be0c0704029d9190e94f"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-4",
+      "retained": 1480,
+      "removed": 423,
+      "pixelSha256": "a720bd9635033e7af64f15e2665c21b3b5470751afade43396afbb5aba7c4fb7"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-5",
+      "retained": 1484,
+      "removed": 419,
+      "pixelSha256": "4c07a84c3e680e73a3e5609819d7bf3c3362a470679bc37b2e227274183f4076"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-6",
+      "retained": 1484,
+      "removed": 419,
+      "pixelSha256": "7f82e9767fc95e4f55861e7d0c9e9cb203c26eabc92019c5d2feb63f814cd14e"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-7",
+      "retained": 1484,
+      "removed": 419,
+      "pixelSha256": "316db40668616ed41e8b033d3b6d59a1929919446f657c8596c7b39a216da645"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-8",
+      "retained": 1484,
+      "removed": 422,
+      "pixelSha256": "899c9445719d6ce8806b030a62ce370b9cae7223adc2c8151c9e932e524a5e0e"
+    },
+    {
+      "frame": "mage-cast-v2-north-east-9",
+      "retained": 1456,
+      "removed": 425,
+      "pixelSha256": "d32d205353f44412dc4de7c2f2ac5b2347b841fd283152ec97d76b6127eedb24"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-0",
+      "retained": 1357,
+      "removed": 434,
+      "pixelSha256": "f340109902473498161ea3b412670a0793b7a54828e3f8d469cc6d29cfc10f19"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-1",
+      "retained": 1356,
+      "removed": 438,
+      "pixelSha256": "54ea05f06d2fb83eeab27a733cac1762948df3e56f9b64686bd8399f47bb27e8"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-10",
+      "retained": 1324,
+      "removed": 435,
+      "pixelSha256": "66fdc585ea227c17dae88c9d51810f8e430d0ef4b6949d3b8c4184109d8ed31c"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-11",
+      "retained": 1357,
+      "removed": 434,
+      "pixelSha256": "2751bba0863da12addd47748af7e48f17b610add6ba3bc7a18b8f097e6d6d023"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-12",
+      "retained": 1357,
+      "removed": 434,
+      "pixelSha256": "630ea845f2eb5ffafa5f3d33aa33a23bda54a6b2395cdbf8a19bd0a9a8769580"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-2",
+      "retained": 1337,
+      "removed": 432,
+      "pixelSha256": "d136cdb991cf01fa5ff7e7188abe8ce9b38a5a857fecd75a101c9f9067633463"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-3",
+      "retained": 1284,
+      "removed": 430,
+      "pixelSha256": "2b1bda20bca729364db149094b41cd779b5393f343269b7e35cb21953626d91e"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-4",
+      "retained": 1363,
+      "removed": 421,
+      "pixelSha256": "6aa6246f9f030b7eb80f002d9480d3f93b994de4634797b29760f234636820bd"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-5",
+      "retained": 1289,
+      "removed": 412,
+      "pixelSha256": "c59b424ae59b79f5ef4adaba4bb6407155944a64950f809cf183e1401e39af1f"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-6",
+      "retained": 1265,
+      "removed": 418,
+      "pixelSha256": "c54ada92d49e4e28c5e1ad1fd99bf8c7d097cbc47f4e554eaedabc87c12f938f"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-7",
+      "retained": 1263,
+      "removed": 427,
+      "pixelSha256": "115e54bd42c34aa325fb577eb284d2918fd164b00b8c670d8bda245b09f5c7c5"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-8",
+      "retained": 1248,
+      "removed": 431,
+      "pixelSha256": "dde1a075a43b836cbce7c532736d62b2fd539ea04e8334f055b574caa9764ef9"
+    },
+    {
+      "frame": "mage-cast-v2-north-west-9",
+      "retained": 1269,
+      "removed": 431,
+      "pixelSha256": "265adaa2eccf9827ae8f74a088cf6c9911dcc088366ca75e30fbb9191b153cca"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-1",
+      "retained": 1368,
+      "removed": 441,
+      "pixelSha256": "ef26b8b9986f8a9c8a41a876d174241efcd46aca7c928c54f48c759ca2faa62a"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-2",
+      "retained": 1368,
+      "removed": 441,
+      "pixelSha256": "9cff3bef2696546778af731991849f651ffbf66f18fb56c354a4265f24dafb15"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-1",
+      "retained": 1354,
+      "removed": 434,
+      "pixelSha256": "15d92000397a97132d8cb6d053f2e668eca9ec220c1eddbf11a659c49e69e40e"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-11",
+      "retained": 1362,
+      "removed": 446,
+      "pixelSha256": "e115488e27b892dcfe08ae1fc12587d271fc0f28fb5d1f44c5522b15b71243d0"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-12",
+      "retained": 1362,
+      "removed": 447,
+      "pixelSha256": "98c9015405dfe279128d5db7090bf1d586a1ef1b43b208973d61ef2f35d4924b"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-2",
+      "retained": 1511,
+      "removed": 439,
+      "pixelSha256": "8e02a51ca7e239812cd721ba96553812e33f02a03825b3b0b445af1e00daccaf"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-5",
+      "retained": 1038,
+      "removed": 435,
+      "pixelSha256": "91620a081abbf7b25cb577d15cc6517b2ebf436075a22ed545fd3f97f6d1c2ff"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-7",
+      "retained": 1525,
+      "removed": 456,
+      "pixelSha256": "dcf11ac82e3c61cb79fb713252d840986b594fe7c7191682daf769e1c01b11ec"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-10",
+      "retained": 1597,
+      "removed": 441,
+      "pixelSha256": "5a80c667b20a559d6197cf214ae6e394396f396458758bb7ad747a3c8881a3f4"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-8",
+      "retained": 1388,
+      "removed": 450,
+      "pixelSha256": "12b365926952a5f4b504ae72794dd573099e4cbd3a61680d0cf4fe4f8ff9e378"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-5",
+      "retained": 1511,
+      "removed": 442,
+      "pixelSha256": "d1f50099f23a4155dce70c4a2b33eebdf03151b3b374539b99292f8a6fcdb930"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-10",
+      "retained": 1265,
+      "removed": 448,
+      "pixelSha256": "2109cd585a6175de128560eb985c091d84355b0fd18dcd732a1fbe180d2fe8c8"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-2",
+      "retained": 1228,
+      "removed": 448,
+      "pixelSha256": "8551ffb729102f0f559b031f15b0d466699ce552e3f379559a0e8b72fd429242"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-4",
+      "retained": 1067,
+      "removed": 457,
+      "pixelSha256": "a42d1deceb41df2f6814d6abb0aaa1511f26359dc675329602beb1c344638e5a"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-5",
+      "retained": 1043,
+      "removed": 435,
+      "pixelSha256": "1dd414927877a2fd0f4e733dd620b6b1f743607d2e65faf8780cad53fa46b2c8"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-0",
+      "retained": 1365,
+      "removed": 444,
+      "pixelSha256": "c969d646450335a4c560b636889d1cbb8a9852c48e08f52e1c930c3269f411f3"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-1",
+      "retained": 1434,
+      "removed": 423,
+      "pixelSha256": "6b0ccbbd3a19fe7ba233fd9e5a3d7777c442c2f8719fc6e5d920c2498b6fbc54"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-11",
+      "retained": 1471,
+      "removed": 444,
+      "pixelSha256": "518f8b73afc72b6349780a0916e1b8223c70e44006a90d288708f40dcaaa6be0"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-12",
+      "retained": 1370,
+      "removed": 441,
+      "pixelSha256": "5ad0f30a484c1319f2d1a1e91494d97496292d69da216aeed5504a7d08dfb90b"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-2",
+      "retained": 1625,
+      "removed": 419,
+      "pixelSha256": "68615d4a558f620aba506b17b158e6fdc85b3ab7e29aa65d0fa0c4a0fc2245f3"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-3",
+      "retained": 1639,
+      "removed": 425,
+      "pixelSha256": "6264032816a6ec95751891b658c0dddad960a364357f26d9a58800dfcdbb83ac"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-4",
+      "retained": 1639,
+      "removed": 425,
+      "pixelSha256": "d01ef010d4b642e51ee86fa9f0d2c6311b682111b1f0546b0c945de0ee03da94"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-5",
+      "retained": 1638,
+      "removed": 425,
+      "pixelSha256": "68011012bf51886b42767deef5cc3bd5ab2e0187ea8de687883d130e317e1b45"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-6",
+      "retained": 1638,
+      "removed": 425,
+      "pixelSha256": "6580eb7989dfb5b45204392a39342001402153b8e8ed9e8e8249849ed94311e9"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-7",
+      "retained": 1638,
+      "removed": 425,
+      "pixelSha256": "53551d91e8f4c6c1e1109facd2b993a8900cc985b9ca922d3484c6abea81783a"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-8",
+      "retained": 1639,
+      "removed": 425,
+      "pixelSha256": "d0000e1964fac4fc11777bd9995aab2b9d24e1e6adb3157e96491296f9532019"
+    },
+    {
+      "frame": "mage-cast-v2-east-v1-9",
+      "retained": 1639,
+      "removed": 425,
+      "pixelSha256": "0dfdd993bbc81660bd9b52a0788bd11adaa3b5c508d427a2456484295f73f91d"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-0",
+      "retained": 1365,
+      "removed": 444,
+      "pixelSha256": "c969d646450335a4c560b636889d1cbb8a9852c48e08f52e1c930c3269f411f3"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-1",
+      "retained": 1478,
+      "removed": 451,
+      "pixelSha256": "7240988c439cff2fd93b4a4d9ac12a6c235bc40c5e2524fcf4e4d477413ecf84"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-10",
+      "retained": 1360,
+      "removed": 449,
+      "pixelSha256": "2427c8db56aecc8b9f6ca8d4f252e95b0bbd50f10ac61f0629f1ef9e199e50f5"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-11",
+      "retained": 1360,
+      "removed": 449,
+      "pixelSha256": "730a57f7bb81cf77ddaa8cdfbf0639c43e0d826e0253b35eedc95d9429bd7420"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-12",
+      "retained": 1360,
+      "removed": 449,
+      "pixelSha256": "647d7073e8fbf192ece6c915d52c732745c3baf1f1f1b507ab28fb082f9cb5c8"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-4",
+      "retained": 1155,
+      "removed": 443,
+      "pixelSha256": "8589f8f76d539222a0dec62a0cc7075eb3782d610327829b216054404e185287"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-7",
+      "retained": 1243,
+      "removed": 445,
+      "pixelSha256": "46f7688db8ed59cdbb45a9ef61096b74410676462be75621b7ccfb0cdbf55ed2"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-9",
+      "retained": 1361,
+      "removed": 448,
+      "pixelSha256": "db695cb51453d1a9612894a9746e1c682ed19c0c4cd65b0b6d60b260f91ccaf9"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-0",
+      "retained": 1365,
+      "removed": 444,
+      "pixelSha256": "c969d646450335a4c560b636889d1cbb8a9852c48e08f52e1c930c3269f411f3"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-10",
+      "retained": 1399,
+      "removed": 451,
+      "pixelSha256": "14bd950a528624cf839191bb8d12ce23dfb3e6b4217ae736c8c66790116afec7"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-11",
+      "retained": 1364,
+      "removed": 445,
+      "pixelSha256": "48c8852715e681a6a79474e44bd2be167a17bec89be51aa53b3b65f167a57463"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-12",
+      "retained": 1363,
+      "removed": 445,
+      "pixelSha256": "fbea57338b8292e1d9ca0eff9de12c71680a49a31e50d6aa60421427bc91039f"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-3",
+      "retained": 1366,
+      "removed": 442,
+      "pixelSha256": "f1eb039d816480898dd4899850e5af2ac41a513c7c323d980909e0237c9c35c5"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-4",
+      "retained": 1369,
+      "removed": 442,
+      "pixelSha256": "29125d710d9dd080f9120b06ffae57a412ad6bdc93048660e462645bfc561f61"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-0",
+      "retained": 1365,
+      "removed": 444,
+      "pixelSha256": "c969d646450335a4c560b636889d1cbb8a9852c48e08f52e1c930c3269f411f3"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-3",
+      "retained": 1120,
+      "removed": 457,
+      "pixelSha256": "2b95d79d5ecaf352c0de04a646d1440531c514cd0b3695203a99a9dbd1eb3da9"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-6",
+      "retained": 998,
+      "removed": 437,
+      "pixelSha256": "889c5405c03cae42ef3fb78a3a99cde849080b04d59625b4ba7ec39e74aaf95b"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-8",
+      "retained": 1059,
+      "removed": 438,
+      "pixelSha256": "670549efcb0d257fa1d327324f1bb8eaac16a5c0f6bfcbb704463c85380d1b54"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-9",
+      "retained": 1144,
+      "removed": 448,
+      "pixelSha256": "a6aba7388b79dc54104818424276150ae5100c3e2874328d4c5762337905c240"
+    },
+    {
+      "frame": "mage-cast-v2-east-v2-3",
+      "retained": 1252,
+      "removed": 420,
+      "pixelSha256": "f3e6dbdae81467e98d0a6751122ac6f0b943af5d9954bbe9da255c9a69ebcafc"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-6",
+      "retained": 1513,
+      "removed": 462,
+      "pixelSha256": "c36d69febf799664ab66129bc6895755170a689062560f1c58793109cf9344a0"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-8",
+      "retained": 1484,
+      "removed": 462,
+      "pixelSha256": "a4d93e26791ecb7ff2f452eddf0f1a7da298574666bf0c63376f958a10c17678"
+    },
+    {
+      "frame": "mage-cast-v2-south-v1-9",
+      "retained": 1417,
+      "removed": 455,
+      "pixelSha256": "91fdc412dfcfdec305a5ec68ce3170ef3c5de2173f5c275eb57620791d802ec6"
+    },
+    {
+      "frame": "mage-cast-v2-south-v2-7",
+      "retained": 994,
+      "removed": 437,
+      "pixelSha256": "1bf1d7fea642033bf89efc12a86a9c6727b16cf1466225de54967d07e5bac629"
+    }
+  ],
+  "originalArtUnmodified": true
+}

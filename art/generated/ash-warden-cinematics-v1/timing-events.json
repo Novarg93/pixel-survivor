@@ -1,0 +1,130 @@
+{
+  "spawn": [
+    {
+      "name": "spawnStart",
+      "frame": 0,
+      "timeMs": 0,
+      "clip": "spawn",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "spawnReveal",
+      "frame": 2,
+      "timeMs": 500,
+      "clip": "spawn",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "spawnReady",
+      "frameExclusive": 10,
+      "timeMs": 2300,
+      "clip": "spawn",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    }
+  ],
+  "shield": [
+    {
+      "name": "shieldBreakStart",
+      "frame": 0,
+      "timeMs": 300,
+      "clip": "shield-break",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "shieldShatter",
+      "frame": 0,
+      "timeMs": 300,
+      "clip": "shield-break",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "staggerStart",
+      "frame": 2,
+      "timeMs": 430,
+      "clip": "shield-break",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "staggerEnd",
+      "frameExclusive": 7,
+      "timeMs": 3300,
+      "clip": "stagger-recover",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    }
+  ],
+  "phase3": [
+    {
+      "name": "phase3Start",
+      "frame": 0,
+      "timeMs": 600,
+      "clip": "transformation",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "phase3Overload",
+      "frame": 4,
+      "timeMs": 1300,
+      "clip": "transformation",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "phase3Ready",
+      "frameExclusive": 10,
+      "timeMs": 2400,
+      "clip": "transformation",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    }
+  ],
+  "death": [
+    {
+      "name": "deathStart",
+      "frame": 0,
+      "timeMs": 0,
+      "clip": "death-a",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "swordRelease",
+      "frame": 6,
+      "timeMs": 860,
+      "clip": "death-a",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "bodyCollapse",
+      "frame": 7,
+      "timeMs": 1060,
+      "clip": "death-a",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "emberFade",
+      "frame": 9,
+      "timeMs": 1480,
+      "clip": "death-a",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    },
+    {
+      "name": "deathAnimationComplete",
+      "frameExclusive": 12,
+      "timeMs": 2200,
+      "clip": "death-a",
+      "oncePer": "encounterId + eventName",
+      "scrubDispatch": false
+    }
+  ]
+}

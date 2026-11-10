@@ -10,5 +10,5 @@ export function preparePracticeMage(w:World,at:number){
     if(id!=='fireball')take('unlock-'+id);take('rank-'+id,3);take('evolve-'+id);
   }
   for(const [id,count]of [['damage',5],['cooldown',5],['projectiles',3],['health',5],['area',3],['speed',4],['mobility-arcane-sprint',3]]as const)take(id,count);
-  take('ultimate-frost');
+  take('ultimate-lightning');
 }

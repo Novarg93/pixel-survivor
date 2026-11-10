@@ -1,0 +1,1392 @@
+{
+  "frames": {
+    "mage-v2-death-north-4": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 74,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 33,
+        "w": 74,
+        "h": 73
+      }
+    },
+    "mage-v2-death-east-5": {
+      "frame": {
+        "x": 78,
+        "y": 2,
+        "w": 80,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 40,
+        "w": 80,
+        "h": 72
+      }
+    },
+    "mage-v2-death-south-5": {
+      "frame": {
+        "x": 160,
+        "y": 2,
+        "w": 84,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 17,
+        "w": 84,
+        "h": 72
+      }
+    },
+    "mage-v2-death-north-east-4": {
+      "frame": {
+        "x": 246,
+        "y": 2,
+        "w": 85,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 41,
+        "w": 85,
+        "h": 71
+      }
+    },
+    "mage-v2-death-south-east-4": {
+      "frame": {
+        "x": 333,
+        "y": 2,
+        "w": 95,
+        "h": 70
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 40,
+        "w": 95,
+        "h": 70
+      }
+    },
+    "mage-v2-death-north-5": {
+      "frame": {
+        "x": 430,
+        "y": 2,
+        "w": 87,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 38,
+        "w": 87,
+        "h": 65
+      }
+    },
+    "mage-v2-death-west-5": {
+      "frame": {
+        "x": 519,
+        "y": 2,
+        "w": 99,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 47,
+        "w": 99,
+        "h": 64
+      }
+    },
+    "mage-v2-death-south-8": {
+      "frame": {
+        "x": 620,
+        "y": 2,
+        "w": 90,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 40,
+        "w": 90,
+        "h": 62
+      }
+    },
+    "mage-v2-death-north-7": {
+      "frame": {
+        "x": 712,
+        "y": 2,
+        "w": 97,
+        "h": 61
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 49,
+        "w": 97,
+        "h": 61
+      }
+    },
+    "mage-v2-death-north-8": {
+      "frame": {
+        "x": 811,
+        "y": 2,
+        "w": 93,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 51,
+        "w": 93,
+        "h": 60
+      }
+    },
+    "mage-v2-death-north-10": {
+      "frame": {
+        "x": 906,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 52,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-north-11": {
+      "frame": {
+        "x": 999,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 52,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-north-12": {
+      "frame": {
+        "x": 1092,
+        "y": 2,
+        "w": 92,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 52,
+        "w": 92,
+        "h": 59
+      }
+    },
+    "mage-v2-death-north-6": {
+      "frame": {
+        "x": 1186,
+        "y": 2,
+        "w": 96,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 46,
+        "w": 96,
+        "h": 59
+      }
+    },
+    "mage-v2-death-north-9": {
+      "frame": {
+        "x": 1284,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 52,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-10": {
+      "frame": {
+        "x": 1377,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 43,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-11": {
+      "frame": {
+        "x": 1470,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 43,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-12": {
+      "frame": {
+        "x": 1563,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 43,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-9": {
+      "frame": {
+        "x": 1656,
+        "y": 2,
+        "w": 91,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 43,
+        "w": 91,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-west-4": {
+      "frame": {
+        "x": 1749,
+        "y": 2,
+        "w": 108,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 52,
+        "w": 108,
+        "h": 59
+      }
+    },
+    "mage-v2-death-south-7": {
+      "frame": {
+        "x": 1859,
+        "y": 2,
+        "w": 90,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 39,
+        "w": 90,
+        "h": 58
+      }
+    },
+    "mage-v2-death-north-east-5": {
+      "frame": {
+        "x": 1951,
+        "y": 2,
+        "w": 93,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 56,
+        "w": 93,
+        "h": 56
+      }
+    },
+    "mage-v2-death-east-6": {
+      "frame": {
+        "x": 2,
+        "y": 77,
+        "w": 99,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 58,
+        "w": 99,
+        "h": 54
+      }
+    },
+    "mage-v2-death-east-7": {
+      "frame": {
+        "x": 103,
+        "y": 77,
+        "w": 112,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 58,
+        "w": 112,
+        "h": 54
+      }
+    },
+    "mage-v2-death-north-west-4": {
+      "frame": {
+        "x": 217,
+        "y": 77,
+        "w": 94,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 49,
+        "w": 94,
+        "h": 54
+      }
+    },
+    "mage-v2-death-west-6": {
+      "frame": {
+        "x": 313,
+        "y": 77,
+        "w": 112,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 58,
+        "w": 112,
+        "h": 54
+      }
+    },
+    "mage-v2-death-south-6": {
+      "frame": {
+        "x": 427,
+        "y": 77,
+        "w": 89,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 36,
+        "w": 89,
+        "h": 53
+      }
+    },
+    "mage-v2-death-south-east-5": {
+      "frame": {
+        "x": 518,
+        "y": 77,
+        "w": 106,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 55,
+        "w": 106,
+        "h": 53
+      }
+    },
+    "mage-v2-death-north-east-6": {
+      "frame": {
+        "x": 626,
+        "y": 77,
+        "w": 99,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 64,
+        "w": 99,
+        "h": 48
+      }
+    },
+    "mage-v2-death-south-west-5": {
+      "frame": {
+        "x": 727,
+        "y": 77,
+        "w": 112,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 67,
+        "w": 112,
+        "h": 45
+      }
+    },
+    "mage-v2-death-east-8": {
+      "frame": {
+        "x": 841,
+        "y": 77,
+        "w": 104,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 68,
+        "w": 104,
+        "h": 44
+      }
+    },
+    "mage-v2-death-south-east-6": {
+      "frame": {
+        "x": 947,
+        "y": 77,
+        "w": 108,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 64,
+        "w": 108,
+        "h": 44
+      }
+    },
+    "mage-v2-death-south-west-6": {
+      "frame": {
+        "x": 1057,
+        "y": 77,
+        "w": 112,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 68,
+        "w": 112,
+        "h": 44
+      }
+    },
+    "mage-v2-death-south-west-10": {
+      "frame": {
+        "x": 1171,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-south-west-11": {
+      "frame": {
+        "x": 1285,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-south-west-12": {
+      "frame": {
+        "x": 1399,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-south-west-7": {
+      "frame": {
+        "x": 1513,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-south-west-8": {
+      "frame": {
+        "x": 1627,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-south-west-9": {
+      "frame": {
+        "x": 1741,
+        "y": 77,
+        "w": 112,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 69,
+        "w": 112,
+        "h": 43
+      }
+    },
+    "mage-v2-death-north-east-7": {
+      "frame": {
+        "x": 1855,
+        "y": 77,
+        "w": 100,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 70,
+        "w": 100,
+        "h": 42
+      }
+    },
+    "mage-v2-death-north-west-5": {
+      "frame": {
+        "x": 2,
+        "y": 133,
+        "w": 105,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 60,
+        "w": 105,
+        "h": 42
+      }
+    },
+    "mage-v2-death-west-7": {
+      "frame": {
+        "x": 109,
+        "y": 133,
+        "w": 112,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 70,
+        "w": 112,
+        "h": 42
+      }
+    },
+    "mage-v2-death-east-9": {
+      "frame": {
+        "x": 223,
+        "y": 133,
+        "w": 105,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 73,
+        "w": 105,
+        "h": 39
+      }
+    },
+    "mage-v2-death-north-west-6": {
+      "frame": {
+        "x": 330,
+        "y": 133,
+        "w": 106,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 65,
+        "w": 106,
+        "h": 39
+      }
+    },
+    "mage-v2-death-south-east-7": {
+      "frame": {
+        "x": 438,
+        "y": 133,
+        "w": 108,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 69,
+        "w": 108,
+        "h": 39
+      }
+    },
+    "mage-v2-death-north-west-7": {
+      "frame": {
+        "x": 548,
+        "y": 133,
+        "w": 106,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 67,
+        "w": 106,
+        "h": 37
+      }
+    },
+    "mage-v2-death-south-east-8": {
+      "frame": {
+        "x": 656,
+        "y": 133,
+        "w": 108,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 72,
+        "w": 108,
+        "h": 36
+      }
+    },
+    "mage-v2-death-south-east-9": {
+      "frame": {
+        "x": 656,
+        "y": 133,
+        "w": 108,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 72,
+        "w": 108,
+        "h": 36
+      }
+    },
+    "mage-v2-death-south-east-10": {
+      "frame": {
+        "x": 656,
+        "y": 133,
+        "w": 108,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 72,
+        "w": 108,
+        "h": 36
+      }
+    },
+    "mage-v2-death-south-east-11": {
+      "frame": {
+        "x": 656,
+        "y": 133,
+        "w": 108,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 72,
+        "w": 108,
+        "h": 36
+      }
+    },
+    "mage-v2-death-south-east-12": {
+      "frame": {
+        "x": 656,
+        "y": 133,
+        "w": 108,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 72,
+        "w": 108,
+        "h": 36
+      }
+    },
+    "mage-v2-death-north-east-8": {
+      "frame": {
+        "x": 766,
+        "y": 133,
+        "w": 102,
+        "h": 33
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 79,
+        "w": 102,
+        "h": 33
+      }
+    },
+    "mage-v2-death-east-10": {
+      "frame": {
+        "x": 870,
+        "y": 133,
+        "w": 105,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 80,
+        "w": 105,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-west-8": {
+      "frame": {
+        "x": 977,
+        "y": 133,
+        "w": 106,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 72,
+        "w": 106,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-west-9": {
+      "frame": {
+        "x": 977,
+        "y": 133,
+        "w": 106,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 72,
+        "w": 106,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-west-10": {
+      "frame": {
+        "x": 977,
+        "y": 133,
+        "w": 106,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 72,
+        "w": 106,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-west-11": {
+      "frame": {
+        "x": 977,
+        "y": 133,
+        "w": 106,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 72,
+        "w": 106,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-west-12": {
+      "frame": {
+        "x": 977,
+        "y": 133,
+        "w": 106,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 72,
+        "w": 106,
+        "h": 32
+      }
+    },
+    "mage-v2-death-west-8": {
+      "frame": {
+        "x": 1085,
+        "y": 133,
+        "w": 112,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 80,
+        "w": 112,
+        "h": 32
+      }
+    },
+    "mage-v2-death-north-east-10": {
+      "frame": {
+        "x": 1199,
+        "y": 133,
+        "w": 103,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 82,
+        "w": 103,
+        "h": 30
+      }
+    },
+    "mage-v2-death-north-east-11": {
+      "frame": {
+        "x": 1304,
+        "y": 133,
+        "w": 103,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 82,
+        "w": 103,
+        "h": 30
+      }
+    },
+    "mage-v2-death-north-east-9": {
+      "frame": {
+        "x": 1409,
+        "y": 133,
+        "w": 103,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 82,
+        "w": 103,
+        "h": 30
+      }
+    },
+    "mage-v2-death-north-east-12": {
+      "frame": {
+        "x": 1409,
+        "y": 133,
+        "w": 103,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 82,
+        "w": 103,
+        "h": 30
+      }
+    },
+    "mage-v2-death-east-11": {
+      "frame": {
+        "x": 1514,
+        "y": 133,
+        "w": 105,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 86,
+        "w": 105,
+        "h": 26
+      }
+    },
+    "mage-v2-death-east-12": {
+      "frame": {
+        "x": 1621,
+        "y": 133,
+        "w": 105,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 86,
+        "w": 105,
+        "h": 26
+      }
+    },
+    "mage-v2-death-west-9": {
+      "frame": {
+        "x": 1728,
+        "y": 133,
+        "w": 112,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 88,
+        "w": 112,
+        "h": 24
+      }
+    },
+    "mage-v2-death-west-10": {
+      "frame": {
+        "x": 1842,
+        "y": 133,
+        "w": 112,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 89,
+        "w": 112,
+        "h": 23
+      }
+    },
+    "mage-v2-death-west-11": {
+      "frame": {
+        "x": 1842,
+        "y": 133,
+        "w": 112,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 89,
+        "w": 112,
+        "h": 23
+      }
+    },
+    "mage-v2-death-west-12": {
+      "frame": {
+        "x": 1842,
+        "y": 133,
+        "w": 112,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 112,
+        "h": 112
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 89,
+        "w": 112,
+        "h": 23
+      }
+    }
+  },
+  "meta": {
+    "image": "1.png",
+    "size": {
+      "w": 2048,
+      "h": 180
+    },
+    "scale": "1"
+  }
+}

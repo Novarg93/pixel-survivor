@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Ash Warden · East Aseprite Pilot 01</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111b22;color:#ede5d5;font:14px system-ui,sans-serif}header{padding:20px 24px 12px;border-bottom:1px solid #39454b}h1{font-size:23px;margin:4px 0 8px}p{margin:6px 0;color:#b9c4c6}small{color:#bdc9c9}nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 24px}button,select,input{font:inherit;accent-color:#edb46e}button,select{color:#ede5d5;background:#28373f;border:1px solid #60717a;border-radius:5px;padding:6px 10px}button:hover,button[aria-pressed=true]{background:#795136}label{display:flex;align-items:center;gap:6px}main{padding:0 24px 20px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}article{background:#1c2b33;border:1px solid #3c505a;border-radius:8px;overflow:hidden}h2{font-size:15px;margin:12px 12px 0}canvas{display:block;width:100%;height:auto;image-rendering:pixelated}.metric{min-height:58px;padding:8px 12px;font:12px Consolas,monospace;color:#c8dad7}.warning{color:#ffc18b}#phase{width:190px}#game{margin-top:16px;border:1px solid #49606b}.legend{padding:10px 0;font-size:12px}#notes{font-size:13px;line-height:1.6;margin:10px 0}a{color:#f0bb7f}@media(max-width:900px){header{padding:10px 12px}h1{font-size:18px}nav{padding:10px 12px;gap:7px;font-size:12px}main{padding:0 10px}.grid{gap:6px}h2{font-size:12px;margin:8px}.metric{font-size:10px;padding:5px}#phase{width:110px}}
+</style></head><body>
+<header><small>PIXEL SURVIVOR / EAST ONLY / MANUAL REVIEW</small><h1>Ash Warden · Aseprite Live Polish Pilot 01</h1><p>Новый таз, бедро, колено и стопа. Оригинальный Walk сохранён. Gameplay не изменён.</p></header>
+<nav aria-label="Управление сравнением">
+<button id="play">Пауза</button><button id="prev" aria-label="Предыдущий кадр">◀</button><button id="next" aria-label="Следующий кадр">▶</button>
+<label>Scrub <select id="clip"><option value="run">Run · 12 кадров</option><option value="walk">Polished Walk · 8</option><option value="source">Original Walk · 8</option></select></label>
+<input id="phase" aria-label="Покадровый scrub" type="range" min="0" max="11" value="0" step="1">
+<button data-rate="0.5">0.5×</button><button data-rate="1" aria-pressed="true">1×</button><button data-rate="2">2×</button>
+<label><input type="checkbox" id="onion">Onion Skin ±1</label><label><input type="checkbox" id="joints">Таз / суставы / опора</label>
+<label>World speed <select id="speed"><option>72</option><option selected>120</option><option>180</option><option>255</option></select></label>
+<label><input type="checkbox" id="pace" checked>Синхронизация шага</label><label><input type="checkbox" id="travel" checked>Движение World</label>
+<label>Game zoom <select id="zoom"><option value="1">1×</option><option value="2">2×</option></select></label>
+</nav>
+<main><style>h2{min-height:2.5em}</style><section class="grid" aria-label="Три варианта East">
+<article><h2>Original East Walk</h2><canvas id="source" width="400" height="340"></canvas><div class="metric" id="source-metric"></div></article>
+<article><h2>Aseprite Polished East Walk</h2><canvas id="walk" width="400" height="340"></canvas><div class="metric" id="walk-metric"></div></article>
+<article><h2>New East Run</h2><canvas id="run" width="400" height="340"></canvas><div class="metric" id="run-metric"></div></article>
+</section>
+<canvas id="game" width="1280" height="240" aria-label="Игровой масштаб трёх вариантов"></canvas>
+<div class="legend">Внизу: настоящий scale 0.6548310811 × Game zoom. Сетка: 32 world units; pivot (96,154). Верх: одинаковое увеличение исходных пикселей ×2. Камера следует вправо, земля движется влево.</div>
+<div id="notes"></div><p><a href="source/east-walk-source.aseprite">Original .aseprite</a> · <a href="walk/east-walk.aseprite">Polished .aseprite</a> · <a href="run/east-run.aseprite">Run .aseprite</a> · <a href="manifest.json">Контракт и ограничения</a></p>
+<p class="warning">Pilot ожидает художественной приёмки. На 255 units/s Run ограничен 24 FPS: номинальное остаточное скольжение ≈1.4%. Оценка по опорным anchor не заменяет проверку стоп в движении.</p>
+</main><script src="viewer-data.js"></script><script src="viewer.js"></script></body></html>

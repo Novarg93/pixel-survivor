@@ -1,0 +1,138 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "rate": "1",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 138.65599999999992,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rate": "0.5",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 135.9839999999999,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rate": "2",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 127.93600000000093,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rate": "1",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 138.68800000000002,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rate": "0.5",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 135.99999999999997,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rate": "2",
+      "state": {
+        "index": 13,
+        "phase": "idle",
+        "done": true,
+        "playing": false,
+        "distance": 128.00000000000003,
+        "events": [
+          "chargeWindupStart",
+          "directionLock",
+          "chargeStart",
+          "chargeTravel",
+          "chargeStop",
+          "chargeBrakeEnd",
+          "recoveryEnd"
+        ],
+        "approved": false
+      }
+    }
+  ],
+  "scope": "South pilot only; East/West/North unavailable, artistic acceptance failed"
+}

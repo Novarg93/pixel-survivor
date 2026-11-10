@@ -1,0 +1,1302 @@
+{
+  "protectedFilesUnchanged": 69,
+  "originalSourcesUnchanged": 8,
+  "pngCRCFiles": 215,
+  "exports": [
+    {
+      "id": "south/walk",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south/run",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south-east/walk",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south-east/run",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "north-east/walk",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "north-east/run",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "north-west/walk",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "north-west/run",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south-west/walk",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south-west/run",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    },
+    {
+      "id": "south-west/walk/attempt-02",
+      "frames": 16,
+      "unique": 16,
+      "inputDifferences": 0,
+      "sheetDifferences": 0,
+      "partialAlpha": 0,
+      "edgePixels": 0
+    }
+  ],
+  "gifs": [
+    {
+      "id": "south/walk",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south/run",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south-east/walk",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south-east/run",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "north-east/walk",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "north-east/run",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "north-west/walk",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "north-west/run",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south-west/walk",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south-west/run",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 60,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    },
+    {
+      "id": "south-west/walk/attempt-02",
+      "rows": [
+        {
+          "frame": 0,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 1,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 2,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 3,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 4,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 5,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 6,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 7,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 8,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 9,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 10,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 11,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 12,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 13,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 14,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        },
+        {
+          "frame": 15,
+          "durationMs": 80,
+          "alphaDifferences": 0,
+          "colorDifferences": 0
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "direction": "south",
+    "clips": [
+      {
+        "id": "south/walk",
+        "frame": 0,
+        "loops": 2
+      },
+      {
+        "id": "south/run",
+        "frame": 10,
+        "loops": 2
+      },
+      {
+        "id": "south-east/walk",
+        "frame": 0,
+        "loops": 2
+      },
+      {
+        "id": "south-east/run",
+        "frame": 10,
+        "loops": 2
+      },
+      {
+        "id": "north-east/walk",
+        "frame": 0,
+        "loops": 2
+      },
+      {
+        "id": "north-east/run",
+        "frame": 10,
+        "loops": 2
+      },
+      {
+        "id": "north-west/walk",
+        "frame": 0,
+        "loops": 2
+      },
+      {
+        "id": "north-west/run",
+        "frame": 10,
+        "loops": 2
+      },
+      {
+        "id": "south-west/walk",
+        "frame": 0,
+        "loops": 2
+      },
+      {
+        "id": "south-west/run",
+        "frame": 10,
+        "loops": 2
+      }
+    ]
+  },
+  "viewerPause": true,
+  "viewerCanvasPixelsExact": true,
+  "viewerStepWrap": true,
+  "mobileDirectionsNoHorizontalOverflow": 5,
+  "errors": [],
+  "screenshots": [
+    "south-frame-01.png",
+    "south-frame-08.png",
+    "south-frame-16.png",
+    "south-mobile.png",
+    "south-east-frame-01.png",
+    "south-east-frame-08.png",
+    "south-east-frame-16.png",
+    "south-east-mobile.png",
+    "north-east-frame-01.png",
+    "north-east-frame-08.png",
+    "north-east-frame-16.png",
+    "north-east-mobile.png",
+    "north-west-frame-01.png",
+    "north-west-frame-08.png",
+    "north-west-frame-16.png",
+    "north-west-mobile.png",
+    "south-west-frame-01.png",
+    "south-west-frame-08.png",
+    "south-west-frame-16.png",
+    "south-west-mobile.png",
+    "light.png"
+  ]
+}

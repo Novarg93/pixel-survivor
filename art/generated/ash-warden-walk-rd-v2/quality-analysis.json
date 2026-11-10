@@ -1,0 +1,971 @@
+{
+  "east": {
+    "quality": "user-approved",
+    "footMotion": {
+      "left": {
+        "samples": [
+          {
+            "occupied": 190,
+            "centroid": [
+              79.94736842105263,
+              146.11052631578949
+            ],
+            "bottom": 153,
+            "alphaShape": "85cc444a22fdcd77605745f6470aa760ade5996c654381e0cde424803743c8e0"
+          },
+          {
+            "occupied": 185,
+            "centroid": [
+              77.66486486486487,
+              146.14054054054054
+            ],
+            "bottom": 153,
+            "alphaShape": "0cfc362aa760ed8ca197349f9862325e5d98ff6cce7f49f30d738dc0a7ed1ad8"
+          },
+          {
+            "occupied": 147,
+            "centroid": [
+              76.76190476190476,
+              145.1360544217687
+            ],
+            "bottom": 152,
+            "alphaShape": "3640ba9e28636dcb5a217d15fe50131b5bbbf2332d0f63719c267901ce60c4ac"
+          },
+          {
+            "occupied": 136,
+            "centroid": [
+              87.1470588235294,
+              144.75735294117646
+            ],
+            "bottom": 151,
+            "alphaShape": "28ad2e32c91546040ba7d48eb202cc177f6069e57b47609144e455bcbe0c6cde"
+          },
+          {
+            "occupied": 72,
+            "centroid": [
+              93.19444444444444,
+              144.45833333333334
+            ],
+            "bottom": 151,
+            "alphaShape": "3d64ac80cfd4bb8ebb3d518087b0903a30b7aec99a9e1f1b55248d8786ae553e"
+          },
+          {
+            "occupied": 8,
+            "centroid": [
+              96,
+              143.5
+            ],
+            "bottom": 147,
+            "alphaShape": "ba0a2736655be9f3c0f39445a855bc84251f5c6e058c7252763ce9e4e091fa89"
+          },
+          {
+            "occupied": 14,
+            "centroid": [
+              95.5,
+              143
+            ],
+            "bottom": 146,
+            "alphaShape": "837963ee9208ff63a0927fe02f3e50ed502ed6ba7c3b1b9e3c36ae17314a68ef"
+          },
+          {
+            "occupied": 0,
+            "centroid": null,
+            "bottom": -1,
+            "alphaShape": "b2c5e4bd6785442e8deedce0d325629b0818a4c9e7635b3bd8c80e8c03f162fb"
+          },
+          {
+            "occupied": 57,
+            "centroid": [
+              94.19298245614036,
+              145.56140350877192
+            ],
+            "bottom": 152,
+            "alphaShape": "c996eaccd9fa04fdb76a0d7b5912d7cc2b13a1399f1c34b81de3c52c2be1b944"
+          },
+          {
+            "occupied": 136,
+            "centroid": [
+              91.50735294117646,
+              146.0808823529412
+            ],
+            "bottom": 153,
+            "alphaShape": "61c109615d25be464782ad05ba4222bfef16c00d8b7ab30be2e55e4d81712635"
+          },
+          {
+            "occupied": 185,
+            "centroid": [
+              89.34054054054054,
+              146.38918918918918
+            ],
+            "bottom": 153,
+            "alphaShape": "64c0ed72e2032a2a1089e80520c50b4e1ec70fd7b31a59d5a4e19f745e825452"
+          },
+          {
+            "occupied": 189,
+            "centroid": [
+              84.36507936507937,
+              146.24338624338625
+            ],
+            "bottom": 153,
+            "alphaShape": "e2287138a81398fba30e26f59e93030e8512e60b9954664580492ce9019286e9"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 19.23809523809524,
+        "centroidSpanY": 3.3891891891891817,
+        "bottomRange": [
+          -1,
+          153
+        ]
+      },
+      "right": {
+        "samples": [
+          {
+            "occupied": 171,
+            "centroid": [
+              127.38011695906432,
+              144.3450292397661
+            ],
+            "bottom": 149,
+            "alphaShape": "fad9daceefdd49f84b305ea63e75eceba3289c5f0f7258596076c890c5325eeb"
+          },
+          {
+            "occupied": 176,
+            "centroid": [
+              128.75,
+              144.42045454545453
+            ],
+            "bottom": 149,
+            "alphaShape": "e63c18ecccfb6fae56cf9bb25d98a3f60c048209fd1837a736e30007e50d399d"
+          },
+          {
+            "occupied": 180,
+            "centroid": [
+              124.50555555555556,
+              144.56666666666666
+            ],
+            "bottom": 149,
+            "alphaShape": "f4fe8667426bf9490c11e337b6395767d784ffdafdc42cac55b71293cc947693"
+          },
+          {
+            "occupied": 177,
+            "centroid": [
+              119.42937853107344,
+              144.54237288135593
+            ],
+            "bottom": 149,
+            "alphaShape": "260d8dd0e6df55ce1259899d5d2095063e9784b0fefdab6a71674f996c51d618"
+          },
+          {
+            "occupied": 131,
+            "centroid": [
+              116.51908396946565,
+              144.72519083969465
+            ],
+            "bottom": 149,
+            "alphaShape": "8de70eb303aefa9e369d3bdf6f76dc8a2915e857c5f587128a52016854ceeae4"
+          },
+          {
+            "occupied": 88,
+            "centroid": [
+              113.875,
+              145.11363636363637
+            ],
+            "bottom": 150,
+            "alphaShape": "c99a5c91fd4cb7723405ab75efb1c3557efa88e10a8e1dc842114813cc874640"
+          },
+          {
+            "occupied": 114,
+            "centroid": [
+              113.78947368421052,
+              147.33333333333334
+            ],
+            "bottom": 153,
+            "alphaShape": "a48f222e15471b48055d31c4e1b2fd8b1779fd8387803b6c82cd408d886ac77d"
+          },
+          {
+            "occupied": 41,
+            "centroid": [
+              111.4390243902439,
+              148.46341463414635
+            ],
+            "bottom": 153,
+            "alphaShape": "d16bb13db360c1954962681c45184ec3bdc9061f9224c69c237ed9c229639f6d"
+          },
+          {
+            "occupied": 92,
+            "centroid": [
+              114.82608695652173,
+              144.40217391304347
+            ],
+            "bottom": 149,
+            "alphaShape": "4a62f3b1e77701a6656c1737789ac4cade82f260b4bcc58645d4021b813bb479"
+          },
+          {
+            "occupied": 143,
+            "centroid": [
+              122.97902097902097,
+              143.8881118881119
+            ],
+            "bottom": 149,
+            "alphaShape": "103dbd36e91792b964f0386bd2310943d17e95abc4f6748beb000a1b869a4a48"
+          },
+          {
+            "occupied": 166,
+            "centroid": [
+              126.2289156626506,
+              144.24698795180723
+            ],
+            "bottom": 149,
+            "alphaShape": "5270771f2f3b2e6ce49071b0eafe7f01c521b85f2779364cf7d5d78737ba6abf"
+          },
+          {
+            "occupied": 163,
+            "centroid": [
+              130.25153374233128,
+              144.13496932515338
+            ],
+            "bottom": 149,
+            "alphaShape": "9d9ec8c465d1dd3f027ea1f9131b2084f26edfaffedde8b548d5fa3e984eaf3f"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 18.812509352087375,
+        "centroidSpanY": 4.575302746034453,
+        "bottomRange": [
+          149,
+          153
+        ]
+      }
+    }
+  },
+  "west": {
+    "quality": "exact mirror; manual review pending",
+    "footMotion": {
+      "left": {
+        "samples": [
+          {
+            "occupied": 34,
+            "centroid": [
+              71.94117647058823,
+              142.91176470588235
+            ],
+            "bottom": 146,
+            "alphaShape": "976b33e7e5b8beeec125f22d4172ecadc448f795f62b510e070e2660923267f9"
+          },
+          {
+            "occupied": 25,
+            "centroid": [
+              70.92,
+              143.72
+            ],
+            "bottom": 148,
+            "alphaShape": "4d5ab413c57a7dc5d8bc4e1da9367b670a6af66ab48eeada3bc59331ab6eb9fd"
+          },
+          {
+            "occupied": 62,
+            "centroid": [
+              72.95161290322581,
+              143.93548387096774
+            ],
+            "bottom": 148,
+            "alphaShape": "3f707de63315f554a932d30d651b448eb11a9eb024142e2d1c632f4d2a90025c"
+          },
+          {
+            "occupied": 108,
+            "centroid": [
+              75.31481481481481,
+              144.0185185185185
+            ],
+            "bottom": 149,
+            "alphaShape": "5a22305ec1d7c226f81578389ebf89e9fd2b8174b0c7b0db8bbfe83a9a44965d"
+          },
+          {
+            "occupied": 266,
+            "centroid": [
+              83.59022556390977,
+              144.75187969924812
+            ],
+            "bottom": 151,
+            "alphaShape": "fc225077ead438cd4c582fb5fff91d6e6281eefbe3255b98e0dcbd0e8b1cc057"
+          },
+          {
+            "occupied": 248,
+            "centroid": [
+              84.28225806451613,
+              145.21370967741936
+            ],
+            "bottom": 151,
+            "alphaShape": "e367e5633e400b0b4b354e78ab36f295153e8a2d4cf9cd8e2caf6dfc897cb70b"
+          },
+          {
+            "occupied": 257,
+            "centroid": [
+              83.15953307392996,
+              145.82879377431905
+            ],
+            "bottom": 153,
+            "alphaShape": "147f929b02fb512a17f4f82eb448880f59648b62437b89134494cbe488cf7012"
+          },
+          {
+            "occupied": 196,
+            "centroid": [
+              85.61224489795919,
+              146.52551020408163
+            ],
+            "bottom": 153,
+            "alphaShape": "4ad9696941b76da622e5cc21078581e6627696ec318b661334dd610e59560cbc"
+          },
+          {
+            "occupied": 268,
+            "centroid": [
+              85.16791044776119,
+              145.6865671641791
+            ],
+            "bottom": 153,
+            "alphaShape": "eefff1f9b14c6d7508f4bd743e65b3edc53b5a4b42c85aaf4e8c0e079690f5e1"
+          },
+          {
+            "occupied": 134,
+            "centroid": [
+              85.75373134328358,
+              145.0597014925373
+            ],
+            "bottom": 153,
+            "alphaShape": "4298da702764780bf8ec6fae5e9fb4fe935e807ad3733b2e71949ea3a7528326"
+          },
+          {
+            "occupied": 65,
+            "centroid": [
+              80.93846153846154,
+              144.6769230769231
+            ],
+            "bottom": 153,
+            "alphaShape": "9bb3485461bbde68555d22897988d7bf31a2fec7a76c618b828b720878c25617"
+          },
+          {
+            "occupied": 4,
+            "centroid": [
+              70,
+              141.5
+            ],
+            "bottom": 143,
+            "alphaShape": "5dca82eae0b33302d64c7b68b22978ab36888908994244dada7055004e459fab"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 15.753731343283576,
+        "centroidSpanY": 5.025510204081627,
+        "bottomRange": [
+          143,
+          153
+        ]
+      },
+      "right": {
+        "samples": [
+          {
+            "occupied": 201,
+            "centroid": [
+              122.5273631840796,
+              145.40796019900498
+            ],
+            "bottom": 153,
+            "alphaShape": "87011832a29a492d3b6daf8397f0954485535b359cfa733c1742254a3a9451e6"
+          },
+          {
+            "occupied": 232,
+            "centroid": [
+              122.21982758620689,
+              145.63362068965517
+            ],
+            "bottom": 153,
+            "alphaShape": "c2780d91582cf193d69472da01cc40d94718fe8f6058dc91421887677bab81ed"
+          },
+          {
+            "occupied": 235,
+            "centroid": [
+              123.40425531914893,
+              144.73617021276596
+            ],
+            "bottom": 152,
+            "alphaShape": "53dcb1059304c9e7b29f9336678fee1113afddda83dbc07f8b07652af3e7ccf3"
+          },
+          {
+            "occupied": 101,
+            "centroid": [
+              132.67326732673268,
+              143.59405940594058
+            ],
+            "bottom": 151,
+            "alphaShape": "1521c08454d220e5fca8c9621aab94575bdbc8648eab80c2623cd1f837b84111"
+          },
+          {
+            "occupied": 101,
+            "centroid": [
+              134.17821782178217,
+              143.74257425742573
+            ],
+            "bottom": 150,
+            "alphaShape": "3b582d31974e678b155f32e75820248697c33d90779cd640607b1c7ebfbb5793"
+          },
+          {
+            "occupied": 117,
+            "centroid": [
+              133.81196581196582,
+              144.0940170940171
+            ],
+            "bottom": 151,
+            "alphaShape": "7c314a6d81026dfbc5d5fcb64b4ec603f14c44c77f9f1199d815ce7b35ae78e4"
+          },
+          {
+            "occupied": 134,
+            "centroid": [
+              133.455223880597,
+              144.44776119402985
+            ],
+            "bottom": 152,
+            "alphaShape": "9b61c85774b9981b28e92464ece40c5370bc5b9be43a4ef3fc292165d59f7ae2"
+          },
+          {
+            "occupied": 121,
+            "centroid": [
+              133.8595041322314,
+              144.28099173553719
+            ],
+            "bottom": 152,
+            "alphaShape": "2256c210728f25a1a80de2039c873ee86bbc608ba87d5d4e50a7291072a95991"
+          },
+          {
+            "occupied": 93,
+            "centroid": [
+              134.6021505376344,
+              143.7311827956989
+            ],
+            "bottom": 151,
+            "alphaShape": "739b02d7c77af390a9e38ad1dbb541588731507ee53c06e4e53333af324436bb"
+          },
+          {
+            "occupied": 69,
+            "centroid": [
+              135.3768115942029,
+              143.231884057971
+            ],
+            "bottom": 150,
+            "alphaShape": "5e3950a88ea1604d066b67b4821e364674d48fc34b566437648c783da1003485"
+          },
+          {
+            "occupied": 81,
+            "centroid": [
+              134.9506172839506,
+              143.46913580246914
+            ],
+            "bottom": 150,
+            "alphaShape": "5618c8bdfbfb60a7bf955649e4b39ae052250ba1a0c838573ac6a9c500b1f423"
+          },
+          {
+            "occupied": 137,
+            "centroid": [
+              125.73722627737226,
+              144.5036496350365
+            ],
+            "bottom": 153,
+            "alphaShape": "1f15ecf9f3e294600db7b36351cc51063f2884e2593e6162342b331723abf29a"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 13.156984007996016,
+        "centroidSpanY": 2.401736631684173,
+        "bottomRange": [
+          150,
+          153
+        ]
+      }
+    }
+  },
+  "south": {
+    "quality": "manual review pending",
+    "footMotion": {
+      "left": {
+        "samples": [
+          {
+            "occupied": 190,
+            "centroid": [
+              79.94736842105263,
+              146.11052631578949
+            ],
+            "bottom": 153,
+            "alphaShape": "85cc444a22fdcd77605745f6470aa760ade5996c654381e0cde424803743c8e0"
+          },
+          {
+            "occupied": 190,
+            "centroid": [
+              79.94736842105263,
+              146.11052631578949
+            ],
+            "bottom": 153,
+            "alphaShape": "85cc444a22fdcd77605745f6470aa760ade5996c654381e0cde424803743c8e0"
+          },
+          {
+            "occupied": 183,
+            "centroid": [
+              83.17486338797814,
+              146.0655737704918
+            ],
+            "bottom": 153,
+            "alphaShape": "9313d6f43ac28f3fe641799ab4f73f99741666087522be37ead81357212adb9d"
+          },
+          {
+            "occupied": 172,
+            "centroid": [
+              89.11046511627907,
+              146.1918604651163
+            ],
+            "bottom": 153,
+            "alphaShape": "32a8f78d014d96a79537d984bdc1ac20a228c728b1912cb00d3a5758902370d9"
+          },
+          {
+            "occupied": 60,
+            "centroid": [
+              94.38333333333334,
+              146.31666666666666
+            ],
+            "bottom": 154,
+            "alphaShape": "7aa52de305f9320c5ddba54bb38e6db92af6f5ff561f06ae1fc33dfb196acbce"
+          },
+          {
+            "occupied": 89,
+            "centroid": [
+              93.66292134831461,
+              147.25842696629215
+            ],
+            "bottom": 155,
+            "alphaShape": "490401130d230bcb34021d8747ce124210ccf042ca72b407a62894e3c3fadeba"
+          },
+          {
+            "occupied": 126,
+            "centroid": [
+              92.5079365079365,
+              147.5793650793651
+            ],
+            "bottom": 155,
+            "alphaShape": "fc51be42a3c3bb9d3b9de01c8a47f45356e2ef4d9a34cf4a64a9d5218713ebdd"
+          },
+          {
+            "occupied": 148,
+            "centroid": [
+              90.97972972972973,
+              146.47972972972974
+            ],
+            "bottom": 153,
+            "alphaShape": "20c7b3408e63c1628d0194720eacbe656acf3690e53ae257e266527136550eb1"
+          },
+          {
+            "occupied": 113,
+            "centroid": [
+              90.070796460177,
+              144.1946902654867
+            ],
+            "bottom": 149,
+            "alphaShape": "70465d4ca5b387ca99b0b39923d253ceef9d96d1095aba0be6fda03b6a88aee9"
+          },
+          {
+            "occupied": 114,
+            "centroid": [
+              89.95614035087719,
+              144.23684210526315
+            ],
+            "bottom": 149,
+            "alphaShape": "751796c97709bed9c66711df06325706446949089ff7a01d2cdf7be15a3555c3"
+          },
+          {
+            "occupied": 119,
+            "centroid": [
+              87.63025210084034,
+              144.0924369747899
+            ],
+            "bottom": 149,
+            "alphaShape": "d995bf162126747afef0f75591af8bca2371c9d77f79ec8cce2ae844d1652fdc"
+          },
+          {
+            "occupied": 124,
+            "centroid": [
+              85.69354838709677,
+              144.21774193548387
+            ],
+            "bottom": 149,
+            "alphaShape": "09450287ffa72d5cb67bf6c0b52d2dd60a6843ceaf3fcad5e77a0e76f87163a8"
+          }
+        ],
+        "uniqueAlphaShapes": 11,
+        "centroidSpanX": 14.43596491228071,
+        "centroidSpanY": 3.4869281045751848,
+        "bottomRange": [
+          149,
+          155
+        ]
+      },
+      "right": {
+        "samples": [
+          {
+            "occupied": 171,
+            "centroid": [
+              127.38011695906432,
+              144.3450292397661
+            ],
+            "bottom": 149,
+            "alphaShape": "fad9daceefdd49f84b305ea63e75eceba3289c5f0f7258596076c890c5325eeb"
+          },
+          {
+            "occupied": 171,
+            "centroid": [
+              127.38011695906432,
+              144.3450292397661
+            ],
+            "bottom": 149,
+            "alphaShape": "fad9daceefdd49f84b305ea63e75eceba3289c5f0f7258596076c890c5325eeb"
+          },
+          {
+            "occupied": 163,
+            "centroid": [
+              126.67484662576688,
+              144.2883435582822
+            ],
+            "bottom": 149,
+            "alphaShape": "0721ffecba657bb521c194d154e7f39ebc89ded324b5601582f08661080f21d6"
+          },
+          {
+            "occupied": 144,
+            "centroid": [
+              123.13194444444444,
+              143.94444444444446
+            ],
+            "bottom": 149,
+            "alphaShape": "774d3d8143e76e7ba7f23b5fda8fc892feb0a7fad584073529192586b0eaee9e"
+          },
+          {
+            "occupied": 91,
+            "centroid": [
+              119.04395604395604,
+              143.06593406593407
+            ],
+            "bottom": 147,
+            "alphaShape": "e17ec06df5e1a089af61b436bbc243ad0f0d9bb8460205f2d08bff3cfdbbc614"
+          },
+          {
+            "occupied": 91,
+            "centroid": [
+              119.04395604395604,
+              143.06593406593407
+            ],
+            "bottom": 147,
+            "alphaShape": "e17ec06df5e1a089af61b436bbc243ad0f0d9bb8460205f2d08bff3cfdbbc614"
+          },
+          {
+            "occupied": 98,
+            "centroid": [
+              119.72448979591837,
+              143.5612244897959
+            ],
+            "bottom": 148,
+            "alphaShape": "f07881eaaffb8ec389aafa3b285037627057821f8592a73867982e13e04e32bd"
+          },
+          {
+            "occupied": 195,
+            "centroid": [
+              123.35897435897436,
+              145.83589743589744
+            ],
+            "bottom": 153,
+            "alphaShape": "fbce9f152f02e2043c7f3f3d9c87e5d6d579fa41e9c1e44d9cb55e3a3d65fbe0"
+          },
+          {
+            "occupied": 250,
+            "centroid": [
+              124.876,
+              147.668
+            ],
+            "bottom": 155,
+            "alphaShape": "ed9645091621dd5d292fb2f73ded58439beefcd2fb12eec6d0492cf604c393e2"
+          },
+          {
+            "occupied": 249,
+            "centroid": [
+              124.855421686747,
+              147.69076305220884
+            ],
+            "bottom": 155,
+            "alphaShape": "72e527e258634af1af02df87963498657912858eef890cb97ba0b266504b334b"
+          },
+          {
+            "occupied": 249,
+            "centroid": [
+              124.855421686747,
+              147.69076305220884
+            ],
+            "bottom": 155,
+            "alphaShape": "72e527e258634af1af02df87963498657912858eef890cb97ba0b266504b334b"
+          },
+          {
+            "occupied": 249,
+            "centroid": [
+              124.855421686747,
+              147.69076305220884
+            ],
+            "bottom": 155,
+            "alphaShape": "72e527e258634af1af02df87963498657912858eef890cb97ba0b266504b334b"
+          }
+        ],
+        "uniqueAlphaShapes": 8,
+        "centroidSpanX": 8.33616091510828,
+        "centroidSpanY": 4.624828986274764,
+        "bottomRange": [
+          147,
+          155
+        ]
+      }
+    }
+  },
+  "north": {
+    "quality": "technical success; weak leg motion, not approved",
+    "footMotion": {
+      "left": {
+        "samples": [
+          {
+            "occupied": 215,
+            "centroid": [
+              80.88372093023256,
+              145.84651162790698
+            ],
+            "bottom": 153,
+            "alphaShape": "d07a4e3e8d70638059e398daf79833229a0b04d73a793aeaf8c9bf6c0633843c"
+          },
+          {
+            "occupied": 215,
+            "centroid": [
+              80.89302325581396,
+              145.87441860465117
+            ],
+            "bottom": 153,
+            "alphaShape": "ca335633e68e437ada93e6fa0f641fe82462974fef1131113312b985194d6b32"
+          },
+          {
+            "occupied": 209,
+            "centroid": [
+              80.4688995215311,
+              145.95215311004785
+            ],
+            "bottom": 153,
+            "alphaShape": "cb403a9ec0ed45c76e930d0cca8d40834d8a445d6f59d2c29fc06c09220d1554"
+          },
+          {
+            "occupied": 211,
+            "centroid": [
+              80.58767772511848,
+              145.90995260663507
+            ],
+            "bottom": 153,
+            "alphaShape": "37bbb5d29b4bdd7295f3829fb582e22404beca88d166da464073d9412d7118ed"
+          },
+          {
+            "occupied": 207,
+            "centroid": [
+              80.28019323671498,
+              145.9951690821256
+            ],
+            "bottom": 153,
+            "alphaShape": "8319151c804deef66638a27ad70ca39b57c9fd45e671cf367f51334bf28aff8c"
+          },
+          {
+            "occupied": 209,
+            "centroid": [
+              80.35885167464114,
+              145.94258373205741
+            ],
+            "bottom": 153,
+            "alphaShape": "4709f7a6f818b0f03b4dfa740f621400cb08f7ed8ee9b44a4222429da746db04"
+          },
+          {
+            "occupied": 206,
+            "centroid": [
+              80.24271844660194,
+              146.0242718446602
+            ],
+            "bottom": 153,
+            "alphaShape": "be91208f39253d6345f3d4500ad3f6330d84221b708412dc79a28690b3fe1622"
+          },
+          {
+            "occupied": 209,
+            "centroid": [
+              80.43062200956938,
+              145.94258373205741
+            ],
+            "bottom": 153,
+            "alphaShape": "0ce6a472b37956ee7219d71334dc1244805e295ce17647f2b1538ba15fc739ab"
+          },
+          {
+            "occupied": 210,
+            "centroid": [
+              80.54285714285714,
+              145.93809523809523
+            ],
+            "bottom": 153,
+            "alphaShape": "84da329557470c5b16a166ab2aeddbfccd721d018594f3869907bd9d3fe9b257"
+          },
+          {
+            "occupied": 217,
+            "centroid": [
+              80.95391705069125,
+              145.7926267281106
+            ],
+            "bottom": 153,
+            "alphaShape": "395f14795e815f4522cefdc95d8b3c59bc9d8432d502301b82bb7968d9dc4464"
+          },
+          {
+            "occupied": 216,
+            "centroid": [
+              80.91666666666667,
+              145.81944444444446
+            ],
+            "bottom": 153,
+            "alphaShape": "b1cdaefb7928079611866c6260c9b0bec963b0c1e2680927a6a26e3a2cefe3ff"
+          },
+          {
+            "occupied": 222,
+            "centroid": [
+              81.30630630630631,
+              145.78378378378378
+            ],
+            "bottom": 153,
+            "alphaShape": "44fa19efbe8ada170ed64636ea892300e631f1fe9b78b06ea9b3317b8ef36cfa"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 1.06358785970437,
+        "centroidSpanY": 0.24048806087643015,
+        "bottomRange": [
+          153,
+          153
+        ]
+      },
+      "right": {
+        "samples": [
+          {
+            "occupied": 207,
+            "centroid": [
+              122.69565217391305,
+              145.58454106280195
+            ],
+            "bottom": 153,
+            "alphaShape": "66d81fd9339d07de62ceeac38b3bcc5cef2ef5079132536055c844fce7f66535"
+          },
+          {
+            "occupied": 204,
+            "centroid": [
+              122.81372549019608,
+              145.66176470588235
+            ],
+            "bottom": 153,
+            "alphaShape": "43fbc083d910d52a2f2a6222661898e30603d9fe33ac4c60a4215cd35e5c9c98"
+          },
+          {
+            "occupied": 206,
+            "centroid": [
+              122.70873786407768,
+              145.61650485436894
+            ],
+            "bottom": 153,
+            "alphaShape": "6d14f80603ba2826916a51559d653c50f4a29e5b1a8d7b56850d729befb98315"
+          },
+          {
+            "occupied": 217,
+            "centroid": [
+              122.16589861751152,
+              145.5668202764977
+            ],
+            "bottom": 153,
+            "alphaShape": "9bbe157d84ba5687fe2a2f1c3054073c5240a82a4b1f0ca207124d3568307e07"
+          },
+          {
+            "occupied": 211,
+            "centroid": [
+              122.44549763033176,
+              145.5781990521327
+            ],
+            "bottom": 153,
+            "alphaShape": "b2b31de73778a8690d20a56dc3c6bf15068b730bf6086d6d543741a84381824f"
+          },
+          {
+            "occupied": 206,
+            "centroid": [
+              122.66019417475728,
+              145.6601941747573
+            ],
+            "bottom": 153,
+            "alphaShape": "6d324f9e364b418ab876289cba8119c660e38cf265aef095be0feccfb2d534a8"
+          },
+          {
+            "occupied": 210,
+            "centroid": [
+              122.5,
+              145.56666666666666
+            ],
+            "bottom": 153,
+            "alphaShape": "ca5ad580d07e5558e5a0b52d11213863de1ce04ddd47623a4eb28c2ff25f9b73"
+          },
+          {
+            "occupied": 205,
+            "centroid": [
+              122.71219512195123,
+              145.66829268292682
+            ],
+            "bottom": 153,
+            "alphaShape": "a704ffa147f71715cdbc97f4eb5cd47faa2a86b3505ec03ed5e895c930bb45bf"
+          },
+          {
+            "occupied": 201,
+            "centroid": [
+              123,
+              145.681592039801
+            ],
+            "bottom": 153,
+            "alphaShape": "e1a6352666f8b6401c3583cf7a5224f4cfc94fd5273feb80ee5b7a3b7d17c330"
+          },
+          {
+            "occupied": 216,
+            "centroid": [
+              122.36574074074075,
+              145.50925925925927
+            ],
+            "bottom": 153,
+            "alphaShape": "92170b737a2815d52cf65ba0dd308cbff60ecfe869577c8fd4edc6461d4377f7"
+          },
+          {
+            "occupied": 214,
+            "centroid": [
+              122.46261682242991,
+              145.50934579439252
+            ],
+            "bottom": 153,
+            "alphaShape": "b0a317467c1340d51251b58df162b5f5b186ae1499fc32a56838c64a6dd436e1"
+          },
+          {
+            "occupied": 214,
+            "centroid": [
+              122.39252336448598,
+              145.52803738317758
+            ],
+            "bottom": 153,
+            "alphaShape": "ad01c100540eab6e6a4d856719a9afcfb2c4613bda89efd51c4125ae9cf9a0d8"
+          }
+        ],
+        "uniqueAlphaShapes": 12,
+        "centroidSpanX": 0.834101382488484,
+        "centroidSpanY": 0.17233278054172274,
+        "bottomRange": [
+          153,
+          153
+        ]
+      }
+    }
+  }
+}

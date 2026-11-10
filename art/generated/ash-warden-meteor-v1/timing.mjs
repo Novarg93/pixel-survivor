@@ -1,0 +1,4 @@
+export function frameAt(durations,time){if(time<0)return -1;let end=0;for(let i=0;i<durations.length;i++){end+=durations[i];if(time<end)return i;}return -1;}
+export function sampleStrike(meteor,time,spawnMs){const age=time-spawnMs,result={};for(const [name,clip]of Object.entries(meteor.components))result[name]=frameAt(clip.durationsMs,age-meteor.previewSchedule[name]);const fallProgress=Math.max(0,Math.min(1,(age-meteor.previewSchedule.fall)/meteor.components.fall.totalMs));result.fallOffset=meteor.fallOffsetWorld.from.map((v,i)=>v+(meteor.fallOffsetWorld.to[i]-v)*fallProgress);return result;}
+export function sampleCast(cast,time,releaseMs=900){const start=releaseMs-cast.events.meteorRelease.timeMs;return frameAt(cast.durationsMs,time-start);}
+export function strikesFor(mode){return mode==='multi'?[{spawnMs:900,offset:[-22,-8]},{spawnMs:1120,offset:[22,0]},{spawnMs:1340,offset:[0,18]}]:[{spawnMs:900,offset:[0,0]}];}

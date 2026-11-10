@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ash Warden animation review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#15232b;color:#f0e6ce;font:13px Consolas,monospace;overflow:hidden}header{padding:8px 12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-height:64px}label{white-space:nowrap}button,select,input{font:inherit}input[type=number]{width:58px}input[type=range]{width:100px}canvas{display:block;image-rendering:pixelated}#status{font-size:11px;color:#bfcfc4}#notice{margin:0;padding:3px 12px;background:#4b3528;color:#ffe6be;font-size:11px}@media(max-width:900px){header{gap:5px;font-size:11px;padding:4px 8px}input[type=range]{width:65px}#notice{font-size:10px}}
+</style>
+<header><strong>Ash Warden</strong><select id="version"><option value="v1">Directions V1</option><option value="polished">South accepted</option><option value="original">Before RD</option></select><label>Ракурс <select id="direction"><option value="south">South</option><option value="north">North</option><option value="east">East</option><option value="west">West</option></select></label><label>Клип <select id="pose"><option value="idle">Idle</option><option value="walk">Walk</option><option value="melee">Basic Melee · draft</option></select></label><button id="play">Пауза</button><button id="previous">◀</button><button id="next">▶</button><label>Кадр <input id="frame" type="range" min="0" max="3" value="0"></label><label>FPS <input id="fps" type="number" min="0.5" max="40" step="0.5" value="2"></label><label>× <input id="rate" type="number" min="0.25" max="4" step="0.25" value="1"></label><label>World speed <input id="speed" type="number" min="0" max="240" step="12" value="72"></label><label><input id="travel" type="checkbox">Движение</label><label><input id="autoTempo" type="checkbox" checked>Stride timing</label><button id="transition">Idle → Attack → Idle</button><span id="status">Загрузка…</span></header>
+<p id="notice">Idle/Walk V1 приняты. Basic Melee: South simple pilot — локальный rig; ручная приёмка ожидается. События только для визуальной проверки.</p>
+<canvas id="view"></canvas><script src="viewer-data.js"></script><script src="../ash-warden-south-polish-01/viewer-extension.js"></script><script src="../ash-warden-directions-v1/viewer-data.js"></script><script src="../ash-warden-basic-melee-rd-01/viewer-data.js"></script><script src="../ash-warden-basic-melee-south-02/viewer-data.js"></script><script src="../ash-warden-melee-swing-experiment-01/viewer-data.js"></script><script src="../ash-warden-directional-melee-b-v1/viewer-data.js"></script><script>
+const data=globalThis.LOCOMOTION_REVIEW,polish=globalThis.LOCOMOTION_POLISH,v1=globalThis.ASH_WARDEN_DIRECTIONS_V1,melee=globalThis.ASH_WARDEN_MELEE;
+const meleeVariants={simple:globalThis.ASH_WARDEN_MELEE_SIMPLE,rd:melee};
+const swingReview=globalThis.ASH_WARDEN_SWING_REVIEW;
+const directionalB=globalThis.ASH_WARDEN_DIRECTIONAL_B;
+document.querySelector('#version').add(new Option('Directional B V1','directionalB',true,true));
+document.querySelector('#version option[value="v1"]').textContent='Old directions (archive)';
+const packControl=document.createElement('label');packControl.innerHTML='Сравнение <select id="packLayout"><option value="all">S / E / W / N</option><option value="se">South / East</option><option value="ew">East / West</option><option value="single">Selected / static</option><option value="ba">Basic B / Candidate A</option></select> <button type="button" data-pack-rate="1">1×</button> <button type="button" data-pack-rate="0.5">0.5×</button> <button type="button" data-pack-rate="0.25">0.25×</button>';document.querySelector('header').append(packControl);
+document.querySelector('#version').add(new Option('Melee Swing Candidates','swing'));
+document.querySelector('#pose').add(new Option('Full Swing RAW','swing'));
+const swingControl=document.createElement('label');swingControl.className='swingControl';swingControl.innerHTML='Кандидат <select id="candidate"><option value="A">A · Golf</option><option value="B">B · Baseball</option><option value="C">C · Dark Knight</option></select> Сравнить <select id="reference"><option value="v2">Basic Melee v2 (rejected)</option><option value="cleave">Infernal Great Cleave</option></select> <button type="button" data-rate="1">1× native</button> <button type="button" data-rate="0.5">0.5×</button> <button type="button" data-rate="0.25">0.25×</button>';document.querySelector('header').append(swingControl);
+swingControl.querySelector('[value="A"]').textContent='A · comparison';swingControl.querySelector('[value="B"]').textContent='B · approved reference';
+const variantControl=document.createElement('label');variantControl.innerHTML='Мили <select id="meleeVariant"><option value="simple">South v2 REJECTED</option><option value="rd">RD draft v1</option></select>';document.querySelector('header').insertBefore(variantControl,document.querySelector('#direction').parentElement);
+const canvas=document.querySelector('#view'),ctx=canvas.getContext('2d');
+const ui=Object.fromEntries(['version','packLayout','meleeVariant','candidate','reference','direction','pose','play','previous','next','frame','fps','rate','speed','travel','autoTempo','transition','status'].map(id=>[id,document.getElementById(id)]));
+let images={},directionBases={},base,mage,ground,index=0,playing=true,last=0,elapsed=0,distance=0,raf,loops=0,rendered=0;
+let sequence=null,transitionComplete=false,attackInstance=0,lastHitInstance=-1,hitCount=0,hitLog=[];
+let referenceElapsed=0;
+let directionalAtlas;
+function load(src){const i=new Image();i.src=src;return i.decode().then(()=>i);}
+function key(){return ui.version.value==='swing'?'south-'+ui.candidate.value:ui.direction.value+'-'+ui.pose.value;}
+function activeMelee(){return meleeVariants[ui.meleeVariant.value];}
+function available(){return ui.version.value==='directionalB'?directionalB.clips:ui.version.value==='swing'?swingReview.clips:ui.version.value==='v1'?{...v1.clips,...activeMelee().clips}:ui.version.value==='polished'?polish.clips:data.clips;}
+function imageKey(){return ui.version.value+'-'+(ui.pose.value==='melee'?ui.meleeVariant.value+'-':'')+key();}
+function clip(){return available()[key()];}
+function requestedFPS(){return ui.pose.value==='walk'&&clip().strideWorld?Number(ui.speed.value)/clip().strideWorld*clip().frames.length:Number(ui.fps.value);}
+function effectiveFPS(){const c=clip();if(ui.autoTempo.checked&&ui.pose.value==='walk'&&c.strideWorld){const requested=requestedFPS();ui.fps.value=(['v1','directionalB'].includes(ui.version.value)?Math.min(v1.maxPreviewFPS,requested):requested).toFixed(3);}return Math.max(.1,Number(ui.fps.value)*Number(ui.rate.value));}
+function frameDurationMs(){const c=clip();return c.durationsMs?c.durationsMs[index]*c.previewFPS/effectiveFPS():1000/effectiveFPS();}
+function beginAttack(){attackInstance++;}
+function enterFrame(){const c=clip();if(c.events&&index===c.events.hitFrame.frame&&lastHitInstance!==attackInstance){lastHitInstance=attackInstance;hitCount++;hitLog.push({attackInstance,frame:index,timeMs:c.events.hitFrame.timeMs});if(hitLog.length>32)hitLog.shift();}}
+function setClip(){index=0;elapsed=0;ui.frame.max=clip().frames.length-1;ui.fps.value=clip().previewFPS;if(ui.pose.value==='melee')beginAttack();}
+function reset(){sequence=null;transitionComplete=false;distance=0;referenceElapsed=0;last=0;loops=0;setClip();resize();}
+function pause(){playing=false;ui.play.textContent='Пуск';}
+function syncAvailability(){
+ const swingMode=ui.version.value==='swing';swingControl.style.display=swingMode?'':'none';ui.pose.querySelector('[value="swing"]').disabled=!swingMode;
+ const packMode=ui.version.value==='directionalB';packControl.style.display=packMode?'':'none';
+ variantControl.style.display=swingMode||packMode?'none':'';for(const id of['speed','travel','autoTempo'])ui[id].closest('label').style.display=swingMode?'none':'';ui.transition.style.display=swingMode?'none':'';
+ for(const p of ['idle','walk'])ui.pose.querySelector('[value="'+p+'"]').disabled=swingMode;
+ if(packMode){
+  if(ui.pose.value==='swing')ui.pose.value='idle';ui.pose.querySelector('[value="melee"]').disabled=false;ui.pose.querySelector('[value="melee"]').textContent='Basic Melee B';
+  for(const o of ui.direction.options){o.disabled=!available()[o.value+'-'+ui.pose.value];o.textContent=o.value;}
+  ui.transition.disabled=!available()[ui.direction.value+'-melee'];ui.packLayout.querySelector('[value="ba"]').disabled=ui.pose.value!=='melee';if(ui.packLayout.value==='ba'&&ui.pose.value!=='melee')ui.packLayout.value='single';
+  document.querySelector('#notice').textContent='B принят как motion reference · South/East общий front upper · West зеркало East · North вид со спины · combat facing независим от картинки · новый pack ожидает приёмки';return;
+ }
+ if(swingMode){
+  ui.direction.value='south';ui.pose.value='swing';for(const o of ui.direction.options)o.disabled=o.value!=='south';
+  for(const o of ui.candidate.options)o.disabled=!swingReview.clips['south-'+o.value];if(!available()[key()])ui.candidate.value=ui.candidate.querySelector('option:not(:disabled)').value;
+  ui.pose.querySelector('[value="melee"]').disabled=true;ui.transition.disabled=true;
+  document.querySelector('#notice').textContent='RAW RetroDiffusion · общий pivot/scale · исходные длительности · слева reference в своей исходной скорости · художественная приёмка пользователем';return;
+ }
+ if(ui.pose.value==='swing')ui.pose.value='idle';
+ ui.pose.querySelector('[value="melee"]').disabled=ui.version.value!=='v1'||!Object.keys(activeMelee().clips).length;
+ ui.pose.querySelector('[value="melee"]').textContent=ui.meleeVariant.value==='simple'?'Basic Melee · simple pilot':'Basic Melee · RD draft';
+ if(ui.pose.selectedOptions[0].disabled)ui.pose.value='idle';
+ for(const option of ui.direction.options){option.disabled=!available()[option.value+'-'+ui.pose.value];option.textContent=option.value+(option.disabled?' — нет':'');}
+ if(!available()[key()])ui.direction.value='south';
+ ui.transition.disabled=ui.version.value!=='v1'||!activeMelee().clips[ui.direction.value+'-melee'];
+ document.querySelector('#notice').textContent=ui.meleeVariant.value==='simple'?'Idle/Walk V1 приняты. Basic Melee v2 НЕ ПРИНЯТ пользователем: недостаточная амплитуда. Сохранён только для сравнения. События визуальные.':'Idle/Walk V1 приняты. Старый RD Basic Melee: черновик — дефекты клинка и хвата. События только для визуальной проверки.';
+}
+function resize(){canvas.width=innerWidth;canvas.height=Math.max(100,innerHeight-document.querySelector('header').offsetHeight-document.querySelector('#notice').offsetHeight);ctx.imageSmoothingEnabled=false;}
+function referenceIndex(){const c=swingReview.references[ui.reference.value];let t=playing?referenceElapsed%c.totalMs:(clip().durationsMs.slice(0,index).reduce((a,b)=>a+b,0)/clip().totalMs*c.totalMs);for(let i=0;i<c.frames.length;i++){if(t<c.durationsMs[i])return i;t-=c.durationsMs[i];}return c.frames.length-1;}
+function drawPacked(frame,x,baseline,scale){ctx.save();ctx.translate(x,baseline);if(frame.flipX)ctx.scale(-1,1);for(const layer of frame.layers){const r=directionalB.atlas.frames[layer.texture].frame;ctx.drawImage(directionalAtlas,r.x,r.y,r.w,r.h,(layer.x-96)*scale,(layer.y-154)*scale,r.w*scale,r.h*scale);}ctx.restore();}
+function packedLabel(x,baseline,label,w){ctx.fillStyle='#14252ce8';ctx.fillRect(x-w*.09,baseline+24,w*.18,25);ctx.fillStyle='#fff1d0';ctx.textAlign='center';ctx.font=(w<=900?'10':'13')+'px monospace';ctx.fillText(label,x,baseline+42);ctx.strokeStyle='#9bcaac';ctx.beginPath();ctx.moveTo(x-3,baseline);ctx.lineTo(x+3,baseline);ctx.moveTo(x,baseline-3);ctx.lineTo(x,baseline+3);ctx.stroke();}
+function drawDirectional(w,baseline,scale){
+ const pose=ui.pose.value,layout=ui.packLayout.value,dirs=layout==='se'?['south','east']:layout==='ew'?['east','west']:layout==='all'?['south','east','west','north']:[ui.direction.value];
+ if(layout==='single'){drawPacked(directionalB.bases[ui.direction.value],w*.37,baseline,scale);packedLabel(w*.37,baseline,'static '+ui.direction.value,w);}
+ if(layout==='ba'){
+  const a=swingReview.clips['south-A'];let t=playing?referenceElapsed%a.totalMs:clip().durationsMs.slice(0,index).reduce((n,d)=>n+d,0)/clip().totalMs*a.totalMs,ai=0;while(ai<a.frames.length-1&&t>=a.durationsMs[ai]){t-=a.durationsMs[ai];ai++;}
+  ctx.drawImage(images['swing-south-A'][ai],w*.37-96*scale,baseline-154*scale,192*scale,192*scale);packedLabel(w*.37,baseline,'Candidate A reference #'+ai,w);
+ }
+ dirs.forEach((d,i)=>{const x=dirs.length===4?w*(i+1.5)/5:dirs.length===2?w*(.38+i*.36):w*.72,c=directionalB.clips[d+'-'+pose],frame=c.frames[index%c.frames.length];drawPacked(frame,x,baseline,scale);packedLabel(x,baseline,d+' '+c.presentation+' '+({south:'↓',east:'→',west:'←',north:'↑'}[d])+' #'+index,w);});
+}
+function draw(){
+ const w=canvas.width,h=canvas.height,z=w<=900?2*.83/1.3:2,s=data.worldScale,foot=data.foot[1],baseline=h*.75;
+ ctx.imageSmoothingEnabled=false;ctx.fillStyle='#28353c';ctx.fillRect(0,0,w,h);
+ const tileW=ground.width*z/2,tileH=ground.height*z/2,vec={south:[0,-1],north:[0,1],east:[-1,0],west:[1,0]}[ui.direction.value],dx=(distance*z*vec[0])%tileW,dy=(distance*z*vec[1])%tileH;
+ for(let yy=dy-tileH;yy<h;yy+=tileH)for(let xx=dx-tileW;xx<w;xx+=tileW)ctx.drawImage(ground,Math.round(xx),Math.round(yy),Math.ceil(tileW),Math.ceil(tileH));
+ ctx.strokeStyle='#b9c9b8';ctx.beginPath();ctx.moveTo(0,baseline+.5);ctx.lineTo(w,baseline+.5);ctx.stroke();
+ const mf=data.mageFrame;ctx.drawImage(mage,mf.x,mf.y,mf.w,mf.h,w*.13-mf.w*.375*z/2,baseline-75*.375*z,mf.w*.375*z,mf.h*.375*z);
+ if(ui.version.value==='directionalB')drawDirectional(w,baseline,s*z);
+ else{
+ const swingMode=ui.version.value==='swing',leftImage=swingMode?images['reference-'+ui.reference.value][referenceIndex()]:ui.version.value==='v1'?directionBases[ui.direction.value]:base,leftLabel=swingMode?(ui.reference.value==='v2'?'Basic Melee v2 REJECTED':'Infernal Great Cleave')+' #'+referenceIndex():'RD static';
+ for(const [im,x,label]of[[leftImage,w*.37,leftLabel],[images[imageKey()][index],w*.68,ui.version.value+' '+key()+' #'+index]]){
+  ctx.drawImage(im,x-im.width*s*z/2,baseline-foot*s*z,im.width*s*z,im.height*s*z);ctx.fillStyle='#14252ce8';ctx.fillRect(x-w*.15,baseline+24,w*.3,26);ctx.fillStyle='#fff1d0';ctx.textAlign='center';ctx.font=(w<=900?'11':'16')+'px monospace';ctx.fillText(label,x,baseline+43);
+ }
+ }
+ ctx.fillStyle='#f3e5cc';ctx.textAlign='left';ctx.font=(w<=900?'10':'13')+'px monospace';ctx.fillText('Mage scale · anchor (96,154) · zoom '+z.toFixed(3)+' · visual preview only',10,h-13);ui.frame.value=index;
+ ui.status.textContent='frame '+index+'/'+(clip().frames.length-1)+' · '+effectiveFPS().toFixed(2)+'fps · '+Math.round(frameDurationMs())+'ms · loops '+loops+(sequence?' · '+sequence:'')+(ui.pose.value==='melee'?' · hits '+hitCount:'')+(['v1','directionalB'].includes(ui.version.value)&&ui.pose.value==='walk'&&ui.autoTempo.checked&&requestedFPS()>v1.maxPreviewFPS?' · cap20: contact mismatch':'')+(ui.version.value==='directionalB'?' · combat '+clip().combatFacing:'');rendered++;
+}
+function advanceFrame(){
+ if(index+1<clip().frames.length){index++;enterFrame();return;}
+ if(sequence==='before'){sequence='attack';ui.pose.value='melee';setClip();syncAvailability();}
+ else if(sequence==='attack'){sequence='after';ui.pose.value='idle';setClip();syncAvailability();}
+ else if(sequence==='after'){sequence=null;transitionComplete=true;index=0;elapsed=0;pause();}
+ else{index=0;loops++;if(ui.pose.value==='melee')beginAttack();}
+}
+function tick(t){const dt=last?Math.min(t-last,100):0;last=t;if(playing){if(['swing','directionalB'].includes(ui.version.value))referenceElapsed+=dt*effectiveFPS()/clip().previewFPS;elapsed+=dt;let count=0;while(playing&&elapsed>=frameDurationMs()&&count++<40){const remainder=elapsed-frameDurationMs();advanceFrame();if(playing)elapsed=remainder;}if(ui.travel.checked&&ui.pose.value==='walk')distance+=Number(ui.speed.value)*dt/1000;}draw();raf=requestAnimationFrame(tick);}
+ui.play.onclick=()=>{playing=!playing;last=0;ui.play.textContent=playing?'Пауза':'Пуск';};
+ui.previous.onclick=()=>{pause();sequence=null;index=(index-1+clip().frames.length)%clip().frames.length;elapsed=0;};
+ui.next.onclick=()=>{pause();sequence=null;index=(index+1)%clip().frames.length;elapsed=0;};
+ui.frame.oninput=()=>{pause();sequence=null;index=Number(ui.frame.value);elapsed=0;};
+ui.pose.onchange=()=>{syncAvailability();reset();};ui.direction.onchange=()=>{syncAvailability();reset();};ui.version.onchange=()=>{syncAvailability();reset();};
+ui.meleeVariant.onchange=()=>{syncAvailability();reset();};
+ui.candidate.onchange=()=>{syncAvailability();reset();};ui.reference.onchange=()=>{referenceElapsed=0;resize();};
+ui.packLayout.onchange=()=>{syncAvailability();resize();};for(const b of packControl.querySelectorAll('[data-pack-rate]'))b.onclick=()=>{ui.rate.value=b.dataset.packRate;ui.fps.value=clip().previewFPS;elapsed=0;};
+for(const b of swingControl.querySelectorAll('[data-rate]'))b.onclick=()=>{ui.rate.value=b.dataset.rate;ui.fps.value=clip().previewFPS;elapsed=0;};
+ui.fps.oninput=()=>{ui.autoTempo.checked=false;elapsed=0;};ui.autoTempo.onchange=()=>{elapsed=0;};ui.speed.oninput=()=>{elapsed=0;};ui.rate.oninput=()=>{elapsed=0;};
+ui.transition.onclick=()=>{if(ui.transition.disabled)return;ui.pose.value='idle';sequence='before';transitionComplete=false;setClip();syncAvailability();playing=true;last=0;ui.play.textContent='Пауза';};
+document.addEventListener('visibilitychange',()=>{last=0;elapsed=0;});window.addEventListener('resize',resize);window.addEventListener('pagehide',()=>cancelAnimationFrame(raf));
+globalThis.reviewState=()=>({version:ui.version.value,packLayout:ui.packLayout.value,presentation:clip().presentation??null,combatFacing:clip().combatFacing??null,worldForward:clip().worldForward??null,meleeVariant:ui.meleeVariant.value,candidate:ui.candidate.value,reference:ui.reference.value,referenceIndex:ui.version.value==='swing'?referenceIndex():null,key:key(),index,playing,loops,rendered,distance,elapsed,fps:effectiveFPS(),requestedFPS:requestedFPS(),capped:['v1','directionalB'].includes(ui.version.value)&&ui.pose.value==='walk'&&ui.autoTempo.checked&&requestedFPS()>v1.maxPreviewFPS,speed:Number(ui.speed.value),strideWorld:clip().strideWorld??null,viewport:[canvas.width,canvas.height],sequence,transitionComplete,attackInstance,hitCount,hitLog:[...hitLog],frameDurationMs:frameDurationMs(),nativeTotalMs:clip().totalMs??null});
+(async()=>{
+ for(const [version,clips]of Object.entries({original:data.clips,polished:polish.clips,v1:v1.clips}))for(const[id,c]of Object.entries(clips))images[version+'-'+id]=await Promise.all(c.frames.map(load));
+ for(const[variant,pack]of Object.entries(meleeVariants))for(const[id,c]of Object.entries(pack.clips))images['v1-'+variant+'-'+id]=await Promise.all(c.frames.map(load));
+ for(const[id,c]of Object.entries(swingReview.clips))images['swing-'+id]=await Promise.all(c.frames.map(load));
+ for(const[id,c]of Object.entries(swingReview.references))images['reference-'+id]=await Promise.all(c.frames.map(load));
+ for(const[id,src]of Object.entries(v1.bases))directionBases[id]=await load(src);
+ directionalAtlas=await load(directionalB.atlas.src);
+ [base,mage,ground]=await Promise.all([data.base,data.mage,data.ground].map(load));syncAvailability();resize();reset();raf=requestAnimationFrame(tick);
+})().catch(e=>{ui.status.textContent=e.message;throw e;});
+</script></html>

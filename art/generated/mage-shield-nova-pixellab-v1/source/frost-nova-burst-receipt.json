@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "frost-nova-burst",
+    "tool": "animate_image_pixminimax",
+    "args": {
+      "description": "ONE ordinary mage frost nova, a short ground-level freezing shockwave. The small cyan seed starts centered at(64,64), expands evenly OUTWARD into a single thin jagged icy ring about96px across. A handful of short angular ice crystals sprout along the traveling rim, then chip and dissolve into tiny cold motes as the ring thins and disappears completely to the supplied transparent last frame. Open transparent middle at every phase. Keep the wave on the ground, locked top-down camera, perfectly fixed center. Modest readable single pulse, NOT an ultimate: no full-screen flash, no white filled disk, no blizzard, no avalanche, no falling ice, no tall dome, no giant ice spikes, no protective bubble, no runic glyph or new character. Preserve the restrained mint cyan/slate-blue palette and crisp pixel clusters. Keep everything at least8px inside the128px canvas.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/0ab41fcf-91cf-4e6f-a906-4fd7924e81da/download",
+      "last_frame_url": "upload:3b099da6-a032-459c-a088-a30646aee792",
+      "frame_count": 16,
+      "view": "high top-down",
+      "subject_description": "one modest ground-level cyan Frost Nova wave, a thin open ice rim and short sparse crystals",
+      "initial_pose": "tiny jagged frost seed centered exactly at(64,64), diameter28px with transparent center",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111113
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: d4be7d91-1e8a-43ec-9b7a-d5374bd54208\njob_id: d4be7d91-1e8a-43ec-9b7a-d5374bd54208\ndescription: ONE ordinary mage frost nova, a short ground-level freezing shockwave. The small cyan seed starts centered at(64,64), expands evenly OUTWARD into a single thin jagged icy ring about96px across. A handful of short angular ice crystals sprout along the traveling rim, then chip and dissolve into tiny cold motes as the ring thins and disappears completely to the supplied transparent last frame. Open transparent middle at every phase. Keep the wave on the ground, locked top-down camera, perfectly fixed center. Modest readable single pulse, NOT an ultimate: no full-screen flash, no white filled disk, no blizzard, no avalanche, no falling ice, no tall dome, no giant ice spikes, no protective bubble, no runic glyph or new character. Preserve the restrained mint cyan/slate-blue palette and crisp pixel clusters. Keep everything at least8px inside the128px canvas.\nframes: 16\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111113\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"d4be7d91-1e8a-43ec-9b7a-d5374bd54208\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/d4be7d91-1e8a-43ec-9b7a-d5374bd54208/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: fff5743f-22a7-5646-a285-3019fa2aba26\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

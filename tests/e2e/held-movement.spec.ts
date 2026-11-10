@@ -42,7 +42,13 @@ test('visibility hide during upgrade clears movement without affecting card conf
 
 test('direct Phaser scene destruction clears the tracker and removes capture listeners',async({page})=>{
   await start(page);
-  const scene=await page.evaluateHandle(async()=>{const path='/src/game/scenes/GameScene.ts',{GameScene}=await import(path),create=GameScene.prototype.create;const ready=new Promise<GameScene>(resolve=>{GameScene.prototype.create=function(this:GameScene){GameScene.prototype.create=create;create.call(this);resolve(this);};});window.__PIXEL__!.restartScene();return ready;});
+  const scene=await page.evaluateHandle(async()=>{
+    const path='/src/game/scenes/GameScene.ts';
+    const liveUrl=performance.getEntriesByType('resource').map(e=>e.name).find(url=>new URL(url).pathname===path)??path;
+    const {GameScene}=await import(liveUrl),create=GameScene.prototype.create;
+    const ready=new Promise<GameScene>(resolve=>{GameScene.prototype.create=function(this:GameScene){GameScene.prototype.create=create;create.call(this);resolve(this);};});
+    window.__PIXEL__!.restartScene();return ready;
+  });
   await page.getByRole('button',{name:'Начать забег'}).click();await page.keyboard.down('w');
   const held=await scene.evaluateHandle(s=>Object.getOwnPropertyDescriptor(s,'heldInput')!.value as HeldInputTracker);
   expect(await held.evaluate(h=>h.input())).toEqual({x:0,y:-1});

@@ -12,7 +12,11 @@ async function start(page: Page, scale = 2) {
   await page.goto('/?test=1');
   await expect.poll(() => page.evaluate(() => !!window.__PIXEL__)).toBe(true);
   const scene = await page.evaluateHandle(async () => {
-    const path = '/src/game/scenes/GameScene.ts', { GameScene } = await import(path), create = GameScene.prototype.create;
+    const path='/src/game/scenes/GameScene.ts';
+    // Vite may already have invalidated this module on a reused dev server.
+    // Patch the class actually loaded by the game, including its HMR query.
+    const liveUrl=performance.getEntriesByType('resource').map(e=>e.name).find(url=>new URL(url).pathname===path)??path;
+    const {GameScene}=await import(liveUrl),create=GameScene.prototype.create;
     const ready = new Promise<GameScene>(resolve => {
       GameScene.prototype.create = function (this: GameScene) {
         GameScene.prototype.create = create;
@@ -52,7 +56,7 @@ for (const [width, height, scale, touch] of [
     const geometry = await scene.evaluate(s => ({
       zoom: s.cameras.main.zoom, width: s.world.width, height: s.world.height,
       pixelArt: s.game.config.pixelArt, rounded: s.cameras.main.roundPixels,
-      filtering: s.textures.get('hd-mage').source.map(source => source.scaleMode),
+      filtering: s.textures.get(Object.keys(s.textures.list).find(key=>key.startsWith('mage-hero-v2-'))!).source.map(source => source.scaleMode),
     }));
     expect(geometry).toMatchObject({ width: width / base, height: height / base, pixelArt: true, rounded: true, filtering: [1] });
     expect(await page.locator('canvas').evaluate(canvas => getComputedStyle(canvas).imageRendering)).toBe('pixelated');

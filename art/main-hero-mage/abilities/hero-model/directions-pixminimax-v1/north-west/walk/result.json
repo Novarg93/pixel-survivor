@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "status: completed\nid: 40b54af4-5db0-4935-a2a0-b107c8979498\njob_id: 40b54af4-5db0-4935-a2a0-b107c8979498\nframes: 17\ntransparent: yes\nasset_id: 4626072d-fcfd-59bb-95e0-1bb0a9075bad\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=0 ... ?index=16"
+    },
+    {
+      "type": "text",
+      "text": "(13 more frames not shown — fetch them from the download URLs above)"
+    }
+  ],
+  "structuredContent": {
+    "job_id": "40b54af4-5db0-4935-a2a0-b107c8979498",
+    "status": "completed",
+    "frames": 17,
+    "download_url": "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=0",
+    "download_urls": [
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=0",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=1",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=2",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=3",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=4",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=5",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=6",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=7",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=8",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=9",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=10",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=11",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=12",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=13",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=14",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=15",
+      "https://api.pixellab.ai/mcp/images/40b54af4-5db0-4935-a2a0-b107c8979498/download?index=16"
+    ],
+    "asset": {
+      "id": "4626072d-fcfd-59bb-95e0-1bb0a9075bad",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 2
+  },
+  "isError": false
+}

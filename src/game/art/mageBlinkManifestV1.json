@@ -1,0 +1,228 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-blink-runtime-v1.mjs",
+  "source": "art/generated/mage-blink-v1",
+  "canvas": 128,
+  "width": 1024,
+  "height": 512,
+  "rgbaBytes": 2097152,
+  "frameMs": 40,
+  "durationMs": 320,
+  "pivot": {
+    "x": 64,
+    "y": 104
+  },
+  "displaySize": 61.81086519114688,
+  "sources": {
+    "art/generated/mage-blink-v1/prepared/departure-back.png": "b11b3caf2412d55457fa08e4d4ed13672e5ec8133f50808b26da88109b1bda9e",
+    "art/generated/mage-blink-v1/prepared/departure-front.png": "2cb4541759b0c11aa14358f11dca5a785e8417a055871439ae869da7b155250a",
+    "art/generated/mage-blink-v1/prepared/arrival-back.png": "19d1e123b1356d1bd5d170eef6daff22d901cd9a915e1581de97bbd64b3b21bc",
+    "art/generated/mage-blink-v1/prepared/arrival-front.png": "de328b222420c0a19a2d2d634782b360344098f19dc372cbf7b93ad90f223041"
+  },
+  "clips": {
+    "departure": {
+      "back": [
+        {
+          "frame": "mage-blink-departure-back-0",
+          "index": 0,
+          "durationMs": 40,
+          "pixelSha256": "fe14c6cb262433b95141448bf5a0f99a9f749e7f51cbaf72c8605f183e513ce6"
+        },
+        {
+          "frame": "mage-blink-departure-back-1",
+          "index": 1,
+          "durationMs": 40,
+          "pixelSha256": "45718d4cf31c4413d61302e04f0c718250ab13bcab4da5b00fd96a1136e22b12"
+        },
+        {
+          "frame": "mage-blink-departure-back-2",
+          "index": 2,
+          "durationMs": 40,
+          "pixelSha256": "d5d34aa8eb8c636dfb0d8866d7d77a2fe5a342128a02b38c79a9c3f234bb77af"
+        },
+        {
+          "frame": "mage-blink-departure-back-3",
+          "index": 3,
+          "durationMs": 40,
+          "pixelSha256": "762236452dafa0f54c62df076c2fe2ef8c4bc4cd3eef7baa86da912fec4ab7b6"
+        },
+        {
+          "frame": "mage-blink-departure-back-4",
+          "index": 4,
+          "durationMs": 40,
+          "pixelSha256": "24ccca58260b59247305796fae1b19b61b79a754e9a17e2cd2ccc939d85764c1"
+        },
+        {
+          "frame": "mage-blink-departure-back-5",
+          "index": 5,
+          "durationMs": 40,
+          "pixelSha256": "00afcd7ae111b229182b37e2969e612dcf7478e8054f478e6854530534b5d687"
+        },
+        {
+          "frame": "mage-blink-departure-back-6",
+          "index": 6,
+          "durationMs": 40,
+          "pixelSha256": "c82b276e59abb23986fd7684a3db22910d553d3bb2db973eef57f012feb173e8"
+        },
+        {
+          "frame": "mage-blink-departure-back-7",
+          "index": 7,
+          "durationMs": 40,
+          "pixelSha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "front": [
+        {
+          "frame": "mage-blink-departure-front-0",
+          "index": 0,
+          "durationMs": 40,
+          "pixelSha256": "4b2a8a399bd93b0fb7f4b4134a139650bad57655238274b3d36c590bddee0768"
+        },
+        {
+          "frame": "mage-blink-departure-front-1",
+          "index": 1,
+          "durationMs": 40,
+          "pixelSha256": "12f5acaca006ff21413197f0b2b46175803d1ea457430a1aa7761332feb6be3e"
+        },
+        {
+          "frame": "mage-blink-departure-front-2",
+          "index": 2,
+          "durationMs": 40,
+          "pixelSha256": "3cf6ce3e5f74b75990b52c2ee57a05f98b9030b7f251e38f5db5f9f7c2ff78fa"
+        },
+        {
+          "frame": "mage-blink-departure-front-3",
+          "index": 3,
+          "durationMs": 40,
+          "pixelSha256": "eede05bc203e2b494683a87cfc7dae8918e5bb5e2f92c42cac379a70b855454e"
+        },
+        {
+          "frame": "mage-blink-departure-front-4",
+          "index": 4,
+          "durationMs": 40,
+          "pixelSha256": "a272e6c77febcf64ba8d90c2a0c6367ff3d88b1a67b197b8783b69ee063044f8"
+        },
+        {
+          "frame": "mage-blink-departure-front-5",
+          "index": 5,
+          "durationMs": 40,
+          "pixelSha256": "16076aed64fdfbd7213ab77bef607dd096bd92e4a5484a2aa466c8c2fdc07a4e"
+        },
+        {
+          "frame": "mage-blink-departure-front-6",
+          "index": 6,
+          "durationMs": 40,
+          "pixelSha256": "6bcb6b14bed361b9c33e3c21b795ee3f116db1ee3a916159d969aa9376471da7"
+        },
+        {
+          "frame": "mage-blink-departure-front-7",
+          "index": 7,
+          "durationMs": 40,
+          "pixelSha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ]
+    },
+    "arrival": {
+      "back": [
+        {
+          "frame": "mage-blink-arrival-back-0",
+          "index": 0,
+          "durationMs": 40,
+          "pixelSha256": "608141e464b0b873c1c3998289c271dc9825ad8daa43c4f2bce79264bd252194"
+        },
+        {
+          "frame": "mage-blink-arrival-back-1",
+          "index": 1,
+          "durationMs": 40,
+          "pixelSha256": "cafcd3976591609c7e936c591770a9d100628071f2621f7fa6dc15701db47612"
+        },
+        {
+          "frame": "mage-blink-arrival-back-2",
+          "index": 2,
+          "durationMs": 40,
+          "pixelSha256": "9a4d6935c5d7d394d821fc80985c68e8a40a2ca0bf7e51006e87d7fe44005af7"
+        },
+        {
+          "frame": "mage-blink-arrival-back-3",
+          "index": 3,
+          "durationMs": 40,
+          "pixelSha256": "a503f084c2fe33e6c423ac5d4cbcdd71f117110ae9ed49bb63670241ea24bd1d"
+        },
+        {
+          "frame": "mage-blink-arrival-back-4",
+          "index": 4,
+          "durationMs": 40,
+          "pixelSha256": "5bed7a0616f64012c98318c2e3799be46e772dd6f2e88993c63ba25f1fe06a76"
+        },
+        {
+          "frame": "mage-blink-arrival-back-5",
+          "index": 5,
+          "durationMs": 40,
+          "pixelSha256": "bee110911ee407b0a38b6f8bf275f34519f414f1c89f2b46fae7c638f19a51f9"
+        },
+        {
+          "frame": "mage-blink-arrival-back-6",
+          "index": 6,
+          "durationMs": 40,
+          "pixelSha256": "97d5d0652384e92ab7ba2816344021983247e630af97a7d11fd3091ee8e73e4a"
+        },
+        {
+          "frame": "mage-blink-arrival-back-7",
+          "index": 7,
+          "durationMs": 40,
+          "pixelSha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ],
+      "front": [
+        {
+          "frame": "mage-blink-arrival-front-0",
+          "index": 0,
+          "durationMs": 40,
+          "pixelSha256": "20904a98d48da78a13dd5007ceb4d3bf3d2740db1142bfe916b8557acb11dd50"
+        },
+        {
+          "frame": "mage-blink-arrival-front-1",
+          "index": 1,
+          "durationMs": 40,
+          "pixelSha256": "eb54c8a2c40d548b01d52db00db6f6da3d489592ae1bf4467a07b9febfcd278e"
+        },
+        {
+          "frame": "mage-blink-arrival-front-2",
+          "index": 2,
+          "durationMs": 40,
+          "pixelSha256": "149d57f2144c393ab3ac72dbd8edbbef51ad79b4054bfe6b09eea8aa00faedfa"
+        },
+        {
+          "frame": "mage-blink-arrival-front-3",
+          "index": 3,
+          "durationMs": 40,
+          "pixelSha256": "3ee6c3e5c0c1ce3736990d0ffe7220c07467209a2732c298567b7319b1f8a935"
+        },
+        {
+          "frame": "mage-blink-arrival-front-4",
+          "index": 4,
+          "durationMs": 40,
+          "pixelSha256": "8302282ec1194b1d4de209a1d8d56060893fae2639e58444d8a765ad6f974c12"
+        },
+        {
+          "frame": "mage-blink-arrival-front-5",
+          "index": 5,
+          "durationMs": 40,
+          "pixelSha256": "f56d4099cad7e77bbc81c905ab9626f9ebffd8d0752209e5bffc9f7e6772a5a6"
+        },
+        {
+          "frame": "mage-blink-arrival-front-6",
+          "index": 6,
+          "durationMs": 40,
+          "pixelSha256": "cff7e7b49e04dc216f912d3083333b9f7a37c12285c7ccc9003263020bb03e54"
+        },
+        {
+          "frame": "mage-blink-arrival-front-7",
+          "index": 7,
+          "durationMs": 40,
+          "pixelSha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+        }
+      ]
+    }
+  }
+}

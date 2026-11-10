@@ -1,0 +1,59 @@
+{
+  "before": [
+    80,
+    80,
+    90,
+    100,
+    110,
+    80,
+    110,
+    150,
+    100,
+    100,
+    100,
+    100
+  ],
+  "after": [
+    80,
+    80,
+    90,
+    100,
+    110,
+    80,
+    110,
+    75,
+    50,
+    50,
+    50,
+    50
+  ],
+  "windupFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "windupMs": 650,
+  "acceleratedFrames": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "oldReleaseMs": 550,
+  "newReleaseMs": 275,
+  "visualDurationMs": 925,
+  "combatDurationMs": 1200,
+  "holdAfterClipMs": 275,
+  "hitTimeMs": 650,
+  "slashOnlyVariant": "b",
+  "bGroundLight": false,
+  "arcLengthMultiplier": 1.15,
+  "radialScaleChanged": false,
+  "globalSlashScale": 1.65,
+  "protectedFiles": 14
+}

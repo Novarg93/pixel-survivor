@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 11b9ed3d-bdd7-418b-91d9-c49be2c07daf\njob_id: 11b9ed3d-bdd7-418b-91d9-c49be2c07daf\ndescription: Anticipation ONLY: with BACK always toward camera, slowly lift the same sword with BOTH hands together ABOVE the helmet to match the upright overhead last frame EXACTLY. End with sword pointing straight UP above center of head and raised elbows. Boots fixed, armor and ragged cloth unchanged, size fixed, fixed rear camera. Symmetric back view throughout, no side turn, no attack yet, no flame or slash effects.\nframes: 8\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110111\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"11b9ed3d-bdd7-418b-91d9-c49be2c07daf\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/11b9ed3d-bdd7-418b-91d9-c49be2c07daf/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 5198b6a9-700f-5699-8922-ca0b59281cd8\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

@@ -1,0 +1,36 @@
+{
+  "baselineFiles": 370,
+  "changed": [
+    "src/game/audio/PhaserAudioBackend.ts",
+    "src/game/audio/README.md",
+    "src/game/audio/catalog.ts",
+    "src/game/audio/mageSamples.ts"
+  ],
+  "added": [
+    "public/assets/audio/mage-sfx-uploaded-v1/blink.wav",
+    "public/assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav",
+    "public/assets/audio/mage-sfx-uploaded-v1/fireball.wav",
+    "public/assets/audio/mage-sfx-uploaded-v1/meteor.wav",
+    "public/assets/audio/mage-sfx-uploaded-v1/thunder.wav",
+    "src/game/audio/mageUploadedSamples.ts"
+  ],
+  "unchanged": 366,
+  "previousSHA256": {
+    "src/game/audio/PhaserAudioBackend.ts": "bb53f2bd8253e06415aa01edcb794a7075bed39186b792a6c04151bf55b7077b",
+    "src/game/audio/README.md": "efd253e92d6d5f696c63a62b16af0f13d0aaf00905cb7f6f9e06c94ea7c4059e",
+    "src/game/audio/catalog.ts": "0cbf85bc6d7eaa4fdfa48b3f840e6a2bb1c7fa4f0283306645e6e8dc1bb43091",
+    "src/game/audio/mageSamples.ts": "f476154b23f5d47874823321b745cc9afa340ef197c11e6f190ff25a702dae41"
+  },
+  "currentSHA256": {
+    "src/game/audio/PhaserAudioBackend.ts": "3145025131017480032d7729c68982b2bf04f378d81785ba72bdafd2a9cc3201",
+    "src/game/audio/README.md": "b0ba23ac7943541818272817b00788fee7b0a71b05bb80eeb49e49fd5f6167bc",
+    "src/game/audio/catalog.ts": "14643facffeba0a7383b2ebf868a42e6caf455c589be1165ac72b8bede7106e0",
+    "src/game/audio/mageSamples.ts": "5472ecc3e3d48dd70e6c6298bd23f5a7c1e8cf29e3add29307d964b7d48719ec",
+    "public/assets/audio/mage-sfx-uploaded-v1/blink.wav": "a05a19e562686f4506e44456ab241669f759e7ebd95b15764f357e76de96b1ca",
+    "public/assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav": "ce2b837486881ce9350193384acc6ccfe7861edad6a17d0f4fc3161f8a6f38c8",
+    "public/assets/audio/mage-sfx-uploaded-v1/fireball.wav": "0d3c4951b464819bb24975777fa41dc71211fd1f899965c74bd83b86d5f32b0b",
+    "public/assets/audio/mage-sfx-uploaded-v1/meteor.wav": "4136d860fee903a224c75d3880dd42c33e9bab864ceb5277ffcd9eced0e5bf08",
+    "public/assets/audio/mage-sfx-uploaded-v1/thunder.wav": "4a01cb052fb55f7aa8e25c7b80918770f323a02ec0dc1786b8a395367851545a",
+    "src/game/audio/mageUploadedSamples.ts": "57a19610a38d50eabd808b8b57ef908f0a31e7cc7960f90f7009d4fb448b0473"
+  }
+}

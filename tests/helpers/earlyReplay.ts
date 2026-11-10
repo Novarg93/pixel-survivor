@@ -11,11 +11,12 @@ export function earlyReplay(w:World,start:number) {
   w.spawn=(...args)=>{const enemy=spawn.apply(w,args);if(enemy?.kind==='charger')enemy.speed=24;return enemy;};
   try{for(let i=0;i<200;i++)w.step(.05,{x:Math.cos(i*.01),y:Math.sin(i*.01)});}finally{w.shoot=shoot;w.spawn=spawn;}
   const snapshot:Partial<Snapshot>=w.snapshot();delete snapshot.runId;delete snapshot.enrage;delete snapshot.finalEncounter;
-  // The Briar reskin renames only the HUD label; retain its historical replay text.
-  if(snapshot.bosses)snapshot.bosses=snapshot.bosses.map(b=>w.bosses.find(e=>e.id===b.id)?.kind==='charger'?{...b,name:'Терновый таран'}:b);
+  // Preserve historical HUD labels and exclude the UI-only hit order from
+  // gameplay/RNG hashes; keep every original fixture hash unchanged.
+  const legacyBosses=snapshot.bosses?.map(b=>{const {damageOrder,...boss}=b;void damageOrder;return w.bosses.find(e=>e.id===b.id)?.kind==='charger'?{...boss,name:'Терновый таран'}:boss;});
   // Preserve historical gameplay bytes; omit additive final-boss and cosmetic metadata.
   const {ashGuard,...legacyKinds}=w.snapshot().killsByKind;if(ashGuard!==0)throw new Error('Final boss entered an early replay');
   const projectiles=w.projectiles.map(p=>{const value={...p};delete value.appearance;delete value.started;return value;});
   const impacts=w.impacts.map(p=>{const value={...p};delete value.appearance;return value;});
-  return JSON.stringify({snapshot:{...snapshot,killsByKind:legacyKinds},player:w.player,enemies:w.enemies,projectiles,impacts,nextRandom:w.rng.next()});
+  return JSON.stringify({snapshot:{...snapshot,bosses:legacyBosses,killsByKind:legacyKinds},player:w.player,enemies:w.enemies,projectiles,impacts,nextRandom:w.rng.next()});
 }

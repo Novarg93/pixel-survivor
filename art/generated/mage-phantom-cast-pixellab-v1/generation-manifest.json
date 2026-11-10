@@ -1,0 +1,96 @@
+{
+  "name": "Arcane Phantom Cast / PixelLab Production Pilot V1",
+  "scenario": "North Run, South upper-body Fireball cast",
+  "runtimeIntegration": false,
+  "branch": "main",
+  "reference": {
+    "file": "reference/mage-south.png",
+    "source": "art/generated/mage-hero-v2/first-frames/south.png",
+    "sha256": "f7ec9dafc00dfbf30387ac58b208475b81ab090eac7be5dbb339b7c5321d37f8"
+  },
+  "methodDecision": "Compare PixMiniMax with skeleton v3 using the exact approved Mage reference. Select the third, empty-palm skeleton v3 result for the South gesture; artist-mask and stabilize it in Aseprite. Two existing approved North/East views provide the manifestation turn. Raw full-body outputs are preserved; processed phantom exports contain no legs.",
+  "toolsInvestigated": [
+    "animate_image_pixminimax",
+    "animate_image",
+    "animate_with_skeleton_v3",
+    "edit_image_pixen",
+    "edit_image",
+    "get_pro_flash_capabilities",
+    "get_image",
+    "Aseprite batch Lua"
+  ],
+  "pricing": {
+    "source": "https://www.pixellab.ai/pixellab-api",
+    "checked": "2026-11-09",
+    "pixminimax256x256x8": {
+      "subscriptionGenerations": 1,
+      "estimatedCreditUsd": 0.0231
+    },
+    "skeletonV3EightFrames": {
+      "subscriptionGenerations": 3,
+      "estimatedCreditUsd": 0.0513
+    },
+    "budgetCreditUsd": 2,
+    "perRequestGuardUsd": 0.1,
+    "actualCreditUsd": 0,
+    "actualSubscriptionGenerations": 7,
+    "estimatedApiCreditEquivalentUsdRange": [
+      0.1257,
+      0.1475
+    ],
+    "exactDollarChargeUnavailable": "Subscription generations were debited; no USD-credit bill was incurred. The range is the official published API estimate, not a claimed invoice."
+  },
+  "requests": [
+    {
+      "attempt": "attempt-01-pixminimax",
+      "id": "3a3a65d6-58fe-4d0d-964e-11b991e59130",
+      "assetId": "5655b010-b4b7-510e-9806-379bed7e776c",
+      "tool": "animate_image_pixminimax",
+      "frames": 9,
+      "charged": 1,
+      "selected": false,
+      "defect": "Torso yaws east; horizontal hand release and a large ball. Not the required SOUTH gesture.",
+      "requestFile": "request-01.json"
+    },
+    {
+      "attempt": "attempt-02-skeleton",
+      "id": "b68094e6-5ae9-4562-b8f4-241f49139b9a",
+      "assetId": "e0baf35a-523e-50a1-b54e-2dd1d3905953",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "charged": 3,
+      "selected": false,
+      "defect": "Good southward wrist path, but a persistent generated orb covers the palm.",
+      "requestFile": "request-02.json"
+    },
+    {
+      "attempt": "attempt-03-empty-palm",
+      "id": "862e529f-d057-4064-8743-b3e7f9b5baa5",
+      "assetId": "ec456791-c0f8-5f97-b5b8-01a7a1031a5f",
+      "tool": "animate_with_skeleton_v3",
+      "frames": 12,
+      "charged": 3,
+      "selected": true,
+      "defect": "No orb. Fine hand silhouette and restrained shoulder motion remain subject to manual art review.",
+      "requestFile": "request-03.json"
+    }
+  ],
+  "processing": {
+    "tool": "Aseprite MCP batch Lua",
+    "script": "process-phantom.lua",
+    "headReference": "reference/mage-south.png",
+    "layers": [
+      "Phantom Glow",
+      "Phantom Upper Body",
+      "Phantom Arm Hand",
+      "Small Cast Sparks"
+    ],
+    "perFrameScaleFit": false,
+    "manifestationTurn": {
+      "frame1": "Approved North reference",
+      "frame2": "Approved East reference",
+      "frames3to10": "PixelLab generated South gesture",
+      "method": "Native Aseprite source substitution; no other directional generation or bbox fitting."
+    }
+  }
+}

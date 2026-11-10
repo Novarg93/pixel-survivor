@@ -1,0 +1,35 @@
+import {wardenIntegration,wardenApprovedHash,mageSfxIntegration,musicRuntimeIntegration,mageUploadedIntegration,wardenSoundsIntegration,arcaneShieldIntegration,frostNovaIntegration} from '../helpers/approvedWardenIntegration';
+import {it,expect} from 'vitest';
+import {readFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {rgbaPng} from '../helpers/rgbaPng';
+interface ImageSource{source:string;file:string;sha256:string;pixelSHA256:string;dataUrl:string;canvas:number[]}
+interface Frame{index?:number;job?:string;jobId?:string;layers:{asset:string;pivot:number[];scale:number}[]}
+interface Clip{provider:string;frames:Frame[];durationsMs:number[];pivot?:number[];scale?:number;loop:boolean}
+const root='art/generated/ash-warden-north-meteor-review-v1',m=JSON.parse(readFileSync(root+'/manifest.json','utf8')) as{runtimeIntegration:boolean;acceptedForIntegration:boolean;protectedRuntimeFiles:number;clips:Record<string,Clip>;images:Record<string,ImageSource>;scene:{fallUnit:number[];tailTip:number[];impactTip:number[];northActionMs:number;northHitMs:number;warningMs:number;warningAlpha:number}},hash=(p:Uint8Array)=>createHash('sha256').update(p).digest('hex');
+it('keeps the complete runtime inventory and all345 game files intact pending acceptance',()=>{
+ expect(m.runtimeIntegration).toBe(true);expect(m.acceptedForIntegration).toBe(true);expect(m.protectedRuntimeFiles).toBe(345);
+ const baseline=JSON.parse(readFileSync(root+'/source/runtime-baseline.json','utf8')) as Record<string,string>,walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+ expect(Object.keys(baseline)).toHaveLength(345);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...wardenIntegration.added,...mageSfxIntegration.added,...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added].sort());for(const[file,sha]of Object.entries(baseline))expect(hash(readFileSync(file)),file).toBe(wardenApprovedHash(file,sha));
+ expect(JSON.parse(readFileSync(root+'/source/runtime-verification.json','utf8'))).toEqual({protectedFiles:345,changed:[],inventoryUnchanged:true,runtimeIntegration:false});
+});
+it('uses traceable original PixelLab cels and lossless native copies for every preview image',()=>{
+ for(const im of Object.values(m.images)){const source=readFileSync(im.source),copy=readFileSync(root+'/'+im.file),rgba=rgbaPng(root+'/'+im.file);expect(copy.equals(source),im.file).toBe(true);expect(hash(copy)).toBe(im.sha256);expect(hash(rgba.pixels)).toBe(im.pixelSHA256);expect(Buffer.from(im.dataUrl.split(',')[1]!,'base64').equals(copy)).toBe(true);expect([rgba.width,rgba.height]).toEqual(im.canvas);}
+ const generated=Object.entries(m.clips).filter(([,c])=>c.provider==='PixelLab');expect(generated.map(([id])=>id)).toEqual(['north-slam','meteor-flight','landing-pulse','landing-impact']);
+ for(const[id,c]of generated){expect(c.durationsMs).toHaveLength(c.frames.length);expect(c.durationsMs.every(t=>Number.isInteger(t)&&t>0)).toBe(true);for(const f of c.frames){const result=JSON.parse(readFileSync(`${root}/source/${f.job}-result.json`,'utf8')).structuredContent as{status:string;job_id:string;asset:{status:string};frames:number},audit=JSON.parse(readFileSync(`${root}/raw/${f.job}/download-audit.json`,'utf8')) as{frames:{file:string;sha256:string}[]};expect(result.status).toBe('completed');expect(result.asset.status).toBe('saved');expect(result.job_id).toBe(f.jobId);const raw=audit.frames[f.index!]!;expect(hash(readFileSync(`${root}/${raw.file}`))).toBe(raw.sha256);expect(readFileSync(`${root}/${raw.file}`).equals(readFileSync(root+'/'+m.images[f.layers[0]!.asset]!.file)),id).toBe(true);}
+  const ase=readFileSync(`${root}/prepared/${id}.aseprite`);expect(ase.readUInt16LE(4)).toBe(0xa5e0);expect(ase.readUInt16LE(6)).toBe(c.frames.length);expect([ase.readUInt16LE(8),ase.readUInt16LE(10)]).toEqual(m.images[c.frames[0]!.layers[0]!.asset]!.canvas);
+ }
+});
+it('pads the original north pose without resampling and shares stable pivots across all generated action parts',()=>{
+ const original=rgbaPng(root+'/reference/north-idle.png'),padded=rgbaPng(root+'/reference/north-padded.png'),crop=rgbaPng(root+'/reference/style-native-crop.png');
+ expect([padded.width,padded.height]).toEqual([256,256]);for(let y=0;y<192;y++)expect(padded.pixels.subarray(((y+48)*256+32)*4,((y+48)*256+224)*4).equals(original.pixels.subarray(y*192*4,(y+1)*192*4))).toBe(true);
+ for(let y=0;y<128;y++)expect(crop.pixels.subarray(y*128*4,(y+1)*128*4).equals(original.pixels.subarray(((y+28)*192+48)*4,((y+28)*192+176)*4))).toBe(true);
+ const c=m.clips['north-slam']!;expect(c.frames).toHaveLength(21);expect(new Set(c.frames.map(f=>f.job))).toEqual(new Set(['north-raise','north-strike','north-recover']));expect(c.loop).toBe(false);expect(c.durationsMs.reduce((a,b)=>a+b,0)).toBe(m.scene.northActionMs);expect(c.durationsMs.slice(0,12).reduce((a,b)=>a+b,0)).toBe(m.scene.northHitMs);
+ for(const f of c.frames){expect(f.layers[0]!.pivot).toEqual([128,202]);expect(f.layers[0]!.scale).toBeCloseTo(.6548310811);expect(m.images[f.layers[0]!.asset]!.canvas).toEqual([256,256]);}
+});
+it('aligns meteor travel to its tail, uses an open low-opacity warning and finishes the500ms impact on actual transparent AI pixels',()=>{
+ const dx=m.scene.impactTip[0]!-m.scene.tailTip[0]!,dy=m.scene.impactTip[1]!-m.scene.tailTip[1]!,length=Math.hypot(dx,dy);expect(m.scene.fallUnit[0]).toBeCloseTo(dx/length,12);expect(m.scene.fallUnit[1]).toBeCloseTo(dy/length,12);expect(dx).toBeLessThan(0);expect(dy).toBeGreaterThan(0);expect(m.scene.warningMs).toBe(1300);expect(m.scene.warningAlpha).toBe(.5);
+ const model=rgbaPng(root+'/raw/landing-model-v2/00.png');let count=0;for(let i=3;i<model.pixels.length;i+=4)if(model.pixels[i])count++;expect(count).toBeLessThan(600);expect(model.pixels[(65*128+61)*4+3]).toBe(0);
+ const impact=m.clips['landing-impact']!;expect(impact.frames).toHaveLength(23);expect(impact.durationsMs.reduce((a,b)=>a+b,0)).toBe(500);expect(impact.loop).toBe(false);expect(impact.pivot).toEqual(m.clips['landing-pulse']!.pivot);expect(impact.scale).toBe(m.clips['landing-pulse']!.scale);const last=rgbaPng(root+'/'+m.images[impact.frames.at(-1)!.layers[0]!.asset]!.file);expect(last.pixels.filter((_,i)=>i%4===3).every(v=>v===0)).toBe(true);
+ const summary=JSON.parse(readFileSync(root+'/source/generation-summary.json','utf8')) as{provider:string;chargedGenerations:number;jobs:{status:string;chargedGenerations:number}[]};expect(summary.provider).toBe('PixelLab');expect(summary.jobs.every(j=>j.status==='completed')).toBe(true);expect(summary.chargedGenerations).toBe(summary.jobs.reduce((a,j)=>a+j.chargedGenerations,0));
+});

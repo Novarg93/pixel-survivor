@@ -1,6 +1,15 @@
 import { selectTestCharacter } from '../helpers/character';
 import { expect, test, type Page } from '@playwright/test';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync,readFileSync } from 'node:fs';
+const MAGE_IDLE=JSON.parse(readFileSync('src/game/art/mageIdleManifest.json','utf8')) as {displaySize:number};
+const MAGE_HERO=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8')) as {pages:{index:number}[]};
+const EXPECTED_ART_REQUESTS=['/assets/hd/mage-shield-nova-pixellab-v1/atlas.png','/assets/hd/mage-shield-nova-pixellab-v1/atlas.json','/assets/hd/mage-blink-v1/atlas.png','/assets/hd/mage-blink-v1/atlas.json','/assets/hd/mage-moving-cast-v2/upper.png','/assets/hd/mage-moving-cast-v2/upper.json','/assets/hd/mage-cast-v2/atlas.png','/assets/hd/mage-cast-v2/atlas.json','/assets/hd/mage-run-v2/atlas.png','/assets/hd/mage-run-v2/atlas.json','/assets/hd/mage-idle-v2/atlas.png','/assets/hd/mage-idle-v2/atlas.json','/assets/hd/mage-phantom-v1/atlas.png','/assets/hd/mage-phantom-v1/atlas.json','/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-meteor-pixellab-v1/atlas.png','/assets/hd/mage-meteor-pixellab-v1/atlas.json','/assets/hd/mage-fireball-pixellab-v1/atlas.png','/assets/hd/mage-fireball-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.png','/assets/hd/astral-projectile-pixellab-v1/atlas.json','/assets/hd/astral-projectile-pixellab-v1/atlas.png','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', ...MAGE_HERO.pages.flatMap(p=>[`/assets/hd/mage-hero-v2/${p.index}.json`,`/assets/hd/mage-hero-v2/${p.index}.png`]), '/assets/hd/runner.json', '/assets/hd/runner.png'];
+EXPECTED_ART_REQUESTS.push(
+  '/assets/hd/ash-warden-pixellab-v1/north.png',
+  '/assets/hd/ash-warden-pixellab-v1/north.json',
+  '/assets/hd/ash-warden-pixellab-v1/meteor.png',
+  '/assets/hd/ash-warden-pixellab-v1/meteor.json',
+);
 const directory = 'screenshots/hd-pixel-art';
 async function start(page: Page, hero = 'Warrior') {
   await page.goto('/?test=1&visual=1'); await selectTestCharacter(page, hero);
@@ -11,7 +20,7 @@ function captureErrors(page: Page) { const errors: string[] = []; page.on('pagee
 
 test('HD is the default; desktop/mobile show actors, Guardian, loot and radar without experiment UI', async ({ page }) => {
   mkdirSync(directory, { recursive: true }); const errors = captureErrors(page), requests: string[] = [];
-  page.on('request', r => { if (r.url().includes('/assets/')) requests.push(new URL(r.url()).pathname); });
+  page.on('request', r => { if (r.url().includes('/assets/hd/')) requests.push(new URL(r.url()).pathname); });
   for (const hero of ['Warrior', 'Mage']) for (const size of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(size); await start(page, hero); await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
     await page.evaluate(() => {
@@ -28,17 +37,17 @@ test('HD is the default; desktop/mobile show actors, Guardian, loot and radar wi
     const before = await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world)); await page.waitForTimeout(150);
     expect(await page.evaluate(() => JSON.stringify(window.__PIXEL__!.world))).toBe(before);
     const art = await page.evaluate(() => window.__PIXEL__!.art());
-    expect(art.atlasFrames).toBe(37); expect(art.runner.atlasFrames).toBe(36); expect(art.textures.filter(t => t.startsWith('hd-')).sort()).toEqual(['hd-bosses', 'hd-core', 'hd-enemies', 'hd-guardian', 'hd-loot', 'hd-mage', 'hd-mage-abilities', 'hd-mage-casting', 'hd-runner']);
+    expect(art.atlasFrames).toBe(37); expect(art.runner.atlasFrames).toBe(36); expect(art.textures.filter(t => t.startsWith('hd-')).sort()).toEqual(['hd-bosses', 'hd-core', 'hd-enemies', 'hd-guardian', 'hd-loot', 'hd-mage-abilities', 'hd-runner']);
     expect(art.textures.some(t => /visual-study|pixel-plus|painted|^warrior-|^grunt(?:$|-)/.test(t))).toBe(false);
-    const player = art.actors.find(a => a.texture === (hero === 'Warrior' ? 'hd-core' : 'hd-mage') && String(a.frame).startsWith(hero.toLowerCase() + '-'))!;
-    expect(player.width).toBe(24); expect(player.height).toBe(30);
+    const player = art.actors.find(a => hero==='Warrior'?a.texture==='hd-core'&&String(a.frame).startsWith('warrior-'):a.texture==='mage-idle-v2'||a.texture==='mage-run-v2'||a.texture==='mage-cast-v2')!;
+    expect(player.width).toBe(hero==='Warrior'?24:MAGE_IDLE.displaySize); expect(player.height).toBe(hero==='Warrior'?30:MAGE_IDLE.displaySize);
     expect(art.actors.find(a => String(a.frame).startsWith('grunt-elite'))!.width).toBeCloseTo(22.4);
     expect(art.actors.find(a => a.texture === 'hd-guardian')!.width).toBeCloseTo(67.2);
     expect(art.actors.some(a => a.texture === 'hd-loot' && String(a.frame).startsWith('chest-'))).toBe(true); expect(art.actors.some(a => a.texture === 'hd-loot' && String(a.frame).startsWith('artifact-'))).toBe(true);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(size.width);
     await page.screenshot({ path: `${directory}/${hero.toLowerCase()}-${size.width}x${size.height}.png` });
   }
-  expect(new Set(requests)).toEqual(new Set(['/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-fireball-v1/atlas.png','/assets/hd/mage-fireball-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.png`,`/assets/hd/ash-warden-v1/${i}.json`]).flat(), '/assets/hd/ash-warden-melee-combo-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/core.png', '/assets/hd/core.json', '/assets/hd/runner.png', '/assets/hd/runner.json', '/assets/hd/mage.png', '/assets/hd/mage-casting.png', '/assets/hd/mage-casting.json', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage.json', '/assets/hd/enemies.png', '/assets/hd/enemies.json', '/assets/hd/guardian.png', '/assets/hd/guardian.json', '/assets/hd/bosses.png', '/assets/hd/bosses.json'])); expect(errors).toEqual([]);
+  expect(new Set(requests)).toEqual(new Set(EXPECTED_ART_REQUESTS)); expect(errors).toEqual([]);
 });
 
 test('HD movement, hurt, real contact radius and automatic Cleave retain gameplay behavior', async ({ page }) => {
@@ -76,5 +85,5 @@ test('HD textures, shadows, timers and listeners stay bounded across travel and 
     expect(await page.evaluate(() => window.__PIXEL__!.art().shadows)).toBe(1);
     await page.getByRole('button', { name: 'Начать забег' }).click();
   }
-  expect(loads).toHaveLength(42); expect(new Set(loads).size).toBe(42); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
+  expect(loads).toHaveLength(EXPECTED_ART_REQUESTS.length); expect(new Set(loads.map(url=>new URL(url).pathname))).toEqual(new Set(EXPECTED_ART_REQUESTS)); expect(errors).toEqual([]); writeFileSync(`${directory}/resources.json`, JSON.stringify({ initial, records, loads, errors }, null, 2));
 });

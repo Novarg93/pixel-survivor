@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "authoring": "scripts/build-mage-walk-v2.mjs",
+  "canvas": 96,
+  "frameCount": 26,
+  "displaySize": 46.35814889336016,
+  "referenceSpeed": 135,
+  "width": 384,
+  "height": 672,
+  "rgbaBytes": 1032192,
+  "sourcePixelsUnmodified": true,
+  "sources": {
+    "art/main-hero-mage-v2/animation/walking/south/pixellab-Step-forward-toward-the-camera-1794239830649.png": "1d9fc8f968d0bde69c7d5b2fc5e1fce6abde612777f24efa849cb4ad523b01d4",
+    "art/main-hero-mage-v2/animation/walking/south/pixellab-Step-forward-toward-the-camera-1794239830649.gif": "c21ce021f3ef17cee11af674cfe49e28dc8b22c5e908b702ccfcee48e4aaf66a",
+    "art/main-hero-mage-v2/animation/walking/north/pixellab-Step-forward-with-alternating--1794238864376.png": "221300449330e1233d1cf3fbdeabfdbc6650e2077e669323fc7daeac203be177",
+    "art/main-hero-mage-v2/animation/walking/north/pixellab-Step-forward-with-alternating--1794238864376.gif": "42c4830d15065097e351722c985181e1b35bd2b88272239b759887c7ff258373"
+  },
+  "clips": {
+    "south": {
+      "sourcePng": "art/main-hero-mage-v2/animation/walking/south/pixellab-Step-forward-toward-the-camera-1794239830649.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/walking/south/pixellab-Step-forward-toward-the-camera-1794239830649.gif",
+      "frames": [
+        {
+          "frame": "mage-walk-v2-south-0",
+          "durationMs": 130,
+          "pixelSha256": "40cbd8ef74c15909208374458f69ac26ed8c86927ae305619e25f769f191dfa6",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.794117647058826,
+            "y": 51.55882352941177
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-1",
+          "durationMs": 130,
+          "pixelSha256": "a4623d7600e3132e97da8751d5b6f6d791a14c28dca27c425b83064ac85ff56b",
+          "bounds": {
+            "left": 23,
+            "top": 13,
+            "right": 64,
+            "bottom": 81,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.44117647058823,
+            "y": 51.73529411764706
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-2",
+          "durationMs": 130,
+          "pixelSha256": "3e7abc1c1412ae9eebe82e73cec400db61a24eb42cf264938cd07d071198eb69",
+          "bounds": {
+            "left": 23,
+            "top": 12,
+            "right": 64,
+            "bottom": 81,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.9,
+            "y": 50.15
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-3",
+          "durationMs": 130,
+          "pixelSha256": "46937115b2bdaea9a5d1adf2b7884266ae27eb63cf6c9793c01ef5851465c4df",
+          "bounds": {
+            "left": 24,
+            "top": 11,
+            "right": 65,
+            "bottom": 81,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.81818181818182,
+            "y": 49.54545454545455
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-4",
+          "durationMs": 130,
+          "pixelSha256": "c85b417b7dd0b7584e7dcf488c1e59d61eef3c22c8d54dd7c621397c58af5e81",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 81,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.23076923076923,
+            "y": 49.11538461538461
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-5",
+          "durationMs": 130,
+          "pixelSha256": "9b5ba7979dd5b7671fc3d6ea403f210e0ac1a26d7655222ff5212b383d3f1d03",
+          "bounds": {
+            "left": 27,
+            "top": 13,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.17857142857143,
+            "y": 50.107142857142854
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-6",
+          "durationMs": 130,
+          "pixelSha256": "1445bbd2cf2b77ca3b8a5bfe198f639da425ea73212bb53f45237c3dccc0b0ee",
+          "bounds": {
+            "left": 26,
+            "top": 14,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 61.189655172413794,
+            "y": 51.1551724137931
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-7",
+          "durationMs": 130,
+          "pixelSha256": "1ce1dd939e05e2b30cbef72eecceaed680edb417ad8c1ff482f945e0e08cef63",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 59.75,
+            "y": 50.875
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-8",
+          "durationMs": 130,
+          "pixelSha256": "56fb746770e2b38caf4e0e1822528681441732969c22f0469093e70c736fcb47",
+          "bounds": {
+            "left": 24,
+            "top": 12,
+            "right": 61,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 57.75,
+            "y": 50.25
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-9",
+          "durationMs": 130,
+          "pixelSha256": "610afb1dd64e6118bd53c2114ca9e41a1108f58bce01954c5d498d153c8fdfda",
+          "bounds": {
+            "left": 24,
+            "top": 11,
+            "right": 60,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 56.5,
+            "y": 48.73076923076923
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-10",
+          "durationMs": 130,
+          "pixelSha256": "3de01060a75c322b8fc33bbd10df6c9ea553a0a7aa41112c81ad7fca561f4fca",
+          "bounds": {
+            "left": 24,
+            "top": 12,
+            "right": 62,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 54.94444444444444,
+            "y": 49.27777777777778
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-11",
+          "durationMs": 130,
+          "pixelSha256": "91489c0fea5cf5bc7672d7508da04403f0ed3f74f9379f0ce05ab2e8ec75b834",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 66,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 55.5,
+            "y": 52.07142857142857
+          }
+        },
+        {
+          "frame": "mage-walk-v2-south-12",
+          "durationMs": 130,
+          "pixelSha256": "2afea4a0d31f78688856b53a8e1957deb4279baf005a33534317f1b9d0f34bf9",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 63,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 60.76315789473684,
+            "y": 51.39473684210526
+          }
+        }
+      ],
+      "pivot": {
+        "x": 46,
+        "y": 84
+      },
+      "periodMs": 1690,
+      "firstPoseMatchesIdle": true
+    },
+    "north": {
+      "sourcePng": "art/main-hero-mage-v2/animation/walking/north/pixellab-Step-forward-with-alternating--1794238864376.png",
+      "sourceGif": "art/main-hero-mage-v2/animation/walking/north/pixellab-Step-forward-with-alternating--1794238864376.gif",
+      "frames": [
+        {
+          "frame": "mage-walk-v2-north-0",
+          "durationMs": 130,
+          "pixelSha256": "26cd36d1c94815cba5e5310534fed6ef56a205ddf0bf80e348a11383585c6966",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 64,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-1",
+          "durationMs": 130,
+          "pixelSha256": "a63786a1aff20217537203f68f7fc0e92371003596141ba4e4b56403fc25ebf5",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 66,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63,
+            "y": 51
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-2",
+          "durationMs": 130,
+          "pixelSha256": "2420269b69f6e7e6823fc5eaf1833d31604a8472a34a1e0aad750f3e7e1c1915",
+          "bounds": {
+            "left": 29,
+            "top": 12,
+            "right": 68,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63,
+            "y": 51
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-3",
+          "durationMs": 130,
+          "pixelSha256": "fe659dbb77426b6ac621d4d5083f4b31b867741fc91616a375c82c66999c409f",
+          "bounds": {
+            "left": 29,
+            "top": 12,
+            "right": 67,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.68181818181818,
+            "y": 51.40909090909091
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-4",
+          "durationMs": 130,
+          "pixelSha256": "0959577c8ea347659956bd375aef01197b6c21bac4fbc6ac00fa523b12e13591",
+          "bounds": {
+            "left": 29,
+            "top": 12,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.5,
+            "y": 51.583333333333336
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-5",
+          "durationMs": 130,
+          "pixelSha256": "453e08c0a2f3b2682bce227637747c422ea6dcbfdb8ae9be66082e873bfb0639",
+          "bounds": {
+            "left": 26,
+            "top": 13,
+            "right": 64,
+            "bottom": 84,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.583333333333336,
+            "y": 52.416666666666664
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-6",
+          "durationMs": 130,
+          "pixelSha256": "8052fd9e5cde1daddd385c7be2ec4fc9fd74574472d9e245bb20348d602ddcd9",
+          "bounds": {
+            "left": 24,
+            "top": 13,
+            "right": 65,
+            "bottom": 84,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.583333333333336,
+            "y": 52.25
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-7",
+          "durationMs": 130,
+          "pixelSha256": "6ddd74411ac9aae2ee584c2754289b651a9116587e1f1b22548f95dec2af349f",
+          "bounds": {
+            "left": 25,
+            "top": 13,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.68181818181818,
+            "y": 51.40909090909091
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-8",
+          "durationMs": 130,
+          "pixelSha256": "efc31fd18a185f565fecf61cc9610f8509ed7a8b99b6d7f53863aa68243bec19",
+          "bounds": {
+            "left": 26,
+            "top": 12,
+            "right": 65,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.785714285714285,
+            "y": 49.92857142857143
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-9",
+          "durationMs": 130,
+          "pixelSha256": "49cf5673ed537bda851a98131bc920e8a56b41422a74425d5023204bc230becc",
+          "bounds": {
+            "left": 30,
+            "top": 12,
+            "right": 65,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 64.5,
+            "y": 49
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-10",
+          "durationMs": 130,
+          "pixelSha256": "1f15cd7344b3ca3102e070e958f749c659b985ac616999029e3bf88d8370a8d4",
+          "bounds": {
+            "left": 30,
+            "top": 12,
+            "right": 68,
+            "bottom": 83,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.5,
+            "y": 48
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-11",
+          "durationMs": 130,
+          "pixelSha256": "2086b85a628c7bbf668e262d0c2f53ec2f79c1ffb1fcd1d2d25bbe8922c27c1c",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 68,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 63.1,
+            "y": 51.1
+          }
+        },
+        {
+          "frame": "mage-walk-v2-north-12",
+          "durationMs": 130,
+          "pixelSha256": "b50d6e7c8e210e8e207aec689449e9dde08839dedf1aef15f59df2105cd656de",
+          "bounds": {
+            "left": 29,
+            "top": 13,
+            "right": 66,
+            "bottom": 82,
+            "partial": 0
+          },
+          "hand": {
+            "x": 62.7,
+            "y": 51.3
+          }
+        }
+      ],
+      "pivot": {
+        "x": 48,
+        "y": 83
+      },
+      "periodMs": 1690,
+      "firstPoseMatchesIdle": true
+    }
+  }
+}

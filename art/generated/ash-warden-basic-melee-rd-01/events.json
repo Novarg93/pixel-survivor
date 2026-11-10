@@ -1,0 +1,168 @@
+{
+  "south": {
+    "status": "draft-not-production-approved",
+    "loop": false,
+    "attackStart": {
+      "timeMs": 0,
+      "frame": 0
+    },
+    "directionLock": {
+      "timeMs": 0,
+      "policy": "Latch facing and aim vector once at attackStart; do not track target through the swing"
+    },
+    "windupEnd": {
+      "timeMs": 250,
+      "frame": 4
+    },
+    "hitFrame": {
+      "timeMs": 330,
+      "frame": 6,
+      "dispatch": "once-per-attack-instance",
+      "guardKey": "attackInstanceId"
+    },
+    "activeEnd": {
+      "timeMs": 390,
+      "frame": 7
+    },
+    "recoveryEnd": {
+      "timeMs": 760,
+      "frameExclusive": 8
+    },
+    "hitArea": {
+      "kind": "front-sector",
+      "forward": [
+        0,
+        1
+      ],
+      "suggestedArcDegrees": 90,
+      "radiusWorld": null,
+      "radiusStatus": "Not balanced or integrated; configure during gameplay stage"
+    },
+    "damagePolicy": {
+      "applyAt": "hitFrame",
+      "maxApplicationsPerAttack": 1,
+      "neverApplyOnEachActiveFrame": true
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        390,
+        760
+      ],
+      "gameplayExitAllowedAfterMs": 760
+    },
+    "frames": [
+      {
+        "index": 0,
+        "file": "frames/00.png",
+        "startMs": 0,
+        "durationMs": 70,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 1,
+        "file": "frames/01.png",
+        "startMs": 70,
+        "durationMs": 60,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 2,
+        "file": "frames/02.png",
+        "startMs": 130,
+        "durationMs": 60,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 3,
+        "file": "frames/03.png",
+        "startMs": 190,
+        "durationMs": 60,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 4,
+        "file": "frames/04.png",
+        "startMs": 250,
+        "durationMs": 40,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 5,
+        "file": "frames/05.png",
+        "startMs": 290,
+        "durationMs": 40,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 6,
+        "file": "frames/06.png",
+        "startMs": 330,
+        "durationMs": 60,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      },
+      {
+        "index": 7,
+        "file": "frames/07.png",
+        "startMs": 390,
+        "durationMs": 370,
+        "canvas": [
+          192,
+          192
+        ],
+        "pivot": [
+          96,
+          154
+        ]
+      }
+    ]
+  }
+}

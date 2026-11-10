@@ -1,0 +1,42 @@
+{
+  "outputs": [
+    {
+      "index": 3,
+      "job_id": "2bb2ed15-e6e5-478b-932b-21a4917b6352",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "0e575702-9880-51b9-bf08-b8c6e5b66947",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    },
+    {
+      "index": 4,
+      "job_id": "83cd0d43-15e5-4f67-9ef7-d2548f757219",
+      "status": "completed",
+      "frames": 1,
+      "asset": {
+        "id": "52e0a7e5-b1a2-5209-b44b-ddeb4fa86ad4",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 5
+    }
+  ],
+  "billing": {
+    "subscriptionGenerations": 10,
+    "before": 1572.9,
+    "after": 1562.9,
+    "cashChargedUsd": 0
+  },
+  "retries": 0,
+  "repairedClip": "front-s",
+  "frames": [
+    3,
+    4
+  ],
+  "otherClipsChanged": 0,
+  "productionChanged": false
+}

@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-06",
+  "status": "complete visual pack; awaiting manual art acceptance",
+  "limits": {
+    "USD": 2,
+    "starterPercentagePoints": 10,
+    "starterFloor": 75
+  },
+  "before": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 85,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 85,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "sources": {
+    "base": "art/generated/ash-warden-retrodiffusion-01/best-candidate.png",
+    "south": "art/generated/ash-warden-south-polish-01",
+    "cleave": "art/generated/ash-warden-cleave-rd-01/best-attempt.gif"
+  },
+  "models": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "rotationStyle": {
+    "prompt_style": "rd_advanced_animation__rotate",
+    "name": "Rotate",
+    "description": "Upload a character or object and generate the other 8 directional views from that single image.",
+    "group_id": "RD Animation Advanced",
+    "required_model": null,
+    "required_tab": "tab:advanced-animation",
+    "min_width": 32,
+    "max_width": 256,
+    "min_height": 32,
+    "max_height": 256,
+    "max_number_of_images": 1,
+    "require_input_image": true,
+    "prompt_requirement": "image",
+    "supports_reference_images": false,
+    "supports_frames_duration": false,
+    "example_prompt": "A knight in silver armor holding a shield"
+  },
+  "operations": [
+    {
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__rotate",
+        "input_image": "art/generated/ash-warden-locomotion-rd-01/input-padded-rgb.png",
+        "prompt": "The same ancient Ash Warden seen from each direction in a fixed low top-down game camera. Preserve charcoal armor, broad shoulders, the same helmet, moderate dry shoulder branches and roots, ash-gray tabard, orange magma cracks, ONE massive broad greatsword held with BOTH hands on the same grip. Neutral low sword guard, planted feet. Preserve body proportions and all design identity from the uploaded image. No new horns, no scenery, no effects.",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "remove_bg": true,
+        "seed": 6110621,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793989330,
+        "credit_cost": 0,
+        "balance_cost": 0.1,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.1,
+        "resolved_prompt_style": "rd_advanced_animation__rotate",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "c067cf8e-0966-4d70-a529-1279c979e05a",
+        "request_id": "c067cf8e-0966-4d70-a529-1279c979e05a",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793989475,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "c067cf8e-0966-4d70-a529-1279c979e05a",
+        "outputs_retained_until": 1794075744,
+        "output_url_expires_at": 1793990380,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 84
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 84,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 84,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "perFrameFit": false,
+  "south": "Accepted V1; preserve byte-identical",
+  "directions": {
+    "south": "Accepted V1, PNG/GIF byte-identical copies",
+    "north": "Rotation frame5; local rig",
+    "east": "Rotation frame7; local rig",
+    "west": "East flipX around visible body axis104; fixed root pivot96, no extra generation"
+  },
+  "after": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 84,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 84,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "actualUSD": 0,
+  "hypotheticalBalanceUSD": 0.1,
+  "starterUsedPercentagePoints": 1,
+  "sourceHashes": {
+    "base": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+    "cleave": "93fb17930fa043b4a0c985953a4a77fcade336314d5527dfcf954f7c59cf2e3c"
+  }
+}

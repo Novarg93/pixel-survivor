@@ -1,0 +1,23 @@
+{
+  "request": {
+    "id": "landing-light-fade",
+    "args": {
+      "description": "Only a softly feathered warm pool of ground illumination gradually and smoothly dims to pure black. Its center stays locked at (64,64), shape stays calm and circular, radius contracts just slightly as it fades evenly, wide soft falloff at every moment. End on the provided entirely black frame. Preserve the low amber/copper intensities, subtle large pixel clusters and black surrounding pixels. Absolutely no new drawn object, no stone, no flame, ring, outline, crater, rune, seal, rays, flash, ripples, sparks or particles, no rotation or translation. This is only a soft light-compositing layer fading out, not a magical circle. Camera fixed.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/a60aa674-c449-46a0-82c3-90bc6e32672f/download",
+      "last_frame_url": "upload:e730823c-80c9-480e-8221-c3eee510b80a",
+      "frame_count": 8,
+      "view": "high top-down",
+      "subject_description": "a softly feathered low-intensity amber ground-lighting pool on pure black",
+      "initial_pose": "steady soft warm pool centered at (64,64) with broad dark falloff on black",
+      "enhance_prompt": false,
+      "no_background": false,
+      "seed": 2026111015
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 35fc30e1-14d2-4125-af9c-b5dbb168e045\njob_id: 35fc30e1-14d2-4125-af9c-b5dbb168e045\ndescription: Only a softly feathered warm pool of ground illumination gradually and smoothly dims to pure black. Its center stays locked at (64,64), shape stays calm and circular, radius contracts just slightly as it fades evenly, wide soft falloff at every moment. End on the provided entirely black frame. Preserve the low amber/copper intensities, subtle large pixel clusters and black surrounding pixels. Absolutely no new drawn object, no stone, no flame, ring, outline, crater, rune, seal, rays, flash, ripples, sparks or particles, no rotation or translation. This is only a soft light-compositing layer fading out, not a magical circle. Camera fixed.\nframes: 8\nsize: 128x128px\ntransparent: False\nlast_frame: yes (animating toward it)\nseed: 2026111015\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"35fc30e1-14d2-4125-af9c-b5dbb168e045\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/35fc30e1-14d2-4125-af9c-b5dbb168e045/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 9c81f2aa-8bc5-575f-b872-60250b3a2046\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

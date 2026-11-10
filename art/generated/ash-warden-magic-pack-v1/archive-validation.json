@@ -1,0 +1,64 @@
+{
+  "errors": [],
+  "state": {
+    "ready": true,
+    "time": 0,
+    "playing": true,
+    "completed": false,
+    "mode": "casts",
+    "panels": [
+      {
+        "label": "Cast A · Compact Summon",
+        "cast": "a"
+      },
+      {
+        "label": "Cast B · Strong Summon",
+        "cast": "b"
+      }
+    ],
+    "casts": {
+      "a": -1,
+      "b": -1
+    },
+    "strikes": {
+      "a": [
+        {
+          "telegraph": -1,
+          "fall": -1,
+          "impact": -1,
+          "aftermath": -1,
+          "fallOffset": [
+            -14,
+            -95
+          ]
+        }
+      ],
+      "b": [
+        {
+          "telegraph": -1,
+          "fall": -1,
+          "impact": -1,
+          "aftermath": -1,
+          "fallOffset": [
+            -14,
+            -95
+          ]
+        }
+      ],
+      "c": [
+        {
+          "telegraph": -1,
+          "fall": -1,
+          "impact": -1,
+          "aftermath": -1,
+          "fallOffset": [
+            -14,
+            -95
+          ]
+        }
+      ]
+    },
+    "zoom": 1,
+    "selection": null
+  }
+}

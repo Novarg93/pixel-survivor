@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 34b7b10f-c2a7-4bec-82f5-c8fdcd7250b3\njob_id: 34b7b10f-c2a7-4bec-82f5-c8fdcd7250b3\ndescription: Strict rear view: the back of the head and blue coat face the viewer. Never show the face or chest. ONE COMPLETE SEAMLESS RUNNING CYCLE IN PLACE at steady full speed, starting already mid-stride and continuing the SAME run forever. Alternate left foot and right foot equally: one left stride, one right stride, returning to exactly the input running phase. Strong bent knee lift and opposing bent-elbow arm swing, airborne passing phases, coat tails flowing continuously. CONSTANT running energy from the FIRST to the LAST frame. NO standing, NO anticipation, NO acceleration, NO slowing down, NO stopping, NO idle ending, NO turning. Hold the exact north-west facing and fixed top-down camera. Root stays centered; preserve the exact reference costume, proportions and scale. Transparent background. The last-to-first transition must be a normal next running step.\nframes: 8\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 8118005\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"34b7b10f-c2a7-4bec-82f5-c8fdcd7250b3\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/34b7b10f-c2a7-4bec-82f5-c8fdcd7250b3/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 198c7cef-94e0-58be-a8b5-92562dfaa08b\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

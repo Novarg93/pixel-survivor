@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 5be6d451-d31f-4597-bef7-30ae2096a8c8\njob_id: 5be6d451-d31f-4597-bef7-30ae2096a8c8\ndescription: Run in place in a continuous looping gait: alternate pronounced left and right leg strides with both knees clearly lifting and strong opposite arm swings, slight forward torso lean, coat tails trailing and moving. Stay facing the specified direction throughout. Root stays centered, no translation across the canvas. End poised to repeat the first step. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111030\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"5be6d451-d31f-4597-bef7-30ae2096a8c8\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/5be6d451-d31f-4597-bef7-30ae2096a8c8/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: baf589cd-5dd8-582a-8417-bfd2297b0b8a\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

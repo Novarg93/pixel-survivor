@@ -1,0 +1,69 @@
+{
+  "protectedFiles": 487,
+  "changedProtectedFiles": [],
+  "best": {
+    "attempt": 2,
+    "folder": "attempt-02",
+    "status": "best test attempt; NOT artist approved; production criteria only partially met",
+    "phases": [
+      {
+        "name": "windup",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "release-impact",
+        "frames": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "name": "recovery",
+        "frames": [
+          9,
+          10,
+          11
+        ],
+        "note": "9 still holds follow-through;10-11 return"
+      }
+    ],
+    "frameDurationMs": 150,
+    "totalDurationMs": 1800,
+    "sourceToWorldScale": 0.6548310810810811,
+    "sourceFoot": [
+      96,
+      154
+    ],
+    "perFrameNormalization": false
+  },
+  "frames": 12,
+  "totalDurationMs": 1800,
+  "frameHashes": {
+    "00.png": "b1e5277c551db4ea366ad43927679786c317a313db4b6face8787fb9f1ec933c",
+    "01.png": "cb153dcc57d3a5576f78bd2ba6ebaa559423e484e2ae9c7ea7d34843cb66726b",
+    "02.png": "4f6c7874be67dbfb320b86103e7dc87bee92f8845e8720e22f3a3e75ee9768e5",
+    "03.png": "b1bd7d4e75143be6da70b3012348736d0ab4035417b465f29433a976b2e7b003",
+    "04.png": "260e83b05f2217e5883b5f3aeed0dfec6bdc6ad52a1fb113c943735dd5dba30e",
+    "05.png": "63149dbbb255712a4bb779ee07759f6f5c4f168fe9611343ca52725583ada556",
+    "06.png": "92ee1e734de725dbc97769a7d55bf9142278bb5567c43f05394b8d314b52fa32",
+    "07.png": "53cf256b2f9b33a9d4e3fd279f16bbacfdcdfb959e298941ef05100a310556ef",
+    "08.png": "506e30d6567f76235bffabb5c67b9b00ddf4099d60363bb0803d5de659a1069f",
+    "09.png": "a8410c76a79ac246621ee6d5de5c09c132fd898586cd75ed79bd3866de4bc863",
+    "10.png": "1bb0bc5220aae3975408f9304a5c408e975f55a366e1c0a5e8e7cc2f47c29484",
+    "11.png": "abfda3acf95a7232882089d7bc9754baf5ce61f26d0cd499a0c6d97fcb872b71"
+  },
+  "preview": {
+    "errors": [],
+    "controls": "pause, scrub to6, resume passed",
+    "initialFrame": "0"
+  },
+  "checks": "typecheck/lint/unit/build reported separately; visual judgement in report"
+}

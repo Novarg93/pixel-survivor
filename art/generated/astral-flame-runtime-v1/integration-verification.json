@@ -1,0 +1,26 @@
+{
+  "runtimeIntegration": true,
+  "protectedFiles": 341,
+  "unchangedProtectedFiles": 339,
+  "changed": [
+    "src/game/art/AstralRevenantArt.ts",
+    "src/game/art/GameArt.ts"
+  ],
+  "added": [
+    "public/assets/hd/astral-flame-pixellab-v1/atlas.json",
+    "public/assets/hd/astral-flame-pixellab-v1/atlas.png",
+    "src/game/art/astralFlameManifestPixellab.json",
+    "src/game/art/astralFlamePixellabPack.ts"
+  ],
+  "currentSHA256": {
+    "src/game/art/AstralRevenantArt.ts": "61f0d2b9edb38457ea62da9ab94246454649391226d1188dd9a6f13a66a0ff87",
+    "src/game/art/GameArt.ts": "4d8ea16c9b70161ffb84122d9ede0816cb5df279a0189eafce495cedab56fd3f",
+    "public/assets/hd/astral-flame-pixellab-v1/atlas.json": "574815f71ed6372c00782ade99b0badb6ffe61d5f0cbe68453d228771eca9d0e",
+    "public/assets/hd/astral-flame-pixellab-v1/atlas.png": "3bf24ef1a2408c95c5822b8d31b8e977bb07290d1715050aeaf365908b17ada3",
+    "src/game/art/astralFlameManifestPixellab.json": "18c3a926b3b3a6c58355722619f564f21432c48544c91b3db42e3a7c30ceec14",
+    "src/game/art/astralFlamePixellabPack.ts": "823328b5798b50e2cb20b7a153156065623444dee8f4590e3c92bd5794689bf9"
+  },
+  "worldAndDamageUnchanged": true,
+  "warningAndStageTimesUnchanged": true,
+  "bossAndOtherAssetsUnchanged": true
+}

@@ -26,7 +26,7 @@ for (const width of [1280, 390]) test(`audio gesture, persisted buses, blur and1
   await page.keyboard.press('Escape'); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().sources)).toBe(0);
   await page.evaluate(() => window.dispatchEvent(new Event('focus'))); await page.waitForTimeout(150); expect(await page.evaluate(() => window.__PIXEL__!.audio().sources)).toBe(0);
-  await page.getByRole('button', { name: /^Продолжить/ }).click(); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().loops)).toBe(2);
+  await page.getByRole('button', { name: /^Продолжить/ }).click(); await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().loops)).toBe(1);
   await page.evaluate(() => window.dispatchEvent(new Event('blur'))); await expect(page.getByRole('dialog', { name: 'Пауза', exact: true })).toBeVisible();
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.audio().sources)).toBe(0);
   await page.getByRole('button', { name: 'Настройки', exact: true }).click();
@@ -41,12 +41,14 @@ for (const width of [1280, 390]) test(`audio gesture, persisted buses, blur and1
     if (i) await page.evaluate(() => window.__PIXEL__!.restartScene());
     await page.getByRole('button', { name: 'Начать забег' }).click(); await page.waitForTimeout(450);
     const state = await page.evaluate(() => { const a = window.__PIXEL__!.audio(); const monitor = Object.getOwnPropertyDescriptor(window, '__AUDIO_MONITOR__')!.value as { contexts: number; count: () => number }; return { ...a, contexts: monitor.contexts, docListeners: monitor.count(), subscriptions: window.__PIXEL__!.listeners() }; });
-    expect(state.contexts).toBe(1); expect(state.loops).toBe(2); expect(state.sources).toBeLessThanOrEqual(3); expect(state.nodes).toBeLessThanOrEqual(37); expect(state.subscriptions).toEqual({ commands: 1, snapshots: 1, metrics: 1 }); cycles.push(state);
+    expect(state.contexts).toBe(1); expect(state.loops).toBe(1); expect(state.sources).toBeLessThanOrEqual(3); expect(state.nodes).toBeLessThanOrEqual(37); expect(state.subscriptions).toEqual({ commands: 1, snapshots: 1, metrics: 1 }); cycles.push(state);
   }
   expect(cycles.at(-1)!.docListeners).toBe(cycles[0].docListeners); expect(cycles.at(-1)!.decodedBytes).toBe(cycles[0].decodedBytes); expect(errors).toEqual([]);
   writeFileSync(`${directory}/lifecycle-${width}.json`, JSON.stringify({ cycles, errors }, null, 2));
 });
 
+// Preserve the existing headroom and add exactly five1s48kHz stereo Float32 buffers.
+const decodedAudioBudget=4e6+5*48000*2*Float32Array.BYTES_PER_ELEMENT;
 for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`audio cues and150+3+3 voice budget ${hero}/${width}`, async ({ page }) => {
   test.setTimeout(50000); mkdirSync(directory, { recursive: true }); const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await page.goto('/?test=1'); await selectTestCharacter(page, hero); await page.getByRole('button', { name: 'Начать забег' }).click();
@@ -76,7 +78,7 @@ for (const hero of ['Mage', 'Warrior']) for (const width of [1280, 390]) test(`a
   const samples = [];
   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);
     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));
-    expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);
+    expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(decodedAudioBudget); samples.push(sample);
   }
   const audio = await page.evaluate(() => window.__PIXEL__!.audio());
   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];
@@ -102,11 +104,11 @@ test('unsupported Web Audio remains playable without output or JS errors', async
   expect(await page.evaluate(() => { const a = window.__PIXEL__!.audio(); return [a.supported, a.sources]; })).toEqual([false, 0]); expect(errors).toEqual([]);
 });
 
-test('unavailable PCM buffer fails once per asset and does not accumulate sources', async ({ page }) => {
+test('unavailable procedural PCM fails once while streaming music remains bounded', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.addInitScript(() => { AudioContext.prototype.createBuffer = () => { throw new Error('Simulated unavailable PCM buffer'); }; });
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click(); await page.waitForTimeout(400);
   expect(await page.evaluate(() => window.__PIXEL__!.world.elapsed)).toBeGreaterThan(.1);
-  const before = await page.evaluate(() => window.__PIXEL__!.audio()); expect(before.sources).toBe(0); expect(before.failedAssets).toBeGreaterThan(0);
+  const before = await page.evaluate(() => window.__PIXEL__!.audio()); expect(before.sources).toBe(before.music!.playing); expect(before.music!.current).toBe('normal'); expect(before.failedAssets).toBeGreaterThan(0);
   await page.waitForTimeout(200); const after = await page.evaluate(() => window.__PIXEL__!.audio()); expect(after.nodes).toBe(before.nodes); expect(after.failedAssets).toBe(before.failedAssets); expect(errors).toEqual([]);
 });

@@ -1,0 +1,926 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "phase2": [
+    {
+      "id": 9,
+      "player": {
+        "x": 620,
+        "y": -40
+      },
+      "meteors": [
+        {
+          "x": 620,
+          "y": -40,
+          "id": 9,
+          "group": 8,
+          "owner": "boss",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 620,
+          "y": -40,
+          "id": 10,
+          "group": 8,
+          "owner": "boss",
+          "age": -0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 620,
+          "y": -40,
+          "id": 11,
+          "group": 8,
+          "owner": "boss",
+          "age": -0.3,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ],
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "cast-east",
+          "age": 0,
+          "index": 0,
+          "frame": {
+            "flipX": false,
+            "layers": [
+              {
+                "frame": "7fedfdbefcf32f9c892fb859",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              },
+              {
+                "frame": "eb53a7f30b26ce490fda4be1",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "overlay": {
+              "frame": "99e41683a37dff7f09ef404f",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "east",
+          "presentationDirection": "east"
+        },
+        "bodyImages": [
+          {
+            "texture": "ash-warden-v1-0",
+            "frame": "7fedfdbefcf32f9c892fb859",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          },
+          {
+            "texture": "ash-warden-v1-3",
+            "frame": "eb53a7f30b26ce490fda4be1",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          }
+        ],
+        "telegraphCommands": 104,
+        "meteorWarnings": [
+          {
+            "x": 620,
+            "y": -40,
+            "radius": 42,
+            "progress": 0,
+            "alpha": 0.7,
+            "style": "crosshair"
+          }
+        ],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 2,
+        "ghosts": 0,
+        "labels": 1,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "pixellabAtlasBytes": 8466240,
+        "meteorImages": [],
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "groundLights": [],
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "melee-ground-light",
+            "flipX": false,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "totalAtlasBytes": 28389184
+      }
+    },
+    {
+      "id": 10,
+      "player": {
+        "x": 640,
+        "y": -20
+      },
+      "meteors": [
+        {
+          "x": 620,
+          "y": -40,
+          "id": 9,
+          "group": 8,
+          "owner": "boss",
+          "age": 0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 640,
+          "y": -20,
+          "id": 10,
+          "group": 8,
+          "owner": "boss",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 620,
+          "y": -40,
+          "id": 11,
+          "group": 8,
+          "owner": "boss",
+          "age": -0.14999999999999986,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ],
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "cast-east",
+          "age": 0.15,
+          "index": 1,
+          "frame": {
+            "flipX": false,
+            "layers": [
+              {
+                "frame": "63f5c5a686646ff406736bbd",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              },
+              {
+                "frame": "4a4c5a061be2d84bef1463c3",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "overlay": {
+              "frame": "b12be4b427016a65c7a15813",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "east",
+          "presentationDirection": "east"
+        },
+        "bodyImages": [
+          {
+            "texture": "ash-warden-v1-0",
+            "frame": "63f5c5a686646ff406736bbd",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          },
+          {
+            "texture": "ash-warden-v1-3",
+            "frame": "4a4c5a061be2d84bef1463c3",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          }
+        ],
+        "telegraphCommands": 208,
+        "meteorWarnings": [
+          {
+            "x": 620,
+            "y": -40,
+            "radius": 42,
+            "progress": 0.11538461538461538,
+            "alpha": 0.7288461538461538,
+            "style": "crosshair"
+          },
+          {
+            "x": 640,
+            "y": -20,
+            "radius": 42,
+            "progress": 0,
+            "alpha": 0.7,
+            "style": "crosshair"
+          }
+        ],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 2,
+        "ghosts": 0,
+        "labels": 1,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "pixellabAtlasBytes": 8466240,
+        "meteorImages": [],
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "groundLights": [],
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "melee-ground-light",
+            "flipX": false,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "totalAtlasBytes": 28389184
+      }
+    },
+    {
+      "id": 11,
+      "player": {
+        "x": 660,
+        "y": 0
+      },
+      "meteors": [
+        {
+          "x": 620,
+          "y": -40,
+          "id": 9,
+          "group": 8,
+          "owner": "boss",
+          "age": 0.3000000000000001,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 640,
+          "y": -20,
+          "id": 10,
+          "group": 8,
+          "owner": "boss",
+          "age": 0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 660,
+          "y": 0,
+          "id": 11,
+          "group": 8,
+          "owner": "boss",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        }
+      ],
+      "art": {
+        "deathAge": 0,
+        "pose": {
+          "clip": "cast-east",
+          "age": 0.3000000000000001,
+          "index": 2,
+          "frame": {
+            "flipX": false,
+            "layers": [
+              {
+                "frame": "4559d651aba907f711078682",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              },
+              {
+                "frame": "c5e58cfd6196a562e1db6708",
+                "pivot": [
+                  96,
+                  154
+                ],
+                "scale": 0.6548310811
+              }
+            ],
+            "overlay": {
+              "frame": "cffb45c456c756c5772d0f2b",
+              "pivot": [
+                96,
+                154
+              ],
+              "scale": 0.6548310811
+            }
+          },
+          "combatDirection": "east",
+          "presentationDirection": "east"
+        },
+        "bodyImages": [
+          {
+            "texture": "ash-warden-v1-0",
+            "frame": "4559d651aba907f711078682",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          },
+          {
+            "texture": "ash-warden-v1-3",
+            "frame": "c5e58cfd6196a562e1db6708",
+            "flipX": false,
+            "x": 172.56,
+            "y": -40,
+            "originX": 0.5,
+            "originY": 0.8020833333333334,
+            "scale": 0.6548310811
+          }
+        ],
+        "telegraphCommands": 312,
+        "meteorWarnings": [
+          {
+            "x": 620,
+            "y": -40,
+            "radius": 42,
+            "progress": 0.23076923076923084,
+            "alpha": 0.7576923076923077,
+            "style": "crosshair"
+          },
+          {
+            "x": 640,
+            "y": -20,
+            "radius": 42,
+            "progress": 0.11538461538461538,
+            "alpha": 0.7288461538461538,
+            "style": "crosshair"
+          },
+          {
+            "x": 660,
+            "y": 0,
+            "radius": 42,
+            "progress": 0,
+            "alpha": 0.7,
+            "style": "crosshair"
+          }
+        ],
+        "chargeImages": [],
+        "pooledImages": 5,
+        "activeImages": 2,
+        "ghosts": 0,
+        "labels": 1,
+        "atlasBytes": 16777216,
+        "atlasPages": 4,
+        "pixellabAtlasBytes": 8466240,
+        "meteorImages": [],
+        "flameStrike": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 1,
+          "atlasBytes": 1048576,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1,
+            "rotation": 0
+          },
+          "groundLights": [],
+          "segments": []
+        },
+        "meleeCombo": {
+          "view": null,
+          "activeImages": 0,
+          "pooledImages": 2,
+          "atlasBytes": 2097152,
+          "groundLight": {
+            "visible": false,
+            "alpha": 1
+          },
+          "slash": {
+            "visible": false,
+            "frame": "melee-ground-light",
+            "flipX": false,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "totalAtlasBytes": 28389184
+      }
+    }
+  ],
+  "arena": [
+    {
+      "player": {
+        "x": 660,
+        "y": 120
+      },
+      "meteors": [
+        {
+          "x": 660,
+          "y": 120,
+          "id": 15,
+          "group": 14,
+          "owner": "arena",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 16,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 17,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.3,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 18,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.44999999999999996,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 19,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.6,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 21,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.75,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 22,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.9,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 23,
+          "group": 20,
+          "owner": "arena",
+          "age": -1.05,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 24,
+          "group": 20,
+          "owner": "arena",
+          "age": -1.2,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ]
+    },
+    {
+      "player": {
+        "x": 635,
+        "y": 120
+      },
+      "meteors": [
+        {
+          "x": 660,
+          "y": 120,
+          "id": 15,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 635,
+          "y": 120,
+          "id": 16,
+          "group": 14,
+          "owner": "arena",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 17,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.14999999999999986,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 18,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.2999999999999998,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 19,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.44999999999999984,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 21,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.5999999999999999,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 22,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.7499999999999999,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 23,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.8999999999999999,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 24,
+          "group": 20,
+          "owner": "arena",
+          "age": -1.0499999999999998,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ]
+    },
+    {
+      "player": {
+        "x": 610,
+        "y": 120
+      },
+      "meteors": [
+        {
+          "x": 660,
+          "y": 120,
+          "id": 15,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.3000000000000001,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 635,
+          "y": 120,
+          "id": 16,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 610,
+          "y": 120,
+          "id": 17,
+          "group": 14,
+          "owner": "arena",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 18,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.1499999999999997,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 19,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.2999999999999997,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 21,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.44999999999999973,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 22,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.5999999999999998,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 23,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.7499999999999998,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 24,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.8999999999999997,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ]
+    },
+    {
+      "player": {
+        "x": 585,
+        "y": 120
+      },
+      "meteors": [
+        {
+          "x": 660,
+          "y": 120,
+          "id": 15,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.45000000000000023,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 635,
+          "y": 120,
+          "id": 16,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.3000000000000001,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 610,
+          "y": 120,
+          "id": 17,
+          "group": 14,
+          "owner": "arena",
+          "age": 0.15,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 585,
+          "y": 120,
+          "id": 18,
+          "group": 14,
+          "owner": "arena",
+          "age": 0,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": false
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 19,
+          "group": 14,
+          "owner": "arena",
+          "age": -0.14999999999999958,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 21,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.2999999999999996,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 22,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.4499999999999996,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 23,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.5999999999999996,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        },
+        {
+          "x": 660,
+          "y": 120,
+          "id": 24,
+          "group": 20,
+          "owner": "arena",
+          "age": -0.7499999999999996,
+          "landed": false,
+          "warning": 1.3,
+          "targetOnRelease": true
+        }
+      ]
+    }
+  ],
+  "pauseHeld": true,
+  "errors": []
+}

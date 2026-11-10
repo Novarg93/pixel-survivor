@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"b4e283ca-6100-4bbd-9571-634c9168fdd0\",\n  \"image_id\": \"35654c67-2a5a-5181-998b-47278446e0ae\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"35654c67-2a5a-5181-998b-47278446e0ae\",\n  \"job_id\": \"b4e283ca-6100-4bbd-9571-634c9168fdd0\",\n  \"description\": \"Ground landing WARNING GLOW for Ash Warden boss meteor in a top-down pixel art game. Isolated low softly glowing horizontal ellipse, centered exactly x64 y76 on transparent 128x128 canvas. Width90 height42. Sparse broken copper/amber rim, low intensity warm rusty red light inside with mostly transparent center and softly fading semitransparent pixel-stepped outer edge. Four short broad radial ember cracks toward center, no dense details. A subtle dark charcoal scorch hint at the center. Readable modest quiet warning, not an explosion. Coarse flat pixel clusters, 2-3 shades, restrained #99513a #cf6839 #ee9d51 warm colors, muted like reference. At least16 pixels clear margin. No runes, no star, no pentagram, no white flash, no hard filled disk, no vertical fire, no rock, no character, no text, no blur, no bloom.\",\n  \"seed\": 110105,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/b4e283ca-6100-4bbd-9571-634c9168fdd0/download\"\n}\nPoll get_image(job_id=\"b4e283ca-6100-4bbd-9571-634c9168fdd0\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "b4e283ca-6100-4bbd-9571-634c9168fdd0",
+    "image_id": "35654c67-2a5a-5181-998b-47278446e0ae",
+    "status": "processing",
+    "source_image_id": "35654c67-2a5a-5181-998b-47278446e0ae",
+    "job_id": "b4e283ca-6100-4bbd-9571-634c9168fdd0",
+    "description": "Ground landing WARNING GLOW for Ash Warden boss meteor in a top-down pixel art game. Isolated low softly glowing horizontal ellipse, centered exactly x64 y76 on transparent 128x128 canvas. Width90 height42. Sparse broken copper/amber rim, low intensity warm rusty red light inside with mostly transparent center and softly fading semitransparent pixel-stepped outer edge. Four short broad radial ember cracks toward center, no dense details. A subtle dark charcoal scorch hint at the center. Readable modest quiet warning, not an explosion. Coarse flat pixel clusters, 2-3 shades, restrained #99513a #cf6839 #ee9d51 warm colors, muted like reference. At least16 pixels clear margin. No runes, no star, no pentagram, no white flash, no hard filled disk, no vertical fire, no rock, no character, no text, no blur, no bloom.",
+    "seed": 110105,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/b4e283ca-6100-4bbd-9571-634c9168fdd0/download"
+  },
+  "isError": false
+}

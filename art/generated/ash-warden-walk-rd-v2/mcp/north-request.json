@@ -1,0 +1,20 @@
+{
+  "prompt": "Animate the uploaded character into a seamless 12-frame, in-place WALKING cycle toward SCREEN UP (NORTH), moving AWAY FROM THE VIEWER.\n\nCRITICAL: Preserve the exact BACK-FACING perspective throughout the entire animation. The character must remain facing away from the camera. Never reveal the front of the helmet, chest armor, or fiery visor.\n\nCreate a powerful and grounded heavy-armored walking motion. Alternate the left and right legs through full walking steps, with believable thigh movement, natural knee bending, strong foot push-off, and clear weight transfer through the pelvis.\n\nThe large armored torso should move subtly with each heavy step. The worn ash-colored cloth should follow the movement of the legs. Dry branches attached to the shoulders should respond slightly to the body motion without changing shape.\n\nPreserve the original back armor, dark charcoal plates, shoulder spikes, dry branches, torn fabric and large two-handed greatsword. Keep both hands and the sword consistent with the reference pose.\n\nMaintain a stable ground anchor, fixed perspective, identical proportions, consistent pixel details and a smooth loop.\n\nThe character walks IN PLACE.\n\nNo turning toward the camera, no frontal face, no side profile, no running, no attacks, no sword swings, no teleporting, no extra limbs, no morphing armor, no changing weapon size, no floating feet, no foot sliding, no background and no camera movement.",
+  "prompt_style": "rd_advanced_animation__walking",
+  "width": 192,
+  "height": 192,
+  "num_images": 1,
+  "frames_duration": 12,
+  "input_image": {
+    "source": "art/generated/ash-warden-directional-melee-b-v1/bases/north.png",
+    "encoding": "base64 of unchanged PNG",
+    "width": 192,
+    "height": 192
+  },
+  "remove_bg": true,
+  "return_spritesheet": false,
+  "bypass_prompt_expansion": true,
+  "seed": 6110742,
+  "upload_outputs": true,
+  "include_downloadable_data": true
+}

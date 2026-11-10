@@ -1,0 +1,49 @@
+import process from 'node:process';
+import {Buffer} from 'node:buffer';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {resolve,join,extname} from 'node:path';
+import {createServer} from 'node:http';
+import {createHash} from 'node:crypto';
+process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
+const {chromium}=await import('@playwright/test');
+const workspace=resolve('.'),root=resolve('art/generated/secondary-bosses-review-01'),rel='/art/generated/secondary-bosses-review-01/';
+mkdirSync(join(root,'comparisons'),{recursive:true});mkdirSync(join(root,'screenshots'),{recursive:true});
+const server=createServer((q,r)=>{const file=resolve(workspace,'.'+decodeURIComponent(q.url.split('?')[0]));if(!file.startsWith(workspace+'\\')&&!file.startsWith(workspace+'/')){r.writeHead(403);r.end();return;}try{r.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.png':'image/png','.json':'application/json','.gif':'image/gif'})[extname(file)]??'application/octet-stream');r.end(readFileSync(file));}catch{r.writeHead(404);r.end();}});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({channel:'chromium',headless:true});const results=[];
+try{
+ for(const [width,height]of [[1280,720],[844,390]]){
+  const context=await browser.newContext({viewport:{width,height},hasTouch:width===844});const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url().split('?')[0]);});
+  await page.goto('http://127.0.0.1:'+server.address().port+rel+'viewer.html');await page.waitForFunction(()=>globalThis.REVIEW?.ready);
+  for(const enemy of ['charger','sorcerer','eclipse','guardian']){
+   for(const mode of ['models','silhouette','motion']){
+    const abilities=mode==='motion'?(enemy==='charger'?['charge','melee']:enemy==='guardian'?['orb-cast']:['cast','teleport']):[null];
+    for(const ability of abilities){await page.evaluate(({enemy,mode,ability})=>globalThis.REVIEW.set(enemy,mode,ability,900),{enemy,mode,ability});const name=`${enemy}-${mode}${ability?'-'+ability:''}-${width}`;await page.screenshot({path:join(root,'screenshots',name+'.png')});await page.locator('canvas').screenshot({path:join(root,'comparisons',name+'-canvas.png')});if(ability==='teleport')for(const t of [450,1350]){await page.evaluate(t=>{globalThis.REVIEW.state.time=t;globalThis.REVIEW.render();},t);await page.screenshot({path:join(root,'screenshots',name+'-'+t+'ms.png')});}}
+   }
+  }
+  // Actual controls: pause must hold simulation time, stepping must move one source frame.
+  const controls=await page.evaluate(()=>{globalThis.REVIEW.set('sorcerer','motion','cast',0);globalThis.document.getElementById('next').click();const forward=globalThis.REVIEW.state.time;globalThis.document.getElementById('prev').click();return{forward,back:globalThis.REVIEW.state.time,paused:!globalThis.REVIEW.state.playing,failures:globalThis.REVIEW.state.failures,horizontalOverflow:globalThis.document.documentElement.scrollWidth>globalThis.innerWidth};});
+  const speedChecks=[];for(const speed of ['.25','.5','1','2']){await page.evaluate(()=>globalThis.REVIEW.set('sorcerer','motion','cast',0));await page.selectOption('#speed',speed);await page.click('#play');const before=await page.evaluate(()=>globalThis.REVIEW.state.time);await page.waitForTimeout(200);const after=await page.evaluate(()=>globalThis.REVIEW.state.time);await page.click('#play');speedChecks.push({speed:Number(speed),advanceMs:after-before});}const held=await page.evaluate(()=>globalThis.REVIEW.state.time);await page.waitForTimeout(100);const still=await page.evaluate(()=>globalThis.REVIEW.state.time);
+  await page.evaluate(()=>globalThis.REVIEW.set('guardian','models','orb-cast',0));for(const choice of ['a','b','both'])await page.selectOption('#model',choice);for(const zoom of ['native','4','game'])await page.selectOption('#zoom',zoom);await page.uncheck('#vfx');await page.check('#vfx');
+  results.push({width,height,errors,controls,speedChecks,pauseDelta:still-held,screenshots:'screenshots/*-'+width+'.png'});await context.close();
+ }
+ // PNG consistency with actual GIF decoding, alpha, dimensions, timings and clipping.
+ const page=await browser.newPage();await page.goto('http://127.0.0.1:'+server.address().port+rel+'viewer.html');await page.waitForFunction(()=>globalThis.REVIEW.ready);
+ const images=await page.evaluate(async()=>{
+  const results=[];for(const c of Object.values(globalThis.SECONDARY_REVIEW.clips)){
+   const raw=await globalThis.fetch(c.folder+'/original.gif'),decoder=new globalThis.ImageDecoder({data:new Uint8Array(await raw.arrayBuffer()),type:'image/gif',preferAnimation:true});await decoder.tracks.ready;const previewResponse=await globalThis.fetch(c.preview),previewDecoder=new globalThis.ImageDecoder({data:new Uint8Array(await previewResponse.arrayBuffer()),type:'image/gif',preferAnimation:true});await previewDecoder.tracks.ready;let mismatchedPixels=0,previewMismatchedPixels=0,partialAlpha=0,edge=0,total=0;const dimensions=[];
+   if(decoder.tracks.selectedTrack.frameCount!==c.frames.length||previewDecoder.tracks.selectedTrack.frameCount!==c.frames.length)throw Error('GIF frame count mismatch');
+   const gallery=[];
+   for(const f of c.frames){const{image}=await decoder.decode({frameIndex:f.index});const canvas=globalThis.document.createElement('canvas');canvas.width=canvas.height=192;const x=canvas.getContext('2d');x.drawImage(image,Math.floor((192-image.displayWidth)/2),Math.floor((192-image.displayHeight)/2));const original=x.getImageData(0,0,192,192).data;image.close();const im=new globalThis.Image();im.src=c.folder+'/frames/'+String(f.index).padStart(2,'0')+'.png';await im.decode();x.clearRect(0,0,192,192);x.drawImage(im,0,0);const out=x.getImageData(0,0,192,192).data;for(let k=0;k<out.length;k+=4)if(out[k+3]!==original[k+3]||(out[k+3]&&(out[k]!==original[k]||out[k+1]!==original[k+1]||out[k+2]!==original[k+2])))mismatchedPixels++;const preview=await previewDecoder.decode({frameIndex:f.index});if(preview.image.duration/1000!==f.durationMs)throw Error('Preview GIF timing mismatch');x.clearRect(0,0,192,192);x.drawImage(preview.image,0,0);preview.image.close();const pp=x.getImageData(0,0,192,192).data;for(let k=0;k<out.length;k+=4)if(out[k+3]!==pp[k+3]||(out[k+3]&&(out[k]!==pp[k]||out[k+1]!==pp[k+1]||out[k+2]!==pp[k+2])))previewMismatchedPixels++;dimensions.push([im.width,im.height]);partialAlpha+=f.partialAlpha;edge+=f.edge;total+=f.durationMs;gallery.push(im);}
+   decoder.close();previewDecoder.close();
+   const sheet=globalThis.document.createElement('canvas');sheet.width=192*5;sheet.height=216;const x=sheet.getContext('2d');x.fillStyle='#253139';x.fillRect(0,0,960,216);x.imageSmoothingEnabled=false;c.keyPoseIndices.forEach((index,i)=>{x.fillStyle='#eee9d9';x.font='12px monospace';x.fillText(['Start','Windup','Release / impact','Recovery','End'][i]+' #'+index,i*192+4,17);x.drawImage(gallery[index],i*192,24);});
+   let presentationSheet=null;
+   if(c.teleport?.presentationAvailable){const ps=globalThis.document.createElement('canvas');ps.width=960;ps.height=216;const px=ps.getContext('2d');px.fillStyle='#253139';px.fillRect(0,0,960,216);for(const [i,index]of [0,3,6,8,11].entries()){const im=new globalThis.Image();im.src=c.folder+'/presentation/frames/'+String(index).padStart(2,'0')+'.png';await im.decode();px.fillStyle='#eee9d9';px.font='11px monospace';px.fillText(['Initial','Departure (local mask)','Invisible (local mask)','Arrival (local mask)','Restored'][i],i*192+4,17);px.drawImage(im,i*192,24);}presentationSheet=ps.toDataURL();}
+   results.push({folder:c.folder,sourceFrames:c.frames.length,pngFrames:gallery.length,mismatchedPixels,previewMismatchedPixels,partialAlpha,edge,dimensions,durationMs:total,keySheet:sheet.toDataURL(),presentationSheet});
+  }return results;
+ });
+ for(const r of images){writeFileSync(join(root,r.folder,'key-poses.png'),Buffer.from(r.keySheet.split(',')[1],'base64'));delete r.keySheet;if(r.presentationSheet)writeFileSync(join(root,r.folder,'teleport-composition-poses.png'),Buffer.from(r.presentationSheet.split(',')[1],'base64'));delete r.presentationSheet;}
+ const overview=await page.evaluate(async()=>{const c=globalThis.document.createElement('canvas');c.width=768;c.height=1120;const x=c.getContext('2d');x.imageSmoothingEnabled=false;x.fillStyle='#253139';x.fillRect(0,0,c.width,c.height);for(const [n,m]of Object.values(globalThis.SECONDARY_REVIEW.models).entries()){const im=new globalThis.Image();im.src=m.path;await im.decode();const xx=n%2*384,yy=Math.floor(n/2)*280;x.fillStyle='#eee9d9';x.font='15px system-ui';x.fillText(m.folder+' — native ×2',xx+14,yy+21);x.drawImage(im,xx+64,yy+24,256,256);}return c.toDataURL();});writeFileSync(join(root,'comparisons','models-overview.png'),Buffer.from(overview.split(',')[1],'base64'));
+ const initial=JSON.parse(readFileSync(join(root,'initial-worktree.json'),'utf8'));const changed=[];for(const[file,sha]of Object.entries(initial.protected))if(!existsSync(resolve(file))||createHash('sha256').update(readFileSync(resolve(file))).digest('hex')!==sha)changed.push(file);
+ const output={browser:results,images,protectedFiles:Object.keys(initial.protected).length,protectedChanges:changed,checkedAt:new Date().toISOString()};writeFileSync(join(root,'validation.json'),JSON.stringify(output,null,2));globalThis.console.log(JSON.stringify({...output,images:images.map(r=>({...r,dimensions:undefined}))}));
+ if(changed.length||results.some(r=>r.errors.length||r.controls.failures.length||r.controls.horizontalOverflow||r.pauseDelta!==0)||images.some(i=>i.mismatchedPixels||i.previewMismatchedPixels||i.partialAlpha||i.edge))process.exitCode=1;
+}finally{await browser.close();await new Promise(r=>server.close(r));}

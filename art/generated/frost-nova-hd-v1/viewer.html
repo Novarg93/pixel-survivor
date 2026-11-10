@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frost Nova — сравнение детализации</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0c151c;color:#d7eaf2;font:16px/1.5 system-ui,sans-serif}main{max-width:1220px;margin:auto;padding:24px}h1{font-size:24px;margin:0 0 10px}p{margin:8px 0;color:#a7c2cf}button,input,select{font:inherit}button,select{background:#213745;color:#e5f7ff;border:1px solid #567a8b;border-radius:6px;padding:8px 14px}button{cursor:pointer}.controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0}input[type=range]{width:260px}.pair{display:flex;gap:24px;flex-wrap:wrap}.panel{max-width:100%;overflow:auto}h2{font-size:18px;margin:8px 0}canvas{display:block;image-rendering:pixelated;background:repeating-conic-gradient(#172b35 0 25%,#1c333e 0 50%) 0/16px 16px;border:1px solid #37515e}a{color:#8eddff}.hint{font-size:14px}.status{color:#b9e6fb}
+</style>
+<main>
+<h1>Обычная Frost Nova — прежняя 146px и новая игровая 512px</h1>
+<p>Размер взят из тренировки «Бой со Стражем»: Nova IV, бонус области +45%, радиус 127,02 игровых единицы.</p>
+<p class="status" id="status">Загрузка исходных PNG…</p>
+<div class="controls"><button id="play">Пауза</button><label>Кадр <input id="frame" aria-label="Кадр" type="range" min="0" max="23" value="0"></label><output id="position">1 / 24</output><label>Камера <select id="zoom" aria-label="Масштаб камеры"><option value="2">×2 — обычный экран</option><option value="3">×3 — крупный экран</option></select></label></div>
+<p class="hint">Оба эффекта имеют одинаковый игровой диаметр. Холсты показываются 1:1 в экранных пикселях; на узком экране прокручиваются. Это сравнение исходников, отдельное от игры.</p>
+<div class="pair"><section class="panel"><h2>Прежняя Nova · 146×146</h2><canvas id="old" width="556" height="556"></canvas></section><section class="panel"><h2>HD Nova в игре · 512×512</h2><canvas id="hd" width="556" height="556"></canvas></section></div>
+<p><a href="https://pixellab.ai/create-vfx?effect=04626972-53e6-4f16-ae09-a24bc50631cb" target="_blank" rel="noreferrer">Открыть новый эффект в PixelLab</a> · <a href="../../main-hero-mage/abilities/frost-nova-hd-v1/frost-nova-hd.gif">GIF</a> · <a href="../../main-hero-mage/abilities/frost-nova-hd-v1/frost-nova-hd.png">PNG sheet</a> · <a href="../../main-hero-mage/abilities/frost-nova-hd-v1/frost-nova-hd.json">JSON</a></p>
+</main>
+<script type="module">
+const base='../../main-hero-mage/abilities/',clips=[{id:'old',path:base+'frost-nova/frost-nov-flat'},{id:'hd',path:base+'frost-nova-hd-v1/frost-nova-hd'}];
+const slider=document.querySelector('#frame'),position=document.querySelector('#position'),play=document.querySelector('#play'),zoom=document.querySelector('#zoom'),status=document.querySelector('#status');
+let current=0,playing=true,last=performance.now(),raf=0;
+try{
+  for(const clip of clips){const response=await fetch(clip.path+'.json');if(!response.ok)throw Error(response.status+' JSON');clip.data=await response.json();clip.image=new Image();clip.image.src=clip.path+'.png';await clip.image.decode();}
+  function draw(){
+    const diameter=254.04*Number(zoom.value),size=Math.ceil(diameter)+48;
+    for(const clip of clips){const canvas=document.querySelector('#'+clip.id);if(canvas.width!==size){canvas.width=canvas.height=size;}
+      const ctx=canvas.getContext('2d');ctx.clearRect(0,0,size,size);ctx.imageSmoothingEnabled=false;ctx.globalAlpha=.7;
+      const f=clip.data.frames[current].frame;ctx.drawImage(clip.image,f.x,f.y,f.w,f.h,(size-diameter)/2,(size-diameter)/2,diameter,diameter);
+    }
+    slider.value=current;position.textContent=(current+1)+' / 24';
+    status.textContent='Диаметр '+diameter.toFixed(2)+' px · прежний пиксель '+(diameter/146).toFixed(2)+' px · новый пиксель '+(diameter/512).toFixed(3)+' px · 20 кадров/с';
+  }
+  function tick(now){if(playing&&now-last>=50){current=(current+Math.floor((now-last)/50))%24;last=now;draw();}raf=requestAnimationFrame(tick);}
+  play.onclick=()=>{playing=!playing;last=performance.now();play.textContent=playing?'Пауза':'Воспроизвести';};
+  slider.oninput=()=>{playing=false;play.textContent='Воспроизвести';current=Number(slider.value);draw();};zoom.onchange=draw;
+  draw();raf=requestAnimationFrame(tick);addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
+}catch(error){status.textContent='Ошибка загрузки: '+error.message;throw error;}
+</script>
+</html>

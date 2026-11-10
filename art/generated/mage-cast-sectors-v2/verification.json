@@ -1,0 +1,41 @@
+{
+  "pass": true,
+  "fullCheck": {
+    "unit": 931,
+    "files": 112,
+    "typecheck": true,
+    "lint": true,
+    "build": true
+  },
+  "productionE2E": 9,
+  "matrix": [
+    {
+      "width": 1280,
+      "casts": 128,
+      "native": 48,
+      "phantom": 80,
+      "errors": 0
+    },
+    {
+      "width": 844,
+      "casts": 128,
+      "native": 48,
+      "phantom": 80,
+      "errors": 0
+    }
+  ],
+  "autocastBirths": 16,
+  "standingHurtCases": 4,
+  "sourceHashes": {
+    "src/game/art/mageCastSector.ts": "3761edc9542b066d33a41dfddce9f5e786efa6b94a4197274c4f933e75fc1b7f",
+    "src/game/art/mageCastPalms.ts": "e87245fc978670658cecdca197e31ed42ca3606c3e8d8cf1c15a34f826efef45",
+    "src/game/art/MageSpellOrigins.ts": "e8bb72a2e3c737cdc7c75ff239ecf842ab65d2be90c3b7189e50f88a78e6b66a",
+    "src/game/art/MageHeroAnimation.ts": "9b85210f83cc873a2b3f33676b91d5b80bdf0cb792b83426fd5890e5e317e41a",
+    "src/game/art/MageHeroArt.ts": "0fe56c9af7a8251c46cc4c5e39a1ed59c89d3649c01d31acbb74ac499a87df65",
+    "src/game/art/MagePhantomArt.ts": "1c269bef87b39d144e4ae5435832feebcc6ef2a74ac795c02ca4e454e748140d",
+    "src/game/art/RegularLightningArt.ts": "9972801fd0e85339286911e01c532371d2ac8c4d2cfb61a80beb3d90b2179339",
+    "src/game/art/GameArt.ts": "3784f2cd2608361c10225cd1d158d011610fe36889a3313477832175007f761c",
+    "src/game/scenes/GameScene.ts": "c98cafe3b4663792e3e902e49d9e497450e5c6b21331166a634455efbbf06b6a"
+  },
+  "newPixelLabRequests": 0
+}

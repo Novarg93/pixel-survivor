@@ -32,7 +32,7 @@ it.each([[1, 0], [3, 0], [5, 0], [5, 3]])(
     expect(calls.filter(method => method === 'lineBetween')).toHaveLength(0);
     expect(calls.filter(method => method === 'fillRect')).toHaveLength(0);
     expect(calls.filter(method => method === 'strokePath')).toHaveLength(0);
-    expect(selectAsset('fireball',fireballFlightFrame(.3))).toMatchObject({texture:'mage-fireball-v1',frame:'fireball-idle-1'});
-    expect(visualDimensions(selectAsset('fireball'))).toEqual({width:56,height:42});
+    expect(selectAsset('fireball',fireballFlightFrame(.3))).toMatchObject({texture:'mage-fireball-pixellab-v1',frame:'fireball-idle-1'});
+    expect(visualDimensions(selectAsset('fireball'))).toEqual({width:64,height:64});
   },
 );

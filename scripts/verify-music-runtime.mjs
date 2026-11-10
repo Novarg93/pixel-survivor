@@ -1,0 +1,16 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const directory='art/generated/music-runtime-v1';
+const baseline=JSON.parse(readFileSync('art/generated/music-ambient-review-v1/runtime-baseline.json','utf8'));
+const manifest=JSON.parse(readFileSync(`${directory}/manifest.json`,'utf8'));
+const allowedChanged=['src/game/audio/AudioBackend.ts','src/game/audio/AudioController.ts','src/game/audio/AudioPresentation.ts','src/game/audio/PhaserAudioBackend.ts','src/game/audio/README.md','src/game/audio/catalog.ts'].sort();
+const allowedAdded=['src/game/audio/StreamingMusic.ts','src/game/audio/musicTracks.ts',...manifest.entries.map(e=>e.file)].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort(),sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>sha(file)!==baseline[file]).sort(),added=files.filter(file=>!(file in baseline));
+if(JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw new Error(JSON.stringify({unexpectedScope:{changed,added}}));
+for(const entry of manifest.entries)if(entry.variant!==2||sha(entry.file)!==entry.sha256||sha(entry.source)!==entry.sha256)throw new Error('Accepted music source mismatch');
+const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,previousSHA256:Object.fromEntries(changed.map(file=>[file,baseline[file]])),currentSHA256:Object.fromEntries([...changed,...added].map(file=>[file,sha(file)]))};
+writeFileSync(`${directory}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({baselineFiles:report.baselineFiles,changed:changed.length,added:added.length,unchanged:report.unchanged}));

@@ -1,0 +1,13 @@
+{
+  "runtimeUniqueTextures": 84,
+  "reviewFrames": 158,
+  "bodyAndVfxShelf": [
+    1024,
+    1024
+  ],
+  "bodyAndVfxShelfRGBABytes": 4194304,
+  "overlayAtlasRGBABytes": 8388608,
+  "combinedFutureRGBABytes": 12582912,
+  "trimmedPixelBytes": 2371384,
+  "notes": "Estimates for new body/layers/VFX + separate Phase3 overlay atlas; accepted base atlases and driver overhead excluded. Trimming preserves offsets, never bbox fitting."
+}

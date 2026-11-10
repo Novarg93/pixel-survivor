@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: ad6e190e-1ce0-49a0-a879-58ef3a25f920\njob_id: ad6e190e-1ce0-49a0-a879-58ef3a25f920\ndescription: Fast vertical OVERHEAD SLAM directly FORWARD away from camera, in the center plane of the body, from raised first pose into bowed forward NORTH last pose. Both hands drive the same greatsword down NORTH of feet. Keep shoulders squared north and BACK visible throughout. NO sideways or diagonal torso turn, no left/right sweep. Brief narrow copper blade trail near top center only. Boots and size fixed, fixed rear camera, same armor and cloth, no explosion, no added fire wave.\nframes: 4\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110113\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"ad6e190e-1ce0-49a0-a879-58ef3a25f920\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/ad6e190e-1ce0-49a0-a879-58ef3a25f920/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: ac43855c-19f3-5e41-9c59-6006bc8406c0\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

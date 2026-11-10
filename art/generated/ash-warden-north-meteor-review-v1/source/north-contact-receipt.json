@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"04f5f35f-53b5-4719-81c6-0e67b78e72fe\",\n  \"image_id\": \"ed35a0fc-cc62-550c-95db-4b6e6bdd02d7\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"ed35a0fc-cc62-550c-95db-4b6e6bdd02d7\",\n  \"job_id\": \"04f5f35f-53b5-4719-81c6-0e67b78e72fe\",\n  \"description\": \"Same BACK-facing NORTH Ash Warden knight, exact size and planted foot positions and 256x256 transparent canvas. Change pose from raised sword to the END of a powerful two-handed OVERHEAD SLAM directly FORWARD NORTH, away from viewer, into ground ABOVE his feet in the image. His back remains symmetrically facing viewer, helmet and shoulders square to NORTH. Bend his torso forward and knees slightly; both hands thrust the one same sword down in FRONT of him, NORTH of body, sword blade foreshortened away from camera. Tiny narrow copper contact slash just north of his body. Keep dark armor, original sword size and palette and cloth. Only BACK visible, NO face/chest, NO turn to left/right, NO sideways swing, NO explosion, NO new weapons, NO background.\",\n  \"seed\": 110112,\n  \"image_size\": {\n    \"width\": 256,\n    \"height\": 256\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 9,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/04f5f35f-53b5-4719-81c6-0e67b78e72fe/download\"\n}\nPoll get_image(job_id=\"04f5f35f-53b5-4719-81c6-0e67b78e72fe\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "04f5f35f-53b5-4719-81c6-0e67b78e72fe",
+    "image_id": "ed35a0fc-cc62-550c-95db-4b6e6bdd02d7",
+    "status": "processing",
+    "source_image_id": "ed35a0fc-cc62-550c-95db-4b6e6bdd02d7",
+    "job_id": "04f5f35f-53b5-4719-81c6-0e67b78e72fe",
+    "description": "Same BACK-facing NORTH Ash Warden knight, exact size and planted foot positions and 256x256 transparent canvas. Change pose from raised sword to the END of a powerful two-handed OVERHEAD SLAM directly FORWARD NORTH, away from viewer, into ground ABOVE his feet in the image. His back remains symmetrically facing viewer, helmet and shoulders square to NORTH. Bend his torso forward and knees slightly; both hands thrust the one same sword down in FRONT of him, NORTH of body, sword blade foreshortened away from camera. Tiny narrow copper contact slash just north of his body. Keep dark armor, original sword size and palette and cloth. Only BACK visible, NO face/chest, NO turn to left/right, NO sideways swing, NO explosion, NO new weapons, NO background.",
+    "seed": 110112,
+    "image_size": {
+      "width": 256,
+      "height": 256
+    },
+    "output_count": 1,
+    "estimated_generations": 9,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/04f5f35f-53b5-4719-81c6-0e67b78e72fe/download"
+  },
+  "isError": false
+}

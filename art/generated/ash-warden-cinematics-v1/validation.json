@@ -1,0 +1,1440 @@
+{
+  "protectedFiles": 1466,
+  "gifExactClips": 19,
+  "gifExactFrames": 158,
+  "overlaySourceFrames": 191,
+  "overlayAtlasRGBABytes": 8388608,
+  "errors": [],
+  "memory": {
+    "runtimeUniqueTextures": 84,
+    "reviewFrames": 158,
+    "bodyAndVfxShelf": [
+      1024,
+      1024
+    ],
+    "bodyAndVfxShelfRGBABytes": 4194304,
+    "overlayAtlasRGBABytes": 8388608,
+    "combinedFutureRGBABytes": 12582912,
+    "trimmedPixelBytes": 2371384,
+    "notes": "Estimates for new body/layers/VFX + separate Phase3 overlay atlas; accepted base atlases and driver overhead excluded. Trimming preserves offsets, never bbox fitting."
+  },
+  "results": [
+    {
+      "overlayAlignment": {
+        "tested": 137,
+        "bindings": 191,
+        "empty": 1
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "time": 0,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 0,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 2
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "time": 900,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 900,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "time": 1500,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 1500,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "time": 2350,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 2350,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 150,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 150,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-magic-pack-v1/ritual-channel/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 430,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 430,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "shield-break",
+          "index": 2
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 900,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 900,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "shield-break",
+          "index": 5
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 1800,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 1800,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "stagger",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 2800,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 2800,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "stagger-recover",
+          "index": 1
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "time": 3350,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 3350,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 500,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 500,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 3
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 1450,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 1450,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "time": 2450,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 2450,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 9
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 1
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 870,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 870,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 6
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 1550,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 9
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2050,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "time": 2250,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2250,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "compare",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "compare",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2050,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "spawn",
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 2900,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart",
+          "spawnReveal",
+          "spawnReady"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "shield",
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 3800,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "shieldBreakStart",
+          "shieldShatter",
+          "staggerStart",
+          "staggerEnd"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "phase3",
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 3400,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "phase3Start",
+          "phase3Overload",
+          "phase3Ready"
+        ],
+        "phase3Latched": true,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 9
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "death",
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 3000,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart",
+          "swordRelease",
+          "bodyCollapse",
+          "emberFade",
+          "deathAnimationComplete"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "time": 0,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 0,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 2
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "time": 900,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 900,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "time": 1500,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 1500,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "spawn",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 349
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "time": 2350,
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 2350,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 150,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 150,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-magic-pack-v1/ritual-channel/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 430,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 430,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "shield-break",
+          "index": 2
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 900,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 900,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "shield-break",
+          "index": 5
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 1800,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 1800,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "stagger",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 2800,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 2800,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "stagger-recover",
+          "index": 1
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "time": 3350,
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 3350,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 500,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 500,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 3
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 1450,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 1450,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "time": 2450,
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 2450,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 9
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 1
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 550,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 4
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 870,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 870,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 6
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 1550,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1550,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 9
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2050,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "time": 2250,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2250,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "compare",
+      "time": 1100,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 1100,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 7
+        },
+        "transientVfxClear": false,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "compare",
+      "time": 2050,
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 2050,
+        "completed": false,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "spawn",
+      "state": {
+        "ready": true,
+        "mode": "spawn",
+        "time": 2900,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "spawnStart",
+          "spawnReveal",
+          "spawnReady"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "shield",
+      "state": {
+        "ready": true,
+        "mode": "shield",
+        "time": 3800,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "shieldBreakStart",
+          "shieldShatter",
+          "staggerStart",
+          "staggerEnd"
+        ],
+        "phase3Latched": false,
+        "dead": false,
+        "pose": {
+          "source": "art/generated/ash-warden-directional-melee-b-v1/south/idle/frames/00.png",
+          "index": 0
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "phase3",
+      "state": {
+        "ready": true,
+        "mode": "phase3",
+        "time": 3400,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "phase3Start",
+          "phase3Overload",
+          "phase3Ready"
+        ],
+        "phase3Latched": true,
+        "dead": false,
+        "pose": {
+          "clip": "transformation",
+          "index": 9
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    },
+    {
+      "fullPlayback": true,
+      "width": 844,
+      "height": 390,
+      "mode": "death",
+      "state": {
+        "ready": true,
+        "mode": "death",
+        "time": 3000,
+        "completed": true,
+        "playing": false,
+        "frozen": false,
+        "eventLog": [
+          "deathStart",
+          "swordRelease",
+          "bodyCollapse",
+          "emberFade",
+          "deathAnimationComplete"
+        ],
+        "phase3Latched": false,
+        "dead": true,
+        "pose": {
+          "clip": "death-a",
+          "index": 11
+        },
+        "transientVfxClear": true,
+        "overlayAtlasBytes": 8388608,
+        "loadedImageCount": 350
+      }
+    }
+  ]
+}

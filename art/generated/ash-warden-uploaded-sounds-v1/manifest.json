@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "source": "user supplied",
+  "originalBytesPreserved": true,
+  "swing": "both horizontal variants and thrust",
+  "slam": "south / north",
+  "entries": [
+    {
+      "folder": "swing",
+      "event": "final.slash",
+      "id": "warden-swing",
+      "source": "art/final-boss/sound/swing/A_massive_two-handed_#3-1794336710927.wav",
+      "file": "public/assets/audio/ash-warden-uploaded-v1/swing.wav",
+      "sha256": "0635bdc2fd3a900ea0a38f3db7a0f7ffcb23abbc78475501c694430ba0ed13cd",
+      "bytes": 192078,
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "peak": 0.8329111337661743,
+        "rms": 0.12542046067267934,
+        "invalidSamples": 0
+      },
+      "gain": 0.900456
+    },
+    {
+      "folder": "slam",
+      "event": "final.slam",
+      "id": "warden-slam",
+      "source": "art/final-boss/sound/slam/A_gigantic_heavy_swo_#2-1794336856479.wav",
+      "file": "public/assets/audio/ash-warden-uploaded-v1/slam.wav",
+      "sha256": "b47c7f89c2977581c0d03b841663310faff8c6ecead9e7f1d271d0beb689a667",
+      "bytes": 192078,
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "peak": 0.892059326171875,
+        "rms": 0.09147649668776732,
+        "invalidSamples": 0
+      },
+      "gain": 0.840751
+    },
+    {
+      "folder": "charge",
+      "event": "final.charge",
+      "id": "warden-charge",
+      "source": "art/final-boss/sound/charge/charge.wav",
+      "file": "public/assets/audio/ash-warden-uploaded-v1/charge.wav",
+      "sha256": "63a9a9ec50736412ac67a303a43cef7e8f956618e90d4bb5d8a298ac305ab69a",
+      "bytes": 192078,
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "peak": 0.8719443082809448,
+        "rms": 0.13141673016653327,
+        "invalidSamples": 0
+      },
+      "gain": 0.860147
+    },
+    {
+      "folder": "flamestrike",
+      "event": "final.cleave",
+      "id": "warden-flamestrike",
+      "source": "art/final-boss/sound/flamestrike/flamestrike.wav",
+      "file": "public/assets/audio/ash-warden-uploaded-v1/flamestrike.wav",
+      "sha256": "36df2616f2674506b036acf4ded5a2f327a1e36b76ad67ae36fd93cc1b9808a7",
+      "bytes": 192078,
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "peak": 0.59307861328125,
+        "rms": 0.10319624321694532,
+        "invalidSamples": 0
+      },
+      "gain": 1.264588
+    },
+    {
+      "folder": "meteor",
+      "event": "final.impact",
+      "id": "warden-meteor",
+      "source": "art/final-boss/sound/meteor/meteor (2).wav",
+      "file": "public/assets/audio/ash-warden-uploaded-v1/meteor.wav",
+      "sha256": "64a03ddf95406f97b3cd2cea15b79f826cf9aa2f42a360bae9466141d70dfcc0",
+      "bytes": 192078,
+      "analysis": {
+        "seconds": 1,
+        "sampleRate": 48000,
+        "channels": 2,
+        "peak": 0.839263916015625,
+        "rms": 0.10122453545883248,
+        "invalidSamples": 0
+      },
+      "gain": 0.89364
+    }
+  ]
+}

@@ -1,0 +1,1126 @@
+{
+  "version": 1,
+  "purpose": "One reusable local ground Flame Strike eruption segment; candidates only",
+  "productionIntegrated": false,
+  "requestedFrames": 12,
+  "requestedCanvas": [
+    192,
+    192
+  ],
+  "loop": false,
+  "clips": [
+    {
+      "id": "a",
+      "title": "A · Compact / forceful",
+      "inputImage": "variant-a/input-ignition.png",
+      "inputHash": "3b13586766ed1599d4c7bc91f74ac7350710ec8645ebb1a82b1d99d0684e0984",
+      "rawGIF": "variant-a/raw/output.gif",
+      "rawPreviewGIF": "variant-a/raw-preview.gif",
+      "previewGIF": "variant-a/preview.gif",
+      "rawFrames": [
+        "variant-a/frames/00.png",
+        "variant-a/frames/01.png",
+        "variant-a/frames/02.png",
+        "variant-a/frames/03.png",
+        "variant-a/frames/04.png",
+        "variant-a/frames/05.png",
+        "variant-a/frames/06.png",
+        "variant-a/frames/07.png",
+        "variant-a/frames/08.png",
+        "variant-a/frames/09.png",
+        "variant-a/frames/10.png",
+        "variant-a/frames/11.png"
+      ],
+      "previewFrames": [
+        "variant-a/preview-frames/00.png",
+        "variant-a/preview-frames/01.png",
+        "variant-a/preview-frames/02.png",
+        "variant-a/preview-frames/03.png",
+        "variant-a/preview-frames/04.png",
+        "variant-a/preview-frames/05.png",
+        "variant-a/preview-frames/06.png",
+        "variant-a/preview-frames/07.png",
+        "variant-a/preview-frames/08.png",
+        "variant-a/preview-frames/09.png",
+        "variant-a/preview-frames/10.png",
+        "variant-a/preview-frames/11.png"
+      ],
+      "canvas": [
+        192,
+        192
+      ],
+      "frameCount": 12,
+      "uniqueFrames": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 1800,
+      "groundAnchor": [
+        96,
+        144
+      ],
+      "suggestedWorldScale": 0.6548310811,
+      "loop": false,
+      "taskId": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+      "requestId": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+      "seed": 6110781,
+      "promptStyle": "rd_advanced_animation__custom_action",
+      "actualCost": 0.25,
+      "rawFullyFades": false,
+      "rawLastOccupied": 631,
+      "rawEdgeClipping": false,
+      "allFramesHaveTransparency": true,
+      "requestedCanvasMatches": true,
+      "previewPreparation": {
+        "kind": "deterministic pixel-dither extinction, no new drawing",
+        "alphaCoverage": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.625,
+          0.25,
+          0
+        ],
+        "lastFrameFullyTransparent": true,
+        "rawPreserved": true
+      },
+      "analysis": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 824,
+          "transparent": 36040,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 210120,
+          "colors": 5,
+          "bounds": {
+            "minX": 65,
+            "minY": 124,
+            "maxX": 126,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.65006075334144,
+            141.32442284325637
+          ],
+          "sha256": "7d67a68c9fba171a3532bc5b13bf44ee898cbd5e37be86f1a122d7b2c199179f"
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1320,
+          "transparent": 35544,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 336600,
+          "colors": 6,
+          "bounds": {
+            "minX": 65,
+            "minY": 112,
+            "maxX": 126,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.45603944124898,
+            137.62612982744454
+          ],
+          "sha256": "55ed785995441918880fe5712ad425cc25a6c75c3708763e6758c0bdb24249b5"
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2028,
+          "transparent": 34836,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 517140,
+          "colors": 7,
+          "bounds": {
+            "minX": 62,
+            "minY": 104,
+            "maxX": 128,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.08451704545455,
+            136.94389204545453
+          ],
+          "sha256": "0124b80e8f3727fb9d262bb8a51380c59af896967d1b2582c6a6b65bd72db8b6"
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2934,
+          "transparent": 33930,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 748170,
+          "colors": 9,
+          "bounds": {
+            "minX": 56,
+            "minY": 90,
+            "maxX": 135,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.42269326683292,
+            137.18079800498754
+          ],
+          "sha256": "83ed37a3985547fd65b7964cf6df8a1a2c3ad54a3e3311676c840a14048d1ece"
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 4031,
+          "transparent": 32833,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 1027905,
+          "colors": 19,
+          "bounds": {
+            "minX": 46,
+            "minY": 72,
+            "maxX": 146,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            94.57630736392743,
+            137.9119530416222
+          ],
+          "sha256": "d07b6a01114ac4cda96d54bdd290495c4a090fb6541a19521726ca5b3556283e"
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 4017,
+          "transparent": 32847,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 1024335,
+          "colors": 11,
+          "bounds": {
+            "minX": 34,
+            "minY": 59,
+            "maxX": 154,
+            "maxY": 152
+          },
+          "baseCentroid": [
+            96.53973509933775,
+            139.4053926206244
+          ],
+          "sha256": "fb68c52d3c87a13e59d94f08189181d61707660b99fcf731a282fb801a0e6b7e"
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3210,
+          "transparent": 33654,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 818550,
+          "colors": 15,
+          "bounds": {
+            "minX": 22,
+            "minY": 41,
+            "maxX": 169,
+            "maxY": 155
+          },
+          "baseCentroid": [
+            96.19159544159544,
+            141.16595441595442
+          ],
+          "sha256": "664cc58ebc9d93d14aef95b5b4b708d81ece0d5617d023cb275cd15043b4c65c"
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1911,
+          "transparent": 34953,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 487305,
+          "colors": 9,
+          "bounds": {
+            "minX": 14,
+            "minY": 43,
+            "maxX": 177,
+            "maxY": 158
+          },
+          "baseCentroid": [
+            96.00542495479205,
+            140.8878842676311
+          ],
+          "sha256": "61005da0e23c9511699a854a025ad267309189326f0ab6169773404d7cd9beae"
+        },
+        {
+          "index": 8,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 729,
+          "transparent": 36135,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 185895,
+          "colors": 4,
+          "bounds": {
+            "minX": 65,
+            "minY": 36,
+            "maxX": 126,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.97222222222223,
+            142.3736111111111
+          ],
+          "sha256": "296f26ebbc515fde7e88231b1d9f2261cd85d464a8681b111a20a57133e85734"
+        },
+        {
+          "index": 9,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 804,
+          "transparent": 36060,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 205020,
+          "colors": 5,
+          "bounds": {
+            "minX": 65,
+            "minY": 109,
+            "maxX": 126,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            92.97101449275362,
+            141.2806324110672
+          ],
+          "sha256": "677fe594bf8cec2da2523e373659d6cb94c185e6a80f2235019edf1ed95c9058"
+        },
+        {
+          "index": 10,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 639,
+          "transparent": 36225,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 162945,
+          "colors": 2,
+          "bounds": {
+            "minX": 65,
+            "minY": 105,
+            "maxX": 128,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.68621236133121,
+            143.39778129952455
+          ],
+          "sha256": "dc63d78eca128298817641fe14709661321c94b59392f968f1b59166d91c6038"
+        },
+        {
+          "index": 11,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 631,
+          "transparent": 36233,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 160905,
+          "colors": 1,
+          "bounds": {
+            "minX": 65,
+            "minY": 138,
+            "maxX": 126,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.68621236133121,
+            143.39778129952455
+          ],
+          "sha256": "41d1ed7a7b5fa3e507d74450cf25dc5a5feafa903e44788504d467086df3f828"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "title": "B · Broad / explosive",
+      "inputImage": "variant-b/input-ignition.png",
+      "inputHash": "b4662c35dfea7511c005730a9c1972ed041734d12bbdc34356f92f73dde811ff",
+      "rawGIF": "variant-b/raw/output.gif",
+      "rawPreviewGIF": "variant-b/raw-preview.gif",
+      "previewGIF": "variant-b/preview.gif",
+      "rawFrames": [
+        "variant-b/frames/00.png",
+        "variant-b/frames/01.png",
+        "variant-b/frames/02.png",
+        "variant-b/frames/03.png",
+        "variant-b/frames/04.png",
+        "variant-b/frames/05.png",
+        "variant-b/frames/06.png",
+        "variant-b/frames/07.png",
+        "variant-b/frames/08.png",
+        "variant-b/frames/09.png",
+        "variant-b/frames/10.png",
+        "variant-b/frames/11.png"
+      ],
+      "previewFrames": [
+        "variant-b/preview-frames/00.png",
+        "variant-b/preview-frames/01.png",
+        "variant-b/preview-frames/02.png",
+        "variant-b/preview-frames/03.png",
+        "variant-b/preview-frames/04.png",
+        "variant-b/preview-frames/05.png",
+        "variant-b/preview-frames/06.png",
+        "variant-b/preview-frames/07.png",
+        "variant-b/preview-frames/08.png",
+        "variant-b/preview-frames/09.png",
+        "variant-b/preview-frames/10.png",
+        "variant-b/preview-frames/11.png"
+      ],
+      "canvas": [
+        192,
+        192
+      ],
+      "frameCount": 12,
+      "uniqueFrames": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 1800,
+      "groundAnchor": [
+        96,
+        144
+      ],
+      "suggestedWorldScale": 0.6548310811,
+      "loop": false,
+      "taskId": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+      "requestId": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+      "seed": 6110782,
+      "promptStyle": "rd_advanced_animation__custom_action",
+      "actualCost": 0.25,
+      "rawFullyFades": false,
+      "rawLastOccupied": 803,
+      "rawEdgeClipping": false,
+      "allFramesHaveTransparency": true,
+      "requestedCanvasMatches": true,
+      "previewPreparation": {
+        "kind": "deterministic pixel-dither extinction, no new drawing",
+        "alphaCoverage": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.625,
+          0.25,
+          0
+        ],
+        "lastFrameFullyTransparent": true,
+        "rawPreserved": true
+      },
+      "analysis": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1029,
+          "transparent": 35835,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 262395,
+          "colors": 6,
+          "bounds": {
+            "minX": 52,
+            "minY": 117,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.85334645669292,
+            141.0561023622047
+          ],
+          "sha256": "7afeccd3ec069d50bff06a00e1df352099864e6beff78af4a26c5639ab1b3a62"
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1430,
+          "transparent": 35434,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 364650,
+          "colors": 8,
+          "bounds": {
+            "minX": 52,
+            "minY": 105,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.72280178837556,
+            138.54545454545453
+          ],
+          "sha256": "124081a9e11d528dca41c891ff76e0580b3d09c33662685edfdc103db06d1b8d"
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2163,
+          "transparent": 34701,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 551565,
+          "colors": 7,
+          "bounds": {
+            "minX": 52,
+            "minY": 88,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.83589059372915,
+            137.30086724482987
+          ],
+          "sha256": "8caf8183ff3f4d54b0f3678d69031446ff4a9184cfc05ba983600154b6a64eb7"
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2891,
+          "transparent": 33973,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 737205,
+          "colors": 8,
+          "bounds": {
+            "minX": 52,
+            "minY": 82,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.94996664442962,
+            137.39759839893262
+          ],
+          "sha256": "3f8caeb778bcea77622e87358c079293a4351198d99c6afb9ceb08c032376de2"
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2881,
+          "transparent": 33983,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 734655,
+          "colors": 13,
+          "bounds": {
+            "minX": 52,
+            "minY": 62,
+            "maxX": 140,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.38340399757723,
+            136.79406420351302
+          ],
+          "sha256": "357a1f6ba812a95e7c6d9d58333da281e384f5992eaa02da613e8d88a6f25926"
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3911,
+          "transparent": 32953,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 997305,
+          "colors": 12,
+          "bounds": {
+            "minX": 46,
+            "minY": 66,
+            "maxX": 148,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            96.1976528721433,
+            136.99258801729462
+          ],
+          "sha256": "1a9c21f7c13a804298099ec46a9544a395a9ab2d0a17ef188496f6be4a07f2f7"
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 4261,
+          "transparent": 32603,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 1086555,
+          "colors": 12,
+          "bounds": {
+            "minX": 51,
+            "minY": 48,
+            "maxX": 148,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            96.38389731621938,
+            136.9445740956826
+          ],
+          "sha256": "b0703e67cc8f99878468ddbcbcc10985c40a5a6faff82903b8f81568a381f2fa"
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3875,
+          "transparent": 32989,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 988125,
+          "colors": 13,
+          "bounds": {
+            "minX": 42,
+            "minY": 40,
+            "maxX": 151,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            96.38633686690224,
+            136.70612485276797
+          ],
+          "sha256": "268f79c641c39f6836b8773a172d9a50e4c7f49a8c8ed1627b9dccaabfaf34a8"
+        },
+        {
+          "index": 8,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2535,
+          "transparent": 34329,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 646425,
+          "colors": 9,
+          "bounds": {
+            "minX": 49,
+            "minY": 47,
+            "maxX": 154,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.07058823529412,
+            140.88039215686274
+          ],
+          "sha256": "a3bbf5f9cece3d798dd5c0a152a96b7a2ab6f15105da23cbfdc495a270d8ccb5"
+        },
+        {
+          "index": 9,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1102,
+          "transparent": 35762,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 281010,
+          "colors": 8,
+          "bounds": {
+            "minX": 49,
+            "minY": 64,
+            "maxX": 157,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.50669642857143,
+            142.37053571428572
+          ],
+          "sha256": "489010d4fdd44df18ccff646e8908b6a968a082bfab3b64c2668a3f5b6aa044c"
+        },
+        {
+          "index": 10,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 876,
+          "transparent": 35988,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 223380,
+          "colors": 5,
+          "bounds": {
+            "minX": 48,
+            "minY": 134,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            94.4486301369863,
+            142.73059360730593
+          ],
+          "sha256": "7bf4241ded66699b73b8d4afcc95a99b9db580188d9708f71092daeda0436918"
+        },
+        {
+          "index": 11,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 803,
+          "transparent": 36061,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 204765,
+          "colors": 4,
+          "bounds": {
+            "minX": 48,
+            "minY": 138,
+            "maxX": 139,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.68742216687423,
+            143.12328767123287
+          ],
+          "sha256": "d3156afa913210e7d485e5ceca289b5d92e61c5096de7ac7ea7fe22c3b2331c8"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "title": "C · Magma / embers",
+      "inputImage": "variant-c/input-ignition.png",
+      "inputHash": "40e19c5fbf37c2280b89ec32d73458c917b9d281b8719471e2eb32f1dbd78556",
+      "rawGIF": "variant-c/raw/output.gif",
+      "rawPreviewGIF": "variant-c/raw-preview.gif",
+      "previewGIF": "variant-c/preview.gif",
+      "rawFrames": [
+        "variant-c/frames/00.png",
+        "variant-c/frames/01.png",
+        "variant-c/frames/02.png",
+        "variant-c/frames/03.png",
+        "variant-c/frames/04.png",
+        "variant-c/frames/05.png",
+        "variant-c/frames/06.png",
+        "variant-c/frames/07.png",
+        "variant-c/frames/08.png",
+        "variant-c/frames/09.png",
+        "variant-c/frames/10.png",
+        "variant-c/frames/11.png"
+      ],
+      "previewFrames": [
+        "variant-c/preview-frames/00.png",
+        "variant-c/preview-frames/01.png",
+        "variant-c/preview-frames/02.png",
+        "variant-c/preview-frames/03.png",
+        "variant-c/preview-frames/04.png",
+        "variant-c/preview-frames/05.png",
+        "variant-c/preview-frames/06.png",
+        "variant-c/preview-frames/07.png",
+        "variant-c/preview-frames/08.png",
+        "variant-c/preview-frames/09.png",
+        "variant-c/preview-frames/10.png",
+        "variant-c/preview-frames/11.png"
+      ],
+      "canvas": [
+        192,
+        192
+      ],
+      "frameCount": 12,
+      "uniqueFrames": 12,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 1800,
+      "groundAnchor": [
+        96,
+        144
+      ],
+      "suggestedWorldScale": 0.6548310811,
+      "loop": false,
+      "taskId": "99039f75-70ab-474f-8dbf-a49844354337",
+      "requestId": "99039f75-70ab-474f-8dbf-a49844354337",
+      "seed": 6110783,
+      "promptStyle": "rd_advanced_animation__custom_action",
+      "actualCost": 0.25,
+      "rawFullyFades": false,
+      "rawLastOccupied": 709,
+      "rawEdgeClipping": false,
+      "allFramesHaveTransparency": true,
+      "requestedCanvasMatches": true,
+      "previewPreparation": {
+        "kind": "deterministic pixel-dither extinction, no new drawing",
+        "alphaCoverage": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.625,
+          0.25,
+          0
+        ],
+        "lastFrameFullyTransparent": true,
+        "rawPreserved": true
+      },
+      "analysis": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 896,
+          "transparent": 35968,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 228480,
+          "colors": 5,
+          "bounds": {
+            "minX": 58,
+            "minY": 126,
+            "maxX": 133,
+            "maxY": 151
+          },
+          "baseCentroid": [
+            95.72991071428571,
+            141.55580357142858
+          ],
+          "sha256": "6f6ab5f04086b9eada5d3f6f52fc8948c099142d683580bfc7a92a79aad3abd1"
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1297,
+          "transparent": 35567,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 330735,
+          "colors": 8,
+          "bounds": {
+            "minX": 58,
+            "minY": 115,
+            "maxX": 133,
+            "maxY": 152
+          },
+          "baseCentroid": [
+            95.65189873417721,
+            139.30696202531647
+          ],
+          "sha256": "8087ae5f20a75a99dc535c7d720a45e6fb80036468cd6105bce0761852c661f0"
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1893,
+          "transparent": 34971,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 482715,
+          "colors": 10,
+          "bounds": {
+            "minX": 54,
+            "minY": 110,
+            "maxX": 135,
+            "maxY": 154
+          },
+          "baseCentroid": [
+            94.9919254658385,
+            138.62422360248448
+          ],
+          "sha256": "527b8adf4ce2e6bccccbf5c6a03b3441373397cbba0959dd39c17b5783cdbc37"
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2894,
+          "transparent": 33970,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 737970,
+          "colors": 8,
+          "bounds": {
+            "minX": 50,
+            "minY": 88,
+            "maxX": 144,
+            "maxY": 156
+          },
+          "baseCentroid": [
+            96.3913043478261,
+            138.84782608695653
+          ],
+          "sha256": "ce629868afdc53f625009c098072b9bb517d6a42756a42855aca95cbfdbceb1a"
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3621,
+          "transparent": 33243,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 923355,
+          "colors": 10,
+          "bounds": {
+            "minX": 42,
+            "minY": 68,
+            "maxX": 149,
+            "maxY": 159
+          },
+          "baseCentroid": [
+            96.72944758590691,
+            138.95911265767725
+          ],
+          "sha256": "7dd49442be1ae934aed3e70696faa8617553397750d2b643bbadc0e4404f9512"
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3940,
+          "transparent": 32924,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 1004700,
+          "colors": 8,
+          "bounds": {
+            "minX": 37,
+            "minY": 57,
+            "maxX": 162,
+            "maxY": 162
+          },
+          "baseCentroid": [
+            96.42926592124454,
+            138.78366553232863
+          ],
+          "sha256": "9a3425b36680c913dd47f6258a7355fadbd75c85f359a6de97592df11f7bde86"
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 3774,
+          "transparent": 33090,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 962370,
+          "colors": 6,
+          "bounds": {
+            "minX": 31,
+            "minY": 32,
+            "maxX": 169,
+            "maxY": 164
+          },
+          "baseCentroid": [
+            94.559244419004,
+            139.2238122495707
+          ],
+          "sha256": "d7f58a7f0181cac2088ab4633abd769130d91822c7c970e2abb0884341a53c4f"
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 2237,
+          "transparent": 34627,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 570435,
+          "colors": 9,
+          "bounds": {
+            "minX": 22,
+            "minY": 34,
+            "maxX": 173,
+            "maxY": 163
+          },
+          "baseCentroid": [
+            95.3506711409396,
+            141.96895973154363
+          ],
+          "sha256": "0d72d8720f30c23a5c48fd558ea9339b66125f7ca3c19e1739991b25cb380fef"
+        },
+        {
+          "index": 8,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1738,
+          "transparent": 35126,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 443190,
+          "colors": 4,
+          "bounds": {
+            "minX": 42,
+            "minY": 28,
+            "maxX": 155,
+            "maxY": 165
+          },
+          "baseCentroid": [
+            96.0382096069869,
+            141.41484716157206
+          ],
+          "sha256": "520b8238f5ccb5a2e7cf2a92d948993a9eb65f09f042651eb6858fe65386b3c1"
+        },
+        {
+          "index": 9,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 1203,
+          "transparent": 35661,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 306765,
+          "colors": 3,
+          "bounds": {
+            "minX": 51,
+            "minY": 21,
+            "maxX": 140,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.83376963350786,
+            142.19502617801047
+          ],
+          "sha256": "8e74dfd399b37f3e4bae3b87124f17b74172d294db89261a69ec431ec987543e"
+        },
+        {
+          "index": 10,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 874,
+          "transparent": 35990,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 222870,
+          "colors": 3,
+          "bounds": {
+            "minX": 58,
+            "minY": 34,
+            "maxX": 133,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.66854724964739,
+            143.22566995768688
+          ],
+          "sha256": "e7fa9b3764ded366af5e40c2614bfb299cedb16cc46b6794fb4bf2db92710d3d"
+        },
+        {
+          "index": 11,
+          "width": 192,
+          "height": 192,
+          "durationMs": 150,
+          "occupied": 709,
+          "transparent": 36155,
+          "partialAlpha": 0,
+          "edge": 0,
+          "sumAlpha": 180795,
+          "colors": 1,
+          "bounds": {
+            "minX": 58,
+            "minY": 138,
+            "maxX": 133,
+            "maxY": 150
+          },
+          "baseCentroid": [
+            95.66854724964739,
+            143.22566995768688
+          ],
+          "sha256": "eb530dc1e4380907976c92c65e0d5291703f4592afd7c6e89cd10be2a284df04"
+        }
+      ]
+    }
+  ]
+}

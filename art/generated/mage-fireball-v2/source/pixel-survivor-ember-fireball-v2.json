@@ -1,0 +1,131 @@
+{
+ "frames": [
+  {
+   "filename": "pixel-survivor-ember-fireball-v2 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 56,
+    "h": 42
+   },
+   "pivot": {
+    "x": 0.5892857142857143,
+    "y": 0.5
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pixel-survivor-ember-fireball-v2 1.png",
+   "frame": {
+    "x": 56,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 56,
+    "h": 42
+   },
+   "pivot": {
+    "x": 0.5892857142857143,
+    "y": 0.5
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pixel-survivor-ember-fireball-v2 2.png",
+   "frame": {
+    "x": 0,
+    "y": 42,
+    "w": 56,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 56,
+    "h": 42
+   },
+   "pivot": {
+    "x": 0.5892857142857143,
+    "y": 0.5
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pixel-survivor-ember-fireball-v2 3.png",
+   "frame": {
+    "x": 56,
+    "y": 42,
+    "w": 56,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 56,
+    "h": 42
+   },
+   "pivot": {
+    "x": 0.5892857142857143,
+    "y": 0.5
+   },
+   "duration": 100
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "pixel-survivor-ember-fireball-v2.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 112,
+   "h": 84
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 33,
+   "y": 21
+  },
+  "frameTags": [
+   {
+    "name": "pixel-survivor-ember-fireball-v2",
+    "from": 0,
+    "to": 3,
+    "direction": "forward"
+   }
+  ]
+ }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "first_frame_file": "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/first-frame-north.png",
+    "transport": "file encoded as data:image/png;base64 URL in first_frame_url",
+    "frame_count": 16,
+    "direction": "north",
+    "view": "low top-down",
+    "no_background": true,
+    "enhance_prompt": true,
+    "subject_description": "A male fantasy battle mage seen directly from behind, short dark hair, long navy blue coat with gold trim, gold shoulder armour and bracers, gold belt and boots",
+    "initial_pose": "Standing upright with both feet planted and arms relaxed at the sides, back fully facing the viewer and head facing north",
+    "id": "walk",
+    "seed": 8110861,
+    "description": "Seamless in-place walking cycle toward north, away from the camera. Calm even steps, alternating left and right feet with grounded footfalls and natural opposite arm swing. Upright torso, modest vertical bob, long coat tails sway gently with the stride. Keep the rear facing and the same costume, proportions and scale throughout. Keep the whole character and boots inside the canvas. Fixed camera, no turning or sideways drift; the final pose flows smoothly back into the first."
+  },
+  {
+    "first_frame_file": "art/main-hero-mage/abilities/hero-model/north-pixminimax-v1/first-frame-north.png",
+    "transport": "file encoded as data:image/png;base64 URL in first_frame_url",
+    "frame_count": 16,
+    "direction": "north",
+    "view": "low top-down",
+    "no_background": true,
+    "enhance_prompt": true,
+    "subject_description": "A male fantasy battle mage seen directly from behind, short dark hair, long navy blue coat with gold trim, gold shoulder armour and bracers, gold belt and boots",
+    "initial_pose": "Standing upright with both feet planted and arms relaxed at the sides, back fully facing the viewer and head facing north",
+    "id": "run",
+    "seed": 8110862,
+    "description": "Seamless in-place running cycle toward north, away from the camera. Energetic alternating strides with bent elbows and strong opposite arm drives, a slight forward lean and brief airborne phases between footfalls. The long coat tails lift and trail naturally with the running motion. Keep the rear facing and the same costume, proportions and scale throughout. Keep the whole character and boots inside the canvas. Fixed camera, no turning or sideways drift; the final pose flows smoothly back into the first."
+  }
+]

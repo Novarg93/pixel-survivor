@@ -1,7 +1,10 @@
 import { expect, test, type Page } from '@playwright/test';
-import { mkdirSync, writeFileSync, readdirSync, unlinkSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readdirSync, unlinkSync, readFileSync } from 'node:fs';
 import type { MageSpell } from '../../src/game/art/MageCastingController';
 const directory='screenshots/mage-casting';
+const runPack=JSON.parse(readFileSync('src/game/art/mageRunManifestV2.json','utf8')) as typeof import('../../src/game/art/mageRunPackV2').MAGE_RUN_V2;
+const castPack=JSON.parse(readFileSync('src/game/art/mageCastManifestV2.json','utf8')) as typeof import('../../src/game/art/mageCastPackV2').MAGE_CAST_V2;
+const runClips:Record<string,{pivot:{x:number;y:number}}>=runPack.clips;
 async function reset(page: Page) {
   await page.evaluate(async()=>{
     const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'restart',character:'mage',biome:'grove'});
@@ -14,7 +17,17 @@ async function record(page: Page, spell: MageSpell | null, duration: number, lat
     const w=window.__PIXEL__!.world,canvas=document.querySelector('canvas')!,crop=document.createElement('canvas');crop.width=160;crop.height=180;const g=crop.getContext('2d')!;
     const before={...window.__PIXEL__!.art().casting.requested};
     if(spell){for(let i=0;i<3;i++){const e=w.spawn('tank',{x:w.player.x+80+i*12,y:w.player.y-20+i*18})!;e.speed=0;e.hp=e.maxHp=1e6;}w.abilities[spell].level=5;w.abilities[spell].readyAt=0;}
-    if(late){w.elapsed=600;w.experience.level=45;w.stats.cooldown=.01;for(const d of w.abilityDefinitions){w.abilities[d.id].level=5;w.abilities[d.id].readyAt=0;}for(let i=0;i<150;i++)w.spawn((['tank','grunt','caster','runner','rusher','splitter'] as const)[i%6],{x:(i%15-7)*18,y:(Math.floor(i/15)-4)*22});for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:80,y:-70});for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:(i-1)*80,y:-80})!;e.discovered=true;}for(const e of w.guardians)w.damageEnemy(e,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;}
+    if(late){
+      // The authored start moves the player before this sample. Keep the test
+      // encounter around that player, inside the unchanged Guardian leash.
+      const at={x:w.player.x,y:w.player.y};w.elapsed=600;w.experience.level=45;w.stats.cooldown=.01;
+      for(const d of w.abilityDefinitions){w.abilities[d.id].level=5;w.abilities[d.id].readyAt=0;}
+      for(let i=0;i<150;i++)w.spawn((['tank','grunt','caster','runner','rusher','splitter'] as const)[i%6],{x:at.x+(i%15-7)*18,y:at.y+(Math.floor(i/15)-4)*22});
+      for(const kind of ['charger','sorcerer','eclipse'] as const)w.spawn(kind,{x:at.x+80,y:at.y-70});
+      for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:at.x+(i-1)*80,y:at.y-80})!;e.discovered=true;}
+      for(const e of w.guardians)w.damageEnemy(e,1);for(const e of w.enemies)e.hp=e.maxHp=1e6;
+      if(w.regularCount!==150||w.bosses.length!==3||w.guardians.length!==3)throw Error('Incomplete local stress fixture');
+    }
       w.guardianSystem.finalizePlacement(w,w.guardians.map(g=>g.id));
     type Casting=ReturnType<NonNullable<Window['__PIXEL__']>['art']>['casting'];
     const frames:{at:number;elapsed:number;player:{x:number;y:number};status:string;body:string;casting:Casting;png:string}[]=[];let full='',previous=-Infinity,blocked=false;const begin=performance.now(),worldStart=w.elapsed;
@@ -28,7 +41,7 @@ async function record(page: Page, spell: MageSpell | null, duration: number, lat
   },{spell,duration,late});
 }
 
-for(const width of [1280,390])test(`Mage conductor real Canvas sequences, all spells, walking and Blink ${width}`,async({browser,baseURL})=>{
+for(const width of [1280,390])test(`Mage conductor real Canvas sequences, all spells, running and Blink ${width}`,async({browser,baseURL})=>{
   test.setTimeout(90000);mkdirSync(directory,{recursive:true});
   const context=await browser.newContext({baseURL,viewport:{width,height:width===390?844:720},recordVideo:{dir:'.tmp/mage-casting/video',size:{width,height:width===390?844:720}}});
   const page=await context.newPage(),errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
@@ -36,27 +49,28 @@ for(const width of [1280,390])test(`Mage conductor real Canvas sequences, all sp
   try{
     await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();
     const cases:{name:string;spell:MageSpell|null;moving:boolean;ms:number;late?:boolean}[]=[
-      {name:'idle',spell:null,moving:false,ms:600},{name:'walk',spell:null,moving:true,ms:750},
-      ...(['fireball','frost','lightning','meteor','shield'] as const).map(spell=>({name:'walk-'+spell,spell,moving:true,ms:spell==='meteor'?1450:spell==='shield'?900:600})),
+      {name:'idle',spell:null,moving:false,ms:600},{name:'run',spell:null,moving:true,ms:750},
+      ...(['fireball','frost','lightning','meteor','shield'] as const).map(spell=>({name:'run-'+spell,spell,moving:true,ms:spell==='meteor'?1450:spell==='shield'?900:600})),
       {name:'blink',spell:'fireball',moving:true,ms:650},{name:'late-game-five-spells',spell:null,moving:true,ms:4000,late:true},
     ];
     const evidence=[];
     for(const scenario of cases){
-      await reset(page);if(scenario.moving){await page.keyboard.down('d');await page.waitForFunction(()=>window.__PIXEL__!.world.player.x>0&&window.__PIXEL__!.art().heroFrame.includes('-walk-'));}
+      await reset(page);if(scenario.moving){await page.keyboard.down('d');await page.waitForFunction(()=>window.__PIXEL__!.world.player.x>0&&window.__PIXEL__!.art().casting.pose?.motion==='run'&&(window.__PIXEL__!.art().casting.pose?.age??0)>.2);}
       const recording=record(page,scenario.spell,scenario.ms,scenario.late);
       if(scenario.name==='blink'){await page.waitForTimeout(130);await page.keyboard.press('Space');}
       // Keep a movement key held across direction changes: a key-up/key-down
-      // gap legitimately renders idle and is not part of this continuous-walk case.
+      // gap legitimately starts settling and is not part of this continuous run.
       if(scenario.late){let previous='d';for(const key of ['s','a','w','d']){await page.waitForTimeout(750);await page.keyboard.down(key);await page.keyboard.up(previous);previous=key;}}
       const result=await recording;if(scenario.moving)await page.keyboard.up('d');
       const active=result.frames.filter(f=>f.casting.visible),motion=result.frames.at(-1)!.player.x-result.frames[0].player.x;
-      if(scenario.moving){expect(motion).toBeGreaterThan(10);expect(new Set(result.frames.map(f=>f.body)).size).toBeGreaterThan(3);for(const frame of active)expect(frame.body).toContain('-walk-');}
-      if(scenario.spell){expect(result.frames.at(-1)!.casting.requested[scenario.spell]).toBeGreaterThan(result.before[scenario.spell]);expect(active.length).toBeGreaterThanOrEqual(2);}
-      if(scenario.spell&&scenario.name!=='blink')expect(new Set(active.map(f=>f.casting.armsFrame)).size).toBeGreaterThanOrEqual(3);
+      if(scenario.moving){expect(motion).toBeGreaterThan(10);expect(new Set(result.frames.map(f=>f.body)).size).toBeGreaterThan(3);for(const frame of active){expect(frame.body).toMatch(/^mage-run-v2-(?:south|north|north-east)-run(?:-start)?-\d+$/);expect(frame.casting.pose?.casting).toBe(true);if(frame.casting.pose?.phantom){expect(frame.casting.layered).toBe(false);expect(frame.casting.bodyCropped).toBe(false);expect(frame.casting.phantom.allocated).toBe(1);}else expect(frame.casting.layered).toBe(true);expect(frame.casting.allocated).toBeLessThanOrEqual(2);}}
+      if(scenario.spell){expect(result.frames.at(-1)!.casting.requested[scenario.spell]).toBeGreaterThan(result.before[scenario.spell]);if(scenario.spell==='shield')expect(active).toHaveLength(0);else expect(active.length).toBeGreaterThanOrEqual(2);}
+      if(scenario.spell&&scenario.spell!=='shield'&&scenario.name!=='blink')expect(new Set(active.map(f=>f.casting.armsFrame)).size).toBeGreaterThanOrEqual(3);
       if(scenario.spell==='meteor')expect(Math.max(...active.map(f=>f.casting.active?.beats??0))).toBe(3);
-      if(scenario.name==='blink'){const blink=result.frames.filter(f=>f.casting.mode==='blink');expect(blink.length).toBeGreaterThan(0);for(const row of blink){expect(row.casting.visible).toBe(false);expect(row.casting.x).toBeCloseTo(row.player.x);}}
+      if(scenario.name==='blink'){const blink=result.frames.filter(f=>f.casting.active?.ability==='blink');expect(blink.length).toBeGreaterThan(0);for(const row of blink){expect(row.casting.mode).toBe('cast');expect(row.casting.visible).toBe(true);expect(row.casting.pose?.castAbility).toBe('blink');expect(row.casting.x).toBeCloseTo(row.player.x);}}
       if(scenario.late){expect(result.metrics.enemies).toBe(150);expect(result.metrics.bosses).toBe(3);expect(result.metrics.guardians).toBe(3);for(const ability of ['fireball','frost','lightning','meteor','shield'] as const)expect(result.frames.at(-1)!.casting.requested[ability]).toBeGreaterThan(result.before[ability]);expect(new Set(active.map(f=>f.casting.armsFrame)).size).toBeGreaterThan(5);}
-      for(const row of active){expect(row.casting.width).toBe(24);expect(row.casting.height).toBe(30);expect(row.casting.origin).toEqual({x:.5,y:.75});expect(row.casting.pending).toBeLessThanOrEqual(1);}
+      for(const row of active){const running=row.casting.running,native=running?runClips[running.body]!:castPack.clips[row.casting.authoredCast!.id],flip=running?running.flipX:row.casting.authoredCast!.flipX;
+        expect(row.casting.width).toBe(castPack.displaySize);expect(row.casting.height).toBe(castPack.displaySize);expect(row.casting.origin).toEqual({x:(flip?96-native.pivot.x:native.pivot.x)/96,y:native.pivot.y/96});expect(row.casting.nativeBody).toBe(true);expect(row.casting.pending).toBeLessThanOrEqual(1);}
       const prefix=`${directory}/${scenario.name}-${width}`;mkdirSync(prefix,{recursive:true});
       for(const file of readdirSync(prefix))if(/^\d{3}\.png$/.test(file))unlinkSync(`${prefix}/${file}`);
       writeFileSync(prefix+'.png',Buffer.from(result.full.split(',')[1],'base64'));
@@ -70,22 +84,22 @@ for(const width of [1280,390])test(`Mage conductor real Canvas sequences, all sp
   }finally{await context.close();if(video)await video.saveAs(`${directory}/mage-conductor-${width}.webm`);}
 });
 
-test('pause freezes walking and arms; damage/death win and ten scene restarts release all casting objects',async({page})=>{
+test('pause freezes running and arms; damage/death win and ten scene restarts release all casting objects',async({page})=>{
   test.setTimeout(45000);await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();await reset(page);
   await page.keyboard.down('d');await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.abilities.meteor.level=5;const e=w.spawn('tank',{x:90,y:0})!;e.hp=1e6;e.speed=0;w.abilities.meteor.readyAt=0;});
   await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.visible),{intervals:[10]}).toBe(true);
   await page.evaluate(()=>window.__PIXEL__!.world.pause());await page.waitForTimeout(40);const frozen=await page.evaluate(()=>({body:window.__PIXEL__!.art().heroFrame,casting:window.__PIXEL__!.art().casting,player:{...window.__PIXEL__!.world.player}}));
   await page.waitForTimeout(180);expect(await page.evaluate(()=>({body:window.__PIXEL__!.art().heroFrame,casting:window.__PIXEL__!.art().casting,player:{...window.__PIXEL__!.world.player}}))).toEqual(frozen);await page.keyboard.up('d');
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.resume();w.mobility.protectedUntil=w.player.invulnerableUntil=0;w.shield.clearAbsorb();w.damagePlayer(20);});
-  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.mode),{intervals:[10]}).toBe('hurt');expect(await page.evaluate(()=>window.__PIXEL__!.art().casting.visible)).toBe(false);
+  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.mode),{intervals:[10]}).toBe('hurt');expect(await page.evaluate(()=>window.__PIXEL__!.art().casting)).toMatchObject({visible:false,bodyCropped:false,upperFrame:''});
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.player.invulnerableUntil=0;w.damagePlayer(99999);});await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.mode)).toBe('death');expect(await page.evaluate(()=>window.__PIXEL__!.art().casting.visible)).toBe(false);
   const cycles=[];
-  for(let i=0;i<10;i++){await page.evaluate(()=>window.__PIXEL__!.restartScene());await expect(page.getByRole('button',{name:'Начать забег'})).toBeVisible();await page.waitForTimeout(70);cycles.push(await page.evaluate(()=>{const a=window.__PIXEL__!.art();return{objects:a.objects,textures:a.textures,bytes:a.textureBytes,clock:a.clock,tweens:a.tweens,listeners:window.__PIXEL__!.listeners(),casting:a.casting.visible};}));}
-  for(const row of cycles){expect(row).toEqual(cycles[0]);expect(row.casting).toBe(false);expect(row.clock).toEqual([0,0,0]);expect(row.tweens).toBe(0);}
+  for(let i=0;i<10;i++){await page.evaluate(()=>window.__PIXEL__!.restartScene());await expect(page.getByRole('button',{name:'Начать забег'})).toBeVisible();await page.waitForTimeout(70);cycles.push(await page.evaluate(()=>{const a=window.__PIXEL__!.art();return{objects:a.objects,textures:a.textures,bytes:a.textureBytes,clock:a.clock,tweens:a.tweens,listeners:window.__PIXEL__!.listeners(),casting:a.casting.visible,allocated:a.casting.allocated,cropped:a.casting.bodyCropped};}));}
+  for(const row of cycles){expect(row).toEqual(cycles[0]);expect(row.casting).toBe(false);expect(row.allocated).toBe(0);expect(row.cropped).toBe(false);expect(row.clock).toEqual([0,0,0]);expect(row.tweens).toBe(0);}
   mkdirSync(directory,{recursive:true});writeFileSync(`${directory}/pause-priorities-restarts.json`,JSON.stringify({frozen,cycles},null,2));
 });
 
-test('original Mage head/feet stay pixel-identical in casting bodies and all arm clips have six distinct hard-alpha poses',async({page})=>{
+test('archived original Mage head/feet stay pixel-identical in casting bodies and all arm clips have six distinct hard-alpha poses',async({page})=>{
   await page.goto('/?test=1');await page.waitForFunction(()=>!!window.__PIXEL__);
   const rows=await page.evaluate(async()=>{
     const oldImage=await createImageBitmap(await(await fetch('/assets/hd/mage.png')).blob()),newImage=await createImageBitmap(await(await fetch('/assets/hd/mage-casting.png')).blob());

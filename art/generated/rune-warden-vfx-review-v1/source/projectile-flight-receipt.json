@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: bfa1a776-3f1c-4f0a-9f4f-0a324492bcae\njob_id: bfa1a776-3f1c-4f0a-9f4f-0a324492bcae\ndescription: Quiet seamless flight loop ONLY. Keep the compact pointed shard fixed in position, scale and facing to the RIGHT. Its small broad body stays readable and stable, a few short tail blocks gently move backward to the LEFT and disappear, then repeat. One narrow pale edge glints subtly without a white flash. Tiny low-key movement, simple coarse clusters. Keep the leading nose fixed near(95,61). No translation across canvas, no spinning, no growing, no ring, no extra projectiles, no swirling lightning or smoky plume. Preserve restrained lavender/bone palette and empty canvas. Return exactly toward the supplied same initial image.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111211\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"bfa1a776-3f1c-4f0a-9f4f-0a324492bcae\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/bfa1a776-3f1c-4f0a-9f4f-0a324492bcae/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: e65abbf1-4f82-54cb-8fe5-4041df2524a5\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

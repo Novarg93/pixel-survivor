@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "file": "frames/00.png",
+    "durationMs": 80,
+    "startMs": 0,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "stance"
+  },
+  {
+    "index": 1,
+    "file": "frames/01.png",
+    "durationMs": 70,
+    "startMs": 80,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "windup"
+  },
+  {
+    "index": 2,
+    "file": "frames/02.png",
+    "durationMs": 70,
+    "startMs": 150,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "swing-start"
+  },
+  {
+    "index": 3,
+    "file": "frames/03.png",
+    "durationMs": 60,
+    "startMs": 220,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "swing"
+  },
+  {
+    "index": 4,
+    "file": "frames/04.png",
+    "durationMs": 90,
+    "startMs": 280,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "hit"
+  },
+  {
+    "index": 5,
+    "file": "frames/05.png",
+    "durationMs": 80,
+    "startMs": 370,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "return-1"
+  },
+  {
+    "index": 6,
+    "file": "frames/06.png",
+    "durationMs": 90,
+    "startMs": 450,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "return-2"
+  },
+  {
+    "index": 7,
+    "file": "frames/07.png",
+    "durationMs": 110,
+    "startMs": 540,
+    "canvas": [
+      192,
+      192
+    ],
+    "pivot": [
+      96,
+      154
+    ],
+    "phase": "stance"
+  }
+]

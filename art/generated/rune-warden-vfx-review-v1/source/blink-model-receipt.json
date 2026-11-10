@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"ac085c4a-ae2d-48fa-95cc-0a75290f4658\",\n  \"image_id\": \"e64ad17b-1a9f-5d0d-9c7c-20e9975929be\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"e64ad17b-1a9f-5d0d-9c7c-20e9975929be\",\n  \"job_id\": \"ac085c4a-ae2d-48fa-95cc-0a75290f4658\",\n  \"description\": \"One isolated modest BLINK GROUND RUNE for the Rune Warden miniboss in Pixel Survivor. A quiet flat ground seal seen from high top-down: a thin BROKEN ANGULAR OCTAGON compressed into a shallow ellipse on the ground, centered exactly at(64,64), about84px wide and44px tall on128x128 TRANSPARENT canvas. Only four broad short rune marks and four separated stepped brace corners around a completely EMPTY TRANSPARENT centre, leaving the Warden feet and terrain readable. Restrained dusty lavender and slate with one narrow pale lilac edge, a few coarse2px clusters, no fine writing. It should resemble a simple old carved ward energised softly, not a spectacular portal. Large blank margins. It is a rune OVERLAY only, NOT a physical stone plate. No caster, no character, no floor, no altar, no tall portal, no central orb, no white or cyan core, no filled disk, no elaborate concentric magic circles, no pentagram, no dense tiny lettering, no neon rays, no bloom, no particles or runic noise. Flat low-key hollow seal, simple and readable at small gameplay scale. All visible pixels remain at least16px from the canvas edges.\",\n  \"seed\": 2026111202,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/ac085c4a-ae2d-48fa-95cc-0a75290f4658/download\"\n}\nPoll get_image(job_id=\"ac085c4a-ae2d-48fa-95cc-0a75290f4658\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "ac085c4a-ae2d-48fa-95cc-0a75290f4658",
+    "image_id": "e64ad17b-1a9f-5d0d-9c7c-20e9975929be",
+    "status": "processing",
+    "source_image_id": "e64ad17b-1a9f-5d0d-9c7c-20e9975929be",
+    "job_id": "ac085c4a-ae2d-48fa-95cc-0a75290f4658",
+    "description": "One isolated modest BLINK GROUND RUNE for the Rune Warden miniboss in Pixel Survivor. A quiet flat ground seal seen from high top-down: a thin BROKEN ANGULAR OCTAGON compressed into a shallow ellipse on the ground, centered exactly at(64,64), about84px wide and44px tall on128x128 TRANSPARENT canvas. Only four broad short rune marks and four separated stepped brace corners around a completely EMPTY TRANSPARENT centre, leaving the Warden feet and terrain readable. Restrained dusty lavender and slate with one narrow pale lilac edge, a few coarse2px clusters, no fine writing. It should resemble a simple old carved ward energised softly, not a spectacular portal. Large blank margins. It is a rune OVERLAY only, NOT a physical stone plate. No caster, no character, no floor, no altar, no tall portal, no central orb, no white or cyan core, no filled disk, no elaborate concentric magic circles, no pentagram, no dense tiny lettering, no neon rays, no bloom, no particles or runic noise. Flat low-key hollow seal, simple and readable at small gameplay scale. All visible pixels remain at least16px from the canvas edges.",
+    "seed": 2026111202,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/ac085c4a-ae2d-48fa-95cc-0a75290f4658/download"
+  },
+  "isError": false
+}

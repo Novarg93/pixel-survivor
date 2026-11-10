@@ -1,0 +1,24 @@
+{
+  "stage": "Directional Rework + Basic Melee B V1",
+  "cashLimitUSD": 1,
+  "starterLimitPoints": 5,
+  "balanceBeforeUSD": 10,
+  "balanceAfterUSD": 10,
+  "actualCashSpentUSD": 0,
+  "starterBeforePct": 68,
+  "starterAfterPct": 64,
+  "starterUsedPoints": 4,
+  "inferenceJobs": 1,
+  "operation": {
+    "direction": "north",
+    "style": "rd_advanced_animation__custom_action",
+    "backendReturned": "rd_fast",
+    "seed": 6110651,
+    "taskId": "af7d2078-eb2e-4f73-ac75-5bd39edfe211",
+    "estimatedUSDIfBalance": 0.25,
+    "actualCashChargedUSD": 0,
+    "billingSource": "plan"
+  },
+  "southEastWestNewGenerations": 0,
+  "otherGeneratorsUsed": []
+}

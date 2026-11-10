@@ -209,7 +209,7 @@ export class FinalEncounter {
     a.age+=dt;
     if(a.kind==='chargeWindup')this.updateChargeTarget(w);
     if(a.kind==='shieldBreak'&&a.age>=.13)this.emit('staggerStart');
-    if(a.kind==='basicMelee'&&a.age+1e-7>=this.meleeHitTime&&!a.contacted){a.contacted=true;this.emit('hitFrame');if(meleeContains(w.player,e,a.direction))w.damagePlayer(C.meleeDamage);w.sound('final-slash');}
+    if(a.kind==='basicMelee'&&a.age+1e-7>=this.meleeHitTime&&!a.contacted){a.contacted=true;this.emit('hitFrame');if(meleeContains(w.player,e,a.direction))w.damagePlayer(C.meleeDamage);w.sound(Math.abs(a.direction.x)>Math.abs(a.direction.y)?'final-slash':'final-slam');}
     if(a.kind==='meteorCast'&&a.age>=.55)this.emit('meteorRelease');
     if(a.kind==='chargeTravel'){
       const old={x:e.x,y:e.y},p=Math.min(1,a.age/C.chargeDuration);e.x=a.from.x+(a.to.x-a.from.x)*p;e.y=a.from.y+(a.to.y-a.from.y)*p;

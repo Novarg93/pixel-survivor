@@ -1,0 +1,394 @@
+{
+  "canvas": {
+    "w": 128,
+    "h": 128
+  },
+  "frames": 8,
+  "fps": 25,
+  "loop": false,
+  "origin": [
+    64,
+    104
+  ],
+  "ramps": {
+    "main": [
+      "#211d3b",
+      "#393260",
+      "#5e4b99",
+      "#8975cb",
+      "#ad9ae0",
+      "#c0b4f0"
+    ],
+    "flash": [
+      "#393260",
+      "#5e4b99",
+      "#8975cb",
+      "#c0b4f0",
+      "#ddd2fc",
+      "#eee8ff"
+    ]
+  },
+  "outline": {
+    "mode": "custom",
+    "color": "#211d3b"
+  },
+  "dither": 0,
+  "tones": 6,
+  "detail": 0,
+  "seed": 11265,
+  "camera": {
+    "tilt": 1,
+    "lean": 0,
+    "height": 1
+  },
+  "notes": "Original medium-detail dark fantasy Blink. Transparent VFX only; hero remains separate. Fixed feet [64,104], native pixel density matched to 96px Mage. No blur or persistent glow.",
+  "name": "Pixel Survivor · Mage Blink · Arrival B",
+  "layers": [
+    {
+      "id": "seal_back",
+      "type": "arc",
+      "z": "back",
+      "x": 64,
+      "y": 104,
+      "radius": {
+        "from": 4,
+        "to": 32,
+        "ease": "out"
+      },
+      "start": {
+        "from": 190,
+        "to": 140
+      },
+      "sweep": 140,
+      "thickness": 3,
+      "soft": 0,
+      "squash": 0.34,
+      "intensity": 0.65,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.3,
+            0
+          ],
+          [
+            0.7,
+            0.4
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        1
+      ],
+      "outline": true
+    },
+    {
+      "id": "seal_front",
+      "type": "arc",
+      "z": "front",
+      "x": 64,
+      "y": 104,
+      "radius": {
+        "from": 4,
+        "to": 32,
+        "ease": "out"
+      },
+      "start": {
+        "from": 10,
+        "to": -40
+      },
+      "sweep": 130,
+      "thickness": 3,
+      "soft": 0,
+      "squash": 0.34,
+      "intensity": 0.65,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.3,
+            0
+          ],
+          [
+            0.7,
+            0.4
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        1
+      ],
+      "outline": true
+    },
+    {
+      "id": "sigils",
+      "type": "glyphs",
+      "z": "back",
+      "x": 64,
+      "y": 104,
+      "radius": {
+        "from": 15,
+        "to": 32
+      },
+      "count": 4,
+      "size": 5,
+      "rotation": {
+        "from": 10,
+        "to": -12
+      },
+      "squash": 0.36,
+      "intensity": 0.65,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0.4
+          ],
+          [
+            0.25,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0.15,
+        0.92
+      ]
+    },
+    {
+      "id": "fold",
+      "type": "shape",
+      "z": "back",
+      "x": 64,
+      "y": 102,
+      "points": {
+        "curves": [
+          {
+            "x": "(2 + 24*u)*sin(pi*s - 4*u)",
+            "y": "-62*s",
+            "z": "cos(pi*s - 4*u)",
+            "n": 40
+          }
+        ]
+      },
+      "closed": false,
+      "width": 7,
+      "taper": 0.5,
+      "depth": "auto",
+      "fill": "edge",
+      "bevel": 1,
+      "intensity": 0.84,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.28,
+            0
+          ],
+          [
+            0.55,
+            0.22
+          ],
+          [
+            0.86,
+            0.64
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        1
+      ],
+      "outline": true,
+      "breakup": "blocks"
+    },
+    {
+      "id": "fold_echo",
+      "type": "shape",
+      "z": "back",
+      "x": 64,
+      "y": 102,
+      "points": {
+        "curves": [
+          {
+            "x": "-(2 + 24*u)*sin(pi*s - 4*u + 0.6)",
+            "y": "-62*s",
+            "z": "-cos(pi*s - 4*u + 0.6)",
+            "n": 40
+          }
+        ]
+      },
+      "closed": false,
+      "width": 5,
+      "taper": 0.5,
+      "depth": "auto",
+      "fill": "edge",
+      "bevel": 1,
+      "intensity": 0.68,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.28,
+            0
+          ],
+          [
+            0.55,
+            0.22
+          ],
+          [
+            0.86,
+            0.64
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        1
+      ],
+      "outline": true,
+      "breakup": "blocks"
+    },
+    {
+      "id": "slit",
+      "type": "beam",
+      "z": "back",
+      "x": 64,
+      "y": 103,
+      "width": {
+        "from": 10,
+        "to": 0
+      },
+      "height": {
+        "from": 65,
+        "to": 50
+      },
+      "soft": 0,
+      "taper": 0.8,
+      "intensity": 0.92,
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        0.28
+      ],
+      "ramp": "flash"
+    },
+    {
+      "id": "outward_shards",
+      "type": "particles",
+      "z": "front",
+      "x": 64,
+      "y": 78,
+      "mode": "burst",
+      "radius": 5,
+      "count": 8,
+      "size": [
+        3,
+        5
+      ],
+      "shape": "chunk",
+      "speed": 29,
+      "spread": 300,
+      "together": true,
+      "lifespan": 0.96,
+      "shrink": 0.6,
+      "fade_out": 0.12,
+      "intensity": 0.8,
+      "life": [
+        0,
+        1
+      ],
+      "outline": true,
+      "seed": 22,
+      "drag": 0.25,
+      "gravity": -4,
+      "direction": -90
+    }
+  ],
+  "controls": [
+    {
+      "id": "palette",
+      "label": "Arcane colours",
+      "type": "ramp",
+      "value": [
+        "#211d3b",
+        "#393260",
+        "#5e4b99",
+        "#8975cb",
+        "#c0b4f0",
+        "#eee8ff"
+      ],
+      "binds": [
+        "ramps.main"
+      ]
+    },
+    {
+      "id": "ribbons",
+      "label": "Ribbons",
+      "type": "toggle",
+      "value": true,
+      "binds": [
+        "layers.fold.enabled",
+        "layers.fold_echo.enabled"
+      ]
+    },
+    {
+      "id": "shards",
+      "label": "Shards",
+      "type": "toggle",
+      "value": true,
+      "binds": [
+        "layers.outward_shards.enabled"
+      ]
+    }
+  ]
+}

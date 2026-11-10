@@ -1,0 +1,57 @@
+{
+  "request": {
+    "id": "frost-nova-seed",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 8,
+      "style_image": {
+        "url": "upload:590e0553-12b3-417e-b0fa-a1e682b37d7b",
+        "usage_description": "Match the approved mage's crisp pixel clusters, restrained dark fantasy silhouette and broad shading only. Do not draw the mage or any person."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "One SMALL FROST NOVA IGNITION SEED, a game VFX first frame, on a large128x128 transparent canvas. A very small jagged circular frost ripple centered exactly at (64,64), diameter about28px, seen directly from above. Only a thin cold cyan rim, with an empty transparent center and four tiny angular ice chips beginning to sprout along the rim. Keep most of the canvas empty so this seed can expand later. Simple readable pixel clusters, mint cyan #91c9d2, pale frost #d9f3f7, one narrow bright edge and muted slate-blue shade. This is the ORDINARY mage Frost Nova, a modest ground-level freezing pulse, NOT any ultimate. No character, no sphere, no protective bubble, no tall ice dome, no snowstorm, avalanche, giant icicle, white disk, opaque floor patch, blinding flash, runes or ornate glyphs. No landscape, target, text, sheet, beams or dramatic backdrop. A compact chilly starter ripple only, isolated on transparency.",
+      "palette": [
+        "#274353",
+        "#3f677c",
+        "#6395ac",
+        "#91c9d2",
+        "#bde6ed",
+        "#d9f3f7",
+        "#f1fbf9"
+      ],
+      "palette_name": "Pixel Survivor ordinary Frost Nova mint cyan",
+      "seed": 2026111102
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"0ab41fcf-91cf-4e6f-a906-4fd7924e81da\",\n  \"image_id\": \"adab5874-6df8-536a-8c4f-4ceb75c6d0c5\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"adab5874-6df8-536a-8c4f-4ceb75c6d0c5\",\n  \"job_id\": \"0ab41fcf-91cf-4e6f-a906-4fd7924e81da\",\n  \"description\": \"One SMALL FROST NOVA IGNITION SEED, a game VFX first frame, on a large128x128 transparent canvas. A very small jagged circular frost ripple centered exactly at (64,64), diameter about28px, seen directly from above. Only a thin cold cyan rim, with an empty transparent center and four tiny angular ice chips beginning to sprout along the rim. Keep most of the canvas empty so this seed can expand later. Simple readable pixel clusters, mint cyan #91c9d2, pale frost #d9f3f7, one narrow bright edge and muted slate-blue shade. This is the ORDINARY mage Frost Nova, a modest ground-level freezing pulse, NOT any ultimate. No character, no sphere, no protective bubble, no tall ice dome, no snowstorm, avalanche, giant icicle, white disk, opaque floor patch, blinding flash, runes or ornate glyphs. No landscape, target, text, sheet, beams or dramatic backdrop. A compact chilly starter ripple only, isolated on transparency.\",\n  \"seed\": 2026111102,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/0ab41fcf-91cf-4e6f-a906-4fd7924e81da/download\"\n}\nPoll get_image(job_id=\"0ab41fcf-91cf-4e6f-a906-4fd7924e81da\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "0ab41fcf-91cf-4e6f-a906-4fd7924e81da",
+    "image_id": "adab5874-6df8-536a-8c4f-4ceb75c6d0c5",
+    "status": "processing",
+    "source_image_id": "adab5874-6df8-536a-8c4f-4ceb75c6d0c5",
+    "job_id": "0ab41fcf-91cf-4e6f-a906-4fd7924e81da",
+    "description": "One SMALL FROST NOVA IGNITION SEED, a game VFX first frame, on a large128x128 transparent canvas. A very small jagged circular frost ripple centered exactly at (64,64), diameter about28px, seen directly from above. Only a thin cold cyan rim, with an empty transparent center and four tiny angular ice chips beginning to sprout along the rim. Keep most of the canvas empty so this seed can expand later. Simple readable pixel clusters, mint cyan #91c9d2, pale frost #d9f3f7, one narrow bright edge and muted slate-blue shade. This is the ORDINARY mage Frost Nova, a modest ground-level freezing pulse, NOT any ultimate. No character, no sphere, no protective bubble, no tall ice dome, no snowstorm, avalanche, giant icicle, white disk, opaque floor patch, blinding flash, runes or ornate glyphs. No landscape, target, text, sheet, beams or dramatic backdrop. A compact chilly starter ripple only, isolated on transparency.",
+    "seed": 2026111102,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/0ab41fcf-91cf-4e6f-a906-4fd7924e81da/download"
+  }
+}

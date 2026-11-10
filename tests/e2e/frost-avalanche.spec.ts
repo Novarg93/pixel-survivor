@@ -17,7 +17,7 @@ for(const [width,height] of [[1280,720],[844,390]])test(`Frost avalanche real sw
     w.damageEnemy=(e,n,source,cap,execute)=>{if(source==='ultimate-frost')hits.push({id:e.id,at:w.elapsed,frozen:!!e.ultimateFreeze});return damage(e,n,source,cap,execute);};
     const frames:{age:number;radius:number;visible:boolean;alive:number[];png:string}[]=[],thresholds=[.98,1.2,1.5,1.82,2.05];let index=0;
     await new Promise<void>(resolve=>{const frame=()=>{const age=w.elapsed-f.started;
-      if(index<thresholds.length&&age>=thresholds[index]!){index++;const art=window.__PIXEL__!.art().ultimate.frost;frames.push({age,radius:art.avalancheRadius,visible:art.avalancheVisible,alive:w.enemies.map(e=>e.id),png:document.querySelector('canvas')!.toDataURL('image/png')});}
+      if(index<thresholds.length&&age>=thresholds[index]!){index++;const view=f.view(w.elapsed);frames.push({age,radius:f.radius*view.avalanche,visible:view.avalancheVisible,alive:w.enemies.map(e=>e.id),png:document.querySelector('canvas')!.toDataURL('image/png')});}
       if(index<thresholds.length)requestAnimationFrame(frame);else resolve();};requestAnimationFrame(frame);});
     return{ids,hits,frames,radius:f.radius,kills:w.kills,bossDamage:boss.maxHp-boss.hp,bossMax:boss.maxHp,damage:w.snapshot().ultimateDamage?.frost,clock:window.__PIXEL__!.art().clock};
   });
@@ -34,6 +34,6 @@ for(const [width,height] of [[1280,720],[844,390]])test(`Frost avalanche real sw
   const paused=await page.evaluate(()=>({time:window.__PIXEL__!.world.elapsed,art:window.__PIXEL__!.art().ultimate.frost}));
   await page.waitForTimeout(150);expect(await page.evaluate(()=>({time:window.__PIXEL__!.world.elapsed,art:window.__PIXEL__!.art().ultimate.frost}))).toEqual(paused);
   await page.evaluate(()=>window.__PIXEL__!.restartScene());await page.waitForFunction(()=>window.__PIXEL__!.world.status==='menu');
-  expect(await page.evaluate(()=>window.__PIXEL__!.art().ultimate.frost)).toMatchObject({phase:'idle',avalancheRadius:0,avalancheVisible:false});
+  expect(await page.evaluate(()=>window.__PIXEL__!.art().ultimate.frost)).toMatchObject({phase:'idle',nova:null});
   expect(errors).toEqual([]);writeFileSync(`${dir}/review-${width}.json`,JSON.stringify({...result,frames:result.frames.map(({png,...f})=>({...f,bytes:png.length})),errors},null,2));
 });

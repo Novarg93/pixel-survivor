@@ -1,0 +1,1714 @@
+{
+  "protectedFiles": 931,
+  "castCount": 2,
+  "meteorCount": 3,
+  "gifExactClips": 14,
+  "metrics": {
+    "a": {
+      "telegraph": {
+        "count": 6,
+        "totalMs": 900,
+        "occupancy": [
+          570,
+          570,
+          570,
+          750,
+          686,
+          638
+        ]
+      },
+      "fall": {
+        "count": 5,
+        "totalMs": 300,
+        "occupancy": [
+          379,
+          385,
+          379,
+          385,
+          379
+        ]
+      },
+      "impact": {
+        "count": 8,
+        "totalMs": 400,
+        "occupancy": [
+          212,
+          398,
+          630,
+          477,
+          518,
+          264,
+          278,
+          0
+        ]
+      },
+      "aftermath": {
+        "count": 4,
+        "totalMs": 320,
+        "occupancy": [
+          140,
+          140,
+          140,
+          0
+        ]
+      }
+    },
+    "b": {
+      "telegraph": {
+        "count": 6,
+        "totalMs": 900,
+        "occupancy": [
+          605,
+          605,
+          605,
+          817,
+          761,
+          693
+        ]
+      },
+      "fall": {
+        "count": 5,
+        "totalMs": 300,
+        "occupancy": [
+          834,
+          840,
+          834,
+          840,
+          834
+        ]
+      },
+      "impact": {
+        "count": 8,
+        "totalMs": 400,
+        "occupancy": [
+          337,
+          794,
+          1234,
+          988,
+          1040,
+          832,
+          828,
+          0
+        ]
+      },
+      "aftermath": {
+        "count": 4,
+        "totalMs": 320,
+        "occupancy": [
+          282,
+          275,
+          269,
+          0
+        ]
+      }
+    },
+    "c": {
+      "telegraph": {
+        "count": 6,
+        "totalMs": 900,
+        "occupancy": [
+          708,
+          720,
+          732,
+          913,
+          860,
+          814
+        ]
+      },
+      "fall": {
+        "count": 5,
+        "totalMs": 300,
+        "occupancy": [
+          555,
+          564,
+          555,
+          565,
+          555
+        ]
+      },
+      "impact": {
+        "count": 8,
+        "totalMs": 400,
+        "occupancy": [
+          368,
+          606,
+          807,
+          660,
+          751,
+          445,
+          338,
+          0
+        ]
+      },
+      "aftermath": {
+        "count": 4,
+        "totalMs": 320,
+        "occupancy": [
+          162,
+          160,
+          160,
+          0
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "casts",
+      "sample": "900",
+      "state": {
+        "ready": true,
+        "time": 900,
+        "playing": false,
+        "completed": false,
+        "mode": "casts",
+        "panels": [
+          {
+            "label": "Cast A · Compact Summon",
+            "cast": "a"
+          },
+          {
+            "label": "Cast B · Strong Summon",
+            "cast": "b"
+          }
+        ],
+        "casts": {
+          "a": 5,
+          "b": 5
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "meteors",
+      "sample": "1200",
+      "state": {
+        "ready": true,
+        "time": 1200,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 8,
+          "b": 7
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "meteors",
+      "sample": "1650",
+      "state": {
+        "ready": true,
+        "time": 1650,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 15,
+          "b": 11
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "meteors",
+      "sample": "1860",
+      "state": {
+        "ready": true,
+        "time": 1860,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "meteors",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "pairings",
+      "sample": "1200",
+      "state": {
+        "ready": true,
+        "time": 1200,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 8,
+          "b": 7
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "pairings",
+      "sample": "1650",
+      "state": {
+        "ready": true,
+        "time": 1650,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 15,
+          "b": 11
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "pairings",
+      "sample": "1860",
+      "state": {
+        "ready": true,
+        "time": 1860,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "pairings",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "multi",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "multi",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "casts",
+      "sample": "900",
+      "state": {
+        "ready": true,
+        "time": 900,
+        "playing": false,
+        "completed": false,
+        "mode": "casts",
+        "panels": [
+          {
+            "label": "Cast A · Compact Summon",
+            "cast": "a"
+          },
+          {
+            "label": "Cast B · Strong Summon",
+            "cast": "b"
+          }
+        ],
+        "casts": {
+          "a": 5,
+          "b": 5
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 0,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "meteors",
+      "sample": "1200",
+      "state": {
+        "ready": true,
+        "time": 1200,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 8,
+          "b": 7
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "meteors",
+      "sample": "1650",
+      "state": {
+        "ready": true,
+        "time": 1650,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 15,
+          "b": 11
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "meteors",
+      "sample": "1860",
+      "state": {
+        "ready": true,
+        "time": 1860,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "meteors",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "meteors",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "pairings",
+      "sample": "1200",
+      "state": {
+        "ready": true,
+        "time": 1200,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 8,
+          "b": 7
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 2,
+              "fall": -1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -14,
+                -95
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "pairings",
+      "sample": "1650",
+      "state": {
+        "ready": true,
+        "time": 1650,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": 15,
+          "b": 11
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": 5,
+              "fall": 2,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -7,
+                -47.5
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "pairings",
+      "sample": "1860",
+      "state": {
+        "ready": true,
+        "time": 1860,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 2,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "pairings",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "pairings",
+        "panels": [
+          {
+            "label": "Cast A + Meteor A",
+            "cast": "a",
+            "meteor": "a"
+          },
+          {
+            "label": "Cast A + Meteor B",
+            "cast": "a",
+            "meteor": "b"
+          },
+          {
+            "label": "Cast B + Meteor C",
+            "cast": "b",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mode": "multi",
+      "sample": "2040",
+      "state": {
+        "ready": true,
+        "time": 2040,
+        "playing": false,
+        "completed": false,
+        "mode": "multi",
+        "panels": [
+          {
+            "label": "Meteor A · Clean Compact",
+            "meteor": "a"
+          },
+          {
+            "label": "Meteor B · Heavy Rock Impact",
+            "meteor": "b"
+          },
+          {
+            "label": "Meteor C · Infernal Ash",
+            "meteor": "c"
+          }
+        ],
+        "casts": {
+          "a": -1,
+          "b": -1
+        },
+        "strikes": {
+          "a": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ],
+          "b": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ],
+          "c": [
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 5,
+              "aftermath": 0,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": -1,
+              "fall": -1,
+              "impact": 0,
+              "aftermath": -1,
+              "fallOffset": [
+                0,
+                0
+              ]
+            },
+            {
+              "telegraph": 4,
+              "fall": 1,
+              "impact": -1,
+              "aftermath": -1,
+              "fallOffset": [
+                -9.333333333333334,
+                -63.333333333333336
+              ]
+            }
+          ]
+        },
+        "zoom": 1,
+        "selection": null
+      }
+    }
+  ]
+}

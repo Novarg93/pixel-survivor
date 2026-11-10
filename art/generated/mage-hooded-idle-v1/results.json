@@ -1,0 +1,44 @@
+{
+  "outputs": [
+    {
+      "body": "front",
+      "job_id": "1382997c-2ebf-4a4c-8d45-a64941355f13",
+      "status": "completed",
+      "frames": 5,
+      "asset": {
+        "id": "907cb820-2df5-594d-a3e4-b000bd1f8844",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 1
+    },
+    {
+      "body": "north",
+      "job_id": "16658903-f104-4adb-b227-24de16876058",
+      "status": "completed",
+      "frames": 5,
+      "asset": {
+        "id": "bc439eaa-4660-582c-902a-b0a752dbe0cd",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 1
+    }
+  ],
+  "successfulJobs": 2,
+  "retries": 0,
+  "billing": {
+    "subscriptionGenerations": 2,
+    "balanceBefore": 1562.9,
+    "balanceAfter": 1560.9,
+    "cashBeforeUsd": 0,
+    "cashAfterUsd": 0,
+    "cashChargedUsd": 0
+  },
+  "rawFrames": 10,
+  "preparedFrames": 16,
+  "framesPerLoop": 4,
+  "mirroredVariantsGeneratedLocally": true,
+  "privateProductionUploads": false,
+  "productionIntegrated": false
+}

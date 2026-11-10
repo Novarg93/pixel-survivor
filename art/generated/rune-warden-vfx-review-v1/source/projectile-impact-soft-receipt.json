@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 48326e27-d56a-455c-9fed-cd7fc36d06d2\njob_id: 48326e27-d56a-455c-9fed-cd7fc36d06d2\naction: The tiny lavender shard gently breaks into four short LAVENDER chips near its leading point(95,61), then the chips simply fade out. Small quiet hit, no explosion. Maintain the input's original muted purple, bone-lilac and slate palette ONLY. No cyan, turquoise, green, no white starburst or white flash. All fragments stay within12pixels of the original compact shard. Finish completely transparent. The projectile tail disappears first, then the few existing pointed pieces lose opacity; no rings, no central orb, no new light disk, no rays, no bright energy effect.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 2026111222\nasset_id: 455eb7f6-a851-5d9c-b203-d20697346f8b\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"48326e27-d56a-455c-9fed-cd7fc36d06d2\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/48326e27-d56a-455c-9fed-cd7fc36d06d2/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ],
+  "isError": false
+}

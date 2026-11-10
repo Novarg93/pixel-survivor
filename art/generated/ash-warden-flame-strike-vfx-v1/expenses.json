@@ -1,0 +1,27 @@
+{
+  "currency": "USD",
+  "balanceBefore": 8.24,
+  "balanceAfter": 7.49,
+  "observedBalanceDelta": 0.75,
+  "estimatedTotal": 0.75,
+  "actualTotal": 0.75,
+  "jobs": [
+    {
+      "id": "a",
+      "taskId": "95e50c5f-52d1-437c-8dd5-7cfc2a09bb02",
+      "cost": 0.25
+    },
+    {
+      "id": "b",
+      "taskId": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+      "cost": 0.25
+    },
+    {
+      "id": "c",
+      "taskId": "99039f75-70ab-474f-8dbf-a49844354337",
+      "cost": 0.25
+    }
+  ],
+  "extraGenerations": 0,
+  "paidPostprocessing": 0
+}

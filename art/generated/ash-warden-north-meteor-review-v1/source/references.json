@@ -1,0 +1,68 @@
+{
+  "references": {
+    "north-idle": {
+      "source": "art/generated/ash-warden-animation-library-v1/frames/warden-1/60496ec960cdfa176baa09be.png",
+      "sha256": "9ac37a294744c4be867f979cded71a8c77ac244aeae351c8d9bd2fb1d046ce95",
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811
+    },
+    "flame-strike-overhead": {
+      "source": "art/generated/ash-warden-animation-library-v1/frames/warden-0/5e11cc3b575051661aa838ad.png",
+      "sha256": "e4975d95f64773fe84f92a5dab8cd780dbb66fe91634a93214db5954ae719320",
+      "pivot": [
+        96,
+        154
+      ],
+      "scale": 0.6548310811
+    },
+    "meteor-current": {
+      "source": "art/generated/ash-warden-animation-library-v1/frames/warden-3/d911fb8f1d2bf04d7bb740fd.png",
+      "sha256": "47d7069fa8da11b85dffa8e7bd1f908de4361ac3a9e5fb0d06fd9abd274abb6b",
+      "pivot": [
+        64,
+        89
+      ],
+      "scale": 0.6548310811
+    },
+    "landing-current": {
+      "source": "art/generated/ash-warden-animation-library-v1/frames/warden-3/e6e47e6947731ccf5b28fcd4.png",
+      "sha256": "265dc73d4fc9ffba5843a4474e294256679026846a785a46eac5836f77035b68",
+      "pivot": [
+        64,
+        96
+      ],
+      "scale": 0.6548310811
+    }
+  },
+  "northPadding": {
+    "offset": [
+      32,
+      48
+    ],
+    "canvas": [
+      256,
+      256
+    ],
+    "pivot": [
+      128,
+      202
+    ],
+    "resized": false
+  },
+  "styleCrop": {
+    "rect": [
+      48,
+      28,
+      128,
+      128
+    ],
+    "resized": false
+  },
+  "artGuide": {
+    "file": "docs/ART_STYLE_GUIDE.md",
+    "sha256": "df4fa966e55facba5c1132dab41675a4d3d17864e5244e5a53c0eb592b90f2b0"
+  }
+}

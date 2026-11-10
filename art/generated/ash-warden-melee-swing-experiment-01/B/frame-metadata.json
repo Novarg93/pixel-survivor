@@ -1,0 +1,794 @@
+[
+  {
+    "index": 0,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30377,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 22,
+    "bounds": {
+      "minX": 37,
+      "minY": 33,
+      "maxX": 143,
+      "maxY": 154
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 547,
+        "centroid": [
+          104.54478976234003,
+          56.92687385740402
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 302,
+        "centroid": [
+          80.83112582781457,
+          142.12582781456953
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 280,
+        "centroid": [
+          125.95714285714286,
+          140.91071428571428
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5092,
+      "unionPixels": 6852,
+      "fraction": 0.7431406888499709,
+      "wrap": false
+    }
+  },
+  {
+    "index": 1,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30380,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 20,
+    "bounds": {
+      "minX": 37,
+      "minY": 33,
+      "maxX": 141,
+      "maxY": 155
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 551,
+        "centroid": [
+          104.497277676951,
+          56.811252268602544
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 297,
+        "centroid": [
+          80.6969696969697,
+          142.25589225589226
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 282,
+        "centroid": [
+          125.83333333333333,
+          140.87234042553192
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5480,
+      "unionPixels": 7046,
+      "fraction": 0.7777462390008516,
+      "wrap": false
+    }
+  },
+  {
+    "index": 2,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30491,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 21,
+    "bounds": {
+      "minX": 37,
+      "minY": 35,
+      "maxX": 138,
+      "maxY": 163
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 537,
+        "centroid": [
+          104.42830540037244,
+          57.02793296089386
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 304,
+        "centroid": [
+          80.48355263157895,
+          142.07236842105263
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 289,
+        "centroid": [
+          125.85121107266436,
+          140.68512110726644
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 4564,
+      "unionPixels": 6752,
+      "fraction": 0.6759478672985783,
+      "wrap": false
+    }
+  },
+  {
+    "index": 3,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30626,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 20,
+    "bounds": {
+      "minX": 44,
+      "minY": 36,
+      "maxX": 138,
+      "maxY": 163
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 522,
+        "centroid": [
+          104.4080459770115,
+          57.434865900383144
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 295,
+        "centroid": [
+          80.7864406779661,
+          142.33559322033898
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 297,
+        "centroid": [
+          125.88888888888889,
+          140.5117845117845
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5786,
+      "unionPixels": 7491,
+      "fraction": 0.7723935389133627,
+      "wrap": false
+    }
+  },
+  {
+    "index": 4,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30649,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 21,
+    "bounds": {
+      "minX": 4,
+      "minY": 35,
+      "maxX": 138,
+      "maxY": 153
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 565,
+        "centroid": [
+          104.14336283185841,
+          56.58938053097345
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 293,
+        "centroid": [
+          80.81569965870307,
+          142.38907849829351
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 289,
+        "centroid": [
+          125.79930795847751,
+          140.69204152249134
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 6161,
+      "unionPixels": 7492,
+      "fraction": 0.8223438334223171,
+      "wrap": false
+    }
+  },
+  {
+    "index": 5,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30691,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 18,
+    "bounds": {
+      "minX": 6,
+      "minY": 34,
+      "maxX": 141,
+      "maxY": 153
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 574,
+        "centroid": [
+          104.71602787456446,
+          56.36585365853659
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 296,
+        "centroid": [
+          81.03716216216216,
+          142.31756756756758
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 279,
+        "centroid": [
+          125.90322580645162,
+          140.98566308243727
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5928,
+      "unionPixels": 7168,
+      "fraction": 0.8270089285714286,
+      "wrap": false
+    }
+  },
+  {
+    "index": 6,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30995,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 20,
+    "bounds": {
+      "minX": 61,
+      "minY": 5,
+      "maxX": 149,
+      "maxY": 153
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 562,
+        "centroid": [
+          104.6459074733096,
+          56.58540925266904
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 299,
+        "centroid": [
+          81.24749163879599,
+          142.2943143812709
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 275,
+        "centroid": [
+          125.93818181818182,
+          141.10181818181817
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5497,
+      "unionPixels": 6977,
+      "fraction": 0.7878744446036978,
+      "wrap": false
+    }
+  },
+  {
+    "index": 7,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 31047,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 18,
+    "bounds": {
+      "minX": 70,
+      "minY": 36,
+      "maxX": 182,
+      "maxY": 153
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 521,
+        "centroid": [
+          104.38771593090212,
+          57.4721689059501
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 300,
+        "centroid": [
+          81.23333333333333,
+          142.27333333333334
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 291,
+        "centroid": [
+          125.42268041237114,
+          140.72164948453607
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 4476,
+      "unionPixels": 6850,
+      "fraction": 0.6534306569343066,
+      "wrap": false
+    }
+  },
+  {
+    "index": 8,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30769,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 21,
+    "bounds": {
+      "minX": 70,
+      "minY": 36,
+      "maxX": 179,
+      "maxY": 153
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 519,
+        "centroid": [
+          104.38728323699422,
+          57.52408477842004
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 300,
+        "centroid": [
+          81.23333333333333,
+          142.27333333333334
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 295,
+        "centroid": [
+          125.33220338983051,
+          140.61016949152543
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5625,
+      "unionPixels": 6790,
+      "fraction": 0.8284241531664213,
+      "wrap": false
+    }
+  },
+  {
+    "index": 9,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 31176,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 20,
+    "bounds": {
+      "minX": 66,
+      "minY": 35,
+      "maxX": 145,
+      "maxY": 160
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 544,
+        "centroid": [
+          104.49816176470588,
+          57.0202205882353
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 298,
+        "centroid": [
+          81.09395973154362,
+          142.2785234899329
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 437,
+        "centroid": [
+          124.36613272311213,
+          143.52402745995423
+        ],
+        "bottom": 160
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 5256,
+      "unionPixels": 6345,
+      "fraction": 0.8283687943262411,
+      "wrap": false
+    }
+  },
+  {
+    "index": 10,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 31033,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 20,
+    "bounds": {
+      "minX": 63,
+      "minY": 34,
+      "maxX": 144,
+      "maxY": 161
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 549,
+        "centroid": [
+          104.48633879781421,
+          56.89617486338798
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 389,
+        "centroid": [
+          79.01028277634961,
+          143.78406169665809
+        ],
+        "bottom": 160
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 289,
+        "centroid": [
+          125.59515570934256,
+          140.69204152249134
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 4750,
+      "unionPixels": 6828,
+      "fraction": 0.6956649091974224,
+      "wrap": false
+    }
+  },
+  {
+    "index": 11,
+    "width": 192,
+    "height": 192,
+    "durationMs": 150,
+    "transparent": 30400,
+    "partialAlpha": 0,
+    "edge": 0,
+    "colors": 21,
+    "bounds": {
+      "minX": 37,
+      "minY": 34,
+      "maxX": 143,
+      "maxY": 154
+    },
+    "regions": {
+      "helmet": {
+        "box": [
+          94,
+          40,
+          116,
+          70
+        ],
+        "occupied": 546,
+        "centroid": [
+          104.54578754578755,
+          56.95238095238095
+        ],
+        "bottom": 69
+      },
+      "leftBoot": {
+        "box": [
+          70,
+          132,
+          91,
+          164
+        ],
+        "occupied": 299,
+        "centroid": [
+          80.92976588628763,
+          142.2173913043478
+        ],
+        "bottom": 153
+      },
+      "rightBoot": {
+        "box": [
+          113,
+          132,
+          145,
+          164
+        ],
+        "occupied": 279,
+        "centroid": [
+          125.9247311827957,
+          140.9426523297491
+        ],
+        "bottom": 149
+      }
+    },
+    "transitionToNext": {
+      "changedPixels": 2563,
+      "unionPixels": 6563,
+      "fraction": 0.3905226268474783,
+      "wrap": true
+    }
+  }
+]

@@ -1,22 +1,25 @@
 import { expect, test } from '@playwright/test';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+const idleSize=(JSON.parse(readFileSync('src/game/art/mageIdleManifest.json','utf8')) as {displaySize:number}).displaySize;
 const directory = process.env.PIXEL_HD_PACK && process.env.PIXEL_HD_PACK !== '02' ? `screenshots/hd-rework/pack-${process.env.PIXEL_HD_PACK}/mage-regression` : 'screenshots/hd-rework/pack-02';
 
-test('Mage live directional walk and hurt poses keep the pivot and freeze on idle pause', async ({ page }) => {
+test('Mage live directional running and hurt poses keep the pivot and freeze on idle pause', async ({ page }) => {
   mkdirSync(directory, { recursive: true });
   await page.goto('/?test=1'); await page.getByRole('button', { name: 'Начать забег' }).click();
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.options.spawnRate = 0; for (const a of Object.values(w.abilities)) a.level = 0; });
   const recorded: Record<string, string[]> = {};
   for (const [key, facing] of [['d', 'side'], ['w', 'up'], ['s', 'down']]) {
     await page.keyboard.down(key);
+    await page.waitForFunction(()=>window.__PIXEL__!.art().casting.pose?.motion==='run');
     recorded[facing] = await page.evaluate(async () => {
       const frames: string[] = [], begin = performance.now();
-      await new Promise<void>(resolve => { const tick = () => { frames.push(window.__PIXEL__!.art().heroFrame); if (performance.now() - begin < 750) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); });
-      return [...new Set(frames.filter(f => f.includes('-walk-')))];
+      await new Promise<void>(resolve => { const tick = () => { frames.push(window.__PIXEL__!.art().heroFrame); if (performance.now() - begin < 1850) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); });
+      return [...new Set(frames.filter(f => /mage-run-v2-(?:south|north)-run-\d+$/.test(f)))];
     });
-    expect(recorded[facing]).toHaveLength(6);
+    expect(recorded[facing].length).toBe(facing==='up'?6:8);
     for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.locator('canvas').screenshot({ path: `${directory}/mage-walk-${facing}-${width}.png` }); }
     await page.keyboard.up(key);
+    await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().casting.pose?.motion)).toBe('idle');
   }
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().heroFrame)).toContain('-idle-');
   await page.evaluate(() => window.__PIXEL__!.world.pause());
@@ -24,15 +27,15 @@ test('Mage live directional walk and hurt poses keep the pivot and freeze on idl
   expect(await page.evaluate(() => window.__PIXEL__!.art().heroFrame)).toBe(frame);
   await page.addStyleTag({ content: '.overlay{display:none!important}' });
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.resume(); w.damagePlayer(1); });
-  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.art().heroFrame), { intervals: [10] }).toContain('-hurt-');
+  await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().actors.find(a=>a.texture==='mage-idle-v2')!.tint),{intervals:[10]}).toBe(0xffd4af);
   await page.evaluate(() => window.__PIXEL__!.world.pause());
   for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.locator('canvas').screenshot({ path: `${directory}/mage-hurt-${width}.png` }); }
-  const hero = await page.evaluate(() => window.__PIXEL__!.art().actors.find(a => a.texture === 'hd-mage')!);
-  expect(hero.width).toBe(24); expect(hero.height).toBe(30);
+  const hero = await page.evaluate(() => window.__PIXEL__!.art().actors.find(a => a.texture==='mage-idle-v2')!);
+  expect(hero.width).toBe(idleSize); expect(hero.height).toBe(idleSize);
   writeFileSync(`${directory}/mage-walk-evidence.json`, JSON.stringify(recorded, null, 2));
 });
 
-test('Mage atlas has complete hard-alpha poses; Grove joins match one large world rectangle', async ({ page }) => {
+test('archived Mage atlas retains complete hard-alpha poses; Grove joins match one large world rectangle', async ({ page }) => {
   await page.goto('/?test=1'); await page.waitForFunction(() => !!window.__PIXEL__);
   const result = await page.evaluate(async () => {
     const image = await createImageBitmap(await (await fetch('/assets/hd/mage.png')).blob());
@@ -81,8 +84,8 @@ test('Mage live five abilities, paused FX phases and death do not delay game ove
   }
   await page.evaluate(() => { const w = window.__PIXEL__!.world; w.resume(); w.player.invulnerableUntil = 0; w.shield.clearAbsorb(); w.damagePlayer(99999); });
   expect(await page.evaluate(() => window.__PIXEL__!.world.status)).toBe('over');
-  const frames = await page.evaluate(async () => { const frames: string[] = [], begin = performance.now(); await new Promise<void>(resolve => { const tick = () => { frames.push(window.__PIXEL__!.art().heroFrame); if (performance.now() - begin < 650) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
-  expect(frames.filter(f => f.includes('-death-')).length).toBe(6);
+  const frames = await page.evaluate(async () => { const frames: string[] = [], begin = performance.now(); await new Promise<void>(resolve => { const tick = () => { frames.push(window.__PIXEL__!.art().heroFrame); if (performance.now() - begin < 950) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); }); return [...new Set(frames)]; });
+  expect(frames.filter(f => f.includes('-death-')).length).toBe(13);
   await page.locator('canvas').screenshot({ path: `${directory}/mage-death-390.png` });
   writeFileSync(`${directory}/mage-evidence.json`, JSON.stringify({ frames, errors }, null, 2)); expect(errors).toEqual([]);
 });

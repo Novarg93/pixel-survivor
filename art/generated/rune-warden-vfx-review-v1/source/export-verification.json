@@ -1,0 +1,114 @@
+{
+  "exports": [
+    {
+      "clip": "code-projectile-flight",
+      "frames": 6,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "gifSHA256": "419131e04d0a50278b25cbfb53f0171576951127639e2ebdf5b7a994caeb86b0",
+      "asepriteSHA256": "6b58f228a025c654b21436752fc5e568a747d7976a1d60b4a3b0ea5071ebbb37"
+    },
+    {
+      "clip": "code-projectile-impact",
+      "frames": 6,
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "gifSHA256": "1251d953ddce2d80eb4f4704b444d944b38059f92a3f76ea35bfa329f4c3c0df",
+      "asepriteSHA256": "f877acbbd98fd8e08df5c4d0322338039b19242e411ec699fd09f8c70b7491ee"
+    },
+    {
+      "clip": "code-blink-idle",
+      "frames": 8,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "gifSHA256": "65c468a058168f55c4b8ca8182e788e07d9e119c420f60dd2620eee62f8fa2f6",
+      "asepriteSHA256": "4597780fc685adac750a0c78d2559f5cd76a874da1607c1e89f186e7be9f08c4"
+    },
+    {
+      "clip": "code-blink-fade",
+      "frames": 9,
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gifSHA256": "75eac4adb3a8a0cbcc591f2fc6de4aaf0593bb1cf98d06ae90195c2b5bd0792d",
+      "asepriteSHA256": "47186f8ab9ac3a53f2fe9b62df2cefc7f8b0704751d7b829a4de29aab81904d6"
+    },
+    {
+      "clip": "ai-projectile-flight",
+      "frames": 8,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "gifSHA256": "399f43c092ef9ab92a7c3cc66d8dd0e6e1391b6652a4f24fa0acdab85be349c7",
+      "asepriteSHA256": "ebb8b007e6ce73fcf7757186dae088195d16e13bb00ccc2f53da5109eeb3c106"
+    },
+    {
+      "clip": "ai-blink-fade",
+      "frames": 9,
+      "durationsMs": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gifSHA256": "5ce5d67af9bb9f96558c4f2afce1d9ce0fe930ca07ea8bfdbf8a0b8e369d2760",
+      "asepriteSHA256": "f86803572cc35c0691e1d2b0e130421644d0620bb0a553ec0d333e831fc110c0"
+    },
+    {
+      "clip": "ai-blink-idle",
+      "frames": 8,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "gifSHA256": "92cbae270f63c4b8ac3197692abdb6d4bea1acf7f7fa267a8f7d6963ab3572c5",
+      "asepriteSHA256": "84f2e53b81f2880208a1f12f9ee97b27d7b98bc1f9e1ecfe0d7a99e5b0b4038f"
+    }
+  ]
+}

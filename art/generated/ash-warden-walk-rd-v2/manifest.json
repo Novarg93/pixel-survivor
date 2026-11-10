@@ -1,0 +1,182 @@
+{
+  "status": "manual-art-review-pending; North motion concern",
+  "sourceBasis": "User-approved East GIF only; Aseprite variants comparison-only",
+  "canvasPolicy": {
+    "nativeEastWest": [
+      768,
+      768
+    ],
+    "nativeSouthNorth": [
+      192,
+      192
+    ],
+    "logical": [
+      192,
+      192
+    ],
+    "eastWestFixedPresentationFactor": 0.25,
+    "eastExact4xBlocks": true,
+    "perFrameFit": false,
+    "pivot": [
+      96,
+      154
+    ],
+    "scale": 0.6548310811
+  },
+  "directions": [
+    "east",
+    "west",
+    "south",
+    "north"
+  ],
+  "frameCounts": [
+    12,
+    12,
+    12,
+    12
+  ],
+  "incomingEastSheetColorDifferences": [
+    {
+      "gifFrame": 0,
+      "sameOrderDiff": 15680,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 75,
+      "bestMatch": {
+        "sheetFrame": 0,
+        "diff": 15680
+      }
+    },
+    {
+      "gifFrame": 1,
+      "sameOrderDiff": 12000,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 61,
+      "bestMatch": {
+        "sheetFrame": 1,
+        "diff": 12000
+      }
+    },
+    {
+      "gifFrame": 2,
+      "sameOrderDiff": 36912,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 8,
+      "bestMatch": {
+        "sheetFrame": 2,
+        "diff": 36912
+      }
+    },
+    {
+      "gifFrame": 3,
+      "sameOrderDiff": 47232,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 1,
+      "bestMatch": {
+        "sheetFrame": 3,
+        "diff": 47232
+      }
+    },
+    {
+      "gifFrame": 4,
+      "sameOrderDiff": 13584,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 15,
+      "bestMatch": {
+        "sheetFrame": 4,
+        "diff": 13584
+      }
+    },
+    {
+      "gifFrame": 5,
+      "sameOrderDiff": 31040,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 3,
+      "bestMatch": {
+        "sheetFrame": 5,
+        "diff": 31040
+      }
+    },
+    {
+      "gifFrame": 6,
+      "sameOrderDiff": 31344,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 4,
+      "bestMatch": {
+        "sheetFrame": 6,
+        "diff": 31344
+      }
+    },
+    {
+      "gifFrame": 7,
+      "sameOrderDiff": 36432,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 19,
+      "bestMatch": {
+        "sheetFrame": 7,
+        "diff": 36432
+      }
+    },
+    {
+      "gifFrame": 8,
+      "sameOrderDiff": 28880,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 17,
+      "bestMatch": {
+        "sheetFrame": 8,
+        "diff": 28880
+      }
+    },
+    {
+      "gifFrame": 9,
+      "sameOrderDiff": 14528,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 2,
+      "bestMatch": {
+        "sheetFrame": 9,
+        "diff": 14528
+      }
+    },
+    {
+      "gifFrame": 10,
+      "sameOrderDiff": 24080,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 2,
+      "bestMatch": {
+        "sheetFrame": 10,
+        "diff": 24080
+      }
+    },
+    {
+      "gifFrame": 11,
+      "sameOrderDiff": 14160,
+      "alphaDifferences": 0,
+      "maxChannelDelta": 23,
+      "bestMatch": {
+        "sheetFrame": 11,
+        "diff": 14160
+      }
+    }
+  ],
+  "gameplayChanged": false,
+  "generations": 2,
+  "budgetUSD": 0.4,
+  "chargedUSD": 0.28,
+  "background": {
+    "source": "Unchanged src/game/art/groveArtPack.ts paintGroveRegion burning",
+    "worldScale": 0.5
+  },
+  "mage": {
+    "source": "public/assets/hd/mage.png down-idle0",
+    "sourceScale": 0.375,
+    "pivot": [
+      32,
+      60
+    ]
+  },
+  "limitations": [
+    "East sheet and GIF colors differ; GIF is sole canonical sequence",
+    "North retains back design but visible leg motion is weak; not artistically accepted",
+    "Walking at World Speed uses real background displacement; native cadence is not calibrated for contact locking",
+    "72–120 provisional review range; 180/255 diagnostic only, no Run replacement"
+  ]
+}

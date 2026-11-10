@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 2c5ef0a5-8184-4e2a-b11a-5b50ae038fb7\njob_id: 2c5ef0a5-8184-4e2a-b11a-5b50ae038fb7\ndescription: Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111002\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"2c5ef0a5-8184-4e2a-b11a-5b50ae038fb7\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/2c5ef0a5-8184-4e2a-b11a-5b50ae038fb7/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: a219b466-f48d-5303-aed5-62aa3dc0c8f9\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

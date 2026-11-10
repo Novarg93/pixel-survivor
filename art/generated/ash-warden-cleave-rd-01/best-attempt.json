@@ -1,0 +1,43 @@
+{
+  "attempt": 2,
+  "folder": "attempt-02",
+  "status": "best test attempt; NOT artist approved; production criteria only partially met",
+  "phases": [
+    {
+      "name": "windup",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "release-impact",
+      "frames": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "recovery",
+      "frames": [
+        9,
+        10,
+        11
+      ],
+      "note": "9 still holds follow-through;10-11 return"
+    }
+  ],
+  "frameDurationMs": 150,
+  "totalDurationMs": 1800,
+  "sourceToWorldScale": 0.6548310810810811,
+  "sourceFoot": [
+    96,
+    154
+  ],
+  "perFrameNormalization": false
+}

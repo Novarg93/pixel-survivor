@@ -1,0 +1,7 @@
+{
+  "uniqueBodyFrames": 27,
+  "untrimmedBodyRGBABytes": 3981312,
+  "bodyAllocationGuide": "Review exports are not all runtime textures; deduplicate and keep original offsets when trimming.",
+  "separateVfxClips": 6,
+  "overlayAtlas": "phase3-overlay-atlas.json"
+}

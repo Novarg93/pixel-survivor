@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "arcane-shield-fade",
+    "tool": "animate_image_pixminimax",
+    "args": {
+      "description": "One gentle shield dismissal. The existing sparse lavender protective panels lose their light, separate into just a few dim tiny fragments along their original outline and disappear entirely to the provided transparent ending. The hollow center always remains empty, anchor and overall position fixed, no growing outward, no spinning, no violent shatter. Subtle harmless arcane magic fading, no smoke, no explosion, no white fill, no character. Keep the original clean thin pixel clusters and palette. Finish with no visible pixels.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/8ef82cf8-421b-4132-a036-d1e799114294/download",
+      "last_frame_url": "upload:3b099da6-a032-459c-a088-a30646aee792",
+      "frame_count": 8,
+      "view": "high top-down",
+      "subject_description": "a sparse hollow lavender arcane shield gently losing energy and fading away",
+      "initial_pose": "thin shield shell fixed around empty transparent center, feet anchor(64,108)",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111112
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 8e8bbc99-6f03-4112-9f69-498a02ef3b8f\njob_id: 8e8bbc99-6f03-4112-9f69-498a02ef3b8f\ndescription: One gentle shield dismissal. The existing sparse lavender protective panels lose their light, separate into just a few dim tiny fragments along their original outline and disappear entirely to the provided transparent ending. The hollow center always remains empty, anchor and overall position fixed, no growing outward, no spinning, no violent shatter. Subtle harmless arcane magic fading, no smoke, no explosion, no white fill, no character. Keep the original clean thin pixel clusters and palette. Finish with no visible pixels.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111112\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"8e8bbc99-6f03-4112-9f69-498a02ef3b8f\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/8e8bbc99-6f03-4112-9f69-498a02ef3b8f/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 28ac3a34-a6ed-5e02-9c6c-52a3d9f7813d\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "request": {
+    "id": "arcane-shield-model",
+    "args": {
+      "width": 128,
+      "height": 128,
+      "no_background": true,
+      "max_colors": 8,
+      "style_image": {
+        "url": "upload:590e0553-12b3-417e-b0fa-a1e682b37d7b",
+        "usage_description": "Match the approved mage's crisp pixel clusters, restrained dark fantasy silhouette and broad shading only. Do not draw the mage or any person."
+      },
+      "style_options": {
+        "color_palette": false,
+        "outline": true,
+        "detail": true,
+        "shading": true
+      },
+      "description": "Isolated ARCANE SHIELD overlay for a small mortal mage in a top-down dark fantasy pixel-art game. A thin hollow protective oval shell, about 74px wide and 92px tall on this128px transparent canvas, centered at (64,60), bottom near y108. Sparse separated broad curved fragments of muted lavender, indigo and steel blue form the shell; one or two tiny restrained arcane marks at its sides. Huge completely TRANSPARENT EMPTY CENTER so the mage remains readable when this is layered over them. It is an energy outline and small panels, NOT a solid object. Large crisp clusters, simple elegant low-detail construction, narrow light edge, no random sparkle noise. Gentle ordinary defensive ability, not an ultimate. No person, silhouette or dummy inside, no hero, no face, no stone, no floor, no rune circle under feet, no wings, no crown, no giant halo, no rays or white fill, no opaque glowing disk, no heavy bloom. Only the hollow shield on transparency. The feet anchor is (64,108); keep all parts inside14px margins.",
+      "palette": [
+        "#2f3155",
+        "#4f4c83",
+        "#7266af",
+        "#9b84ce",
+        "#b58cfa",
+        "#a5c4ff",
+        "#d9ddf8"
+      ],
+      "palette_name": "Pixel Survivor restrained arcane lavender and steel blue",
+      "seed": 2026111101
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"8ef82cf8-421b-4132-a036-d1e799114294\",\n  \"image_id\": \"de182e40-e5fb-5804-830a-19264c284a5a\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"de182e40-e5fb-5804-830a-19264c284a5a\",\n  \"job_id\": \"8ef82cf8-421b-4132-a036-d1e799114294\",\n  \"description\": \"Isolated ARCANE SHIELD overlay for a small mortal mage in a top-down dark fantasy pixel-art game. A thin hollow protective oval shell, about 74px wide and 92px tall on this128px transparent canvas, centered at (64,60), bottom near y108. Sparse separated broad curved fragments of muted lavender, indigo and steel blue form the shell; one or two tiny restrained arcane marks at its sides. Huge completely TRANSPARENT EMPTY CENTER so the mage remains readable when this is layered over them. It is an energy outline and small panels, NOT a solid object. Large crisp clusters, simple elegant low-detail construction, narrow light edge, no random sparkle noise. Gentle ordinary defensive ability, not an ultimate. No person, silhouette or dummy inside, no hero, no face, no stone, no floor, no rune circle under feet, no wings, no crown, no giant halo, no rays or white fill, no opaque glowing disk, no heavy bloom. Only the hollow shield on transparency. The feet anchor is (64,108); keep all parts inside14px margins.\",\n  \"seed\": 2026111101,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/8ef82cf8-421b-4132-a036-d1e799114294/download\"\n}\nPoll get_image(job_id=\"8ef82cf8-421b-4132-a036-d1e799114294\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "8ef82cf8-421b-4132-a036-d1e799114294",
+    "image_id": "de182e40-e5fb-5804-830a-19264c284a5a",
+    "status": "processing",
+    "source_image_id": "de182e40-e5fb-5804-830a-19264c284a5a",
+    "job_id": "8ef82cf8-421b-4132-a036-d1e799114294",
+    "description": "Isolated ARCANE SHIELD overlay for a small mortal mage in a top-down dark fantasy pixel-art game. A thin hollow protective oval shell, about 74px wide and 92px tall on this128px transparent canvas, centered at (64,60), bottom near y108. Sparse separated broad curved fragments of muted lavender, indigo and steel blue form the shell; one or two tiny restrained arcane marks at its sides. Huge completely TRANSPARENT EMPTY CENTER so the mage remains readable when this is layered over them. It is an energy outline and small panels, NOT a solid object. Large crisp clusters, simple elegant low-detail construction, narrow light edge, no random sparkle noise. Gentle ordinary defensive ability, not an ultimate. No person, silhouette or dummy inside, no hero, no face, no stone, no floor, no rune circle under feet, no wings, no crown, no giant halo, no rays or white fill, no opaque glowing disk, no heavy bloom. Only the hollow shield on transparency. The feet anchor is (64,108); keep all parts inside14px margins.",
+    "seed": 2026111101,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/8ef82cf8-421b-4132-a036-d1e799114294/download"
+  }
+}

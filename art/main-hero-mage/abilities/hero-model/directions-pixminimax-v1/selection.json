@@ -1,0 +1,22 @@
+{
+  "south": {
+    "walk": "south/walk",
+    "run": "south/run"
+  },
+  "south-east": {
+    "walk": "south-east/walk",
+    "run": "south-east/run"
+  },
+  "north-east": {
+    "walk": "north-east/walk",
+    "run": "north-east/run"
+  },
+  "north-west": {
+    "walk": "north-west/walk",
+    "run": "north-west/run"
+  },
+  "south-west": {
+    "walk": "south-west/walk/attempt-02",
+    "run": "south-west/run"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "provider": "PixelLab",
+  "balanceBefore": 1399.95,
+  "balanceAfter": 1352.95,
+  "creditsBeforeUSD": 0,
+  "creditsAfterUSD": 0,
+  "chargedGenerations": 47,
+  "jobs": [
+    {
+      "id": "landing-fade",
+      "jobId": "c7312daf-b964-424e-aed5-54e3f6104416",
+      "status": "completed",
+      "gallery": {
+        "id": "51945450-6e5e-5283-a6fa-93f22d08c792",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 9,
+      "chargedGenerations": 2
+    },
+    {
+      "id": "landing-impact",
+      "jobId": "04c4c37e-b3a7-4d2c-90b9-424fd2d274d0",
+      "status": "completed",
+      "gallery": {
+        "id": "47d7e2e5-9024-5d41-91f1-50d673885c9e",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 17,
+      "chargedGenerations": 2
+    },
+    {
+      "id": "landing-model",
+      "jobId": "b4e283ca-6100-4bbd-9571-634c9168fdd0",
+      "status": "completed",
+      "gallery": {
+        "id": "35654c67-2a5a-5181-998b-47278446e0ae",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 1,
+      "chargedGenerations": 6
+    },
+    {
+      "id": "landing-model-v2",
+      "jobId": "45ac1896-ae1f-4595-b208-fe969b323fb6",
+      "status": "completed",
+      "gallery": {
+        "id": "6e7cb9be-6833-55ba-9ba7-5b486f4d39ab",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 1,
+      "chargedGenerations": 6
+    },
+    {
+      "id": "landing-pulse",
+      "jobId": "4e36f07d-949c-4ae7-a8f6-e0634e9fd4f1",
+      "status": "completed",
+      "gallery": {
+        "id": "cfe2f5a6-f3b2-5b1c-a59e-2605998df992",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 9,
+      "chargedGenerations": 1
+    },
+    {
+      "id": "meteor-flight",
+      "jobId": "7cf2b7b9-d8a0-49d8-8da4-dac8d2869ae9",
+      "status": "completed",
+      "gallery": {
+        "id": "33c15cfe-afd8-5628-a1b2-a88b24fb891e",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 9,
+      "chargedGenerations": 1
+    },
+    {
+      "id": "meteor-model",
+      "jobId": "14a36da0-e28c-4823-af66-f85652a16302",
+      "status": "completed",
+      "gallery": {
+        "id": "f9112ec3-198f-5ac7-b2d6-ad018ecc5f11",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 1,
+      "chargedGenerations": 6
+    },
+    {
+      "id": "north-apex",
+      "jobId": "0bd68430-154d-410a-ba2d-f2fb4c44d8ed",
+      "status": "completed",
+      "gallery": {
+        "id": "db5379a0-328d-5373-a359-9a06295cefd9",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 1,
+      "chargedGenerations": 9
+    },
+    {
+      "id": "north-contact",
+      "jobId": "04f5f35f-53b5-4719-81c6-0e67b78e72fe",
+      "status": "completed",
+      "gallery": {
+        "id": "ed35a0fc-cc62-550c-95db-4b6e6bdd02d7",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 1,
+      "chargedGenerations": 9
+    },
+    {
+      "id": "north-raise",
+      "jobId": "11b9ed3d-bdd7-418b-91d9-c49be2c07daf",
+      "status": "completed",
+      "gallery": {
+        "id": "5198b6a9-700f-5699-8922-ca0b59281cd8",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 9,
+      "chargedGenerations": 1
+    },
+    {
+      "id": "north-recover",
+      "jobId": "f9cd037e-dc9f-4439-add2-06e338106ada",
+      "status": "completed",
+      "gallery": {
+        "id": "1f105490-cd70-5a29-ad88-76200617da17",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 9,
+      "chargedGenerations": 1
+    },
+    {
+      "id": "north-slam-v1",
+      "jobId": "1497a069-ce6c-435a-ab49-2037b79f7dd2",
+      "status": "completed",
+      "gallery": {
+        "id": "9c3b7c07-5d7f-5f53-9c51-f2d56ff5d06d",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 17,
+      "chargedGenerations": 2
+    },
+    {
+      "id": "north-strike",
+      "jobId": "ad6e190e-1ce0-49a0-a879-58ef3a25f920",
+      "status": "completed",
+      "gallery": {
+        "id": "ac43855c-19f3-5e41-9c59-6006bc8406c0",
+        "type": "image",
+        "status": "saved"
+      },
+      "frames": 5,
+      "chargedGenerations": 1
+    }
+  ],
+  "selectedClips": [
+    "north-slam",
+    "meteor-flight",
+    "landing-pulse",
+    "landing-impact"
+  ],
+  "rejected": [
+    {
+      "id": "landing-model",
+      "reason": "Opaque white disk rather than soft open ground tell; replaced with explicit copper palette and empty center."
+    },
+    {
+      "id": "north-slam-v1",
+      "reason": "Body turned sideways during strike; replaced with AI-authored north key poses and pinned interpolation."
+    }
+  ],
+  "excludedFrames": [
+    {
+      "job": "landing-impact",
+      "indices": [
+        15,
+        16
+      ],
+      "reason": "Gray residual patch replaced with separately generated AI dissolve."
+    }
+  ],
+  "validationFailures": [
+    {
+      "id": "north-slam",
+      "jobCreated": false,
+      "cost": 0,
+      "reason": "Description exceeded1000 characters; shortened before retry."
+    }
+  ],
+  "postprocess": "Lossless copies, transparent input padding, timing and Aseprite/GIF assembly only. No manual recoloring or retouching of generated PNGs.",
+  "runtimeIntegration": false,
+  "acceptedForIntegration": false
+}

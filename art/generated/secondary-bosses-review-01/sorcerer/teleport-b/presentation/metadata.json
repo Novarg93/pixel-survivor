@@ -1,0 +1,37 @@
+{
+  "method": "Separate local hard blink visibility gate over unchanged RD articulated frames; no PNG translation. NOT an RD-generated invisible pose.",
+  "visibility": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "relocationFrame": 4,
+  "departureFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "arrivalFrames": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source": "../frames/*.png",
+  "bodyAndVfxSeparate": true
+}

@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"f8c66252-c254-4598-b85b-9bc507171e57\",\n  \"image_id\": \"9f173551-dece-5a3e-a137-dc0a307c6c2e\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"9f173551-dece-5a3e-a137-dc0a307c6c2e\",\n  \"job_id\": \"f8c66252-c254-4598-b85b-9bc507171e57\",\n  \"description\": \"One small hostile eclipse magic projectile for a dark fantasy pixel-art survivors game, travelling horizontally EAST. A compact hooked crescent of spectral cold mint energy wrapped around a dark blue-slate core, two short swept-back wisps. Strong coarse pixel clusters and stepped edges, sparse flat shading, a single narrow pale-mint rim highlight; modest miniboss attack, no bloom or blur. Not an arrowhead or purple rune shard, not a skull, not a glyph circle, not a huge fireball. Use the reference armored Eclipse caster ONLY as palette and pixel-style reference, do not draw the character. One isolated projectile only on transparent canvas. Head/pivot at x92 y64 on 128x128 canvas. Visible design contained between x32..104 y44..84, a short tapering left tail, generous transparent margins on every side. Restrained dark slate/teal/mint palette, very limited pale highlight area, no pure-white mass, no warm colors, no purple, no lightning/web/particles filling the canvas, no background, no floor, no text.\",\n  \"seed\": 110110,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/f8c66252-c254-4598-b85b-9bc507171e57/download\"\n}\nPoll get_image(job_id=\"f8c66252-c254-4598-b85b-9bc507171e57\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "f8c66252-c254-4598-b85b-9bc507171e57",
+    "image_id": "9f173551-dece-5a3e-a137-dc0a307c6c2e",
+    "status": "processing",
+    "source_image_id": "9f173551-dece-5a3e-a137-dc0a307c6c2e",
+    "job_id": "f8c66252-c254-4598-b85b-9bc507171e57",
+    "description": "One small hostile eclipse magic projectile for a dark fantasy pixel-art survivors game, travelling horizontally EAST. A compact hooked crescent of spectral cold mint energy wrapped around a dark blue-slate core, two short swept-back wisps. Strong coarse pixel clusters and stepped edges, sparse flat shading, a single narrow pale-mint rim highlight; modest miniboss attack, no bloom or blur. Not an arrowhead or purple rune shard, not a skull, not a glyph circle, not a huge fireball. Use the reference armored Eclipse caster ONLY as palette and pixel-style reference, do not draw the character. One isolated projectile only on transparent canvas. Head/pivot at x92 y64 on 128x128 canvas. Visible design contained between x32..104 y44..84, a short tapering left tail, generous transparent margins on every side. Restrained dark slate/teal/mint palette, very limited pale highlight area, no pure-white mass, no warm colors, no purple, no lightning/web/particles filling the canvas, no background, no floor, no text.",
+    "seed": 110110,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/f8c66252-c254-4598-b85b-9bc507171e57/download"
+  },
+  "isError": false
+}

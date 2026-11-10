@@ -1,0 +1,8 @@
+import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/astral-projectile-review-v1',baseline=JSON.parse(readFileSync(`${root}/source/runtime-baseline.json`,'utf8')),hash=f=>createHash('sha256').update(readFileSync(f)).digest('hex');
+const changed=Object.keys(baseline).filter(f=>hash(f)!==baseline[f]).sort(),allowed=['src/game/art/GameArt.ts','src/game/art/RuneWardenArt.ts','src/game/art/AstralRevenantArt.ts','src/game/art/assetRegistry.ts'].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]),added=[...walk('src'),...walk('public')].filter(f=>!(f in baseline)).sort(),allowedAdded=['public/assets/hd/astral-projectile-pixellab-v1/atlas.png','public/assets/hd/astral-projectile-pixellab-v1/atlas.json','src/game/art/astralProjectileManifestPixellab.json','src/game/art/astralProjectilePixellabPack.ts'].sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowed)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw Error('Unexpected integration scope: '+JSON.stringify({changed,added}));
+const report={runtimeIntegration:true,protectedFiles:Object.keys(baseline).length,unchangedProtectedFiles:Object.keys(baseline).length-changed.length,changed,added,currentSHA256:Object.fromEntries([...changed,...added].map(f=>[f,hash(f)])),gameplayAndSpeedsUnchanged:true,previousRuneAssetsUnchanged:true,oldAstralAndBossAssetsUnchanged:true};
+writeFileSync('art/generated/astral-projectile-runtime-v1/integration-verification.json',JSON.stringify(report,null,2)+'\n');globalThis.console.log(JSON.stringify({approvedScopeVerified:true,changed:changed.length,added:added.length,unchanged:report.unchangedProtectedFiles}));

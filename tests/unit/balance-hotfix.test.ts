@@ -1,3 +1,5 @@
+// Exercise the retained enabled presentation; default-off policy is tested separately.
+vi.mock('../../src/game/config/playerVisuals',()=>({PLAYER_VISUALS:{arcaneBlink:true,legacyArcaneBlink:true,arcaneShield:true,legacyArcaneShield:true}}));
 import { expect, it, vi } from 'vitest';
 import type Phaser from 'phaser';
 import { mkdirSync, writeFileSync } from 'node:fs';

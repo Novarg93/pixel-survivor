@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 22e5f4c2-714a-43c1-b70a-1231e4e0cbf7\njob_id: 22e5f4c2-714a-43c1-b70a-1231e4e0cbf7\ndescription: STRICT rear three-quarter view throughout: back of head and blue cape dominate, body and gaze point toward the UPPER RIGHT corner. Do not turn toward the viewer or reveal the chest front. The casting hand extends AWAY toward the UPPER RIGHT. Preserve this exact rear three-quarter silhouette throughout. Bring BOTH hands together in front of the chest ON THE FAR SIDE of the body, bend the elbows, hold, then lower to neutral. Feet planted, no new objects or large effects. Preserve the costume, colors and scale. Fixed low top-down camera, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 8111023\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"22e5f4c2-714a-43c1-b70a-1231e4e0cbf7\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/22e5f4c2-714a-43c1-b70a-1231e4e0cbf7/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: a735da84-6833-511a-a7f9-b8a3bc684351\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

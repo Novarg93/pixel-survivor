@@ -1,4 +1,55 @@
 import { test, expect } from '@playwright/test';
+import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+
+test('built approved variant2 boss music streams through the single audio context and stops on pause',async({page})=>{
+  await page.addInitScript(()=>{
+    Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});
+    const monitor={players:[]as HTMLAudioElement[],contexts:0};Object.defineProperty(window,'__BUILT_MUSIC__',{value:monitor});
+    window.Audio=new Proxy(window.Audio,{construct(target,args){const a=Reflect.construct(target,args) as HTMLAudioElement;monitor.players.push(a);return a;}});
+    window.AudioContext=new Proxy(window.AudioContext,{construct(target,args){monitor.contexts++;return Reflect.construct(target,args);}});
+  });
+  const errors:string[]=[],external:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.url().startsWith('http')&&!r.url().startsWith('http://127.0.0.1:'))external.push(r.url());});
+  await page.goto('/');await page.getByRole('button',{name:/Бой со Стражем/}).click();
+  await expect.poll(()=>page.evaluate(()=>{const m=Reflect.get(window,'__BUILT_MUSIC__')as{players:HTMLAudioElement[]};return m.players.some(a=>!a.paused&&a.currentTime>.3&&a.src.endsWith('/music-v1/boss.mp3'));})).toBe(true);
+  const state=await page.evaluate(()=>{const m=Reflect.get(window,'__BUILT_MUSIC__')as{players:HTMLAudioElement[];contexts:number};return{contexts:m.contexts,players:m.players.length,playing:m.players.filter(a=>!a.paused).length};});expect(state).toEqual({contexts:1,players:2,playing:1});
+  await page.getByRole('button',{name:'Пауза',exact:true}).click();await expect.poll(()=>page.evaluate(()=>{const m=Reflect.get(window,'__BUILT_MUSIC__')as{players:HTMLAudioElement[]};return m.players.every(a=>a.paused);})).toBe(true);
+  const manifest=JSON.parse(readFileSync('art/generated/music-runtime-v1/manifest.json','utf8'))as{entries:{id:string;sha256:string;variant:number}[]};for(const e of manifest.entries){expect(e.variant).toBe(2);const r=await page.request.get(`/assets/audio/music-v1/${e.id}.mp3`);expect(r.ok()).toBe(true);expect(createHash('sha256').update(await r.body()).digest('hex')).toBe(e.sha256);}
+  expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();expect(errors).toEqual([]);expect(external).toEqual([]);
+});
+
+test('built Mage audio loads11 local WAVs and plays lightning ultimate from the menu',async({page,baseURL})=>{
+  const root='screenshots/mage-sfx-elevenlabs-v1';mkdirSync(root,{recursive:true});const errors:string[]=[],external:string[]=[],audio:string[]=[];
+  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{const url=new URL(r.url());if(url.origin!==new URL(baseURL!).origin&&url.protocol!=='data:')external.push(r.url());});
+  page.on('response',r=>{if(r.url().includes('/assets/audio/mage-sfx-v1/')||r.url().includes('/assets/audio/mage-sfx-uploaded-v1/')){audio.push(new URL(r.url()).pathname);if(r.status()!==200)errors.push(`audio HTTP ${r.status()}`);}});
+  await page.addInitScript(()=>{
+    Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});
+    const started:{duration:number;loop:boolean}[]=[],start=AudioBufferSourceNode.prototype.start;
+    Object.defineProperty(window,'__MAGE_SFX_OUTPUT__',{value:started});
+    AudioBufferSourceNode.prototype.start=function(...args){started.push({duration:this.buffer?.duration??0,loop:this.loop});return Reflect.apply(start,this,args);};
+  });
+  await page.goto('/');await expect(page.getByRole('button',{name:/Бой со Стражем/})).toContainText('Гнев Небес');await expect.poll(()=>audio.length).toBe(11);
+  await page.screenshot({path:root+'/production-menu.png'});await page.getByRole('button',{name:/Бой со Стражем/}).click();await expect(page.locator('.ultimate-control')).toContainText('10/10');
+  await page.waitForTimeout(2800);await page.keyboard.press('q');
+  await expect.poll(()=>page.evaluate(()=>{
+    const rows=Reflect.get(window,'__MAGE_SFX_OUTPUT__') as{duration:number;loop:boolean}[];
+    return rows.some(row=>!row.loop&&Math.abs(row.duration-2)<.01);
+  })).toBe(true);
+  await page.screenshot({path:root+'/production-ultimate.png'});expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();
+  const manifest=JSON.parse(readFileSync('art/generated/mage-sfx-elevenlabs-v1/manifest.json','utf8')) as{entries:{id:string;file:string;sha256:string}[]};
+  const overrides=JSON.parse(readFileSync('art/generated/mage-uploaded-sounds-v1/manifest.json','utf8')) as{entries:{id:string;file:string;sha256:string}[]};
+  for(const entry of manifest.entries){const override=overrides.entries.find(e=>e.id===entry.id),url=override?override.file.replace('public/','/'):'/assets/audio/mage-sfx-v1/'+entry.file;const r=await page.request.get(url);expect(r.ok()).toBe(true);expect(createHash('sha256').update(await r.body()).digest('hex')).toBe(override?.sha256??entry.sha256);}
+  expect(external).toEqual([]);expect(errors).toEqual([]);writeFileSync(root+'/production-evidence.json',JSON.stringify({audio,external,errors,harnessAbsent:true,generatedUltimatePlayed:true},null,2));
+});
+const MAGE_HERO=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8')) as {pages:{index:number}[]};
+for(const width of [1280,390])test(`built public PixelLab Blink while casting north-east ${width}`,async({page})=>{
+ const root=`screenshots/mage-blink-v1/production/${width}`;mkdirSync(root,{recursive:true});const errors:string[]=[],assets:string[]=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);if(r.url().includes('/assets/hd/mage-blink-v1/'))assets.push(new URL(r.url()).pathname);});
+ await page.setViewportSize({width,height:width===390?844:720});await page.goto('/');await page.getByRole('button',{name:'Начать забег'}).click();
+ await page.keyboard.down('w');await page.keyboard.down('d');await page.waitForTimeout(100);await page.keyboard.press('Space');await page.waitForTimeout(80);await page.keyboard.up('w');await page.keyboard.up('d');await page.keyboard.press('Escape');
+ await expect(page.getByRole('dialog',{name:'Пауза',exact:true})).toBeVisible();await expect(page.locator('.mobility-slot')).not.toHaveClass(/ready/);await page.addStyleTag({content:'.overlay{display:none!important}'});await page.locator('canvas').screenshot({path:root+'/north-east-paused.png'});
+ expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();expect(assets.sort()).toEqual(['/assets/hd/mage-blink-v1/atlas.json','/assets/hd/mage-blink-v1/atlas.png']);expect(errors).toEqual([]);writeFileSync(root+'/evidence.json',JSON.stringify({viewport:[width,width===390?844:720],keyboardBlink:true,cooldownActive:true,paused:true,devHarnessAbsent:true,assets,errors},null,2));
+});
 import { mockGamepads, connectPad, pressPad, stick, padFocus } from '../helpers/gamepad';
 test('built menu excludes temporary DEV ultimate launchers',async({page})=>{
   await page.goto('/');await expect(page.getByRole('button',{name:/^Начать забег/})).toBeVisible();await expect(page.locator('[data-dev-ultimate]')).toHaveCount(0);await expect(page.getByLabel('DEV — тест ультимейтов')).toHaveCount(0);
@@ -58,7 +109,7 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
-  expect(artRequests.sort()).toEqual(['/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-fireball-v1/atlas.png','/assets/hd/mage-fireball-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-ability-vfx-v1/atlas.json','/assets/hd/mage-ability-vfx-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/mage-casting.json', '/assets/hd/mage-casting.png', '/assets/hd/mage.json', '/assets/hd/mage.png', '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
+expect(artRequests.sort()).toEqual([...['north','meteor'].flatMap(id=>['json','png'].map(ext=>`/assets/hd/ash-warden-pixellab-v1/${id}.${ext}`)),'/assets/hd/mage-shield-nova-pixellab-v1/atlas.png','/assets/hd/mage-shield-nova-pixellab-v1/atlas.json','/assets/hd/mage-blink-v1/atlas.png','/assets/hd/mage-blink-v1/atlas.json','/assets/hd/mage-moving-cast-v2/upper.png','/assets/hd/mage-moving-cast-v2/upper.json','/assets/hd/mage-cast-v2/atlas.png','/assets/hd/mage-cast-v2/atlas.json','/assets/hd/mage-run-v2/atlas.png','/assets/hd/mage-run-v2/atlas.json','/assets/hd/mage-idle-v2/atlas.png','/assets/hd/mage-idle-v2/atlas.json','/assets/hd/mage-phantom-v1/atlas.png','/assets/hd/mage-phantom-v1/atlas.json','/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-meteor-pixellab-v1/atlas.png','/assets/hd/mage-meteor-pixellab-v1/atlas.json','/assets/hd/mage-fireball-pixellab-v1/atlas.png','/assets/hd/mage-fireball-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.png','/assets/hd/astral-projectile-pixellab-v1/atlas.json','/assets/hd/astral-projectile-pixellab-v1/atlas.png','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', ...MAGE_HERO.pages.flatMap(p=>[`/assets/hd/mage-hero-v2/${p.index}.json`,`/assets/hd/mage-hero-v2/${p.index}.png`]), '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
 });
 
 for (const width of [1280, 390]) test(`built controller-only shell, movement, mobility and pause ${width}`, async ({ page }) => {

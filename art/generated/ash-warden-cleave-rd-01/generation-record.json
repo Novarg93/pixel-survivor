@@ -1,0 +1,360 @@
+{
+  "date": "2026-11-06",
+  "budgetUSD": 2,
+  "base": "art/generated/ash-warden-retrodiffusion-01/best-candidate.png",
+  "baseChoice": "User explicitly selects RetroDiffusion, superseding previous PixelLab recommendation.",
+  "preparation": {
+    "canvas": [
+      192,
+      192
+    ],
+    "offset": [
+      32,
+      32
+    ],
+    "sourceScale": 1,
+    "sourceBodyHeight": 111,
+    "worldScale": 0.6548310810810811,
+    "foot": [
+      96,
+      154
+    ],
+    "background": "#808080 opaque for API input; transparent companion retained"
+  },
+  "balanceBefore": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 96,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 96,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "availableModels": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "selectedStyle": {
+    "prompt_style": "rd_advanced_animation__attack",
+    "name": "Attack",
+    "description": "Upload a starting frame and generate to animate the character attack sequence. Best results when uploading a neutral pose.",
+    "group_id": "RD Animation Advanced",
+    "required_model": null,
+    "required_tab": "tab:advanced-animation",
+    "min_width": 32,
+    "max_width": 256,
+    "min_height": 32,
+    "max_height": 256,
+    "max_number_of_images": 1,
+    "require_input_image": true,
+    "prompt_requirement": null,
+    "supports_reference_images": false,
+    "supports_frames_duration": true,
+    "example_prompt": "Over head sword swing, big impact"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__attack",
+        "prompt": "Infernal Great Cleave: ONE single heavy two-handed overhead sword attack, facing south toward the viewer in low top-down view, stay in place. Preserve this exact ancient charcoal-armored Ash Warden, broad shoulders, orange magma fissures, narrow glowing visor, moderate dry shoulder branches, torn ash-gray tabard. BOTH armored hands must remain visibly closed around the SAME long sword grip throughout ALL frames, two connected arms, no loose or disappearing hand. Preserve the single massive broad thick greatsword and thick crossguard. A coherent 12-frame action: frames 1-5 deliberate slow heavy windup, bend knees and twist torso slightly as both hands raise the sword overhead and behind the head; frames 6-8 explosive overhead DOWNWARD chop straight FORWARD toward screen bottom, blade feels empowered and extended by force; frames 9-12 deep planted follow-through with weight and inertia, pause low, then start returning toward original neutral combat stance. Keep facing south and boots anchored, no walking, no spin, no side sweep, no circular arc, no wide horizontal sector. The attack follows a narrow long straight lane along the ground toward screen bottom. Do NOT paint the long ground lane: leave it for separate game VFX. No fire wave, no explosion, no extra scene effects, no ground, no shadow, no scenery, no text. Keep the entire sword, feet and branch tips inside the canvas with margins. Stable body size, armor silhouette and foot position, transparent background.",
+        "input_image": "input-padded-rgb.png",
+        "frames_duration": 12,
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "remove_bg": true,
+        "seed": 6110601,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793985764,
+        "credit_cost": 0,
+        "balance_cost": 0.14,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.14,
+        "resolved_prompt_style": "rd_advanced_animation__attack",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "67f3a16a-9f34-48eb-b041-b7ada52cb5df",
+        "request_id": "67f3a16a-9f34-48eb-b041-b7ada52cb5df",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793985820,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "67f3a16a-9f34-48eb-b041-b7ada52cb5df",
+        "outputs_retained_until": 1794072179,
+        "output_url_expires_at": 1793986746,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 94
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 94,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 94,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "reason": "Attempt 1 only raises sword, missing impact/recovery; switch action mode and shorten prompt.",
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "prompt": "One COMPLETE heavy two-handed overhead sword chop toward the viewer, then recover. Begin in the supplied idle pose. Briefly lift the huge broad greatsword overhead with BOTH hands on ONE grip, then immediately SLAM it straight DOWN and FORWARD toward screen bottom in a narrow vertical path, bend the knees and lean the heavy torso into impact, hold the sword low after impact, then return toward the starting stance. Full action must include downward impact and follow-through, not just raising the sword. Fixed south-facing low top-down camera. Planted feet, consistent massive charcoal armor, orange cracks, visor, small dry shoulder branches and ragged tabard. Two hands stay attached to the same grip in every pose; sword remains broad and thick. No spin, no horizontal sweep, no fire trail, no ground effects, no scenery. Entire character and sword inside canvas, transparent background.",
+        "input_image": "input-padded-rgb.png",
+        "frames_duration": 12,
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "remove_bg": true,
+        "seed": 6110601,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793985888,
+        "credit_cost": 0,
+        "balance_cost": 0.25,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.25,
+        "resolved_prompt_style": "rd_advanced_animation__custom_action",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "40f143a7-9ce6-4661-97f8-5035af47d18f",
+        "request_id": "40f143a7-9ce6-4661-97f8-5035af47d18f",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793985946,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "40f143a7-9ce6-4661-97f8-5035af47d18f",
+        "outputs_retained_until": 1794072299,
+        "output_url_expires_at": 1793986849,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 90
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "balanceAfter": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 91,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 91,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "balanceAfter": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 91,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 91,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "actualUSD": 0,
+  "hypotheticalBalanceUSD": 0.39,
+  "bestAttempt": 2,
+  "artStatus": "partial success, not approved; manual cleave refinement before other attacks",
+  "processing": [
+    "Exact transparent padding32px, no source scaling",
+    "Opaque gray companion for API",
+    "Browser ImageDecoder GIF disposal-aware frame extraction; original order and150ms/frame",
+    "Nearest-neighbor comparison sheets",
+    "No retouch, no generator mixing, no frame reordering or retiming"
+  ],
+  "baseSHA256": "14058d88d43bad3da0d9a1bad61bb1097ae816f9fbb70d2a255a153a17fb8cfc",
+  "outputSHA256": {
+    "animation-sheet.png": "efcd131e2fe68cc9cab435744450db8fb10e13667fb06993ed6247d2077a73d5",
+    "animation-strip.png": "2889805fb36dfd113c3efe0448ff9544227bf30c7d3430402162b0438209bb2a",
+    "attempt-01-original.gif": "a494f0412f8ff4a2a6581b198f494192479fae654025f1fa1af72a6d251a2f9d",
+    "attempt-02-original.gif": "93fb17930fa043b4a0c985953a4a77fcade336314d5527dfcf954f7c59cf2e3c",
+    "best-attempt.gif": "93fb17930fa043b4a0c985953a4a77fcade336314d5527dfcf954f7c59cf2e3c",
+    "comparison-desktop.png": "579ec98e43dc23a3561cebfaf79dee1829f9d0cc930ce5795ce47d81c64b201a",
+    "comparison-mobile-landscape.png": "db8f37e8ee043329f9ec3c7618de8e38e45476cbc56d56858317c341a30fffae",
+    "comparison-sheet.png": "d2551b64fd36d79eb0d999f3d7a1cb2253c7080ae4f32d38112317d11364598d",
+    "input-padded-rgb.png": "09248efd8ad706beb5ce889e9dff86ac1f260b9aa0715fb8c7ed779fc762ea2d",
+    "input-padded-rgba.png": "7691cf768e21ee5e30835f5e89be2428c881b39acf80578c13a3473f0e394219",
+    "nearest-x4.png": "3b2cfcbeccc5bb2ac9d7ec75d3c4b7bf04bf731f41f2f7f4037ae66a06b49310",
+    "preview-screenshot.png": "01c3551a1c6a6b2044793e8babb0b0266560e9a1649f462d75d82bba62c91aaf",
+    "attempt-01\\animation-sheet.png": "f35832b80149912c898a163cc371d779dc67c724954244c6c8803a9646a85ce0",
+    "attempt-01\\animation-strip.png": "eedbcce55499810013f2bfdf73a8fb2a6198d34b1ba98be337a7cc6dc4a1ea50",
+    "attempt-01\\canvas-screenshot.png": "345fdcc0a7b2c9e7aa0c19aa2cec39f9fd4253afe8c94d4c9439dd6e08359f97",
+    "attempt-01\\comparison-desktop.png": "d7bedba0dbebf437ff8048b3c6518fe475253abbc2f1d0e0dd82307b9471d5fe",
+    "attempt-01\\comparison-mobile-landscape.png": "d132cdd73d53ffcd2122aff6db2e148157e88136bf7b2c29a89254de9ad043b6",
+    "attempt-01\\nearest-x4.png": "27c26caa1db343b4d65f7458407821f53f74acb7a2db3ce3f4d993acd0468baa",
+    "attempt-02\\animation-sheet.png": "efcd131e2fe68cc9cab435744450db8fb10e13667fb06993ed6247d2077a73d5",
+    "attempt-02\\animation-strip.png": "2889805fb36dfd113c3efe0448ff9544227bf30c7d3430402162b0438209bb2a",
+    "attempt-02\\canvas-screenshot.png": "4805d5d231ee3c45c4eae80145ec3da663d780193f7c43dab29d450b3d75d2e4",
+    "attempt-02\\comparison-desktop.png": "579ec98e43dc23a3561cebfaf79dee1829f9d0cc930ce5795ce47d81c64b201a",
+    "attempt-02\\comparison-mobile-landscape.png": "db8f37e8ee043329f9ec3c7618de8e38e45476cbc56d56858317c341a30fffae",
+    "attempt-02\\comparison-sheet.png": "d2551b64fd36d79eb0d999f3d7a1cb2253c7080ae4f32d38112317d11364598d",
+    "attempt-02\\nearest-x4.png": "3b2cfcbeccc5bb2ac9d7ec75d3c4b7bf04bf731f41f2f7f4037ae66a06b49310",
+    "attempt-02\\frames\\00.png": "b1e5277c551db4ea366ad43927679786c317a313db4b6face8787fb9f1ec933c",
+    "attempt-02\\frames\\01.png": "cb153dcc57d3a5576f78bd2ba6ebaa559423e484e2ae9c7ea7d34843cb66726b",
+    "attempt-02\\frames\\02.png": "4f6c7874be67dbfb320b86103e7dc87bee92f8845e8720e22f3a3e75ee9768e5",
+    "attempt-02\\frames\\03.png": "b1bd7d4e75143be6da70b3012348736d0ab4035417b465f29433a976b2e7b003",
+    "attempt-02\\frames\\04.png": "260e83b05f2217e5883b5f3aeed0dfec6bdc6ad52a1fb113c943735dd5dba30e",
+    "attempt-02\\frames\\05.png": "63149dbbb255712a4bb779ee07759f6f5c4f168fe9611343ca52725583ada556",
+    "attempt-02\\frames\\06.png": "92ee1e734de725dbc97769a7d55bf9142278bb5567c43f05394b8d314b52fa32",
+    "attempt-02\\frames\\07.png": "53cf256b2f9b33a9d4e3fd279f16bbacfdcdfb959e298941ef05100a310556ef",
+    "attempt-02\\frames\\08.png": "506e30d6567f76235bffabb5c67b9b00ddf4099d60363bb0803d5de659a1069f",
+    "attempt-02\\frames\\09.png": "a8410c76a79ac246621ee6d5de5c09c132fd898586cd75ed79bd3866de4bc863",
+    "attempt-02\\frames\\10.png": "1bb0bc5220aae3975408f9304a5c408e975f55a366e1c0a5e8e7cc2f47c29484",
+    "attempt-02\\frames\\11.png": "abfda3acf95a7232882089d7bc9754baf5ce61f26d0cd499a0c6d97fcb872b71",
+    "attempt-01\\frames\\00.png": "1ca0d7db292cbda0d24173fc7040765f2dbab9ac3732639d752060eb6ce3eb8f",
+    "attempt-01\\frames\\01.png": "972e039b54206d2112d1647657e8721bcda05e4a8017f4319a4adc3d2bcbc9cd",
+    "attempt-01\\frames\\02.png": "c246635df64250b4044d9e54a151cb3f7a695b4e8f247d881fc0cae576258ba8",
+    "attempt-01\\frames\\03.png": "4fef4433564c02c5903871ef481c4357e7ae906caaee736128acc445bc793753",
+    "attempt-01\\frames\\04.png": "6b4d6ae22ccb8dc9c31a167a29a80cc11af47e5dc40724dd01cd959b97b7bc0f",
+    "attempt-01\\frames\\05.png": "9c8353b26b5ad5d4af85927e34b631b056a43d1deb46b1abd2267332e65cacee",
+    "attempt-01\\frames\\06.png": "af85fc374960d7993a83959f924119af12622aedb842a9362dc9de34b376224e",
+    "attempt-01\\frames\\07.png": "f7b5c521f8a7434c751869d515a133eea00c06359638e36f968676dbd9e8ef07",
+    "attempt-01\\frames\\08.png": "49c69a454ce32c9a4a9ebd9fe98864b13d43b35912d571e155b49bdaa8b535ef",
+    "attempt-01\\frames\\09.png": "900a730a1bfed304919b3f8bfd8adb840e86ec9a2fe4cc1a093d99c767552059",
+    "attempt-01\\frames\\10.png": "245f4e0a170003cc216ad0deb2c674dcabdd2fe78181bd871977fe9c7e68fffc",
+    "attempt-01\\frames\\11.png": "e494e2e21686aefcf33d0a18ec6d3baad89284cda886ffeb6414da8169cb81ad"
+  }
+}

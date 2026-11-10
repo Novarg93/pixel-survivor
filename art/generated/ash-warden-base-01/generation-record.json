@@ -1,0 +1,41 @@
+{
+  "reference": {
+    "path": "art/references/ash-warden-concept-02.png",
+    "sha256": "64ac95bc510ae073d0b7128f99092c716eecc69de864be8287e1515ae9bccbc1",
+    "width": 1086,
+    "height": 1448,
+    "upload": {
+      "ref": "upload:b06cf162-3a27-45af-b150-85fc1b784ff5",
+      "upload_id": "b06cf162-3a27-45af-b150-85fc1b784ff5",
+      "width": 1086,
+      "height": 1448,
+      "n_frames": 1,
+      "expires_in_days": 3
+    }
+  },
+  "authorizedGenerationLimit": 3,
+  "balanceBefore": {
+    "remaining": 40,
+    "used": 0
+  },
+  "conversion": {
+    "tool": "image_to_pixelart",
+    "request": {
+      "image_url": "upload:b06cf162-3a27-45af-b150-85fc1b784ff5",
+      "faithful": true,
+      "init_image_strength": 150,
+      "output_width": 96,
+      "output_height": 128,
+      "seed": 260110601
+    },
+    "receipt": {
+      "content": [
+        {
+          "type": "text",
+          "text": "id: 8ef6fc34-9588-452b-b423-e5a317b38071\njob_id: 8ef6fc34-9588-452b-b423-e5a317b38071\nsource: 1086x1448px\noutput: 96x128px\nfaithful: True\ninit_image_strength: 150\nseed: 260110601\nasset_id: 8b80d545-a8ff-5e6e-9bce-fc4dc9f20b0a\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~20-60s)\n\nhint: get_image(job_id=\"8ef6fc34-9588-452b-b423-e5a317b38071\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/8ef6fc34-9588-452b-b423-e5a317b38071/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

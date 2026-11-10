@@ -1,0 +1,7 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Mage Blink · terrain source</title><body><script type="module">
+import {createGroveArtAtlas,paintGroveRegion} from '/src/game/art/groveArtPack.ts';
+import {createHdForestChunk} from '/src/game/art/hdForest.ts';
+const grove=paintGroveRegion(createGroveArtAtlas(),'normal',-32,-16,64,32);grove.id='grove';document.body.append(grove);
+const forest=document.createElement('canvas');forest.width=2048;forest.height=1024;forest.id='forest';const g=forest.getContext('2d');for(let y=0;y<4;y++)for(let x=0;x<8;x++)g.drawImage(createHdForestChunk(x-4,y-2),x*256,y*256);document.body.append(forest);
+globalThis.BLINK_BACKGROUNDS_READY=true;
+</script></body></html>

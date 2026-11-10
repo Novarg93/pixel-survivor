@@ -1,0 +1,66 @@
+{
+  "selected": "B hooded mage",
+  "eastEdit": {
+    "job_id": "52dc71e0-42d7-4202-b9cb-c1d752462bc4",
+    "status": "completed",
+    "frames": 1,
+    "asset": {
+      "id": "e86851fb-7099-5f58-8bb2-826d07c7691c",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 5
+  },
+  "casts": [
+    {
+      "id": "forward",
+      "job_id": "63b5998b-4ffa-465a-bc6b-9a4e731ecc01",
+      "status": "completed",
+      "frames": 6,
+      "asset": {
+        "id": "5ae10704-d56e-5f7a-ac19-1137e13f4649",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 3
+    },
+    {
+      "id": "high",
+      "job_id": "29a04b56-46b2-4b9f-b245-7f81a1b95768",
+      "status": "completed",
+      "frames": 6,
+      "asset": {
+        "id": "d2920367-cf7a-5c96-9c17-fc26a2de4987",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 3
+    },
+    {
+      "id": "low",
+      "job_id": "3dac907a-a72d-4c41-8a5f-cbc0b74cefc0",
+      "status": "completed",
+      "frames": 6,
+      "asset": {
+        "id": "c733d4bb-194e-5c58-897e-d6e8cac0d02f",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 3
+    }
+  ],
+  "completedJobs": 4,
+  "billing": {
+    "eastEditGenerations": 5,
+    "castGenerations": 9,
+    "totalSubscriptionGenerations": 14,
+    "generationsBefore": 1606.9,
+    "generationsAfter": 1592.9,
+    "cashCreditsBeforeUsd": 0,
+    "cashCreditsAfterUsd": 0,
+    "cashChargedUsd": 0
+  },
+  "newSourceUploads": false,
+  "mirrorsGeneratedLocally": true,
+  "productionIntegrated": false
+}

@@ -1,0 +1,26 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"e9c46c01-5289-4fc6-8848-a7f5a7113dd5\",\n  \"image_id\": \"0409261f-a86d-5204-a1b6-ea5542f686ff\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"0409261f-a86d-5204-a1b6-ea5542f686ff\",\n  \"job_id\": \"e9c46c01-5289-4fc6-8848-a7f5a7113dd5\",\n  \"description\": \"Standalone SMALL MAGE METEOR / stony comet sprite for a top-down dark fantasy pixel-art game. One chipped angular grey-green slate and bronze rock, about 32 pixels wide, head centered at pixel (53,79). Three large readable stone facets with upper-left lighting, ONE narrow warm amber heated edge and a tiny hot seam. A SHORT tapered amber-copper flame wake points UPPER RIGHT along an exactly 45-degree diagonal, toward (91,41); the rock travels LOWER LEFT along this axis. Overall visible footprint about 70 by 70 pixels, keep generous transparent margins. It must look like a modest spell of a mortal mage: noticeably smaller, calmer and less powerful than a volcanic boss meteor. No spherical lava boulder, molten cracked plates, glowing lava network, infernal smoke pillar, big shockwave or boss ornament. Original design, not a smaller copy of an existing boss sprite. Coherent low-to-medium detail, chunky crisp clusters, restrained selective outline. One object only, no ground, impact, characters, UI, sheet or background.\",\n  \"seed\": 2026111002,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download\"\n}\nPoll get_image(job_id=\"e9c46c01-5289-4fc6-8848-a7f5a7113dd5\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "e9c46c01-5289-4fc6-8848-a7f5a7113dd5",
+    "image_id": "0409261f-a86d-5204-a1b6-ea5542f686ff",
+    "status": "processing",
+    "source_image_id": "0409261f-a86d-5204-a1b6-ea5542f686ff",
+    "job_id": "e9c46c01-5289-4fc6-8848-a7f5a7113dd5",
+    "description": "Standalone SMALL MAGE METEOR / stony comet sprite for a top-down dark fantasy pixel-art game. One chipped angular grey-green slate and bronze rock, about 32 pixels wide, head centered at pixel (53,79). Three large readable stone facets with upper-left lighting, ONE narrow warm amber heated edge and a tiny hot seam. A SHORT tapered amber-copper flame wake points UPPER RIGHT along an exactly 45-degree diagonal, toward (91,41); the rock travels LOWER LEFT along this axis. Overall visible footprint about 70 by 70 pixels, keep generous transparent margins. It must look like a modest spell of a mortal mage: noticeably smaller, calmer and less powerful than a volcanic boss meteor. No spherical lava boulder, molten cracked plates, glowing lava network, infernal smoke pillar, big shockwave or boss ornament. Original design, not a smaller copy of an existing boss sprite. Coherent low-to-medium detail, chunky crisp clusters, restrained selective outline. One object only, no ground, impact, characters, UI, sheet or background.",
+    "seed": 2026111002,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download"
+  }
+}

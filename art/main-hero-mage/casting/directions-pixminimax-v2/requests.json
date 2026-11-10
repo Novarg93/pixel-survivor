@@ -1,0 +1,682 @@
+[
+  {
+    "id": "fireball/south-east",
+    "motion": "fireball",
+    "direction": "south-east",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces south-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:73bc8467-f62c-4865-b698-34a49b4b0fea",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111000,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/east",
+    "motion": "fireball",
+    "direction": "east",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111001,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/north-east",
+    "motion": "fireball",
+    "direction": "north-east",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:33537d9d-8942-41c4-ad45-36c414318cca",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111002,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/north",
+    "motion": "fireball",
+    "direction": "north",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces north for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:3ead1b69-0a03-4d96-8c92-9c9b51593110",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111003,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/north-west",
+    "motion": "fireball",
+    "direction": "north-west",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces north-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:2a33eb15-2a1d-4020-ad71-0de003e6a4f3",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111004,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/west",
+    "motion": "fireball",
+    "direction": "west",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111005,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "fireball/south-west",
+    "motion": "fireball",
+    "direction": "south-west",
+    "args": {
+      "description": "Perform one fast fire spell casting gesture: draw one hand close to the chest, thrust that arm toward the facing direction with the palm forward and a brief small orange spark at the palm, then retract the arm and settle into the original neutral standing pose. Keep the feet planted. No large projectile or beam. The character faces south-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:62eeb26b-c739-443e-9547-77b15e1b53f0",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111006,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/south-east",
+    "motion": "lightning",
+    "direction": "south-east",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces south-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:73bc8467-f62c-4865-b698-34a49b4b0fea",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111007,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/east",
+    "motion": "lightning",
+    "direction": "east",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111008,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/north-east",
+    "motion": "lightning",
+    "direction": "north-east",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:33537d9d-8942-41c4-ad45-36c414318cca",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111009,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/north",
+    "motion": "lightning",
+    "direction": "north",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces north for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:3ead1b69-0a03-4d96-8c92-9c9b51593110",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111010,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/north-west",
+    "motion": "lightning",
+    "direction": "north-west",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces north-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:2a33eb15-2a1d-4020-ad71-0de003e6a4f3",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111011,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/west",
+    "motion": "lightning",
+    "direction": "west",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111012,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "lightning/south-west",
+    "motion": "lightning",
+    "direction": "south-west",
+    "args": {
+      "description": "Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces south-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:62eeb26b-c739-443e-9547-77b15e1b53f0",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111013,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/south-east",
+    "motion": "meteor",
+    "direction": "south-east",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces south-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:73bc8467-f62c-4865-b698-34a49b4b0fea",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111014,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/east",
+    "motion": "meteor",
+    "direction": "east",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111015,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/north-east",
+    "motion": "meteor",
+    "direction": "north-east",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:33537d9d-8942-41c4-ad45-36c414318cca",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111016,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/north",
+    "motion": "meteor",
+    "direction": "north",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces north for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:3ead1b69-0a03-4d96-8c92-9c9b51593110",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111017,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/north-west",
+    "motion": "meteor",
+    "direction": "north-west",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces north-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:2a33eb15-2a1d-4020-ad71-0de003e6a4f3",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111018,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/west",
+    "motion": "meteor",
+    "direction": "west",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111019,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "meteor/south-west",
+    "motion": "meteor",
+    "direction": "south-west",
+    "args": {
+      "description": "Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces south-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:62eeb26b-c739-443e-9547-77b15e1b53f0",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111020,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/south-east",
+    "motion": "defensive",
+    "direction": "south-east",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces south-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:73bc8467-f62c-4865-b698-34a49b4b0fea",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111021,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/east",
+    "motion": "defensive",
+    "direction": "east",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111022,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/north-east",
+    "motion": "defensive",
+    "direction": "north-east",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:33537d9d-8942-41c4-ad45-36c414318cca",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111023,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/north",
+    "motion": "defensive",
+    "direction": "north",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces north for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:3ead1b69-0a03-4d96-8c92-9c9b51593110",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111024,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/north-west",
+    "motion": "defensive",
+    "direction": "north-west",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces north-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:2a33eb15-2a1d-4020-ad71-0de003e6a4f3",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111025,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/west",
+    "motion": "defensive",
+    "direction": "west",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111026,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "defensive/south-west",
+    "motion": "defensive",
+    "direction": "south-west",
+    "args": {
+      "description": "Perform one defensive spell casting gesture: raise BOTH hands from the waist and bring them close together in front of the upper chest in a firm protective casting pose, hold that compact symmetric two-handed gesture, then lower both hands into the original neutral standing pose. Keep feet planted. No shield bubble, no spell effects, no weapons. The character faces south-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:62eeb26b-c739-443e-9547-77b15e1b53f0",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111027,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "walk/east",
+    "motion": "walk",
+    "direction": "east",
+    "args": {
+      "description": "Walk in place in a continuous looping gait: alternate clearly lifting and planting left and right feet, with restrained opposite arm swing and a gently swaying long coat. Stay facing the specified direction for the entire cycle. The root remains centered, do not translate across the canvas. End poised to repeat the first step. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111028,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "walk/west",
+    "motion": "walk",
+    "direction": "west",
+    "args": {
+      "description": "Walk in place in a continuous looping gait: alternate clearly lifting and planting left and right feet, with restrained opposite arm swing and a gently swaying long coat. Stay facing the specified direction for the entire cycle. The root remains centered, do not translate across the canvas. End poised to repeat the first step. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111029,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "run/east",
+    "motion": "run",
+    "direction": "east",
+    "args": {
+      "description": "Run in place in a continuous looping gait: alternate pronounced left and right leg strides with both knees clearly lifting and strong opposite arm swings, slight forward torso lean, coat tails trailing and moving. Stay facing the specified direction throughout. Root stays centered, no translation across the canvas. End poised to repeat the first step. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111030,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "run/west",
+    "motion": "run",
+    "direction": "west",
+    "args": {
+      "description": "Run in place in a continuous looping gait: alternate pronounced left and right leg strides with both knees clearly lifting and strong opposite arm swings, slight forward torso lean, coat tails trailing and moving. Stay facing the specified direction throughout. Root stays centered, no translation across the canvas. End poised to repeat the first step. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 16,
+      "no_background": true,
+      "seed": 8111031,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/south",
+    "motion": "death",
+    "direction": "south",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces south for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:7f87b875-b881-4a0c-91cc-27e8543d2ea1",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111032,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/south-east",
+    "motion": "death",
+    "direction": "south-east",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces south-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:73bc8467-f62c-4865-b698-34a49b4b0fea",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111033,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/east",
+    "motion": "death",
+    "direction": "east",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:aa3fdaf5-4827-4303-98c2-66ef0798f398",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111034,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/north-east",
+    "motion": "death",
+    "direction": "north-east",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces north-east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-east",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:33537d9d-8942-41c4-ad45-36c414318cca",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111035,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-east, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/north",
+    "motion": "death",
+    "direction": "north",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces north for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:3ead1b69-0a03-4d96-8c92-9c9b51593110",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111036,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/north-west",
+    "motion": "death",
+    "direction": "north-west",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces north-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "north-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:2a33eb15-2a1d-4020-ad71-0de003e6a4f3",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111037,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing north-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/west",
+    "motion": "death",
+    "direction": "west",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:6c107480-ede9-4d69-ac8c-b5099a473b14",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111038,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  },
+  {
+    "id": "death/south-west",
+    "motion": "death",
+    "direction": "south-west",
+    "args": {
+      "description": "Perform one non-looping defeated collapse: knees buckle, torso sinks and falls onto the ground, arms slack, long blue coat settles around the body. End lying motionless on the ground, clearly defeated. No blood, no disintegration, no new objects. Start facing the specified direction and do not rotate upright to the camera. The character faces south-west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.",
+      "direction": "south-west",
+      "enhance_prompt": false,
+      "first_frame_url": "upload:62eeb26b-c739-443e-9547-77b15e1b53f0",
+      "frame_count": 12,
+      "no_background": true,
+      "seed": 8111039,
+      "subject_description": "a bearded human male battle mage wearing a long deep blue coat with gold armored shoulders and gold trim, green tabard, red belt and gold boots, short dark brown hair",
+      "initial_pose": "standing upright, facing south-west, both arms relaxed at his sides, full body visible",
+      "view": "low top-down"
+    }
+  }
+]

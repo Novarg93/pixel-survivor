@@ -15,7 +15,7 @@ await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({channel:'chromium',headless:true}), audit=[];
 try {
  const page=await browser.newPage();await page.goto('http://127.0.0.1:'+server.address().port);
- for(const ability of ['meteor','meteor-v2','frost-nova']) for(const file of readdirSync(`${root}/${ability}`).filter(f=>f.endsWith('.gif'))) {
+ for(const ability of ['meteor','meteor-v2']) for(const file of readdirSync(`${root}/${ability}`).filter(f=>f.endsWith('.gif'))) {
   const input=`${root}/${ability}/${file}`, sheet=input.replace(/\.gif$/,'.png'), id=file.match(/-(\d+)-0\.gif$/)[1], dir=`${out}/${id}`;
   mkdirSync(dir,{recursive:true});
   const result=await page.evaluate(async ({gif,sheet,ability})=>{

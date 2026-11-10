@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 703e0907-9b92-4117-8082-863b191b6a6f\njob_id: 703e0907-9b92-4117-8082-863b191b6a6f\ndescription: A short ground-fire eruption rises out of the floor at x60 y116. Begin fully transparent, a very small low dark-mint flicker starts on the ground, then THREE separate narrow tongue jets rapidly stretch upward into the final supplied flame patch. Changing curved stepped tips, rooted to the same floor contact; no sideways drift. Reach the final height smoothly with no explosion disk, no ring, no white flash, no smoke, no orb. Modest restrained mint fire, locked camera.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 110123\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"703e0907-9b92-4117-8082-863b191b6a6f\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/703e0907-9b92-4117-8082-863b191b6a6f/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: b8ec43e7-35c1-5437-a787-2d26c9a861b5\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

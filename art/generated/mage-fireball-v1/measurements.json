@@ -1,0 +1,675 @@
+{
+  "forming": [
+    {
+      "index": 0,
+      "bounds": [
+        60,
+        15,
+        62,
+        18
+      ],
+      "visibleWorldSize": [
+        1.5,
+        2
+      ],
+      "colors": 3
+    },
+    {
+      "index": 1,
+      "bounds": [
+        60,
+        15,
+        83,
+        23
+      ],
+      "visibleWorldSize": [
+        12,
+        4.5
+      ],
+      "colors": 5
+    },
+    {
+      "index": 2,
+      "bounds": [
+        60,
+        6,
+        87,
+        28
+      ],
+      "visibleWorldSize": [
+        14,
+        11.5
+      ],
+      "colors": 6
+    },
+    {
+      "index": 3,
+      "bounds": [
+        60,
+        6,
+        86,
+        28
+      ],
+      "visibleWorldSize": [
+        13.5,
+        11.5
+      ],
+      "colors": 7
+    },
+    {
+      "index": 4,
+      "bounds": [
+        59,
+        7,
+        86,
+        27
+      ],
+      "visibleWorldSize": [
+        14,
+        10.5
+      ],
+      "colors": 7
+    },
+    {
+      "index": 5,
+      "bounds": [
+        51,
+        8,
+        84,
+        27
+      ],
+      "visibleWorldSize": [
+        17,
+        10
+      ],
+      "colors": 8
+    },
+    {
+      "index": 6,
+      "bounds": [
+        45,
+        8,
+        83,
+        27
+      ],
+      "visibleWorldSize": [
+        19.5,
+        10
+      ],
+      "colors": 8
+    },
+    {
+      "index": 7,
+      "bounds": [
+        46,
+        9,
+        86,
+        26
+      ],
+      "visibleWorldSize": [
+        20.5,
+        9
+      ],
+      "colors": 8
+    },
+    {
+      "index": 8,
+      "bounds": [
+        47,
+        9,
+        85,
+        25
+      ],
+      "visibleWorldSize": [
+        19.5,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 9,
+      "bounds": [
+        48,
+        9,
+        84,
+        25
+      ],
+      "visibleWorldSize": [
+        18.5,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 10,
+      "bounds": [
+        49,
+        10,
+        82,
+        25
+      ],
+      "visibleWorldSize": [
+        17,
+        8
+      ],
+      "colors": 7
+    },
+    {
+      "index": 11,
+      "bounds": [
+        44,
+        10,
+        80,
+        24
+      ],
+      "visibleWorldSize": [
+        18.5,
+        7.5
+      ],
+      "colors": 7
+    },
+    {
+      "index": 12,
+      "bounds": [
+        16,
+        11,
+        77,
+        24
+      ],
+      "visibleWorldSize": [
+        31,
+        7
+      ],
+      "colors": 8
+    },
+    {
+      "index": 13,
+      "bounds": [
+        15,
+        10,
+        75,
+        23
+      ],
+      "visibleWorldSize": [
+        30.5,
+        7
+      ],
+      "colors": 8
+    },
+    {
+      "index": 14,
+      "bounds": [
+        12,
+        9,
+        73,
+        23
+      ],
+      "visibleWorldSize": [
+        31,
+        7.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 15,
+      "bounds": [
+        9,
+        9,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        31,
+        7.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 16,
+      "bounds": [
+        7,
+        9,
+        69,
+        24
+      ],
+      "visibleWorldSize": [
+        31.5,
+        8
+      ],
+      "colors": 8
+    },
+    {
+      "index": 17,
+      "bounds": [
+        5,
+        9,
+        69,
+        24
+      ],
+      "visibleWorldSize": [
+        32.5,
+        8
+      ],
+      "colors": 8
+    },
+    {
+      "index": 18,
+      "bounds": [
+        3,
+        8,
+        70,
+        25
+      ],
+      "visibleWorldSize": [
+        34,
+        9
+      ],
+      "colors": 8
+    },
+    {
+      "index": 19,
+      "bounds": [
+        3,
+        7,
+        71,
+        25
+      ],
+      "visibleWorldSize": [
+        34.5,
+        9.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 20,
+      "bounds": [
+        12,
+        6,
+        71,
+        26
+      ],
+      "visibleWorldSize": [
+        30,
+        10.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 21,
+      "bounds": [
+        8,
+        3,
+        70,
+        27
+      ],
+      "visibleWorldSize": [
+        31.5,
+        12.5
+      ],
+      "colors": 9
+    },
+    {
+      "index": 22,
+      "bounds": [
+        12,
+        8,
+        70,
+        26
+      ],
+      "visibleWorldSize": [
+        29.5,
+        9.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 23,
+      "bounds": [
+        11,
+        9,
+        70,
+        25
+      ],
+      "visibleWorldSize": [
+        30,
+        8.5
+      ],
+      "colors": 8
+    }
+  ],
+  "idle": [
+    {
+      "index": 0,
+      "bounds": [
+        3,
+        7,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        34,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 1,
+      "bounds": [
+        11,
+        3,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        30,
+        10.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 2,
+      "bounds": [
+        10,
+        5,
+        70,
+        22
+      ],
+      "visibleWorldSize": [
+        30.5,
+        9
+      ],
+      "colors": 8
+    },
+    {
+      "index": 3,
+      "bounds": [
+        5,
+        7,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        33,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 4,
+      "bounds": [
+        3,
+        6,
+        70,
+        22
+      ],
+      "visibleWorldSize": [
+        34,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 5,
+      "bounds": [
+        11,
+        3,
+        70,
+        24
+      ],
+      "visibleWorldSize": [
+        30,
+        11
+      ],
+      "colors": 8
+    },
+    {
+      "index": 6,
+      "bounds": [
+        10,
+        7,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        30.5,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 7,
+      "bounds": [
+        5,
+        5,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        33,
+        9.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 8,
+      "bounds": [
+        3,
+        5,
+        70,
+        22
+      ],
+      "visibleWorldSize": [
+        34,
+        9
+      ],
+      "colors": 8
+    },
+    {
+      "index": 9,
+      "bounds": [
+        11,
+        3,
+        70,
+        23
+      ],
+      "visibleWorldSize": [
+        30,
+        10.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 10,
+      "bounds": [
+        10,
+        6,
+        70,
+        22
+      ],
+      "visibleWorldSize": [
+        30.5,
+        8.5
+      ],
+      "colors": 8
+    },
+    {
+      "index": 11,
+      "bounds": [
+        5,
+        7,
+        70,
+        24
+      ],
+      "visibleWorldSize": [
+        33,
+        9
+      ],
+      "colors": 8
+    }
+  ],
+  "explosion": [
+    {
+      "index": 0,
+      "bounds": [
+        35,
+        35,
+        42,
+        42
+      ],
+      "visibleWorldSize": [
+        4,
+        4
+      ],
+      "colors": 8
+    },
+    {
+      "index": 1,
+      "bounds": [
+        25,
+        26,
+        53,
+        50
+      ],
+      "visibleWorldSize": [
+        14.5,
+        12.5
+      ],
+      "colors": 7
+    },
+    {
+      "index": 2,
+      "bounds": [
+        17,
+        24,
+        62,
+        53
+      ],
+      "visibleWorldSize": [
+        23,
+        15
+      ],
+      "colors": 8
+    },
+    {
+      "index": 3,
+      "bounds": [
+        12,
+        21,
+        69,
+        58
+      ],
+      "visibleWorldSize": [
+        29,
+        19
+      ],
+      "colors": 8
+    },
+    {
+      "index": 4,
+      "bounds": [
+        9,
+        17,
+        73,
+        60
+      ],
+      "visibleWorldSize": [
+        32.5,
+        22
+      ],
+      "colors": 12
+    },
+    {
+      "index": 5,
+      "bounds": [
+        7,
+        14,
+        75,
+        61
+      ],
+      "visibleWorldSize": [
+        34.5,
+        24
+      ],
+      "colors": 12
+    },
+    {
+      "index": 6,
+      "bounds": [
+        5,
+        12,
+        76,
+        61
+      ],
+      "visibleWorldSize": [
+        36,
+        25
+      ],
+      "colors": 11
+    },
+    {
+      "index": 7,
+      "bounds": [
+        6,
+        11,
+        73,
+        59
+      ],
+      "visibleWorldSize": [
+        34,
+        24.5
+      ],
+      "colors": 10
+    },
+    {
+      "index": 8,
+      "bounds": [
+        6,
+        11,
+        71,
+        56
+      ],
+      "visibleWorldSize": [
+        33,
+        23
+      ],
+      "colors": 9
+    },
+    {
+      "index": 9,
+      "bounds": [
+        15,
+        11,
+        60,
+        51
+      ],
+      "visibleWorldSize": [
+        23,
+        20.5
+      ],
+      "colors": 6
+    },
+    {
+      "index": 10,
+      "bounds": [
+        17,
+        10,
+        58,
+        41
+      ],
+      "visibleWorldSize": [
+        21,
+        16
+      ],
+      "colors": 3
+    },
+    {
+      "index": 11,
+      "bounds": null,
+      "visibleWorldSize": [
+        0,
+        0
+      ],
+      "colors": 0
+    }
+  ]
+}

@@ -1,269 +1,609 @@
 {
   "frames": {
-    "meteor-fall-0": {
+    "frost-nova-20": {
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 132,
-        "h": 132
+        "w": 510,
+        "h": 510
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 3,
+        "y": 3,
+        "w": 510,
+        "h": 510
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-0": {
+    "frost-nova-21": {
       "frame": {
-        "x": 132,
+        "x": 510,
         "y": 0,
-        "w": 132,
-        "h": 132
+        "w": 510,
+        "h": 510
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 3,
+        "y": 3,
+        "w": 510,
+        "h": 510
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-1": {
+    "frost-nova-18": {
       "frame": {
-        "x": 264,
+        "x": 1020,
         "y": 0,
-        "w": 132,
-        "h": 132
+        "w": 508,
+        "h": 508
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 4,
+        "y": 4,
+        "w": 508,
+        "h": 508
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-2": {
+    "frost-nova-19": {
       "frame": {
-        "x": 396,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 0,
+        "y": 510,
+        "w": 508,
+        "h": 508
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 4,
+        "y": 4,
+        "w": 508,
+        "h": 508
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-3": {
+    "frost-nova-22": {
       "frame": {
-        "x": 0,
-        "y": 132,
-        "w": 132,
-        "h": 132
+        "x": 508,
+        "y": 510,
+        "w": 508,
+        "h": 508
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 4,
+        "y": 4,
+        "w": 508,
+        "h": 508
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-4": {
+    "frost-nova-17": {
       "frame": {
-        "x": 132,
-        "y": 132,
-        "w": 132,
-        "h": 132
+        "x": 1016,
+        "y": 510,
+        "w": 506,
+        "h": 506
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 5,
+        "y": 5,
+        "w": 506,
+        "h": 506
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-5": {
+    "frost-nova-16": {
       "frame": {
-        "x": 264,
-        "y": 132,
-        "w": 132,
-        "h": 132
+        "x": 0,
+        "y": 1018,
+        "w": 500,
+        "h": 500
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 8,
+        "y": 8,
+        "w": 500,
+        "h": 500
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-6": {
+    "frost-nova-15": {
       "frame": {
-        "x": 396,
-        "y": 132,
-        "w": 132,
-        "h": 132
+        "x": 500,
+        "y": 1018,
+        "w": 492,
+        "h": 492
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 12,
+        "y": 12,
+        "w": 492,
+        "h": 492
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-7": {
+    "frost-nova-14": {
       "frame": {
-        "x": 0,
-        "y": 264,
-        "w": 132,
-        "h": 132
+        "x": 992,
+        "y": 1018,
+        "w": 476,
+        "h": 476
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 20,
+        "y": 20,
+        "w": 476,
+        "h": 476
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-8": {
+    "frost-nova-13": {
       "frame": {
-        "x": 132,
-        "y": 264,
-        "w": 132,
-        "h": 132
+        "x": 0,
+        "y": 1518,
+        "w": 470,
+        "h": 470
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 23,
+        "y": 23,
+        "w": 470,
+        "h": 470
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-9": {
+    "frost-nova-12": {
       "frame": {
-        "x": 264,
-        "y": 264,
-        "w": 132,
-        "h": 132
+        "x": 470,
+        "y": 1518,
+        "w": 460,
+        "h": 460
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 28,
+        "y": 28,
+        "w": 460,
+        "h": 460
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-10": {
+    "frost-nova-11": {
       "frame": {
-        "x": 396,
-        "y": 264,
-        "w": 132,
-        "h": 132
+        "x": 930,
+        "y": 1518,
+        "w": 444,
+        "h": 444
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
+        "x": 36,
+        "y": 36,
+        "w": 444,
+        "h": 444
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 516,
+        "h": 516
       }
     },
-    "meteor-ground-impact-11": {
+    "frost-nova-10": {
       "frame": {
         "x": 0,
-        "y": 396,
+        "y": 1988,
+        "w": 423,
+        "h": 420
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 48,
+        "w": 423,
+        "h": 420
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-6": {
+      "frame": {
+        "x": 423,
+        "y": 1988,
+        "w": 422,
+        "h": 408
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 47,
+        "w": 422,
+        "h": 408
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-9": {
+      "frame": {
+        "x": 845,
+        "y": 1988,
+        "w": 435,
+        "h": 406
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 47,
+        "w": 435,
+        "h": 406
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-7": {
+      "frame": {
+        "x": 0,
+        "y": 2408,
+        "w": 422,
+        "h": 390
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 47,
+        "w": 422,
+        "h": 390
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-8": {
+      "frame": {
+        "x": 422,
+        "y": 2408,
+        "w": 435,
+        "h": 387
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 47,
+        "w": 435,
+        "h": 387
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-5": {
+      "frame": {
+        "x": 857,
+        "y": 2408,
+        "w": 272,
+        "h": 272
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 122,
+        "y": 122,
+        "w": 272,
+        "h": 272
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-4": {
+      "frame": {
+        "x": 1129,
+        "y": 2408,
+        "w": 232,
+        "h": 232
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 142,
+        "y": 142,
+        "w": 232,
+        "h": 232
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-3": {
+      "frame": {
+        "x": 0,
+        "y": 2798,
+        "w": 176,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 170,
+        "y": 170,
+        "w": 176,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-ultimate-36": {
+      "frame": {
+        "x": 176,
+        "y": 2798,
+        "w": 144,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 144,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-37": {
+      "frame": {
+        "x": 320,
+        "y": 2798,
+        "w": 144,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 144,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-38": {
+      "frame": {
+        "x": 464,
+        "y": 2798,
+        "w": 144,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 144,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-39": {
+      "frame": {
+        "x": 608,
+        "y": 2798,
+        "w": 144,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 144,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-40": {
+      "frame": {
+        "x": 752,
+        "y": 2798,
+        "w": 144,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 144,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-34": {
+      "frame": {
+        "x": 896,
+        "y": 2798,
+        "w": 142,
+        "h": 142
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 142,
+        "h": 142
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-35": {
+      "frame": {
+        "x": 1038,
+        "y": 2798,
+        "w": 142,
+        "h": 142
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 142,
+        "h": 142
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-33": {
+      "frame": {
+        "x": 1180,
+        "y": 2798,
+        "w": 140,
+        "h": 140
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 5,
+        "w": 140,
+        "h": 140
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-32": {
+      "frame": {
+        "x": 1320,
+        "y": 2798,
+        "w": 136,
+        "h": 136
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 7,
+        "w": 136,
+        "h": 136
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-31": {
+      "frame": {
+        "x": 0,
+        "y": 2974,
         "w": 132,
         "h": 132
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
+        "x": 9,
+        "y": 9,
         "w": 132,
         "h": 132
       },
       "sourceSize": {
-        "w": 132,
-        "h": 132
+        "w": 150,
+        "h": 150
       }
     },
     "meteor-explosion-impact-0": {
       "frame": {
         "x": 132,
-        "y": 396,
+        "y": 2974,
         "w": 132,
         "h": 132
       },
@@ -283,167 +623,7 @@
     "meteor-explosion-impact-1": {
       "frame": {
         "x": 264,
-        "y": 396,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-2": {
-      "frame": {
-        "x": 396,
-        "y": 396,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-3": {
-      "frame": {
-        "x": 0,
-        "y": 528,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-4": {
-      "frame": {
-        "x": 132,
-        "y": 528,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-5": {
-      "frame": {
-        "x": 264,
-        "y": 528,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-6": {
-      "frame": {
-        "x": 396,
-        "y": 528,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-7": {
-      "frame": {
-        "x": 0,
-        "y": 660,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-8": {
-      "frame": {
-        "x": 132,
-        "y": 660,
-        "w": 132,
-        "h": 132
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 132,
-        "h": 132
-      },
-      "sourceSize": {
-        "w": 132,
-        "h": 132
-      }
-    },
-    "meteor-explosion-impact-9": {
-      "frame": {
-        "x": 264,
-        "y": 660,
+        "y": 2974,
         "w": 132,
         "h": 132
       },
@@ -463,7 +643,7 @@
     "meteor-explosion-impact-10": {
       "frame": {
         "x": 396,
-        "y": 660,
+        "y": 2974,
         "w": 132,
         "h": 132
       },
@@ -479,13 +659,1273 @@
         "w": 132,
         "h": 132
       }
+    },
+    "meteor-explosion-impact-2": {
+      "frame": {
+        "x": 528,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-3": {
+      "frame": {
+        "x": 660,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-4": {
+      "frame": {
+        "x": 792,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-5": {
+      "frame": {
+        "x": 924,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-6": {
+      "frame": {
+        "x": 1056,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-7": {
+      "frame": {
+        "x": 1188,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-8": {
+      "frame": {
+        "x": 1320,
+        "y": 2974,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-explosion-impact-9": {
+      "frame": {
+        "x": 0,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-fall-0": {
+      "frame": {
+        "x": 132,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-0": {
+      "frame": {
+        "x": 264,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-1": {
+      "frame": {
+        "x": 396,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-10": {
+      "frame": {
+        "x": 528,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-11": {
+      "frame": {
+        "x": 660,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-2": {
+      "frame": {
+        "x": 792,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-3": {
+      "frame": {
+        "x": 924,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-4": {
+      "frame": {
+        "x": 1056,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-5": {
+      "frame": {
+        "x": 1188,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-6": {
+      "frame": {
+        "x": 1320,
+        "y": 3106,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-7": {
+      "frame": {
+        "x": 0,
+        "y": 3238,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-8": {
+      "frame": {
+        "x": 132,
+        "y": 3238,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "meteor-ground-impact-9": {
+      "frame": {
+        "x": 264,
+        "y": 3238,
+        "w": 132,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 132,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 132,
+        "h": 132
+      }
+    },
+    "frost-nova-ultimate-17": {
+      "frame": {
+        "x": 396,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-18": {
+      "frame": {
+        "x": 526,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-19": {
+      "frame": {
+        "x": 656,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-20": {
+      "frame": {
+        "x": 786,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-21": {
+      "frame": {
+        "x": 916,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-22": {
+      "frame": {
+        "x": 1046,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-23": {
+      "frame": {
+        "x": 1176,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-24": {
+      "frame": {
+        "x": 1306,
+        "y": 3238,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-25": {
+      "frame": {
+        "x": 0,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-26": {
+      "frame": {
+        "x": 130,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-27": {
+      "frame": {
+        "x": 260,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-28": {
+      "frame": {
+        "x": 390,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-29": {
+      "frame": {
+        "x": 520,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-30": {
+      "frame": {
+        "x": 650,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-41": {
+      "frame": {
+        "x": 780,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-42": {
+      "frame": {
+        "x": 910,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-43": {
+      "frame": {
+        "x": 1040,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-44": {
+      "frame": {
+        "x": 1170,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-45": {
+      "frame": {
+        "x": 1300,
+        "y": 3370,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-46": {
+      "frame": {
+        "x": 0,
+        "y": 3500,
+        "w": 130,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 130,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-13": {
+      "frame": {
+        "x": 130,
+        "y": 3500,
+        "w": 122,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 122,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-14": {
+      "frame": {
+        "x": 252,
+        "y": 3500,
+        "w": 122,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 122,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-15": {
+      "frame": {
+        "x": 374,
+        "y": 3500,
+        "w": 122,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 122,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-16": {
+      "frame": {
+        "x": 496,
+        "y": 3500,
+        "w": 122,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 122,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-2": {
+      "frame": {
+        "x": 618,
+        "y": 3500,
+        "w": 104,
+        "h": 104
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 206,
+        "y": 206,
+        "w": 104,
+        "h": 104
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-ultimate-12": {
+      "frame": {
+        "x": 722,
+        "y": 3500,
+        "w": 84,
+        "h": 84
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 33,
+        "w": 84,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-1": {
+      "frame": {
+        "x": 806,
+        "y": 3500,
+        "w": 78,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 219,
+        "y": 219,
+        "w": 78,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-ultimate-11": {
+      "frame": {
+        "x": 884,
+        "y": 3500,
+        "w": 78,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 36,
+        "w": 78,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-10": {
+      "frame": {
+        "x": 962,
+        "y": 3500,
+        "w": 73,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 39,
+        "w": 73,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-7": {
+      "frame": {
+        "x": 1035,
+        "y": 3500,
+        "w": 73,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 39,
+        "w": 73,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-8": {
+      "frame": {
+        "x": 1108,
+        "y": 3500,
+        "w": 73,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 39,
+        "w": 73,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-9": {
+      "frame": {
+        "x": 1181,
+        "y": 3500,
+        "w": 73,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 39,
+        "w": 73,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-6": {
+      "frame": {
+        "x": 1254,
+        "y": 3500,
+        "w": 48,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 51,
+        "w": 48,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-5": {
+      "frame": {
+        "x": 1302,
+        "y": 3500,
+        "w": 42,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 54,
+        "w": 42,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-1": {
+      "frame": {
+        "x": 1344,
+        "y": 3500,
+        "w": 37,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 57,
+        "w": 37,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-2": {
+      "frame": {
+        "x": 1381,
+        "y": 3500,
+        "w": 37,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 57,
+        "w": 37,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-3": {
+      "frame": {
+        "x": 1418,
+        "y": 3500,
+        "w": 37,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 57,
+        "w": 37,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-ultimate-4": {
+      "frame": {
+        "x": 1455,
+        "y": 3500,
+        "w": 37,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 57,
+        "w": 37,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-0": {
+      "frame": {
+        "x": 1492,
+        "y": 3500,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 253,
+        "y": 253,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-ultimate-0": {
+      "frame": {
+        "x": 1502,
+        "y": 3500,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 70,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
+    },
+    "frost-nova-23": {
+      "frame": {
+        "x": 1512,
+        "y": 3500,
+        "w": 5,
+        "h": 5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 5,
+        "h": 5
+      },
+      "sourceSize": {
+        "w": 516,
+        "h": 516
+      }
+    },
+    "frost-nova-ultimate-47": {
+      "frame": {
+        "x": 1517,
+        "y": 3500,
+        "w": 5,
+        "h": 5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 5,
+        "h": 5
+      },
+      "sourceSize": {
+        "w": 150,
+        "h": 150
+      }
     }
   },
   "meta": {
     "image": "atlas.png",
     "size": {
-      "w": 528,
-      "h": 792
+      "w": 1536,
+      "h": 3630
     },
     "scale": "1"
   }

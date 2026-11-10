@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 0257c2b5-53cf-4641-bb84-9dc4565069cd\njob_id: 0257c2b5-53cf-4641-bb84-9dc4565069cd\ndescription: Walk in place in a continuous looping gait: alternate clearly lifting and planting left and right feet, with restrained opposite arm swing and a gently swaying long coat. Stay facing the specified direction for the entire cycle. The root remains centered, do not translate across the canvas. End poised to repeat the first step. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111029\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"0257c2b5-53cf-4641-bb84-9dc4565069cd\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/0257c2b5-53cf-4641-bb84-9dc4565069cd/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 1aa8ef6c-e4b2-5d6a-b721-6ee954fac686\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

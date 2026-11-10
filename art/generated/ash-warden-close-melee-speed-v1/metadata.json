@@ -1,0 +1,417 @@
+{
+  "movement": {
+    "increase": 1.15,
+    "baseSpeed": 82.8,
+    "chaseMin": 138,
+    "chaseMax": 293.25,
+    "playerSpeedMultiplier": 1.265,
+    "nearDistance": 145,
+    "nearSlowdown": 0.55,
+    "example135": {
+      "oldFar": 148.5,
+      "newFar": 170.77499999999998
+    }
+  },
+  "melee": {
+    "startDistance": 85,
+    "previousStopDistance": 105,
+    "previousStartSlack": 4,
+    "damageRadius": 115,
+    "damage": 32,
+    "cooldown": 2.2,
+    "speedIncrease": 1.15,
+    "a": {
+      "durationsMs": [
+        73.57859531772576,
+        73.57859531772576,
+        86.95652173913044,
+        100.33444816053512,
+        100.33444816053512,
+        53.511705685618736,
+        53.511705685618736,
+        60.200668896321076,
+        53.511705685618736,
+        53.511705685618736,
+        46.82274247491639,
+        46.82274247491639
+      ],
+      "durationMs": 802.6755852842808,
+      "hitMs": 434.7826086956522
+    },
+    "b": {
+      "durationsMs": [
+        69.56521739130436,
+        69.56521739130436,
+        78.26086956521739,
+        86.95652173913044,
+        95.65217391304348,
+        69.56521739130436,
+        95.65217391304348,
+        65.21739130434783,
+        43.47826086956522,
+        43.47826086956522,
+        43.47826086956522,
+        43.47826086956522
+      ],
+      "visualDurationMs": 804.3478260869567,
+      "stateDurationMs": 1043.4782608695652,
+      "hitMs": 565.2173913043479
+    },
+    "south": {
+      "hitMs": 565.2173913043479,
+      "stateDurationMs": 1043.4782608695652
+    },
+    "slash": {
+      "speedIncrease": 1.15,
+      "peak": "At B hit; no A/South/North slash"
+    }
+  },
+  "sourceArtModified": false,
+  "screenshots": [
+    {
+      "file": "screenshots/1280-approaching-inside-old-range.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-east-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-east-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-faster-pursuit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-north-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-north-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-south-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-south-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-west-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/1280-west-windup.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "screenshots/844-approaching-inside-old-range.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-east-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-east-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-faster-pursuit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-north-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-north-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-south-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-south-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-west-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/844-west-windup.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "screenshots/production-practice.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-a-final.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-last-cast.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-start.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-stop.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-east-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-frozen-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-last-cast.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-start.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-stop.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/1280-west-tracking.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-a-final.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-last-cast.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-start.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-stop.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-east-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-frozen-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-last-cast.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-start.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-stop.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "charge-a-regression/screenshots/844-west-tracking.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/1280-a-phase3.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-522ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-652ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-696ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-783ms.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-b-no-ground-light.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-east-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-north-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-south-overhead-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-a-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/1280-west-b-hit.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "melee-regression/screenshots/844-a-phase3.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-522ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-652ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-696ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-783ms.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-b-no-ground-light.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-east-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-north-b-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-south-overhead-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-a-hit.png",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "melee-regression/screenshots/844-west-b-hit.png",
+      "width": 844,
+      "height": 390
+    }
+  ]
+}

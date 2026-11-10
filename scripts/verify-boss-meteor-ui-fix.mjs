@@ -1,0 +1,18 @@
+import {readFileSync,readdirSync,writeFileSync,mkdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const directory='art/generated/boss-meteor-ui-fix-v1';
+const original=JSON.parse(readFileSync('art/generated/ash-warden-animation-library-v1/source/runtime-baseline.json','utf8'));
+const warden=JSON.parse(readFileSync('art/generated/ash-warden-pixellab-runtime-v1/integration-verification.json','utf8'));
+const audio=JSON.parse(readFileSync('art/generated/mage-sfx-elevenlabs-v1/integration-verification.json','utf8'));
+const baseline={...original,...warden.currentSHA256,...audio.currentSHA256};
+const allowed=['src/game/art/FinalBossArt.ts','src/game/art/ashWardenPixellabPack.ts','src/ui/components/UltimateControl.vue','src/style.css'].sort();
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort();
+const sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+const changed=Object.keys(baseline).filter(file=>sha(file)!==baseline[file]).sort();
+if(JSON.stringify(changed)!==JSON.stringify(allowed)||JSON.stringify(files)!==JSON.stringify(Object.keys(baseline).sort()))throw new Error(JSON.stringify({unexpectedScope:changed}));
+mkdirSync(directory,{recursive:true});
+const report={baselineFiles:Object.keys(baseline).length,changed,added:[],unchanged:Object.keys(baseline).length-changed.length,previousSHA256:Object.fromEntries(changed.map(file=>[file,baseline[file]])),currentSHA256:Object.fromEntries(changed.map(file=>[file,sha(file)]))};
+writeFileSync(`${directory}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({baselineFiles:report.baselineFiles,changed,unchanged:report.unchanged}));

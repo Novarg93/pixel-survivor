@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: dd24f446-3288-45b7-b34f-81bb88e6394b\njob_id: dd24f446-3288-45b7-b34f-81bb88e6394b\ndescription: Perform one lightning casting gesture: raise and extend one arm toward the facing direction, point the fingers firmly, a brief small cyan spark flickers at the fingertips, then lower that arm and return to the original neutral standing pose. Keep the feet planted. No long lightning beam. The character faces west for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111012\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"dd24f446-3288-45b7-b34f-81bb88e6394b\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/dd24f446-3288-45b7-b34f-81bb88e6394b/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 819d469c-e0b4-5a55-bb31-bd75f5c456c3\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

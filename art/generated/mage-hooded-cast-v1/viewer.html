@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<title>Hooded Mage B — общий боковой каст</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111c22;color:#e4e7d9;font:15px/1.55 system-ui,sans-serif}main{max-width:1344px;margin:auto;padding:24px}h1{margin:8px 0;font-size:clamp(25px,4vw,36px);line-height:1.2}h2{font-size:21px;margin:28px 0 10px}p{max-width:960px;color:#b6c6bf}a{color:#e2be7f}.tag{color:#d3b477;letter-spacing:.13em;font-size:12px;text-transform:uppercase}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0}button,select,input{font:inherit}button,select{color:#e8e8db;background:#253941;border:1px solid #5b716c;border-radius:4px;padding:7px 10px}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #efcb83;outline-offset:3px}.canvas{overflow:auto;border:1px solid #465954;border-radius:6px}canvas{display:block;max-width:100%;height:auto;image-rendering:pixelated;touch-action:none}.status{background:#20332e;border-left:3px solid #d5bd86;padding:10px 14px}.error{background:#502e2a;color:#ffded0}.note{font-size:13px;color:#9bb2a8}.refs{display:flex;gap:16px;flex-wrap:wrap}.refs figure{margin:0;width:180px}.refs img{width:180px;height:180px;object-fit:contain;image-rendering:pixelated;background:#1c2d32}.refs figcaption{font-size:13px;color:#b8c6b9}.exports{display:flex;flex-wrap:wrap;gap:16px}.exports a{min-width:150px}.metadata{font-family:monospace;color:#c3d0b9}.frame-control{display:flex;gap:10px;align-items:center}input[type=range]{max-width:180px;width:35vw}@media(max-width:600px){main{padding:14px}.controls{gap:8px}button,select{padding:7px}h2{font-size:19px}.canvas canvas{min-width:700px}}
+</style>
+<main>
+<div class="tag">Pixel Survivor · выбранный B · PixelLab</div>
+<h1>Капюшон, длинная мантия, один ракурс</h1>
+<p>Общий каст вправо и его точное зеркало влево. Три высоты цели — прямо, выше и ниже — меняют жест рук, сохраняя боковой ракурс корпуса. Магия и снаряды в кадры не встроены.</p>
+<p id="status" class="status" role="status">Загрузка локальных кадров…</p>
+<div class="controls">
+<label>Жест <select id="clip"><option value="forward">Прямо</option><option value="high">Выше</option><option value="low">Ниже</option></select></label>
+<label>Режим <select id="mode"><option value="compare">Вправо / влево рядом</option><option value="target">Цель — щёлкнуть по Canvas</option></select></label>
+<button id="pause" type="button">Пауза</button>
+<label>Скорость <select id="speed"><option value="0.25">×0.25</option><option value="0.5">×0.5</option><option value="1" selected>×1</option><option value="2">×2</option></select></label>
+<label>Фон <select id="background"><option value="neutral">Нейтральный</option><option value="grove">Grove</option></select></label>
+<label><input id="guides" type="checkbox" checked> Цели и опора</label>
+</div>
+<div class="frame-control"><button id="previous" type="button" aria-label="Предыдущий кадр">←</button><label>Кадр <input id="frame" type="range" min="0" max="5" step="1" value="0"></label><button id="next" type="button" aria-label="Следующий кадр">→</button><span id="phase" class="metadata"></span></div>
+<p class="note">6 кадров / 480мс; поза выпуска начинается на220мс. После каста viewer показывает исходную стойку400мс. Это предлагаемые art timings для просмотра; игровые timestamps не менялись.</p>
+<div class="canvas"><canvas id="stage" width="1280" height="560" aria-label="Воспроизведение общего каста вправо и влево"></canvas></div>
+<p id="aim-note" class="note">Цветная метка — учебная цель в viewer. Она не является VFX, снарядом или telegraph игры.</p>
+<h2>Проверка в игровом масштабе</h2>
+<p class="note">Статичная композиция на Grove, camera zoom2. Магам назначена видимая высота нынешнего героя34.6875world px только для сравнения. Справа — актуальный игровой Ash Warden в его действующем масштабе; размеры акторов не уравнены. Это preview, не screenshot интеграции.</p>
+<div class="canvas"><canvas id="world" width="1280" height="320" aria-label="Три жеста мага в двух сторонах рядом с текущим Ash Warden в игровом масштабе"></canvas></div>
+<h2>Все ключевые кадры</h2>
+<p class="note">Одинаковый native canvas96×96 и фиксированный pivot. Левый ряд получен точным горизонтальным отражением каждого правого кадра, порядок кадров не меняется.</p>
+<div class="canvas"><canvas id="sheet" width="1280" height="590" aria-label="Шесть кадров выбранного каста вправо и влево"></canvas></div>
+<h2>Исходный образ и принятая база стиля</h2>
+<div class="refs">
+<figure><a href="source/selected-b.png"><img src="source/selected-b.png" alt="Выбранный исходный вариант B"><figcaption>Выбранный B, исходный PNG</figcaption></a></figure>
+<figure><a href="source/east.png"><img src="source/east.png" alt="Правая боковая стойка B"><figcaption>Правая боковая стойка</figcaption></a></figure>
+<figure><a href="source/west.png"><img src="source/west.png" alt="Левая зеркальная стойка B"><figcaption>Точное зеркало влево</figcaption></a></figure>
+<figure><a href="../mage-style-exploration-v1/references/ash-warden-in-game-current.png"><img src="../mage-style-exploration-v1/references/ash-warden.png" alt="Актуальный игровой Ash Warden"><figcaption>Текущий игровой Ash Warden</figcaption></a></figure>
+</div>
+<h2>PNG и одноразовые GIF</h2>
+<div class="exports" id="exports"></div>
+<p class="note">Полные данные: <a href="animation.json">animation.json</a> · <a href="exports/atlas.png">единый правый атлас</a> · <a href="README.md">README</a> · <a href="../../../docs/art/PIXEL_SURVIVOR_ART_STYLE_GUIDE.md">руководство по стилю</a>. Для будущего runtime достаточно правых текстур и flipX; отдельные левые PNG/GIF приложены для просмотра.</p>
+<p>Это отдельный art-pass. Текущий герой, управление, targeting и игровой бой не заменены. Следующий этап — просмотр этих кастов и затем остальные действия выбранного B.</p>
+</main><script src="viewer-data.js"></script><script src="viewer.js"></script>
+</html>

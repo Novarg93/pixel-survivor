@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "2 validation errors for call[animate_image_pixminimax]\ndescription\n  String should have at most 1000 characters [type=string_too_long, input_value='STRICT REAR VIEW through...transparent background.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_too_long\ninitial_pose\n  String should have at most 300 characters [type=string_too_long, input_value='STRICT REAR VIEW through...ly with both arms down.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_too_long"
+    }
+  ],
+  "isError": true
+}

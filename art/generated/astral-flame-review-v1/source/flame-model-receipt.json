@@ -1,0 +1,27 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"d01bec79-7cc4-455b-98b7-206dc9c45c1d\",\n  \"image_id\": \"8bf94c0d-8269-5677-bd43-6d063f8deac6\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"8bf94c0d-8269-5677-bd43-6d063f8deac6\",\n  \"job_id\": \"d01bec79-7cc4-455b-98b7-206dc9c45c1d\",\n  \"description\": \"One isolated compact patch of necrotic mint fire erupting UPWARDS FROM THE GROUND in a dark fantasy pixel-art survivors game. This is the ground fire of the armored Eclipse miniboss reference. Three narrow uneven flame tongues, middle one taller, broad low root at the floor, large transparent gaps between tongues. Thin curved stepped tips, simple coarse clusters and flat shaded green-teal/slate flame bodies, very small pale mint inner streaks. Geyser-like rising and falling flame silhouette suitable for an eruption/idle/die-down animation, smaller and less powerful than a final boss ground inferno. NOT a round fireball or teal orb, not a tornado, not ice crystals, not a skull or rune.128x128 transparent canvas: contact base/pivot exactly x64 y104, flame feet at y104; keep the silhouette inside x22..106,y22..106 with generous transparent margins. Restrained dark slate, deep green-teal and cold mint palette from the reference caster armor. No white filled core, no warm orange/yellow, no purple, no smoke cloud, no bloom/blur, no concentric ring, no background, no character, no text. Match the PROJECT pixel-art style: chunky connected pixels, readable at game size, no noisy fine details.\",\n  \"seed\": 110121,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/d01bec79-7cc4-455b-98b7-206dc9c45c1d/download\"\n}\nPoll get_image(job_id=\"d01bec79-7cc4-455b-98b7-206dc9c45c1d\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "d01bec79-7cc4-455b-98b7-206dc9c45c1d",
+    "image_id": "8bf94c0d-8269-5677-bd43-6d063f8deac6",
+    "status": "processing",
+    "source_image_id": "8bf94c0d-8269-5677-bd43-6d063f8deac6",
+    "job_id": "d01bec79-7cc4-455b-98b7-206dc9c45c1d",
+    "description": "One isolated compact patch of necrotic mint fire erupting UPWARDS FROM THE GROUND in a dark fantasy pixel-art survivors game. This is the ground fire of the armored Eclipse miniboss reference. Three narrow uneven flame tongues, middle one taller, broad low root at the floor, large transparent gaps between tongues. Thin curved stepped tips, simple coarse clusters and flat shaded green-teal/slate flame bodies, very small pale mint inner streaks. Geyser-like rising and falling flame silhouette suitable for an eruption/idle/die-down animation, smaller and less powerful than a final boss ground inferno. NOT a round fireball or teal orb, not a tornado, not ice crystals, not a skull or rune.128x128 transparent canvas: contact base/pivot exactly x64 y104, flame feet at y104; keep the silhouette inside x22..106,y22..106 with generous transparent margins. Restrained dark slate, deep green-teal and cold mint palette from the reference caster armor. No white filled core, no warm orange/yellow, no purple, no smoke cloud, no bloom/blur, no concentric ring, no background, no character, no text. Match the PROJECT pixel-art style: chunky connected pixels, readable at game size, no noisy fine details.",
+    "seed": 110121,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/d01bec79-7cc4-455b-98b7-206dc9c45c1d/download"
+  },
+  "isError": false
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Survivor — Fireball V2</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101925;color:#f1e5cb;font:16px system-ui,sans-serif;padding:24px}main{max-width:1000px;margin:auto}h1{font:28px Georgia,serif;margin:0 0 12px}p{color:#aab9c3;line-height:1.6}button,select,a{font:inherit;color:#f1e5cb;background:#172333;border:1px solid #837452;padding:8px 12px;border-radius:3px}a{display:inline-block}nav{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}canvas{display:block;width:100%;height:auto;image-rendering:pixelated;border:1px solid #53615f}small{display:block;line-height:1.6;margin-top:14px;color:#aab9c3}button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid #ffe0a3;outline-offset:3px}
+</style>
+<main><h1>Fireball V2 · тлеющая искра</h1>
+<p>Компактное янтарное ядро, короткий хвост, пять цветов. Сравнение с прежним фаерболом при одинаковом игровом масштабе. Появление 200 мс · цикл полёта 400 мс · попадание 300 мс.</p>
+<nav><button id="pause">Пауза</button><button id="step">Следующий кадр</button><label>Фон <select id="bg"><option value="#3a4a3b">Grove</option><option value="#342421">Burning Grove</option><option value="#222e3c">Тёмный</option></select></label><label>Увеличение <select id="zoom"><option value="2">2×</option><option value="3" selected>3×</option><option value="4">4×</option></select></label><a href="source/pixel-survivor-ember-fireball-v2.gif">GIF полёта</a></nav>
+<canvas id="preview" width="940" height="420" aria-label="Сравнение старого и нового фаербола и покадровая анимация нового"></canvas>
+<small>Верхний ряд: цикл полёта V1 / V2. Нижний ряд: появление → полёт → короткое попадание V2.<br>Оригинальный программный pixel art; исходный flight PNG/GIF, рецепт PixelLab и покадровый аудит сохранены рядом. В игре используется V2.</small>
+</main>
+<script>
+const canvas=document.getElementById('preview'),g=canvas.getContext('2d'),pause=document.getElementById('pause'),bg=document.getElementById('bg'),zoom=document.getElementById('zoom');
+let elapsed=0,previous=0,running=!matchMedia('(prefers-reduced-motion: reduce)').matches,raf=0;
+pause.textContent=running?'Пауза':'Продолжить';
+const image=path=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=path;});
+Promise.all([image('../../../public/assets/hd/mage-fireball-v1/atlas.png'),image('../../../public/assets/hd/mage-fireball-v2/atlas.png')]).then(([old,newer])=>{
+function draw(){
+ canvas.dataset.ready='true';const z=Number(zoom.value);g.imageSmoothingEnabled=false;g.fillStyle=bg.value;g.fillRect(0,0,940,420);g.fillStyle='#f1e5cb';g.font='19px system-ui';g.fillText('Прежний · 12 кадров полёта',34,40);g.fillText('V2 · 4 кадра полёта',500,40);
+ function cel(img,index,cols,x,y){const w=116,h=88;g.drawImage(img,index%cols*w+2,Math.floor(index/cols)*h+2,112,84,Math.round(x-65*.5*z),Math.round(y-42*.5*z),56*z,42*z);}
+ cel(old,24+Math.floor(elapsed/.083)%12,8,220,126);cel(newer,2+Math.floor(elapsed/.1)%4,4,710,126);
+ const time=elapsed%1.5;const frame=time<.2?Math.floor(time/.1):time<1?2+Math.floor((time-.2)/.1)%4:6+Math.min(5,Math.floor((time-1)/.05));
+ g.fillText(time<.2?'Появление':time<1?'Полёт':'Попадание',34,230);cel(newer,frame,4,190+Math.min(.8,Math.max(0,time-.2))*580,305);
+ g.fillStyle='#aab9c3';g.font='14px monospace';g.fillText('12 кадров всего · 0,47 MiB RGBA · hard alpha · NEAREST',34,392);
+}
+function tick(now){if(previous&&running)elapsed+=Math.min(.05,(now-previous)/1000);previous=now;draw();raf=requestAnimationFrame(tick);}
+pause.onclick=()=>{running=!running;pause.textContent=running?'Пауза':'Продолжить';};document.getElementById('step').onclick=()=>{running=false;pause.textContent='Продолжить';elapsed+=.1;draw();};bg.onchange=zoom.onchange=draw;
+document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);raf=0;previous=0;}else if(!raf)raf=requestAnimationFrame(tick);});window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);raf=0;previous=0;});window.addEventListener('pageshow',()=>{if(!raf)raf=requestAnimationFrame(tick);});raf=requestAnimationFrame(tick);
+}).catch(()=>{g.fillStyle='#f1e5cb';g.fillText('Не удалось загрузить локальные PNG',24,40);});
+</script></html>

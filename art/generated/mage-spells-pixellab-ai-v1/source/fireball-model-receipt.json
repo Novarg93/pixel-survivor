@@ -1,0 +1,26 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"6daa7422-dbec-47a1-8f17-382823e28bd9\",\n  \"image_id\": \"83b06c22-4952-59bf-b57e-24009b4d588e\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"83b06c22-4952-59bf-b57e-24009b4d588e\",\n  \"job_id\": \"6daa7422-dbec-47a1-8f17-382823e28bd9\",\n  \"description\": \"Standalone small MAGE FIREBALL projectile sprite for a top-down dark fantasy pixel-art game. Horizontal flight to the RIGHT. One round compact amber-orange head centered at pixel (78,64), diameter about 26 pixels. A SHORT three-tongue copper-orange tail extends LEFT, total visible width about 62 pixels, height about 30 pixels, plenty of transparent margin. Warm copper #955636, burnt orange #dc8648, amber #fba35e, narrow ivory #ffdb9b core. Large clean pixel clusters, simple restrained silhouette, 2 or 3 shading levels, subtle dark selective outline. Small ordinary mage spell, not an ultimate. Camera fixed; exactly one projectile. No explosion, smoke cloud, long streamer, neon halo, bloom, random spark confetti, ornate details, background scene, floor, character, text or sprite sheet. Match the supplied hero's pixel-art rendering quality, not its colours.\",\n  \"seed\": 2026111001,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/6daa7422-dbec-47a1-8f17-382823e28bd9/download\"\n}\nPoll get_image(job_id=\"6daa7422-dbec-47a1-8f17-382823e28bd9\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "6daa7422-dbec-47a1-8f17-382823e28bd9",
+    "image_id": "83b06c22-4952-59bf-b57e-24009b4d588e",
+    "status": "processing",
+    "source_image_id": "83b06c22-4952-59bf-b57e-24009b4d588e",
+    "job_id": "6daa7422-dbec-47a1-8f17-382823e28bd9",
+    "description": "Standalone small MAGE FIREBALL projectile sprite for a top-down dark fantasy pixel-art game. Horizontal flight to the RIGHT. One round compact amber-orange head centered at pixel (78,64), diameter about 26 pixels. A SHORT three-tongue copper-orange tail extends LEFT, total visible width about 62 pixels, height about 30 pixels, plenty of transparent margin. Warm copper #955636, burnt orange #dc8648, amber #fba35e, narrow ivory #ffdb9b core. Large clean pixel clusters, simple restrained silhouette, 2 or 3 shading levels, subtle dark selective outline. Small ordinary mage spell, not an ultimate. Camera fixed; exactly one projectile. No explosion, smoke cloud, long streamer, neon halo, bloom, random spark confetti, ornate details, background scene, floor, character, text or sprite sheet. Match the supplied hero's pixel-art rendering quality, not its colours.",
+    "seed": 2026111001,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/6daa7422-dbec-47a1-8f17-382823e28bd9/download"
+  }
+}

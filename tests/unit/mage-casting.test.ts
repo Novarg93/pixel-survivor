@@ -10,13 +10,14 @@ const signal = (ability: MageSpell, extra: Partial<CastSignal> = {}): CastSignal
 it('keeps an active stroke progressing when casts repeat and stores at most one future stroke', () => {
   const c = new MageCastingController(); c.request(signal('fireball'), 0);
   for (const at of [.04,.08,.12,.16,.2]) { c.request(signal('fireball'), at); expect(c.view(at).active!.started).toBe(0); expect(c.view(at).pending).toBe(1); }
-  expect(c.view(.2).frame).toBeGreaterThan(0); c.advance(.29); expect(c.view(.29).active!.started).toBe(.29); expect(c.view(.29).pending).toBe(0);
+  expect(c.view(.2).frame).toBeGreaterThan(0); c.advance(.35); expect(c.view(.35).active!.started).toBe(.35); expect(c.view(.35).pending).toBe(0);
 });
-it('coalesces simultaneous casts by importance and gives defensive absorption a short priority stroke', () => {
+it('coalesces simultaneous casts without letting the temporarily hidden Shield gesture preempt them', () => {
   const c = new MageCastingController();
   for (const ability of ['meteor','frost','lightning','fireball'] as const) c.request(signal(ability), 0);
   expect(c.view(0).active!.ability).toBe('meteor'); expect(c.view(0).pending).toBe(1);
-  c.request(signal('shield', { impact: true }), .12); expect(c.view(.12).active!.ability).toBe('shield'); expect(c.view(.12).active!.impact).toBe(true);
+  const before=c.view(.12);c.request(signal('shield', { impact: true }), .12);
+  expect(c.view(.12).active).toEqual(before.active);expect(c.view(.12).pending).toBe(before.pending);expect(c.view(.12).requested.shield).toBe(1);
 });
 it('does not replay stale queued casts after a major gesture', () => {
   const c = new MageCastingController(); c.request(signal('meteor'), 0); c.request(signal('fireball'), 0);
@@ -59,12 +60,12 @@ it('uses the actual distant Nova center and fireball flight direction instead of
 });
 it('freezes the arm phase on pause and repositions no gameplay state when Blink or damage interrupts', () => {
   const w=new World(9,{spawnRate:0}),c=new MageCastingController();c.observe(w);w.feedback({type:'ability',ability:'frost'});c.observe(w);w.feedbackEvents.length=0;w.elapsed=.13;c.observe(w);w.pause();const before=c.view(w.elapsed);w.step(.1,{x:1,y:0});c.observe(w);expect(c.view(w.elapsed)).toEqual(before);
-  w.resume();w.mobility.activate(w,{x:1,y:0});c.observe(w);expect(c.view(w.elapsed).mode).toBe('blink');expect(c.view(w.elapsed).active).toBeUndefined();
+  w.resume();w.mobility.activate(w,{x:1,y:0});c.observe(w);expect(c.view(w.elapsed).mode).toBe('cast');expect(c.view(w.elapsed).active).toMatchObject({ability:'blink',started:w.elapsed,duration:.32});
   w.mobility.protectedUntil=0;w.damagePlayer(20);c.observe(w);expect(c.view(w.elapsed).mode).toBe('hurt');w.player.invulnerableUntil=0;w.damagePlayer(99999);c.observe(w);expect(c.view(w.elapsed).mode).toBe('death');
   c.observe(new World(10));expect(c.view(0).mode).toBe('idle');expect(c.view(0).pending).toBe(0);
 });
 it('reacts to real shield absorption without introducing invulnerability or fake health damage', () => {
-  const w=new World(),c=new MageCastingController();w.abilities.shield.level=1;w.shield.refreshAbsorb(15,10);c.observe(w);w.damagePlayer(10);const before=JSON.stringify(w);c.observe(w);expect(c.view(0).active).toMatchObject({ability:'shield',impact:true});expect(w.player.hp).toBe(100);expect(w.shield.absorbValue(0)).toBe(5);expect(JSON.stringify(w)).toBe(before);
+  const w=new World(),c=new MageCastingController();w.abilities.shield.level=1;w.shield.refreshAbsorb(15,10);c.observe(w);w.damagePlayer(10);const before=JSON.stringify(w);c.observe(w);expect(c.view(0).active).toBeUndefined();expect(c.view(0).pending).toBe(0);expect(c.view(0).requested.shield).toBe(1);expect(w.player.hp).toBe(100);expect(w.shield.absorbValue(0)).toBe(5);expect(JSON.stringify(w)).toBe(before);
 });
 it('retains exact distant cast targets even when the bounded FX pool has no free slot', () => {
   const w=new World(71,{spawnRate:0});for(const a of Object.values(w.abilities))a.level=0;w.abilities.frost.level=1;w.spawn('tank',{x:150,y:-60})!.hp=1e6;

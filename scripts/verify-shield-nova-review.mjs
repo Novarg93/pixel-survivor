@@ -1,0 +1,12 @@
+import {readFileSync,readdirSync,writeFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='art/generated/mage-shield-nova-pixellab-v1';
+const baseline=JSON.parse(readFileSync(`${root}/source/runtime-baseline.json`,'utf8'));
+const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
+const current=[...walk('src'),...walk('public')].sort(),original=Object.keys(baseline).sort();
+const changed=original.filter(file=>!existsSync(file)||createHash('sha256').update(readFileSync(file)).digest('hex')!==baseline[file]);
+const inventoryUnchanged=JSON.stringify(current)===JSON.stringify(original);
+const report={phase:'Shield / regular Nova preview after approved Fireball/Meteor integration',runtimeIntegration:false,ultimateChanged:false,protectedRuntimeFiles:original.length,inventoryUnchanged,changed};
+writeFileSync(`${root}/source/runtime-verification.json`,JSON.stringify(report,null,2)+'\n');
+if(changed.length||!inventoryUnchanged)throw Error('Runtime changed during Shield/Nova preview: '+changed.join(', '));
+globalThis.console.log(JSON.stringify(report));

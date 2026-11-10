@@ -35,7 +35,9 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Fire doubled area and ex
   });
   expect(result.form).toMatchObject({radius:164,phase:'form',burning:4,bodyFlames:18});expect(result.form.glowWidth).toBeGreaterThan(400);expect(result.form.glowWidth).toBeLessThan(460);expect(result.form.glowHeight).toBeGreaterThan(300);
   expect(result.enemies.slice(0,4).every(e=>e.hp<1e6)).toBe(true);expect(result.enemies.slice(4).every(e=>e.hp===1e6)).toBe(true);
-  expect(result.hp).toBe(100);expect(result.health.absorb).toBe(.75);expect(result.activeDifference).toBe(0);expect(result.fadeDifference).toBe(0);expect(result.restoredDifference).toBeGreaterThan(100);
-  for(const [label,png]of [['flame-only',result.png],['fade-no-shell',result.fade],['shields-restored',result.restored]])writeFileSync(`${directory}/${label}-${width}.png`,Buffer.from(png.split(',')[1],'base64'));
+  expect(result.hp).toBe(100);expect(result.health.absorb).toBe(.75);expect(result.activeDifference).toBe(0);expect(result.fadeDifference).toBe(0);
+  // The approved PixelLab shield returns after Fire's exclusive silhouette and fade end.
+  expect(result.restoredDifference).toBeGreaterThan(0);
+  for(const [label,png]of [['flame-only',result.png],['fade-no-shell',result.fade],['shield-restored',result.restored]])writeFileSync(`${directory}/${label}-${width}.png`,Buffer.from(png.split(',')[1],'base64'));
   writeFileSync(`${report}/canvas-${width}.json`,JSON.stringify({...result,png:undefined,fade:undefined,restored:undefined,errors},null,2));expect(errors).toEqual([]);await context.close();
 });

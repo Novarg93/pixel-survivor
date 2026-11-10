@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ash Warden — SFX Demo</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#121414;color:#eee7dc}
+*{box-sizing:border-box}body{max-width:1060px;margin:auto;padding:32px 20px 60px}
+h1{font-size:clamp(28px,6vw,44px);margin:6px 0 10px;letter-spacing:-1px}h2{margin:0;font-size:22px}
+p{line-height:1.6;color:#bbbdb6}.eyebrow{color:#eeaa69;text-transform:uppercase;letter-spacing:3px;font-size:12px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:20px 0}
+button,select{font:inherit;color:inherit;background:#292e2d;border:1px solid #565b55;border-radius:7px;padding:11px 15px}
+button{cursor:pointer}button:first-of-type{background:#9e512c;border-color:#c97b49}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #f6c58a;outline-offset:3px}
+#play-status{min-height:28px;color:#e7b480}.attacks{display:grid;gap:20px;margin-top:24px}
+section{padding:22px;border:1px solid #3c413b;border-radius:12px;background:#1c201e}
+.takes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.take{min-width:0;padding:14px;background:#121714;border-radius:8px}.take-title{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px}
+.take small{color:#b2b7ae}audio{display:block;width:100%;height:42px}a{color:#efb279}.foot{font-size:13px;margin-top:28px}
+details{margin-top:18px}summary{cursor:pointer;color:#c8c8bd}details p{font-size:14px}
+@media(max-width:600px){body{padding:24px 14px 40px}.takes{grid-template-columns:1fr}section{padding:16px}.toolbar{gap:8px}}
+</style>
+<header>
+<div class="eyebrow">Pixel Survivor · Sound Effects review</div>
+<h1>Ash Warden</h1>
+<p>Четыре атаки, по четыре дубля основного промпта A. Оригинальные записи ElevenLabs, без обработки. Выбор звуков для игры ещё не сделан.</p>
+</header>
+<div class="toolbar">
+<button id="play-all" type="button">Все атаки подряд</button>
+<label for="variant">Дубль</label>
+<select id="variant" aria-label="Дубль для последовательного демо"><option value="1">№1</option><option value="2">№2</option><option value="3">№3</option><option value="4">№4</option></select>
+<button id="stop" type="button">Стоп</button>
+</div>
+<div id="play-status" role="status" aria-live="polite" data-state="idle" data-played="0">Готово к прослушиванию.</div>
+<main class="attacks" id="attacks"></main>
+<p class="foot">Порядок демо: Basic Melee → Charge → Flame Strike → Meteor. Нумерация дублей сохранена по порядку генерации; №1 не означает «лучший». <a id="flow-link" target="_blank" rel="noreferrer">Открыть в ElevenLabs</a>.</p>
+<script>
+const data=__SFX_DATA__;
+const notes={melee:'Тяжёлый взмах мечом, свист стали и короткий удар.',charge:'Старт, движение в броне и торможение. Без столкновения.','flame-strike':'Удар мечом, воспламенение и широкая волна огня.',meteor:'Короткое падение, каменный контакт и всплеск огня.'};
+const container=document.querySelector('#attacks'),status=document.querySelector('#play-status');
+document.querySelector('#flow-link').href=data.flowUrl;
+const players=[];
+for(const attack of data.attacks){
+  const section=document.createElement('section');
+  const heading=document.createElement('h2');heading.textContent=attack.label;section.append(heading);
+  const description=document.createElement('p');description.textContent=notes[attack.id]+' Целевая длительность: '+attack.seconds+' с.';section.append(description);
+  const takes=document.createElement('div');takes.className='takes';
+  for(const take of attack.takes){
+    const box=document.createElement('div');box.className='take';
+    const title=document.createElement('div');title.className='take-title';
+    const label=document.createElement('strong');label.textContent='Дубль '+take.variant;
+    const info=document.createElement('small');info.textContent=take.analysis.seconds.toFixed(2)+' с · '+Math.round(take.bytes/1024)+' KB';
+    title.append(label,info);box.append(title);
+    const audio=document.createElement('audio');audio.controls=true;audio.preload='metadata';audio.src=take.file;audio.setAttribute('aria-label',attack.label+', дубль '+take.variant);
+    players.push({attack:attack.id,variant:take.variant,audio});box.append(audio);
+    const link=document.createElement('a');link.href=take.file;link.download=take.file.split('/').pop();link.textContent='Скачать MP3';box.append(link);takes.append(box);
+  }
+  section.append(takes);const details=document.createElement('details'),summary=document.createElement('summary'),prompt=document.createElement('p');summary.textContent='Промпт A';prompt.textContent=attack.prompt;details.append(summary,prompt);section.append(details);container.append(section);
+}
+let sequence=0,sequenceActive=false;
+const endedWaits=new Map();
+function stopAll(){
+  sequence++;sequenceActive=false;
+  for(const resolve of endedWaits.values())resolve(false);endedWaits.clear();
+  for(const {audio}of players){audio.pause();audio.currentTime=0;}
+}
+for(const {audio}of players)audio.addEventListener('play',()=>{
+  if(sequenceActive)return;
+  for(const p of players)if(p.audio!==audio)p.audio.pause();
+});
+document.querySelector('#stop').addEventListener('click',()=>{stopAll();status.dataset.state='idle';status.textContent='Воспроизведение остановлено.';});
+document.querySelector('#play-all').addEventListener('click',async()=>{
+  stopAll();const token=sequence;sequenceActive=true;const variant=Number(document.querySelector('#variant').value);let played=0;
+  status.dataset.played='0';status.dataset.state='playing';
+  try{
+    for(const attack of data.attacks){
+      if(token!==sequence)return;
+      const audio=players.find(p=>p.attack===attack.id&&p.variant===variant).audio;
+      status.textContent=attack.label+' · дубль '+variant;audio.currentTime=0;
+      const ended=new Promise((resolve,reject)=>{
+        const cleanup=()=>{audio.removeEventListener('ended',done);audio.removeEventListener('error',fail);endedWaits.delete(audio);};
+        const done=()=>{cleanup();resolve(true);},fail=()=>{cleanup();reject(new Error('Не удалось воспроизвести '+attack.label));};
+        audio.addEventListener('ended',done,{once:true});audio.addEventListener('error',fail,{once:true});endedWaits.set(audio,value=>{cleanup();resolve(value);});
+      });
+      await audio.play();if(!await ended||token!==sequence)return;
+      status.dataset.played=String(++played);
+      if(played<data.attacks.length){await new Promise(resolve=>globalThis.setTimeout(resolve,450));if(token!==sequence)return;}
+    }
+    sequenceActive=false;status.dataset.state='done';status.textContent='Все четыре атаки прослушаны · дубль '+variant+'.';
+  }catch(error){if(token===sequence){stopAll();status.dataset.state='error';status.textContent=error.message;}}
+});
+</script>
+</html>

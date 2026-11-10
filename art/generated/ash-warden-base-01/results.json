@@ -1,0 +1,138 @@
+{
+  "authorizedLimit": 3,
+  "spentGenerations": 3,
+  "balanceBefore": 40,
+  "balanceAfter": 37,
+  "reference": {
+    "ref": "upload:b06cf162-3a27-45af-b150-85fc1b784ff5",
+    "upload_id": "b06cf162-3a27-45af-b150-85fc1b784ff5",
+    "width": 1086,
+    "height": 1448,
+    "n_frames": 1,
+    "expires_in_days": 3
+  },
+  "conversion": {
+    "request": {
+      "image_url": "upload:b06cf162-3a27-45af-b150-85fc1b784ff5",
+      "faithful": true,
+      "init_image_strength": 150,
+      "output_width": 96,
+      "output_height": 128,
+      "seed": 260110601
+    },
+    "receipt": {
+      "content": [
+        {
+          "type": "text",
+          "text": "id: 8ef6fc34-9588-452b-b423-e5a317b38071\njob_id: 8ef6fc34-9588-452b-b423-e5a317b38071\nsource: 1086x1448px\noutput: 96x128px\nfaithful: True\ninit_image_strength: 150\nseed: 260110601\nasset_id: 8b80d545-a8ff-5e6e-9bce-fc4dc9f20b0a\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~20-60s)\n\nhint: get_image(job_id=\"8ef6fc34-9588-452b-b423-e5a317b38071\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/8ef6fc34-9588-452b-b423-e5a317b38071/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+        }
+      ],
+      "isError": false
+    },
+    "result": {
+      "job_id": "8ef6fc34-9588-452b-b423-e5a317b38071",
+      "status": "completed",
+      "frames": 1,
+      "download_url": "https://api.pixellab.ai/mcp/images/8ef6fc34-9588-452b-b423-e5a317b38071/download",
+      "download_urls": [
+        "https://api.pixellab.ai/mcp/images/8ef6fc34-9588-452b-b423-e5a317b38071/download"
+      ],
+      "asset": {
+        "id": "8b80d545-a8ff-5e6e-9bce-fc4dc9f20b0a",
+        "type": "image",
+        "status": "saved"
+      },
+      "charged_generations": 1
+    }
+  },
+  "attempts": [
+    {
+      "request": {
+        "description": "One single original dark-fantasy final boss GAME SPRITE, full body in a neutral planted idle stance, facing SOUTH straight toward the viewer, low top-down three-quarter overhead game camera. Adapt the provided Ash Warden concept, not its illustration pose. Very broad heavy shoulders and thick armored limbs; compact intimidating massive silhouette. Preserve the jagged forked crown-shaped closed helmet, narrow glowing orange V-shaped eyes and central ember seam, charcoal-black cracked plate armor with cool gray edge highlights, orange-red glowing ember fissures across shoulders and breastplate, ragged ash cloth. Only a few short dry branch spikes behind the shoulders as a secondary motif, no large antler forest. BOTH gauntleted hands visibly grasp the SAME long hilt of ONE huge broad dark two-handed greatsword at the front of the waist, hands stacked along the grip; blade points diagonally down to the viewer's right, clear of both feet, thick angular blade with an ember crack and the concept's branch-shaped guard. Calm symmetric forward-facing head and torso, feet apart, no attack. Entire body and complete sword fit the canvas with generous transparent margins. Body height about 76 pixels, sword about 60 pixels long. Clean HD pixel-art clusters, restrained readable detail, strong silhouette and simple lighting compatible with a top-down pixel-art mage. Isolated transparent background, no floor, no cast shadow, no scene, no text, no border, no additional characters. Keep the distinctive charred ancient guardian identity, not an ordinary steel knight.",
+        "init_image_url": "upload:4dadac12-2d94-4de6-8565-c722d663f9f5",
+        "init_image_strength": 110,
+        "width": 128,
+        "height": 128,
+        "view": "low top-down",
+        "direction": "south",
+        "isometric": false,
+        "no_background": true,
+        "outline": "selective outline",
+        "shading": "medium shading",
+        "detail": "medium detail",
+        "text_guidance_scale": 8,
+        "seed": 260110602
+      },
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 41dd2a54-b2e3-4455-b5a4-397397711f5b\njob_id: 41dd2a54-b2e3-4455-b5a4-397397711f5b\ndescription: One single original dark-fantasy final boss GAME SPRITE, full body in a neutral planted idle stance, facing SOUTH straight toward the viewer, low top-down three-quarter overhead game camera. Adapt the provided Ash Warden concept, not its illustration pose. Very broad heavy shoulders and thick armored limbs; compact intimidating massive silhouette. Preserve the jagged forked crown-shaped closed helmet, narrow glowing orange V-shaped eyes and central ember seam, charcoal-black cracked plate armor with cool gray edge highlights, orange-red glowing ember fissures across shoulders and breastplate, ragged ash cloth. Only a few short dry branch spikes behind the shoulders as a secondary motif, no large antler forest. BOTH gauntleted hands visibly grasp the SAME long hilt of ONE huge broad dark two-handed greatsword at the front of the waist, hands stacked along the grip; blade points diagonally down to the viewer's right, clear of both feet, thick angular blade with an ember crack and the concept's branch-shaped guard. Calm symmetric forward-facing head and torso, feet apart, no attack. Entire body and complete sword fit the canvas with generous transparent margins. Body height about 76 pixels, sword about 60 pixels long. Clean HD pixel-art clusters, restrained readable detail, strong silhouette and simple lighting compatible with a top-down pixel-art mage. Isolated transparent background, no floor, no cast shadow, no scene, no text, no border, no additional characters. Keep the distinctive charred ancient guardian identity, not an ordinary steel knight.\nsize: 128x128px\ntransparent: True\nasset_id: 8d083b74-35e7-5e75-be57-8ad3c2a7029a\nasset_status: pending (saved when generation completes)\ninit_image: yes (strength 110)\nseed: 260110602\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"41dd2a54-b2e3-4455-b5a4-397397711f5b\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/41dd2a54-b2e3-4455-b5a4-397397711f5b/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      },
+      "result": {
+        "job_id": "41dd2a54-b2e3-4455-b5a4-397397711f5b",
+        "status": "completed",
+        "frames": 1,
+        "download_url": "https://api.pixellab.ai/mcp/images/41dd2a54-b2e3-4455-b5a4-397397711f5b/download",
+        "download_urls": [
+          "https://api.pixellab.ai/mcp/images/41dd2a54-b2e3-4455-b5a4-397397711f5b/download"
+        ],
+        "asset": {
+          "id": "8d083b74-35e7-5e75-be57-8ad3c2a7029a",
+          "type": "image",
+          "status": "saved"
+        },
+        "charged_generations": 1
+      }
+    },
+    {
+      "request": {
+        "description": "A MASSIVE BROAD HEAVY armored ancient ash guardian, a final boss, not a slim human knight. ONE full-body HD pixel art game sprite in neutral planted stance, SOUTH facing straight forward, low top-down overhead three-quarter game view. TWO HANDS TOGETHER grasp the SAME TWO-HANDED GREATSWORD handle in front of the lower chest; both elbows bend inward, both gauntlets clearly wrap the long grip, neither arm hangs at the side. Thick broad sword blade descends diagonally to lower right, fully inside the sprite. Huge square shoulders, wide barrel chest, thick waist, SHORT THICK armored legs, large planted boots, compact tank-like body proportions. Preserve the reference's distinctive jagged forked closed crown helmet and narrow blazing orange V visor eyes, charcoal BLACK split plate armor with cool ash-gray edge highlights, bright orange-red branching ember cracks in chest and shoulder plates. Torn dark ash cloth. Only two small dry branch spikes behind the shoulders, a secondary accent. Sword has a wide dark stone-metal blade with an orange fissure and the reference's gnarled branch guard. Readable bold clean pixel clusters, restrained details. Body about 76px high, compact sword about 55px, generous clear margins. Isolated transparent background, no ground, no shadow, no illustration scene, no text. Both hands remain connected to one sword hilt.",
+        "init_image_url": "upload:4dadac12-2d94-4de6-8565-c722d663f9f5",
+        "init_image_strength": 60,
+        "width": 128,
+        "height": 128,
+        "view": "low top-down",
+        "direction": "south",
+        "isometric": false,
+        "no_background": true,
+        "outline": "selective outline",
+        "shading": "medium shading",
+        "detail": "medium detail",
+        "text_guidance_scale": 10,
+        "seed": 260110603
+      },
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "id: 5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\njob_id: 5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\ndescription: A MASSIVE BROAD HEAVY armored ancient ash guardian, a final boss, not a slim human knight. ONE full-body HD pixel art game sprite in neutral planted stance, SOUTH facing straight forward, low top-down overhead three-quarter game view. TWO HANDS TOGETHER grasp the SAME TWO-HANDED GREATSWORD handle in front of the lower chest; both elbows bend inward, both gauntlets clearly wrap the long grip, neither arm hangs at the side. Thick broad sword blade descends diagonally to lower right, fully inside the sprite. Huge square shoulders, wide barrel chest, thick waist, SHORT THICK armored legs, large planted boots, compact tank-like body proportions. Preserve the reference's distinctive jagged forked closed crown helmet and narrow blazing orange V visor eyes, charcoal BLACK split plate armor with cool ash-gray edge highlights, bright orange-red branching ember cracks in chest and shoulder plates. Torn dark ash cloth. Only two small dry branch spikes behind the shoulders, a secondary accent. Sword has a wide dark stone-metal blade with an orange fissure and the reference's gnarled branch guard. Readable bold clean pixel clusters, restrained details. Body about 76px high, compact sword about 55px, generous clear margins. Isolated transparent background, no ground, no shadow, no illustration scene, no text. Both hands remain connected to one sword hilt.\nsize: 128x128px\ntransparent: True\nasset_id: 83525dbb-4656-52af-b22d-a53af46e12aa\nasset_status: pending (saved when generation completes)\ninit_image: yes (strength 60)\nseed: 260110603\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"5ea5443e-a685-4a3b-ad2b-aedb1b7912f3\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/5ea5443e-a685-4a3b-ad2b-aedb1b7912f3/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+          }
+        ],
+        "isError": false
+      },
+      "result": {
+        "job_id": "5ea5443e-a685-4a3b-ad2b-aedb1b7912f3",
+        "status": "completed",
+        "frames": 1,
+        "download_url": "https://api.pixellab.ai/mcp/images/5ea5443e-a685-4a3b-ad2b-aedb1b7912f3/download",
+        "download_urls": [
+          "https://api.pixellab.ai/mcp/images/5ea5443e-a685-4a3b-ad2b-aedb1b7912f3/download"
+        ],
+        "asset": {
+          "id": "83525dbb-4656-52af-b22d-a53af46e12aa",
+          "type": "image",
+          "status": "saved"
+        },
+        "charged_generations": 1
+      }
+    }
+  ],
+  "selectedDraft": "03-pixflux-attempt-01-raw.png",
+  "selectionAcceptedForIntegration": false,
+  "animationCalls": 0,
+  "directionGenerationCalls": 0
+}

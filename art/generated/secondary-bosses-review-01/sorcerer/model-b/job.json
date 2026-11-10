@@ -1,0 +1,33 @@
+{
+  "status": "succeeded",
+  "task_id": "7abf9b0b-1889-44d4-a1c2-64374ebea645",
+  "created_at": 1794039459,
+  "updated_at": 1794039605,
+  "result": {
+    "created_at": 1794039604,
+    "credit_cost": 1,
+    "balance_cost": 0,
+    "model": "rd_pro",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "request_id": "7abf9b0b-1889-44d4-a1c2-64374ebea645",
+    "outputs_retained_until": 1794125859,
+    "billing": {
+      "source": "plan",
+      "balance_left": 10,
+      "plan_job_limit": 2,
+      "balance_charged": 0,
+      "plan_jobs_running": 1,
+      "plan_usage_left_pct": 40
+    },
+    "output_images_count": 0
+  },
+  "billing": {
+    "source": "plan",
+    "plan_jobs_running": 0,
+    "plan_job_limit": 2,
+    "plan_usage_left_pct": 40,
+    "balance_charged": 0,
+    "balance_left": 10
+  }
+}

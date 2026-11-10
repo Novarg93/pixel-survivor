@@ -1,0 +1,18 @@
+{
+  "baselineFiles": 383,
+  "changed": [
+    "src/game/audio/README.md",
+    "src/game/audio/mageSamples.ts",
+    "src/game/audio/mageUploadedSamples.ts"
+  ],
+  "added": [
+    "public/assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav"
+  ],
+  "unchanged": 380,
+  "currentSHA256": {
+    "src/game/audio/README.md": "507fa80af6373a2f37a0c9cae280509995de24cae2179b898c0c6279fc62baf9",
+    "src/game/audio/mageSamples.ts": "089cc4f6c696c8871523217c2f72b42951bb9a04dd018152f534d289613c83fe",
+    "src/game/audio/mageUploadedSamples.ts": "ed74267ded400ea2df94361a4026b5ed2ed39dd9b06d2419d82e98c09db9250c",
+    "public/assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav": "ac919a62f880b93c45ac874ab34c80db570e4e350814682c290e4096c370640d"
+  }
+}

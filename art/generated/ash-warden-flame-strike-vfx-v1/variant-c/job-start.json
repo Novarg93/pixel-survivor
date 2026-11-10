@@ -1,0 +1,15 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"status\":\"accepted\",\"task_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"request_id\":\"99039f75-70ab-474f-8dbf-a49844354337\",\"message\":\"Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status.\"}"
+    }
+  ],
+  "structuredContent": {
+    "status": "accepted",
+    "task_id": "99039f75-70ab-474f-8dbf-a49844354337",
+    "request_id": "99039f75-70ab-474f-8dbf-a49844354337",
+    "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+  },
+  "isError": false
+}

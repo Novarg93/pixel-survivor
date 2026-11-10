@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "status: completed\nid: b05f33f2-b173-436e-9a3d-72b754ebc95a\njob_id: b05f33f2-b173-436e-9a3d-72b754ebc95a\nframe: 0 of 13\nasset_id: bdcb6b9c-7ed5-5e89-a5c8-504c1472dcfa\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 2 generations\ndownload: https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=0"
+    }
+  ],
+  "structuredContent": {
+    "job_id": "b05f33f2-b173-436e-9a3d-72b754ebc95a",
+    "status": "completed",
+    "frames": 13,
+    "download_url": "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=0",
+    "download_urls": [
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=0",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=1",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=2",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=3",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=4",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=5",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=6",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=7",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=8",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=9",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=10",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=11",
+      "https://api.pixellab.ai/mcp/images/b05f33f2-b173-436e-9a3d-72b754ebc95a/download?index=12"
+    ],
+    "asset": {
+      "id": "bdcb6b9c-7ed5-5e89-a5c8-504c1472dcfa",
+      "type": "image",
+      "status": "saved"
+    },
+    "charged_generations": 2,
+    "frame": 0
+  },
+  "isError": false
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 83942725-e3bd-403e-b1c3-503edcdaaecc\njob_id: 83942725-e3bd-403e-b1c3-503edcdaaecc\ndescription: Perform one meteor calling gesture: extend one forearm toward the facing direction with palm open facing upward, hold the open palm steadily as if summoning a meteor, close the hand slightly, then lower the arm back into the original neutral standing pose. Feet stay planted. No meteor, fire or other objects. The character faces east for this entire animation. Preserve exactly the same blue long coat, gold armor trim, green tabard, red belt, short dark hair and bearded face from the reference. Fixed low top-down game camera, consistent anatomy and scale, complete body within the canvas, transparent background.\nframes: 16\nsize: 256x256px\ntransparent: True\nseed: 8111015\ncost: 2 generations\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"83942725-e3bd-403e-b1c3-503edcdaaecc\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/83942725-e3bd-403e-b1c3-503edcdaaecc/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: c90fd401-0653-57a5-8f9b-b64d9ade15da\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ],
+  "isError": false
+}

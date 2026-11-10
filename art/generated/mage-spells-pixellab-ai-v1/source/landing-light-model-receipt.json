@@ -1,0 +1,26 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"background_job_id\": \"a60aa674-c449-46a0-82c3-90bc6e32672f\",\n  \"image_id\": \"06acb5a9-a039-5fd1-9f60-87051dd66f00\",\n  \"status\": \"processing\",\n  \"source_image_id\": \"06acb5a9-a039-5fd1-9f60-87051dd66f00\",\n  \"job_id\": \"a60aa674-c449-46a0-82c3-90bc6e32672f\",\n  \"description\": \"VFX LIGHT PASS ONLY for a top-down pixel-art fantasy game. One very soft low-intensity AMBER POOL OF ILLUMINATION, circular seen from directly above, centered exactly at (64,64), radius about 48 pixels, feathering smoothly over a broad area into a completely PURE BLACK background. Flat luminous colour only. Broad dim warm center, no white or yellow hotspot. Several calm pixel-cluster bands with a very soft wide dark falloff, no visible rim. Black beyond the pool. This is a compositing light texture: absolutely no object, no stone, no fire tongues, no flames, no particles, no sparks, no dust, no smoke, no crater, no cracks, no floor texture, no ring, outline, circle stroke, rune, seal, rays or target symbol. Subtle ground-lighting anticipation for a weak mage meteor, not a powerful boss attack. Entire square is the black light pass, NOT a scene or illustration. Crisp pixel grid, soft falloff represented by colour levels.\",\n  \"seed\": 2026111003,\n  \"image_size\": {\n    \"width\": 128,\n    \"height\": 128\n  },\n  \"output_count\": 1,\n  \"estimated_generations\": 6,\n  \"pricing_provisional\": true,\n  \"poll_tool\": \"get_image\",\n  \"download_path\": \"/mcp/images/a60aa674-c449-46a0-82c3-90bc6e32672f/download\"\n}\nPoll get_image(job_id=\"a60aa674-c449-46a0-82c3-90bc6e32672f\"). The source_image_id is usable after completion; it is an image ID, not a character/object ID. Actual usage is reported on completion. cancel_job(job_id=...) cancels unfinished work."
+    }
+  ],
+  "structuredContent": {
+    "background_job_id": "a60aa674-c449-46a0-82c3-90bc6e32672f",
+    "image_id": "06acb5a9-a039-5fd1-9f60-87051dd66f00",
+    "status": "processing",
+    "source_image_id": "06acb5a9-a039-5fd1-9f60-87051dd66f00",
+    "job_id": "a60aa674-c449-46a0-82c3-90bc6e32672f",
+    "description": "VFX LIGHT PASS ONLY for a top-down pixel-art fantasy game. One very soft low-intensity AMBER POOL OF ILLUMINATION, circular seen from directly above, centered exactly at (64,64), radius about 48 pixels, feathering smoothly over a broad area into a completely PURE BLACK background. Flat luminous colour only. Broad dim warm center, no white or yellow hotspot. Several calm pixel-cluster bands with a very soft wide dark falloff, no visible rim. Black beyond the pool. This is a compositing light texture: absolutely no object, no stone, no fire tongues, no flames, no particles, no sparks, no dust, no smoke, no crater, no cracks, no floor texture, no ring, outline, circle stroke, rune, seal, rays or target symbol. Subtle ground-lighting anticipation for a weak mage meteor, not a powerful boss attack. Entire square is the black light pass, NOT a scene or illustration. Crisp pixel grid, soft falloff represented by colour levels.",
+    "seed": 2026111003,
+    "image_size": {
+      "width": 128,
+      "height": 128
+    },
+    "output_count": 1,
+    "estimated_generations": 6,
+    "pricing_provisional": true,
+    "poll_tool": "get_image",
+    "download_path": "/mcp/images/a60aa674-c449-46a0-82c3-90bc6e32672f/download"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"status\":\"accepted\",\"task_id\":\"d987af5f-fafb-4082-9cb6-62a5c6563c73\",\"request_id\":\"d987af5f-fafb-4082-9cb6-62a5c6563c73\",\"message\":\"Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status.\"}"
+    }
+  ],
+  "structuredContent": {
+    "status": "accepted",
+    "task_id": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+    "request_id": "d987af5f-fafb-4082-9cb6-62a5c6563c73",
+    "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+  },
+  "isError": false
+}

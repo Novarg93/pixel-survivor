@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "provider": "PixelLab AI",
+  "authoring": "scripts/build-pixellab-spell-runtime.mjs",
+  "approvedReview": "art/generated/mage-spells-pixellab-ai-v1/manifest.json",
+  "canvas": 128,
+  "width": 528,
+  "height": 924,
+  "padding": 2,
+  "rgbaBytes": 1951488,
+  "frameCount": 27,
+  "sources": {
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/01.png": "48211101e17527b269e71e622695902ae3e6baab714cd04d4b53e1d9d8abaa7d",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/02.png": "65fbce3054adb77d1a8cd48cb3b915670b8c504eab5e71051da742e45aeebb11",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/03.png": "d6721c1ececcf22ff0c9c60754559f778e8bb311527d960f49f27a1631f3059f",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/04.png": "35f4a174c8d9b7a58f85a9dc46eb6778dafec183ddea2d982c7f112cae376c8c",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/05.png": "52ebdb9bc2e1294de56cb7eaf1139c35ed35b6d19a0e5352e39e7c886bbd5039",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/06.png": "89c87a23b40d28585e8e37c44ac253bafa26705757a43d771605e69d475443aa",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/07.png": "79c1d04b2088af38a24a6e482d8fbe7a619e9ae2fda8221b3664bcb4dcea3c9d",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/08.png": "31bd34c4270206095b2394e366d2c3a2f0f63dd1c3088d6d8d6249e48a252780",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/00.png": "d2934427351c1c28bb8d279d15a3c1cac7869d0123450f70dea5a79ee314909d",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/01.png": "9497dfc34b5ff07dcaf5212f8e2b6c4af51628e8124d81cc7be4c48b83b235a9",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/02.png": "d0975cada77b433579d7fe128cc862aeb1ccd7749240a1e1f84cd9bfd1cfe6fb",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/03.png": "2ea1d22a0ba82a892d957e74c0a704a86d58789fb2fe8bcb482f0d5d64c71719",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/04.png": "e13d5e528efe6fd311aa71162f7873e180f4380d577cfb35bc5be6ef550a03dd",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/05.png": "e0b4726b0afc102fad13e984268760bf7c54fdd108f208c8af2f91cecbc5c969",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/06.png": "037ddd76bd9f982feba62d82419e462877a06969f92e0b4fcccef5390ffd3645",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/07.png": "888023d5b2aa6b0690ad4b19bffd44324cb55f91352c606699314fdbaf540881",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/08.png": "20c86e3e3fc2d2f2c5153501b8b73c35e060ae57a797085aed647a6628b9827a",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/00.png": "1e2a20121e58bf9d94dceea24355ddce7744ab2e194c63f592c995f3e2671f2c",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/01.png": "e0c309e6cb7104aa77010319ef9600e1dde7ca7674d8aeae8594ad7220fb97d6",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/02.png": "ffcc69464f7d186f0cc80a8361f681fcf777a29f903c817f1ba80881aa0e0b60",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/03.png": "f5fe473a019e89bad7217eb79146181765527ed506d792bf4c2548d13cdf7222",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/04.png": "9ca59397b957100447451259d8731010bd9f4add98f0027cfc3bcf3d4f067b51",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/05.png": "69247db7337996828fd78460d2f3ef0850fc033dfd24e170ee63a407f6040305",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/06.png": "a9b44711884f0dd3b82d06fb53d5dfeb3e2a4bcdb82cad3b5508c46736d36d17",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/07.png": "a6eb7da25ae306d92f5f42f84197c91b91f62b929fdf6828203c6047971be09b",
+    "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/08.png": "74836ad5f2c5df683604209fefbb92664d5526da1b61c1dfbc82b8a9af54252e"
+  },
+  "clips": {
+    "flight": {
+      "source": "meteor-flight",
+      "indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "pivot": {
+        "x": 47,
+        "y": 68
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "mage-meteor-flight-0",
+          "visible": 420,
+          "pixelSHA256": "0f31f048e1348698a0ca6f93224bc4f0185cb36f9161d9dc4a3acdbf3889b145",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/01.png"
+        },
+        {
+          "index": 1,
+          "name": "mage-meteor-flight-1",
+          "visible": 413,
+          "pixelSHA256": "55feb121ab311eac05af746d0e2519deba8102f642d6136fd67332a64359793b",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/02.png"
+        },
+        {
+          "index": 2,
+          "name": "mage-meteor-flight-2",
+          "visible": 399,
+          "pixelSHA256": "7bbe40f8c45039de5001d39074b02e9a268d609e1a9eff46fccf5eca4732366c",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/03.png"
+        },
+        {
+          "index": 3,
+          "name": "mage-meteor-flight-3",
+          "visible": 391,
+          "pixelSHA256": "b6ed5eb67ce671a70334ffdbd067b68446aca4abc9cf609ca594271cb0c7e395",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/04.png"
+        },
+        {
+          "index": 4,
+          "name": "mage-meteor-flight-4",
+          "visible": 384,
+          "pixelSHA256": "c528807283b8d15ef9e0beb13b7d91c9ef153075fb110e069a83e19da13483b1",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/05.png"
+        },
+        {
+          "index": 5,
+          "name": "mage-meteor-flight-5",
+          "visible": 379,
+          "pixelSHA256": "944f546e2ce38c5f3fa48244cad410b8ab365a6c81bd7fb36d12770e6bdd0a24",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/06.png"
+        },
+        {
+          "index": 6,
+          "name": "mage-meteor-flight-6",
+          "visible": 361,
+          "pixelSHA256": "f0cef627c80a7e63f1a6471acf0883727edae9a954aa7c07139e7baf3c09fc5c",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/07.png"
+        },
+        {
+          "index": 7,
+          "name": "mage-meteor-flight-7",
+          "visible": 386,
+          "pixelSHA256": "f71303341fb6b3d3d839b0df4970c466f76721933920b03584f5ac13aad48767",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-flight/08.png"
+        }
+      ],
+      "frameCount": 8
+    },
+    "illumination": {
+      "source": "landing-light-fade",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "pivot": {
+        "x": 64,
+        "y": 64
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "mage-meteor-illumination-0",
+          "visible": 16384,
+          "pixelSHA256": "74c9ac939353c39f2ff4521e71d9f8f58ef32ef3d77ce44f2834a4d1d83edea8",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/00.png"
+        },
+        {
+          "index": 1,
+          "name": "mage-meteor-illumination-1",
+          "visible": 16384,
+          "pixelSHA256": "e9097fa031a44d61707b0e45ac424bbd3aaee7c0ff14aff1d5556f94c4d92fdf",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/01.png"
+        },
+        {
+          "index": 2,
+          "name": "mage-meteor-illumination-2",
+          "visible": 16384,
+          "pixelSHA256": "3189f6c17e73541e5d711d6aecf783cbd2cbfbabdaa77b49de5ab1f688d9c521",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/02.png"
+        },
+        {
+          "index": 3,
+          "name": "mage-meteor-illumination-3",
+          "visible": 16384,
+          "pixelSHA256": "d4b3622a7d51a638b5f3be0abf48141c92bbf0701db58530ef9c2c45ee822d30",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/03.png"
+        },
+        {
+          "index": 4,
+          "name": "mage-meteor-illumination-4",
+          "visible": 16384,
+          "pixelSHA256": "bb3679d177400448a4ca538e5969a609979b3b50bbc944aa192a3de27c749458",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/04.png"
+        },
+        {
+          "index": 5,
+          "name": "mage-meteor-illumination-5",
+          "visible": 16384,
+          "pixelSHA256": "c59644f37add980b8e481d55d96e4eb2deb87524491107e21aa76e3f0560ac3b",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/05.png"
+        },
+        {
+          "index": 6,
+          "name": "mage-meteor-illumination-6",
+          "visible": 16384,
+          "pixelSHA256": "a6ad54a1fa03dccff5a091d9af5958da2ab7c553eb0d484c77636b029ba8dd53",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/06.png"
+        },
+        {
+          "index": 7,
+          "name": "mage-meteor-illumination-7",
+          "visible": 16384,
+          "pixelSHA256": "20b18052632ab57eaad86bc4a8373adacaef7ec6ecfec9f5641df29517b84cf2",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/07.png"
+        },
+        {
+          "index": 8,
+          "name": "mage-meteor-illumination-8",
+          "visible": 16384,
+          "pixelSHA256": "a805fca99ac28d9ec74f74908882f4dc3d23cb434a8b284d25dc24eb9918d426",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/landing-light-fade/08.png"
+        }
+      ],
+      "frameCount": 9
+    },
+    "impact": {
+      "source": "meteor-impact",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "pivot": {
+        "x": 47,
+        "y": 68
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "mage-meteor-impact-0",
+          "visible": 389,
+          "pixelSHA256": "4c83d5e7a3153185943c578fbe0f5f7b37760f49d10f35f8b75aeec791894c4d",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/00.png"
+        },
+        {
+          "index": 1,
+          "name": "mage-meteor-impact-1",
+          "visible": 513,
+          "pixelSHA256": "cccac1dbf143953eb15a23afcedcd465a6213ad77e0386b9eb69671c59823463",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/01.png"
+        },
+        {
+          "index": 2,
+          "name": "mage-meteor-impact-2",
+          "visible": 810,
+          "pixelSHA256": "b5fa41312b7b2606b596a0bff682d40b948d018b96c2c45cde9531110446c633",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/02.png"
+        },
+        {
+          "index": 3,
+          "name": "mage-meteor-impact-3",
+          "visible": 663,
+          "pixelSHA256": "7809a14054fd05fecd5f9efd81b0050ed4a90f8a58ffcb35bf4f74a57f5533f2",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/03.png"
+        },
+        {
+          "index": 4,
+          "name": "mage-meteor-impact-4",
+          "visible": 1138,
+          "pixelSHA256": "57b6802943d619ffbb71b8848121b35fe8cfc87560fa224697b88639e08a5583",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/04.png"
+        },
+        {
+          "index": 5,
+          "name": "mage-meteor-impact-5",
+          "visible": 770,
+          "pixelSHA256": "5be2cf35b19f3383e5b69bece9500c2fd719b8f4985d679c4daebbf14409971a",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/05.png"
+        },
+        {
+          "index": 6,
+          "name": "mage-meteor-impact-6",
+          "visible": 510,
+          "pixelSHA256": "ac80cc25eb7a535b6a63556cfd8f465a26e660ca69fb1454042d112b89d33086",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/06.png"
+        },
+        {
+          "index": 7,
+          "name": "mage-meteor-impact-7",
+          "visible": 285,
+          "pixelSHA256": "2056936b2c452786ce5baec75c2cbc7ecc8d955b4fbcb7017599263672c2d395",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/07.png"
+        },
+        {
+          "index": 8,
+          "name": "mage-meteor-impact-8",
+          "visible": 0,
+          "pixelSHA256": "fd045cdf34c57fe505c477bcdc7d99ec55b0979b448b4cc8190553d0d260e3fb",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/08.png"
+        }
+      ],
+      "frameCount": 9
+    },
+    "ground": {
+      "source": "meteor-impact",
+      "indices": [
+        7
+      ],
+      "durationsMs": [
+        800
+      ],
+      "pivot": {
+        "x": 47,
+        "y": 68
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "mage-meteor-ground-0",
+          "visible": 285,
+          "pixelSHA256": "2056936b2c452786ce5baec75c2cbc7ecc8d955b4fbcb7017599263672c2d395",
+          "source": "art/generated/mage-spells-pixellab-ai-v1/raw/meteor-impact-soft/07.png"
+        }
+      ],
+      "frameCount": 1
+    }
+  },
+  "angleDegrees": 48.81407483429035,
+  "flightSize": 128,
+  "impactSize": 128,
+  "flightPivot": {
+    "x": 47,
+    "y": 68
+  },
+  "groundPivot": {
+    "x": 47,
+    "y": 68
+  },
+  "lightPivot": {
+    "x": 64,
+    "y": 64
+  },
+  "lightRadius": 60,
+  "lightOpacity": 0.4,
+  "lightBlend": "SCREEN",
+  "residueFrameIndex": 0
+}

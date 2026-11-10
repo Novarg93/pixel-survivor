@@ -1,0 +1,17 @@
+{
+  "motion": "Candidate B Powerful Baseball Swing",
+  "status": "approved-by-user",
+  "scope": "Basic Melee motion reference",
+  "originalPath": "art/generated/ash-warden-melee-swing-experiment-01/B-original.gif",
+  "originalSHA256": "db002ba3eb52c3cf08af3c39fa4884e605e603cf6bb672fcfee305afb71412e3",
+  "originalFrames": 12,
+  "originalDurationMs": 1800,
+  "derivedDurationMs": 1200,
+  "newDirectionalPackStatus": "manual-review-pending",
+  "candidateA": {
+    "status": "comparison-only; retained",
+    "path": "art/generated/ash-warden-melee-swing-experiment-01/A-original.gif",
+    "SHA256": "dc25db4ca2c9e463c9b1b5770a6fe0115c04aadcd7b41fd274628e3884edb96e"
+  },
+  "decision": "South/East same front upper; West mirrorEast; North existing back"
+}

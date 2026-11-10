@@ -1,0 +1,29 @@
+{
+  "width": 128,
+  "height": 128,
+  "no_background": true,
+  "max_colors": 8,
+  "palette": [
+    "#40272b",
+    "#63322e",
+    "#7f3d30",
+    "#99513a",
+    "#b46a40",
+    "#cf854c",
+    "#dc9b59",
+    "#ad7244"
+  ],
+  "palette_name": "muted copper ember warning without white",
+  "style_image": {
+    "url": "upload:dd3c8003-86d6-473b-8010-f31b2ff1c623",
+    "usage_description": "Use the coarse cluster size and simple top-down pixel art technique. The output is only a sparse ground glow; do not use the pale cloth colors or character."
+  },
+  "style_options": {
+    "color_palette": false,
+    "outline": false,
+    "detail": false,
+    "shading": true
+  },
+  "description": "Only a sparse quiet copper ember GROUND WARNING RIM, an open flat ellipse viewed from above, width90 height42 centered at x64 y76 on a transparent 128x128 canvas. Most of the entire sprite and the INSIDE of the ellipse are fully transparent EMPTY holes. Broken thin rusty orange arcs 2-4 pixels thick, separated into six short asymmetrical segments, a few dim scattered ember pixels immediately around the rim create a soft dissolving edge. Four very short inward cracks at the rim. No fill of any kind inside the ellipse. No disk, no white, no pale yellow, no bright core, no star, no runes, no solid base, no smoke, no rock, no vertical flame, no character, no text. Simple readable chunky pixel clusters, restrained muted rusty orange and copper colors only, calm low intensity, no bloom.",
+  "seed": 110107
+}

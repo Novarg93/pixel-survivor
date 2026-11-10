@@ -1,0 +1,261 @@
+{
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "events": {
+    "attackStart": {
+      "frame": 0,
+      "timeMs": 0
+    },
+    "directionLock": {
+      "frame": 0,
+      "timeMs": 0,
+      "worldForward": [
+        0,
+        -1
+      ],
+      "policy": "Latch combat aim independently of presentation once per attack"
+    },
+    "windupEnd": {
+      "frame": 6,
+      "timeMs": 540
+    },
+    "hitFrame": {
+      "frame": 7,
+      "timeMs": 650,
+      "guardKey": "attackInstanceId",
+      "dispatch": "once-per-instance"
+    },
+    "activeEnd": {
+      "frame": 8,
+      "timeMs": 800
+    },
+    "recoveryEnd": {
+      "frameExclusive": 12,
+      "timeMs": 1200
+    },
+    "damagePolicy": {
+      "maxApplicationsPerAttack": 1,
+      "notPerActiveFrame": true
+    },
+    "hitArea": {
+      "worldForward": [
+        0,
+        -1
+      ],
+      "kind": "front-sector",
+      "radiusWorld": null,
+      "deriveFromSwordImage": false
+    },
+    "returnToLocomotion": {
+      "visualBlendWindowMs": [
+        1100,
+        1200
+      ],
+      "exitAllowedAfterMs": 1200
+    },
+    "presentation": "back",
+    "combatFacing": "north",
+    "status": "visual metadata, not connected to gameplay"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/00.png",
+      "durationMs": 80,
+      "startMs": 0,
+      "render": {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 1,
+      "file": "frames/01.png",
+      "durationMs": 80,
+      "startMs": 80,
+      "render": {
+        "layers": [
+          {
+            "texture": "528f5ca331d749360bdc",
+            "x": 61,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 2,
+      "file": "frames/02.png",
+      "durationMs": 90,
+      "startMs": 160,
+      "render": {
+        "layers": [
+          {
+            "texture": "bdd2a18c48e152dc725c",
+            "x": 31,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 3,
+      "file": "frames/03.png",
+      "durationMs": 100,
+      "startMs": 250,
+      "render": {
+        "layers": [
+          {
+            "texture": "4a2f3976aab26ce824eb",
+            "x": 13,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 4,
+      "file": "frames/04.png",
+      "durationMs": 110,
+      "startMs": 350,
+      "render": {
+        "layers": [
+          {
+            "texture": "11c52e83aaf7d5a31d33",
+            "x": 20,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 5,
+      "file": "frames/05.png",
+      "durationMs": 80,
+      "startMs": 460,
+      "render": {
+        "layers": [
+          {
+            "texture": "b07239a9da61eaecada8",
+            "x": 19,
+            "y": 31
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 6,
+      "file": "frames/06.png",
+      "durationMs": 110,
+      "startMs": 540,
+      "render": {
+        "layers": [
+          {
+            "texture": "fd3fa03a21880c71a937",
+            "x": 13,
+            "y": 33
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 7,
+      "file": "frames/07.png",
+      "durationMs": 150,
+      "startMs": 650,
+      "render": {
+        "layers": [
+          {
+            "texture": "27a262854e3bf3f8a991",
+            "x": 41,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 8,
+      "file": "frames/08.png",
+      "durationMs": 100,
+      "startMs": 800,
+      "render": {
+        "layers": [
+          {
+            "texture": "587de6d3aa26ebcceaaf",
+            "x": 64,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 9,
+      "file": "frames/09.png",
+      "durationMs": 100,
+      "startMs": 900,
+      "render": {
+        "layers": [
+          {
+            "texture": "2a0b1089cf7e94150295",
+            "x": 63,
+            "y": 36
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 10,
+      "file": "frames/10.png",
+      "durationMs": 100,
+      "startMs": 1000,
+      "render": {
+        "layers": [
+          {
+            "texture": "e478b2e32aeb74c939d2",
+            "x": 61,
+            "y": 35
+          }
+        ],
+        "flipX": false
+      }
+    },
+    {
+      "index": 11,
+      "file": "frames/11.png",
+      "durationMs": 100,
+      "startMs": 1100,
+      "render": {
+        "layers": [
+          {
+            "texture": "7aa7e0a32b796e2e3348",
+            "x": 60,
+            "y": 34
+          }
+        ],
+        "flipX": false
+      }
+    }
+  ]
+}

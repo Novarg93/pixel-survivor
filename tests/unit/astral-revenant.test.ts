@@ -78,9 +78,9 @@ it('queues four flame segments with only a soft ground warning before the select
   const w=quiet(),e=w.spawn('eclipse',{x:180,y:0})!;e.hp=e.maxHp*.5;e.boss!.until=w.elapsed;updateBoss(w,e,.01);
   expect(w.impacts).toHaveLength(0);expect(w.zones).toHaveLength(4);expect(w.zones.every(z=>z.necrotic&&z.ownerId===e.id)).toBe(true);
   const before=JSON.stringify(w);expect(astralRevenantViews(w,1)).toEqual([]);expect(necroticGroundViews(w,1)).toHaveLength(4);expect(JSON.stringify(w)).toBe(before);
-  const n=w.zones[0]!.necrotic!;w.elapsed=n.spawnAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('flame-appear-0'));
-  w.elapsed=n.activeAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('flame-idle-0'));expect(astralRevenantViews(w,1).every(v=>v.size===62)).toBe(true);
-  w.elapsed=n.fadeAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('flame-spawn-0'));
+  const n=w.zones[0]!.necrotic!;w.elapsed=n.spawnAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('eclipse-flame-ai-spawn-0'));
+  w.elapsed=n.activeAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('eclipse-flame-ai-idle-0'));expect(astralRevenantViews(w,1).every(v=>v.size===62)).toBe(true);
+  w.elapsed=n.fadeAt;expect(necroticGroundViews(w,1)).toEqual([]);expect(astralRevenantViews(w,1).map(v=>v.frame)).toEqual(Array(4).fill('eclipse-flame-ai-vanish-0'));
   w.elapsed=w.zones[0]!.expires;expect(astralRevenantViews(w,1)).toEqual([]);expect(necroticGroundViews(w,1)).toEqual([]);
 });
 it('casts a real second phase volley, holds its preparation on hits/freeze, and never mutates World from art',()=>{
@@ -95,14 +95,14 @@ it('casts a real second phase volley, holds its preparation on hits/freeze, and 
 it('reuses Rune teleport markers/glow at both real anchors with safe arrival and unchanged AI clocks',()=>{
   const w=quiet(630),e=w.spawn('eclipse',{x:100,y:0})!;e.boss!.magic!.nextAt=w.elapsed;updateMagicTeleport(w,e);
   const m=e.boss!.magic!,from={...m.from!},target={...m.target!},views=runeWardenViews(w,1);
-  expect(views.filter(v=>v.frame==='blink-rune').map(v=>[v.x,v.y])).toEqual([[from.x,from.y],[target.x,target.y]]);
+  expect(views.filter(v=>v.frame==='rune-ai-blink-idle-0').map(v=>[v.x,v.y])).toEqual([[from.x,from.y+23],[target.x,target.y+23]]);
   w.elapsed=e.boss!.until+.001;const id=w.id();updateMagicTeleport(w,e);expect({x:e.x,y:e.y}).toEqual(target);expect(w.id()).toBe(id+1);expect(m.phase).toBe('prepare');
-  expect(runeWardenViews(w,1).filter(v=>/^blink-\d+$/.test(v.frame))).toHaveLength(2);expect(e.boss!.contactSafeUntil).toBeGreaterThan(e.boss!.until);expect(w.impacts).toHaveLength(0);
+  expect(runeWardenViews(w,1).filter(v=>v.frame==='rune-ai-blink-fade-0')).toHaveLength(2);expect(e.boss!.contactSafeUntil).toBeGreaterThan(e.boss!.until);expect(w.impacts).toHaveLength(0);
 });
 it('dissipates real expired/colliding missiles with cosmetic IDs, clears owned VFX and resets recycled appearance',()=>{
   const w=quiet(),e=w.spawn('eclipse',{x:180,y:0})!;e.boss!.until=1e6;w.player.invulnerableUntil=Infinity;
   w.shoot({x:1,y:0,vx:1,vy:0,damage:1,hostile:true,ownerId:e.id,appearance:'astral-volley'});const id=w.id();w.step(.025);
-  expect(w.projectiles).toHaveLength(0);expect(w.effects.filter(e=>e.kind==='astral-impact')).toHaveLength(1);expect(w.id()).toBe(id+1);expect(astralRevenantViews(w,1)[0]!.frame).toBe('volley-impact-5');
+  expect(w.projectiles).toHaveLength(0);expect(w.effects.filter(e=>e.kind==='astral-impact')).toHaveLength(1);expect(w.id()).toBe(id+1);expect(astralRevenantViews(w,1)[0]!.frame).toBe('eclipse-ai-impact-0');
   w.shoot({x:500,y:500,vx:1,vy:0,damage:1,hostile:true,ownerId:e.id,appearance:'astral-volley'});tick(w,2.51);expect(w.projectiles).toHaveLength(0);expect(w.effects.some(v=>v.kind==='astral-impact')).toBe(true);
   fireBossVolley(w,e);w.effect('rune-blink',e,33,0xffffff,.36,w.player,undefined,undefined,e.id);w.damageEnemy(e,1e9);
   expect(w.effects.some(v=>v.ownerId===e.id)).toBe(false);expect(w.projectiles).toHaveLength(0);expect(w.score).toBe(1500);

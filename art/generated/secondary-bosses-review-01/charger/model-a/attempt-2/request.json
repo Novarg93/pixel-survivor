@@ -1,0 +1,63 @@
+{
+  "parameters": {
+    "prompt": "HD pixel art sprite of ONE huge ancient thornwood juggernaut monster, full body, front-facing low top-down RPG camera. A broad barrel chest made from burnt brown bark, two enormous root arms with blunt wooden claws, two short thick tree-trunk legs, massive thorn-covered shoulders, a small recessed angry amber-eyed face. BIPED forest creature, not a humanoid knight, not a quadruped. Heavy grounded neutral pose ready to ram forward. Clean chunky pixel clusters, charcoal bark, ochre wood highlights, bone thorns, tiny muted moss. Clearly solid opaque body, readable silhouette. Entire creature centered in 128x128 with 8 pixel margin. Flat mid-gray background, no scenery, no ground plane, no text, no shadows, no additional creatures.",
+    "prompt_style": "rd_pro__default",
+    "width": 128,
+    "height": 128,
+    "num_images": 1,
+    "remove_bg": true,
+    "return_non_bg_removed": true,
+    "seed": 83109,
+    "upload_outputs": true
+  },
+  "reason": "Initial actual output is empty (2 visible pixels). One controlled functional replacement; no paid timeout retry.",
+  "balance": {
+    "credits": 0,
+    "balance": 10,
+    "usage": {
+      "balance": 10,
+      "plan": {
+        "key": "starter",
+        "name": "Starter",
+        "status": "active",
+        "interval": "month",
+        "usage_left_pct": 37,
+        "period_end": "2026-12-06T16:41:29+00:00",
+        "cancel_at_period_end": false,
+        "pending_plan_key": null,
+        "plan_covers_any_job": true
+      },
+      "plan_usage_left_pct": 37,
+      "api_job_slots": {
+        "in_use": 0,
+        "limit": 2
+      },
+      "web_job_slots": {
+        "in_use": 0,
+        "limit": 5
+      },
+      "free_usage_left_pct": 0,
+      "plans_enabled": true
+    }
+  },
+  "quote": {
+    "created_at": 1794040750,
+    "credit_cost": 0,
+    "balance_cost": 0.18,
+    "output_images": [],
+    "base64_images": [],
+    "output_urls": [],
+    "model": "check_cost",
+    "remaining_credits": 0,
+    "remaining_balance": 10,
+    "would_use": "plan",
+    "balance_cost_if_balance": 0.18,
+    "resolved_prompt_style": "rd_pro__default",
+    "used_input_image": false,
+    "reference_images_count": 0,
+    "used_extra_input_image": false,
+    "used_input_palette": false,
+    "used_strength": false,
+    "effective_timeout_seconds": 180
+  }
+}

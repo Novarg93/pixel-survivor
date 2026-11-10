@@ -10,7 +10,7 @@ it('starts one real rooted Guardian and the same lawful Mage54 build, without in
   const w=new World(42);startGuardianPractice(w);const e=w.guardians[0]!;
   expect(w.snapshot()).toMatchObject({practice:true,practiceBoss:'rootbound-guardian',practiceElapsed:0,level:54,hp:200});
   expect(w.enemies).toEqual([e]);expect(e).toMatchObject({kind:'guardian',x:120,y:0,speed:0,boss:null});expect(w.guardianSystem.encounters.size).toBe(1);
-  expect(e.hp).toBe(ENEMIES.guardian.hp*scalesAt(GUARDIAN_PRACTICE.at).hp);expect(w.ultimate.selected).toBe('frost');expect(w.player.invulnerableUntil).toBe(0);
+  expect(e.hp).toBe(ENEMIES.guardian.hp*scalesAt(GUARDIAN_PRACTICE.at).hp);expect(w.ultimate.selected).toBe('lightning');expect(w.player.invulnerableUntil).toBe(0);
   const astral=new World(42);startAstralPractice(astral);expect(w.upgrades).toEqual(astral.upgrades);expect(w.stats).toEqual(astral.stats);
 });
 it('runs actual slow/fast homing attacks while excluding extra enemies, director and the final encounter',()=>{

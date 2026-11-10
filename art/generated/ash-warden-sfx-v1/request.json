@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "createdDate": "2026-11-10",
+  "flowId": "LjY7XGjtTMS1RezHULHp",
+  "flowUrl": "https://elevenlabs.io/app/flows/LjY7XGjtTMS1RezHULHp",
+  "model": "eleven_text_to_sound_v2",
+  "promptVariant": "A",
+  "estimate": {
+    "credits": 112,
+    "price_cents": 2.24,
+    "generations_count": 4,
+    "currency": "usd",
+    "estimated_runtime_seconds": 8
+  },
+  "specs": [
+    {
+      "id": "melee",
+      "label": "Basic Melee",
+      "seconds": 0.6,
+      "prompt": "A single heavy two-handed sword strike. A fast, weighty blade whoosh and a low steel whistle lead into a short, solid impact, with a little metal rattle and a quickly fading ring. Keep it dry, punchy and clear enough for repeated attacks. No voices, music, background ambience, long reverb or retro game tones. Duration: 0.6 seconds.",
+      "nodeId": "YbMu3prO9F86ZFk0g8a1"
+    },
+    {
+      "id": "charge",
+      "label": "Charge",
+      "seconds": 0.7,
+      "prompt": "One sudden forward charge by a heavily armored warrior. A sharp push-off leads into heavy armor rattle and an aggressive air whoosh for about a third of a second, then a firm foot plant and a short scrape as the warrior brakes. Fast and forceful, with no collision or explosion. No voices, music, background ambience or long reverb. Duration: 0.7 seconds.",
+      "nodeId": "QMryxbJAUuNPkJurytP0"
+    },
+    {
+      "id": "flame-strike",
+      "label": "Flame Strike",
+      "seconds": 0.7,
+      "prompt": "One heavy greatsword strike that releases a broad wave of fire forward. A solid weapon impact triggers instant ignition, followed by a fast spreading rush of flames and a short crackling tail. Keep the strike crisp and the fire low and wide, with controlled bass and a quick natural decay. No fireball launch, explosive boom, voices, music, background ambience or long reverb. Duration: 0.7 seconds.",
+      "nodeId": "p9fw5VgFDylzjAmTpfD3"
+    },
+    {
+      "id": "meteor",
+      "label": "Meteor",
+      "seconds": 0.8,
+      "prompt": "A single flaming meteor drops fast and strikes the ground. About 0.3 seconds of deep hot-air whistle leads into a heavy rocky impact, cracking stone and a brief burst of fire, then a short gritty decay. Give it solid weight without a cinematic sub-bass boom. No repeated impacts, long rumble, voices, music, background ambience or long reverb. Duration: 0.8 seconds.",
+      "nodeId": "4Te3rDJPUwIJ1wJzgUoF"
+    }
+  ],
+  "run": {
+    "session_ids": [
+      "T82DYqTz9QpZHoIBdexN",
+      "yCSsO6DnJO7ANJQeBQLV",
+      "SRJNaRnETUOfC2b1s5Tq",
+      "RelxewUD5KRDcu2NfWLF",
+      "wu0Ms5XLY7ZlKSzUxcrs",
+      "UG29N6PQAAoac5zzQQuf",
+      "BnFEXobi0obOXhfiBeM7",
+      "TcHDLCvFlNH9aepVz5S4",
+      "uUC2lUd2U4YWBT3fvl3n",
+      "mK5PZSYQvyjMSEkqZzhy",
+      "F7YmawlAzC9Ycls1aGxG",
+      "w6E94eZ7VESSybTHRwUk",
+      "IA4jy48ivqmxUIQcbIuJ",
+      "lHxup0FzSOlLmSoIN91h",
+      "45as4HdsF273cg9YBPky",
+      "xQ3NpUsZNrBVPhmTg7B9"
+    ],
+    "summary": {
+      "nodes_run": 4,
+      "generations_started": 16,
+      "failed": 0,
+      "generations_by_node": {
+        "YbMu3prO9F86ZFk0g8a1": 4,
+        "QMryxbJAUuNPkJurytP0": 4,
+        "p9fw5VgFDylzjAmTpfD3": 4,
+        "4Te3rDJPUwIJ1wJzgUoF": 4
+      }
+    },
+    "results": [
+      {
+        "success": true,
+        "node_id": "YbMu3prO9F86ZFk0g8a1",
+        "session_id": "T82DYqTz9QpZHoIBdexN",
+        "credit_costs": {
+          "Qe0i94UTibrMFqE2gTcQ": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "YbMu3prO9F86ZFk0g8a1",
+        "session_id": "yCSsO6DnJO7ANJQeBQLV",
+        "credit_costs": {
+          "JVYQZOZ17v9pXi0BqqMj": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "YbMu3prO9F86ZFk0g8a1",
+        "session_id": "SRJNaRnETUOfC2b1s5Tq",
+        "credit_costs": {
+          "FHmfb6S7hCRItGHzImtw": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "YbMu3prO9F86ZFk0g8a1",
+        "session_id": "RelxewUD5KRDcu2NfWLF",
+        "credit_costs": {
+          "9DvlyRNsR04ABE46fk2A": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "QMryxbJAUuNPkJurytP0",
+        "session_id": "wu0Ms5XLY7ZlKSzUxcrs",
+        "credit_costs": {
+          "7qTFNgALoGYQ8FDW5vbA": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "QMryxbJAUuNPkJurytP0",
+        "session_id": "UG29N6PQAAoac5zzQQuf",
+        "credit_costs": {
+          "RCtS9eWcjgAfzNCDyeta": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "QMryxbJAUuNPkJurytP0",
+        "session_id": "BnFEXobi0obOXhfiBeM7",
+        "credit_costs": {
+          "oH29rKlxRbWTUHjt0gxO": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "QMryxbJAUuNPkJurytP0",
+        "session_id": "TcHDLCvFlNH9aepVz5S4",
+        "credit_costs": {
+          "rBgQOZXaU9Aa0tYVhqpk": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "p9fw5VgFDylzjAmTpfD3",
+        "session_id": "uUC2lUd2U4YWBT3fvl3n",
+        "credit_costs": {
+          "in18U4ZMlSQJM3XDkV4v": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "p9fw5VgFDylzjAmTpfD3",
+        "session_id": "mK5PZSYQvyjMSEkqZzhy",
+        "credit_costs": {
+          "dNeuGixJlskM0nD7eBfr": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "p9fw5VgFDylzjAmTpfD3",
+        "session_id": "F7YmawlAzC9Ycls1aGxG",
+        "credit_costs": {
+          "l90Wd6rpp0gkSfxQDi8P": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "p9fw5VgFDylzjAmTpfD3",
+        "session_id": "w6E94eZ7VESSybTHRwUk",
+        "credit_costs": {
+          "dOsR0XoBLkMg2uEAIX7h": 2
+        }
+      },
+      {
+        "success": true,
+        "node_id": "4Te3rDJPUwIJ1wJzgUoF",
+        "session_id": "IA4jy48ivqmxUIQcbIuJ",
+        "credit_costs": {
+          "20NvPnOn05hE4m9DsbmS": 3
+        }
+      },
+      {
+        "success": true,
+        "node_id": "4Te3rDJPUwIJ1wJzgUoF",
+        "session_id": "lHxup0FzSOlLmSoIN91h",
+        "credit_costs": {
+          "CSr6tsbAdGSpvZF8s1y9": 3
+        }
+      },
+      {
+        "success": true,
+        "node_id": "4Te3rDJPUwIJ1wJzgUoF",
+        "session_id": "45as4HdsF273cg9YBPky",
+        "credit_costs": {
+          "Wt831OvYtndDPUvfa92Z": 3
+        }
+      },
+      {
+        "success": true,
+        "node_id": "4Te3rDJPUwIJ1wJzgUoF",
+        "session_id": "xQ3NpUsZNrBVPhmTg7B9",
+        "credit_costs": {
+          "bpST4Pq0oA2PMWaJfmTf": 3
+        }
+      }
+    ]
+  },
+  "runtimeBaseline": {
+    "files": 376,
+    "sha256": "33485df3088e24ba1a12112bee80a9af5024848c038b33cc5b1b06da7dd779cb"
+  },
+  "runtimeIntegration": false,
+  "artisticStatus": "Awaiting Review"
+}

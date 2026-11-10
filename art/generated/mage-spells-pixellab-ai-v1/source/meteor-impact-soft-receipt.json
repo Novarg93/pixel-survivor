@@ -1,0 +1,20 @@
+{
+  "request": {
+    "id": "meteor-impact-soft",
+    "tool": "animate_image",
+    "args": {
+      "action": "A brittle little grey SLATE STONE CRUMBLES into dry grey dust and only three small dull stone chips. The fixed point of contact is (47,68). First the orange trailing flame quickly extinguishes, then the cool stone cracks apart and collapses low to the ground. Tiny chips separate sideways, lose their motion and disappear; the dust stays low, thins and clears to the completely transparent final frame. Very weak compact earth impact, ordinary mage spell, visible spread at most 30 pixels wide. Keep the broad pixel-art shading of the original. Nothing catches fire. There is NO expanding circle, NO orange ring, NO rim, NO radial flash, NO shockwave, NO flame pillar, NO bright blast, NO lava or scorch crater, NO fresh glowing cracks. Do not add flames or glowing lines to the stone. NO camera movement; contact remains at (47,68).",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/e9c46c01-5289-4fc6-8848-a7f5a7113dd5/download",
+      "last_frame_url": "upload:3dfb9cc2-3363-4ad1-b40b-31b5da1723a9",
+      "frame_count": 8,
+      "no_background": true,
+      "seed": 2026111021
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: f6086dfc-9a43-4708-8603-f7d6670fdecb\njob_id: f6086dfc-9a43-4708-8603-f7d6670fdecb\naction: A brittle little grey SLATE STONE CRUMBLES into dry grey dust and only three small dull stone chips. The fixed point of contact is (47,68). First the orange trailing flame quickly extinguishes, then the cool stone cracks apart and collapses low to the ground. Tiny chips separate sideways, lose their motion and disappear; the dust stays low, thins and clears to the completely transparent final frame. Very weak compact earth impact, ordinary mage spell, visible spread at most 30 pixels wide. Keep the broad pixel-art shading of the original. Nothing catches fire. There is NO expanding circle, NO orange ring, NO rim, NO radial flash, NO shockwave, NO flame pillar, NO bright blast, NO lava or scorch crater, NO fresh glowing cracks. Do not add flames or glowing lines to the stone. NO camera movement; contact remains at (47,68).\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (interpolating to it)\nseed: 2026111021\nasset_id: c0056294-2545-5df4-b91a-c9943589c39b\nasset_status: pending (saved when generation completes)\ncost: 2 generations\nstatus: processing (~30-180s)\n\nhint: get_image(job_id=\"f6086dfc-9a43-4708-8603-f7d6670fdecb\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/f6086dfc-9a43-4708-8603-f7d6670fdecb/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ]
+}

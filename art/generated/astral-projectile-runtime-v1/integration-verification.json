@@ -1,0 +1,30 @@
+{
+  "runtimeIntegration": true,
+  "protectedFiles": 337,
+  "unchangedProtectedFiles": 333,
+  "changed": [
+    "src/game/art/AstralRevenantArt.ts",
+    "src/game/art/GameArt.ts",
+    "src/game/art/RuneWardenArt.ts",
+    "src/game/art/assetRegistry.ts"
+  ],
+  "added": [
+    "public/assets/hd/astral-projectile-pixellab-v1/atlas.json",
+    "public/assets/hd/astral-projectile-pixellab-v1/atlas.png",
+    "src/game/art/astralProjectileManifestPixellab.json",
+    "src/game/art/astralProjectilePixellabPack.ts"
+  ],
+  "currentSHA256": {
+    "src/game/art/AstralRevenantArt.ts": "0b0836add8adfd0e106e2686f95cfb24df3ed43403af0b0eadfb3c2ce267d320",
+    "src/game/art/GameArt.ts": "0d6f332734e05eee07094d216c218a842712ecae3cb5604985fbcaa98de31cd8",
+    "src/game/art/RuneWardenArt.ts": "35d2d056acf5ac37aa8fd20f85c5cabed8a0c1823b3b77045ae922e9311c1229",
+    "src/game/art/assetRegistry.ts": "1a08b01dc1e95aaa8873abf7c64f15433965fe72c7d9ab1afbbae51f1e53de0d",
+    "public/assets/hd/astral-projectile-pixellab-v1/atlas.json": "7c99b8c1e4e1681438fd67fd4a398ac71e423b5783e2f952a127f1b701579c60",
+    "public/assets/hd/astral-projectile-pixellab-v1/atlas.png": "1bad2fae1f00df993fb52571844d41c1be10e3cd67bb4a426af81b19ef3ff53e",
+    "src/game/art/astralProjectileManifestPixellab.json": "c48bd6e26601f05549281946372036138d2a2930a26b4732310437c0f3f3f7b6",
+    "src/game/art/astralProjectilePixellabPack.ts": "86e32b21e1ae20182fe6923f574e8d8aa472c63aff33dbec8e31077b2f777a36"
+  },
+  "gameplayAndSpeedsUnchanged": true,
+  "previousRuneAssetsUnchanged": true,
+  "oldAstralAndBossAssetsUnchanged": true
+}

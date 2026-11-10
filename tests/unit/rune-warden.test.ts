@@ -49,10 +49,10 @@ it('keeps the existing body footprint and uses all walk/cast frames without flig
   for(let i=0;i<300;i++)expect(runeVolleyFrame(i*.01)).not.toBe('volley-11');
   expect(runeFrameIndex('volley-impact',99)).toBe(10);
 });
-it('increases Arcane Volley and its matching impact from40 to52world units without moving the contact pivot',()=>{
+it('increases Arcane Volley and its matching impact from40 to52world units with the approved AI contact pivot',()=>{
   expect(visualDimensions(selectAsset('runeVolley'))).toEqual({width:40*1.3,height:40*1.3});
   const w=quiet();w.effect('arcane-impact',{x:10,y:20},16,0xffffff,C.impact,{x:100,y:0});
-  expect(runeWardenViews(w,1)[0]).toMatchObject({size:52,x:10,y:20,originX:104/128,originY:.5});
+  expect(runeWardenViews(w,1)[0]).toMatchObject({size:52,x:10,y:20,originX:95/128,originY:61/128});
 });
 it.each([20,630,1500])('doubles the real Rune volley speed at%ss, preserving late scaling, damage and lifetime',time=>{
   const w=quiet();w.elapsed=time;const e=w.spawn('sorcerer',{x:200,y:0})!,b=e.boss!;
@@ -65,7 +65,7 @@ it('also doubles the actual volley released after Blink preparation',()=>{
   const w=quiet();w.elapsed=630;const e=w.spawn('sorcerer',{x:100,y:0})!;e.boss!.magic!.nextAt=w.elapsed;
   updateMagicTeleport(w,e);w.elapsed=e.boss!.until+.001;updateMagicTeleport(w,e);expect(e.boss!.magic!.phase).toBe('prepare');
   w.elapsed=e.boss!.until+.001;updateMagicTeleport(w,e);expect(w.projectiles).toHaveLength(3);
-  for(const p of w.projectiles)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(210,8);
+  for(const p of w.projectiles)expect(Math.hypot(p.vx,p.vy)).toBeCloseTo(420,8);
 });
 it('applies the separate Astral speed multiplier without changing Rune tuning',()=>{
   const w=quiet();w.elapsed=1500;const e=w.spawn('eclipse',{x:200,y:0})!;fireBossVolley(w,e);
@@ -115,20 +115,20 @@ it.each(['collision','expiry'] as const)('plays Arcane Volley impact exactly onc
   w.shoot({x:reason==='collision'?5:100,y:0,vx:-100,vy:0,hostile:true,damage:22,ownerId:e.id,appearance:'arcane-volley'});
   if(reason==='expiry')w.projectiles[0]!.expires=.01;
   w.step(.025);expect(w.projectiles).toHaveLength(0);expect(w.effects.filter(e=>e.kind==='arcane-impact')).toHaveLength(1);
-  const v=runeWardenViews(w,1)[0]!;expect(v.frame).toBe('volley-impact-0');expect(v.rotation).toBe(Math.PI);
-  tick(w,.1);expect(w.effects.filter(e=>e.kind==='arcane-impact')).toHaveLength(1);expect(runeWardenViews(w,1)[0]!.frame).toBe('volley-impact-2');
+  const v=runeWardenViews(w,1)[0]!;expect(v.frame).toBe('rune-ai-impact-0');expect(v.rotation).toBe(Math.PI);
+  tick(w,.1);expect(w.effects.filter(e=>e.kind==='arcane-impact')).toHaveLength(1);expect(runeWardenViews(w,1)[0]!.frame).toBe('rune-ai-impact-0');
   tick(w,.5);expect(runeWardenViews(w,1)).toEqual([]);
   expect(w.player.hp).toBe(reason==='collision'?78:100);
 });
 it('Blink shows the two fixed marks before relocation, then flashes both anchors quickly',()=>{
   const w=quiet();w.elapsed=630;const e=w.spawn('sorcerer',{x:90,y:0})!;e.boss!.magic!.nextAt=w.elapsed;
   const beforeId=w.id();expect(updateMagicTeleport(w,e)).toBe(true);const m=e.boss!.magic!,from={...m.from!},target={...m.target!};
-  expect(runeWardenViews(w,1).map(v=>[v.frame,v.x,v.y])).toEqual([['blink-rune',from.x,from.y],['blink-rune',target.x,target.y]]);
+  expect(runeWardenViews(w,1).map(v=>[v.frame,v.x,v.y])).toEqual([['rune-ai-blink-idle-0',from.x,from.y+23],['rune-ai-blink-idle-0',target.x,target.y+23]]);
   w.elapsed=e.boss!.until;updateMagicTeleport(w,e);expect([e.x,e.y]).toEqual([target.x,target.y]);
   const blink=w.effects.find(e=>e.kind==='rune-blink')!;expect(blink.id).toBeLessThan(0);expect(blink.target).toEqual(target);expect([blink.x,blink.y]).toEqual([from.x,from.y]);
-  const glow=runeWardenViews(w,1).filter(v=>v.frame==='blink-0');expect(glow.map(v=>[v.x,v.y])).toEqual([[from.x,from.y],[target.x,target.y]]);
+  const glow=runeWardenViews(w,1).filter(v=>v.frame==='rune-ai-blink-fade-0');expect(glow.map(v=>[v.x,v.y])).toEqual([[from.x,from.y+23],[target.x,target.y+23]]);
   expect(w.id()).toBe(beforeId+3); // Only the two actual hostile impact IDs advance gameplay IDs.
-  w.elapsed+=C.blink;expect(runeWardenViews(w,1).some(v=>v.frame.startsWith('blink'))).toBe(false);
+  w.elapsed+=C.blink;expect(runeWardenViews(w,1).some(v=>v.frame.startsWith('rune-ai-blink'))).toBe(false);
 });
 it('keeps pause immutable and freezes pending Judgement while existing flying missiles continue',()=>{
   const w=quiet(),e=w.spawn('sorcerer',{x:200,y:0})!;w.elapsed=2;updateBoss(w,e,.01);freezeForUltimate(e,w.elapsed,w.elapsed+1);

@@ -6,13 +6,13 @@ import {startBossPractice} from '../../src/game/bootstrap/startBossPractice';
 import {BRIAR_PRACTICE} from '../../src/game/config/bossPractice';
 import {ENEMIES} from '../../src/game/config/enemyDefinitions';
 import {scalesAt} from '../../src/game/systems/DifficultyDirector';
-it('starts one real Briar Beast with the same lawful Mage54 build, HP and ready ice ultimate',()=>{
+it('starts one real Briar Beast with the same lawful Mage54 build, HP and ready lightning ultimate',()=>{
   const w=new World(42);startBriarPractice(w);const e=w.bosses[0]!;
   expect(w.snapshot()).toMatchObject({practice:true,practiceBoss:'briar-beast',practiceElapsed:0,level:54,hp:200});
   expect(w.enemies).toEqual([e]);expect(e.kind).toBe('charger');expect(e.boss!.magic).toBeUndefined();expect(e.boss!.phase).toBe('approach');
   expect(w.snapshot().bosses[0]!.name).toBe('Терновый зверь');
   expect(e.hp).toBe(ENEMIES.charger.hp*scalesAt(BRIAR_PRACTICE.at).hp);expect(e.damage).toBe(ENEMIES.charger.damage*scalesAt(BRIAR_PRACTICE.at).damage);
-  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('frost');expect(w.ultimate.charge).toBe(10);
+  expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selected).toBe('lightning');expect(w.ultimate.charge).toBe(10);
   const rune=new World(42);startRunePractice(rune);expect(w.upgrades).toEqual(rune.upgrades);expect(w.stats).toEqual(rune.stats);
 });
 it('excludes every other spawn and keeps one boss even beyond20min or normal despawn distance',()=>{

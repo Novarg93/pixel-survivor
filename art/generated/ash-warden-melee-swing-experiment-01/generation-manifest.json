@@ -1,0 +1,563 @@
+{
+  "date": "2026-11-06",
+  "status": "Two candidates generated; C blocked by quota ceiling",
+  "source": "art/generated/ash-warden-retrodiffusion-01/best-candidate.png",
+  "registeredSouth": "art/generated/ash-warden-directions-v1/bases/south.png",
+  "input": "input-opaque.png",
+  "canvas": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    154
+  ],
+  "worldScale": 0.6548310810810811,
+  "budget": {
+    "maxUSD": 1.5,
+    "maxStarterPoints": 10,
+    "before": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 79,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 79,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "floorStarterPct": 69,
+    "after": {
+      "credits": 0,
+      "balance": 10,
+      "usage": {
+        "balance": 10,
+        "plan": {
+          "key": "starter",
+          "name": "Starter",
+          "status": "active",
+          "interval": "month",
+          "usage_left_pct": 70,
+          "period_end": "2026-12-06T16:41:29+00:00",
+          "cancel_at_period_end": false,
+          "pending_plan_key": null,
+          "plan_covers_any_job": true
+        },
+        "plan_usage_left_pct": 70,
+        "api_job_slots": {
+          "in_use": 0,
+          "limit": 2
+        },
+        "web_job_slots": {
+          "in_use": 0,
+          "limit": 5
+        },
+        "free_usage_left_pct": 0,
+        "plans_enabled": true
+      }
+    },
+    "actualUSD": 0,
+    "accountStarterDecreasePoints": 9,
+    "worstObservedStarterDecreasePoints": 10,
+    "unattributedBetweenOperationsPoints": 2,
+    "note": "A after75%, B before73% with one web job slot in use; the extra2points are not attributed to our two MCP calls. All account decrease is counted against the task ceiling."
+  },
+  "models": {
+    "models": [
+      "rd_fast",
+      "rd_mini",
+      "rd_plus",
+      "rd_pro"
+    ]
+  },
+  "styles": {
+    "styles": [
+      {
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "name": "Custom Action",
+        "description": "Add a starting frame then describe any animation to bring the image to life. Made in partnership with PixelEngine.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "a knight walking, his steps are heavy because of his armor"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__walking",
+        "name": "Walking",
+        "description": "Upload a starting frame and generate to animate the character walking. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Slow, heavy steps"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__idle",
+        "name": "Idle",
+        "description": "Upload a starting frame and generate to animate the character idle sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Slight weight shifting"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__jump",
+        "name": "Jump",
+        "description": "Upload a starting frame and generate to animate the character jump sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Wing flapping at apex"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__crouch",
+        "name": "Crouch",
+        "description": "Upload a starting frame and generate to animate the character crouching sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Stealthy pose"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__attack",
+        "name": "Attack",
+        "description": "Upload a starting frame and generate to animate the character attack sequence. Best results when uploading a neutral pose.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Over head sword swing, big impact"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__destroy",
+        "name": "Destroy",
+        "description": "Upload a starting frame and generate to animate the content being destroyed. Add a description to specify how the content is broken.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Shattered into many small pieces"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__subtle_motion",
+        "name": "Subtle Motion",
+        "description": "Upload a starting frame and generate to animate the content with subtle motion, like rain falling, leaves rustling, etc. Ideal to bring landscapes to life. Made in partnership with PixelEngine.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": null,
+        "supports_reference_images": false,
+        "supports_frames_duration": true,
+        "example_prompt": "Peaceful gentle breeze"
+      },
+      {
+        "prompt_style": "rd_advanced_animation__rotate",
+        "name": "Rotate",
+        "description": "Upload a character or object and generate the other 8 directional views from that single image.",
+        "group_id": "RD Animation Advanced",
+        "required_model": null,
+        "required_tab": "tab:advanced-animation",
+        "min_width": 32,
+        "max_width": 256,
+        "min_height": 32,
+        "max_height": 256,
+        "max_number_of_images": 1,
+        "require_input_image": true,
+        "prompt_requirement": "image",
+        "supports_reference_images": false,
+        "supports_frames_duration": false,
+        "example_prompt": "A knight in silver armor holding a shield"
+      }
+    ],
+    "models": [],
+    "tabs": [
+      "tab:advanced-animation"
+    ]
+  },
+  "selectedStyleUsage": {
+    "prompt_style": "rd_advanced_animation__custom_action",
+    "style_found": true,
+    "source": "public_selector",
+    "public_read_supported": true,
+    "is_user_style": false,
+    "require_input_image": true,
+    "supports_reference_images": false,
+    "min_width": 32,
+    "max_width": 256,
+    "min_height": 32,
+    "max_height": 256,
+    "max_number_of_images": 1,
+    "example_prompt": "a knight walking, his steps are heavy because of his armor",
+    "guidance": [
+      "This style requires `input_image`; `reference_images` do not replace it.",
+      "Use `input_image` for the main image being edited, animated, varied, or used as the required starting frame.",
+      "Use `reference_images` for extra per-inference guidance images only when the selected public style supports them.",
+      "Use `style_reference_images` only on create_user_style or update_user_style when defining a custom style.",
+      "This style does not support per-inference `reference_images`."
+    ],
+    "limitations": []
+  },
+  "operations": [
+    {
+      "candidate": "A",
+      "name": "Heavy Golf Swing",
+      "seed": 6110641,
+      "before": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 79,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 79,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      },
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "frames_duration": 12,
+        "input_image": "input-opaque.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt": "ONE FULL HEAVY GOLF SWING with a greatsword, then return to idle. Start in the supplied south-facing guard, sword low diagonally to VIEWER LEFT. Load weight onto the left leg and coil hips, chest and shoulders into a real backswing. Drive BOTH hands and elbows together with the whole torso through a VERY LARGE 150-degree arc ACROSS THE ENTIRE FRONT of the body from viewer left to viewer right. Continue the momentum well beyond the center: the greatsword finishes HIGH BESIDE OR ABOVE THE VIEWER-RIGHT SHOULDER, hands beside that shoulder, torso visibly turned right, weight on the opposite leg, rear foot pivots. Hold the unmistakable high golf follow-through briefly. Then CONTROLLED RECOVERY from the high finish back to the original low-left two-handed idle guard. This high opposite-shoulder FINISH is essential. One uninterrupted wide swing, not a tiny wrist movement, not a thrust, not a vertical overhead downward slam. Both gauntlets grip ONE handle of ONE huge broad greatsword throughout. Preserve this same massive charcoal Ash Warden, helmet, orange cracks, moderate dry branches and tabard; low top-down south camera, planted wide stance, no running, no full-body spin, no VFX, no ground fissure or fire trail. Entire blade and figure in frame.",
+        "seed": 6110641,
+        "remove_bg": true,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793994319,
+        "credit_cost": 0,
+        "balance_cost": 0.25,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.25,
+        "resolved_prompt_style": "rd_advanced_animation__custom_action",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+        "request_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793994481,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "4d578533-447b-4828-9ae8-35be58bd1d46",
+        "outputs_retained_until": 1794080776,
+        "output_url_expires_at": 1793995407,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 75
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "after": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 75,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 75,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    },
+    {
+      "candidate": "B",
+      "name": "Powerful Baseball Swing",
+      "seed": 6110642,
+      "before": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 73,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 73,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 1,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      },
+      "request": {
+        "width": 192,
+        "height": 192,
+        "num_images": 1,
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "frames_duration": 12,
+        "input_image": "input-opaque.png",
+        "bypass_prompt_expansion": true,
+        "return_spritesheet": false,
+        "prompt": "Animate ONE POWERFUL TWO-HANDED BASEBALL-BAT SWING using this huge greatsword. Fixed low top-down south camera. Start exactly in this low diagonal VIEWER-LEFT sword guard. Make a strong full-body coil: hips rotate, chest and BOTH shoulders draw back, both elbows and hands pull the same handle behind the left side; feet stay wide with a heel pivot. Uncoil forcefully from the hips, transfer weight across the legs, turn the ribcage and drive BOTH arms through a LARGE roughly 150-degree lateral arc ACROSS THE WHOLE FRONT of the character from viewer left to right. The sword MUST travel far beyond the centerline and finish HIGH OVER THE VIEWER-RIGHT SHOULDER like a batter's full follow-through, with both hands beside that opposite shoulder and the torso visibly turned after the strike. Show that extended high finish, then return the same sword to the original low-left guard. One broad rigid heavy blade, both gauntlets always on ONE grip. Keep the same massive charcoal Ash Warden armor, visor, roots, modest branches and torn tabard. This is a committed wide side swing with a high FINISH, NOT a wrist twitch, thrust, or vertical downward overhead slam. No sword duplication, jumping, running, 360 spin, fire trail, ground cracks, flash or scenery. Full figure and sword inside frame.",
+        "seed": 6110642,
+        "remove_bg": true,
+        "upload_outputs": true
+      },
+      "estimate": {
+        "created_at": 1793994631,
+        "credit_cost": 0,
+        "balance_cost": 0.25,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.25,
+        "resolved_prompt_style": "rd_advanced_animation__custom_action",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      },
+      "job": {
+        "status": "accepted",
+        "task_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+        "request_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+        "message": "Inference accepted. Poll GET /v2/inferences/tasks/{task_id} for status."
+      },
+      "result": {
+        "created_at": 1793994685,
+        "credit_cost": 1,
+        "balance_cost": 0,
+        "model": "rd_fast",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "request_id": "6aa0401b-a612-4ee4-937d-9cc35a580e42",
+        "outputs_retained_until": 1794081041,
+        "output_url_expires_at": 1793995616,
+        "billing": {
+          "source": "plan",
+          "balance_left": 10,
+          "plan_job_limit": 2,
+          "balance_charged": 0,
+          "plan_jobs_running": 1,
+          "plan_usage_left_pct": 69
+        },
+        "base64_images_count": 1,
+        "output_images_count": 0
+      },
+      "after": {
+        "credits": 0,
+        "balance": 10,
+        "usage": {
+          "balance": 10,
+          "plan": {
+            "key": "starter",
+            "name": "Starter",
+            "status": "active",
+            "interval": "month",
+            "usage_left_pct": 70,
+            "period_end": "2026-12-06T16:41:29+00:00",
+            "cancel_at_period_end": false,
+            "pending_plan_key": null,
+            "plan_covers_any_job": true
+          },
+          "plan_usage_left_pct": 70,
+          "api_job_slots": {
+            "in_use": 0,
+            "limit": 2
+          },
+          "web_job_slots": {
+            "in_use": 0,
+            "limit": 5
+          },
+          "free_usage_left_pct": 0,
+          "plans_enabled": true
+        }
+      }
+    }
+  ],
+  "notGenerated": {
+    "C": {
+      "name": "Dark Knight Greatsword Sweep",
+      "prompt": "ONE FULL DARK KNIGHT GREATSWORD SWEEP and controlled recovery. Same south-facing Ash Warden, fixed low top-down camera. Begin in the supplied LOW DIAGONAL VIEWER-LEFT GUARD with BOTH hands on ONE handle. Deliberately load weight into the left leg, rotate pelvis and ribcage, coil BOTH shoulders and elbows, draw the huge blade behind the left side. Then drive a heavy rising SIDE SWEEP THROUGH THE ENTIRE FRONT HALF-SPACE, a broad 150-180 degree projected swing from viewer left to viewer right. Hips lead, chest and shoulders follow, both hands carry the blade together, the other leg accepts weight and one planted boot pivots. Carry momentum ALL THE WAY UP TO A HIGH FINISH ABOVE THE OPPOSITE VIEWER-RIGHT SHOULDER; hands end next to that shoulder, chest remains visibly turned with the follow-through. Briefly settle there, then smoothly lower and return to the starting low-left two-handed guard. Prioritize this COMPLETE wide trajectory and high opposite-shoulder finish over tiny armor details. Keep ONE thick broad greatsword and this massive charcoal guardian, same helmet, orange fissures, moderate branches and tabard. No vertical overhead chop or ground slam, no thrust, tiny wrist flick, full spin, leap, lunge, extra sword, VFX or environment. Keep the entire sword and body visible.",
+      "seed": 6110643,
+      "reason": "Account Starter79% ->70%; job snapshot69% reaches the10-point ceiling. Only1point remains by account and a comparable job used3-4points. No C inference submitted.",
+      "estimate": {
+        "created_at": 1793994755,
+        "credit_cost": 0,
+        "balance_cost": 0.25,
+        "output_images": [],
+        "base64_images": [],
+        "output_urls": [],
+        "model": "check_cost",
+        "remaining_credits": 0,
+        "remaining_balance": 10,
+        "would_use": "plan",
+        "balance_cost_if_balance": 0.25,
+        "resolved_prompt_style": "rd_advanced_animation__custom_action",
+        "used_input_image": true,
+        "reference_images_count": 0,
+        "used_extra_input_image": false,
+        "used_input_palette": false,
+        "used_strength": false,
+        "effective_timeout_seconds": 180
+      }
+    }
+  }
+}

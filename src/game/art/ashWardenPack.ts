@@ -3,6 +3,7 @@ import type {FinalEncounter} from '../systems/FinalEncounter';
 import type {Point} from '../utils/math';
 import {FINAL_BOSS as C} from '../config/finalBoss';
 import {MELEE_A_CLIPS} from './meleeComboPack';
+import {NORTH_SLAM,northSlamAge} from './ashWardenPixellabPack';
 export interface WardenLayer {frame:string;pivot:number[];scale:number;texture?:string}
 export interface WardenFrame {layers:WardenLayer[];flipX:boolean;overlay?:WardenLayer|null}
 export interface WardenClip {durationsMs:number[];loop:boolean;frames:WardenFrame[];events:unknown}
@@ -27,9 +28,12 @@ export function wardenPose(f:FinalEncounter){
   else if(f.pending)clip=f.pending==='phase3'?'transformation':'south-idle';
   else if(a.kind==='approach'){clip=`${face}-${f.moving?'walk':'idle'}`;age=f.bossClock;}
   else if(a.kind==='basicMelee'){
-    age*=C.meleeSpeedMultiplier;
-    if(face==='south'){clip='south-cleave';age=age<C.meleeHit?age*CLEAVE_WINDUP/C.meleeHit:CLEAVE_WINDUP+age-C.meleeHit;}
-    else clip=(face==='east'||face==='west')&&a.meleeVariant==='a'?`${face}-melee-a`:`${face}-melee`;
+    if(face==='north'){clip='north-melee';age=northSlamAge(a.age,f.meleeHitTime,C.meleeDuration/(C.meleeSpeedMultiplier*(a.meleeVariant==='a'?C.meleeASpeedMultiplier:1)));}
+    else{
+      age*=C.meleeSpeedMultiplier;
+      if(face==='south'){clip='south-cleave';age=age<C.meleeHit?age*CLEAVE_WINDUP/C.meleeHit:CLEAVE_WINDUP+age-C.meleeHit;}
+      else clip=a.meleeVariant==='a'?`${face}-melee-a`:`${face}-melee`;
+    }
   }
   else if(a.kind==='meteorCast')clip=`cast-${face}`;
   else if(a.kind==='armageddonCast')clip='armageddon-cast';
@@ -39,6 +43,6 @@ export function wardenPose(f:FinalEncounter){
     if(age<1.04)clip='shield-break';else if(age<2.3){clip='stagger';age-=1.04;}else{clip='stagger-recover';age-=2.3;}
   }else if(a.kind.startsWith('charge')){clip=`south-${a.kind}`;if(a.kind==='chargeTravel')age*=C.chargeSpeedMultiplier;}
   else if(a.kind==='swordWindup'||a.kind==='swordActive'||a.kind==='recovery'){clip='south-cleave';age=a.kind==='swordWindup'?age*CLEAVE_WINDUP/C.swordWindup:age+CLEAVE_WINDUP+(a.kind==='recovery'?C.swordActive:0);}
-  const data=clip==='south-cleave'?CLEAVE_PLAYBACK:MELEE_A_CLIPS[clip]??MELEE_B_PLAYBACK[clip]??WARDEN.clips[clip]!,index=wardenIndex(data,age),sourceFrame=data.frames[index]!,mirrorSpecial=a.kind.startsWith('charge')&&face==='west'||clip==='south-cleave'&&a.kind!=='basicMelee'&&a.direction.x<0,frame=mirrorSpecial?{...sourceFrame,flipX:!sourceFrame.flipX}:sourceFrame;
+  const data=clip==='north-melee'&&a.kind==='basicMelee'?NORTH_SLAM:clip==='south-cleave'?CLEAVE_PLAYBACK:MELEE_A_CLIPS[clip]??MELEE_B_PLAYBACK[clip]??WARDEN.clips[clip]!,index=wardenIndex(data,age),sourceFrame=data.frames[index]!,mirrorSpecial=a.kind.startsWith('charge')&&face==='west'||clip==='south-cleave'&&a.kind!=='basicMelee'&&a.direction.x<0,frame=mirrorSpecial?{...sourceFrame,flipX:!sourceFrame.flipX}:sourceFrame;
   return{clip,age,index,frame,combatDirection:face,presentationDirection:mirrorSpecial?'west':clip.startsWith(face)||clip===`cast-${face}`?face:'south'};
 }

@@ -1,0 +1,30 @@
+{
+  "cashLimitUSD": 1.5,
+  "maxJobs": 3,
+  "starterLimitPoints": 10,
+  "balanceBefore": 10,
+  "balanceAfter": 10,
+  "starterBefore": 51,
+  "starterAfter": 44,
+  "starterLowestObserved": 44,
+  "starterUsedPoints": 7,
+  "estimatedUSDIfBalance": 0.5,
+  "actualCashSpentUSD": 0,
+  "jobs": 2,
+  "billingSource": "plan",
+  "seeds": [
+    6110731,
+    6110732
+  ],
+  "taskIds": [
+    "08917f51-bd07-44fd-99e6-5af5017c6c85",
+    "e17c211a-c2ad-4c3b-911f-2b39f794b7c2"
+  ],
+  "paidRetries": 0,
+  "northDeathGeneration": 0,
+  "deathBGeneration": 0,
+  "spawnGeneration": 0,
+  "phase3Generation": 0,
+  "otherGenerators": [],
+  "budgetDecision": "Three Starter points remain before floor41; previous same-size job debited up to4pp. Do not risk a third call for optional Death B. Continue only free local preparation."
+}

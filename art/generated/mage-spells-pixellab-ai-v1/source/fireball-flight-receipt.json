@@ -1,0 +1,24 @@
+{
+  "request": {
+    "id": "fireball-flight",
+    "args": {
+      "description": "A restrained seamless in-place loop: only the three short flame tongues at the LEFT edge gently lick backward and reform. Keep the round fireball head, its ivory core and contact center absolutely stationary at (78,64). Small variations, no growth, no rotation, no travelling across the canvas, no sparks or smoke added. The final phase returns to the initial shape for a quiet ordinary mage projectile. Preserve the exact simple pixel-art style and limited colours.",
+      "first_frame_url": "https://api.pixellab.ai/mcp/images/6daa7422-dbec-47a1-8f17-382823e28bd9/download",
+      "last_frame_url": "https://api.pixellab.ai/mcp/images/6daa7422-dbec-47a1-8f17-382823e28bd9/download",
+      "frame_count": 8,
+      "direction": "east",
+      "view": "high top-down",
+      "subject_description": "one compact amber fireball projectile with a short copper flame tail pointing left",
+      "initial_pose": "facing right, hot round head held at (78,64), short leftward tail, isolated on transparency",
+      "enhance_prompt": false,
+      "no_background": true,
+      "seed": 2026111011
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "id: b5f5d94e-95e2-4111-96b0-c6a6d949b197\njob_id: b5f5d94e-95e2-4111-96b0-c6a6d949b197\ndescription: A restrained seamless in-place loop: only the three short flame tongues at the LEFT edge gently lick backward and reform. Keep the round fireball head, its ivory core and contact center absolutely stationary at (78,64). Small variations, no growth, no rotation, no travelling across the canvas, no sparks or smoke added. The final phase returns to the initial shape for a quiet ordinary mage projectile. Preserve the exact simple pixel-art style and limited colours.\nframes: 8\nsize: 128x128px\ntransparent: True\nlast_frame: yes (animating toward it)\nseed: 2026111011\ncost: 1 generation\nstatus: processing (~1-5 min)\n\nhint: get_image(job_id=\"b5f5d94e-95e2-4111-96b0-c6a6d949b197\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/b5f5d94e-95e2-4111-96b0-c6a6d949b197/download (423 + Retry-After until ready; ?index=N for the Nth of several images)\nasset_id: 0eb9c345-4f77-53d4-a643-da4c0792cc2f\nasset_status: pending (saved to your gallery when generation completes)"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "provider": "PixelLab",
+  "cashUsd": 0,
+  "subscriptionGenerationsBefore": 1560.9,
+  "subscriptionGenerationsAfter": 1550.9,
+  "chargedGenerations": 10,
+  "initialTextJobs": 4,
+  "initialCostEach": 1,
+  "replacementSkeletonJobs": 2,
+  "replacementCostEach": 3,
+  "failedValidationRequests": 1,
+  "failedValidationCharged": 0,
+  "initialFrontRejectedForTorsoRotation": true,
+  "rawPreserved": true,
+  "activeJobs": 0,
+  "finalBalance": "credits: $0.00\ngenerations_remaining: 1550.90\ngenerations_used: 449.10\ngenerations_total: 2000\nnote: fractions come from small steps billed per use — prompt enhancement 0.05, skeleton estimation and colour reduction 0.1, sprite import 0.25, /chat builder model calls — most are not jobs, so list_jobs does not show them\nsubscription: active (Tier 1: Pixel Apprentice)\ngenerations_reset: 2026-12-08\nnote: generations_total is this cycle's allowance (prorated on a mid-cycle upgrade); it refills on generations_reset",
+  "replacements": [
+    {
+      "id": "walk-front",
+      "jobId": "41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4",
+      "result": {
+        "job_id": "41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4",
+        "status": "completed",
+        "frames": 8,
+        "download_url": "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=0",
+        "download_urls": [
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=0",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=1",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=2",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=3",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=4",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=5",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=6",
+          "https://api.pixellab.ai/mcp/images/41cbb404-cd4c-43f7-8b7c-bf3b0100a8a4/download?index=7"
+        ],
+        "asset": {
+          "id": "977dc623-60e8-563d-8903-9bfff9fe936b",
+          "type": "image",
+          "status": "saved"
+        },
+        "charged_generations": 3
+      }
+    },
+    {
+      "id": "run-front",
+      "jobId": "b5a37e50-9542-4fff-8ec7-d2a19fe61214",
+      "result": {
+        "job_id": "b5a37e50-9542-4fff-8ec7-d2a19fe61214",
+        "status": "completed",
+        "frames": 8,
+        "download_url": "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=0",
+        "download_urls": [
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=0",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=1",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=2",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=3",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=4",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=5",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=6",
+          "https://api.pixellab.ai/mcp/images/b5a37e50-9542-4fff-8ec7-d2a19fe61214/download?index=7"
+        ],
+        "asset": {
+          "id": "0d1d3635-52be-51e3-9f90-7ce536a58e64",
+          "type": "image",
+          "status": "saved"
+        },
+        "charged_generations": 3
+      }
+    }
+  ]
+}

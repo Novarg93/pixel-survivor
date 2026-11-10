@@ -1,0 +1,46 @@
+{
+  "runtimeIntegration": true,
+  "approval": {
+    "runtimeIntegration": true,
+    "approval": "User accepted both Shield and ordinary Frost Nova: принимаю оба - накатывай в игру",
+    "scope": "Integrate the exact accepted PixelLab frames; preserve Frost Ultimate, mechanics and raw art."
+  },
+  "originalRuntimeFiles": 325,
+  "unchangedRuntimeFiles": 319,
+  "changed": [
+    "src/game/art/GameArt.ts",
+    "src/game/art/MageAbilityArt.ts",
+    "src/game/art/assetRegistry.ts",
+    "src/game/art/mageAbilityPack.ts",
+    "src/game/art/playerShieldVisuals.ts",
+    "src/game/config/playerVisuals.ts"
+  ],
+  "added": [
+    "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json",
+    "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png",
+    "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.json",
+    "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.png",
+    "src/game/art/MageShieldPresentation.ts",
+    "src/game/art/mageAbilityRuntimeManifest.json",
+    "src/game/art/mageShieldNovaManifestPixellab.json",
+    "src/game/art/mageShieldNovaPack.ts"
+  ],
+  "currentSHA256": {
+    "src/game/art/GameArt.ts": "0678aa76a486176d9b4a3b96aa7f139d7c7b058f20c9a2154036902fccc4bb91",
+    "src/game/art/MageAbilityArt.ts": "9c7da6569fcb73eda3d179750d04026fd54d161cc9b125e6d3ca53314eded074",
+    "src/game/art/assetRegistry.ts": "64feaf97e72546dfc73f0529ff31baf843b3225bde6ac2bd92bb714c05f8a47b",
+    "src/game/art/mageAbilityPack.ts": "0b7dde7ab4d8de8951556e277e806497d7c99fc3f3763049189e1a0fd8b6f71c",
+    "src/game/art/playerShieldVisuals.ts": "93288748d48e0206bc241e7338ab7fcf623c71c3c7661f62c34411e9822a0e0c",
+    "src/game/config/playerVisuals.ts": "3f0fd863dc62078f36835d5193d59dbd8e051cc39cb6cb9e4e5bec109225fa41",
+    "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json": "7e6d38f4bcea947272df5ab183479d62e1921ca0d83fbd65e3a146e41c8cdbee",
+    "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png": "1586fb924cbad0695c295179c0a7ca7edccdc0430ab5194fdba911c93107fd83",
+    "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.json": "37636c155261e20c108fe6729a169d4a8a6794095deae872e048d2b99bae1081",
+    "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.png": "d42a8ded90ddbdd67169128ec2081265585fead56b4d9a090884337f063643a3",
+    "src/game/art/MageShieldPresentation.ts": "d50f507bf0991a197c8451dfb3c5935f7fee2521a6d2395e593329e89b934154",
+    "src/game/art/mageAbilityRuntimeManifest.json": "83a14d87e60b23fd8048edfa1d160ae00dfd794a2db780e471b6c0ab3138fb30",
+    "src/game/art/mageShieldNovaManifestPixellab.json": "294a97d94d3101c4f1792935d731255bdcb71e1d82325825ca47d9c61a72ffff",
+    "src/game/art/mageShieldNovaPack.ts": "c624349845063f9129e819a5d4a537c1bbd63308e5e962efa2592e27d611b9ee"
+  },
+  "ultimateUnchanged": true,
+  "otherArtUnchanged": true
+}
