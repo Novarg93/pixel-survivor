@@ -1,7 +1,8 @@
+import {SILENT_MINIBOSSES,type MinibossAmbienceLevels} from './MinibossAmbience';
 import { SOUND_CATALOG, AUDIO_BUDGET, type SoundEvent, type AssetId, type AudioBus } from './catalog';
 import type { AudioBackend, AudioVoice } from './AudioBackend';
 import type { Settings } from '../services/storage';
-import { audioSampleForEvent, audioSampleRange } from './samples';
+import { audioSampleForEvent, audioSampleRange,audioSampleGain,type MinibossAmbienceId } from './samples';
 import type {MusicTrackId} from './musicTracks';
 
 export class AudioController {
@@ -9,6 +10,7 @@ export class AudioController {
   private volumes = { master: .3, music: .32, sfx: .8, ui: .64, ambient: .176 }; private muted = false;
   private status = 'menu'; private last = new Map<string, number>(); private serial = 0;
   private voices = new Map<number, { voice: AudioVoice; bus: 'sfx' | 'ui'; priority: number; event: SoundEvent }>();
+  private ambience=new Map<MinibossAmbienceId,{voice:AudioVoice;level:number}>();
   private loops = new Map<AssetId, AudioVoice>();
   private requested: Partial<Record<SoundEvent, number>> = {}; private played: Partial<Record<SoundEvent, number>> = {};
   private rejected = { blocked: 0, muted: 0, throttled: 0, budget: 0, unavailable: 0 };
@@ -48,7 +50,7 @@ export class AudioController {
       this.peakVoices = Math.max(this.peakVoices, this.voices.size); return true;
     } catch { this.rejected.unavailable++; return false; }
   }
-  update(status: string, biome: string, frostField=false,fireField=false,track:MusicTrackId='normal') {
+  update(status: string, biome: string, frostField=false,fireField=false,track:MusicTrackId='normal',ambience:MinibossAmbienceLevels=SILENT_MINIBOSSES) {
     if (this.status !== status) { this.stop(status === 'paused' || status === 'upgrade' ? .06 : 0); this.status = status; }
     const audible = this.enabled && !this.dead && this.backend.running && !this.muted && this.volumes.master > 0 && status === 'playing';
     const musicAudible=audible&&this.volumes.music>0;
@@ -58,13 +60,19 @@ export class AudioController {
     else if(audible&&fireField&&this.volumes.sfx)desired.push('embers');
     for (const [key, voice] of this.loops) if (!desired.includes(key)) { voice.stop(streaming?0:.25); this.loops.delete(key); }
     for (const asset of desired) if (!this.loops.has(asset)) {
-      try { const voice = this.backend.start(asset, asset === 'underscore' ? 'music' : asset==='frostAir'||asset==='embers'?'sfx':'ambient', asset==='frostAir'?.09:asset==='embers'?.11:1, 1, true, () => { if (this.loops.get(asset) === voice) this.loops.delete(asset); }); if (voice) this.loops.set(asset, voice); } catch { this.rejected.unavailable++; }
+      try { const voice = this.backend.start(asset, asset === 'underscore' ? 'music' : asset==='frostAir'||asset==='embers'?'sfx':'ambient', asset==='frostAir'?.09:asset==='embers'?.55:1, 1, true, () => { if (this.loops.get(asset) === voice) this.loops.delete(asset); }, asset==='embers'?'fire-ultimate-static':undefined); if (voice) this.loops.set(asset, voice); } catch { this.rejected.unavailable++; }
+    }
+    for(const id of Object.keys(SILENT_MINIBOSSES) as MinibossAmbienceId[]){
+      const level=audible&&this.volumes.sfx?Math.max(0,Math.min(id==='beast-walking'?.12:.14,ambience[id])):0,entry=this.ambience.get(id);
+      if(!level){if(entry){entry.voice.stop(.12);this.ambience.delete(id);}continue;}
+      if(entry){if(Math.abs(entry.level-level)>.001){entry.voice.gain(level*audioSampleGain(id),.16);entry.level=level;}continue;}
+      try{const voice=this.backend.start(id==='beast-walking'?'stone':'threat','sfx',level,1,true,()=>{if(this.ambience.get(id)?.voice===voice)this.ambience.delete(id);},id);if(voice)this.ambience.set(id,{voice,level});}catch{this.rejected.unavailable++;}
     }
     this.peakLoops = Math.max(this.peakLoops, this.backend.diagnostics().loops);
   }
   stopEvent(event:SoundEvent){for(const [id,v]of this.voices)if(v.event===event){v.voice.stop(.05);this.voices.delete(id);}}
-  stop(fade = 0) { this.backend.music?.(null); if (!fade) this.backend.stopAll(); else { for (const { voice } of this.voices.values()) voice.stop(fade); for (const voice of this.loops.values()) voice.stop(fade); } this.voices.clear(); this.loops.clear(); }
+  stop(fade = 0) { this.backend.music?.(null); if (!fade) this.backend.stopAll(); else { for (const { voice } of this.voices.values()) voice.stop(fade); for (const voice of this.loops.values()) voice.stop(fade); for(const {voice} of this.ambience.values())voice.stop(fade); } this.voices.clear(); this.loops.clear();this.ambience.clear(); }
   reset() { this.stop(); this.last.clear(); this.generation++; }
-  diagnostics() { return { unlocked: this.enabled, supported: this.backend.supported, running: this.backend.running, status: this.status, voices: this.voices.size, tracks: this.loops.size, peakVoices: this.peakVoices, peakLoops: this.peakLoops, requested: { ...this.requested }, played: { ...this.played }, rejected: { ...this.rejected }, volumes: { ...this.volumes }, muted: this.muted, ...this.backend.diagnostics() }; }
+  diagnostics() { return { unlocked: this.enabled, supported: this.backend.supported, running: this.backend.running, status: this.status, voices: this.voices.size, tracks: this.loops.size+this.ambience.size,ambience:Object.fromEntries([...this.ambience].map(([id,entry])=>[id,entry.level])), peakVoices: this.peakVoices, peakLoops: this.peakLoops, requested: { ...this.requested }, played: { ...this.played }, rejected: { ...this.rejected }, volumes: { ...this.volumes }, muted: this.muted, ...this.backend.diagnostics() }; }
   destroy() { this.reset(); this.dead = true; this.enabled = false; this.backend.destroy(); }
 }

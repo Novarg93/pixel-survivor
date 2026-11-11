@@ -1,0 +1,26 @@
+[
+  {
+    "id": "beast-walking",
+    "source": "art/armored-briar-beast/sounds/beast-walking.wav",
+    "file": "public/assets/audio/miniboss-ambience-v1/beast-walking.wav",
+    "sha256": "97dee4da44436bdff92b3b149e00601a937de8153f5c3e68378cec2295f59203",
+    "gain": 0.664104,
+    "peak": 0.903472900390625,
+    "rms": 0.10884045072436796,
+    "seconds": 1.28,
+    "channels": 2,
+    "sampleRate": 48000
+  },
+  {
+    "id": "rune-presence",
+    "source": "art/rune-warden/sound/mage_idle.wav",
+    "file": "public/assets/audio/miniboss-ambience-v1/rune-presence.wav",
+    "sha256": "954fd5f9488dcb283640d5fce9dce3ccbaabb03deb4d4c5a05ac99af3037fab7",
+    "gain": 2,
+    "peak": 0.164581298828125,
+    "rms": 0.03833106643436055,
+    "seconds": 4.16,
+    "channels": 2,
+    "sampleRate": 48000
+  }
+]

@@ -23,9 +23,23 @@ class Backend implements AudioBackend {
   destroy() { this.stopAll(); }
 }
 async function setup() { const b = new Backend(), c = new AudioController(b, () => .5); c.settings(DEFAULT_SETTINGS); await c.gesture(); await Promise.resolve(); c.update('playing', 'grove'); return { b, c }; }
+it('keeps two quiet mini-boss loops singular, clamps gains and releases them with the shared audio lifecycle',async()=>{
+ const {b,c}=await setup(),levels={'beast-walking':.12,'rune-presence':.14};for(let i=0;i<60;i++)c.update('playing','grove',false,false,'normal',levels);
+ expect(b.calls.filter(c=>c.asset==='stone'&&c.loop)).toHaveLength(1);expect(b.calls.filter(c=>c.asset==='threat'&&c.loop)).toHaveLength(1);expect(c.diagnostics().ambience).toEqual(levels);expect(b.loops.size).toBe(4);
+ c.update('playing','grove',false,false,'normal',{'beast-walking':1,'rune-presence':1});expect(c.diagnostics().ambience).toEqual(levels);
+ c.update('playing','grove',false,false,'normal',{'beast-walking':0,'rune-presence':.05});expect(c.diagnostics().ambience).toEqual({'rune-presence':.05});expect(b.loops.size).toBe(3);
+ c.update('paused','grove',false,false,'normal',levels);expect(b.active.size).toBe(0);c.update('playing','grove',true,false,'normal',levels);expect(b.loops.size).toBe(5);
+ c.settings({...DEFAULT_SETTINGS,muted:true});expect(b.active.size).toBe(0);expect(c.diagnostics().ambience).toEqual({});c.settings({...DEFAULT_SETTINGS,sfxVolume:0});c.update('playing','grove',false,false,'normal',levels);expect(c.diagnostics().ambience).toEqual({});c.destroy();expect(b.active.size).toBe(0);
+});
+it('replaces the final support orb synthetic layer with the uploaded Totem release',async()=>{
+ const {b,c}=await setup(),w=new World(),p=new AudioPresentation(c),e=w.spawn('guardian',{x:180,y:0})!;
+ w.finalEncounter.supports.set(e.id,{id:e.id,clock:0,next:1,warning:true});p.observe(w);
+ b.now+=1;w.finalEncounter.supports.get(e.id)!.next=3;e.shootingAt=w.elapsed+.1;w.sound('final-orb');p.observe(w);
+ expect(c.diagnostics().played['mini.totemCast']).toBe(1);expect(c.diagnostics().requested['final.orb']).toBeUndefined();
+});
 it('keeps Fire roar quiet and singular, with existing pause/mute/SFX-zero/expiry cleanup',async()=>{
   const {b,c}=await setup();for(let i=0;i<100;i++)c.update('playing','grove',false,true);
-  expect(b.calls.filter(call=>call.asset==='embers')).toEqual([{asset:'embers',gain:.11,rate:1,loop:true}]);expect(b.loops.size).toBe(3);
+  expect(b.calls.filter(call=>call.asset==='embers')).toEqual([{asset:'embers',gain:.55,rate:1,loop:true}]);expect(b.loops.size).toBe(3);
   c.update('paused','grove',false,true);expect(b.active.size).toBe(0);c.update('playing','grove',false,true);expect(b.loops.size).toBe(3);
   c.settings({...DEFAULT_SETTINGS,sfxVolume:0});c.update('playing','grove',false,true);expect(b.loops.size).toBe(2);
   c.settings(DEFAULT_SETTINGS);c.update('playing','grove',false,true);c.update('playing','grove');expect(b.loops.size).toBe(2);

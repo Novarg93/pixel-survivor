@@ -33,7 +33,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Fire doubled area and ex
     w.elapsed=w.ultimate.activeUntil+.45;const restored=await snapshot();w.shield.clearAbsorb();w.mobility.clearAbsorb();w.effects=effects.filter(e=>e.kind!=='shield');const restoredBare=await snapshot();
     return{form,hp,health,enemies,activeDifference:difference(active.pixels,bare.pixels),fadeDifference:difference(fading.pixels,fadeBare.pixels),restoredDifference:difference(restored.pixels,restoredBare.pixels),png:active.png,fade:fading.png,restored:restored.png};
   });
-  expect(result.form).toMatchObject({radius:164,phase:'form',burning:4,bodyFlames:18});expect(result.form.glowWidth).toBeGreaterThan(400);expect(result.form.glowWidth).toBeLessThan(460);expect(result.form.glowHeight).toBeGreaterThan(300);
+  expect(result.form).toMatchObject({radius:164,phase:'form',burning:4,bodyFlames:7});expect(result.form.glowWidth).toBeGreaterThan(400);expect(result.form.glowWidth).toBeLessThan(460);expect(result.form.glowHeight).toBeGreaterThan(300);
   expect(result.enemies.slice(0,4).every(e=>e.hp<1e6)).toBe(true);expect(result.enemies.slice(4).every(e=>e.hp===1e6)).toBe(true);
   expect(result.hp).toBe(100);expect(result.health.absorb).toBe(.75);expect(result.activeDifference).toBe(0);expect(result.fadeDifference).toBe(0);
   // The approved PixelLab shield returns after Fire's exclusive silhouette and fade end.

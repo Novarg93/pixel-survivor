@@ -93,3 +93,11 @@ Phaser's shared context/cache for Phaser to dispose of on game destruction.
 
 Human listening and physical-device checks remain essential: automation can verify
 PCM and output energy, but cannot certify musical quality or headphone comfort.
+
+
+Fire ultimate v1: accepted PixelLab mantle + growing perimeter. The supplied
+static.wav plays as one SFX loop while active. pulse.wav is trimmed to source
+3.55?5.35s (1.8s), with8ms attack/120ms release edge fades, on activation
+and growth at2/4/6/8s. Originals remain unchanged. Static sample gain2, loop
+gain.55; pulse sample gain1, cue gain.7. Existing pause/mute/death/expiry
+cleanup and three-loop budget apply. No pulse at the10s expiry.

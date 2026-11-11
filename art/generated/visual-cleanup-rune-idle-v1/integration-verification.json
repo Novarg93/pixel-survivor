@@ -1,0 +1,30 @@
+{
+  "baselineFiles": 411,
+  "changed": [
+    "src/game/art/FireUltimateArt.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/catalog.ts",
+    "src/game/audio/samples.ts",
+    "src/game/scenes/GameScene.ts"
+  ],
+  "added": [
+    "public/assets/audio/miniboss-ambience-v1/beast-walking.wav",
+    "public/assets/audio/miniboss-ambience-v1/rune-presence.wav",
+    "src/game/audio/MinibossAmbience.ts",
+    "src/game/audio/minibossAmbienceSamples.ts"
+  ],
+  "unchanged": 405,
+  "currentSHA256": {
+    "src/game/art/FireUltimateArt.ts": "2fe0c6c86bed256fd5a3ef22f193f0db379b12898f5a33ca1df41eb7a9a6c25d",
+    "src/game/audio/AudioController.ts": "16ad3d38e60a56d8eec32c811824ddab4287c83acc5783652cdd653ec9822e23",
+    "src/game/audio/AudioPresentation.ts": "75e2f8c693a4d71ac5c9012ed81fc11e4d35a6a771a9fd416035991eaf91c040",
+    "src/game/audio/catalog.ts": "e111bba7afe2961545e31929955c02e194c99df904e310aff86b11def049d6f7",
+    "src/game/audio/samples.ts": "59ff6d0c15c56933ccb9e289254ef980e7b9aff08572709121b70ea5ea6ba5be",
+    "src/game/scenes/GameScene.ts": "14237f73aed2d8ef9ba592a371d155a21e26dc0e2dfb396cf89e86cc261c725d",
+    "public/assets/audio/miniboss-ambience-v1/beast-walking.wav": "97dee4da44436bdff92b3b149e00601a937de8153f5c3e68378cec2295f59203",
+    "public/assets/audio/miniboss-ambience-v1/rune-presence.wav": "954fd5f9488dcb283640d5fce9dce3ccbaabb03deb4d4c5a05ac99af3037fab7",
+    "src/game/audio/MinibossAmbience.ts": "ee050394c882b1edf46da31da8afb202977dbff61e908d7d28bed2488cc14b6f",
+    "src/game/audio/minibossAmbienceSamples.ts": "4cc5844560650811ef58907ec7f9bd9277befe69c7adab3e8829355b503bc1bc"
+  }
+}

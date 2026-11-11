@@ -228,11 +228,6 @@ export class GameScene extends Phaser.Scene {
       if (enemy.modifier === 'shielded' && (this.world.elapsed - enemy.born) % 7 < 2) this.effects.fillStyle(0x9ccbf5).fillRect(enemy.x - 3, enemy.y - 18, 6, 2).fillRect(enemy.x - 2, enemy.y - 16, 4, 3);
       if (enemy.modifier === 'frenzy' && (this.world.elapsed - enemy.born) % pressureAt(this.world.elapsed).frenzyCycle < .4) this.effects.fillStyle(0xffcd74).fillTriangle(enemy.x, enemy.y - 22, enemy.x - 3, enemy.y - 17, enemy.x + 3, enemy.y - 17);
       if (enemy.modifier === 'volatile') this.effects.fillStyle(0xff83aa).fillRect(enemy.x - 2, enemy.y - 18, 4, 3);
-      if (enemy.rush?.phase === 'windup') this.effects.lineStyle(18, 0xffa970, 0.18).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y).lineStyle(1, 0xffd896).lineBetween(enemy.x, enemy.y, enemy.rush.aim.x, enemy.rush.aim.y);
-      if (enemy.aim) {
-        const a = Math.atan2(enemy.aim.y - enemy.y, enemy.aim.x - enemy.x), x = enemy.x + Math.cos(a) * 15, y = enemy.y + Math.sin(a) * 15;
-        this.effects.lineStyle(2, 0xffb1b7).lineBetween(enemy.x + Math.cos(a) * 7, enemy.y + Math.sin(a) * 7, x, y).fillStyle(0xffe1c4).fillRect(Math.round(x) - 1, Math.round(y) - 1, 3, 3);
-      }
       drawChargePreparation(this.effects, this.world, enemy);
       if (enemy.boss && !enemy.finalRole && (Math.abs(enemy.x - this.mage.x) > this.world.width / 2 - 20 || Math.abs(enemy.y - this.mage.y) > this.world.height / 2 - 20)) {
         const angle = Math.atan2(enemy.y - this.mage.y, enemy.x - this.mage.x), r = Math.min((this.world.width / 2 - 18) / Math.max(0.01, Math.abs(Math.cos(angle))), (this.world.height / 2 - 18) / Math.max(0.01, Math.abs(Math.sin(angle))));

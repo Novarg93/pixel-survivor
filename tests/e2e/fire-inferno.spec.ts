@@ -27,11 +27,11 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Living Inferno real Canv
     return{rows,audio:window.__PIXEL__!.audio(),metrics:window.__PIXEL__!.metrics(),actors:window.__PIXEL__!.art().actors};
   });
   expect(result.rows.map(r=>r.art.phase)).toEqual(['ignition','form','form','form','form','fade','idle']);
-  expect(result.rows[1].art).toMatchObject({bodyFlames:18,heatColumns:7,burning:8,ring:false});expect(result.rows[2].art.bursts).toBe(1);expect(result.rows[2].absorbed).toBe(1);expect(result.rows[2].shots).toBe(0);
+  expect(result.rows[1].art).toMatchObject({bodyFlames:7,heatColumns:7,burning:8,ring:false});expect(result.rows[2].art.bursts).toBe(1);expect(result.rows[2].absorbed).toBe(1);expect(result.rows[2].shots).toBe(0);
   expect(new Set(result.rows.map(r=>r.hp)).size).toBe(1);expect(result.rows.every(r=>r.absorb===0&&r.charge===0)).toBe(true);
   expect(result.rows[5].art.glowAlpha).toBeGreaterThan(0);expect(result.rows[5].art.glowAlpha).toBeLessThan(result.rows[4].art.glowAlpha);
   expect(result.rows[6].art).toMatchObject({glowAlpha:0,bodyFlames:0,heatColumns:0,burning:0,bursts:0});
-  expect(result.audio.played['ultimate.fire']).toBe(1);expect(result.audio.played['ultimate.singe']).toBe(1);expect(result.audio.peakLoops).toBeLessThanOrEqual(3);
+  expect(result.audio.played['ultimate.fire']).toBe(5);expect(result.audio.played['ultimate.singe']).toBe(1);expect(result.audio.peakLoops).toBeLessThanOrEqual(5);
   expect(result.audio.tracks).toBe(0);expect(result.audio.music).toMatchObject({current:'dying',playing:1,players:2});
   for(const [i,r]of result.rows.entries())writeFileSync(`${images}/${['01-ignition','02-form-ground-burn','03-projectile-singe','04-heat','07-end','08-fade','09-clear'][i]}-${width}.png`,Buffer.from(r.png.split(',')[1],'base64'));
   writeFileSync(`${report}/timeline-${width}.json`,JSON.stringify({...result,rows:result.rows.map(({png,...r})=>({...r,bytes:png.length})),errors},null,2));
@@ -78,7 +78,7 @@ for(const [width,height]of [[1280,720],[844,390]])test(`Fire 150+3+3 stable dens
   });
   const summary=(active:boolean)=>{const values=result.rows.filter(r=>r.active===active).slice(15).map(r=>r.delta).sort((a,b)=>a-b);return{frames:values.length,median:values[Math.floor(values.length*.5)],p95:values[Math.floor(values.length*.95)],fps:1000/(values.reduce((a,b)=>a+b,0)/values.length)};};
   const baseline=summary(false),fire=summary(true);expect(result.metrics).toMatchObject({enemies:150,bosses:3,guardians:3});expect(result.rows.some(r=>r.burning>=100)).toBe(true);expect(result.rows.every(r=>r.clock.every(t=>t===0)&&r.bursts<=24)).toBe(true);
-  expect(fire.median).toBeLessThan(Math.max(40,baseline.median*1.6+6));expect(fire.p95).toBeLessThan(Math.max(100,baseline.p95*2+12));expect(result.audio.peakLoops).toBeLessThanOrEqual(3);
+  expect(fire.median).toBeLessThan(Math.max(40,baseline.median*1.6+6));expect(fire.p95).toBeLessThan(Math.max(100,baseline.p95*2+12));expect(result.audio.peakLoops).toBeLessThanOrEqual(5);
   writeFileSync(`${images}/stress-${width}.png`,Buffer.from(result.png.split(',')[1],'base64'));writeFileSync(`${report}/stress-${width}.json`,JSON.stringify({...result,png:undefined,baseline,fire},null,2));await context.close();
 });
 

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mini-rune-cast",
+    "source": "art/rune-warden/sound/cast.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-rune-cast.wav",
+    "sha256": "3143f294be397219f0df726f54c040463dd4178dd5e6f8404cd5a19509e6326a",
+    "gain": 2,
+    "seconds": 0.8865,
+    "peak": 0.36138916015625,
+    "rms": 0.04608543407944118,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  },
+  {
+    "id": "mini-teleport",
+    "source": "art/rune-warden/sound/teleport.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-teleport.wav",
+    "sha256": "788ca6ee859c5d3e171536f9983d31843f995d619c964a5e24002dc7770d1e10",
+    "gain": 0.952189,
+    "seconds": 0.8865,
+    "peak": 0.78765869140625,
+    "rms": 0.07956815949321001,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  },
+  {
+    "id": "mini-astral-cast",
+    "source": "art/astral-revenant/sounds/cast.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-astral-cast.wav",
+    "sha256": "45f9dca0f4bcb98279c90ce95179242c956b3b560e8e85f3b534fda32553fe23",
+    "gain": 1.128478,
+    "seconds": 0.8865,
+    "peak": 0.66461181640625,
+    "rms": 0.1058479638504291,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  },
+  {
+    "id": "mini-briar-charge",
+    "source": "art/thorn-beast/sounds/charge/charge.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-briar-charge.wav",
+    "sha256": "f20b85bb867c193eb2402dbbd91db8c1ba418b69dc0a8879b1049aa9b742c357",
+    "gain": 0.681105,
+    "seconds": 0.8865,
+    "peak": 0.908416748046875,
+    "rms": 0.22023046014139028,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  },
+  {
+    "id": "mini-briar-melee",
+    "source": "art/thorn-beast/sounds/melee-attack/melee-attack.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-briar-melee.wav",
+    "sha256": "6e1c12d16858484a2e7836ed307bfe3d6fd1e1afa6e5949cc0cc79bfd4b590d4",
+    "gain": 1.800835,
+    "seconds": 0.8865,
+    "peak": 0.416473388671875,
+    "rms": 0.06215078723728283,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  },
+  {
+    "id": "mini-totem-cast",
+    "source": "art/totem/sounds/totem.wav",
+    "file": "public/assets/audio/miniboss-v1/mini-totem-cast.wav",
+    "sha256": "63488e6d7ae4186328c63e5f941c5b82a10b9d20710c6479de3e8fa5bda0771c",
+    "gain": 1.151586,
+    "seconds": 0.8865,
+    "peak": 0.651275634765625,
+    "rms": 0.06322439086812988,
+    "channels": 2,
+    "sampleRate": 48000,
+    "bits": 16
+  }
+]

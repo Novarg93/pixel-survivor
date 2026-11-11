@@ -95,7 +95,7 @@ export class UltimateSystem {
       if(w.zones.length+w.impacts.length>=24)this.trails=[];
       if(distance(this.lastTrail,w.player)>=C.fire.trailStep)this.addTrail(w,this.lastTrail,w.player,now);
       const live=new Set(w.enemies.map(e=>e.id));for(const id of this.nextHit.keys())if(!live.has(id)){this.nextHit.delete(id);this.spent.delete(id);}
-      for(const e of [...w.combatTargets])if(w.status==='playing'&&now+1e-7>=(this.nextHit.get(e.id)??0)&&(distance(w.player,e)<=C.fire.radius+e.radius||this.trails.some(t=>segmentDistance(e,t.from,t.to)<=C.fire.trailWidth/2+e.radius))){
+      for(const e of [...w.combatTargets])if(w.status==='playing'&&now+1e-7>=(this.nextHit.get(e.id)??0)&&(distance(w.player,e)<=this.fire.radius(now)+e.radius||this.trails.some(t=>segmentDistance(e,t.from,t.to)<=C.fire.trailWidth/2+e.radius))){
         this.fire.ignite(e,now);this.nextHit.set(e.id,now+C.fire.interval);this.hit(w,e,C.fire.damage,C.fire.bossFraction,'ultimate-fire');
       }
     }

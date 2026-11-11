@@ -94,7 +94,7 @@ export class PhaserAudioBackend implements AudioBackend {
         volume.gain.setValueAtTime(level,at+Math.max(seconds-.004,seconds/2));volume.gain.linearRampToValueAtTime(0,at+seconds);
         source.start(at,range.offset??0,range.duration);
       }else source.start();
-      if (generated) this.samplePlays[generated] = (this.samplePlays[generated] ?? 0) + 1; if (loop) voice.gain(gain, .4); return voice;
+      if (generated) this.samplePlays[generated] = (this.samplePlays[generated] ?? 0) + 1; if (loop) voice.gain(gain*(generated?audioSampleGain(generated):1), .4); return voice;
     } catch { this.failed.add(asset); if (abort) abort(); else { source?.disconnect(); volume?.disconnect(); } return; }
   }
   diagnostics() {

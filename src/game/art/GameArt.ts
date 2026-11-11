@@ -1,3 +1,6 @@
+import {RUNE_ACCEPTED_TEXTURE,RUNE_ACCEPTED_URLS,acceptedRuneCast,acceptedRuneFlight,RUNE_FLIGHT_ANGLE} from './runeWardenAccepted';
+import {preloadFrostUltimate} from './frostUltimatePack';
+import {preloadFireUltimate} from './fireUltimatePack';
 import {WARDEN_AI_PAGES} from './ashWardenPixellabPack';
 import {LIGHTNING_ULTIMATE_TEXTURE,LIGHTNING_ULTIMATE_URLS} from './lightningUltimatePack';
 import {RegularLightningArt} from './RegularLightningArt';
@@ -12,7 +15,7 @@ import {MAGE_METEOR_TEXTURE,MAGE_METEOR_URLS} from './mageMeteorPack';
 import {MageAbilityArt} from './MageAbilityArt';
 import { RuneWardenArt } from './RuneWardenArt';
 import { RUNE_FLASH_TEXTURE } from './RuneJudgementFlash';
-import { RUNE_WARDEN_TEXTURE, RUNE_WARDEN_URLS, runeVolleyFrame } from './runeWardenPack';
+import { RUNE_WARDEN_TEXTURE, RUNE_WARDEN_URLS } from './runeWardenPack';
 import {RUNE_VFX_TEXTURE,RUNE_VFX_URLS} from './runeWardenVfxPack';
 import { BRIAR_BEAST_TEXTURE, BRIAR_BEAST_URLS } from './briarBeastPack';
 import {MAGE_ABILITY_TEXTURE,MAGE_ABILITY_URLS} from './mageAbilityPack';
@@ -57,6 +60,9 @@ import { PickupAnimation } from './PickupAnimation';
 import { abilityVisual } from './abilityVisual';
 type RenderEntity = Enemy | Projectile | XpOrb | LootItem | Chest | ArtifactDrop;
 export function preloadGameArt(scene: Phaser.Scene) {
+  preloadFireUltimate(scene);
+  preloadFrostUltimate(scene);
+  if(!scene.textures.exists(RUNE_ACCEPTED_TEXTURE))scene.load.atlas(RUNE_ACCEPTED_TEXTURE,import.meta.env.BASE_URL+RUNE_ACCEPTED_URLS.image,import.meta.env.BASE_URL+RUNE_ACCEPTED_URLS.data);
   for(const p of WARDEN_AI_PAGES)if(!scene.textures.exists(p.key))scene.load.atlas(p.key,import.meta.env.BASE_URL+p.image,import.meta.env.BASE_URL+p.data);
   if(!scene.textures.exists(ASTRAL_FLAME_TEXTURE))scene.load.atlas(ASTRAL_FLAME_TEXTURE,import.meta.env.BASE_URL+ASTRAL_FLAME_URLS.image,import.meta.env.BASE_URL+ASTRAL_FLAME_URLS.data);
   if(!scene.textures.exists(ASTRAL_PROJECTILE_TEXTURE))scene.load.atlas(ASTRAL_PROJECTILE_TEXTURE,import.meta.env.BASE_URL+ASTRAL_PROJECTILE_URLS.image,import.meta.env.BASE_URL+ASTRAL_PROJECTILE_URLS.data);
@@ -139,10 +145,10 @@ export class GameArt {
   private frozenVisuals=new Map<number,VisualSelection>();
   private frozenRun='';
   heroFrame = '';
-  constructor(private scene: Phaser.Scene) { this.blinkArt=new MageBlinkArt(scene);this.regularLightningArt=new RegularLightningArt(scene);this.fireballArt=new FireballArt(scene);this.runeArt=new RuneWardenArt(scene);this.astralArt=new AstralRevenantArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.mageHeroArt=new MageHeroArt(scene,this.casting); for (const key of [...WARDEN_AI_PAGES.map(p=>p.key),ASTRAL_FLAME_TEXTURE,ASTRAL_PROJECTILE_TEXTURE,RUNE_VFX_TEXTURE,MAGE_SHIELD_NOVA_TEXTURE,MAGE_BLINK_TEXTURE,MAGE_MOVING_CAST_V2_TEXTURE,MAGE_CAST_V2_TEXTURE,MAGE_RUN_V2_TEXTURE,MAGE_IDLE_TEXTURE,LIGHTNING_ULTIMATE_TEXTURE,REGULAR_LIGHTNING_TEXTURE,FIREBALL_TEXTURE,MAGE_METEOR_TEXTURE,ASTRAL_REVENANT_TEXTURE,BRIAR_BEAST_TEXTURE,RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), ...MAGE_HERO.pages.map(p=>mageHeroTexture(p.index)), HD_CORE_TEXTURE, RUNNER_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
+  constructor(private scene: Phaser.Scene) { this.blinkArt=new MageBlinkArt(scene);this.regularLightningArt=new RegularLightningArt(scene);this.fireballArt=new FireballArt(scene);this.runeArt=new RuneWardenArt(scene);this.astralArt=new AstralRevenantArt(scene);this.mageAbilityArt=new MageAbilityArt(scene);this.finalArt=new FinalBossArt(scene);this.encounterGround = scene.add.graphics().setDepth(-1).setName('encounter-ground'); this.ultimateArt=new UltimateArt(scene); this.playerHealth = new PlayerHealthBar(scene); this.elites = new EliteAdornment(scene); this.mageHeroArt=new MageHeroArt(scene,this.casting); for (const key of [RUNE_ACCEPTED_TEXTURE,...WARDEN_AI_PAGES.map(p=>p.key),ASTRAL_FLAME_TEXTURE,ASTRAL_PROJECTILE_TEXTURE,RUNE_VFX_TEXTURE,MAGE_SHIELD_NOVA_TEXTURE,MAGE_BLINK_TEXTURE,MAGE_MOVING_CAST_V2_TEXTURE,MAGE_CAST_V2_TEXTURE,MAGE_RUN_V2_TEXTURE,MAGE_IDLE_TEXTURE,LIGHTNING_ULTIMATE_TEXTURE,REGULAR_LIGHTNING_TEXTURE,FIREBALL_TEXTURE,MAGE_METEOR_TEXTURE,ASTRAL_REVENANT_TEXTURE,BRIAR_BEAST_TEXTURE,RUNE_FLASH_TEXTURE,RUNE_WARDEN_TEXTURE,MAGE_ABILITY_TEXTURE,...Array.from({length:WARDEN.pages},(_,i)=>wardenTexture(i)), ...MAGE_HERO.pages.map(p=>mageHeroTexture(p.index)), HD_CORE_TEXTURE, RUNNER_TEXTURE, ENEMY_TEXTURE, GUARDIAN_TEXTURE, BOSS_TEXTURE, LOOT_TEXTURE]) scene.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST); }
   prepare(world: World) { this.encounterFeedback.prepare(world); this.runner.prepare(world); this.packed.prepare(world); this.guardian.prepare(world); this.bosses.prepare(world); this.pickups.prepare(world); }
   observeCasts(world: World) { this.casting.observe(world);this.spellOrigins.observe(world); }
-  projectileView(projectile:Projectile,world:World){return this.spellOrigins.projectile(projectile,world.elapsed);}
+  projectileView(projectile:Projectile,world:World){const view=this.spellOrigins.projectile(projectile,world.elapsed);return projectile.appearance==='arcane-volley'?{...view,rotation:view.rotation+RUNE_FLIGHT_ANGLE}:view;}
   entityVisual(entity: RenderEntity, world: World): VisualSelection {
     if(this.frozenRun!==world.runId){this.frozenRun=world.runId;this.frozenVisuals.clear();}
     if('kind' in entity&&ultimateFrozen(entity,world.elapsed)){
@@ -154,14 +160,14 @@ export class GameArt {
 
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
-    if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; return bossVisual(entity.kind,p.facing,p.pose,age,Math.max(0,(entity.kind==='eclipse'&&entity.shootingAt>world.elapsed?entity.shootingAt:entity.boss?.until??world.elapsed)-world.elapsed)); }
+    if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; const remaining=Math.max(0,(entity.kind==='eclipse'&&entity.shootingAt>world.elapsed?entity.shootingAt:entity.boss?.until??world.elapsed)-world.elapsed);if(entity.kind==='sorcerer'&&(p.pose==='windup'||p.pose==='attack')&&entity.boss?.magic?.phase!=='signal')return {...selectAsset('sorcerer',acceptedRuneCast(p.facing,p.pose,age,remaining),ASSET_REGISTRY.sorcerer.worldScale*1.5),texture:RUNE_ACCEPTED_TEXTURE};return bossVisual(entity.kind,p.facing,p.pose,age,remaining); }
     if ('kind' in entity && isHdEnemy(entity.kind)) { const p = this.packed.view(entity, world), visual = enemyVisual(entity.kind, entity.elite, world.elapsed, entity.id); return { ...visual, frame: packedEnemyFrame(entity.kind, p.facing, p.pose, world.elapsed - p.started) }; }
     if('vx' in entity&&entity.appearance==='astral-volley'){
       const age=world.elapsed-(entity.started??world.elapsed);
       if(world.bosses.some(b=>b.id===entity.ownerId&&b.kind==='eclipse'))return selectAsset('eclipseVolley',astralAiFrame('flight',age));
       return selectAsset('astralVolley',astralProjectileFrame(age),ASSET_REGISTRY.astralVolley.worldScale*(entity.homing?.variant==='fast'?1.2:1));
     }
-    if('vx' in entity&&entity.appearance==='arcane-volley')return selectAsset('runeVolley',runeVolleyFrame(world.elapsed-(entity.started??world.elapsed)));
+    if('vx' in entity&&entity.appearance==='arcane-volley')return selectAsset('runeVolley',acceptedRuneFlight(world.elapsed-(entity.started??world.elapsed)));
     return entityVisual(entity, world.elapsed);
   }
   hero(sprite: Phaser.GameObjects.Sprite, world: World, facing: Facing, moving: boolean, multiplier = 1) {

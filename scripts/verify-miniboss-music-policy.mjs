@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const root='art/generated/miniboss-music-policy-v1',sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const files=[...walk('src'),...walk('public')].sort(),changed=files.filter(p=>baseline[p]&&sha(p)!==baseline[p]);
+if(JSON.stringify(files)!==JSON.stringify(Object.keys(baseline).sort())||JSON.stringify(changed)!==JSON.stringify(['src/game/audio/AudioPresentation.ts']))throw Error(JSON.stringify({changed,inventory:files.length}));
+const report={baselineFiles:files.length,changed,added:[],unchanged:files.length-1,currentSHA256:Object.fromEntries(changed.map(p=>[p,sha(p)]))};
+writeFileSync(`${root}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({files:files.length,changed,unchanged:report.unchanged}));

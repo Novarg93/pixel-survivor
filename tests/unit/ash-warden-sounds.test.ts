@@ -11,7 +11,7 @@ import type {AudioBus,AssetId} from '../../src/game/audio/catalog';
 import {World} from '../../src/game/systems/World';
 import {freezeForUltimate} from '../../src/game/systems/UltimateFreeze';
 import {DEFAULT_SETTINGS} from '../../src/game/services/storage';
-import {arcaneShieldIntegration,frostNovaIntegration,wardenApprovedHash} from '../helpers/approvedWardenIntegration';
+import {visualCleanupIntegration,minibossAssetsIntegration,arcaneShieldIntegration,frostNovaIntegration,fireUltimateIntegration,frostUltimateIntegration,wardenApprovedHash} from '../helpers/approvedWardenIntegration';
 const root='art/generated/ash-warden-uploaded-sounds-v1';
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 class Backend implements AudioBackend{
@@ -34,7 +34,7 @@ async function setup(){
 }
 it('ships all five original boss WAVs byte-for-byte and preserves every Mage key/gain',()=>{
   const manifest=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8'))as{entries:{id:keyof typeof ASH_WARDEN_SAMPLES;source:string;file:string;sha256:string;analysis:{seconds:number;invalidSamples:number}}[]};
-  expect(manifest.entries).toHaveLength(5);expect(audioSampleIds).toHaveLength(16);expect(new Set(audioSampleIds).size).toBe(16);
+  expect(manifest.entries).toHaveLength(5);expect(audioSampleIds).toHaveLength(27);expect(new Set(audioSampleIds).size).toBe(27);
   for(const e of manifest.entries){expect(readFileSync(e.file).equals(readFileSync(e.source))).toBe(true);expect(sha(readFileSync(e.file))).toBe(e.sha256);expect(audioSampleKey(e.id)).toContain(e.sha256.slice(0,12));expect(e.analysis).toMatchObject({seconds:1,invalidSamples:0});}
   for(const id of mageSampleIds){expect(audioSampleKey(id)).toBe(mageSampleKey(id));expect(audioSampleGain(id)).toBe(mageSampleGain(id));}
   expect(audioSampleForEvent('armageddon.impact')).toBe('mage-meteor');expect(audioSampleForEvent('ultimate.lightning')).toBe('mage-ultimate-release');
@@ -73,6 +73,6 @@ it('limits runtime changes to the explicit user-authorized sound integration',()
   const proof=JSON.parse(readFileSync(`${root}/integration-verification.json`,'utf8'))as{changed:string[];added:string[];currentSHA256:Record<string,string>};
   const walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
   expect(proof.changed).toHaveLength(8);expect(proof.added).toHaveLength(7);
-  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added].sort());
+  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());
   for(const f of [...Object.keys(baseline),...proof.added])expect(sha(readFileSync(f)),f).toBe(wardenApprovedHash(f,proof.currentSHA256[f]??baseline[f]!));
 });

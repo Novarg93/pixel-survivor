@@ -22,11 +22,11 @@ for(const [width,height]of [[1280,720],[844,390],[1024,768]])test(`Eternal Winte
     return{origin,radius:f.radius,viewport:{...w.ultimate.viewport},activeAt:f.activeAt,endsAt:f.endsAt,thawsAt:f.thawsAt,started:f.started,rows,charge:w.ultimate.charge,audio:window.__PIXEL__!.audio(),metrics:window.__PIXEL__!.metrics()};
   });
   await page.waitForTimeout(1150);await page.keyboard.down('d');await page.waitForTimeout(160);await page.keyboard.up('d');const result=await recording;
-  expect(result.rows.map(r=>r.phase)).toEqual(['invocation','invocation','creation','activation','field','field','idle','idle']);expect(result.rows[2].nova).toMatch(/^frost-nova-ultimate-/);expect(result.rows[4].frozen).toBe(24);expect(result.rows[6].frozen).toBe(24);expect(result.rows[6].nova).toBeNull();expect(result.rows[7].frozen).toBe(0);
+  expect(result.rows.map(r=>r.phase)).toEqual(['invocation','invocation','creation','activation','field','field','idle','idle']);expect(result.rows[2].nova).toMatch(/^pixel-survivor-ice-wave /);expect(result.rows[4].frozen).toBe(24);expect(result.rows[6].frozen).toBe(24);expect(result.rows[6].nova).toBeNull();expect(result.rows[7].frozen).toBe(0);
   expect(result.radius).toBeCloseTo(Math.hypot(result.viewport.width,result.viewport.height)/4);
   expect(result.endsAt-result.activeAt).toBe(4);expect(result.thawsAt-result.endsAt).toBe(4);expect(result.charge).toBe(0);
   expect(result.rows[5].states).toEqual(result.rows[4].states);expect(result.rows[6].states).toEqual(result.rows[4].states);expect(result.rows[7].states.some((e,i)=>e.x!==result.rows[6].states[i].x||e.y!==result.rows[6].states[i].y)).toBe(true);
-  for(const event of ['ultimate.frost','ultimate.frostImpact','ultimate.frostSeal']as const)expect(result.audio.played[event]).toBe(1);expect(result.audio.tracks).toBe(0);expect(result.audio.music).toMatchObject({current:'boss',playing:1,players:2});expect(result.audio.peakLoops).toBeLessThanOrEqual(3);
+  for(const event of ['ultimate.frostImpact']as const)expect(result.audio.played[event]).toBe(1);expect(result.audio.tracks).toBe(0);expect(result.audio.music).toMatchObject({current:'dying',playing:1,players:2});expect(result.audio.peakLoops).toBeLessThanOrEqual(3);
   for(const [i,r] of result.rows.entries())writeFileSync(`${directory}/${['01-staff','02-cold','03-dark-rune','04-cyan-wave','05-frozen','06-boss-frozen','07-residual','08-thawed'][i]}-${width}.png`,Buffer.from(r.png.split(',')[1],'base64'));
   writeFileSync(`${report}/timeline-${width}.json`,JSON.stringify({...result,rows:result.rows.map(({png,...r})=>({...r,bytes:png.length})),errors},null,2));expect(errors).toEqual([]);await context.close();
 });

@@ -40,15 +40,11 @@ it('selects the approved HD source and preserves the boss-practice diameter at n
   const rects=Object.values(atlas.frames).map(f=>f.frame);
   for(const [i,a]of rects.entries())for(const b of rects.slice(i+1))expect(a.x+a.w<=b.x||b.x+b.w<=a.x||a.y+a.h<=b.y||b.y+b.h<=a.y).toBe(true);
 });
-it('anchors Ultimate Nova to the cast origin, pauses, finishes once and clears on death and reselection',()=>{
-  const w=new World(42,{spawnRate:0});w.experience.level=40;w.elapsed=900;w.ultimate.choose(w,'frost');w.ultimate.activate(w);
-  const f=w.ultimate.frost,before=JSON.stringify(w),first=frostUltimateNovaView(w,1)!;
-  expect(first).toMatchObject({frame:'frost-nova-ultimate-0',x:f.origin.x,y:f.origin.y,alpha:1});expect(JSON.stringify(w)).toBe(before);
-  w.player.x=800;w.player.y=-6000;
-  for(let i=0;i<48;i++){w.elapsed=f.started+i*.05+.001;const v=frostUltimateNovaView(w,.7)!;expect(v).toMatchObject({frame:`frost-nova-ultimate-${i}`,x:f.origin.x,y:f.origin.y,alpha:.7});expect(v.depth).toBeLessThan(w.player.y/10000);}
-  w.pause();const paused=frostUltimateNovaView(w,1);w.step(5);expect(frostUltimateNovaView(w,1)).toEqual(paused);
-  expect(frostUltimateNovaView(w,0)).toBeNull();w.elapsed=f.started+2.4;expect(frostUltimateNovaView(w,1)).toBeNull();
-  expect(f.view(w.elapsed).phase).toBe('field');w.elapsed=f.started+.3;w.status='over';expect(frostUltimateNovaView(w,1)).toBeNull();
-  w.status='menu';expect(frostUltimateNovaView(w,1)).toBeNull();w.status='playing';w.ultimate.selected='fire';expect(frostUltimateNovaView(w,1)).toBeNull();
-  w.ultimate.selected='frost';f.clear();expect(frostUltimateNovaView(w,1)).toBeNull();
+it('anchors the appearance pulse to cast origin, pauses and ends once without changing combat state',()=>{
+ const w=new World(42,{spawnRate:0});w.experience.level=40;w.elapsed=900;w.ultimate.choose(w,'frost');w.ultimate.activate(w);
+ const f=w.ultimate.frost;expect(frostUltimateNovaView(w,1)).toBeNull();
+ w.player.x=800;w.player.y=-6000;
+ for(let i=0;i<16;i++){w.elapsed=f.started+.45+i/16+.001;const before=JSON.stringify(w),v=frostUltimateNovaView(w,.7)!;expect(v).toMatchObject({frame:`pixel-survivor-ice-wave ${i}.png`,x:f.origin.x,y:f.origin.y,alpha:.7});expect(v.depth).toBeLessThan(w.player.y/10000);expect(JSON.stringify(w)).toBe(before);}
+ w.pause();const paused=frostUltimateNovaView(w,1);w.step(5);expect(frostUltimateNovaView(w,1)).toEqual(paused);expect(frostUltimateNovaView(w,0)).toBeNull();
+ w.elapsed=f.started+1.45;expect(frostUltimateNovaView(w,1)).toBeNull();w.status='over';expect(frostUltimateNovaView(w,1)).toBeNull();f.clear();expect(frostUltimateNovaView(w,1)).toBeNull();
 });

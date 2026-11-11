@@ -1,0 +1,29 @@
+[
+  {
+    "name": "static",
+    "file": "public/assets/audio/fire-ultimate-v1/static.wav",
+    "source": "art/main-hero-mage-v2/sounds/fire-ult/static.wav",
+    "sha256": "3d2de1144f232e3d933888dedfe03b289baa2fffbd29922374930bba05d58339",
+    "sourceSHA256": "3d2de1144f232e3d933888dedfe03b289baa2fffbd29922374930bba05d58339",
+    "seconds": 10.0,
+    "gain": 2,
+    "peak": 0.13946533203125,
+    "rms": 0.025623207304601808,
+    "trim": null
+  },
+  {
+    "name": "pulse",
+    "file": "public/assets/audio/fire-ultimate-v1/pulse.wav",
+    "source": "art/main-hero-mage-v2/sounds/fire-ult/pulse.wav",
+    "sha256": "ac25d3a8d9255ada29c0c404bce52de87402f48c7a09b4cc6a23e021425624ad",
+    "sourceSHA256": "21f1b8ada2ba371eab3c97dd534f252d7276358e6d1c902a58de3bca7b0aca2d",
+    "seconds": 1.8,
+    "gain": 1,
+    "peak": 0.697113037109375,
+    "rms": 0.15335977177809068,
+    "trim": [
+      3.55,
+      5.35
+    ]
+  }
+]

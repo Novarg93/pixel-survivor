@@ -2,24 +2,23 @@ import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 import { ultimateFrozen } from '../systems/UltimateFreeze';
 import { enemyVisual,visualDimensions } from './assetRegistry';
-import {MAGE_ABILITY_TEXTURE,mageAbilityPlaybackDuration,mageAbilityPlaybackFrame,frostDisplaySize} from './mageAbilityPack';
-import {groundImpactDepth} from './groundImpactDepth';
-export function frostUltimateNovaView(w:World,intensity:number){
-  const f=w.ultimate.frost,age=w.elapsed-f.started,alpha=Math.max(0,Math.min(1,intensity));
-  if(w.status==='menu'||w.status==='over'||w.ultimate.selected!=='frost'||f.view(w.elapsed).phase==='idle'||age<0||age>=mageAbilityPlaybackDuration('frost-nova-ultimate')-1e-7||alpha<=0)return null;
-  return {frame:mageAbilityPlaybackFrame('frost-nova-ultimate',age),x:f.origin.x,y:f.origin.y,size:frostDisplaySize('frost-nova-ultimate',f.radius),alpha,depth:groundImpactDepth(w)+.02};
-}
+import {frostUltimateNovaView,frostUltimateRuneView,frostUltimateFrame} from './frostUltimatePack';
+export {frostUltimateNovaView} from './frostUltimatePack';
 // Two bounded batches plus one authored atlas image; ice on at most156 actors.
 export class FrostUltimateArt {
   private ground:Phaser.GameObjects.Graphics;private ice:Phaser.GameObjects.Graphics;
-  private nova:Phaser.GameObjects.Image;
+  private nova:Phaser.GameObjects.Image;private rune:Phaser.GameObjects.Image;
+  private runeView:ReturnType<typeof frostUltimateRuneView>=null;
   private phase='idle';private frozen=0;private active:ReturnType<typeof frostUltimateNovaView>=null;
   constructor(scene:Phaser.Scene){
     this.ground=scene.add.graphics().setName('eternal-winter-seal').setDepth(-1.5);this.ice=scene.add.graphics().setName('ultimate-frozen-silhouettes').setDepth(4.8);
-    this.nova=scene.add.image(0,0,MAGE_ABILITY_TEXTURE,'frost-nova-ultimate-0').setName('frost-nova-ultimate').setVisible(false).setActive(false);
+    this.rune=scene.add.image(0,0,'ice-crystal',frostUltimateFrame('ice-crystal',0)).setName('frost-ultimate-rune').setVisible(false);
+    this.nova=scene.add.image(0,0,'ice-wave',frostUltimateFrame('ice-wave',0)).setName('frost-nova-ultimate').setVisible(false).setActive(false);
   }
   render(w:World,intensity:number,reduced:boolean){
     const g=this.ground.clear(),ice=this.ice.clear(),f=w.ultimate.frost,now=w.elapsed,view=f.view(now),strength=Math.max(0,Math.min(1,intensity));this.frozen=0;this.phase='idle';
+    this.runeView=frostUltimateRuneView(w,intensity,reduced);this.rune.setVisible(false);
+    if(this.runeView){const v=this.runeView;this.rune.setFrame(v.frame).setPosition(v.x,v.y).setDisplaySize(v.size,v.size).setDepth(v.depth).setAlpha(v.alpha).setVisible(true);}
     this.active=frostUltimateNovaView(w,intensity);this.nova.setVisible(false).setActive(false);
     if(this.active){const v=this.active;this.nova.setFrame(v.frame).setOrigin(.5).setTint(0xffffff).setBlendMode('NORMAL').setPosition(v.x,v.y).setDisplaySize(v.size,v.size).setDepth(v.depth).setAlpha(v.alpha).setVisible(true).setActive(true);}
     if(w.status==='over'||w.status==='menu')return;
@@ -42,6 +41,6 @@ export class FrostUltimateArt {
       ice.fillStyle(0xe1faff,.6*strength).fillRect(Math.round(x-rx*.5),Math.round(y-ry*.6),2,3).fillRect(Math.round(x+rx*.6),Math.round(y+ry*.5),2,2);
     }
   }
-  diagnostics(){return{phase:this.phase,frozen:this.frozen,batches:3,nova:this.active};}
-  destroy(){this.ground.destroy();this.ice.destroy();this.nova.destroy();this.active=null;}
+  diagnostics(){return{phase:this.phase,frozen:this.frozen,batches:4,nova:this.active,rune:this.runeView};}
+  destroy(){this.ground.destroy();this.ice.destroy();this.nova.destroy();this.rune.destroy();this.active=this.runeView=null;}
 }

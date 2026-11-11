@@ -1,4 +1,4 @@
-import {wardenIntegration,wardenApprovedHash,mageSfxIntegration,musicRuntimeIntegration,mageUploadedIntegration,wardenSoundsIntegration,arcaneShieldIntegration,frostNovaIntegration} from '../helpers/approvedWardenIntegration';
+import {visualCleanupIntegration,minibossAssetsIntegration,wardenIntegration,wardenApprovedHash,mageSfxIntegration,musicRuntimeIntegration,mageUploadedIntegration,wardenSoundsIntegration,arcaneShieldIntegration,frostNovaIntegration,fireUltimateIntegration,frostUltimateIntegration} from '../helpers/approvedWardenIntegration';
 import {it,expect} from 'vitest';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -10,7 +10,7 @@ const root='art/generated/ash-warden-north-meteor-review-v1',m=JSON.parse(readFi
 it('keeps the complete runtime inventory and all345 game files intact pending acceptance',()=>{
  expect(m.runtimeIntegration).toBe(true);expect(m.acceptedForIntegration).toBe(true);expect(m.protectedRuntimeFiles).toBe(345);
  const baseline=JSON.parse(readFileSync(root+'/source/runtime-baseline.json','utf8')) as Record<string,string>,walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
- expect(Object.keys(baseline)).toHaveLength(345);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...wardenIntegration.added,...mageSfxIntegration.added,...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added].sort());for(const[file,sha]of Object.entries(baseline))expect(hash(readFileSync(file)),file).toBe(wardenApprovedHash(file,sha));
+ expect(Object.keys(baseline)).toHaveLength(345);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...wardenIntegration.added,...mageSfxIntegration.added,...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());for(const[file,sha]of Object.entries(baseline))expect(hash(readFileSync(file)),file).toBe(wardenApprovedHash(file,sha));
  expect(JSON.parse(readFileSync(root+'/source/runtime-verification.json','utf8'))).toEqual({protectedFiles:345,changed:[],inventoryUnchanged:true,runtimeIntegration:false});
 });
 it('uses traceable original PixelLab cels and lossless native copies for every preview image',()=>{

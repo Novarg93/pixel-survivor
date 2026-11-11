@@ -35,12 +35,12 @@ it('routes streaming through music settings, keeps SFX independent and falls bac
   b.available=true;a.update('playing','grove',false,false,'dying');expect(b.track).toBe('dying');expect([...b.active.values()].filter(v=>v.loop)).toEqual([]);
   a.update('paused','grove');expect(b.track).toBeNull();expect(b.active.size).toBe(0);a.update('playing','grove');a.settings({...DEFAULT_SETTINGS,muted:true});expect(b.track).toBeNull();a.destroy();expect(b.active.size).toBe(0);
 });
-it('uses simulation time, nearby living encounters, a2s release hold and a clean new-run selection',async()=>{
-  const{backend:b,audio:a}=await setup(),w=new World(42,{spawnRate:0}),p=new AudioPresentation(a);p.observe(w);expect(b.track).toBe('normal');
-  for(const[time,track]of [[300,'dusk'],[600,'dying'],[900,'burning']]as const){w.elapsed=time;p.observe(w);expect(b.track).toBe(track);}
-  const boss=w.spawn('charger',{x:60,y:0})!;expect(musicBossActive(w)).toBe(true);p.observe(w);expect(b.track).toBe('boss');boss.x=5000;expect(musicBossActive(w)).toBe(false);
-  w.elapsed=901;p.observe(w);expect(b.track).toBe('boss');w.elapsed=903;p.observe(w);expect(b.track).toBe('burning');
-  w.practiceBoss='rootbound-guardian';expect(musicBossActive(w)).toBe(true);p.observe(w);expect(b.track).toBe('boss');p.observe(new World(42,{spawnRate:0}));expect(b.track).toBe('normal');a.destroy();
+it('keeps stage music for all mini-bosses and their practices, reserving the boss track for the final encounter',async()=>{
+ const{backend:b,audio:a}=await setup(),w=new World(42,{spawnRate:0}),p=new AudioPresentation(a);p.observe(w);expect(b.track).toBe('normal');
+ for(const[time,track]of [[300,'dusk'],[600,'dying'],[900,'burning']]as const){w.elapsed=time;p.observe(w);expect(b.track).toBe(track);}
+ for(const kind of ['charger','sorcerer','eclipse','guardian'] as const){const e=w.spawn(kind,{x:60,y:0})!;if(kind==='guardian')w.guardianSystem.awaken(w,e);expect(musicBossActive(w)).toBe(false);p.observe(w);expect(b.track).toBe('burning');}
+ for(const practice of ['briar-beast','rune-warden','astral-revenant','rootbound-guardian'] as const){w.practiceBoss=practice;expect(musicBossActive(w)).toBe(false);p.observe(w);expect(b.track).toBe('burning');}
+ w.finalEncounter.phase='phase1';expect(musicBossActive(w)).toBe(true);p.observe(w);expect(b.track).toBe('boss');w.finalEncounter.phase='defeated';w.elapsed+=1;p.observe(w);expect(b.track).toBe('boss');w.elapsed+=2;p.observe(w);expect(b.track).toBe('burning');p.observe(new World(42,{spawnRate:0}));expect(b.track).toBe('normal');a.destroy();
 });
 it('ships exactly the five accepted second takes unchanged, with bounded playback gains',()=>{
   const manifest=JSON.parse(readFileSync('art/generated/music-runtime-v1/manifest.json','utf8')) as{approval:{accepted:boolean;selectedVariant:number};entries:{id:MusicTrackId;variant:number;source:string;file:string;sha256:string;gain:number}[]};

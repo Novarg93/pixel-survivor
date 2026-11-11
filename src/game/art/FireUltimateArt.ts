@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import type { World } from '../systems/World';
-import { ULTIMATE } from '../config/ultimates';
+import { fireUltimateFrame } from './fireUltimatePack';
 import { FIRE_PRESENTATION } from '../ultimates/FireUltimate';
 import { enemyVisual, visualDimensions } from './assetRegistry';
 
@@ -12,6 +12,7 @@ export class FireUltimateArt {
   private front:Phaser.GameObjects.Graphics;
   private reactions:Phaser.GameObjects.Graphics;
   private light:Phaser.GameObjects.Image;
+  private mantle:Phaser.GameObjects.Image;private radius=164;
   private phase='idle';private burning=0;private bursts=0;private tongues=0;private heat=0;
   private ownsTexture=false;
   constructor(private scene:Phaser.Scene){
@@ -22,6 +23,7 @@ export class FireUltimateArt {
       for(const [stop,color]of [[0,'rgba(255,247,170,.95)'],[.12,'rgba(255,217,75,.8)'],[.32,'rgba(255,147,30,.55)'],[.58,'rgba(234,66,12,.22)'],[.83,'rgba(180,37,8,.055)'],[1,'rgba(160,25,0,0)']] as const)gradient.addColorStop(stop,color);
       ctx.fillStyle=gradient;ctx.fillRect(0,0,128,128);texture.refresh();this.ownsTexture=true;
     }
+    this.mantle=scene.add.image(0,0,'fire-mantle',fireUltimateFrame('fire-mantle',0)).setName('inferno-pixellab-mantle').setDepth(9.65).setOrigin(.5,98/128).setVisible(false);
     this.light=scene.add.image(0,0,GLOW).setName('inferno-ground-light').setDepth(-2).setBlendMode(Phaser.BlendModes.ADD).setVisible(false);
     this.ground=scene.add.graphics().setName('inferno-trail-heat').setDepth(-.7);
     this.back=scene.add.graphics().setName('inferno-back-flames').setDepth(9.65);
@@ -31,20 +33,15 @@ export class FireUltimateArt {
   }
   render(w:World,intensity:number,reducedMotion:boolean,reducedFlash:boolean){
     const ground=this.ground.clear(),back=this.back.clear(),front=this.front.clear(),reactions=this.reactions.clear();
-    this.light.setVisible(false);this.phase='idle';this.burning=this.bursts=this.tongues=this.heat=0;
+    this.light.setVisible(false);this.mantle.setVisible(false);this.phase='idle';this.burning=this.bursts=this.tongues=this.heat=0;
     if(w.ultimate.selected!=='fire'||w.status==='over'||w.status==='menu')return;
     const f=w.ultimate.fire,now=w.elapsed,view=f.view(now),strength=Math.max(0,Math.min(1,intensity)),energy=view.energy*strength;
     this.phase=view.phase;
     const time=reducedMotion?0:now,x=w.player.x,y=w.player.y,pulse=reducedMotion?1:1+.035*Math.sin(time*6),flare=view.ignition*(reducedFlash?.22:1);
     if(energy>0){
-      const r=ULTIMATE.fire.radius;
+      const r=this.radius=f.radius(now);
+      this.mantle.setFrame(fireUltimateFrame('fire-mantle',view.age,reducedMotion)).setPosition(x,y+8).setDisplaySize(66,66).setAlpha(energy*.85).setVisible(true);
       this.light.setPosition(x,y+5).setDisplaySize(r*2.65*pulse,r*1.95*pulse).setAlpha(energy*(.88+flare*.1)).setVisible(true);
-      // Billowing fire is concentrated on the body, never on the gameplay boundary.
-      for(let i=0;i<11;i++){
-        const offset=(i-5)*2.3,wave=Math.sin(time*8+i*2.1),height=22+(i%4)*3+wave*3+flare*10;
-        this.flame(back,x+offset,y+5+(i%3),height,energy*(.55+(i%3)*.1),time+i,5.5);
-        this.tongues++;
-      }
       for(let i=0;i<7;i++){
         const offset=(i-3)*2.4,height=9+(i%3)*2.5+Math.sin(time*10+i)*2+flare*3;
         this.flame(front,x+offset,y+6,height,energy*.86,time+i*1.7,4);
@@ -103,6 +100,6 @@ export class FireUltimateArt {
     g.fillStyle(0xffa92f,alpha*.84).fillTriangle(x-width*.6,y,x+bend*.7,y-h*.8,x+width*.6,y);
     g.fillStyle(0xffed9c,alpha*.8).fillTriangle(x-width*.28,y,x-bend*.3,y-h*.46,x+width*.28,y);
   }
-  diagnostics(){return{phase:this.phase,objects:5,batches:4,radius:ULTIMATE.fire.radius,glowWidth:this.light.displayWidth,glowHeight:this.light.displayHeight,glowAlpha:this.light.visible?this.light.alpha:0,bodyFlames:this.tongues,heatColumns:this.heat,burning:this.burning,bursts:this.bursts,ring:false};}
-  destroy(){this.light.destroy();this.ground.destroy();this.back.destroy();this.front.destroy();this.reactions.destroy();if(this.ownsTexture)this.scene.textures.remove(GLOW);}
+  diagnostics(){return{phase:this.phase,objects:6,batches:4,radius:this.radius,mantle:this.mantle.visible,perimeter:false,glowWidth:this.light.displayWidth,glowHeight:this.light.displayHeight,glowAlpha:this.light.visible?this.light.alpha:0,bodyFlames:this.tongues,heatColumns:this.heat,burning:this.burning,bursts:this.bursts,ring:false};}
+  destroy(){this.mantle.destroy();this.light.destroy();this.ground.destroy();this.back.destroy();this.front.destroy();this.reactions.destroy();if(this.ownsTexture)this.scene.textures.remove(GLOW);}
 }

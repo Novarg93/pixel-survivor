@@ -1,0 +1,42 @@
+{
+  "baselineFiles": 400,
+  "changed": [
+    "src/game/art/GameArt.ts",
+    "src/game/art/assetRegistry.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/catalog.ts",
+    "src/game/audio/samples.ts"
+  ],
+  "added": [
+    "public/assets/audio/miniboss-v1/mini-astral-cast.wav",
+    "public/assets/audio/miniboss-v1/mini-briar-charge.wav",
+    "public/assets/audio/miniboss-v1/mini-briar-melee.wav",
+    "public/assets/audio/miniboss-v1/mini-rune-cast.wav",
+    "public/assets/audio/miniboss-v1/mini-teleport.wav",
+    "public/assets/audio/miniboss-v1/mini-totem-cast.wav",
+    "public/assets/hd/rune-warden-v2/atlas.json",
+    "public/assets/hd/rune-warden-v2/atlas.png",
+    "src/game/art/runeWardenAccepted.ts",
+    "src/game/audio/MinibossAudio.ts",
+    "src/game/audio/minibossSamples.ts"
+  ],
+  "unchanged": 395,
+  "currentSHA256": {
+    "src/game/art/GameArt.ts": "856b3ca0b8bcd41d1992e6f5a257c00a41a4d9805e4445a7bc881e74f9e9e386",
+    "src/game/art/assetRegistry.ts": "28958c3732d0f9bdc59bfa2085d41e4a1673dbca565f74378f11fb44facf8a1d",
+    "src/game/audio/AudioPresentation.ts": "53eed66b8db38063252881724cc2db4da081c06f8314545b11344bbd16aa1c10",
+    "src/game/audio/catalog.ts": "9e137ba266aa1c7dfd64094ef686d6cea698f3dc8a52b28559bc21f716d38985",
+    "src/game/audio/samples.ts": "31774de0b4645d4f14a1d885910a6260192f09ea493fbff9f4c72b0ec2b72965",
+    "public/assets/audio/miniboss-v1/mini-astral-cast.wav": "45f9dca0f4bcb98279c90ce95179242c956b3b560e8e85f3b534fda32553fe23",
+    "public/assets/audio/miniboss-v1/mini-briar-charge.wav": "f20b85bb867c193eb2402dbbd91db8c1ba418b69dc0a8879b1049aa9b742c357",
+    "public/assets/audio/miniboss-v1/mini-briar-melee.wav": "6e1c12d16858484a2e7836ed307bfe3d6fd1e1afa6e5949cc0cc79bfd4b590d4",
+    "public/assets/audio/miniboss-v1/mini-rune-cast.wav": "3143f294be397219f0df726f54c040463dd4178dd5e6f8404cd5a19509e6326a",
+    "public/assets/audio/miniboss-v1/mini-teleport.wav": "788ca6ee859c5d3e171536f9983d31843f995d619c964a5e24002dc7770d1e10",
+    "public/assets/audio/miniboss-v1/mini-totem-cast.wav": "63488e6d7ae4186328c63e5f941c5b82a10b9d20710c6479de3e8fa5bda0771c",
+    "public/assets/hd/rune-warden-v2/atlas.json": "7ead0dd9f6f5e5be91513ce74744508a61fa872b34caca577e0874880b66aa4a",
+    "public/assets/hd/rune-warden-v2/atlas.png": "2b192ec3c6c7d9a0dfdd0aa77f1d2b5861d05f476fd6afac7ced7ea48dfa5ca4",
+    "src/game/art/runeWardenAccepted.ts": "bacaba7bb164c6e56657b9b4e4e77d168b7ab522dac245e2a099008a9d1f69e9",
+    "src/game/audio/MinibossAudio.ts": "eb4f201085cb143fc02b966260c9e415c247a4fd31f26a67127529d4ca09e30d",
+    "src/game/audio/minibossSamples.ts": "742d0204b0494ec17e98d4d9d43e2a58f967e721c0997c811a8062c2d052191c"
+  }
+}

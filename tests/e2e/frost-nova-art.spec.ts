@@ -35,13 +35,13 @@ for(const viewport of [{width:1280,height:720},{width:844,height:390},{width:390
     const f=w.ultimate.frost;return {started:f.started,radius:f.radius,origin:{...f.origin},hp:w.enemies[0]!.hp};
   });
   const ultimateFrames=[];
-  for(let i=0;i<48;i++){
-    await page.evaluate(({started,i})=>{const w=window.__PIXEL__!.world;w.elapsed=started+i*.05+.001;w.resume();w.ultimate.update(w);w.pause();},{started:ultimate.started,i});
-    await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().ultimate.frost.nova?.frame)).toBe(`frost-nova-ultimate-${i}`);
+  for(let i=0;i<16;i++){
+    await page.evaluate(({started,i})=>{const w=window.__PIXEL__!.world;w.elapsed=started+.45+i/16+.001;w.resume();w.ultimate.update(w);w.pause();},{started:ultimate.started,i});
+    await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.art().ultimate.frost.nova?.frame)).toBe(`pixel-survivor-ice-wave ${i}.png`);
     const art=await page.evaluate(()=>window.__PIXEL__!.art()),v=art.ultimate.frost.nova!;ultimateFrames.push(v);
-    expect(v).toMatchObject({x:ultimate.origin.x,y:ultimate.origin.y,alpha:.7});expect(v.size).toBe(ultimate.radius*2*150/146);
+    expect(v).toMatchObject({x:ultimate.origin.x,y:ultimate.origin.y,alpha:.7});expect(v.size).toBe(ultimate.radius*512/225);
     expect(v.depth).toBeLessThan(art.actors.find(a=>String(a.frame).startsWith('tank-'))!.depth);
-    if([8,18,24,32,42].includes(i))await page.locator('canvas').screenshot({path:`${dir}/ultimate-${i}.png`});
+    if([0,4,8,12,15].includes(i))await page.locator('canvas').screenshot({path:`${dir}/ultimate-${i}.png`});
   }
   const frozen=await page.evaluate(()=>({elapsed:window.__PIXEL__!.world.elapsed,art:window.__PIXEL__!.art().ultimate.frost}));
   await page.waitForTimeout(130);expect(await page.evaluate(()=>({elapsed:window.__PIXEL__!.world.elapsed,art:window.__PIXEL__!.art().ultimate.frost}))).toEqual(frozen);

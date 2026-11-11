@@ -14,6 +14,12 @@ export type PatchId = keyof typeof PATCHES;
 export type AssetId = PatchId | 'grove' | 'forest' | 'underscore';
 function cue(asset: PatchId, bus: 'ui' | 'sfx', priority: number, gap: number, gain = .55, group = asset) { return { asset, bus, priority, gap, gain, group }; }
 export const SOUND_CATALOG = {
+  'mini.runeCast':cue('shield','sfx',9,.1,.6),
+  'mini.astralCast':cue('shield','sfx',9,.1,.6),
+  'mini.teleport':cue('blink','sfx',10,.1,.6),
+  'mini.briarCharge':cue('threat','sfx',9,.1,.6),
+  'mini.briarMelee':cue('slam','sfx',9,.1,.6),
+  'mini.totemCast':cue('stone','sfx',9,.1,.6),
   'final.step':cue('slam','sfx',4,.4,.12),
   'final.stop':cue('slam','sfx',10,.3,.5),
   'final.cast':cue('shield','sfx',10,.4,.4),
@@ -54,6 +60,6 @@ export const SOUND_CATALOG = {
   'bladestorm.active': cue('blades', 'sfx', 3, .2, .4), 'ironSkin.trigger': cue('iron', 'sfx', 6, .2, .4),
 } as const;
 export type SoundEvent = keyof typeof SOUND_CATALOG;
-export const AUDIO_BUDGET = { voices: 12, sfx: 10, ui: 2, loops: 3, sampleRate: 22050 } as const;
+export const AUDIO_BUDGET = { voices: 12, sfx: 10, ui: 2, loops: 5, sampleRate: 22050 } as const;
 export const AUDIO_PROVENANCE = { origin: 'User-uploaded Mage and Ash Warden sounds, original procedural UI/fallback, retained ElevenLabs SFX and five approved music takes for Pixel Survivor.', usage: 'Mage uploads: art/main-hero-mage-v2/sounds; Ash Warden uploads: art/final-boss/sound. Source hashes and audits: art/generated/mage-uploaded-sounds-v1 and art/generated/ash-warden-uploaded-sounds-v1. Existing generation provenance remains archived; music variants are2. Runtime uses local files only.', authoring: 'src/game/audio/synthesis.ts + catalog.ts + samples.ts + musicTracks.ts', networkAssets: 0 } as const;
 export const AUDIO_ASSET_MANIFEST = [...Object.entries(PATCHES).map(([id, patch]) => ({ id, seconds: patch[0], channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural patch' })), ...(['grove', 'forest', 'underscore'] as const).map(id => ({ id, seconds: id === 'underscore' ? 16 : 8, channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural composition' }))];

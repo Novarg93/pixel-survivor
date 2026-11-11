@@ -3,7 +3,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {MAGE_UPLOADED_SAMPLES} from '../../src/game/audio/mageUploadedSamples';
 import {mageSampleForEvent,mageSampleIds,mageSampleKey,mageSampleUrl,mageSampleGain,type MageSampleId} from '../../src/game/audio/mageSamples';
-import {mageUploadedIntegration,wardenSoundsIntegration,wardenApprovedHash,arcaneShieldIntegration,frostNovaIntegration} from '../helpers/approvedWardenIntegration';
+import {visualCleanupIntegration,minibossAssetsIntegration,mageUploadedIntegration,wardenSoundsIntegration,wardenApprovedHash,arcaneShieldIntegration,frostNovaIntegration,fireUltimateIntegration,frostUltimateIntegration} from '../helpers/approvedWardenIntegration';
 const root='art/generated/mage-uploaded-sounds-v1';
 interface Entry{id: keyof typeof MAGE_UPLOADED_SAMPLES;folder:string;event:string;source:string;file:string;sha256:string;gain:number;analysis:{seconds:number;sampleRate:number;channels:number;peak:number;rms:number;invalidSamples:number}}
 const manifest=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8'))as{originalBytesPreserved:boolean;entries:Entry[]};
@@ -23,7 +23,7 @@ it('preserves music, gameplay and all other runtime files outside the exact4chan
   const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'))as Record<string,string>;
   const walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
   expect(Object.keys(baseline)).toHaveLength(370);expect(mageUploadedIntegration.changed).toEqual(['src/game/audio/PhaserAudioBackend.ts','src/game/audio/README.md','src/game/audio/catalog.ts','src/game/audio/mageSamples.ts']);expect(mageUploadedIntegration.added).toHaveLength(6);expect(mageUploadedIntegration.unchanged).toBe(366);
-  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added].sort());
+  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());
   for(const file of [...Object.keys(baseline),...mageUploadedIntegration.added])expect(sha(readFileSync(file)),file).toBe(wardenApprovedHash(file,mageUploadedIntegration.currentSHA256[file]??baseline[file]!));
 });
 it('replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged',()=>{
@@ -49,6 +49,6 @@ it('connects the supplied Frost Nova WAV and preserves every other runtime file'
   const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'))as Record<string,string>;
   const walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
   expect(frostNovaIntegration).toMatchObject({baselineFiles:384,unchanged:381,added:[m.file],changed:['src/game/audio/README.md','src/game/audio/mageSamples.ts','src/game/audio/mageUploadedSamples.ts']});
-  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),m.file].sort());
-  for(const[f,digest]of Object.entries(baseline))expect(sha(readFileSync(f)),f).toBe(frostNovaIntegration.currentSHA256[f]??digest);
+  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),m.file,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());
+  for(const[f,digest]of Object.entries(baseline))expect(sha(readFileSync(f)),f).toBe(wardenApprovedHash(f,frostNovaIntegration.currentSHA256[f]??digest));
 });

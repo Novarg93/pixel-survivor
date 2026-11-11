@@ -1,0 +1,44 @@
+{
+  "baselineFiles": 385,
+  "changed": [
+    "src/game/art/FireUltimateArt.ts",
+    "src/game/art/GameArt.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/PhaserAudioBackend.ts",
+    "src/game/audio/README.md",
+    "src/game/audio/samples.ts",
+    "src/game/config/ultimates.ts",
+    "src/game/ultimates/FireUltimate.ts",
+    "src/game/ultimates/UltimateSystem.ts"
+  ],
+  "added": [
+    "public/assets/audio/fire-ultimate-v1/pulse.wav",
+    "public/assets/audio/fire-ultimate-v1/static.wav",
+    "public/assets/hd/fire-ultimate-v1/fire-mantle.json",
+    "public/assets/hd/fire-ultimate-v1/fire-mantle.png",
+    "public/assets/hd/fire-ultimate-v1/fire-perimeter.json",
+    "public/assets/hd/fire-ultimate-v1/fire-perimeter.png",
+    "src/game/art/fireUltimatePack.ts",
+    "src/game/audio/fireUltimateSamples.ts"
+  ],
+  "unchanged": 376,
+  "currentSHA256": {
+    "src/game/art/FireUltimateArt.ts": "9941ac126ac598a1483a0caa49541b824e884284eb9410f71bbcf5accb568736",
+    "src/game/art/GameArt.ts": "559d746884b1c4f785314fd18d53f91b5a8d122eb2979b0236d5c2f52c837f0c",
+    "src/game/audio/AudioController.ts": "7d90d5309ab11e5f1635a24dc539d1dda0cb98c82f5d36a9ebe8e242d9e86401",
+    "src/game/audio/PhaserAudioBackend.ts": "d82bac334629e4aa33851cca196e61b3a48ccef3eda465dc90093556e92bd50c",
+    "src/game/audio/README.md": "9efd97ee250ad0ba5fc554d7bea599a37679c5d0d73f33ec7510a7b5afdbae17",
+    "src/game/audio/samples.ts": "7c5879d40efdfaa468b664e23d0b7b03fbf1d7f34f9f13437236ca74f3326749",
+    "src/game/config/ultimates.ts": "e9bae4e8e86816ad266ace5b5b45c0e6e33adbe5f33dd8385a0550c3734d4280",
+    "src/game/ultimates/FireUltimate.ts": "4f6b7dc22608a2375bf5492c1b4c8aae7089d83b07de7b513223ba1fb85a5418",
+    "src/game/ultimates/UltimateSystem.ts": "16f6038e7f88fc542fac255970b82f561e3010a4589986fe897a76bdb9f5220b",
+    "public/assets/audio/fire-ultimate-v1/pulse.wav": "ac25d3a8d9255ada29c0c404bce52de87402f48c7a09b4cc6a23e021425624ad",
+    "public/assets/audio/fire-ultimate-v1/static.wav": "3d2de1144f232e3d933888dedfe03b289baa2fffbd29922374930bba05d58339",
+    "public/assets/hd/fire-ultimate-v1/fire-mantle.json": "fa5b18197d7b8d0ca3c533f145358c5c4d226068e244dfcc5d500d7833ab0659",
+    "public/assets/hd/fire-ultimate-v1/fire-mantle.png": "daea5878f11ae356d0e39ad709773c15c2356b381f793f33b31fff6fe43504a2",
+    "public/assets/hd/fire-ultimate-v1/fire-perimeter.json": "1a394220cbaadc505f95222fc138a83896f888a1a1c67d7a09dd3068a0482e08",
+    "public/assets/hd/fire-ultimate-v1/fire-perimeter.png": "63159148b48a160bcf8f50bc685373adb91c10bd8a78e097bc7cf7c0ef431849",
+    "src/game/art/fireUltimatePack.ts": "df3fac0016205056fd0a44d4fe2ab15d3b6e15b95a93dd5ec8a128c4c2207f3b",
+    "src/game/audio/fireUltimateSamples.ts": "5c98f58d12075c69d12ca3525b4c7b55f92ad55bba65f74127e2052f8c13741d"
+  }
+}

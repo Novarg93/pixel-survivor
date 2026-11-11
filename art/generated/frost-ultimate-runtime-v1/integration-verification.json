@@ -1,0 +1,32 @@
+{
+  "baselineFiles": 393,
+  "changed": [
+    "src/game/art/FrostUltimateArt.ts",
+    "src/game/art/GameArt.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/samples.ts"
+  ],
+  "added": [
+    "public/assets/audio/frost-ultimate-v1/frost.wav",
+    "public/assets/hd/frost-ultimate-v1/ice-crystal.json",
+    "public/assets/hd/frost-ultimate-v1/ice-crystal.png",
+    "public/assets/hd/frost-ultimate-v1/ice-wave.json",
+    "public/assets/hd/frost-ultimate-v1/ice-wave.png",
+    "src/game/art/frostUltimatePack.ts",
+    "src/game/audio/frostUltimateSample.ts"
+  ],
+  "unchanged": 389,
+  "currentSHA256": {
+    "src/game/art/FrostUltimateArt.ts": "387a97905df9f6b07e2d75c9141763088b0bcfe83b6acab63ad54a1161c1b2d0",
+    "src/game/art/GameArt.ts": "2d8002aec937e57bfb48a7067266c7090ae1659b9bbe4dff3c375b67c45d2de3",
+    "src/game/audio/AudioPresentation.ts": "07c0488e9446b73fc3ad6f680b588cf430ec88db2af4e79544548dd3a4c72194",
+    "src/game/audio/samples.ts": "0a6a7b7911a708ed96117cb2acec48e44bcd37e1d3a5ecfd84f166f0422c112b",
+    "public/assets/audio/frost-ultimate-v1/frost.wav": "a2860496842bf68bc43b25cf885e95fcdd65153b6bae74daf82ddac365c24b65",
+    "public/assets/hd/frost-ultimate-v1/ice-crystal.json": "ead483317db0a13108a670d8123dee8c5b35f3a7d24ae6e378e28e6f3765c0df",
+    "public/assets/hd/frost-ultimate-v1/ice-crystal.png": "b54b9fbc0319f6f8d756132099ae1b531a99bb9ec4f2b074b9f319100b8afdd2",
+    "public/assets/hd/frost-ultimate-v1/ice-wave.json": "5cee7bdbb9566d4034deaf4d1de7d6f86d3bf0e0f2e8546af6f1a5a12d2b7abb",
+    "public/assets/hd/frost-ultimate-v1/ice-wave.png": "2187344514982b357015ebb2b56ef74764f00adeab841543164826df194c7306",
+    "src/game/art/frostUltimatePack.ts": "ba157aedaffc04a00ab57824c72d98b756e46c28f8560b17bd749b49988a91ba",
+    "src/game/audio/frostUltimateSample.ts": "a5662576fa5af0d9de114e48b43d3a55efe94393c4b7ce46eaa3f07416e840a4"
+  }
+}

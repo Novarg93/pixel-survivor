@@ -1,3 +1,312 @@
+# 2026-11-11 — публикация принятой игры без новых демо
+
+Пользователь отклонил маску тела: оставить огненную ульту ровно в текущем
+игровом виде и отправить принятую версию в main. Маска не подключается.
+Новые review HTML/viewer/preview scripts, непринятый Rune Idle и скриншоты
+исключаются из коммита; локальные файлы сохраняются. Исходники принятых
+игровых ассетов и JSON-доказательства нужны игровым тестам, это не демо.
+Отдельная копия содержимого коммита `.tmp/main-publish-check` проверена без
+новых локальных review-файлов: check146файлов/1104unit PASS, DEV22/22 (2мин),
+production13/13 (54.2с). Визуально просмотрены Fire1280, Rune cast1280,
+Frost rune844 на настоящем Canvas. Логи `.tmp/main-publish-clean-*.log`.
+Из смешанных review-тестов выделены отдельные runtime-проверки ambience и
+траекторий; сами новые demo-тесты не публикуются. Все415runtime-файлов
+сохранены побайтно. Подготовлено136файлов; новых HTML/viewer/screenshots0.
+Публикация — обычный fast-forward в origin/main, без force и deploy.
+
+# 2026-11-11 — восстановление после OOM: огонь поверх тела мага
+
+Продолжен сохранённый `fire-body-mask-review.html` и
+`art/fire-body-mask-review-v1/{viewer.ts,viewer.css,arena.ts,mask.ts,FireBodyMask.ts}`.
+Это отдельный review, как в найденном черновике: основная игра ещё без маски.
+Композитор читает текущий кадр настоящего мага, crop/flip/pivot и верх бега
+с кастом. Огонь закрывает корпус, исходные пиксели головы/рук остаются сверху.
+Два изображения, две192² CanvasTexture:294912байт базовых GPU-текстур;
+вспомогательные canvas и CPU-буферы считаются отдельно. Очистка на shutdown/pagehide.
+
+Исправлены ошибки стенда: выбранная стойка теперь успевает повернуться после
+жеста ульты; HUD/уведомления больше не закрывают голову; цель остаётся внутри
+логического viewport даже при увеличении, поэтому Meteor/Frost действительно
+кастуются. Тест бега с кастом ждёт обычный Fireball, а не жест ultimate-fire.
+Добавлены README и проверки восьми направлений, четырёх заклинаний, сцены
+после restartScene, паузы/шага/сравнения и исчезновения маски после ульты.
+
+Проверки: `npm run check` PASS —150файлов/1112unit, typecheck/lint/build;
+отдельный tsc review PASS; браузерные3/3 PASS (28.3с, один worker).
+SHA/inventory всех415файлов src/public совпадают с сохранённой baseline.
+PNG настоящего Canvas реально просмотрены: idle/original, moving Fireball,
+North, Meteor и мобильная страница390; `screenshots/fire-body-mask-review-v1/`.
+JSON: evidence.json, directions-spells.json. Защищённые пиксели∩огонь=0.
+Лог общей проверки `.tmp/fire-body-mask-check.log`; старый OOM-лог сохранён.
+
+Старый OOM произошёл в Node worker до выполнения первого теста (0мс).
+В новых прогонах не повторился; исправление системной причины OOM не заявляем.
+Блокеров нет. Следующий шаг — визуальная приёмка демки перед подключением
+композитора в обычную игру; новых done-маркеров нет.
+
+# 2026-11-11 — внешний огненный круг, траектории, Rune Idle и тихое присутствие
+
+По запросу пользователя из FireUltimateArt удалён внешний perimeter sprite;
+остались мантия, растущее свечение, реакция горящих врагов и прежние механики
+радиуса/лечения/поглощения/pulse. Diagnostics ring/perimeter=false,6объектов.
+Из GameScene убраны прицельная черта обычного caster и дорожка windup rusher.
+У мини-босса charger уже были только локальные искры; они сохранены.
+AI, длительности предупреждений, урон, коллизии и скорость не менялись.
+
+Новый Idle Rune Warden создан PixelLab animate_image по исходнику пользователя:
+job47952de9-92b8-4f94-8e03-c671f97ef85e, seed93271,2generations,9кадров128²,
+clipping0. Все исходники, SHA, receipt и atlas512×384 сохранены в
+art/rune-warden-idle-review-v1/. Стабильный pivot.5/.5, display57.6.
+Для плавного стыка используется последовательность0…8…1,2560мс,
+без ресэмплинга и правки AI-пикселей. Idle пока только для приёмки в демо
+по ранее заданному порядку пользователя; текущий каст/полёт остаются в игре.
+
+Дополнительно подключены исходные beast-walking.wav и mage_idle.wav:
+public/assets/audio/miniboss-ambience-v1/, MinibossAmbience.ts,
+minibossAmbienceSamples.ts, AudioPresentation/AudioController/samples/catalog.
+Шаги — только фактическое движение Beast в approach; Rune presence — пока
+маг жив и активен, с ослаблением по расстоянию и тихим дальним уровнем.
+Один loop на тип независимо от числа одинаковых боссов, gain≤.12/.14,
+SFX bus, плавные изменения. Freeze/pause/mute/death/removal/restart очищают.
+WAV сохранены byte-for-byte, без обрезки:1.28с/4.16с; измерения и SHA в
+art/generated/visual-cleanup-rune-idle-v1/ambience-manifest.json.
+Loop budget5 покрывает музыку/fallback, поле ульты и два тихих слоя;
+лимиты12voices/10SFX прежние. Сэмплов27, decoded<15MB.
+
+Scope411→415:405byte-equal,6presentation edits,4добавления; новый явный
+слой proof, предыдущие baseline не переписаны. check1110unit/149файлов PASS;
+целевые36dev browser-сценариев и production13/13 PASS. Проверки в TEST_REPORT.
+Canvas PNG фактически просмотрены: Fire1280/844, ordinary windup/release,
+Idle left/right и review390; screenshots/visual-cleanup-rune-idle-v1/.
+Демо: ./visual-cleanup-review.html (file:// launcher переводит на dev5173).
+Сравнение Idle с паузой/кадрами/стороной/масштабом и настоящая GameScene
+с четырьмя сценами: Fire / обычные враги / Beast walking / Rune presence.
+Следующий шаг — приёмка нового Idle и отдельное подключение его кадров.
+
+# 2026-11-11 — интеграция принятого Rune Warden v2 и звуков мини-боссов
+
+По прямой приёмке пользователя новый PixelLab cast13 и projectile flight9
+подключены в настоящую GameScene. `runeWardenAccepted.ts` выравнивает кадр9
+выпуска по существующему концу windup; кадры9–12 — восстановление. Тело192px
+сохраняет плотность исходной модели128px благодаря display86.4 и padding32.
+Обе стороны в atlas1536×1152,35кадров: точные пиксели + lossless mirror;
+полёт128×96 дополнен до128², поворот компенсирует исходную диагональ42°.
+Физические скорость/урон/радиусы/кулдауны и существующие Judgement/Blink прежние.
+
+Добавлены шесть оригинальных WAV в `public/assets/audio/miniboss-v1/`:
+Rune cast, общий Rune/Astral teleport, Astral cast, Beast charge/melee,
+Totem cast. WAV скопированы byte-for-byte, без обрезки, SHA и измеренная
+громкость в `art/generated/miniboss-assets-audio-v1/audio-manifest.json`.
+`MinibossAudio.ts` читает переходы существующего AI: cast windup/второй залп,
+фактический teleport, charge windup, melee с тем же интервалом1.2с, orb release.
+Без таймеров и изменений World/RNG; повторные кадры не повторяют звук.
+Старый charge не дублируется, Totem warning заменён звуком настоящего выпуска.
+Фазовая музыка мини-боссов сохранена. Общие mute/pause/teardown/voice budgets
+применяются ко всем новым записям; отсутствующий файл имеет procedural fallback.
+
+Скрипты `integrate-miniboss-audio-art.mjs`, `verify-miniboss-assets-audio.mjs`;
+scope baseline400 →411: только5 presentation-файлов изменены,395 byte-equal,
+11добавлений. Предыдущие proofs неизменны, добавлен явный слой приёмки.
+check1104unit/147файлов, целевые dev30сценариев и production13/13 PASS.
+Проверки и скриншоты — в TEST_REPORT и `screenshots/miniboss-assets-audio-v1/`.
+Демо настоящей игры: `./miniboss-review.html#bosses`, переключатель SFX.
+Блокеров нет; дальнейшая новая графика/баланс — по следующему запросу.
+
+# 2026-11-11 — музыка мини-боссов и новый Rune Warden PixelLab v2
+
+По прямому указанию пользователя boss music не включается при появлении/
+бое с мини-боссами: charger/sorcerer/eclipse/guardian и их practice сохраняют
+трек текущего этапа. Боссовая тема только у активного finalEncounter;
+прежний release-hold2с и pause/mute/teardown сохранены. Изменён только
+musicBossActive в src/game/audio/AudioPresentation.ts. Scope400:1changed,
+399unchanged,0added; art/generated/miniboss-music-policy-v1/. Старые proofs
+сохранены, добавлен следующий явный слой в approvedWardenIntegration.
+Hub больше не предлагает назначать boss music мини-боссам: кандидат для
+финального босса, отдельный draft-key; в arena — прослушивание темы этапа.
+
+Через PixelLab созданы13кадров нового каста по пользовательской модели
+и новый rune-lance +9кадров полёта. Генерации1+7+2=10 по receipts,
+jobs/seed/source URLs/SHA/bounds в art/rune-warden-cast-review-v2/manifest.json.
+Референс128px без уменьшения дополнен padding до192px; projectile128×96.
+Все22PNG исходника сохранены. Atlas768×1056,3244032RGBAbytes, clipping0,
+pixel-equality source→atlas проверена. Скрипт scripts/build-rune-cast-review-v2.mjs.
+Модель сохраняет личность/стойку; свободная рука копит энергию и выбрасывает
+её ладонью, затем возвращается. Снаряд — тонкое фиолетово-голубое копьё
+с пульсом и движением рун/хвоста. Звуки пользователь готовит сам: ни одного
+WAV/SFX/event не меняли. Новая графика пока review, старые игровые ассеты прежние.
+
+Демо rune-cast-review.html: текущий/новый рядом, каст/снаряд/каст+полёт,
+две стороны, пауза/step/scrub/скорость/масштаб. Время стенда100мс/кадр,
+выброс900мс (кадр10/13); это не изменение combat windup. Ссылка добавлена
+в miniboss-review.html. Атлас и кадры визуально просмотрены, Canvas cast9,
+projectile,cast-flight,mobile390 в screenshots/rune-cast-review-v2/.
+
+Проверки: check1096unit/146файлов, typecheck/lint/build PASS; оба review
+typecheck PASS. Browser6/6 (new Rune viewer + miniboss hub), music-runtime4/4:
+все кадры13+9, pause/scrub/direction/volley, mobile390, настоящий mini-boss
+encounter→dying и финальная практика→boss. Старый Frost timeline3/3 PASS
+с обновлённым ожиданием этапного трека. Новых done-маркеров нет.
+Блокеров нет. Следующий шаг — приёмка нового каста/снаряда и пользовательские SFX.
+
+# 2026-11-11 — демо музыки энкаунтеров и мини-боссов
+
+Создан miniboss-review.html с двумя разделами#music/#bosses.
+Файлы:art/miniboss-review-v1/{review.ts,review.css,bridge.ts,catalog.ts,
+music.json,tsconfig.json,README.md,runtime-baseline.json}.
+Музыка:20существующих MP3 —4этапа0–5/5–10/10–15/15–20+ по4версии и
+4версии темы босса. Версии2 отмечены как текущие, сверены с runtime
+побайтно. Один плеер, громкость, повтор, очередь, выбор кандидата для
+мини-боссов как локальный черновик, JSON экспорт. Музыка в игре прежняя.
+
+Способности/анимации:4текущих мини-босса — Терновый зверь, Хранитель рун,
+Хранитель затмения, Корневой хранитель. Реальные GameScene/World в iframe,
+сценарии existing practice запускают ходьбу, рывок, melee, rune judgement,
+volley, teleport, phaseII flames, slow/fast orbs, hit/death. Пауза, шаг1/30с,
+сторона, повтор. Маг не атакует/не получает урон, practice исключён из
+рекордов. Игровая музыка арены0, можно слушать кандидата поверх боя.
+Радар скрыт только в review. Старые моделиA/B доступны отдельной ссылкой;
+архивные beam/meteor Guardian не выданы за текущие способности.
+Раздельные Hurt/Death есть не у всех моделей, это прямо отмечено.
+
+Проверки: check PASS1095unit/145файлов, typecheck/lint/build. Отдельный
+typecheck viewer PASS. Новые E2E3/3 PASS:20MP3decode,4реальных playback,
+draft choice, charge/volley/flames/fast orb, pause/step, narrow390 без
+горизонтального overflow. Canvas1440 всех4боссов и music1280/390 сняты;
+музыкальный экран и Rune/Guardian просмотрены. Скриншоты:
+screenshots/miniboss-review-v1/. file→HTTP redirect проверен Chromium:
+miniboss-review.html → localhost5173,20кнопок, без CORS. HTTP200.
+
+400runtime-файлов src/public совпадают по SHA и inventory с началом этой
+задачи, scope-тест PASS. Новых генераций/платежей/commit/push/deploy нет.
+Блокеров нет. Следующий шаг — выбор музыкального кандидата пользователем
+и замечания к конкретным анимациям/способностям перед внедрением.
+
+# 2026-11-11 — ледяная ульта: руна, импульс появления и обрезанный Frost WAV
+
+Финальное принятие пользователем: «отлично, мне нравится, интегрируй в игру».
+Подтверждено подключение в обычной цепочке GameArt → UltimateArt →
+FrostUltimateArt и AudioPresentation; отдельного preview-флага нет.
+Повторная production build PASS, игровые Frost runtime E2E3/3 PASS,
+основная игра HTTP200. Дополнительного runtime-diff не потребовалось:
+выбранные ресурсы уже были подключены на предыдущем шаге. Вариант принят.
+
+Пользователь выбрал руну с импульсом появления и уточнил: начало звука
+обрезать, использовать только эффект. Подключены существующие оригинальные
+PixelLab ice-crystal и ice-wave из review: public/assets/hd/frost-ultimate-v1/.
+На ударе посохом (0.45с) импульс раскрывает растущую руну, через1с импульс
+исчезает, руна остаётся до конца поля с затуханием последних0.3с.
+Кастовая точка фиксирована; руна не следует за движущимся магом.
+Исходные холсты512×512; два переиспользуемых изображения, без таймеров,
+шейдеров и новых render textures. Обычный Frost Nova и Frost gameplay
+(урон180, boss cap8%, заморозка4с+остаток4с, радиус) не изменены.
+
+Оригинал art/main-hero-mage-v2/sounds/frost-ult/frost.wav сохранён по SHA.
+Удалены первые1.12с тихого вступления, оставлены1.76с самого эффекта до2.88с.
+Срез имеет fade4/24мс, sample gain0.8 (peak после gain0.7383). Новый WAV
+запускается один раз на ultimate.frostImpact, синтетические invocation/seal
+больше не накладываются. Тихий frostAir loop и прежние pause/mute/death/
+restart cleanup сохранены. scripts/prepare-frost-ultimate-audio.py воспроизводит
+срез; audio-manifest и scope393→400 в art/generated/frost-ultimate-runtime-v1/.
+Ровно4 runtime-файла изменены,7 добавлены,389 совпадают побайтно, включая
+огненные WAV/механику. Старые proofs не переписывались.
+
+Проверки: check PASS —1093unit/144файла, typecheck/lint/build.
+Отдельный review typecheck и git diff --check PASS. Новые Frost E2E3/3:
+1280×720/844×390, правильный размер частичной/полной руны, freeze/урон,
+один новый sample, pause, конец и missing-WAV fallback. Canvas обеих стадий
+просмотрен: screenshots/frost-ultimate-runtime-v1/appearance-1280.png,
+rune-1280.png, appearance-844.png, rune-844.png.
+Frost art/seal/review:11из12 первого прохода; stress844 попал на HMR при
+исправлении визуала и прервался, отдельный повтор1/1 PASS без ослабления
+проверок. Новый review combo проверен дополнительно на двух viewport.
+Регрессии Fire/Mage/boss audio13/13 PASS. Обновлённое combo-демо2/2 PASS.
+
+Визуальная QA выявила, что GeometryMask Phaser4 работает только в Canvas;
+маска полностью удалена. Появление реализовано ростом руны вместе с волной,
+проверено на реальном WebGL. Демо обновлено: лёд → «Руна + импульс»;
+«Включить звук» → «Повторить». Блокеров нет, новых done-маркеров нет.
+Следующий шаг — дальнейшие пользовательские задачи.
+
+# 2026-11-11 — принятый огонь внедрён: мантия, рост каждые2с, пользовательские звуки
+
+Пользователь принял первый вариант «мантия + растущая граница» и прямо
+разрешил внедрение. Подключены только два выбранных PixelLab-клипа:
+public/assets/hd/fire-ultimate-v1/; остальные варианты льда/огня остаются
+в review. Новые источники fireUltimatePack.ts и fireUltimateSamples.ts.
+FireUltimateArt использует переиспользуемые изображения мантии/границы,
+переднее пламя сохраняет видимость головы/рук. Рост видимого радиуса,
+AOE и swept-поглощения общий:164→180.4→196.8→213.2→229.6 на0/2/4/6/8с.
+На10с ульта заканчивается без дополнительного расширения/pulse.
+Лечение20% эффективного maxHP на секундах1…10, без переполнения,
+повторного тика или воскрешения. Урон/лимит боссам24% прежние.
+
+Два WAV из art/main-hero-mage-v2/sounds/fire-ult сохранены неизменными.
+static.wav скопирован побайтно и играет одним loop через существующий
+SFX-контроллер. В pulse.wav выделен transient3.55–5.35с (1.8с), добавлены
+краевые fade8/120мс. Pulse звучит на старте и на2/4/6/8с. Sample gain
+static2/pulse1, loop gain.55/cue.7; лимит3 loops прежний. Пауза/upgrade,
+mute/SFX0, смерть, конец и restart используют прежний cleanup. Исправлено
+применение sample gain при fade-in loop. Дополнительных таймеров нет.
+Скрипт воспроизведения среза scripts/prepare-fire-ultimate-audio.py;
+manifest/SHA и новый scope proof:art/generated/fire-ultimate-runtime-v1/.
+Guard385→393:9изменений/8добавлений/376побайтно неизменных файлов.
+Старые proofs сохранены; добавлен отдельный слой принятой интеграции.
+
+Проверки: npm run check PASS —1090unit/143файла, typecheck/lint/build.
+Отдельный typecheck review PASS; git diff --check PASS. Browser PASS23:
+10 fire-inferno/fire-radius/review,13 fire-runtime/Mage/boss audio.
+Проверены5pulse, единственный static loop, пауза/resume, HP, рост, expiry,
+missing-WAV fallback,10 scene restart, reduced-effects, gamepad, stress156.
+Новые main-game Canvas1280×720/844×390 просмотрены:
+screenshots/fire-ultimate-runtime-v1/. Stress desktop median16.7мс,
+p95 16.7мс,59.64FPS в коротком окне; не обещание для другого оборудования.
+Демо /ultimate-review.html обновлено на реальные принятые механики,
+есть «Включить звук»; после включения «Повторить» воспроизводит весь старт.
+
+Блокеров нет; commit/push/deploy не выполнялись. Следующий шаг — оценка
+громкости пользователем, затем выбор ледяного варианта отдельным указанием.
+
+# 2026-11-11 — отдельное демо ледяной и огненной ульт для приёмки
+
+Исправлен запуск двойным кликом: ultimate-review.html при file:// теперь
+перенаправляет на http://127.0.0.1:5173/ultimate-review.html до загрузки
+модуля. Сервер проверен: HTTP200. Реальный Chromium: file→HTTP переход,
+создан Canvas, HP появляется, pageerrors0. Сервер Vite работает на5173.
+
+По уточнению пользователя: сначала демо, внедрение после выбора. Игровые
+src/public полностью совпадают с HEAD (git diff --quiet PASS); старые
+скриншоты и пользовательские изменения не тронуты. Новых done-маркеров нет.
+
+Созданы через PixelLab VFX Workbench шесть оригинальных анимаций по16 кадров:
+ледяная печать, вихрь, расходящаяся волна; огненная мантия, кокон, граница
+из языков пламени. Областные холсты512×512, тело128×128. Все PNG/GIF/JSON
+локальны в art/ultimate-review-v1/assets, рецепты/экспорты в provenance.json,
+SHA в asset-hashes.json. Полупрозрачные оттенки волны/границы сохранены
+намеренно для свечения. Обрезанные кончики кокона исправлены до экспорта.
+
+Демо /ultimate-review.html (Vite dev): переключатели вариантов, повтор,
+пауза, скорость1/.5/.25, WASD/стрелки, получение40урона. Использует текущий
+атлас мага; мантия за телом и короткие языки спереди сохраняют видимость
+головы. Тестовые цели схематичны. Новая механика только в изолированной
+песочнице art/ultimate-review-v1/sandbox: радиус164→311.6 (+16.4 каждый
+целый секундный шаг), лечение20% эффективного maxHP на секундах1…10.
+Радиус урона и поглощения растёт вместе с видимой границей; boss cap24%
+сохранён. Подклассы/снимок ульт временные, без подключения к игровым сценам.
+
+Проверки: npm run check PASS —1086 тестов/142 файла, typecheck/lint/build.
+Отдельный typecheck песочницы через её tsconfig PASS. E2E демо2/2 PASS:
+1280×900 и844×600, шесть вариантов, пауза, HP, нет pageerror/overflow.
+Canvas screenshots в screenshots/ultimate-review-v1/; огонь и ледяная
+печать просмотрены. Тесты механики проверяют шаги лечения, повтор update,
+последний тик, сброс, рост реального урона/поглощения, boss cap и
+сохранность прежнего лечения в обычной игре. Scope guards PASS.
+
+Первый общий прогон обнаружил дополнительные staging-файлы в src/public;
+они перенесены целиком в art, без ослабления guard-тестов. Финальный общий
+прогон зелёный. Демо доступно через dev, production build его не включает.
+Блокеров нет. Следующий шаг — визуальная приёмка вариантов пользователем;
+только после неё перенос выбранных эффектов/механики в основную игру.
+
 # Полная проверка и новый Frost Nova — 2026-11-11
 
 Frost Nova подключён из art/main-hero-mage-v2/sounds/frost_nova/frost_nova.wav.

@@ -1,0 +1,14 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import console from 'node:console';
+const root='art/generated/frost-ultimate-runtime-v1',sha=b=>createHash('sha256').update(b).digest('hex');
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')),files=[...walk('src'),...walk('public')].sort();
+const changed=Object.keys(baseline).filter(p=>sha(readFileSync(p))!==baseline[p]).sort(),added=files.filter(p=>!(p in baseline));
+const expectedChanged=['src/game/art/FrostUltimateArt.ts','src/game/art/GameArt.ts','src/game/audio/AudioPresentation.ts','src/game/audio/samples.ts'].sort();
+const expectedAdded=['src/game/art/frostUltimatePack.ts','src/game/audio/frostUltimateSample.ts','public/assets/audio/frost-ultimate-v1/frost.wav',...['ice-crystal','ice-wave'].flatMap(n=>['png','json'].map(e=>`public/assets/hd/frost-ultimate-v1/${n}.${e}`))].sort();
+if(JSON.stringify(changed)!==JSON.stringify(expectedChanged)||JSON.stringify(added)!==JSON.stringify(expectedAdded))throw Error(JSON.stringify({changed,added}));
+const m=JSON.parse(readFileSync(`${root}/audio-manifest.json`,'utf8'));if(sha(readFileSync(m.source))!==m.sourceSHA256||sha(readFileSync(m.file))!==m.sha256)throw Error('Audio provenance changed');
+for(const n of ['ice-crystal','ice-wave'])for(const e of ['png','json'])if(sha(readFileSync(`public/assets/hd/frost-ultimate-v1/${n}.${e}`))!==sha(readFileSync(`art/ultimate-review-v1/assets/${n}.${e}`)))throw Error('Selected PixelLab art changed');
+const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,currentSHA256:Object.fromEntries([...changed,...added].map(p=>[p,sha(readFileSync(p))]))};
+writeFileSync(`${root}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({baseline:report.baselineFiles,changed:changed.length,added:added.length,unchanged:report.unchanged}));

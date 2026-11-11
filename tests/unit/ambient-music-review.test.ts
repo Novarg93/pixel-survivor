@@ -1,7 +1,7 @@
 import {it,expect} from 'vitest';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {wardenApprovedHash,musicRuntimeIntegration,mageUploadedIntegration,wardenSoundsIntegration,arcaneShieldIntegration,frostNovaIntegration} from '../helpers/approvedWardenIntegration';
+import {visualCleanupIntegration,minibossAssetsIntegration,wardenApprovedHash,musicRuntimeIntegration,mageUploadedIntegration,wardenSoundsIntegration,arcaneShieldIntegration,frostNovaIntegration,fireUltimateIntegration,frostUltimateIntegration} from '../helpers/approvedWardenIntegration';
 const root='art/generated/music-ambient-review-v1';
 interface Take {generationId:string;file:string;sha256:string;variant:number;bytes:number;analysis:{seconds:number;channels:number;sampleRate:number;rms:number;peak:number;invalidSamples:number;envelope:number[]}}
 interface Track {id:string;phase:string;stage:string;seconds:number;takes:Take[]}
@@ -25,6 +25,6 @@ it('decodes every original into finite non-silent minute-long audio and records 
 it('preserves the review proof and allows only the later explicit music integration',()=>{
   const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')) as Record<string,string>;
   const walk=(dir:string):string[]=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
-  expect(Object.keys(baseline)).toHaveLength(363);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added].sort());for(const[file,digest]of Object.entries(baseline))expect(sha(readFileSync(file)),file).toBe(wardenApprovedHash(file,digest));
+  expect(Object.keys(baseline)).toHaveLength(363);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());for(const[file,digest]of Object.entries(baseline))expect(sha(readFileSync(file)),file).toBe(wardenApprovedHash(file,digest));
   expect(JSON.parse(readFileSync(`${root}/runtime-verification.json`,'utf8'))).toEqual({protectedFiles:363,changed:[],inventoryUnchanged:true,runtimeIntegration:false});
 });

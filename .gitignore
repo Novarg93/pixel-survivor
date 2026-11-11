@@ -13,3 +13,6 @@ run-stages.ps1
 /docs/
 /art/
 /tests/
+
+# Local review launchers stay outside published game changes.
+/*-review.html

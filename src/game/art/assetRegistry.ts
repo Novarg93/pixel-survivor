@@ -1,3 +1,4 @@
+import {RUNE_ACCEPTED_TEXTURE} from './runeWardenAccepted';
 import { WARDEN,wardenTexture } from './ashWardenPack';
 import {FIREBALL_TEXTURE,FIREBALL_VFX,FIREBALL_MANIFEST} from './fireballPack';
 import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
@@ -6,7 +7,6 @@ import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
 import {ASTRAL_VFX} from '../config/astralRevenant';
 import {ASTRAL_PROJECTILE as AP,ASTRAL_PROJECTILE_TEXTURE} from './astralProjectilePixellabPack';
 import { ARCANE_VOLLEY } from '../config/runeWarden';
-import {RUNE_VFX,RUNE_VFX_TEXTURE} from './runeWardenVfxPack';
 import type { CharacterId } from '../config/characters';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
@@ -65,7 +65,7 @@ export const ASSET_REGISTRY = {
   guardian: { ...hd(128, 128, .525, 'actor', { idle: 13, walk: 0, hurt: 0, death: 0 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 128, height: 128 } },
   ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
   charger: { ...bossActor(), source:{kind:'atlas',key:BRIAR_BEAST_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: {...bossActor(ASTRAL_VFX.bodyScale),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},clips:{idle:1,walk:16,hurt:0,death:0}},
-  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_VFX_TEXTURE,width:RUNE_VFX.canvas,height:RUNE_VFX.canvas}, origin:{x:RUNE_VFX.clips.flight.pivot.x/RUNE_VFX.canvas,y:RUNE_VFX.clips.flight.pivot.y/RUNE_VFX.canvas} },
+  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_ACCEPTED_TEXTURE,width:128,height:128}, origin:{x:106/128,y:30/128} },
   astralVolley:{...hd(32,32,ASTRAL_VFX.projectileSize/32,'projectile'),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},origin:{x:ASTRAL_VFX.projectilePivot,y:.5}},
   eclipseVolley:{...hd(32,32,AP.clips.flight.size/32,'projectile'),source:{kind:'atlas',key:ASTRAL_PROJECTILE_TEXTURE,width:AP.canvas,height:AP.canvas},origin:{x:AP.clips.flight.pivot.x/AP.canvas,y:AP.clips.flight.pivot.y/AP.canvas}},
   fireball: { ...hd(FIREBALL_MANIFEST.canvas.width,FIREBALL_MANIFEST.canvas.height,FIREBALL_VFX.scale,'projectile'),source:{kind:'atlas',key:FIREBALL_TEXTURE,width:FIREBALL_MANIFEST.canvas.width,height:FIREBALL_MANIFEST.canvas.height},origin:{x:FIREBALL_VFX.originX,y:FIREBALL_VFX.originY},clips:{...single,idle:FIREBALL_MANIFEST.clips.idle.frameCount} }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },

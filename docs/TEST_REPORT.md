@@ -1,5 +1,189 @@
 # Pixel Survivor — итоговый отчёт проверки
 
+## 2026-11-11 — точный состав публикации main без новых демо
+
+- Проверена отдельная копия индекса Git в `.tmp/main-publish-check`, только
+  файлы будущего коммита и прежние файлы HEAD, без локальных новых review.
+- `npm run check`:146файлов/1104unit PASS, typecheck/lint/build PASS.
+  `.tmp/main-publish-clean-check.log`. Число меньше локального набора:
+  новые отдельные тесты демо исключены, игровые проверки включены.
+- DEV E2E22/22 PASS,2.0мин: fire-radius, fire-ultimate-runtime,
+  frost-ultimate-runtime, miniboss-assets-audio, visual-cleanup-runtime,
+  music-runtime и rune-warden;1worker, отдельный порт5175.
+- Production E2E13/13 PASS,54.2с, порт4175; без DEV harness.
+  Логи `.tmp/main-publish-clean-e2e.log` и `main-publish-clean-production.log`.
+- Canvas Fire1280, Rune cast1280 и Frost rune844 фактически просмотрены;
+  снимки в `.tmp/main-publish-check/screenshots/`, в коммит не включаются.
+- Дополнительный аудит проверяет136файлов индекса против проверенной копии,
+  отсутствие новых HTML/viewer/screenshots/body-mask и неизменность415runtime
+  файлов. `.tmp/main-publish-audit.json` сохраняет результат перед commit.
+- Vite предупреждает о размере прежних chunks. При DEV scan прежний архивный
+  meteor-viewer-before.html ссылается на viewer.mjs; это не вход игры,
+  pre-bundling догрузил vue/phaser, все22игровых сценария прошли. Новые демо
+  для обхода предупреждения не добавлялись, конфигурация Vite не менялась.
+- Исторический полный DEV E2E повторно не запускался. Локальные новые демо
+  сохранены на диске. Новых done-маркеров нет.
+
+# 2026-11-11 — Fire body mask: восстановление после OOM
+
+- `npm run check`: PASS,150unit-файлов/1112тестов, typecheck/lint/build.
+  `.tmp/fire-body-mask-check.log`. Прежнее предупреждение Vite о размере chunks.
+- `tsc --noEmit -p art/fire-body-mask-review-v1/tsconfig.json`: PASS.
+- `node scripts/e2e.mjs fire-body-mask-review.spec.ts --workers=1`:3/3 PASS,
+  28.3с. Стойка/бег с настоящим кастом, восемь направлений, четыре заклинания,
+  защита головы/рук, pause/step, переключение original/mask, окончание ульты,
+  настоящий restartScene без повторного commands listener, mobile390 без overflow.
+- Проверка SHA256/inventory415runtime-файлов: PASS, изменений/добавлений0.
+- Canvas PNG реально просмотрены: idle-mask, idle-original, moving-cast,
+  idle-north, moving-meteor; также mobile390. Каталог
+  `screenshots/fire-body-mask-review-v1/`, evidence.json/directions-spells.json.
+  Пересечение защищённых пикселей с огнём0;2image/294912базовыхGPUбайт.
+- Во время доработки расширенный тест выявил невидимую для наземных кастов
+  цель при zoom4. Исправлено размещение цели в демо, повтор3/3 без ослабления
+  ожидания настоящего castAbility. Typecheck выявил повторный доступ к optional
+  pose в тесте; исправлено локальным сохранением pose, общий check затем зелёный.
+- Старый `.tmp/fire-body-mask-e2e.log`: Node worker OOM до старта теста.
+  После восстановления OOM не воспроизведён. Системные настройки не менялись.
+  Full gameplay E2E и production E2E в этой задаче не запускались: runtime
+  неизменен, новая маска пока только в dev-review. Done-маркеры не создавались.
+
+## Упрощение эффектов / Rune Idle / тихие WAV — 2026-11-11
+
+- npm run check PASS: typecheck, lint,1110unit/149файлов, build.
+  Дополнительно отдельный tsc для нового review PASS; повторные20целевых unit PASS.
+- Scope411→415:405byte-equal,6presentation changes,4additions.
+  Все gameplay/AI/тайминги/радиусы/урон/коллизии/настройки сложности byte-equal.
+  Предыдущие SHA proofs сохранены; visualCleanupIntegration — новый явный слой.
+- Новый PixelLab Idle:9оригинальных128²PNG,2generations, seed93271,
+  job47952de9-92b8-4f94-8e03-c671f97ef85e. SHA source/atlas, pixel equality,
+  first frame=input, no clipping PASS. Atlas512×384,786432RGBAbytes.
+  Idle пока review-only, порядок0…8…1,160мс/кадр,2560мс/цикл.
+- Fire runtime3/3 + Mini-boss art/audio3/3 PASS; итоговый пакет cleanup,
+  demo, ambience, Fire inferno/radius13/13 PASS. Ещё17audio/music/Frost
+  regression PASS. Всего36разных dev browser-сценариев.
+- Production13/13 PASS. Оба новых WAV доступны в сборке;27samples,
+  decoded14.57–14.62MB в проверенных сценариях, лимит<15MB.
+- Оба новых файла byte-equal исходникам и SHA PASS. Beast1.28с,
+  Rune4.16с. Тихий playback gain.12/.14; normalization.664104/2.
+  Тест подтверждает единственный старт loop при повторных кадрах,
+  шаги только при фактической ходьбе, Rune near.14/far.049, остановку
+  при freeze/pause/mute/SFX0/death/removal/restart. В целевом audio
+  сценарии peak2loops при общем ceiling5. Voice ceiling12 сохранён.
+- Первый тест дальнего мага поставил его за реальный despawn-порог;
+  тест исправлен на900world внутри активной карты. Gameplay culling не менялся.
+  Первый release-тест смотрел после попадания снаряда; теперь фиксирует
+  реальный выпуск до столкновения. Проверки не отключались.
+- Canvas просмотрен: Fire без внешнего круга на1280×720/844×390,
+  ordinary windup/release без линий, Idle left/right и review390.
+  На390px модели вписаны в половины canvas без обрезки посоха;
+  iframe масштабирует настоящую960×540 GameScene и не ломает её viewport.
+  PNG/JSON: screenshots/visual-cleanup-rune-idle-v1/;
+  Fire screenshots: screenshots/fire-ultimate-runtime-v1/ и fire-radius/after/.
+- Демо: ./visual-cleanup-review.html, поддерживает file:// launcher → dev5173,
+  pause/step/scrub/side/zoom,4реальные сцены и переключатель звука.
+  Для прослушивания нужно включить «Звуки» и кликнуть по арене.
+- Открытых технических блокеров нет. Новый Idle ожидает приёмки пользователя;
+  визуальные удаления и оба тихих звука уже подключены к обычной GameScene.
+  Реальное устройство/длительный soak и субъективная комфортность громкости
+  этим пакетом не сертифицировались. Прежний Vite chunk-size warning сохранён.
+
+## Принятые Rune Warden v2 и звуки мини-боссов — 2026-11-11
+
+- npm run check: typecheck, lint, 1104 unit / 147 файлов, build PASS.
+  После актуализации production allowlist повторные typecheck/lint PASS.
+- Новые unit7: шесть исходных WAV SHA/byte equality, один общий teleport,
+  source pixels → runtime atlas (оба направления), кадры выпуска/полёта,
+  once-per-cast, Astral followup, Beast melee/charge, freeze/pause/cleanup,
+  Totem normal/final support release, отсутствие изменений World/RNG и scope.
+  Дополнительный audio test исключает двойной synthetic final.orb.
+- Целевые dev E2E: Rune4/4; sounds/ultimates19/19; итоговый demo/music/new
+  mini-boss10/10 (три новых пересекаются с19). Всего30 разных dev сценариев.
+  Реальное воспроизведение всех6 WAV, оба teleport, два выпуска Totem,
+  отсутствие frame spam, sample fallback, pause/mute/restart, bounded voices.
+- Production13/13 PASS на собственной preview-сессии. Изначально устаревший
+  точный allowlist не учитывал10 PNG/JSON огня/льда/Rune v2: добавлены все10,
+  проверка не ослаблена. Промежуточный повтор потерял preview-сервер;
+  повтор с самостоятельным сервером завершился exit0,13/13.
+- Все25 runtime samples загружаются; decoded audio12,535,568bytes,
+  budget<13MB. В целевом сценарии peak5voices при лимите12, fallback0.
+  Новые6 WAV совпадают с оригиналами и файлами dist по SHA256.
+- Canvas PNG просмотрены: cast/projectile1280×720 и844×390, Astral followup,
+  Totem release. screenshots/miniboss-assets-audio-v1/ содержит10 PNG
+  и2 evidence JSON. Перекрывающий pause dialog скрыт только в тестовом снимке.
+- Scope400 →411:395 неизменных,5 presentation edits,11 additions.
+  Единственные runtime edits: GameArt, assetRegistry, AudioPresentation,
+  catalog, samples. Gameplay/AI/баланс/урон/радиусы/скорости byte-equal.
+  Атлас35frames1536×1152 (7,077,888RGBAbytes), nearest filtering.
+- Локальное демо игры: ./miniboss-review.html#bosses; включить «Звуки боя»
+  и кликнуть арену для audio unlock. Сравнение прежней/принятой графики
+  сохранено в rune-cast-review.html, там намеренно нет аудио.
+- Блокеров нет. Сохраняется прежнее предупреждение Vite о размере JS chunks;
+  long soak/high DPR/реальное мобильное устройство этим пакетом не проверялись.
+
+## Mini-boss music policy / Rune Warden PixelLab v2 — 2026-11-11
+
+- check1096unit/146файлов PASS, typecheck/lint/build; оба review typecheck PASS.
+- Music runtime4/4 browser PASS; новый viewer + hub6/6 PASS.
+  Мини-боссы оставляют фазовый трек, финальная практика включаетboss.
+- Cast13/flight9: каждый исходник SHA/размеры, alpha bounds/clipping0,
+  source RGBA→untrimmed atlas pixel equality PASS. Atlas3.24MB decoded.
+- Canvas cast/projectile/volley/native/mobile390 просмотрены;
+  screenshots/rune-cast-review-v2/. Новый viewer без аудиоконтекста.
+- Scope400файлов:толькоAudioPresentation.ts изменён,399byte-equal,
+ 0runtime additions. Новая графика и её22исходника остаются в art review.
+  Старые WAV/MP3 и навыки/коллизии/скорости не изменены.
+
+## Демо энкаунтеров/мини-боссов — 2026-11-11
+
+- check PASS1095unit/145файлов, typecheck/lint/build; viewer typecheck PASS.
+- Новые E2E3/3 PASS:20MP3 локально decode59–61с,4boss playback, одинплеер,
+  draft choice, настоящие charge/rune volley/stageII flames/fast orb,
+  пауза и шаг, responsive390 без горизонтального overflow.
+- Все20исходников проверены SHA;4фоновых/боссовый variant2 byte-equal
+  текущим runtime MP3.400runtime-файлов и их список неизменны.
+- screenshots/miniboss-review-v1/: music1280/390,4босса1440;
+  Canvas Rune/Guardian и музыкальная страница просмотрены.
+- Прямое file:// открытие launcher проверено в Chromium: redirectHTTP200,
+ 20кнопок загружены, CORS-проблемы отсутствуют.
+- Просмотр боёв требует Vite dev; обычный production build не включает
+  эту отдельную DEV-песочницу. Новую музыку в игру ещё не переносили.
+
+## Ледяная руна + импульс — 2026-11-11
+
+- check1093unit/144файла, typecheck/lint/build PASS; review typecheck PASS.
+- Новые Frost runtime E2E3/3 PASS: partial→full rune на1280/844,
+  один sample, pause/expiry, прежний freeze/урон, missing-WAV fallback.
+- Регрессии Fire/Mage/boss audio13/13 PASS, новое combo-демо2/2 PASS.
+- Старые Frost art/seal/review11/12 PASS первого прохода; stress844
+  прерван HMR во время исправления, отдельный повтор1/1 PASS. Проверки
+  не ослаблялись; финальный stress844 median59.88FPS,p95frame16.8мс.
+- Полный ряд кадров обычного Frost Nova и16кадров нового импульса
+  проверен на1280×720,844×390,390×844;10рестартов сцены и156actor stress.
+- Canvas появления/полной руны просмотрены; GeometryMask, не работающий
+  в WebGL Phaser4, удалён. Поле раскрывается ростом изображения с импульсом.
+- Новый звук1.76с из1.12–2.88с исходника. SHA оригинала сохранён;
+  воспроизводимый срез и manifest в scripts/prepare-frost-ultimate-audio.py
+  и art/generated/frost-ultimate-runtime-v1/. Scope393→400 PASS:
+ 4changed/7added/389unchanged. Fire-ассеты и gameplay побайтно прежние.
+
+## Принятая огненная ульта — 2026-11-11
+
+- check PASS:1090unit/143файла, typecheck/lint/production build.
+-23 browser PASS: fire-inferno/fire-radius/review10 и fire-runtime/Mage/
+  boss-audio13. Проверены0/2/4/6/8pulse, единичный static loop, HP20%/с,
+  общий растущий радиус, pause/resume/expiry, fallback,10рестартов,
+  reduced-effects/gamepad и156actor stress. Лимиты3loops/12voices сохранены.
+- Canvas1280×720 и844×390 просмотрены; пути
+  screenshots/fire-ultimate-runtime-v1/mantle-1280.png и expanded-844.png.
+- Scope385→393:9changed/8added/376unchanged. PNG/JSON выбранных двух
+  PixelLab-клипов побайтно совпадают с review; static с оригиналом.
+  Pulse1.8с из3.55–5.35с, fade8/120мс; источник не изменён.
+- Обе новые аудиодорожки реально загружаются/декодируются/запускаются
+  в браузере; missing-WAV даёт немедленный synthesis fallback без pageerrors.
+  Оценка художественной громкости остаётся за пользователем.
+- Production build не включает review-сцену; демо доступно через Vite dev.
+  Отдельный typecheck review и git diff --check PASS.
+
 ## Полная проверка и пользовательский Frost Nova — 2026-11-11
 
 - check PASS:1084 unit /141 файлов, typecheck/lint/build.
