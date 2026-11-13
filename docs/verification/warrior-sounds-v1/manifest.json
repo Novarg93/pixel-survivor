@@ -1,0 +1,113 @@
+{
+  "origin": "User supplied; integration explicitly requested 2026-11-13. Originals preserved byte-for-byte. No generation.",
+  "entries": [
+    {
+      "id": "warrior-banner",
+      "source": "art/warrior/sounds/banner.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/banner.wav",
+      "sha256": "8ed5f851c8327582c209305c32b30476fdc76515902f41191ed1ebe90d3086a6",
+      "seconds": 10.16,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.9578857421875,
+      "rms": 0.1338225863947732,
+      "gain": 0.835173
+    },
+    {
+      "id": "warrior-charge",
+      "source": "art/warrior/sounds/charge.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/charge.wav",
+      "sha256": "a934f47b9edab575dec34981b92ad4b22c26de70570f6842f7ed1755769a2170",
+      "seconds": 0.6865,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.89984130859375,
+      "rms": 0.1375078456975081,
+      "gain": 0.889046
+    },
+    {
+      "id": "warrior-cleave",
+      "source": "art/warrior/sounds/cleave.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/cleave.wav",
+      "sha256": "2af2eeebfa2430b85ca683dc4cbe70b90e21ffcd78713a512c880181e8da3da4",
+      "seconds": 0.6065,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.964599609375,
+      "rms": 0.09978801500718429,
+      "gain": 0.82936
+    },
+    {
+      "id": "warrior-shield_block",
+      "source": "art/warrior/sounds/shield_block.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/shield_block.wav",
+      "sha256": "66e2a4499dd93947c93ee5829b23206cb64b35dc090c19409dfea844581c8314",
+      "seconds": 0.8865,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.361724853515625,
+      "rms": 0.050258055391239655,
+      "gain": 1
+    },
+    {
+      "id": "warrior-spear_throw",
+      "source": "art/warrior/sounds/spear_throw.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/spear_throw.wav",
+      "sha256": "62424cb796f9955e3c876c1c42b7e6fdb6214eb05ffeb9a668f7c6c9962934c2",
+      "seconds": 0.6065,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.86676025390625,
+      "rms": 0.10625776399300901,
+      "gain": 0.922977
+    },
+    {
+      "id": "warrior-spear_ultimate",
+      "source": "art/warrior/sounds/spear_ultimate.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/spear_ultimate.wav",
+      "sha256": "ee95e6f75addbc837ce1583c708dfd5b970095a3da934bfde9a638ddc157fd31",
+      "seconds": 0.8865,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.676666259765625,
+      "rms": 0.1259215705238298,
+      "gain": 1
+    },
+    {
+      "id": "warrior-stomp",
+      "source": "art/warrior/sounds/stomp.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/stomp.wav",
+      "sha256": "b23416e66581cc3903ba9f20a6fd46a08630ce1cd548fdfffb4046716cacabe3",
+      "seconds": 0.6065,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.999969482421875,
+      "rms": 0.18499723303056334,
+      "gain": 0.800024
+    },
+    {
+      "id": "warrior-ultimate_stomp",
+      "source": "art/warrior/sounds/ultimate_stomp.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/ultimate_stomp.wav",
+      "sha256": "e86b672e1a417811d48b045d90348514c40e6071e316c716e9d100833f139692",
+      "seconds": 10.16,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.911895751953125,
+      "rms": 0.10009288566194707,
+      "gain": 0.877293
+    },
+    {
+      "id": "warrior-whirlwind",
+      "source": "art/warrior/sounds/whirlwind.wav",
+      "file": "public/assets/audio/warrior-uploaded-v1/whirlwind.wav",
+      "sha256": "04dbd379725cf5882397b95beea6d60aa52c95e4b44be8010f4ee20eff8ee4fa",
+      "seconds": 0.8865,
+      "channels": 2,
+      "sampleRate": 48000,
+      "peak": 0.859283447265625,
+      "rms": 0.09692336854950462,
+      "gain": 0.931008
+    }
+  ]
+}

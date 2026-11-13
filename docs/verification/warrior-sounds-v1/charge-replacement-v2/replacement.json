@@ -1,0 +1,21 @@
+{
+  "reason": "Explicit user request to replace Charge with updated art/warrior/sounds/charge.wav",
+  "entry": {
+    "id": "warrior-charge",
+    "source": "art/warrior/sounds/charge.wav",
+    "file": "public/assets/audio/warrior-uploaded-v1/charge.wav",
+    "sha256": "a934f47b9edab575dec34981b92ad4b22c26de70570f6842f7ed1755769a2170",
+    "seconds": 0.6865,
+    "channels": 2,
+    "sampleRate": 48000,
+    "peak": 0.89984130859375,
+    "rms": 0.1375078456975081,
+    "gain": 0.889046
+  },
+  "changed": [
+    "src/game/audio/samples.ts",
+    "public/assets/audio/warrior-uploaded-v1/charge.wav"
+  ],
+  "previousManifest": "previous-manifest.json",
+  "previousProof": "previous-integration-verification.json"
+}

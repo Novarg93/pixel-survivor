@@ -1,0 +1,1114 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "gameplay-guardian.spec.ts",
+      "gameplay-stress.spec.ts",
+      "audio.spec.ts",
+      "endgame.spec.ts",
+      "--grep-invert",
+      "Mage89",
+      "--workers=4",
+      "--reporter=list,json",
+      "--output=.tmp/enrage2/target"
+    ],
+    "configFile": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\playwright.config.ts",
+    "rootDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Novarg/Desktop/PixelSurvivor/.tmp/enrage2/target",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "channel": "chromium",
+          "baseURL": "http://127.0.0.1:5241",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audio.spec.ts",
+      "file": "audio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "audio gesture, persisted buses, blur and10scene restarts at1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:14.642Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-860d67c2c1f173b026f8",
+          "file": "audio.spec.ts",
+          "line": 6,
+          "column": 34
+        },
+        {
+          "title": "audio gesture, persisted buses, blur and10scene restarts at390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8091,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:26.149Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-060619f6cace20d574e7",
+          "file": "audio.spec.ts",
+          "line": 6,
+          "column": 34
+        },
+        {
+          "title": "audio cues and150+3+3 voice budget Mage/1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3900,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                      "column": 95,
+                      "line": 77
+                    },
+                    "snippet": "  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                        "column": 95,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:34.249Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target\\audio-audio-cues-and150-3-3-voice-budget-Mage-1280\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                    "column": 95,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-7513d4d5708a80c6d883",
+          "file": "audio.spec.ts",
+          "line": 49,
+          "column": 74
+        },
+        {
+          "title": "audio cues and150+3+3 voice budget Mage/390",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4021,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                      "column": 95,
+                      "line": 77
+                    },
+                    "snippet": "  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                        "column": 95,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:38.761Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target\\audio-audio-cues-and150-3-3-voice-budget-Mage-390\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                    "column": 95,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-3557804071d906a24bf3",
+          "file": "audio.spec.ts",
+          "line": 49,
+          "column": 74
+        },
+        {
+          "title": "audio cues and150+3+3 voice budget Warrior/1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4222,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                      "column": 95,
+                      "line": 77
+                    },
+                    "snippet": "  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                        "column": 95,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:43.577Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target\\audio-audio-cues-and150-3-3-voice-budget-Warrior-1280\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                    "column": 95,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-cb04b263a4c140902ff8",
+          "file": "audio.spec.ts",
+          "line": 49,
+          "column": 74
+        },
+        {
+          "title": "audio cues and150+3+3 voice budget Warrior/390",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4006,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                      "column": 95,
+                      "line": 77
+                    },
+                    "snippet": "  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                        "column": 95,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  75 |   for (let i = 0; i < 12; i++) { const key = ['d','s','a','w'][i % 4]; await page.keyboard.down(key); await page.keyboard.press('Space'); await page.waitForTimeout(1000); await page.keyboard.up(key);\n  76 |     const sample = await page.evaluate(() => ({ ...window.__PIXEL__!.metrics(), audio: window.__PIXEL__!.audio() }));\n> 77 |     expect(sample.enemies).toBe(150); expect(sample.bosses).toBe(3); expect(sample.guardians).toBe(3); expect(sample.audio.voices).toBeLessThanOrEqual(12); expect(sample.audio.sources - sample.audio.loops).toBeLessThanOrEqual(12); expect(sample.audio.loops).toBeLessThanOrEqual(3); expect(sample.audio.nodes).toBeLessThanOrEqual(37); expect(sample.audio.decodedBytes).toBeLessThan(4e6); samples.push(sample);\n     |                                                                                               ^\n  78 |   }\n  79 |   const audio = await page.evaluate(() => window.__PIXEL__!.audio());\n  80 |   const events = hero === 'Mage' ? ['fireball.cast','fireball.impact','frostNova.cast','lightning.cast','armageddon.impact','arcaneShield.trigger','player.blink'] : ['cleave.swing','cleave.impact','whirlwind.active','groundSlam.impact','bladestorm.active','ironSkin.trigger','player.dash'];\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts:77:95"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:48.622Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target\\audio-audio-cues-and150-3-3-voice-budget-Warrior-390\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\audio.spec.ts",
+                    "column": 95,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-6e3c15e52eae53b0e607",
+          "file": "audio.spec.ts",
+          "line": 49,
+          "column": 74
+        },
+        {
+          "title": "unsupported Web Audio remains playable without output or JS errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1081,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:53.415Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-6bd7ebbd4bc7e16695d3",
+          "file": "audio.spec.ts",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "unavailable PCM buffer fails once per asset and does not accumulate sources",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1348,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:54.706Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-f0770e9999ad307bc7d4",
+          "file": "audio.spec.ts",
+          "line": 103,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "endgame.spec.ts",
+      "file": "endgame.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "early active Guardian and PhaseII3 bosses, scaled orbs and pause 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 35000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 7683,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"b\": 0,\u001b[39m\n\u001b[32m-   \"g\": 0,\u001b[39m\n\u001b[31m+   \"b\": 3,\u001b[39m\n\u001b[31m+   \"g\": 7,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"b\": 0,\u001b[39m\n\u001b[32m-   \"g\": 0,\u001b[39m\n\u001b[31m+   \"b\": 3,\u001b[39m\n\u001b[31m+   \"g\": 7,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\endgame.spec.ts:8:796",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\endgame.spec.ts",
+                      "column": 796,
+                      "line": 8
+                    },
+                    "snippet": "   6 |   const data=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.guardianSystem.dismiss(w);for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:100,y:0})!;w.guardianSystem.dismiss(w,e.id);}w.elapsed=1080;w.encounterDirector.nextAt=1080;w.encounterDirector.update(w);for(const e of w.enemies)e.hp=e.maxHp=1e6;return{bosses:w.bosses.map(e=>({kind:e.kind,late:e.boss!.late})),guardians:w.guardians.map(g=>g.guardianProfile)};});expect(data.bosses).toHaveLength(3);expect(data.guardians.map(g=>g!.factor)).toEqual([1.4,1.5,1.6]);\n   7 |   await page.waitForFunction(()=>window.__PIXEL__!.world.projectiles.some(p=>p.homing));await page.screenshot({path:`screenshots/enrage2/phase2-orbs-${width}.png`});await page.waitForFunction(()=>window.__PIXEL__!.world.bosses.some(e=>e.boss?.magic?.phase));await page.screenshot({path:`screenshots/enrage2/phase2-teleport-${width}.png`});\n>  8 |   const pause=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.pause();return JSON.stringify({t:w.elapsed,p:w.projectiles,b:w.bosses,g:w.guardianSystem.snapshot()});});await page.waitForTimeout(150);expect(await page.evaluate(()=>{const w=window.__PIXEL__!.world;return JSON.stringify({t:w.elapsed,p:w.projectiles,b:w.bosses,g:w.guardianSystem.snapshot()});})).toBe(pause);await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.resume();w.player.invulnerableUntil=0;w.damagePlayer(1e9);});expect(await page.evaluate(()=>window.__PIXEL__!.world.projectiles)).toEqual([]);await page.evaluate(()=>window.__PIXEL__!.restartScene());expect(await page.evaluate(()=>({b:window.__PIXEL__!.world.encounterDirector.endgameSpawns,g:window.__PIXEL__!.world.guardianSystem.successfulSpawns}))).toEqual({b:0,g:0});\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n   9 | });\n  10 | for(const width of [1280,390])for(const mode of ['afk','move','blink'] as const)test(`Mage89 actual18min ${mode} ${width}`,async({page})=>{\n  11 |   test.setTimeout(85000);await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();const h=await page.evaluateHandle(async mode=>{const path='/tests/helpers/endgame.ts',{setupEndgameLive}=await import(path);const w=window.__PIXEL__!.world;return setupEndgameLive(w,mode,w.width,w.height);},mode);let captured=false;for(let i=0;i<75;i++){await page.waitForTimeout(1000);const r=await h.evaluate(x=>x);if(!captured&&r.seconds>32){mkdirSync('screenshots/enrage2',{recursive:true});await page.screenshot({path:`screenshots/enrage2/Mage89-${mode}-${width}.png`});captured=true;}if(r.status==='over'||r.seconds>=60)break;}const r=await h.evaluate(x=>x);expect(r.invalidInvulnerability).toBe(false);expect(r.peakRegular).toBeLessThanOrEqual(150);expect(r.peakBosses).toBeLessThanOrEqual(3);expect(r.peakGuardians).toBeLessThanOrEqual(3);if(mode==='afk'){expect(r.damage).toBeGreaterThan(0);expect(r.blinks).toBe(0);}else{expect(r.seconds).toBeGreaterThanOrEqual(60);expect(r.hp).toBeGreaterThan(0);if(mode==='blink')expect(r.blinks).toBeGreaterThan(0);}writeFileSync(`screenshots/enrage2/Mage89-${mode}-${width}.json`,JSON.stringify(r,null,2));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\endgame.spec.ts",
+                        "column": 796,
+                        "line": 8
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"b\": 0,\u001b[39m\n\u001b[32m-   \"g\": 0,\u001b[39m\n\u001b[31m+   \"b\": 3,\u001b[39m\n\u001b[31m+   \"g\": 7,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n   6 |   const data=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.guardianSystem.dismiss(w);for(let i=0;i<3;i++){const e=w.spawn('guardian',{x:100,y:0})!;w.guardianSystem.dismiss(w,e.id);}w.elapsed=1080;w.encounterDirector.nextAt=1080;w.encounterDirector.update(w);for(const e of w.enemies)e.hp=e.maxHp=1e6;return{bosses:w.bosses.map(e=>({kind:e.kind,late:e.boss!.late})),guardians:w.guardians.map(g=>g.guardianProfile)};});expect(data.bosses).toHaveLength(3);expect(data.guardians.map(g=>g!.factor)).toEqual([1.4,1.5,1.6]);\n   7 |   await page.waitForFunction(()=>window.__PIXEL__!.world.projectiles.some(p=>p.homing));await page.screenshot({path:`screenshots/enrage2/phase2-orbs-${width}.png`});await page.waitForFunction(()=>window.__PIXEL__!.world.bosses.some(e=>e.boss?.magic?.phase));await page.screenshot({path:`screenshots/enrage2/phase2-teleport-${width}.png`});\n>  8 |   const pause=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.pause();return JSON.stringify({t:w.elapsed,p:w.projectiles,b:w.bosses,g:w.guardianSystem.snapshot()});});await page.waitForTimeout(150);expect(await page.evaluate(()=>{const w=window.__PIXEL__!.world;return JSON.stringify({t:w.elapsed,p:w.projectiles,b:w.bosses,g:w.guardianSystem.snapshot()});})).toBe(pause);await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.resume();w.player.invulnerableUntil=0;w.damagePlayer(1e9);});expect(await page.evaluate(()=>window.__PIXEL__!.world.projectiles)).toEqual([]);await page.evaluate(()=>window.__PIXEL__!.restartScene());expect(await page.evaluate(()=>({b:window.__PIXEL__!.world.encounterDirector.endgameSpawns,g:window.__PIXEL__!.world.guardianSystem.successfulSpawns}))).toEqual({b:0,g:0});\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n   9 | });\n  10 | for(const width of [1280,390])for(const mode of ['afk','move','blink'] as const)test(`Mage89 actual18min ${mode} ${width}`,async({page})=>{\n  11 |   test.setTimeout(85000);await page.setViewportSize({width,height:width===390?844:720});await page.goto('/?test=1');await page.getByRole('button',{name:'Начать забег'}).click();const h=await page.evaluateHandle(async mode=>{const path='/tests/helpers/endgame.ts',{setupEndgameLive}=await import(path);const w=window.__PIXEL__!.world;return setupEndgameLive(w,mode,w.width,w.height);},mode);let captured=false;for(let i=0;i<75;i++){await page.waitForTimeout(1000);const r=await h.evaluate(x=>x);if(!captured&&r.seconds>32){mkdirSync('screenshots/enrage2',{recursive:true});await page.screenshot({path:`screenshots/enrage2/Mage89-${mode}-${width}.png`});captured=true;}if(r.status==='over'||r.seconds>=60)break;}const r=await h.evaluate(x=>x);expect(r.invalidInvulnerability).toBe(false);expect(r.peakRegular).toBeLessThanOrEqual(150);expect(r.peakBosses).toBeLessThanOrEqual(3);expect(r.peakGuardians).toBeLessThanOrEqual(3);if(mode==='afk'){expect(r.damage).toBeGreaterThan(0);expect(r.blinks).toBe(0);}else{expect(r.seconds).toBeGreaterThanOrEqual(60);expect(r.hp).toBeGreaterThan(0);if(mode==='blink')expect(r.blinks).toBeGreaterThan(0);}writeFileSync(`screenshots/enrage2/Mage89-${mode}-${width}.json`,JSON.stringify(r,null,2));\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\endgame.spec.ts:8:796"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:14.593Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\enrage2\\target\\endgame-early-active-Guard-0384f--scaled-orbs-and-pause-1280\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\endgame.spec.ts",
+                    "column": 796,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "886b520ac24ebb3d87e6-ff349aa066843f22e451",
+          "file": "endgame.spec.ts",
+          "line": 3,
+          "column": 31
+        },
+        {
+          "title": "early active Guardian and PhaseII3 bosses, scaled orbs and pause 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 35000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:23.214Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "886b520ac24ebb3d87e6-32b2e7fc820013d70430",
+          "file": "endgame.spec.ts",
+          "line": 3,
+          "column": 31
+        }
+      ]
+    },
+    {
+      "title": "gameplay-guardian.spec.ts",
+      "file": "gameplay-guardian.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Guardian complete encounter, danger readability and owner cleanup at 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 6221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:14.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-34f800c5f32dac99ace5",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 4,
+          "column": 34
+        },
+        {
+          "title": "Guardian complete encounter, danger readability and owner cleanup at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 3229,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:21.130Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-3fa087992a579865600c",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 4,
+          "column": 34
+        },
+        {
+          "title": "Mage dodges real Guardian homing attacks with ordinary keyboard movement at 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 5976,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:24.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-abbb3496dd233a0ebf77",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 36,
+          "column": 74
+        },
+        {
+          "title": "Mage dodges real Guardian homing attacks with ordinary keyboard movement at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 6010,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:30.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-0f64284b63f02df8c321",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 36,
+          "column": 74
+        },
+        {
+          "title": "Warrior dodges real Guardian homing attacks with ordinary keyboard movement at 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 5939,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:36.382Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-f6e896601fba5fa905c3",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 36,
+          "column": 74
+        },
+        {
+          "title": "Warrior dodges real Guardian homing attacks with ordinary keyboard movement at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 5829,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:42.329Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d584dc03dc14a33b5190-7d890063c5f531122723",
+          "file": "gameplay-guardian.spec.ts",
+          "line": 36,
+          "column": 74
+        }
+      ]
+    },
+    {
+      "title": "gameplay-stress.spec.ts",
+      "file": "gameplay-stress.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Mage/1280/early",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 15935,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:14.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-9fa8b0b3da2e158a83b7",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Mage/390/early",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 15779,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:30.812Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-b6e298a2aa38cc82f9cc",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Warrior/1280/early",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 13071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:46.606Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-9f36629a6382eee04b17",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Warrior/390/early",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 12916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:02:59.684Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-284a152f1cb50a040a24",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Mage/1280/Enrage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 13042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:03:12.608Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-804369c33cf611c04022",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Mage/390/Enrage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 16585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:03:25.659Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-379fc15e94dd1ddc3ecb",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Warrior/1280/Enrage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 13144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:03:42.251Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-fac69df3696de2a7a20d",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        },
+        {
+          "title": "new encounter and rank V sustain 150 live mobs: Warrior/390/Enrage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 12915,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T18:03:55.403Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a97849bbdfe310c3ac1c-e088398c51670cdf683b",
+          "file": "gameplay-stress.spec.ts",
+          "line": 4,
+          "column": 107
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T18:02:13.808Z",
+    "duration": 114648.44300000001,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

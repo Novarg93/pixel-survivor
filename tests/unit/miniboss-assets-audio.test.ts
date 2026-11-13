@@ -1,3 +1,10 @@
+import {warriorSoundsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorUltimatesIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorBuffsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCleaveIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorSkillsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCombatIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorHeroIntegration} from '../helpers/approvedWardenIntegration';
 import {expect,it} from 'vitest';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -15,7 +22,7 @@ const root='art/generated/miniboss-assets-audio-v1',sha=(b:Uint8Array)=>createHa
 function setup(){const w=new World(42,{spawnRate:0});w.elapsed=630;w.encounterDirector.nextAt=Infinity;for(const a of Object.values(w.abilities))a.level=0;const audio=new MinibossAudio(),events:SoundEvent[]=[];return{w,audio,events,observe:()=>audio.observe(w,e=>events.push(e))};}
 it('preserves all six user WAVs byte-for-byte and routes the shared teleport through one sample',()=>{
  const entries=JSON.parse(readFileSync(root+'/audio-manifest.json','utf8')) as {id:string;source:string;file:string;sha256:string;gain:number;peak:number;seconds:number}[];
- expect(entries).toHaveLength(6);expect(audioSampleIds).toHaveLength(27);expect(new Set(audioSampleIds).size).toBe(27);
+ expect(entries).toHaveLength(6);expect(audioSampleIds).toHaveLength(36);expect(new Set(audioSampleIds).size).toBe(36);
  for(const entry of entries){expect(readFileSync(entry.file).equals(readFileSync(entry.source))).toBe(true);expect(sha(readFileSync(entry.file))).toBe(entry.sha256);expect(entry.gain*entry.peak).toBeLessThan(.750001);expect(entry.seconds).toBe(.8865);}
  expect(audioSampleForEvent('mini.teleport')).toBe('mini-teleport');
  for(const event of ['mini.runeCast','mini.astralCast','mini.briarCharge','mini.briarMelee','mini.totemCast','mini.teleport'] as const){const sample=audioSampleForEvent(event)!;expect(audioSampleUrl(sample)).toContain('assets/audio/miniboss-v1/');expect(audioSampleGain(sample)).toBeGreaterThan(0);}
@@ -68,5 +75,5 @@ it('does not invent a release when first observing an already advanced Totem cyc
 it('changes only the five presentation files and eleven explicitly accepted local assets/modules',()=>{
  const baseline=JSON.parse(readFileSync(root+'/runtime-baseline.json','utf8'))as Record<string,string>,walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
  expect(proof).toMatchObject({baselineFiles:400,unchanged:395});expect(proof.changed).toHaveLength(5);expect(proof.added).toHaveLength(11);
- expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...visualCleanupIntegration.added].sort());for(const p of [...Object.keys(baseline),...proof.added])expect(sha(readFileSync(p)),p).toBe(wardenApprovedHash(p,proof.currentSHA256[p]??baseline[p]));
+ expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...visualCleanupIntegration.added,...warriorHeroIntegration.added,...warriorCombatIntegration.added,...warriorSkillsIntegration.added,...warriorCleaveIntegration.added,...warriorBuffsIntegration.added,...warriorUltimatesIntegration.added,...warriorSoundsIntegration.added].sort());for(const p of [...Object.keys(baseline),...proof.added])expect(sha(readFileSync(p)),p).toBe(wardenApprovedHash(p,proof.currentSHA256[p]??baseline[p]));
 });

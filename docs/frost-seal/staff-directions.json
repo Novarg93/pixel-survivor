@@ -1,0 +1,510 @@
+[
+  {
+    "direction": "up",
+    "frames": [
+      {
+        "age": 0.3656833333332088,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 0,
+              "y": -80
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 2,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-up-2",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -4.199999999999999,
+              "y": -8.669999999999998
+            },
+            {
+              "x": 3.75,
+              "y": -16.02
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      },
+      {
+        "age": 0.565253333333203,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 0,
+              "y": -80
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 3,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-up-3",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -3.75,
+              "y": -6.2700000000000005
+            },
+            {
+              "x": 5.25,
+              "y": -1.77
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      }
+    ]
+  },
+  {
+    "direction": "down",
+    "frames": [
+      {
+        "age": 0.36618666666754507,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 0,
+              "y": 80
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 2,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-down-2",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -4.199999999999999,
+              "y": -8.669999999999998
+            },
+            {
+              "x": 3.75,
+              "y": -16.02
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      },
+      {
+        "age": 0.5659066666680701,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 0,
+              "y": 80
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 3,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-down-3",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -3.75,
+              "y": -6.2700000000000005
+            },
+            {
+              "x": 5.25,
+              "y": -1.77
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      }
+    ]
+  },
+  {
+    "direction": "left",
+    "frames": [
+      {
+        "age": 0.36614666666753237,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": -80,
+              "y": 0
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 2,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-left-2",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -3.75,
+              "y": -16.02
+            },
+            {
+              "x": 4.200000000000001,
+              "y": -8.669999999999998
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      },
+      {
+        "age": 0.5658266666678173,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": -80,
+              "y": 0
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 3,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-left-3",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -5.25,
+              "y": -1.77
+            },
+            {
+              "x": 3.75,
+              "y": -6.2700000000000005
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      }
+    ]
+  },
+  {
+    "direction": "right",
+    "frames": [
+      {
+        "age": 0.3659233333329439,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 80,
+              "y": 0
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 2,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-right-2",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -4.199999999999999,
+              "y": -8.669999999999998
+            },
+            {
+              "x": 3.75,
+              "y": -16.02
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      },
+      {
+        "age": 0.5655733333330772,
+        "casting": {
+          "mode": "cast",
+          "active": {
+            "ability": "ultimate-frost",
+            "rank": 5,
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "target": {
+              "x": 80,
+              "y": 0
+            },
+            "started": 601,
+            "duration": 1.1,
+            "beats": 0,
+            "lastBeat": null
+          },
+          "frame": 3,
+          "accents": [],
+          "pending": 0,
+          "requested": {
+            "fireball": 0,
+            "frost": 0,
+            "lightning": 0,
+            "meteor": 0,
+            "shield": 0,
+            "ultimate-frost": 1
+          },
+          "started": 1,
+          "coalesced": 0,
+          "interrupted": 0,
+          "dropped": 0,
+          "maxPending": 0,
+          "visible": true,
+          "armsFrame": "arms-ultimate-frost-right-3",
+          "x": 0,
+          "y": -0.2700000000000001,
+          "width": 24,
+          "height": 30,
+          "rotation": 0,
+          "origin": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "hands": [
+            {
+              "x": -3.75,
+              "y": -6.2700000000000005
+            },
+            {
+              "x": 5.25,
+              "y": -1.77
+            }
+          ],
+          "recoil": 0,
+          "bodyFrame": "body-mage-side-idle-1"
+        }
+      }
+    ]
+  }
+]

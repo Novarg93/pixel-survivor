@@ -1,0 +1,540 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/lightning-aftershock.spec.ts",
+      "tests/e2e/lightning-devastation.spec.ts",
+      "tests/e2e/lightning-cinematic.spec.ts",
+      "--workers=2",
+      "--reporter=list,json"
+    ],
+    "configFile": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\playwright.config.ts",
+    "rootDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Novarg/Desktop/PixelSurvivor/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "channel": "chromium",
+          "baseURL": "http://127.0.0.1:5192",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "lightning-aftershock.spec.ts",
+      "file": "lightning-aftershock.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Radial broken aftershock real Release, rear kills, fade and one geometry build 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:19.260Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "684b55c10a10d3f9da1c-e5f06aa83b3fcb0c792b",
+          "file": "lightning-aftershock.spec.ts",
+          "line": 13,
+          "column": 51
+        },
+        {
+          "title": "Radial broken aftershock real Release, rear kills, fade and one geometry build 844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:24.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "684b55c10a10d3f9da1c-db8018bf4f9d99284001",
+          "file": "lightning-aftershock.spec.ts",
+          "line": 13,
+          "column": 51
+        },
+        {
+          "title": "Aftershock reduced intensity, World pause, zero effects and ten clean restarts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1926,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m0.22\u001b[39m\nReceived:    \u001b[31m0.22000000000000003\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m0.22\u001b[39m\nReceived:    \u001b[31m0.22000000000000003\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\lightning-aftershock.spec.ts:38:64",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\lightning-aftershock.spec.ts",
+                      "column": 64,
+                      "line": 38
+                    },
+                    "snippet": "  36 |   // Freeze inside the real visual interval rather than advancing independent timers.\n  37 |   const frozen=await page.evaluate(async()=>{const w=window.__PIXEL__!.world;w.ultimate.activate(w);await new Promise<void>(resolve=>{const frame=()=>{if(w.elapsed-w.ultimate.released>=.10&&w.elapsed-w.ultimate.released<.45){w.pause();resolve();}else requestAnimationFrame(frame);};requestAnimationFrame(frame);});return window.__PIXEL__!.art().ultimate.ground;});\n> 38 |   expect(frozen.alpha).toBeGreaterThan(0);expect(frozen.alpha).toBeLessThanOrEqual(.22);await page.waitForTimeout(180);expect(await page.evaluate(()=>window.__PIXEL__!.art().ultimate.ground)).toEqual(frozen);\n     |                                                                ^\n  39 |   await page.screenshot({path:`${directory}/reduced-paused-1280.png`});\n  40 |   await page.evaluate(async()=>{const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:0,muted:true,pixelScale:2,reducedMotion:true,reducedFlash:true,effectsIntensity:0}});});await page.waitForFunction(()=>window.__PIXEL__!.art().ultimate.ground.alpha===0);\n  41 |   await page.evaluate(async()=>{const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:0,muted:true,pixelScale:2,reducedMotion:true,reducedFlash:true,effectsIntensity:.4}});window.__PIXEL__!.world.resume();});await page.waitForFunction(()=>window.__PIXEL__!.art().ultimate.ground.geometry===0);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\lightning-aftershock.spec.ts",
+                        "column": 64,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m0.22\u001b[39m\nReceived:    \u001b[31m0.22000000000000003\u001b[39m\n\n  36 |   // Freeze inside the real visual interval rather than advancing independent timers.\n  37 |   const frozen=await page.evaluate(async()=>{const w=window.__PIXEL__!.world;w.ultimate.activate(w);await new Promise<void>(resolve=>{const frame=()=>{if(w.elapsed-w.ultimate.released>=.10&&w.elapsed-w.ultimate.released<.45){w.pause();resolve();}else requestAnimationFrame(frame);};requestAnimationFrame(frame);});return window.__PIXEL__!.art().ultimate.ground;});\n> 38 |   expect(frozen.alpha).toBeGreaterThan(0);expect(frozen.alpha).toBeLessThanOrEqual(.22);await page.waitForTimeout(180);expect(await page.evaluate(()=>window.__PIXEL__!.art().ultimate.ground)).toEqual(frozen);\n     |                                                                ^\n  39 |   await page.screenshot({path:`${directory}/reduced-paused-1280.png`});\n  40 |   await page.evaluate(async()=>{const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:0,muted:true,pixelScale:2,reducedMotion:true,reducedFlash:true,effectsIntensity:0}});});await page.waitForFunction(()=>window.__PIXEL__!.art().ultimate.ground.alpha===0);\n  41 |   await page.evaluate(async()=>{const path='/src/game/events/bridge.ts',{commands}=await import(path);commands.emit({type:'settings',value:{volume:0,muted:true,pixelScale:2,reducedMotion:true,reducedFlash:true,effectsIntensity:.4}});window.__PIXEL__!.world.resume();});await page.waitForFunction(()=>window.__PIXEL__!.art().ultimate.ground.geometry===0);\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\lightning-aftershock.spec.ts:38:64"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:27.239Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\test-results\\lightning-aftershock-After-d8ad2-ects-and-ten-clean-restarts\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\lightning-aftershock.spec.ts",
+                    "column": 64,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "684b55c10a10d3f9da1c-c458e4baa866ac3632a1",
+          "file": "lightning-aftershock.spec.ts",
+          "line": 34,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "lightning-cinematic.spec.ts",
+      "file": "lightning-cinematic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Divine Storm real eight-frame sequence and held WASD 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5872,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:19.276Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-4444b1215d3554b67db0",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 16,
+          "column": 51
+        },
+        {
+          "title": "Divine Storm real eight-frame sequence and held WASD 844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2496,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:25.404Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-f5553e506ccc1e475535",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 16,
+          "column": 51
+        },
+        {
+          "title": "pause, reduced effects, held left stick, interruption and ten lit restarts clean objects/listeners",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14554,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:27.909Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-680624be4aa2a8abc086",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "restores actual Canvas background pixels and leaves HUD filters unchanged",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:42.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-4d630acfac9969155378",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 93,
+          "column": 1
+        },
+        {
+          "title": "Lightning constant 150+3+3 frame comparison 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3987,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:44.770Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-b8991daacc83149c2c3f",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 110,
+          "column": 51
+        },
+        {
+          "title": "Lightning constant 150+3+3 frame comparison 844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:48.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "71f039457779e4f5d960-da5cb637083b4a5ca2aa",
+          "file": "lightning-cinematic.spec.ts",
+          "line": 110,
+          "column": 51
+        }
+      ]
+    },
+    {
+      "title": "lightning-devastation.spec.ts",
+      "file": "lightning-devastation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Lightning devastation all directions and quiet ground 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5377,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:29.802Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c21a5a0ab06c5d35ad7-d4dbd91ff8a23a45f8dc",
+          "file": "lightning-devastation.spec.ts",
+          "line": 4,
+          "column": 52
+        },
+        {
+          "title": "Lightning devastation all directions and quiet ground 844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4937,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T09:49:35.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c21a5a0ab06c5d35ad7-c8f92a1bcaa84ca08f48",
+          "file": "lightning-devastation.spec.ts",
+          "line": 4,
+          "column": 52
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T09:49:18.580Z",
+    "duration": 34148.030999999995,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

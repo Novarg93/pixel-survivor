@@ -1,0 +1,97 @@
+{
+  "method": "Viewed real Canvas temporal filmstrips from final full Playwright run. Distinct hand phases, ongoing gait, stable head/feet, spell direction and late-game pose changes assessed. Blink-specific active full Canvas added separately because automatic active-arms filmstrip samples pre-Blink only.",
+  "reviewed": [
+    {
+      "path": "screenshots/mage-casting/blink-1280-filmstrip.png",
+      "sha256": "482332007bd056341c1530ced02f6850426fa26f54d6851d99165288bf5777e6"
+    },
+    {
+      "path": "screenshots/mage-casting/blink-390-filmstrip.png",
+      "sha256": "7498061ac47ed99e216ba421710324f7f86c8f9eb4ea4d7e1268c4ea00fa8a88"
+    },
+    {
+      "path": "screenshots/mage-casting/idle-1280-filmstrip.png",
+      "sha256": "7c3b4c78e151fb08ecb6ee7aff882bed92646ca0242f8c0ae1816b6e373667e6"
+    },
+    {
+      "path": "screenshots/mage-casting/idle-390-filmstrip.png",
+      "sha256": "ad87d65db1b43e4fad10ce9e49ee7d884e517b32348537da9058dff0f19a6226"
+    },
+    {
+      "path": "screenshots/mage-casting/late-game-five-spells-1280-filmstrip.png",
+      "sha256": "c18e796acdb3287c031405829440df9a1d8fb6e89d95333486629aee800f0b52"
+    },
+    {
+      "path": "screenshots/mage-casting/late-game-five-spells-390-filmstrip.png",
+      "sha256": "9a0cc6c7273b40701f975bb6b96be9d74b6f6df181a28a5e1e5c1ebd12b61c33"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-1280-filmstrip.png",
+      "sha256": "2d6cb7439d455b50f8d880d78ee80210efa78fbc84b4df02ba7c4ca8697514f5"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-390-filmstrip.png",
+      "sha256": "fe624d23f95c1114564ea6943714772f4ac79dcfb41b1862b97ce018a7f4b77d"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-fireball-1280-filmstrip.png",
+      "sha256": "84ed43e93c13e2ff0da9e631a3f244d327bb5a10148f603285a594b05e78b520"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-fireball-390-filmstrip.png",
+      "sha256": "e61c312e88819eaf56542b548445bfa330d2d9d3dbb8e08940ec0b186a10e716"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-frost-1280-filmstrip.png",
+      "sha256": "9f3459efa8306436169dc3ca077103ea4ae0137687cc9c821d3293ebff32462d"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-frost-390-filmstrip.png",
+      "sha256": "192b57dac7eef0b86f273a7b9295dd6c679bc1699cd24d82a29782d79bbe1b47"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-lightning-1280-filmstrip.png",
+      "sha256": "b5178edf92d548db635cfdfc16a58addae80e2c0c4f8ae66d23b7fbd18d752b7"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-lightning-390-filmstrip.png",
+      "sha256": "2efc3c4dc914aa402d9ba2059108548f1e9433296760bafe61e20e99a049fdcc"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-meteor-1280-filmstrip.png",
+      "sha256": "f1382ad9aeae33443b73293758f8c228564fb7494eeeb219f44650cfb744b7ac"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-meteor-390-filmstrip.png",
+      "sha256": "ac491b578a0caee09a53e70e07c8a8bc032bad74ef9fa66bceaa19a7f2ab244a"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-shield-1280-filmstrip.png",
+      "sha256": "23e601fbe9cde055aee93de147aafbc3c710eb10985203ca0cef1d60009fdeba"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-shield-390-filmstrip.png",
+      "sha256": "a424abb6327fb06f789624d367d9a375047a2468bfcad1ea827c14c70471024f"
+    },
+    {
+      "path": "screenshots/mage-casting/blink-active-1280.png",
+      "sha256": "8a633267dd8262b09814a19bd967342351fc67a37a59d4e806d7a95d78ff30cf"
+    },
+    {
+      "path": "screenshots/mage-casting/blink-active-390.png",
+      "sha256": "50cf2bb93d42258847b70658b9b017b5102820ebe4b97aaf2d0042a8ceda2915"
+    },
+    {
+      "path": "screenshots/mage-casting/late-game-five-spells-1280.png",
+      "sha256": "a162b16d6785cd490f262b7d358ff209a5991e4e552f6417d6694492b63288ce"
+    },
+    {
+      "path": "screenshots/mage-casting/walk-meteor-390.png",
+      "sha256": "e8f6fe8dc21fedd13694db8659a95083c9057fe49579e97cd54de97db162e2a9"
+    }
+  ],
+  "video": "Two WebM recordings saved; not watched end-to-end.",
+  "hardware": "Desktop Chromium, viewport1280x720/390x844, DPR1; no physical mobile test.",
+  "limitations": "Existing large spell effects can partially obscure arms. Artistic acceptance remains with user.",
+  "blinkCapture": "Active full Canvas captured in RAF, nonblack-pixel count checked, mode blink and aligned layer diagnostics saved. Direct discarded WebGL read and delayed DOM screenshot were rejected before final capture."
+}

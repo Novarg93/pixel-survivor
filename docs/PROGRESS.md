@@ -1,3 +1,831 @@
+# 2026-11-13 — подготовка push main без art/screenshots
+
+Пользователь явно подтвердил публикацию с исключением `art` и `screenshots`. Перепаковывается только локальный неопубликованный коммит: содержимое этих двух каталогов в нём возвращается к прежнему origin/main, рабочие файлы сохраняются. Новые игровые ассеты `public/assets`, код, тесты и отчёты остаются. Исходные изображения/Aseprite и source-verification proofs из `art` нужны для локальных полных проверок, но не публикуются по прямому требованию пользователя; runtime использует готовые атласы. Последние проверки рабочего дерева:1184unit, check/build, DEV синхронизация кадра5/6, production Warrior2/2. Код игры при перепаковке не меняется.
+
+# 2026-11-13 — Spear Throw: выпуск синхронизирован с пустой рукой
+
+По запросу убрать задержку полёта обычного копья `WARRIOR_CAST.throwReleaseFront` изменён750→375мс: первый пустой кадр index5 при75мс/кадр. Север уже375мс. Runtime меняет только `src/game/config/warriorAbilities.ts`; прочие467файлов/арт/урон/скорость/кулдаун/Ruin сохранены. Новый baseline/proof в `docs/verification/warrior-spear-release-v1/`, исторические hashes учитывают новый overlay `scripts/warrior-spear-release-scope.mjs`, прежние proofs не переписаны.
+
+Полный check PASS165файлов/1184unit, types/lint/build (`.tmp/warrior-spear-release-check.log`). Новый browser1/1 PASS8,9с: South/North/NW index4 без снаряда→index5 с единственным снарядом; проверена реальная simulation age0,376с. Canvas до/после и evidence — `screenshots/warrior-spear-release-v1/`; South/NW release просмотрены, JS errors0. После добавления browser-теста отдельно typecheck/ESLint; финальный unit fixture уточнён для точных East/West направлений и повторно проверен отдельно. Production Warrior smoke в двух локациях — `.tmp/warrior-spear-release-production.log`, итог в TEST_REPORT. Предупреждение Vite о chunks прежнее. Следующий шаг — пользовательская проверка ощущения броска; новых генераций/done/commit/push/deploy нет.
+
+# 2026-11-13 — исправленные Throw/Ruin подключены в игру, включая север
+
+По «накатывай в игру» подключены оба выбранных броска из `warrior-spear-empty-hand-review-v1`. Отдельное уточнение про другую сторону выполнено через северный Aseprite-проект: Aseprite MCP сравнил все13native north-кадров с runtime-атласом, differences0 (`docs/verification/warrior-empty-hand-v1/aseprite-north-verification.json`). N/NE используют north напрямую, NW зеркало; северная Ruin сохраняет прежнее переиспользование north Throw.
+
+Изменены ровно5runtime-файлов: skills5.png/6.png, ultimates0.png и два manifest. Все463прочих файла защищены SHA; баланс/тайминги/физические снаряды/Whirlwind не менялись.19выбранных изменений source→runtime передаются builder через `scripts/warrior-empty-hand-sources.mjs`; исходные кадры и исторические proofs сохранены. Новая проверка scope и overlay: `scripts/warrior-empty-hand-scope.mjs`, `docs/verification/warrior-empty-hand-v1/`. Оба verifier проверили все156skill/63ultimate RGBA кадров; повторная упаковка воспроизводит те же SHA. Viewer теперь отмечает интеграцию.
+
+Проверки: полный check PASS164файла/1175unit, types/lint/build (`.tmp/warrior-empty-hand-integration-check.log`). После последующих изменений только test/build-review helpers дополнительно пройдены typecheck/целевой ESLint. DEV:10сценариев прошли в общем прогоне; Earthbreaker пересёкся с перезаписью manifest/HMR и повторён отдельно, результат в `.tmp/warrior-empty-hand-earthbreaker-final.log`. Лог общего прогона `.tmp/warrior-empty-hand-integration-e2e-final.log`; первичный новый тест остановился из-за слишком дальней мишени на раннем кадре, её расстояние исправлено55px, runtime не менялся. Production15/15 PASS,1,3мин (`.tmp/warrior-empty-hand-production.log`), включая HTTP/SHA всех3обновлённых атласов, обоих героев/локации и отсутствие DEV harness.
+
+Финальный изолированный Earthbreaker повтор PASS1/1,41,2с, exit0. Итого10успешных сценариев общего прогона+отдельный1/1; непрерывный11/11 не заявляется. Блокеров нет.
+
+Новый Canvas/evidence: `screenshots/warrior-empty-hand-runtime-v1/`: Throw/Ruin South/N/NE/NW,390px, реальные попадания, pause/restart, JS errors0. Просмотрены Throw N, Ruin South/NW; долгий баланс/физический телефон не проверялись. Старые review-тесты продолжают проверять исходники/замах и учитывают явно разрешённую интеграцию. Следующий шаг — пользовательский игровой забег. Новых генераций/done/commit/push/deploy нет; предупреждение Vite о chunks прежнее.
+
+# 2026-11-13 — ультимейт Ruin: пустая рука после замаха
+
+По запросу «ультимейт бросок копья так же исправь» доработан front-клип Ruin через Aseprite MCP batch. Первые5кадров сохранены; с6кадра убраны остатки копья за головой, в последних2кадрах удалён возвращавшийся меч и его рукоять оформлена как пустая латная кисть. Участки ног под клинком восстановлены пикселями соседнего кадра того же клипа. `ultimate-empty-hand.aseprite` содержит12кадров по90мс, с прежним пропуском исходного06.png; PNG всех12кадров совпадают с native RGBA (differences0). Источники не перезаписаны, новых генераций нет.
+
+В `art/generated/warrior-spear-empty-hand-review-v1/viewer.html` возвращена кнопка «Таранное копьё · ульта». Front/mirror используют исправленный Ruin; N/NE используют прежний исправленный north Throw, NW зеркало, как в текущей схеме игры. Нового самостоятельного северного клипа не заявляем. Демка содержит38кадров,19изменены,3763изменённых пикселя; все468src/public файлов совпадают с baseline. Правка ульты пока на пользовательском просмотре, в runtime не подключена.
+
+Полный check PASS:163файла/1173unit, types/lint/build; после финальной дочистки только PNG повторены builder и E2E2/2 PASS (3,7с). Проверены обычный бросок и ульта во всех8направлениях, сохранённый замах, выпуск/возврат, offline file://,390px без overflow, JS errors0. Логи `.tmp/warrior-spear-ultimate-empty-{check,e2e}.log`. Скриншоты `screenshots/warrior-spear-empty-hand-review-v1/ultimate-{south-release,south-return,north-release,mobile}.png`; South release/return и mobile просмотрены. Предупреждение Vite о chunks прежнее. Блокеров нет; далее — просмотр ульты пользователем. Новых done/commit/push/deploy нет.
+
+# 2026-11-13 — восстановлена фактическая задача: пустая рука после броска копья
+
+Пользователь уточнил: последней была правка кадров броска, а не Charge. Найден незарегистрированный `warrior-spear-empty-hand-review-v1` с прежним imagegen-донором и скриптом узких масок. После вопроса пользователя доработка сделана через Aseprite MCP, batch 1.3.18.6: удалены оставшиеся фрагменты древка front05/06 и north05, а также появлявшийся меч north12. Сохранены два редактируемых проекта `front-empty-hand.aseprite` / `north-empty-hand.aseprite` рядом с viewer. Новых генераций нет.
+
+Обычный Throw: 26 PNG (13 front + 13 north), первые пять кадров каждого клипа побайтно сохранены; с шестого кадра оружие убрано. Восемь направлений используют существующие front/north/mirror правила. Изолированная демка `art/generated/warrior-spear-empty-hand-review-v1/viewer.html` показывает до/после, паузу/скорость/покадровый шаг и работает двойным кликом offline. Предварительные материалы ульты сохранены в source/frames, но исключены из текущей демки: текущая правка относится к обычному броску, художественная приёмка ульты не заявляется. Builder учитывает PNG cleanup, экспортированные Aseprite. Все 468 src/public файлов совпадают с baseline; runtime пока прежний, художественный результат ожидает выбора пользователя.
+
+E2E `warrior-spear-empty-hand.spec.ts` PASS 1/1: offline file://, HTTP0/JS errors0, все8 направлений, неизменность исходников/замаха/runtime, шаги,390px без overflow. Скриншоты `screenshots/warrior-spear-empty-hand-review-v1/{south,north,mobile}.png`; South/North просмотрены. Логи `.tmp/warrior-spear-empty-hand-{e2e,check}.log`. Финальный статус полного check см. следующую запись в TEST_REPORT. Следующий шаг — пользовательский просмотр до/после. Новых done/commit/push/deploy нет.
+
+# 2026-11-13 — последняя задача Charge повторно проверена и завершена
+
+По запросу «вспомни последнюю задачу и закончи её» восстановлен последний scope: замена пользовательского Charge WAV. Реализация уже сохранена; дополнительные изменения runtime не потребовались. Source и public имеют одинаковый SHA256 `a934f47b9edab575dec34981b92ad4b22c26de70570f6842f7ed1755769a2170`, длительность 0,6865 с. Подключение и предыдущая история замены сохранены.
+
+Свежая проверка: `npm.cmd run check` exit0 (types/lint/unit/build); DEV `warrior-sounds.spec.ts` 2/2 PASS — все девять звуков, Charge через Space, pause/mute/restart и fallback; production `-g "built Warrior loads"` 1/1 PASS — реальные ввод и AudioBufferSource, SHA всех девяти WAV по HTTP, отсутствие DEV harness и JS errors. Логи `.tmp/warrior-charge-resume-{check,e2e,production}.log`. Повторно получены Canvas PNG и evidence в `screenshots/warrior-sounds-v1/`, Earthbreaker просмотрен. Прежнее предупреждение Vite о крупных chunks остаётся.
+
+Блокеров нет, техническая задача завершена. Следующий шаг — оценка микса пользователем на слух; субъективное качество автоматическими проверками не подтверждается. Новых генераций, done-маркеров, commit/push/deploy нет.
+
+# 2026-11-13 — заменён Charge на обновлённый пользовательский WAV
+
+По прямому запросу повторно скопирован `art/warrior/sounds/charge.wav` в runtime: новый SHA `a934f47b9edab575dec34981b92ad4b22c26de70570f6842f7ed1755769a2170`, stereo48kHz,0,6865с,131886байт. `audio/samples.ts` обновляет SHA/длительность/playback gain0,889046 и ключ Phaser-кэша; PCM сохранён побайтно. Остальные8записей сохранены. Текущие manifest/proof обновлены; предыдущие версии и запись замены сохранены в `docs/verification/warrior-sounds-v1/charge-replacement-v2/`.
+
+DEV audio E2E2/2, полный check1173unit/types/lint/build; production-проверка Charge использует длительность из manifest. Логи `.tmp/warrior-charge-v2-{check,e2e,production}.log`. Блокеров нет; далее — пользовательская проверка на слух. Генераций/новых done/push/deploy нет.
+
+# 2026-11-13 — все пользовательские звуки Warrior интегрированы
+
+Подключены девять WAV из `art/warrior/sounds`: Cleave, Whirlwind, Stomp, Throw, Block, Charge и Banner/Earthbreaker/Ruin. Сохранены оригинальные байты; runtime-копии в `public/assets/audio/warrior-uploaded-v1`. Изменены `audio/samples.ts`, `catalog.ts`, `AudioPresentation.ts`, `events/gameFeedback.ts`, `ultimates/UltimateSystem.ts`. Ульты получили собственные cues вместо щита мага; Stomp звучит один раз на применение. Существующие volume/mute, voice budget, pause/teardown и fallback сохранены.
+
+Проверки: check — 163 файла/1173 unit tests, types/lint/build; DEV audio E2E 9/9, production E2E 14/14. Canvas трёх ульт и WebAudio evidence — `screenshots/warrior-sounds-v1/`, Earthbreaker просмотрен. Все9 samples проигрались, ошибок JS/загрузки/fallback в штатном режиме0; после pause/restart sources0. Кэш36samples:24,45MB, явный тестовый потолок26MB. Scope5 изменённых+9 новых,454 прежних runtime-файла сохранены; исторические proofs не переписаны.
+
+Отчёт с логами, промежуточными исправлениями тестов и ограничениями: `docs/audio/WARRIOR_UPLOADED_SOUNDS_V1.md`; SHA/PCM-метрики/scope: `docs/verification/warrior-sounds-v1/`. Генераций0, done/commit/push/deploy нет. Блокеров нет; далее — пользовательский забег и настройка микса по отзывам.
+
+# 2026-11-13 — read-only аудит подключённого ElevenLabs MCP
+
+По прямому запрету генераций выполнены только live catalog/schema/get-existing-node и официальная web-проверка. Предоставлен облачный ElevenCreative/Flows-интерфейс, не старый локальный text_to_sound_effects; URL реального клиентского транспорта инструментами не раскрыт. Live SFX available/default:только `eleven_text_to_sound_v2`. В model_id enum нет `eleven_text_to_sound_v3`; `eleven_v3` относится к TTS. Настройки SFX:duration0,5–30/influence0–1 default0,3/loop defaultfalse, automatic improvement отсутствует. Существующий Cleave-узел и сохранённая генерация действительноv2.
+
+**Гарантировать SFXv3 текущим MCP нельзя.** Официальный REST API поддерживает явный model_idv3, официальный sound-effects skill содержит такие примеры. Предложены эти пути без установки/авторизации/генерации. Новых generation/charge0, runtime/аудио не менялись. Отчёт и JSON-схемы: `docs/audio/ELEVENLABS_MCP_SFX_V3_AUDIT_2026-11-13.{md,json}`; JSON/diff-check проверены. Следующий шаг — отдельное решение пользователя о прямом API/skill; текущие пробы остаются на слуховой приёмке.
+
+# 2026-11-13 — Cleave: четыре звуковые пробы v2 готовы к прослушиванию
+
+После отдельного «да запусти» выполнена одна MCP-генерация Sound Effectsv2 с четырьмя стандартными вариациями промптаA: один сухой физический свист меча, без попадания. Явные параметры0,5с/influence0,3/loopfalse подтверждены ответом провайдера. Automatic improvement в коннекторе отсутствует; его включение не заявляется. ПромптB не запускался, платных повторов нет. Все4 jobs completed, статус Ready for Review, acceptedfalse.
+
+Файлы: `art/generated/warrior-cleave-sfx-review-v1/source/cleave-a-1..4.mp3`, `mcp-v2-run.json` (точные prompt/args/flow/node/session/generation IDs и цены), `verification.json`, `audio-viewer.html`. Плеер работает двойным кликом без сервера: четыре оригинала, громкость100%/30%/slider, изолированный повтор до30с и Stop. Источники не обрезаны/не нормализованы. `scripts/download-cleave-sfx-review-v1.mjs` сохраняет MP3 и SHA. Историческая V3-попытка сохранена отдельно в request.json.initialV3Attempt; пользовательский стандартv3 остаётся.
+
+Проверки:4 различных SHA/ID3/audio-mpeg; metadata и WebAudio decode —0,48с каждый, stereo, декодирование48kHz, ненулевая RMS. У3/4 есть MP3 decoder overshoot (пики1,0377/1,0245;7/2сэмпла по модулю≥1); это исходники, техническая особенность записана, качество на слух не подтверждалось. File:// playback/30%gain/одновременность одной дорожки/Stop/дедлайн повтора проверены Playwright; дедлайн — ускоренными часами, не заявляется реальное30-секундное прослушивание. JS errors0,390px overflow0. PNGreview1100/390 рядом; desktop просмотрен. ESLint download-script и inlineJS PASS; runtime/source verifier PASS, игровые src/public не менялись. Полный check/build/E2E игры для изолированной звуковой пробы не повторялся.
+
+Estimate20credits/4варианта; submission receipts8credits; completed metadata6,6667credits/$0,0013333. Оба фактических ответа сохранены, расхождение не выдаётся за проверенный invoice. Блокера пробногоv2 больше нет. Далее — пользовательский выбор на слух и конкретные замечания; интеграция только после выбора. Новых done/commit/push/deploy нет.
+
+# 2026-11-13 — пробы ElevenLabs Cleave: подготовлены, запуск заблокирован
+
+Уточнение пользователя: нужен основной профиль вместо отдельной сессии. По метаданным Chrome найден соответствующий `Default`/Novarg; запущен установленный Chrome с `--profile-directory=Default` и страницей Sound Effects, без incognito. Процесс запустился. Повторный inventory по-прежнему сообщает `native pipe unavailable`/`browser access host unavailable`; состояние страницы и вход проверить невозможно, генераций всё ещё0. Дальнейший блокер — доступ к управлению обычной вкладкой, а не необходимость вводить учётные данные в отдельном браузере.
+
+Прочитан `ELEVENLABS_SFX_PROMPT_GUIDE.md`, проверены реальные отдельные события `cleave.swing`/`cleave.impact`. Пользовательский стандарт записан: Sound Effects v3, явная длительность, influence30%, automatic prompt improvement ON, looping по необходимости. Для частого Cleave подготовлены A/B одного физического свиста меча,0,5с,loopfalse; B меняет только ощущение веса. Попадание в этот звук не включается. Точные промпты/настройки/статусы — `art/generated/warrior-cleave-sfx-review-v1/request.json`.
+
+**Генераций0, списаний0, аудиофайлов нет, приёмка не заявляется.** `creative_get_flow_node_types` возвращает для SFX только `eleven_text_to_sound_v2` и не предоставляет automatic improvement. Запасной браузер открыл ElevenLabs, но перенаправлен на вход. Основной browser host/native pipe недоступен; повтор и восстановление чистой сессии не помогли (`os error2`). V2 не подставлялась вместо запрошенной V3, учётные данные не запрашивались.
+
+Runtime/прежние assets/реализация ульт не менялись. Проверены JSON, длина обоих промптов≤450 и runtime/source-verifier. Аудио-прослушивание, waveform/codec QA и browser playback неприменимы до появления файлов; полный npm check для изменения только документации/запроса не повторялся. Следующий шаг: доступ к авторизованному сайту с V3 либо подключение V3 в коннекторе; затем небольшой пробный набор и прослушивание пользователем перед интеграцией.
+
+# 2026-11-13 — принятые ультимейты Warrior интегрированы
+
+Подключён полный выбранный набор из `warrior-ultimates-animation-review-v1`: Banner A, Earthbreaker A, Spear of Ruin B. Earthbreaker/Ruin сохраняют действующие body/VFX и бой; Banner получил жест установки и анимированный флаг. Контакт Banner через 0,45 с запускает лечение, далее 15 с / 140px / 10% maxHP/с. Установка на 38px вперёд; замах удерживает движение, тело 0,81 с блокирует Dash/автоатаки. Отложенные обычные атаки отменяются. Все три ульты выбираются после уровня30 и5:00, Q/экранная кнопка, затем10 успешных Dash.
+
+Runtime: `WarBannerArt`, `WarriorHeroAnimation`, `warriorUltimatesPack/Manifest`, `UltimateSystem`, config, `MobilitySystem`, `tickAbilities`, атлас. Упаковка63 исходных кадров без изменения RGBA; Banner/Ruin сохраняют выбранные playback-исключения. N/NE — принятые Block/Stomp/Throw от ячейки4, NW зеркало. Приёмка шести выбранных jobs и точные рецепты добавлены в журнал/registry/pool; новых генераций нет. Scope459:10 изменений,449 файлов сохранены, прежние proofs не переписаны.
+
+`npm.cmd run check` PASS:162 файла/1168 unit tests, typecheck/lint/build, exit0; `.tmp/warrior-ultimates-accepted-check.log`. DEV:13 сценариев общего регресса прошли; два новых имели race в тестовом pause/Escape, исправлены и отдельно прошли **2/2,43с** (`.tmp/warrior-ultimates-accepted-e2e-final.log`). Production **13/13 PASS**,1,1мин, `.tmp/warrior-ultimates-accepted-production.log`. После финальной правки только browser helper повторены typecheck и его ESLint.63 source↔atlas кадра и449 runtime SHA проверены; diff-check PASS.
+
+10 новых Canvas PNG и JSON в `screenshots/warrior-ultimates-accepted-v1/`: Banner во всех8направлениях,1280/390/844. Просмотрены South/NW и оба мобильных кадра, а также повторные East Earthbreaker/North Ruin. Новые desktop JS errors0. Подробные файлы, тесты и разбор первого неудачного прогона: `docs/classes/warrior/ULTIMATES_ACCEPTED_V1_REPORT.md`.
+
+Блокеров нет. Длительный баланс/физический телефон/VRAM soak не проверялись; предупреждение Vite о крупных chunks прежнее. Далее — пользовательский забег и настройка по отзывам. Новых done/commit/push/deploy нет. Исторические pending-записи ниже относятся к состоянию до текущей приёмки.
+
+# 2026-11-13 — простая демка анимаций: три ульты × восемь направлений, без сервера
+
+По уточнению пользователя создан новый самостоятельный файл `art/generated/warrior-ultimates-animation-review-v1/viewer.html`. Показывает8 направлений одновременно для Ruin/Earthbreaker/Banner; клик увеличивает ракурс, есть pause/restart/шаг75мс, slider,¼×/½×/1×/2× и отключение VFX. Никакой загрузки игры/iframe/localhost:120 PNG встроены как data URI, CSS и script inline, один HTML704116байт (~688KiB) работает отдельно даже при отключённой сети.
+
+Файлы: viewer.template.html/viewer.css/review.js/manifest.json и готовый viewer.html в новом каталоге; `scripts/build-warrior-ultimates-animation-review-v1.mjs` проверяет SHA исходников и собирает файл.11 исходных клипов: тяжёлые front-жесты/VFX новых ульт, архивный Banner с сохранёнными playback-исключениями, текущие north-Stomp/Throw/Block от ячейки4 и Idle. North reuse и NW mirror подписаны. Это визуальный просмотр для приёмки, полёт сокращён под карточку, боевой World не симулируется. Новых AI-заданий/приёмок нет; прежние PNG/история/Whirlwind и весь src/public runtime сохранены. Сложная игровая демка предыдущего этапа остаётся отдельно.
+
+Проверки: `npm.cmd run check` **PASS,161 файл/1165 unit tests**, types/lint/build, exit0, `.tmp/warrior-ultimates-animation-check.log`. Новые browser **2/2 PASS**,3.4с: копия только одного HTML в другой папке, offline:true, HTTP-запросов0, все24 направленных представления, уникальные Canvas-кадры, freeze/75ms-step, focus, VFX toggle/скорость и390px. Лог `.tmp/warrior-ultimates-animation-e2e.log`;8 PNG в `screenshots/warrior-ultimates-animation-review-v1/`, три общих набора и mobile focus просмотрены. Runtime SHA/source verifier и diff-check прошли. Прежнее предупреждение Vite о крупных chunks остаётся; повторный production E2E не нужен для этого просмотра и не запускался.
+
+Блокеров нет. Далее — открыть новый viewer.html двойным кликом и выбрать/оценить анимации. Новых done/commit/push/deploy нет.
+
+# 2026-11-13 — исправлен запуск демки Warrior через file://
+
+Пользователь открыл относительный viewer.html напрямую; прежний HTTP-only iframe `/` и module-script не позволяли загрузить игру. Исправлены `art/generated/warrior-ultimates-gameplay-review-v1/viewer.html/js/css`: обычный defer-script, iframe получает src только при HTTP, file:// проверяет локальный сервер и переходит к рабочей странице. Если сервер недоступен или не отвечает4с, показана инструкция вместо вечной загрузки.
+
+Рядом добавлены `start-demo.cmd` и `start-demo.mjs`: двойной клик запускает/переиспользует Vite текущего проекта на127.0.0.1:5173 и открывает демку. Helper проверяет package.json/название страницы и не заменяет чужой сервер; Windows settings/ExecutionPolicy не меняются. `--check-only` проверен на действующем5173 и с запуском нового5188; новый тестовый процесс остановлен, исходный сервер сохранён. Это запуск через локальный сервер, не новая offline-копия игрового bundle.
+
+`npm.cmd run check` **PASS:161 файл/1165 unit tests**, types/lint/build, exit0; `.tmp/warrior-ultimates-file-check.log`. Browser **4/4 PASS**,12.9с: настоящий file:// → HTTP → реальное применение копья; имитация недоступного сервера с инструкцией без ошибочного iframe; оба прежних desktop/mobile-sized сценария управления демкой. Лог `.tmp/warrior-ultimates-file-e2e.log`; скриншоты запуска и fallback в `screenshots/warrior-ultimates-file-launch/` просмотрены, JS errors0. `verify-warrior-ultimates-v1` и `git diff --check` прошли. Весь src/public runtime, механики, ассеты и SHA proofs сохранены; отдельный production E2E для этого исправления не повторялся. Прежнее предупреждение размера Vite chunks остаётся.
+
+Блокеров нет. Далее — повторное открытие того же viewer.html и пользовательская приёмка ультимейтов; при выключенном сервере запускать соседний start-demo.cmd. Новых done/commit/push/deploy нет.
+
+# 2026-11-13 — Earthbreaker / Spear of Ruin: обе ульты в игре, демка на приёмку
+
+Реализованы две оставшиеся ульты Warrior с body/VFX-анимациями. При30 уровне после5:00 предлагаются три карты Banner/Earthbreaker/Ruin; первая зарядка10/10, затем10 успешных Dash. Earthbreaker: три ветви280px,4 волны по100 урона через0.18с, одно попадание за волну при пересечении ветвей, общий boss/Guardian cap16%maxHP. Ruin: swept-копьё560px/440px/с/радиус16px,420 урона каждой цели один раз, финальный удар140/48px по новым целям, общий cap18%maxHP. Урон начинается на контакте0.54с. Замах удерживает движение, после выпуска можно идти; автоатаки/Dash возвращаются после body-жеста. Pending Cleave/Throw/активный Dash отменяются. Два новых damage-source входят в статистику; kill/XP/score идут через настоящий World.
+
+Арт:47 архивных RGBA-кадров, один атлас2048×972; источник `warrior-animation-review-v1` с прежними Earthbreaker A/Ruin B. Front — тяжёлые жесты/VFX на текущей приёмке, N/NE — принятые north-stomp/north-throw от ячейки4, NW зеркало, с синхронизацией контактной позы. Новые северные генерации не заявляются; новых AI-заданий нет. Исходники и южный Whirlwind сохранены. Программные контакты/осколки обозначены отдельно.
+
+Основные файлы: `ultimates/WarriorUltimates.ts`, `art/WarriorUltimateArt.ts`, `warriorUltimatesPack/Manifest`, config/UltimateSystem/World/ScoreSystem/types, WarriorHeroAnimation/GameArt/UltimateArt, UI-карты/эмблемы. Один тяжёлый снаряд и максимум12 сегментов,2Image+1Graphics; pause/expiry/death/restart без повторных попаданий. Builder/verifier: `scripts/build-warrior-ultimates-v1.mjs`, `verify-warrior-ultimates-v1.mjs`. Scope453:15 изменённых/6 новых,438 прочих защищены SHA; все прежние proofs сохранены с явно проверяемым overlay.14 inventory-assertions в13 старых тестах учитывают шесть новых файлов, проверки не отключены.
+
+**Демка:** <http://127.0.0.1:5173/art/generated/warrior-ultimates-gameplay-review-v1/viewer.html>. Настоящая игра в iframe; три ульты/три настоящие карты,8 направлений,¼×/½×/1×, пауза и шаг1/60с, повторный заряд, неподвижные манекены/босс/Guardian. Входящий урон отключён только контроллером просмотра, рекорды не пишутся. DEV-only широкая камера показывает весь путь и финальное попадание. Обычные production-камера/меню прежние. Подробности: `docs/classes/warrior/ULTIMATES_GAMEPLAY_V1_REPORT.md`.
+
+Финальный `npm.cmd run check` **PASS:161 файл/1165 unit tests**, types/lint/build, exit0; `.tmp/warrior-ultimates-check-final.log`. Общий DEV-регресс **24/24 PASS**,2.7мин (Mage-ульты, Banner/Block/moving skills/Berserk и новые ульты), `.tmp/warrior-ultimates-regression.log`. После расширения камеры — финальный новый DEV **6/6 PASS**,1.0мин, `.tmp/warrior-ultimates-e2e-final.log`. Production **13/13 PASS**,1.1мин, exit0: оба героя/обе локации, атаки/pause/resize/controller, локальные новые ассеты, отсутствие DEV-harness; `.tmp/warrior-ultimates-production.log`. Прямое применение новых ульт через карты/Q проверено DEV на настоящем World/Canvas.47 кадров source↔atlas RGBA-identical, SHA остальных438 runtime-файлов совпадают.
+
+Сохранены36 PNG и JSON в `screenshots/warrior-ultimates-v1/`: все направления,1280/390/844, две демки, восемь дополнительных полных кадров с концом пути; ключевые front/north/mobile и финальные demo-кадры просмотрены. JS errors0 в новых сценариях. `git diff --check` прошёл. В ходе проверки исправлены точность окончания копья, ожидание рендера в тесте и iframe-пауза, прокручивавшая родителя между pointerdown/pointerup. Предупреждение Vite о размере chunks прежнее.
+
+Технических блокеров нет. Длинный баланс15–20мин, физический телефон/high-DPR/длительный VRAM soak не проверялись. **Следующее — пользовательская художественная и игровая приёмка** обоих ультимейтов и начальных чисел; новую комбинацию анимаций не объявляем принятой. Новых done-маркеров, commit/push/deploy нет.
+
+# 2026-11-13 — Berserk: спринт после рывка; восстановлена история трёх ульт
+
+По запросу пользователя Berserk теперь после завершения Dash ускоряет движение на **30/35/40%** на I/II/III ранге, вместе с прежними бонусами урона/CDR на2 игровые секунды. Повторное применение обновляет один баф без накопления; пауза замораживает время. Базовая скорость и сам Dash прежние. Бонус работает через BuffSystem, включая существующее умножение с Haste. Карточка показывает параметры текущего ранга, HUD-подсказка упоминает скорость.
+
+Файлы runtime: `src/game/config/mobilityUpgrades.ts`, `src/game/systems/MobilitySystem.ts`, `src/ui/upgradeCards.ts`, `src/ui/components/BuffDock.vue`. Проверки: расширенные `mobility-specializations.test.ts`, `upgrade-cards.test.ts`, актуализирован точный старый balance-hotfix snapshot; новые `berserk-sprint-scope.test.ts`, `berserk-sprint.spec.ts`. Отдельный baseline453/overlay4 в `docs/verification/berserk-sprint-v1/` защищает449 прочих runtime-файлов. Исторические proofs не переписаны; их verifier/helper учитывают проверенный поздний overlay через `scripts/berserk-sprint-scope.mjs`.
+
+Финальный `npm.cmd run check` **PASS:159 файлов/1154 unit tests, typecheck/lint/build, exit0**, лог `.tmp/berserk-sprint-check.log`. DEV E2E **2/2 PASS**,1280×720 и390×844: настоящие карты/Space, движение с множителем1.3, пауза, expiry, чистый restart/listeners, JS errors0; `.tmp/berserk-sprint-e2e.log`. Сохранены4 PNG (2Canvas+2HUD) в `screenshots/berserk-sprint-v1/`; оба полных кадра с настоящим Canvas просмотрены. `git diff --check` затронутых tracked-файлов прошёл. В первом browser-прогоне Space был отправлен до завершения анимации выбора карты; тест исправлен ожиданием закрытия модального окна. В первом полном check старое точное ожидание конфигурации не включало berserkSpeed; после обновления все1154 прошли. Production E2E и длительный баланс отдельно не запускались; предупреждение Vite о размере chunks прежнее.
+
+По `WARRIOR_APPROVAL_V1.md` восстановлен принятый набор ульт: **War Banner A «Знамя авангарда»**, **Earthbreaker A «Три ветви разлома»**, **Spear of Ruin B «Таранное копьё»**. В игре пока только Banner; два остальных — принятые художественные концепты, боевые параметры не реализованы. Блокеров нет. Далее — пользовательская проверка спринта и отдельное согласование игровой реализации двух оставшихся ульт. Новых генераций, done-маркеров, commit/push/deploy нет.
+
+# 2026-11-13 — Warrior: ширина копья, ноги, Shield Block/Absorb и лечебное знамя
+
+Копьё: полоса попадания 8→28px, масштабируется площадью, размер сохраняется в projectile; 3–7 целей и один удар на цель. Run-низ добавлен к Stomp/Throw/Block/Charge; Whirlwind оставлен цельным. Shield Block перехватывает вражеские swept-projectiles и даёт отдельный Absorb 20–40% maxHP I–V до конца блока, без накопления при refresh. Перехват не расходует Absorb; урон после брони/mitigation сначала тратит запас, затем HP. HUD показывает новый запас.
+
+War Banner из прежнего арт-концепта теперь работает как ульта Warrior на Q: 15с, радиус 140px, 10% эффективного maxHP/игровую секунду внутри зоны, без overheal/накопления вне зоны. Уровень30 + время5:00, три разных выбора (Banner +2 улучшения), первый заряд полный, затем10 успешных Charge. Mage-ульты изолированы. Принятый статический Banner A object скопирован побайтно; граница зоны программная. Новых AI-заданий нет, прежние public PNG сохранены.
+
+Файлы: `WarBanner.ts`, `WarBannerArt.ts`, object PNG; `warriorAbilities/warrior/World/types`, `WarriorMovingCleaveArt`, `UltimateSystem/UltimateArt/GameArt`, `ultimates/UpgradeSystem`, UI-карты/эмблемы. Scope baseline450: 15 изменённых /3 новых runtime-файла, 435 прочих защищены SHA. Старые proofs сохранены.
+
+Check PASS: 158 файлов /1147 unit tests, types/lint/build, exit0. Финальный DEV **20/20 PASS**, 2.2мин: новые механики, три ракурса остальных навыков, восемь направлений Cleave, pause/restart, реальные карты/Q/исцеление, Absorb/projectile и mobile390. Production **13/13 PASS**, 1.2мин, exit0: оба героя/обе локации, атаки/pause/resize/controller и локальные ассеты без DEV-harness; `.tmp/warrior-buffs-v4-production-final.log`. Ошибок JS нет. Сохранены34 PNG (33 Canvas +1 UI) в `screenshots/warrior-buffs-v4/`; ключевые кадры и увеличенные фрагменты просмотрены. Подробности: `docs/classes/warrior/BUFFS_V4_REPORT.md`.
+
+Блокеров нет. Следующее — пользовательский забег и настройка баланса по отзывам. Новых done/commit/push/deploy нет.
+
+
+# 2026-11-13 — Cleave: урон в контакт меча, бег ног во время атаки
+
+Исправлен ранний урон: `cleave` начинает настоящий World-swing, `tickCleave` наносит один удар по текущему конусу только в hitAt. Урон/смерть/score/XP до контакта не меняются. `WarriorHeroAnimation` читает тот же swing без очереди и поздних replay. C1/C3/Heavy/skill Cleave используют общий contact-frame из принятых манифестов; длинные clips укладываются в cooldown. Charge/defeat/teardown отменяют pending-hit, пауза замораживает оба тайминга.
+
+Новый `WarriorMovingCleaveArt`: attack-верх + Run-низ по фактической дистанции; все восемь направлений и зеркала, один кеш CanvasTexture / максимум один Image ног, явный cleanup. Меч/щит и baked-slash сохранены при маскировании ног. Новых AI-заданий нет; PNG/атласы всех принятых исходников не изменены. Scope нового baseline: 6 изменённых / 2 новых runtime-файла, остальные 442 из 448 защищены SHA.
+
+Check PASS: 157 файлов / 1140 тестов, typecheck/lint/build, exit 0. Новый DEV Cleave 12/12; общий целевой регресс 20/21 + успешный неизменённый повтор 1/1 (единичный timeout NW Charge, подробности в отчёте, не непрерывный 21/21). Проверены настоящий lethal-hit, движущиеся ноги, четыре варианта, 8 направлений, mobile390, pause/restart/listeners/textures; JS errors 0. Реальные 34 Canvas PNG: `screenshots/warrior-cleave-sync-v3/`, ключевые кадры и увеличенные фрагменты просмотрены. Двухминутный seeded pilot с реальными upgrades/Charge и дистанцией меча проходит; прежний instant-touch-kill пилот требовал нового управления, история записана.
+
+Production: **13/13 PASS**, 1.2мин, exit 0; оба героя/обе локации, реальные атаки, pause/resize/controller1280/390, локальные ресурсы/harness отсутствует. Лог `.tmp/warrior-cleave-v3-production.log`. Отчёт: `docs/classes/warrior/CLEAVE_SYNC_V3_REPORT.md`. Блокеров Cleave нет. Следующее — пользовательская проверка нового забега и отдельная настройка ритма по отзывам. Done/commit/push/deploy нет.
+
+
+# 2026-11-13 — все принятые навыки Warrior v5 подключены в игру
+
+Явная приёмка всей последней демки зафиксирована: registry +12, pool v14, точные рецепты и ручные правки добавлены в журнал, прежние маршруты сохранены в истории. Новых AI-заданий нет. Все 12 клипов / 48 сочетаний используют финальные пиксели v5; N/NE direct от ячейки 4, NW mirror. Южный пользовательский Whirlwind сохранён.
+
+Семь production-атласов, `warriorSkillsManifest`/pack/`WarriorSkillArt`, интеграция с `WarriorHeroAnimation` и GameArt. Реальные Whirlwind/Stomp/Block/Charge играют принятые клипы; Stomp показывает принятую трещину. Три автоатаки сохранены, каждый четвёртый жест — skill Cleave. Старый Bladestorm заменён физическим Piercing Throw: замах, пробитие 3–7 разных целей, общий cap/pool, отмена Charge/teardown. Названия, описания, rank-бонус и эмблема карт обновлены. Specials занимают один жест за раз; обычный урон Cleave продолжается. Все решения описаны в `docs/DECISIONS.md`.
+
+Проверки: `npm run check` PASS, 157 файлов / 1137 тестов, types/lint/build, exit 0. Source/atlas RGBA совпадают во всех 156 кадрах; 48 маршрутов и все playback-позы проверены. Новый scope защищает 417 прочих runtime-файлов, допускает 13 изменённых / 18 новых. DEV 7/7; HD-regression отдельно 2/2 после замены устаревшего ожидания одновременного Iron Skin на ожидание реального Shield Block. Настоящие Canvas 1280×720 и 390×844 просмотрены: `screenshots/warrior-skills-runtime-v1/` (18 направленных skill PNG + mobile flight). Пауза, отмена замаха, реальный урон копья, обе локации/150 мобов и restart без лишних listeners/textures проверены; JS errors 0.
+
+Production E2E: **13/13 PASS**, 1.1мин, exit 0; Mage/Warrior обе локации, реальные атаки, пауза/resize, controller 1280/390, локальные ассеты, harness отсутствует. Лог `.tmp/warrior-skills-v1-production.log`. Отчёт: `docs/classes/warrior/SKILLS_RUNTIME_V1_REPORT.md`. Блокеров нет. Новых done-маркеров, push/deploy нет. Следующее — обычный игровой прогон принятого набора и отдельная настройка длительного баланса по обратной связи.
+
+
+# 2026-11-12 — щит северного Whirlwind исправлен в Aseprite, v5
+
+Стальная лицевая часть с жёлтой полосой вместо красной с эмблемой: 574 пикселя в 3 кадрах разворота. 13 поз × 75 мс, меч, слеш, alpha и пиксели вне щита сохранены. Два нативных слоя (защищённый оригинал + отдельная правка); 143 прочих body-кадра совпадают с v4. Южный эталон не изменён.
+
+Демка: `art/generated/warrior-skills-directions-review-v5/viewer.html`, сразу Whirlwind. Исходник: `art/generated/warrior-skills-directions-review-v5/aseprite/north-whirlwind.aseprite`. N/NE direct, NW mirror. Маски, Lua и receipt сохранены. Новых AI-заданий нет.
+
+Исправленный северный Throw v4 принят по текущей реплике, registry 46/pool v13; новый фронтальный Throw отдельно остаётся на оценке. Новая текстура Whirlwind pending, его движение было принято ранее. Журнал и гайд обновлены.
+
+Source PASS: 156 кадров, 995 защищённых файлов без изменений, alpha/outside/clipping 0. Browser PASS: 48 сочетаний, все 156 кадров, реальный Canvas mirror, file://, mobile390, pause/step/cleanup; errors 0. Скриншот `screenshots/whirlwind-eight-directions-1440.png` внутри демки и native-превью просмотрены. `npm run check` PASS: 156 файлов/1131 тест, types/lint/build. Отчёт: `docs/classes/warrior/ASEPRITE_WHIRLWIND_SHIELD_V5_REPORT.md`.
+
+Блокеров нет; далее — оценка щита Whirlwind. Runtime/баланс не менялись, новых done-маркеров нет.
+
+# 2026-11-12 — Aseprite: щит северного Throw исправлен, v4
+
+По просьбе пользователя правка выполнена в Aseprite Lua API. Сталь и одна жёлтая полоса
+по южному образцу заменяют старую эмблему. Изменено1104пикселя в6кадрах, outside/alpha0;
+13поз и75мс сохранены. N/NE напрямую,NWmirror. Нативный исходник с двумя слоями:
+`art/generated/warrior-skills-directions-review-v4/aseprite/north-throw.aseprite`.
+Оригинал13cels защищён, правка6cels отдельным editable-слоем;PNG/sheets экспортированы.
+
+Демка: `art/generated/warrior-skills-directions-review-v4/viewer.html`, сразу Throw.
+Прочие143кадра совпадают сv3. Registry45 unchanged,poolv12 pending update;новых приёмок нет.
+Новых AI-заданий нет; ручная правка/рецепт Aseprite записаны в журнал и гайд без выдуманного prompt.
+Source PASS:156frames,731protected files unchanged,clipping0. Browser PASS:48combos,
+156frames,realCanvas mirror,pause/step,mobile390,offline/cleanup;errors0. Aseprite previews и
+настоящие Canvas PNG просмотрены. Check PASS:156файлов/1131тест,types/lint/build.
+Отчёт: `docs/classes/warrior/ASEPRITE_THROW_SHIELD_V4_REPORT.md`.
+Блокеров нет. Далее — оценка Throw и ранее оставленных на приёмке доработок.
+Runtime/баланс не менялись. Done/commit/push/deploy нет.
+
+# 2026-11-12 — приёмки Whirlwind/Block/Charge и навыки v3
+
+Зафиксирована приёмка северных Whirlwind,Shield Block,Charge: registry45, poolv11.
+Старый Throw отозван и исключён из действующих маршрутов вместе с прежним VFX.
+Готова новая демка `art/generated/warrior-skills-directions-review-v3/viewer.html`.
+
+Северный Cleave:691guarded pixels щита в2кадрах, сталь/жёлтая полоса; outside/alpha0,
+движение и слеш сохранены. Северный Stomp перегенерирован; выбранr2 с конечной позой
+на14px дальше вверх-вправо и двойным ударом. Новые Throw из spear-ready поз: north и
+front-r3, последний без доставания меча/огненного артефакта. Все8проекций доступны.
+Принятые104body-позы сохранены; всего156кадров/12клипов/48сочетаний.
+
+Source/PNG/mirror PASS,668защищённых файлов без изменений,clipping0.
+Browser PASS:48сочетаний,156кадров,actualCanvas mirror,pause/step,390px/file://,cleanup;
+скриншоты и контакты просмотрены. Check PASS:156файлов/1131тест,types/lint/build.
+Исправлена типизация удаления style в прежнем E2E; соответствующий тест1/1PASS.
+Prompt/Enhance/seed/job/First/Last и приёмки записаны в журнал и гайд.
+Отчёт: `docs/classes/warrior/SKILLS_DIRECTIONS_V3_REPORT.md`.
+Далее — оценка исправленного северного Cleave,Stomp и обоих Throw. Блокеров нет.
+Игра/баланс не менялись; done/commit/push/deploy нет.
+
+# 2026-11-12 — синхронный слеш, быстрые автоатаки, Charge и демка навыков v2
+
+Исправлен второй процедурный Cleave из WarriorMagic: его фаза теперь приходит
+из текущего body-взмаха, без раннего/повторного слеша по World.effect.
+Автоатаки75→60мс (1.25×), все позы сохранены. При настоящем Charge активная/ожидающая
+автоатаки отменяются, играет старый принятый Charge9×20мс в течение рывка180мс.
+Пауза/перезапуск/отсутствие stale replay проверены. Урон и cooldown не менялись.
+
+Демка: `art/generated/warrior-skills-directions-review-v2/viewer.html`.
+Шесть навыков ×8 направлений;152 body-кадра. Шесть новых северных проб от правильной
+стойки№4,78 PNG,PixMiniMax/Enhance/12. N=NE direct,NWmirror. Принятые front-источники,
+старые копьё/Charge и эталон Whirlwind сохранены. Poolv10,registry42 без изменений;
+новые северные навыки пока НЕ приняты. Prompt/Enhance/args/seed/job записаны в гайд и журнал.
+
+check PASS:156 файлов/1131 тест,types/lint/build. DEV E2E3/3,production8/8 PASS.
+Демо browser PASS:48 сочетаний,152 кадра,realCanvas mirror,pause/step,390px,file://,cleanup.
+Source/RGBA SHA PASS,clipping0. Скриншоты просмотрены: `screenshots/warrior-combat-sync-v2/`
+и `art/generated/warrior-skills-directions-review-v2/screenshots/`.
+Scope7changed+2added,421 файл без изменений. Отчёт: `docs/classes/warrior/COMBAT_SYNC_SKILLS_REVIEW_V2.md`.
+Блокеров нет. Следующее — художественная приёмка шести новых северных навыков.
+Done-маркеров,commit/push/deploy нет.
+
+# 2026-11-12 — принятые Idle/Run/автоатаки Warrior интегрированы
+
+По явной приёмке всей демки v5 подключены 10 клипов во всех восьми проекциях.
+Warrior выбирается в меню и запускается в настоящем забеге. Сохраняются три варианта
+обычного Cleave-удара C1/C3/Heavy; урон, cooldown и движение World не менялись.
+N/NE напрямую от ячейки4, NW зеркально; W/SW — зеркало front.
+Idle 13×120мс, Run/C1/C3 13×75мс, Heavy 17×75мс. Короткие исходники удерживают
+позы по принятому frameMap. Все 118 RGBA кадров и 138 playback-ссылок совпадают с v5.
+
+Добавлены WarriorHeroAnimation/warriorHeroPack/manifest и 5 игровых atlas-страниц,
+сборщик/верификатор. Пауза сохраняет кадр, свежий run сбрасывает жесты; очередь ≤1.
+Поднята полоска HP и поправлена тень под новые ступни. Production skill art отдельно.
+Registry42/poolv9, точные шесть новых промптов/Enhance/seed/job/args записаны в гайд и журнал.
+Пользовательский Whirlwind и приостановленная неверная северная серия не менялись.
+
+check PASS: typecheck/lint, 154 файла /1126 тестов, build. DEV E2E 7/7 PASS;
+окончательная production-сборка 8/8 PASS (47.8с), exit0.
+Скриншоты настоящего Canvas просмотрены: `screenshots/warrior-hero-v1/`.
+Отчёт и production-прогон: `docs/classes/warrior/HERO_RUNTIME_V1_REPORT.md`.
+Scope SHA: 7 изменённых +13 новых runtime файлов, остальные408 без изменений.
+Блокеров нет; done-маркеры не добавлялись. Далее — отдельная подготовка навыков
+для правильной северной стойки. Commit/push/deploy нет.
+
+# 2026-11-12 — единый цикл бега и переделанные северные автоатаки, v5
+
+По запросу пользователя создана новая ревизия
+`art/generated/warrior-movement-attacks-review-v5/viewer.html`.
+Южный бег сгенерирован заново, северный бег сохранён. Весь Run: 13 исходных
+кадров × 75 мс, цикл 975 мс, одинаковая фаза во всех восьми проекциях,
+переход 12 → 0 без добавленной задержки. Демо открывается сразу в беге.
+
+Перегенерированы северные C1/C3/тяжёлый C от стойки №4. N/NE напрямую,
+NW зеркально. Более компактные forward/up-right промпты, explicit back-view
+caption, PixMiniMax/Enhance/12 + входной. Всего четыре новых job, 52 PNG,
+котировка 4.20 generations. C3 с ярким голубым следом подписана в демке.
+Новых приёмок нет; registry не изменён, pool v8 обновляет pending review.
+
+Число кадров выровнено по типу: Idle/Run/C1/C3 — 13 во всех проекциях,
+тяжёлый C — 17. Старые принятые позы сохранены целиком, короткие последовательности
+растянуты удержаниями; новые пиксели не интерполируются. FrameMap явно
+связывает 138 playback-кадров со 118 исходными. PNG исходников и выровненные
+PNG доступны отдельно, в карточках видны оба счётчика.
+
+Source verify 5/5 PASS: равный счёт/ритм, все исходные индексы, все RGBA/SHA,
+native/mirrored/source PNG, 3083 старых файла, registry без изменений,
+касание краёв — 0. Browser 7/7 PASS: 40 сочетаний, все 138 кадров, реальный
+Canvas N=NE/NW mirror, живой цикл Run 12 → 0 в общей фазе восьми фигур,
+пауза, шаг, source-toggle, once/restart, фон бега, 390px/file:// и cleanup;
+JS/HTTP errors — 0. Реальные Canvas PNG просмотрены:
+`screenshots/run-unified-loop-1440.png`, `attack-c3-all-1440.png`.
+`npm run check` PASS: typecheck, lint, 152 файла / 1119 unit tests, build; exit 0.
+После правки подписи сохранённого северного референса повторены browser
+и целевой ESLint. Источники v4 и пользовательский PNG не менялись.
+Следующее — оценка нового бега, северных атак и общего ритма пользователем.
+Runtime/баланс не менялись, done-маркеров нет.
+
+# 2026-11-12 — кадр 4 принят как новая северная база; idle/run/autoattack review
+
+Пользователь выбрал 4-й кадр `art/warrior/8-proections.png`: N/NE напрямую,
+NW зеркало. Извлечён точно crop x 0, y 192, w 192, h 192 из 3×3/576×576 без
+ресэмплинга. Исходный лист сохранён побайтно. Registry 36, pool v7: новая
+статическая база принята, новые анимации пока не приняты. Старые неверные
+северные auto-routes сохранены вsupersededNorthAutoAttackPool и приостановлены;
+прежняя серия северных способностей помечена suspended из-за неверного входа.
+Front-routes/все прежние PNG сохранены. AGENTS и гайд теперь явно задают
+N/NE direct, NW mirror; прежняя обратная схема только история.
+
+С новой стойки сделаны 5 PixMiniMax+Enhance/12 кадров: Idle, Run, C1, C3, тяжёлыйC,
+по 13 кадров=65. Jobs/seed/short+expanded prompts сохранены;5.25 generations,
+повторных попыток нет. Front 49 кадров из принятых Idle/Run/трёх автоатак
+переиспользованы для пяти южных/боковых направлений. Итого 10 клипов/114 кадров.
+
+Демо: `art/generated/warrior-movement-attacks-review-v4/viewer.html`.
+Компас 8 проекций, Idle/Run/Attack, вариантыC1/C3/C, одна проекция крупно,
+центральный выбранный кадр 4, source-frame toggle, pause/step/scrub/speed/zoom,
+фон/скролл в беге, полные контакты/PNG выбранного отражения/промпты.
+
+Sourceverify 5/5 PASS: exactcrop 4, 114 bodyRGBA↔atlas/native/mirrored sheets,
+порядоккадров, 2876 старыхфайлов, frontpoolunchanged, registry+1 статическаябаза,
+старыйnorthархивирован, sourceclipping 0. Browser 6/6 PASS:40 комбинаций
+режимов/направлений/атак, все 114 кадров, реальныйCanvasN=NE/NWmirror, циклы,
+пауза/step 120 мс, source-toggle, once/restart, фонбега, 390 px/file://, cleanup, JS/HTTP0.
+ПросмотреныPNG `screenshots/idle-start-all-1440.png`, `run-c1-all-1440.png`,
+`attack-c3-all-1440.png`; сняты остальные атаки и крупные проекции.
+`npm run check` PASS: typecheck, lint, 152 файла / 1119 unit tests, build; exit 0.
+Следующее: пользователь выбирает idle/run/атаки из новой северной базы;
+затем можно возвращаться к северным способностям. Новые ролики не приняты
+автоматически, runtime и баланс не менялись, done-маркеров нет.
+
+# 2026-11-12 — северный исходник признан некорректным
+
+Пользователь указал, что щит в выбранном северном референсе смотрит лицом
+к камере. Выбор исходника ассистентом ошибочен. Этот PNG не использовать
+для новых северных генераций; северная серия остаётся непринятой и требует
+корректной северной стойки. В гайде добавлено явное предупреждение.
+По запросу выданы обычный model-b.png64×80 и его нейтральная версия192×192.
+PNG и принятые фронтальные анимации не изменялись, новых генераций нет.
+Следующее: получить или подготовить корректную северную стойку перед
+повторением северных навыков. Проверка записи UTF-8 выполнена.
+
+# 2026-11-12 — приёмка Stomp/Block/старых копья и рывка; северные проекции шести навыков
+
+Пользователь принял новые Ground Stomp и Shield Block, выбрал старое физическое
+деревянное копьё и старый рывок. По шести навыкам текущие источники разрешено
+переиспользовать для S/SW/W/E/SE; W/SW зеркалируются. Registry35, pool v6: четыре
+явные приёмки добавлены, существующие записи и автоатаки C1/C3 сохранены.
+Точные промпты/Enhance/seed/job/роли внесены в журнал и гайд, включая classic
+animate_image для старых Throw/Charge. Свежая светящаяся проба Throw не выбрана.
+
+Пакет: `art/generated/warrior-north-skills-review-v1/`. Для Cleave, Whirlwind,
+Stomp, Block, Throw, Charge сделано по одной выбранной NW-анимации. N/NW
+используют один источник, NE зеркальный. Все северные результаты пока новые
+пробы для выбора; принятое переиспользование пяти других направлений уже
+сохранено в pool.skills, север отдельно pendingNorthReview.
+
+Северные генерации PixMiniMax+Enhance,12 кадров + входной,Low top-down,NW,
+transparent. Пять имеют одинаковую NW-стойку First/Last. Старое копьё
+воссоздано из одной Pixen-позы с деревянным копьём в First и мечевой стойкой
+в Last. Вихрь после плотного щитового «кокона» перегенерирован с акцентом
+на sword; второй выбран для демо, первый сохранён. Всего7motion jobs+1pose,
+котировка8.35generations. Выбрано78north+74front=152bodyframes; raw166PNG
+включает архив13кадров вихря и подготовленную позу.
+
+Новая оригинальная пиксельная трещина `effects/stomp-crack.png` рисуется
+отдельно позади ног после приземления Stomp, затем затухает. Принятые body
+не перерисованы. Демо:8 направлений,6 карточек/фокус, native/mirrored PNG,
+полные контакты/промпты,pause/step/scrub/speed/background,crack toggle,
+перемещение Charge и опциональные прежние VFX копья/Charge A/B.
+
+Source verify5/5PASS: exact source↔atlasRGBA/SHA, padding без ресэмплинга,
+mirrored cells без смены порядка, crack,2604 старых файла, четыре приёмки,
+autoAttack unchanged, source clipping0. Browser7/7PASS:8×6маршрутов,152кадра,
+реальные Canvas NW/NE пиксельно-зеркальны, crack timing/toggle/fade,
+Charge6фаз/ThrowVFX,пауза/step/speed/restart,390px,file://,cleanup,JS/HTTP0.
+`npm run check` PASS:typecheck/lint/152файла/1119unit tests/build,exit0.
+Просмотрены реальные PNG `screenshots/north-west-all-1440.png` и
+`accepted-stomp-with-crack-1440.png`; сняты все навыки по группам и NE390px.
+
+Гайд/журнал/DECISIONS/TEST_REPORT обновлены. Следующее — оценка пользователем
+северных источников (у Cleave отдельно проверить след влево-вниз) и новой
+текстуры трещины. Никакие северные пробы автоматически не приняты.
+Runtime и баланс не менялись; новых done-маркеров нет.
+
+# 2026-11-12 — новые PixelLab-пробы: Stomp, Block, бросок копья
+
+Запущены вместе по пользовательскому рецепту: PixMiniMax + Enhance, 12 кадров,
+Low top-down, South, прозрачность, одна дефолтная стойка 192×192 в First/Last.
+По 13 кадров, всего 39; три задания завершились без повторных попыток.
+Jobs и seed сохранены в `art/generated/warrior-skill-recipe-review-v1/source/jobs/`.
+Котировка — 3.15 generations. Сохранены короткие и реальные expanded prompts.
+
+Демо: `art/generated/warrior-skill-recipe-review-v1/viewer.html`. Три карточки
+рядом, фокус, pause/step/scrub/repeat, speed/zoom/background, полные контакты,
+исходная стойка, тексты Enhance и три PNG-листа 4×4/768×768. Кадры без
+дорисовки и ресэмплинга; три пустые ячейки PNG не воспроизводятся.
+Stomp мягкий и без волны; Block поднимает щит; Throw создал светящийся снаряд
+с изменением формы оружия. Особенности подписаны, новые пробы не приняты.
+
+Проверки: source verify 3/3 PASS, 39 кадров source ↔ atlas/sheet RGBA/SHA,
+2530 сохранённых файлов, касание краёв — 0. Browser 4/4 PASS: все кадры,
+пауза Canvas с равенством байтов, фокус, контакты, PNG-ссылки, 390px, file://,
+one-shot/restart/step, zoom/background/speed, cleanup; JS errors — 0.
+`npm run check` PASS: typecheck, lint, 152 файла / 1119 unit tests, build; exit 0.
+Скриншоты просмотрены: `screenshots/comparison-1440.png`,
+`throw-action-1440.png`; также сняты Stomp, Block и 390px.
+Гайд, журнал, DECISIONS и TEST_REPORT обновлены. Принятый пул, эталон вихря,
+предыдущие пакеты и production сохранены. Следующее — выбор пользователя
+и доработка выбранных движений. Новых приёмок и done-маркеров нет.
+
+# 2026-11-12 — пользовательский SOUTH Whirlwind принят как эталон; демка всех навыков v3
+
+Пользователь отменил продолжение удара по щиту, вернулся к Whirlwind и явно
+выбрал собственный `art/generated/warrior/animation/whirlwind/whirlwind.png`
+как эталон. Оригинал768×768 не изменён;13 занятых ячеек192×192 импортированы
+без ресэмплинга,3 пустые ячейки не считаются кадрами. SHA исходника:
+`f0fb133643cb919c29dc331c4864db6b83f31111a6efcd6ee5331174644ba381`.
+
+Точный короткий промпт, режим PixMiniMax, Enhance,12кадров,first=last neutral,
+Low top-down/South/transparent записаны в `docs/art/PIXELLAB_GENERATION_GUIDE.md`
+и PIXELLAB_PROMPT_JOURNAL. AGENTS теперь требует читать этот гайд перед Warrior
+генерациями. Expanded prompt/seed/job ID/FPS пользовательского результата
+неизвестны; PNG не содержит текстовых метаданных, значения не выдумывались.
+Принята только южная начальная/конечная стойка. Registry31, pool v5;
+автоатаки и принятый Cleave сохранены.
+
+`warrior-whirlwind-user-recipe-v5/`: эталон S + две НЕ принятые пробы того же
+короткого рецепта с Enhance,39 кадров. Оба реальных expanded prompt/seed/job
+сохранены. Verify4/4 и browser3/3PASS,2425 старых файлов без изменений;
+две целевые записи registry/pool обновлены по явной приёмке.
+
+`art/generated/warrior-skills-review-v3/viewer.html`: общая демка, по умолчанию
+пользовательский эталон. Cleave A17кадров и Whirlwind13кадров показаны без
+второго VFX. Остались Ground Stomp, Shield Block, Piercing Throw — старые
+жесты/VFX для доработки, не принятые финальные анимации. Charge A/B и три
+ультимейта сохранены как отдельные пробы. Всего22клипа/218исходных кадров/9атласов.
+Verify3/3 и browser7/7PASS: все9навыков,принятые17+13кадров,Charge6компонентов,
+слои/пауза/step/контакты/390px/file:// и cleanup; JS/HTTPerrors0.
+Скриншоты просмотрены: `screenshots/whirlwind-1440.png`, `ground-stomp-1440.png`,
+`whirlwind-390.png`; остальные навыки также сняты вPNG.
+`npm run check` PASS: typecheck/lint/152файла/1119unit tests/build, exit0;
+новые source-скрипты дополнительно ESLint PASS.
+
+Черновик `warrior-shield-wave-review-v1` остановлен по новому выбору пользователя:
+50исходных bodyframes/28программных waveframes сохранены, verify5/5PASS;
+браузерная проверка черновика не заявляется. Ничего из него не принято.
+Следующее: выбрать и доработать Stomp/Shield Block/Piercing Throw; южный
+Whirlwind не заменять новыми пробами. Production не менялся, новых done-маркеров нет.
+
+# 2026-11-12 — Whirlwind: 2 PixelLab + 2 RetroDiffusion из дефолтной стойки
+
+По новой оценке пользователя F зафиксирован как близкий рабочий референс.
+Создана серия `art/generated/warrior-whirlwind-provider-review-v4/`: PL1/PL2
+по33кадра PixMiniMax, RD1/RD2 по16кадров advanced custom_action. Все запросы
+используют один принятый default-front-192PNG, без подготовки overhead-позы.
+Сохранены98PNGкадров,2originalGIF, промпты/seed/jobs/receipts и полные контакты.
+PL показывается75мс/кадр, RD — исходные150мс; длительность около2.4с.
+
+Демо `viewer.html`: четыре карточки, фокус на одной, pause/step/scrub/loop,
+скорость/масштаб/фон, режимы тело/VFX/оба. Общий старый VFX отключается отдельно;
+обе модели также добавили собственные следы в исходники. Исходные движения
+не вращаются кодом. Особенности PL1/PL2/RD1/RD2 подписаны; новые пробы не приняты.
+
+Первые3RD-запроса завершились502 из-за ошибочных frames_duration75/100;
+параметр означает число кадров. После диагностики и исправления на16 оба
+исправленных задания успешны; история не скрыта. PixelLab6generations, RDplan.
+
+Проверки: npm run check PASS (typecheck,lint,152файла/1119tests,build);
+verify4/4PASS, browser5/5PASS,98body/9VFX,clipping0,
+2164файла сохранены поSHA256; desktop/mobile390/file://Canvas и cleanup.
+Скриншоты: `screenshots/both-1440.png`, `both-390.png`, `*-body-focus-1440.png`.
+Обновлены журнал промптов, DECISIONS, TEST_REPORT и исторический blockerF.
+Следующее: выбор пользователя изPL1/PL2/RD1/RD2, затем доработка выбранного.
+Новых done-маркеров нет.
+
+# 2026-11-12 — Whirlwind F/G: overhead и одноногая опора
+
+По поправке пользователя D/E признаны недостаточными по механике: ракурсы
+меняются, но это не доказывает работу суставов. Созданы две отдельные
+Pixen-стойки по воинуC: меч над шлемом и баланс на одной ноге. По ним выполнены
+по3motion-проходаF/G, с переходом PixMiniMax→animate_image на третьем.
+Все8jobs/160rawPNG сохранены, котировка28generations, activejobs0.
+
+ВыбранFпервый(33кадра): рука работает, но нужная горизонтальная плоскость
+над шлемом НЕ получена ни в одном из3проходов. Это художественный blocker,
+описан вdocs/BLOCKERS.md, подписан вкарточке; дальшеFне генерировался.
+ВыбранGтретий(13кадров): свободная нога заметно разгибается, баланс/поворот
+всё ещё стилизованы. Правильную биомеханику автоматические проверки не
+подтверждают. Ни позы, ни новые анимации не считаются принятыми.
+
+Демка `art/generated/warrior-whirlwind-kinematics-v3/viewer.html` показывает
+F/G и отдельный существующий WhirlwindVFX вокруг персонажа. Слоиbody/VFX/both,
+фокус/pause/75мсstep/scrub/repeat/speed/zoom/background, ссылкина ключевые
+стойки иsourceлисты. При повторе короткийGциклируется по своей длине.
+Тело кодом не вращается; скриптовый поворот применяется только кVFX,
+разделённому на дальнюю/ближнюю части для глубины. Нет World/урона/звука/сохранений.
+
+verify4/4PASS:46bodyframes/2poseframes/9reusedVFX,source↔atlasRGBAexact,
+input=keypose,clipping0,inventory/SHA1955protectedfiles unchanged — runtime,
+8прежнихwarrior-паков иacceptedregistry/pool. Browser5сценариевPASS:
+всекадры/layers/Canvaspausebyte-equal/loop/focus/pose/contact/390px/file:///
+cleanup,JS/HTTP0. Общийcheckexit0:152файла/1119unit,typecheck/lint/buildPASS;
+`.tmp/warrior-whirlwind-kinematics-{check,browser}.log`.7PNG, финальные
+both1440,Gbodyfocus,mobile390 ивсе6motionsourceлиста просмотрены.
+
+В prompt-journal добавлены выводы об артикуляции и ограниченияхfirst/last
+conditioning. Новыхaccepted-записей/пула нет. Технических блокеров нет;
+художественное ограничениеFосталось. Новыхdone/commit/push/deploy нет.
+Следующий шаг — оценкаG пользователем; для строгого overheadF нужна
+отдельная работа с промежуточными ключевыми позами, не четвёртый повтор промпта.
+
+# 2026-11-12 — Whirlwind C как референс, минимальные полные обороты D/E
+
+По запросу пользователя созданы2новыхPixMiniMax-пробы по24новыхкадра:
+Dкороткийслед иEпочтибезVFX. Вход — точный C/raw/24.png, SHA иparentjob
+сохранены. Это статический first/lastPNG и текстовое описание движения C,
+не video-conditioning. Cвыбран какреференс, не какокончательнаяприёмка;
+prompt-journal обновлён отдельнойreference-only записью, acceptedреестр/пул
+неизменны, новых принятыхпромптовне добавляли.
+
+Демка `art/generated/warrior-whirlwind-minimal-v2/viewer.html` показывает
+оригинальныйC безизменений рядомсD/E. Видны профили/спина/возвратлицом,
+основнойоборот заметноспокойнее поVFX. У обоих остаётся краткийслеш
+в начале; это подписано, полностьючистойверсиибезVFX не заявляем.
+Все25sourceкадров каждого сохранены. Новых50PNG/2atlas1024²,
+ещё25кадров/1atlasC читаютсяиз старого пака.2jobs, котировка4generations.
+Сравнение/фокус/pause75мсstep/scrub/repeat/speed/zoom/background/contact,
+HTTP/file://. Нет World/урона/аудио/сохранений; lifecycleочищается.
+
+verify5/5PASS, browser5сценариевPASS;JS/HTTP0,390pxбезoverflow;
+source↔atlasRGBAexact,inputC24exact,Creforder/timing/pivotunchanged.
+SHA/inventory1871protectedfiles unchanged, включая415runtime,7старыхпаков
+иacceptedregistry/pool. Общийcheckexit0:152файла/1119unit,
+typecheck/lint/buildPASS; `.tmp/warrior-whirlwind-minimal-{check,browser}.log`.
+6browserPNG,compare1600,focusE,mobile390 иsourceлистыD/E просмотрены.
+Блокеровнет,activejobs0,новыхdone/commit/push/deployнет.
+Следующийшаг — выбор/правки D/E; только после прямойприёмки пополнить
+журнал точнымprompts/job.
+
+# 2026-11-12 — журнал PixelLab, приёмка Cleave и три пробы Whirlwind
+
+По прямому запросу создан `docs/art/PIXELLAB_PROMPT_JOURNAL.md`:
+рекомендации по реальным проходам,16точныхAI-промптов с параметрами/seed/
+job/source и14записей принятых программныхPNG без выдуманныхпромптов.
+Итого30известныхприёмок воина, история не удаляется. JSON-реестр рядом;
+правило дальнейшего ведения добавлено вAGENTS.md. Повтор регистрации
+добавил0дубликатов, существующие будущие записи реестра сохраняются.
+
+CleaveA принят как навык; C добавлен в пул автоатак из точногоcleave-c-r2.
+Текущий `docs/classes/warrior/APPROVED_ANIMATION_POOL.json`:5autoисточников,
+21directionoption, уфронтальнойгруппыS/SE/E/SW/W по3варианта, уN/NW/NE
+сохранены2прежних. ЗаднегоC нет; W/SW отражаютfrontC. Runtime не менялся.
+
+Новая демка `art/generated/warrior-whirlwind-review-v1/viewer.html`:
+Aровныйоборот, Bбыстрыйдвойной, Cтяжёлыйобратный (названия запросов,
+реальный характер/числооборотов —дляприёмки).3первыхPixMiniMaxjobs,
+75raw/sourcePNG,3atlas1024², котировка6generations, activejobs0.
+Вращение тела и спина/профили видны на просмотренных листах; body+slash
+единымклипом, все25кадров каждого сохраненыбезправок/исключений.
+Сравнение/фокус,75мсstep/scrub/pause/speed/zoom/background/contact,
+HTTP5173/file://, lifecycleRAF/listeners/visibility/pagehide очищается.
+
+Проверки: verify6/6PASS (включаяжурнал/пул), browser5сценариевPASS,
+JS/HTTP0,390px безoverflow. Общийcheck exit0,152файла/1119unit,
+typecheck/lint/build PASS; `.tmp/warrior-whirlwind-{check,browser}.log`.
+6browserPNG; compare1600,focusC,mobile390 ивсе3sourceлиста просмотрены.
+SHA/inventory1756protectedfiles unchanged, включая415runtime и6старыхпаков.
+
+Новые вихри не приняты и вжурнал accepted-промптов не добавлены.
+Блокеров нет. Звуков/новыхdependencies/done/commit/push/deploy нет.
+Следующий шаг — выбор Whirlwind A/B/C, затем пополнение журнала точным job.
+
+# 2026-11-12 — Cleave: три новых фронтальных атаки со слешем
+
+Создан `art/generated/warrior-cleave-review-v1/viewer.html`: Aширокий
+поперечный, Bкомпактныйкосой, Cтяжёлыйсверху. Воин+слеш сгенерированы одним
+клипом, форма дуги свободная по новому запросу, точных180° не требуем.
+Принятая база128² дополнена до192² без ресэмплинга. Выбраны47sourcePNG:
+A17первыйPixMiniMax, B13третийanimate_image, C17второйPixMiniMax.
+
+B/C первые проходы добавляли кольцо под ногами, второй повторил проблему.
+Последний третий проход меняет модель. B выбран без кольца; C третий проход
+хуже сохраняет модель и тяжёлый замах, поэтому оставлен второй с коротким
+кольцом после слеша. Эта особенность подписана, sourceframes не вырезались.
+Все7jobs/111rawPNG сохранены, котировка24generations, activejobs0.
+Новые клипы пока не приняты; production и прежние приёмки не менялись.
+
+Демка:3рядом/одинкрупно, pause/75мсstep/scrub/impact/repeat/speed/zoom/
+background/contact sheets, HTTP5173 иfile://. Нет отдельныхbody/VFXслоёв,
+поскольку это цельные исходники; нет World/урона/звука/сохранений.
+LifecycleRAF/listeners/visibility/pagehide очищается.
+
+Проверки:verify5/5PASS, browser5сценариевPASS, JS/HTTP0,390px безoverflow.
+Все47RGBA source↔atlas точны, selectedclipping0; SHA/inventory1600старыхфайлов
+unchanged, включая415runtime и5warrior-паков. Общийcheck exit0:
+152файла/1119unit,typecheck/lint/build PASS. Логи `.tmp/warrior-cleave-*.log`.
+6browserPNG; compare1600,focusC,mobile390 ивсе3selectedcontact просмотрены.
+
+Отчёт: docs/classes/warrior/WARRIOR_CLEAVE_REVIEW_V1_REPORT.md.
+Технических блокеров нет, новыхdone/commit/push/deploy нет.
+Следующий шаг — выбор A/B/C и доработка конкретного клипа.
+
+# 2026-11-12 — Warrior B: демка существующих анимаций навыков
+
+По запросу пользователя создана отдельная
+`art/generated/warrior-skills-review-v2/viewer.html`: сразу открывает навыки,
+показывает все9семейств/ультимейтов, ChargeA/B start/travel/arrival, слои
+body/VFX/both, паузу/step/scrub/release/speed/zoom/background и28sourceлистов.
+Cleave использует принятыеC1/C3 и8routesV3; остальные8спецжестов фронтальные,
+это явно подписано. Траектория Charge теперь следует выбранному направлению
+в этой демке. ПоворотVFX/движение/контакт —review, неgameplay.
+
+Переиспользованы28клипов/256sourcePNG и10нужных страниц предыдущих атласов.
+Новых генераций/упаковки/правкиPNG нет. Прежние playback-исключения
+Banner/Ruin сохранены. Нет World/урона/аудио/сохранений. AbortController,
+RAF/ResizeObserver/visibility/pagehide очищают сцену и listeners;
+поздняя загрузка послеpagehide не оживляет просмотр.
+
+Проверки: verify3/3PASS, browser7сценариевPASS —все9skills иrealVFXframes,
+Cleave8dirs×2принятыхварианта, Charge6компонентов, layerisolation,
+Canvaspausebyte-equal/step,28links,390px/file://,cleanup;JS/HTTP0.
+14PNG; Cleave, Banner1440 и Earthbreaker390 фактически просмотрены.
+Общийcheck:152файла/1119unit,typecheck/lint/build PASS,exit0;
+`.tmp/warrior-skills-v2-{check,browser}.log`. SHA/inventory1572protectedfiles,
+включая415runtime и4старыхwarrior-пака, unchanged.
+
+Блокеров нет. Новыхdone/commit/push/deploy нет. Следующий шаг — выбрать
+конкретный навык/жест/VFX и нужные изменения по этой демке.
+
+# 2026-11-12 — Warrior B: принятая схема C1/C3 V3
+
+Последняя поправка пользователя: все южные+E/W используют востокV2C1/C3;
+N/NW/NE используют NWV2C1/C3. W/SW отражают восток, NE отражаетNW,
+остальные используют исходник без отражения. C2 не выбран. Все движенияV1
+остаются принятыми. Запрос статическихPNG заменён этой поправкой, экспорт
+не выполнялся.
+
+Новая демка `art/generated/warrior-approved-attacks-v3/viewer.html`:
+2принятыхварианта×8направлений,4источника/36sourcePNG читаются из V2 без
+перерисовки/новыхатласов. Старые V1/V2/concept неизменны. Отдельные Run/Idle,
+пауза/90мсstep/scrub/speed/zoom/background и4sourcecontactлиста.
+Манифест и source/approval.json фиксируют точные клипы/jobs и отражения.
+
+Проверки: verify3/3PASS, browser6сценариевPASS — все8routes/C1/C3,
+отражения,actualCanvaspausebyte-equal,step,движение,4листа,390px,file://,
+cleanup,JS/HTTP0.10PNG, desktopS и mobileNE фактически просмотрены.
+Общий check:152файла/1119unit,typecheck/lint/build PASS, exit0;
+`.tmp/warrior-approved-v3-{check,browser}.log`.
+SHA/inventory1549protectedfiles unchanged, включая415runtime и3старыхпака.
+Генераций/звука/productionchanges/новыхdone/commit/push/deploy нет.
+Блокеров нет. Следующий шаг — отдельная интеграция выбранных4клипов
+в новый kit после определения игровых событий/баланса.
+
+# 2026-11-12 — Warrior B: дополнительные автоатаки V2
+
+По прямому выбору пользователя приняты все движения V1 и обычные атаки
+только S/W/E (оба варианта); W принят как прежнее отражение E. Приёмка
+добавлена в docs/classes/warrior/WARRIOR_APPROVAL_V1.md. Новые клипы ещё
+на приёмке, approval остальных жестов не подразумевается.
+
+Создана отдельная `art/generated/warrior-autoattack-review-v2/`:
+24 новых клипа —8направлений×3стиля,216выбранныхPNG,5atlas1024².
+Все направления получили отдельные jobs, в том числе принятые S/W/E.
+При исправлении левых ударов отражались только входные стойки, что меняет
+стороны оружия/щита и явно подписано; готовые новые клипы не отражались.
+W/SW выбран повторный animate_image pass; NW —третий PixMiniMax pass.
+NW содержит широкие серые/белые штрихи меча, они сохранены и подписаны.
+Все37завершённыхjobs/333rawPNG сохранены, котировка70generations.
+Один validation rejection1000символов до job, activejobs0.
+
+Viewer HTTP5173/file://: три новых кандидата синхронно, принятые V1 рядом,
+8направлений, Run/Idle, пауза/90мсstep/scrub/speed/zoom/background,
+24contact sheets+8overview. Без World/урона/аудио/сохранений. Lifecycle
+RAF/listeners/visibility/pagehide очищается, source→atlas RGBA точны.
+
+Проверки: verify8/8PASS; browser7сценариевPASS,JS/HTTP0,390px безoverflow;
+npmcheck exit0,typecheck/lint/build,152файла/1119unit PASS.
+Логи `.tmp/warrior-autoattack-v2-{check-final,browser-final}.log`.
+13Canvas/browserPNG; просмотрены desktopS/NW, mobileNE и8overview всех24
+клипов. SHA/inventory1089protectedfiles unchanged, включая415runtime и
+оба предыдущих warrior-пакета. Новых dependencies/done/commit/push/deploy нет.
+
+Отчёт: docs/classes/warrior/WARRIOR_AUTOATTACK_REVIEW_V2_REPORT.md.
+Блокеров нет. Следующий шаг — пользовательская приёмка C1/C2/C3 по
+направлениям; затем отдельные события/баланс/интеграция нового kit.
+
+# 2026-11-12 — восстановление работы и повторная проверка Warrior B
+
+Продолжение восстановлено по PLAN, tasks/17-warrior.md, журналам и
+WARRIOR_ANIMATION_REVIEW_V1_REPORT.md: последний этап завершён технически,
+новые анимации ещё ожидают ручной приёмки. Новых игровых функций нет.
+Остановленный Vite снова запущен на 127.0.0.1:5173; открыта
+`art/generated/warrior-animation-review-v1/viewer.html`.
+
+Повторные проверки: verify.mjs 11/11 PASS; test-viewer.mjs 7 сценариев PASS,
+JS/HTTP ошибок 0; npm.cmd run check exit0, 152 файла/1119 unit,
+typecheck/lint/build PASS. Логи: `.tmp/resume-warrior-{check,browser}.log`.
+Vite сохраняет предупреждение о размере chunks; PowerShell оформляет stderr
+как NativeCommandError, при этом итоговый exit code процесса равен 0.
+Все 415 runtime SHA и 9743 защищённых art-файла совпали с baseline.
+
+Настоящие Canvas PNG пересняты браузерной проверкой; визуально просмотрены
+`screenshots/warrior-resume-review.png`, Ruin desktop и Earthbreaker 390px
+из screenshots внутри пакета. Обновлены только журналы и результаты проверок.
+Блокеров нет. Следующий шаг — приёмка анимаций пользователем по этой демке;
+затем отдельное определение событий/баланса и интеграция нового kit.
+Генераций, commit/push/deploy и новых done-маркеров нет.
+
+# 2026-11-12 — Warrior B: PixelLab-анимации и отдельная демка
+
+Пользователь принял B; CleaveA/WhirlwindA/каменный импульсA/боковые пластиныA/
+Копьё авангардаA; обаCharge; WarBannerA; EarthbreakerA; **RuinB**.
+Приёмка: `docs/classes/warrior/WARRIOR_APPROVAL_V1.md` и source/approval.json
+в новой `art/generated/warrior-animation-review-v1/`.
+
+По сверке действующего мага сохранены front/back корпуса,3ракурса бега;
+S/SE/E/N/NW×2 —10отдельных PixelLab-атак, W/SW/NE через явные зеркала,
+всего16направленных вариантов. Idlefront/north, runfront/north/NE,
+8спецжестовfront и14VFX-компонентов9навыков/ульт (ChargeA/B×3).
+39выбранных баз/клипов,339исходныхPNG,8atlas1024²; raw381PNG от45jobs.
+Всеnewmotion из PixelLab animate_image; banner-v3 через PixMiniMax;
+4подготовительные/base edit через Pixen. Котировка103generation, не деньги.
+
+Первые throw/ruin со sword вместо spear заменены после отдельной spear-ready
+позы. Banner первые2прохода добавляли голубой шест/энергию, выбран третий
+без них. Сохранены всеouttakes. WarBannerVFX playback исключает source3/4
+с белым sweep; Ruinbody исключает source6 с6краевыми пикселями вылетающего
+копья. Raw и atlas их сохраняют, выбранный playback clipping0. Никакого
+ресэмплинга/перерисовки AI; source→atlas byte-exact, frame0=input подтверждено.
+
+Viewer.html работает HTTP5173 и file://: сравнениеI/II,8направлений,
+слои body/VFX/оба, все9навыков, ChargeA/B,пауза/step/scrub/contact/скорость/
+масштаб/фон,39листов кадров. Спецжесты покаfront; поворот/траектории VFX —
+компоновка демки, не новые генерации и не gameplay. LifecycleRAF/resize/
+visibility/pagehide очищается, звука/сохранений нет.
+
+Проверки: npmcheck PASS exit0 —152файла/1119unit,typecheck/lint/build;
+source/check.log. verify11/11PASS; browser7сценариевPASS (all8dirs×2,
+PNG-packed equality, source-unique, Canvaspausebyte-equal, frameStep,
+all9skills+6Charge, VFXкадры>0,слои,390px,file://,JS/HTTP0).
+24итоговыхPNG+1probe в screenshots; фактически просмотрены атаки, front/
+north/NEбег, спецжесты, Cleave/Whirlwind/Stomp/Shield/Banner/Ruin,
+ChargeA/B и Earthbreaker390. Production415SHA/inventory unchanged;
+9743старыхart size/mtime unchanged, включая принятый concept pack.
+
+Отчёт: `docs/classes/warrior/WARRIOR_ANIMATION_REVIEW_V1_REPORT.md`.
+Веткаmain сохранена; no commit/push/merge/deploy/done-маркеров.
+Звуки, баланс и production не менялись. Блокеров нет. Следующий шаг —
+ручная приёмка новых анимаций перед отдельной интеграцией нового kit.
+
+# 2026-11-12 — Warrior Concept Pack V1, только статическая приёмка
+
+По новому brief создана отдельная папка `art/generated/warrior-concept-pack-v1/`:
+3модели64×80 south/front,22статических VFX PNG для6core +3ultimate,
+12листов сравнения,3preview40px,4слоя object/zone War Banner и viewer.html.
+Charge имеет2семейства × start/travel/arrival. Viewer работает через
+HTTP5173 и напрямую file://; есть фон, nearest zoom, фильтры и inspector.
+Никаких новых анимаций/направленных наборов/аудио/игровой логики.
+
+Документы `docs/classes/warrior/`: WARRIOR_ART_STYLE_GUIDE.md,
+WARRIOR_SKILL_EVOLUTION_CONCEPT.md (18веток), WARRIOR_CONCEPT_PACK_V1_REPORT.md.
+Рекомендация моделиB«Железный авангард»; VFXA для всех9семейств,
+Charge B arrival — для будущего stun. Это предложения, не приёмка пользователем.
+
+Модели:3первичных Pixflux96²пробы отвергнуты,3Pixen64×80 финальных кандидата
+явно приведены к24общим цветам (фактически17/22/19).22PixfluxVFXпробы
+отклонялись от силуэта; сохранены raw, основные22эффекта нарисованы новым
+детерминированным пиксельным renderer с точной геометрией. Все28rawPNG,
+prompts/seeds/job receipts и метод cleanup сохранены. VFX4–13цветов,
+альфа0/255,clipping0. Текущий runtimeAshWarden и принятые VFXC сверены;
+неустановленный Hound не подменён Briar Beast в подписях/рекомендациях.
+
+Проверки: `npm.cmd run check` PASS exit0 —152файла/1119unit,
+typecheck/lint/build; source/check.log внутри пакета. verify.mjs11/11PASS:
+комплектность, PNG/palette/edges, разные A/B, Cleave180°, hollow Whirlwind,
+защита без перекрытия центра, три ветви Earthbreaker, точная сборка баннера.
+Browser5сценариев PASS: HTTP/file://,25PNG/12sheets/4refs, фильтры/zoom,
+inspector,390px без overflow/JS/404.9screenshots, модели1440/390, inspectorB,
+WarBanner и recommendedVFX фактически просмотрены; native sheets также.
+
+SHA/inventory415src/public неизменны; size/mtime9636прежних art-файлов
+совпадают с baseline. Веткаmain сохранена; commit/push/merge/deploy нет.
+Новых done-маркеров/блокеров нет. Следующий шаг — ручная приёмка модели
+и9VFX-семейств; затем отдельные задачи southIdle/Cleave, первые SFX и
+контракт интеграции нового kit (старый runtimekit пока прежний).
+
+# 2026-11-12 — воин: текущие навыки и анимации в одной демке
+
+По запросу пользователя создана `warrior-review.html` →
+`art/warrior-review-v1/{WarriorViewer.vue,viewer.ts,viewer.css,scene.ts,model.ts,catalog.ts,tsconfig.json,README.md}`.
+Локальный адрес: http://127.0.0.1:5173/warrior-review.html; Vite оставлен запущенным.
+Режимы: все пять навыков / Cleave / Whirlwind / Ground Slam / Bladestorm /
+Iron Skin / Idle / Walk / Hurt / настоящий Dash. Ранги I–V, восемь направлений,
+скорость .25–2×, масштаб, повтор, пауза, шаг 1/30с, входящий тестовый удар.
+
+Используются настоящие World, core atlas, heroVisual, WarriorMagic,
+SlamPresentation и drawMobility; восемь неподвижных целей рисуются оригинальными
+программными манекенами. Урон/перезарядки/защита настоящие. UI Vue получает
+снимки максимум10Гц; симуляция/отрисовка в отдельной Phaser.Scene. Очистка
+World/ResizeObserver/listener/Phaser на pagehide/shutdown; replay после120с.
+Звука/сохранений нет. Наличие только Idle2/Walk4/Hurt2 и отсутствие отдельных
+Attack/Dash/Death честно обозначены. Диагонали используют боковой вид.
+
+Проверки: `npm.cmd run check` PASS, exit0 —152файла/1119unit,
+typecheck/lint/build; `.tmp/warrior-review-check.log`. Отдельный vue-tsc демки
+PASS. Целевые unit8/8 PASS. Browser4/4 PASS за23.2с: реальные пять навыков,
+изоляция урона, Iron Skin141.8HP против обычных133.6HP после удара20,
+пауза без изменения Canvas, шаг, ранги/скорость,8направлений, все2/4/2кадра,
+390px без overflow/ошибок JS/404. PNG13 в `screenshots/warrior-review-v1/`;
+фактически просмотрены all, Cleave, Slam impact, Iron, Hurt, Walk west/north,
+mobile390. Вспомогательный ранний desktop PNG также локально сохранён.
+
+SHA/inventory415runtime-файлов src/public совпадают с baseline до задачи:
+0изменений/добавлений/удалений; `.tmp/warrior-review-scope.json`.
+Новых done-маркеров нет. Блокеров нет. Следующий шаг — выбор пользователем
+навыка/анимации воина для дальнейшей доработки по этой демке.
+
 # 2026-11-11 — публикация принятой игры без новых демо
 
 Пользователь отклонил маску тела: оставить огненную ульту ровно в текущем

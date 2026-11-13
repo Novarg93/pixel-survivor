@@ -15,14 +15,15 @@ for (const dark of [false, true]) test('Warrior five live skills, warning layers
     for (let i = 0; i < 137; i++) { const e = w.spawn(i % 2 ? 'grunt' : 'runner', { x: (i % 15 - 7) * 25, y: Math.floor(i / 15) * 25 - 120 })!; e.hp = e.maxHp = 1e5; e.speed = 0; }
   });
   await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.snapshot().damageByAbility.filter(a => a.damage > 0).length)).toBe(4);
-  expect(await page.evaluate(() => window.__PIXEL__!.world.warrior.ironUntil > window.__PIXEL__!.world.elapsed)).toBe(true);
+  // Specials now use one body gesture at a time; wait for the actual block cast.
+  await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.warrior.ironUntil > window.__PIXEL__!.world.elapsed)).toBe(true);
   const layers = await page.evaluate(() => window.__PIXEL__!.art().layers);
   expect(layers.find(l => l.name === 'hostile-tells')!.depth).toBeGreaterThan(layers.find(l => l.name === 'friendly-feedback')!.depth);
   await page.evaluate(() => {
     const w = window.__PIXEL__!.world; w.pause();
     w.impacts.push({ id: w.id(), x: 45, y: -40, radius: 67, damage: 1, landAt: w.elapsed + .65, hostile: false, source: 'slam' });
     w.effect('cleave', w.player, 82, 0xf4d2a0, 1, { x: 82, y: 0 }); w.effect('whirlwind', w.player, 68, 0xd4e6bc, 1);
-    w.warrior.bladesUntil = w.warrior.ironUntil = w.elapsed + 5;
+    w.warrior.ironUntil = w.elapsed + 5;
   });
   await page.addStyleTag({ content: '.overlay{display:none!important}' }); await page.waitForTimeout(80);
   for (const width of [1280, 390]) { await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await page.waitForTimeout(80); await page.locator('canvas').screenshot({ path: `${directory}/${prefix}warning-${width}.png` }); }

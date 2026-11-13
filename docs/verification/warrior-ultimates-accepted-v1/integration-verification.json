@@ -1,0 +1,29 @@
+{
+  "baselineFiles": 459,
+  "changed": [
+    "public/assets/hd/warrior-ultimates-v1/0.json",
+    "public/assets/hd/warrior-ultimates-v1/0.png",
+    "src/game/abilities/tickAbilities.ts",
+    "src/game/art/WarBannerArt.ts",
+    "src/game/art/WarriorHeroAnimation.ts",
+    "src/game/art/warriorUltimatesManifest.json",
+    "src/game/art/warriorUltimatesPack.ts",
+    "src/game/config/ultimates.ts",
+    "src/game/systems/MobilitySystem.ts",
+    "src/game/ultimates/UltimateSystem.ts"
+  ],
+  "added": [],
+  "unchanged": 449,
+  "currentSHA256": {
+    "public/assets/hd/warrior-ultimates-v1/0.json": "5ae3427723de0be4350bd9be3f37aceb18b7a0179b373ce15d7f29b3394af4dd",
+    "public/assets/hd/warrior-ultimates-v1/0.png": "50d0b1d3ad6fdb01be524fa8523cf11248a048c655a1728922b038e7ec6812df",
+    "src/game/abilities/tickAbilities.ts": "190514c2649ab8bb8d77dddc2d5f90471421af4ac2bb461d874167bd59fd1926",
+    "src/game/art/WarBannerArt.ts": "156896235d2af8bfba29920b47da9bf3a930cdf29cda7a20327f4c1997bd9f92",
+    "src/game/art/WarriorHeroAnimation.ts": "25438b0adb2fe1620fcc3cd40a8b75a5928ce7d4648af1fb32afe0fc6141c7dc",
+    "src/game/art/warriorUltimatesManifest.json": "eab08a6e886222c542a4ffbe5e983bbf0fe67cda73c273e3eaaa01859db7a27e",
+    "src/game/art/warriorUltimatesPack.ts": "2bdf25dcecd01726c76c31143ea1eaab76e0581c73855dd7e6c4a53e1d550bb1",
+    "src/game/config/ultimates.ts": "1271bf8a8282980247b10ccd296affd820e2f4f57ddecd3903439a44274ec4bd",
+    "src/game/systems/MobilitySystem.ts": "470f913a0cf9ef134af862c322fbe7ace8560e5b7937533064ae182dcf68d2a0",
+    "src/game/ultimates/UltimateSystem.ts": "3cc8fa2044d2824c6a71fd20ff8cd008e858cf38b1f15cf95bb8304d55a6b6c0"
+  }
+}

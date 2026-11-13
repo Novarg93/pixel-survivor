@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-03",
+  "fixture": "12s live RAF + Web Audio, 150 regular +3 bosses +3 Guardians, all abilities V; invulnerability to hold load only",
+  "stress": [
+    {
+      "hero": "Mage",
+      "width": 1280,
+      "medianFps": 59.28648376464844,
+      "p95UpdateMs": 1.2999999970197678,
+      "peakVoices": 11,
+      "peakLoops": 2,
+      "decodedBytes": 2563980,
+      "rejected": {
+        "blocked": 0,
+        "muted": 0,
+        "throttled": 40,
+        "budget": 0,
+        "unavailable": 0
+      },
+      "finalSources": 0,
+      "errors": []
+    },
+    {
+      "hero": "Mage",
+      "width": 390,
+      "medianFps": 59.3177490234375,
+      "p95UpdateMs": 1.2000000029802322,
+      "peakVoices": 11,
+      "peakLoops": 2,
+      "decodedBytes": 2563980,
+      "rejected": {
+        "blocked": 0,
+        "muted": 0,
+        "throttled": 42,
+        "budget": 0,
+        "unavailable": 0
+      },
+      "finalSources": 0,
+      "errors": []
+    },
+    {
+      "hero": "Warrior",
+      "width": 1280,
+      "medianFps": 59.44354248046875,
+      "p95UpdateMs": 1,
+      "peakVoices": 11,
+      "peakLoops": 2,
+      "decodedBytes": 2615136,
+      "rejected": {
+        "blocked": 0,
+        "muted": 0,
+        "throttled": 0,
+        "budget": 0,
+        "unavailable": 0
+      },
+      "finalSources": 0,
+      "errors": []
+    },
+    {
+      "hero": "Warrior",
+      "width": 390,
+      "medianFps": 59.95680236816406,
+      "p95UpdateMs": 1,
+      "peakVoices": 11,
+      "peakLoops": 2,
+      "decodedBytes": 2615136,
+      "rejected": {
+        "blocked": 0,
+        "muted": 0,
+        "throttled": 0,
+        "budget": 1,
+        "unavailable": 0
+      },
+      "finalSources": 0,
+      "errors": []
+    }
+  ],
+  "lifecycle": [
+    {
+      "width": 1280,
+      "cycles": 10,
+      "contexts": [
+        1
+      ],
+      "listeners": [
+        16
+      ],
+      "nodes": [
+        11
+      ],
+      "sources": [
+        2
+      ],
+      "loops": [
+        2
+      ],
+      "decodedBytes": [
+        2149436
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "cycles": 10,
+      "contexts": [
+        1
+      ],
+      "listeners": [
+        16
+      ],
+      "nodes": [
+        11
+      ],
+      "sources": [
+        2
+      ],
+      "loops": [
+        2
+      ],
+      "decodedBytes": [
+        2149436
+      ],
+      "errors": []
+    }
+  ]
+}

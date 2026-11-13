@@ -1,0 +1,19 @@
+﻿{
+    "branch":  "feature/frost-audio-levelup-ux",
+    "head":  "3e5febf",
+    "check":  "352 unit, 50 files, typecheck/lint/build exit0",
+    "fullE2E":  "172 passed /27.4min; last-run status passed, failedTests[]",
+    "fullShellExit":  1,
+    "shellDiagnostic":  "PowerShell NativeCommandError for stderr warning: Node with explicit exitCode0 reproduces wrapper exit1; explicit exit LASTEXITCODE fixes wrapper",
+    "production":  "4 passed /24.4s /exit0",
+    "changedBaselineFiles":  [
+                                 "src/ui/upgradeIdentity.ts",
+                                 "src/ui/components/LevelUpModal.vue",
+                                 "tests/unit/audio.test.ts",
+                                 "src/game/audio/synthesis.ts",
+                                 "src/game/audio/catalog.ts",
+                                 "src/App.vue"
+                             ],
+    "gameFilesUnchangedExceptAudio":  true,
+    "sourceArchiveSHA256":  "df3758194b570ba1249f3fee59406b7dc123d03788642337a51116bdd2b938d3"
+}

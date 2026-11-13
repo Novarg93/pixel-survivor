@@ -7,7 +7,7 @@ const icons = { haste: lootIcon('haste'), fury: lootIcon('fury'), 'arcane-sprint
 
 <template>
   <aside class="buff-dock" aria-label="Временные усиления">
-    <div v-for="buff in state.buffs" :key="buff.id" :class="['buff-slot', buff.id]" :data-buff="buff.id" :aria-label="`${buff.name}: ${Math.ceil(buff.remaining)} секунд`" :title="`${buff.name} · ${buff.id === 'haste' || buff.id === 'fury' ? '+50% ' + (buff.id === 'haste' ? 'скорости' : 'урона') : buff.id === 'berserk' ? 'усиление урона и новых перезарядок' : 'ускорение движения'}`">
+    <div v-for="buff in state.buffs" :key="buff.id" :class="['buff-slot', buff.id]" :data-buff="buff.id" :aria-label="`${buff.name}: ${Math.ceil(buff.remaining)} секунд`" :title="`${buff.name} · ${buff.id === 'haste' || buff.id === 'fury' ? '+50% ' + (buff.id === 'haste' ? 'скорости' : 'урона') : buff.id === 'berserk' ? 'усиление урона, новых перезарядок и скорости движения' : 'ускорение движения'}`">
       <img :src="icons[buff.id]" alt="" width="32" height="32" />
       <span>{{ buff.name }}<b>{{ Math.ceil(buff.remaining) }}с</b></span>
     </div>

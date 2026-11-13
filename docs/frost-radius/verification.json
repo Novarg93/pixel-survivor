@@ -1,0 +1,58 @@
+{
+  "changedSincePreviousDelivery": [
+    "tests\\e2e\\frost-seal.spec.ts",
+    "tests\\unit\\frost-seal.test.ts",
+    "tests\\unit\\ultimates.test.ts",
+    "src\\game\\ultimates\\FrostUltimate.ts",
+    "src\\game\\config\\ultimates.ts"
+  ],
+  "lightningChanged": [],
+  "e2e": {
+    "startTime": "2026-11-05T09:13:22.451Z",
+    "duration": 69420.732,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-05T09:14:55.147Z",
+    "duration": 36911.579999999994,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "views": [
+    {
+      "width": 1280,
+      "radius": 183.5755975068582,
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999955
+    },
+    {
+      "width": 844,
+      "radius": 182.02946617740145,
+      "viewport": {
+        "width": 660.9638554216868,
+        "height": 305.421686746988
+      },
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.800000000000182
+    },
+    {
+      "width": 1024,
+      "radius": 250.60240963855424,
+      "viewport": {
+        "width": 801.9277108433736,
+        "height": 601.4457831325302
+      },
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999727
+    }
+  ]
+}

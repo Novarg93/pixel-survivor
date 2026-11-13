@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "mage-casting.spec.ts",
+      "--grep",
+      "sequences.*390",
+      "--reporter=list,json",
+      "--output=.tmp/survival-enrage/mage-sync-final"
+    ],
+    "configFile": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\playwright.config.ts",
+    "rootDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Novarg/Desktop/PixelSurvivor/.tmp/survival-enrage/mage-sync-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\survival-enrage\\mage-sync-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "channel": "chromium",
+          "baseURL": "http://127.0.0.1:5223",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "mage-casting.spec.ts",
+      "file": "mage-casting.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mage conductor real Canvas sequences, all spells, walking and Blink 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14470,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T12:46:27.200Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c52730d50b8b09886ade-d2e502e4f69ffc5ebdf5",
+          "file": "mage-casting.spec.ts",
+          "line": 30,
+          "column": 31
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T12:46:26.588Z",
+    "duration": 15418.536,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

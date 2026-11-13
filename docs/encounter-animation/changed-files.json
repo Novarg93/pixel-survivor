@@ -1,0 +1,19 @@
+[
+  "public/assets/hd/bosses.json",
+  "public/assets/hd/bosses.png",
+  "public/assets/hd/guardian.json",
+  "public/assets/hd/guardian.png",
+  "scripts/boss-art-source.mjs",
+  "scripts/guardian-art-source.mjs",
+  "src/game/art/BossAnimation.ts",
+  "src/game/art/GameArt.ts",
+  "src/game/art/GuardianAnimation.ts",
+  "src/game/art/bossPack.ts",
+  "src/game/art/guardianPack.ts",
+  "tests/e2e/hd-elites.spec.ts",
+  "tests/unit/encounter-director.test.ts",
+  "tests/unit/guardian-art.test.ts",
+  "src/game/art/EncounterFeedback.ts",
+  "tests/e2e/encounter-animation.spec.ts",
+  "tests/unit/encounter-feedback.test.ts"
+]

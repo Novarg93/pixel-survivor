@@ -1,9 +1,9 @@
 import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 import type { Impact, Effect } from '../entities/types';
-import { bladePositions } from '../abilities/warrior';
 import { effectPhase } from './MageMagic';
 import { abilityVisual } from './abilityVisual';
+import type {WarriorSlash} from './warriorHeroPack';
 
 interface SlamView { x: number; y: number; radius: number; started: number }
 // Observes typed Impact.source before step; never guesses from a particle color.
@@ -33,31 +33,18 @@ function arc(g: Phaser.GameObjects.Graphics, x: number, y: number, r: number, an
     g.strokePath();
   }
 }
-export function drawWarriorMagic(g: Phaser.GameObjects.Graphics, w: World, intensity: number, slams: readonly SlamView[]) {
-  for (const e of w.effects) if (e.kind === 'cleave') {
-    const v = abilityVisual(w.abilities.cleave.level), t = effectPhase(w.elapsed, e.started, e.duration), aim = e.target ? Math.atan2(e.target.y - e.y, e.target.x - e.x) : 0;
+export function drawWarriorMagic(g: Phaser.GameObjects.Graphics, w: World, intensity: number, slams: readonly SlamView[], slash?:WarriorSlash|null) {
+  const cleaves=slash===undefined?w.effects.filter(e=>e.kind==='cleave').map(e=>({x:e.x,y:e.y,radius:e.radius,phase:effectPhase(w.elapsed,e.started,e.duration),angle:e.target?Math.atan2(e.target.y-e.y,e.target.x-e.x):0})):slash?[{...w.player,...slash}]:[];
+  for (const e of cleaves) {
+    const v = abilityVisual(w.abilities.cleave.level), t = e.phase, aim = e.angle;
     for (let i = 0; i < v.rings; i++) arc(g, e.x, e.y, e.radius * (.8 - i * .12), aim, (1 - t) * intensity * (.2 + v.power * .4), v.power);
     if (v.capstone) for (let i = 0; i < 7; i++) { const a = aim - .9 + i * .3, r = e.radius * (.6 + t * .25); g.fillStyle(0xffedb8, (1 - t) * intensity).fillRect(e.x + Math.cos(a) * r, e.y + Math.sin(a) * r, 2, 3); }
   }
-  for (const e of w.effects) if (e.kind === 'whirlwind') {
+  for (const e of w.effects) if (e.kind === 'whirlwind' && slash===undefined) {
     const v = abilityVisual(w.abilities.whirlwind.level), count = 2 + Math.floor(v.rank / 2);
     const t = effectPhase(w.elapsed, e.started, e.duration), fade = Math.sin(Math.PI * Math.min(.99, .1 + t * .9)) * intensity;
     const aim = w.elapsed * 9;
     for (let i = 0; i < count; i++) arc(g, e.x, e.y, e.radius * (.8 + .2 * t), aim + i * Math.PI * 2 / count, fade * (.5 + v.power * .2), v.power);
-  }
-  for (const p of bladePositions(w)) {
-    const v = abilityVisual(w.abilities.blades.level);
-    const a = Math.atan2(p.y - w.player.y, p.x - w.player.x) + Math.PI / 2, c = Math.cos(a), s = Math.sin(a);
-    const point = (x: number, y: number) => ({ x: Math.round(p.x + x * c - y * s), y: Math.round(p.y + x * s + y * c) });
-    const polygon = (points: number[][], color: number) => { g.fillStyle(color, intensity).beginPath(); points.map(([x, y]) => point(x, y)).forEach((p, i) => i ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y)); g.closePath().fillPath(); };
-    for (let i = 0; i < v.rings; i++) arc(g, w.player.x, w.player.y, 58 * w.stats.area - i * 3, a - Math.PI / 2 - .65, intensity * (.13 + v.power * .1), v.power);
-    polygon([[-2, 5], [-3, -5], [0, -13], [3, -5], [2, 5]], 0x263647);
-    polygon([[-1, 3], [-2, -5], [0, -11], [0, 3]], 0xe0edf0);
-    polygon([[0, 3], [0, -11], [2, -5], [1, 3]], 0x819cae);
-    polygon([[-4, 3], [4, 3], [4, 5], [-4, 5]], 0xd8b47e);
-    const h = point(0, 8); g.fillStyle(0xb58a64, intensity).fillRect(h.x - 1, h.y - 2, 2, 5);
-    if (v.rank >= 3) { const rune = point(0, -4); g.fillStyle(v.capstone ? 0xffe3a1 : 0xb9eaff, intensity).fillRect(rune.x - 1, rune.y - 2, 2, 4); }
-    if (v.capstone) for (let i = 0; i < 4; i++) { const spark = point((i % 2 ? 1 : -1) * 5, i * 4 - 7); g.fillStyle(0xffedc2, intensity * .8).fillRect(spark.x, spark.y, 2, 2); }
   }
   if (w.warrior.ironUntil > w.elapsed) {
     const v = abilityVisual(w.abilities.iron.level);

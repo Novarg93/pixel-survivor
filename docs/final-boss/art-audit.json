@@ -1,0 +1,1519 @@
+{
+  "unique": 223,
+  "frames": 252,
+  "edge": [],
+  "rows": [
+    {
+      "name": "ash-down-spawn-0",
+      "edge": 0,
+      "occupied": 257,
+      "bytes": 1658
+    },
+    {
+      "name": "ash-down-spawn-1",
+      "edge": 0,
+      "occupied": 1296,
+      "bytes": 3034
+    },
+    {
+      "name": "ash-down-spawn-2",
+      "edge": 0,
+      "occupied": 2360,
+      "bytes": 6142
+    },
+    {
+      "name": "ash-down-spawn-3",
+      "edge": 0,
+      "occupied": 3638,
+      "bytes": 9630
+    },
+    {
+      "name": "ash-down-spawn-4",
+      "edge": 0,
+      "occupied": 4154,
+      "bytes": 10686
+    },
+    {
+      "name": "ash-down-spawn-5",
+      "edge": 0,
+      "occupied": 4209,
+      "bytes": 10386
+    },
+    {
+      "name": "ash-down-idle-0",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-idle-1",
+      "edge": 0,
+      "occupied": 3993,
+      "bytes": 11206
+    },
+    {
+      "name": "ash-down-idle-2",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11102
+    },
+    {
+      "name": "ash-down-idle-3",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-walk-0",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-walk-1",
+      "edge": 0,
+      "occupied": 3992,
+      "bytes": 11202
+    },
+    {
+      "name": "ash-down-walk-2",
+      "edge": 0,
+      "occupied": 3999,
+      "bytes": 11326
+    },
+    {
+      "name": "ash-down-walk-3",
+      "edge": 0,
+      "occupied": 4000,
+      "bytes": 11242
+    },
+    {
+      "name": "ash-down-walk-4",
+      "edge": 0,
+      "occupied": 3984,
+      "bytes": 11102
+    },
+    {
+      "name": "ash-down-walk-5",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-chargeWindup-0",
+      "edge": 0,
+      "occupied": 4176,
+      "bytes": 11186
+    },
+    {
+      "name": "ash-down-chargeWindup-1",
+      "edge": 0,
+      "occupied": 4172,
+      "bytes": 11218
+    },
+    {
+      "name": "ash-down-chargeWindup-2",
+      "edge": 0,
+      "occupied": 4162,
+      "bytes": 11010
+    },
+    {
+      "name": "ash-down-chargeWindup-3",
+      "edge": 0,
+      "occupied": 4167,
+      "bytes": 11226
+    },
+    {
+      "name": "ash-down-chargeWindup-4",
+      "edge": 0,
+      "occupied": 4177,
+      "bytes": 11234
+    },
+    {
+      "name": "ash-down-chargeTravel-0",
+      "edge": 0,
+      "occupied": 4177,
+      "bytes": 11234
+    },
+    {
+      "name": "ash-down-chargeTravel-1",
+      "edge": 0,
+      "occupied": 4162,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-chargeTravel-2",
+      "edge": 0,
+      "occupied": 4188,
+      "bytes": 10990
+    },
+    {
+      "name": "ash-down-chargeBrake-0",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11118
+    },
+    {
+      "name": "ash-down-chargeBrake-1",
+      "edge": 0,
+      "occupied": 3995,
+      "bytes": 11098
+    },
+    {
+      "name": "ash-down-chargeBrake-2",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11122
+    },
+    {
+      "name": "ash-down-swordWindup-0",
+      "edge": 0,
+      "occupied": 3955,
+      "bytes": 10942
+    },
+    {
+      "name": "ash-down-swordWindup-1",
+      "edge": 0,
+      "occupied": 3948,
+      "bytes": 10798
+    },
+    {
+      "name": "ash-down-swordWindup-2",
+      "edge": 0,
+      "occupied": 3950,
+      "bytes": 10974
+    },
+    {
+      "name": "ash-down-swordWindup-3",
+      "edge": 0,
+      "occupied": 3968,
+      "bytes": 10866
+    },
+    {
+      "name": "ash-down-swordWindup-4",
+      "edge": 0,
+      "occupied": 4049,
+      "bytes": 10754
+    },
+    {
+      "name": "ash-down-swordWindup-5",
+      "edge": 0,
+      "occupied": 4046,
+      "bytes": 10598
+    },
+    {
+      "name": "ash-down-swordActive-0",
+      "edge": 0,
+      "occupied": 4031,
+      "bytes": 10746
+    },
+    {
+      "name": "ash-down-swordActive-1",
+      "edge": 0,
+      "occupied": 4019,
+      "bytes": 10750
+    },
+    {
+      "name": "ash-down-swordActive-2",
+      "edge": 0,
+      "occupied": 3954,
+      "bytes": 9638
+    },
+    {
+      "name": "ash-down-swordActive-3",
+      "edge": 0,
+      "occupied": 3952,
+      "bytes": 10966
+    },
+    {
+      "name": "ash-down-swordActive-4",
+      "edge": 0,
+      "occupied": 3962,
+      "bytes": 10430
+    },
+    {
+      "name": "ash-down-recovery-0",
+      "edge": 0,
+      "occupied": 4046,
+      "bytes": 10802
+    },
+    {
+      "name": "ash-down-recovery-1",
+      "edge": 0,
+      "occupied": 4064,
+      "bytes": 10970
+    },
+    {
+      "name": "ash-down-recovery-2",
+      "edge": 0,
+      "occupied": 4063,
+      "bytes": 11110
+    },
+    {
+      "name": "ash-down-recovery-3",
+      "edge": 0,
+      "occupied": 4072,
+      "bytes": 11390
+    },
+    {
+      "name": "ash-down-ritualEnter-0",
+      "edge": 0,
+      "occupied": 3962,
+      "bytes": 9774
+    },
+    {
+      "name": "ash-down-ritualEnter-1",
+      "edge": 0,
+      "occupied": 3953,
+      "bytes": 9854
+    },
+    {
+      "name": "ash-down-ritualEnter-2",
+      "edge": 0,
+      "occupied": 3948,
+      "bytes": 9946
+    },
+    {
+      "name": "ash-down-ritualEnter-3",
+      "edge": 0,
+      "occupied": 3950,
+      "bytes": 9982
+    },
+    {
+      "name": "ash-down-ritualEnter-4",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9886
+    },
+    {
+      "name": "ash-down-ritualChannel-0",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9886
+    },
+    {
+      "name": "ash-down-ritualChannel-1",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9882
+    },
+    {
+      "name": "ash-down-ritualChannel-2",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9878
+    },
+    {
+      "name": "ash-down-ritualChannel-3",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9886
+    },
+    {
+      "name": "ash-down-meteorCast-0",
+      "edge": 0,
+      "occupied": 3981,
+      "bytes": 10270
+    },
+    {
+      "name": "ash-down-meteorCast-1",
+      "edge": 0,
+      "occupied": 4066,
+      "bytes": 10430
+    },
+    {
+      "name": "ash-down-meteorCast-2",
+      "edge": 0,
+      "occupied": 4138,
+      "bytes": 10362
+    },
+    {
+      "name": "ash-down-meteorCast-3",
+      "edge": 0,
+      "occupied": 4066,
+      "bytes": 10430
+    },
+    {
+      "name": "ash-down-meteorCast-4",
+      "edge": 0,
+      "occupied": 3981,
+      "bytes": 10270
+    },
+    {
+      "name": "ash-down-shieldBreak-0",
+      "edge": 0,
+      "occupied": 3973,
+      "bytes": 10034
+    },
+    {
+      "name": "ash-down-shieldBreak-1",
+      "edge": 0,
+      "occupied": 3963,
+      "bytes": 11050
+    },
+    {
+      "name": "ash-down-shieldBreak-2",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 10570
+    },
+    {
+      "name": "ash-down-shieldBreak-3",
+      "edge": 0,
+      "occupied": 4100,
+      "bytes": 11414
+    },
+    {
+      "name": "ash-down-shieldBreak-4",
+      "edge": 0,
+      "occupied": 4188,
+      "bytes": 11590
+    },
+    {
+      "name": "ash-down-phaseTransition-0",
+      "edge": 0,
+      "occupied": 4106,
+      "bytes": 10606
+    },
+    {
+      "name": "ash-down-phaseTransition-1",
+      "edge": 0,
+      "occupied": 4130,
+      "bytes": 10182
+    },
+    {
+      "name": "ash-down-phaseTransition-2",
+      "edge": 0,
+      "occupied": 4184,
+      "bytes": 10418
+    },
+    {
+      "name": "ash-down-phaseTransition-3",
+      "edge": 0,
+      "occupied": 4220,
+      "bytes": 11050
+    },
+    {
+      "name": "ash-down-phaseTransition-4",
+      "edge": 0,
+      "occupied": 4263,
+      "bytes": 11278
+    },
+    {
+      "name": "ash-down-phaseTransition-5",
+      "edge": 0,
+      "occupied": 4289,
+      "bytes": 11334
+    },
+    {
+      "name": "ash-down-phase3Idle-0",
+      "edge": 0,
+      "occupied": 4247,
+      "bytes": 11186
+    },
+    {
+      "name": "ash-down-phase3Idle-1",
+      "edge": 0,
+      "occupied": 4268,
+      "bytes": 11306
+    },
+    {
+      "name": "ash-down-phase3Idle-2",
+      "edge": 0,
+      "occupied": 4247,
+      "bytes": 11326
+    },
+    {
+      "name": "ash-down-phase3Walk-0",
+      "edge": 0,
+      "occupied": 4239,
+      "bytes": 11894
+    },
+    {
+      "name": "ash-down-phase3Walk-1",
+      "edge": 0,
+      "occupied": 4270,
+      "bytes": 11698
+    },
+    {
+      "name": "ash-down-hit-0",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11274
+    },
+    {
+      "name": "ash-down-hit-1",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 11274
+    },
+    {
+      "name": "ash-down-death-0",
+      "edge": 0,
+      "occupied": 4145,
+      "bytes": 11322
+    },
+    {
+      "name": "ash-down-death-1",
+      "edge": 0,
+      "occupied": 4175,
+      "bytes": 11366
+    },
+    {
+      "name": "ash-down-death-2",
+      "edge": 0,
+      "occupied": 3709,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-down-death-3",
+      "edge": 0,
+      "occupied": 3404,
+      "bytes": 11014
+    },
+    {
+      "name": "ash-down-death-4",
+      "edge": 0,
+      "occupied": 3098,
+      "bytes": 9610
+    },
+    {
+      "name": "ash-down-death-5",
+      "edge": 0,
+      "occupied": 2789,
+      "bytes": 9842
+    },
+    {
+      "name": "ash-down-death-6",
+      "edge": 0,
+      "occupied": 3066,
+      "bytes": 10646
+    },
+    {
+      "name": "ash-down-death-7",
+      "edge": 0,
+      "occupied": 2919,
+      "bytes": 10682
+    },
+    {
+      "name": "ash-down-death-8",
+      "edge": 0,
+      "occupied": 2887,
+      "bytes": 10230
+    },
+    {
+      "name": "ash-down-death-9",
+      "edge": 0,
+      "occupied": 2886,
+      "bytes": 10202
+    },
+    {
+      "name": "ash-up-spawn-0",
+      "edge": 0,
+      "occupied": 257,
+      "bytes": 1658
+    },
+    {
+      "name": "ash-up-spawn-1",
+      "edge": 0,
+      "occupied": 1296,
+      "bytes": 3034
+    },
+    {
+      "name": "ash-up-spawn-2",
+      "edge": 0,
+      "occupied": 2360,
+      "bytes": 6146
+    },
+    {
+      "name": "ash-up-spawn-3",
+      "edge": 0,
+      "occupied": 3638,
+      "bytes": 9570
+    },
+    {
+      "name": "ash-up-spawn-4",
+      "edge": 0,
+      "occupied": 4154,
+      "bytes": 10574
+    },
+    {
+      "name": "ash-up-spawn-5",
+      "edge": 0,
+      "occupied": 4209,
+      "bytes": 10290
+    },
+    {
+      "name": "ash-up-idle-0",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-idle-1",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-idle-2",
+      "edge": 0,
+      "occupied": 3963,
+      "bytes": 10374
+    },
+    {
+      "name": "ash-up-idle-3",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-walk-0",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-walk-1",
+      "edge": 0,
+      "occupied": 3949,
+      "bytes": 10454
+    },
+    {
+      "name": "ash-up-walk-2",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10618
+    },
+    {
+      "name": "ash-up-walk-3",
+      "edge": 0,
+      "occupied": 3957,
+      "bytes": 10154
+    },
+    {
+      "name": "ash-up-walk-4",
+      "edge": 0,
+      "occupied": 3935,
+      "bytes": 10246
+    },
+    {
+      "name": "ash-up-walk-5",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-chargeWindup-0",
+      "edge": 0,
+      "occupied": 4176,
+      "bytes": 11086
+    },
+    {
+      "name": "ash-up-chargeWindup-1",
+      "edge": 0,
+      "occupied": 4172,
+      "bytes": 11106
+    },
+    {
+      "name": "ash-up-chargeWindup-2",
+      "edge": 0,
+      "occupied": 4162,
+      "bytes": 10894
+    },
+    {
+      "name": "ash-up-chargeWindup-3",
+      "edge": 0,
+      "occupied": 4167,
+      "bytes": 11106
+    },
+    {
+      "name": "ash-up-chargeWindup-4",
+      "edge": 0,
+      "occupied": 4177,
+      "bytes": 11150
+    },
+    {
+      "name": "ash-up-chargeTravel-0",
+      "edge": 0,
+      "occupied": 4177,
+      "bytes": 11146
+    },
+    {
+      "name": "ash-up-chargeTravel-1",
+      "edge": 0,
+      "occupied": 4162,
+      "bytes": 10986
+    },
+    {
+      "name": "ash-up-chargeTravel-2",
+      "edge": 0,
+      "occupied": 4188,
+      "bytes": 10886
+    },
+    {
+      "name": "ash-up-chargeBrake-0",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10326
+    },
+    {
+      "name": "ash-up-chargeBrake-1",
+      "edge": 0,
+      "occupied": 3964,
+      "bytes": 10458
+    },
+    {
+      "name": "ash-up-chargeBrake-2",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-swordWindup-0",
+      "edge": 0,
+      "occupied": 4027,
+      "bytes": 10442
+    },
+    {
+      "name": "ash-up-swordWindup-1",
+      "edge": 0,
+      "occupied": 4106,
+      "bytes": 10178
+    },
+    {
+      "name": "ash-up-swordWindup-2",
+      "edge": 0,
+      "occupied": 4062,
+      "bytes": 10498
+    },
+    {
+      "name": "ash-up-swordWindup-3",
+      "edge": 0,
+      "occupied": 4154,
+      "bytes": 10454
+    },
+    {
+      "name": "ash-up-swordWindup-4",
+      "edge": 0,
+      "occupied": 4078,
+      "bytes": 10802
+    },
+    {
+      "name": "ash-up-swordWindup-5",
+      "edge": 0,
+      "occupied": 4060,
+      "bytes": 10534
+    },
+    {
+      "name": "ash-up-swordActive-0",
+      "edge": 0,
+      "occupied": 4073,
+      "bytes": 10750
+    },
+    {
+      "name": "ash-up-swordActive-1",
+      "edge": 0,
+      "occupied": 4171,
+      "bytes": 11018
+    },
+    {
+      "name": "ash-up-swordActive-2",
+      "edge": 0,
+      "occupied": 4084,
+      "bytes": 9590
+    },
+    {
+      "name": "ash-up-swordActive-3",
+      "edge": 0,
+      "occupied": 4052,
+      "bytes": 10398
+    },
+    {
+      "name": "ash-up-swordActive-4",
+      "edge": 0,
+      "occupied": 4182,
+      "bytes": 10942
+    },
+    {
+      "name": "ash-up-recovery-0",
+      "edge": 0,
+      "occupied": 4046,
+      "bytes": 10658
+    },
+    {
+      "name": "ash-up-recovery-1",
+      "edge": 0,
+      "occupied": 4064,
+      "bytes": 10830
+    },
+    {
+      "name": "ash-up-recovery-2",
+      "edge": 0,
+      "occupied": 4063,
+      "bytes": 10962
+    },
+    {
+      "name": "ash-up-recovery-3",
+      "edge": 0,
+      "occupied": 4072,
+      "bytes": 11266
+    },
+    {
+      "name": "ash-up-ritualEnter-0",
+      "edge": 0,
+      "occupied": 3962,
+      "bytes": 9686
+    },
+    {
+      "name": "ash-up-ritualEnter-1",
+      "edge": 0,
+      "occupied": 3953,
+      "bytes": 9778
+    },
+    {
+      "name": "ash-up-ritualEnter-2",
+      "edge": 0,
+      "occupied": 3948,
+      "bytes": 9858
+    },
+    {
+      "name": "ash-up-ritualEnter-3",
+      "edge": 0,
+      "occupied": 3950,
+      "bytes": 9854
+    },
+    {
+      "name": "ash-up-ritualEnter-4",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9770
+    },
+    {
+      "name": "ash-up-ritualChannel-0",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9770
+    },
+    {
+      "name": "ash-up-ritualChannel-1",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9766
+    },
+    {
+      "name": "ash-up-ritualChannel-2",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9762
+    },
+    {
+      "name": "ash-up-ritualChannel-3",
+      "edge": 0,
+      "occupied": 3966,
+      "bytes": 9770
+    },
+    {
+      "name": "ash-up-meteorCast-0",
+      "edge": 0,
+      "occupied": 3981,
+      "bytes": 10142
+    },
+    {
+      "name": "ash-up-meteorCast-1",
+      "edge": 0,
+      "occupied": 4066,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-meteorCast-2",
+      "edge": 0,
+      "occupied": 4138,
+      "bytes": 10242
+    },
+    {
+      "name": "ash-up-meteorCast-3",
+      "edge": 0,
+      "occupied": 4066,
+      "bytes": 10322
+    },
+    {
+      "name": "ash-up-meteorCast-4",
+      "edge": 0,
+      "occupied": 3981,
+      "bytes": 10142
+    },
+    {
+      "name": "ash-up-shieldBreak-0",
+      "edge": 0,
+      "occupied": 3973,
+      "bytes": 9930
+    },
+    {
+      "name": "ash-up-shieldBreak-1",
+      "edge": 0,
+      "occupied": 3963,
+      "bytes": 10930
+    },
+    {
+      "name": "ash-up-shieldBreak-2",
+      "edge": 0,
+      "occupied": 3994,
+      "bytes": 10450
+    },
+    {
+      "name": "ash-up-shieldBreak-3",
+      "edge": 0,
+      "occupied": 4100,
+      "bytes": 11274
+    },
+    {
+      "name": "ash-up-shieldBreak-4",
+      "edge": 0,
+      "occupied": 4188,
+      "bytes": 11470
+    },
+    {
+      "name": "ash-up-phaseTransition-0",
+      "edge": 0,
+      "occupied": 4106,
+      "bytes": 10534
+    },
+    {
+      "name": "ash-up-phaseTransition-1",
+      "edge": 0,
+      "occupied": 4130,
+      "bytes": 10074
+    },
+    {
+      "name": "ash-up-phaseTransition-2",
+      "edge": 0,
+      "occupied": 4184,
+      "bytes": 10298
+    },
+    {
+      "name": "ash-up-phaseTransition-3",
+      "edge": 0,
+      "occupied": 4220,
+      "bytes": 10982
+    },
+    {
+      "name": "ash-up-phaseTransition-4",
+      "edge": 0,
+      "occupied": 4263,
+      "bytes": 11198
+    },
+    {
+      "name": "ash-up-phaseTransition-5",
+      "edge": 0,
+      "occupied": 4289,
+      "bytes": 11254
+    },
+    {
+      "name": "ash-up-phase3Idle-0",
+      "edge": 0,
+      "occupied": 4247,
+      "bytes": 11054
+    },
+    {
+      "name": "ash-up-phase3Idle-1",
+      "edge": 0,
+      "occupied": 4268,
+      "bytes": 11222
+    },
+    {
+      "name": "ash-up-phase3Idle-2",
+      "edge": 0,
+      "occupied": 4247,
+      "bytes": 11230
+    },
+    {
+      "name": "ash-up-phase3Walk-0",
+      "edge": 0,
+      "occupied": 4239,
+      "bytes": 11802
+    },
+    {
+      "name": "ash-up-phase3Walk-1",
+      "edge": 0,
+      "occupied": 4270,
+      "bytes": 11618
+    },
+    {
+      "name": "ash-up-hit-0",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10606
+    },
+    {
+      "name": "ash-up-hit-1",
+      "edge": 0,
+      "occupied": 3960,
+      "bytes": 10606
+    },
+    {
+      "name": "ash-up-death-0",
+      "edge": 0,
+      "occupied": 4145,
+      "bytes": 11194
+    },
+    {
+      "name": "ash-up-death-1",
+      "edge": 0,
+      "occupied": 4175,
+      "bytes": 11234
+    },
+    {
+      "name": "ash-up-death-2",
+      "edge": 0,
+      "occupied": 3709,
+      "bytes": 10826
+    },
+    {
+      "name": "ash-up-death-3",
+      "edge": 0,
+      "occupied": 3404,
+      "bytes": 10986
+    },
+    {
+      "name": "ash-up-death-4",
+      "edge": 0,
+      "occupied": 3098,
+      "bytes": 9610
+    },
+    {
+      "name": "ash-up-death-5",
+      "edge": 0,
+      "occupied": 2789,
+      "bytes": 9842
+    },
+    {
+      "name": "ash-up-death-6",
+      "edge": 0,
+      "occupied": 3066,
+      "bytes": 10662
+    },
+    {
+      "name": "ash-up-death-7",
+      "edge": 0,
+      "occupied": 2919,
+      "bytes": 10650
+    },
+    {
+      "name": "ash-up-death-8",
+      "edge": 0,
+      "occupied": 2887,
+      "bytes": 10190
+    },
+    {
+      "name": "ash-up-death-9",
+      "edge": 0,
+      "occupied": 2886,
+      "bytes": 10162
+    },
+    {
+      "name": "ash-side-spawn-0",
+      "edge": 0,
+      "occupied": 234,
+      "bytes": 1662
+    },
+    {
+      "name": "ash-side-spawn-1",
+      "edge": 0,
+      "occupied": 1272,
+      "bytes": 3218
+    },
+    {
+      "name": "ash-side-spawn-2",
+      "edge": 0,
+      "occupied": 2293,
+      "bytes": 6014
+    },
+    {
+      "name": "ash-side-spawn-3",
+      "edge": 0,
+      "occupied": 3398,
+      "bytes": 9354
+    },
+    {
+      "name": "ash-side-spawn-4",
+      "edge": 0,
+      "occupied": 3809,
+      "bytes": 10130
+    },
+    {
+      "name": "ash-side-spawn-5",
+      "edge": 0,
+      "occupied": 3842,
+      "bytes": 10098
+    },
+    {
+      "name": "ash-side-idle-0",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-idle-1",
+      "edge": 0,
+      "occupied": 3883,
+      "bytes": 10930
+    },
+    {
+      "name": "ash-side-idle-2",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10934
+    },
+    {
+      "name": "ash-side-idle-3",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-walk-0",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-walk-1",
+      "edge": 0,
+      "occupied": 3888,
+      "bytes": 10906
+    },
+    {
+      "name": "ash-side-walk-2",
+      "edge": 0,
+      "occupied": 3889,
+      "bytes": 11018
+    },
+    {
+      "name": "ash-side-walk-3",
+      "edge": 0,
+      "occupied": 3902,
+      "bytes": 10994
+    },
+    {
+      "name": "ash-side-walk-4",
+      "edge": 0,
+      "occupied": 3899,
+      "bytes": 11018
+    },
+    {
+      "name": "ash-side-walk-5",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-chargeWindup-0",
+      "edge": 0,
+      "occupied": 3961,
+      "bytes": 10666
+    },
+    {
+      "name": "ash-side-chargeWindup-1",
+      "edge": 0,
+      "occupied": 3957,
+      "bytes": 10670
+    },
+    {
+      "name": "ash-side-chargeWindup-2",
+      "edge": 0,
+      "occupied": 3949,
+      "bytes": 10546
+    },
+    {
+      "name": "ash-side-chargeWindup-3",
+      "edge": 0,
+      "occupied": 3957,
+      "bytes": 10798
+    },
+    {
+      "name": "ash-side-chargeWindup-4",
+      "edge": 0,
+      "occupied": 3963,
+      "bytes": 10754
+    },
+    {
+      "name": "ash-side-chargeTravel-0",
+      "edge": 0,
+      "occupied": 3963,
+      "bytes": 10750
+    },
+    {
+      "name": "ash-side-chargeTravel-1",
+      "edge": 0,
+      "occupied": 3945,
+      "bytes": 10618
+    },
+    {
+      "name": "ash-side-chargeTravel-2",
+      "edge": 0,
+      "occupied": 3974,
+      "bytes": 10866
+    },
+    {
+      "name": "ash-side-chargeBrake-0",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-chargeBrake-1",
+      "edge": 0,
+      "occupied": 3894,
+      "bytes": 10862
+    },
+    {
+      "name": "ash-side-chargeBrake-2",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 10834
+    },
+    {
+      "name": "ash-side-swordWindup-0",
+      "edge": 0,
+      "occupied": 3792,
+      "bytes": 10562
+    },
+    {
+      "name": "ash-side-swordWindup-1",
+      "edge": 0,
+      "occupied": 3869,
+      "bytes": 10182
+    },
+    {
+      "name": "ash-side-swordWindup-2",
+      "edge": 0,
+      "occupied": 3827,
+      "bytes": 10338
+    },
+    {
+      "name": "ash-side-swordWindup-3",
+      "edge": 0,
+      "occupied": 3801,
+      "bytes": 10290
+    },
+    {
+      "name": "ash-side-swordWindup-4",
+      "edge": 0,
+      "occupied": 3860,
+      "bytes": 10102
+    },
+    {
+      "name": "ash-side-swordWindup-5",
+      "edge": 0,
+      "occupied": 3852,
+      "bytes": 9834
+    },
+    {
+      "name": "ash-side-swordActive-0",
+      "edge": 0,
+      "occupied": 3849,
+      "bytes": 9706
+    },
+    {
+      "name": "ash-side-swordActive-1",
+      "edge": 0,
+      "occupied": 3816,
+      "bytes": 10218
+    },
+    {
+      "name": "ash-side-swordActive-2",
+      "edge": 0,
+      "occupied": 3850,
+      "bytes": 9274
+    },
+    {
+      "name": "ash-side-swordActive-3",
+      "edge": 0,
+      "occupied": 3814,
+      "bytes": 10230
+    },
+    {
+      "name": "ash-side-swordActive-4",
+      "edge": 0,
+      "occupied": 3653,
+      "bytes": 10126
+    },
+    {
+      "name": "ash-side-recovery-0",
+      "edge": 0,
+      "occupied": 3755,
+      "bytes": 10326
+    },
+    {
+      "name": "ash-side-recovery-1",
+      "edge": 0,
+      "occupied": 3763,
+      "bytes": 10310
+    },
+    {
+      "name": "ash-side-recovery-2",
+      "edge": 0,
+      "occupied": 3759,
+      "bytes": 10454
+    },
+    {
+      "name": "ash-side-recovery-3",
+      "edge": 0,
+      "occupied": 3768,
+      "bytes": 10438
+    },
+    {
+      "name": "ash-side-ritualEnter-0",
+      "edge": 0,
+      "occupied": 3635,
+      "bytes": 8962
+    },
+    {
+      "name": "ash-side-ritualEnter-1",
+      "edge": 0,
+      "occupied": 3635,
+      "bytes": 8894
+    },
+    {
+      "name": "ash-side-ritualEnter-2",
+      "edge": 0,
+      "occupied": 3635,
+      "bytes": 9070
+    },
+    {
+      "name": "ash-side-ritualEnter-3",
+      "edge": 0,
+      "occupied": 3641,
+      "bytes": 9106
+    },
+    {
+      "name": "ash-side-ritualEnter-4",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 9138
+    },
+    {
+      "name": "ash-side-ritualChannel-0",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 9138
+    },
+    {
+      "name": "ash-side-ritualChannel-1",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 9134
+    },
+    {
+      "name": "ash-side-ritualChannel-2",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 9146
+    },
+    {
+      "name": "ash-side-ritualChannel-3",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 9138
+    },
+    {
+      "name": "ash-side-meteorCast-0",
+      "edge": 0,
+      "occupied": 3705,
+      "bytes": 9418
+    },
+    {
+      "name": "ash-side-meteorCast-1",
+      "edge": 0,
+      "occupied": 3788,
+      "bytes": 9702
+    },
+    {
+      "name": "ash-side-meteorCast-2",
+      "edge": 0,
+      "occupied": 3840,
+      "bytes": 9674
+    },
+    {
+      "name": "ash-side-meteorCast-3",
+      "edge": 0,
+      "occupied": 3788,
+      "bytes": 9702
+    },
+    {
+      "name": "ash-side-meteorCast-4",
+      "edge": 0,
+      "occupied": 3705,
+      "bytes": 9418
+    },
+    {
+      "name": "ash-side-shieldBreak-0",
+      "edge": 0,
+      "occupied": 3666,
+      "bytes": 9170
+    },
+    {
+      "name": "ash-side-shieldBreak-1",
+      "edge": 0,
+      "occupied": 3658,
+      "bytes": 10070
+    },
+    {
+      "name": "ash-side-shieldBreak-2",
+      "edge": 0,
+      "occupied": 3704,
+      "bytes": 9902
+    },
+    {
+      "name": "ash-side-shieldBreak-3",
+      "edge": 0,
+      "occupied": 3796,
+      "bytes": 10450
+    },
+    {
+      "name": "ash-side-shieldBreak-4",
+      "edge": 0,
+      "occupied": 3884,
+      "bytes": 10766
+    },
+    {
+      "name": "ash-side-phaseTransition-0",
+      "edge": 0,
+      "occupied": 3781,
+      "bytes": 9846
+    },
+    {
+      "name": "ash-side-phaseTransition-1",
+      "edge": 0,
+      "occupied": 3799,
+      "bytes": 9418
+    },
+    {
+      "name": "ash-side-phaseTransition-2",
+      "edge": 0,
+      "occupied": 3845,
+      "bytes": 9850
+    },
+    {
+      "name": "ash-side-phaseTransition-3",
+      "edge": 0,
+      "occupied": 3875,
+      "bytes": 10274
+    },
+    {
+      "name": "ash-side-phaseTransition-4",
+      "edge": 0,
+      "occupied": 3906,
+      "bytes": 10282
+    },
+    {
+      "name": "ash-side-phaseTransition-5",
+      "edge": 0,
+      "occupied": 3921,
+      "bytes": 10370
+    },
+    {
+      "name": "ash-side-phase3Idle-0",
+      "edge": 0,
+      "occupied": 3890,
+      "bytes": 10418
+    },
+    {
+      "name": "ash-side-phase3Idle-1",
+      "edge": 0,
+      "occupied": 3910,
+      "bytes": 10522
+    },
+    {
+      "name": "ash-side-phase3Idle-2",
+      "edge": 0,
+      "occupied": 3890,
+      "bytes": 10350
+    },
+    {
+      "name": "ash-side-phase3Walk-0",
+      "edge": 0,
+      "occupied": 3914,
+      "bytes": 10846
+    },
+    {
+      "name": "ash-side-phase3Walk-1",
+      "edge": 0,
+      "occupied": 3923,
+      "bytes": 10738
+    },
+    {
+      "name": "ash-side-hit-0",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 11042
+    },
+    {
+      "name": "ash-side-hit-1",
+      "edge": 0,
+      "occupied": 3880,
+      "bytes": 11042
+    },
+    {
+      "name": "ash-side-death-0",
+      "edge": 0,
+      "occupied": 3843,
+      "bytes": 10810
+    },
+    {
+      "name": "ash-side-death-1",
+      "edge": 0,
+      "occupied": 3865,
+      "bytes": 10578
+    },
+    {
+      "name": "ash-side-death-2",
+      "edge": 0,
+      "occupied": 3709,
+      "bytes": 10798
+    },
+    {
+      "name": "ash-side-death-3",
+      "edge": 0,
+      "occupied": 3404,
+      "bytes": 11038
+    },
+    {
+      "name": "ash-side-death-4",
+      "edge": 0,
+      "occupied": 3098,
+      "bytes": 9582
+    },
+    {
+      "name": "ash-side-death-5",
+      "edge": 0,
+      "occupied": 2789,
+      "bytes": 9786
+    },
+    {
+      "name": "ash-side-death-6",
+      "edge": 0,
+      "occupied": 3052,
+      "bytes": 10646
+    },
+    {
+      "name": "ash-side-death-7",
+      "edge": 0,
+      "occupied": 2892,
+      "bytes": 10654
+    },
+    {
+      "name": "ash-side-death-8",
+      "edge": 0,
+      "occupied": 2863,
+      "bytes": 10162
+    },
+    {
+      "name": "ash-side-death-9",
+      "edge": 0,
+      "occupied": 2842,
+      "bytes": 10066
+    }
+  ]
+}

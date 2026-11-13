@@ -1,0 +1,143 @@
+{
+  "fixture": "Full-build isolated-zone: Mage56/all5V/5evolutions/8artifacts,3normalHP Guardians130px away,180s,actual HP/no test invulnerability; no regular mobs or bosses.",
+  "results": [
+    {
+      "phase": "baseline",
+      "mode": "afk",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 0,
+      "shots": 135,
+      "peakOrbs": 0,
+      "deaths": [
+        {
+          "id": 13,
+          "life": 5.249999999995225
+        },
+        {
+          "id": 11,
+          "life": 8.299999999992451
+        },
+        {
+          "id": 9,
+          "life": 10.449999999990496
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 260,
+      "blinks": 0,
+      "guardians": 0
+    },
+    {
+      "phase": "baseline",
+      "mode": "move",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 0,
+      "shots": 85,
+      "peakOrbs": 0,
+      "deaths": [
+        {
+          "id": 11,
+          "life": 3.349999999996953
+        },
+        {
+          "id": 9,
+          "life": 6.749999999993861
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 0,
+      "guardians": 0
+    },
+    {
+      "phase": "baseline",
+      "mode": "blink",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 0,
+      "shots": 120,
+      "peakOrbs": 0,
+      "deaths": [
+        {
+          "id": 11,
+          "life": 3.8499999999964984
+        },
+        {
+          "id": 9,
+          "life": 9.549999999991314
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 2,
+      "guardians": 0
+    },
+    {
+      "phase": "after",
+      "mode": "afk",
+      "damage": 9,
+      "hits": 1,
+      "orbs": 3,
+      "shots": 138,
+      "peakOrbs": 2,
+      "deaths": [
+        {
+          "id": 13,
+          "life": 5.249999999995225
+        },
+        {
+          "id": 11,
+          "life": 8.299999999992451
+        },
+        {
+          "id": 9,
+          "life": 10.449999999990496
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 251,
+      "blinks": 0,
+      "guardians": 0
+    },
+    {
+      "phase": "after",
+      "mode": "move",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 3,
+      "shots": 113,
+      "peakOrbs": 3,
+      "deaths": [
+        {
+          "id": 9,
+          "life": 8.599999999992178
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 0,
+      "guardians": 0
+    },
+    {
+      "phase": "after",
+      "mode": "blink",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 2,
+      "shots": 102,
+      "peakOrbs": 2,
+      "deaths": [
+        {
+          "id": 9,
+          "life": 7.799999999992906
+        }
+      ],
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 1,
+      "guardians": 0
+    }
+  ]
+}

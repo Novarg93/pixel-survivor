@@ -25,28 +25,30 @@ async function offer(p: Page, ids: string[]) {
 }
 
 for (const width of [1280, 390]) {
-  test(`public Mage-only menu accepts every Warrior attempt but never selects it ${width}`, async ({ page }) => {
+  test(`public menu selects accepted Warrior with mouse, keyboard, touch and controller ${width}`, async ({ page }) => {
     await page.setViewportSize({ width: width === 390 ? 844 : width, height: width === 390 ? 390 : 720 }); await mockGamepads(page); await page.goto('/?test=1');
     const warrior = page.getByRole('button', { name: /^Warrior/ }), mage = page.getByRole('button', { name: /^Mage/ });
-    await expect(mage).toHaveAttribute('aria-pressed', 'true'); await expect(warrior).toHaveAttribute('aria-disabled', 'true'); await expect(warrior).not.toHaveAttribute('disabled');
-    expect(await warrior.evaluate(n => getComputedStyle(n).filter)).toContain('grayscale(1)');
-    await warrior.click({ force: true }); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible();
-    await mage.click(); await warrior.focus(); await page.keyboard.press('Enter'); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible();
-    await mage.click(); await warrior.tap({ force: true }); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible();
+    await expect(mage).toHaveAttribute('aria-pressed', 'true'); await expect(warrior).not.toHaveAttribute('disabled');
+    for(const input of ['mouse','keyboard','touch']){
+      await mage.click();
+      if(input==='mouse')await warrior.click();else if(input==='keyboard'){await warrior.focus();await page.keyboard.press('Enter');}else await warrior.tap();
+      await expect(warrior).toHaveAttribute('aria-pressed','true');
+      await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.world.character)).toBe('warrior');
+    }
     await connectPad(page); await padFocus(page, warrior); await pressPad(page, 'confirm');
-    await expect(warrior).toHaveAttribute('aria-pressed', 'false'); await expect(mage).toHaveAttribute('aria-pressed', 'true');
-    expect(await page.evaluate(() => window.__PIXEL__!.world.character)).toBe('mage');
-    await shot(page, `menu-coming-soon-${width}`);
+    await expect(warrior).toHaveAttribute('aria-pressed', 'true'); await expect(mage).toHaveAttribute('aria-pressed', 'false');
+    expect(await page.evaluate(() => window.__PIXEL__!.world.character)).toBe('warrior');
+    await shot(page, `menu-warrior-${width}`);
     await page.getByRole('button', { name: 'Как играть', exact: true }).click();
     const help = page.getByRole('dialog', { name: 'Как играть' });
     for (let i = 0; i < 5; i++) await expect(help.locator('li').nth(i)).toBeInViewport({ ratio: 1 });
     await expect(help).toContainText('Guardian активен сразу'); await expect(help).toContainText('самонаводящихся сфер'); await expect(help).toContainText('15:00');
     await shot(page, `help-${width}`); await page.waitForTimeout(60); await pressPad(page, 'confirm'); await expect(help).toHaveCount(0);
     await padFocus(page, page.getByRole('button', { name: 'Начать забег' })); await pressPad(page, 'confirm');
-    expect(await page.evaluate(() => window.__PIXEL__!.world.character)).toBe('mage');
-    // A stale public command cannot resurrect a hidden character or old selection.
+    expect(await page.evaluate(() => window.__PIXEL__!.world.character)).toBe('warrior');
+    // Public commands and fresh restart retain the selected Warrior.
     await page.evaluate(async () => { const path = '/src/game/events/bridge.ts', { commands } = await import(path); commands.emit({ type: 'preview', character: 'warrior' }); commands.emit({ type: 'restart', character: 'warrior' }); });
-    await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.character)).toBe('mage');
+    await expect.poll(() => page.evaluate(() => window.__PIXEL__!.world.character)).toBe('warrior');
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width === 390 ? 844 : width);
   });
 

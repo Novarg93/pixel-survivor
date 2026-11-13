@@ -1,0 +1,133 @@
+{
+  "fixture": "Both builds have38 legal choices, level39. Strong: FireballV/FrostI/LightningIV/MeteorII/ShieldI, damageV/CDRV/projectilesIII/areaIII/speedIII/healthIV/pickupIII. Defensive: FireballI/FrostV/LightningI/MeteorIII/ShieldV, damageI/CDRV/areaIV/speedIV/healthV/pickupV. No artifacts. Targets held at65/180px, incoming damage disabled only for this DPS benchmark; no evasion or target competition.",
+  "result": [
+    {
+      "kind": "charger",
+      "strong": false,
+      "range": 65,
+      "hp": 6525,
+      "seconds": 37.8,
+      "killed": true
+    },
+    {
+      "kind": "charger",
+      "strong": false,
+      "range": 180,
+      "hp": 6525,
+      "seconds": 37.8,
+      "killed": true
+    },
+    {
+      "kind": "charger",
+      "strong": true,
+      "range": 65,
+      "hp": 6525,
+      "seconds": 5.65,
+      "killed": true
+    },
+    {
+      "kind": "charger",
+      "strong": true,
+      "range": 180,
+      "hp": 6525,
+      "seconds": 9.1,
+      "killed": true
+    },
+    {
+      "kind": "sorcerer",
+      "strong": false,
+      "range": 65,
+      "hp": 8265,
+      "seconds": 47.65,
+      "killed": true
+    },
+    {
+      "kind": "sorcerer",
+      "strong": false,
+      "range": 180,
+      "hp": 8265,
+      "seconds": 47.6,
+      "killed": true
+    },
+    {
+      "kind": "sorcerer",
+      "strong": true,
+      "range": 65,
+      "hp": 8265,
+      "seconds": 6.7,
+      "killed": true
+    },
+    {
+      "kind": "sorcerer",
+      "strong": true,
+      "range": 180,
+      "hp": 8265,
+      "seconds": 11.1,
+      "killed": true
+    },
+    {
+      "kind": "eclipse",
+      "strong": false,
+      "range": 65,
+      "hp": 10440,
+      "seconds": 58.65,
+      "killed": true
+    },
+    {
+      "kind": "eclipse",
+      "strong": false,
+      "range": 180,
+      "hp": 10440,
+      "seconds": 59.1,
+      "killed": true
+    },
+    {
+      "kind": "eclipse",
+      "strong": true,
+      "range": 65,
+      "hp": 10440,
+      "seconds": 8.65,
+      "killed": true
+    },
+    {
+      "kind": "eclipse",
+      "strong": true,
+      "range": 180,
+      "hp": 10440,
+      "seconds": 14.1,
+      "killed": true
+    },
+    {
+      "kind": "guardian",
+      "strong": false,
+      "range": 65,
+      "hp": 7830,
+      "seconds": 47.2,
+      "killed": true
+    },
+    {
+      "kind": "guardian",
+      "strong": false,
+      "range": 180,
+      "hp": 7830,
+      "seconds": 47.2,
+      "killed": true
+    },
+    {
+      "kind": "guardian",
+      "strong": true,
+      "range": 65,
+      "hp": 7830,
+      "seconds": 6.7,
+      "killed": true
+    },
+    {
+      "kind": "guardian",
+      "strong": true,
+      "range": 180,
+      "hp": 7830,
+      "seconds": 24.1,
+      "killed": true
+    }
+  ]
+}

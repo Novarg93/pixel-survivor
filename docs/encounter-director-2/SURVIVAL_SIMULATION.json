@@ -1,0 +1,355 @@
+{
+  "fixture": "20Hz deterministic, legal Mage39/38choices+3damage artifacts, actual scheduled10-12min encounters, no test invulnerability; fixed loadout; hazard-aware positioning pilot versus stationary",
+  "result": [
+    {
+      "width": 640,
+      "moving": false,
+      "seconds": 22.6499999999794,
+      "hp": 0,
+      "maxHp": 180,
+      "hits": 12,
+      "blocked": 4,
+      "attempts": 42,
+      "score": 5830,
+      "kills": 156,
+      "bossKills": 1,
+      "guardianKills": 0,
+      "completedWaves": 0,
+      "mobilityUses": 0,
+      "moved": 0,
+      "peakBosses": 3,
+      "peakGuardians": 0,
+      "peakRegular": 22,
+      "peakActiveGuardians": 0,
+      "status": "over",
+      "invalidInvulnerability": false,
+      "events": [
+        {
+          "minute": 10,
+          "at": 600.05,
+          "label": "Multi-Boss Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 0,
+          "bosses": [
+            {
+              "id": 4,
+              "kind": "charger"
+            },
+            {
+              "id": 5,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 6,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 7
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "moving": true,
+      "seconds": 120.04999999989082,
+      "hp": 70.48106000000197,
+      "maxHp": 180,
+      "hits": 8,
+      "blocked": 8,
+      "attempts": 25,
+      "score": 33210,
+      "kills": 893,
+      "bossKills": 6,
+      "guardianKills": 0,
+      "completedWaves": 0,
+      "mobilityUses": 29,
+      "moved": 22951.01249999977,
+      "peakBosses": 3,
+      "peakGuardians": 3,
+      "peakRegular": 42,
+      "peakActiveGuardians": 3,
+      "status": "playing",
+      "invalidInvulnerability": false,
+      "events": [
+        {
+          "minute": 10,
+          "at": 600.05,
+          "label": "Multi-Boss Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 0,
+          "bosses": [
+            {
+              "id": 4,
+              "kind": "charger"
+            },
+            {
+              "id": 5,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 6,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 7
+        },
+        {
+          "minute": 11,
+          "at": 659.9999999999454,
+          "label": "Endgame Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 3,
+          "bosses": [
+            {
+              "id": 3159,
+              "kind": "charger"
+            },
+            {
+              "id": 3160,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 3161,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [
+            3163,
+            3164,
+            3165
+          ],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 0
+        },
+        {
+          "minute": 12,
+          "at": 719.9999999998909,
+          "label": "Endgame Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 3,
+          "bosses": [
+            {
+              "id": 6924,
+              "kind": "charger"
+            },
+            {
+              "id": 6925,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 6926,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [],
+          "skippedBosses": 0,
+          "skippedGuardians": 3,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 0
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "moving": false,
+      "seconds": 19.199999999982538,
+      "hp": 0,
+      "maxHp": 180,
+      "hits": 9,
+      "blocked": 3,
+      "attempts": 50,
+      "score": 5160,
+      "kills": 135,
+      "bossKills": 1,
+      "guardianKills": 0,
+      "completedWaves": 0,
+      "mobilityUses": 0,
+      "moved": 0,
+      "peakBosses": 3,
+      "peakGuardians": 0,
+      "peakRegular": 17,
+      "peakActiveGuardians": 0,
+      "status": "over",
+      "invalidInvulnerability": false,
+      "events": [
+        {
+          "minute": 10,
+          "at": 600.05,
+          "label": "Multi-Boss Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 0,
+          "bosses": [
+            {
+              "id": 4,
+              "kind": "charger"
+            },
+            {
+              "id": 5,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 6,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 7
+        }
+      ]
+    },
+    {
+      "width": 195,
+      "moving": true,
+      "seconds": 120.04999999989082,
+      "hp": 126.42940000000071,
+      "maxHp": 180,
+      "hits": 3,
+      "blocked": 10,
+      "attempts": 33,
+      "score": 34430,
+      "kills": 917,
+      "bossKills": 6,
+      "guardianKills": 1,
+      "completedWaves": 0,
+      "mobilityUses": 28,
+      "moved": 21068.775000000296,
+      "peakBosses": 3,
+      "peakGuardians": 3,
+      "peakRegular": 27,
+      "peakActiveGuardians": 2,
+      "status": "playing",
+      "invalidInvulnerability": false,
+      "events": [
+        {
+          "minute": 10,
+          "at": 600.05,
+          "label": "Multi-Boss Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 0,
+          "bosses": [
+            {
+              "id": 4,
+              "kind": "charger"
+            },
+            {
+              "id": 5,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 6,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 7
+        },
+        {
+          "minute": 11,
+          "at": 659.9999999999454,
+          "label": "Endgame Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 3,
+          "bosses": [
+            {
+              "id": 3320,
+              "kind": "charger"
+            },
+            {
+              "id": 3321,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 3322,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [
+            3324,
+            3325,
+            3326
+          ],
+          "skippedBosses": 0,
+          "skippedGuardians": 0,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 0
+        },
+        {
+          "minute": 12,
+          "at": 719.9999999998909,
+          "label": "Endgame Encounter",
+          "requestedBosses": 3,
+          "requestedGuardians": 3,
+          "bosses": [
+            {
+              "id": 7034,
+              "kind": "charger"
+            },
+            {
+              "id": 7035,
+              "kind": "sorcerer"
+            },
+            {
+              "id": 7036,
+              "kind": "eclipse"
+            }
+          ],
+          "guardians": [
+            7038
+          ],
+          "skippedBosses": 0,
+          "skippedGuardians": 2,
+          "aggression": {
+            "wave": 5,
+            "movement": 1.6,
+            "frequency": 2
+          },
+          "missedMinutes": 0
+        }
+      ]
+    }
+  ]
+}

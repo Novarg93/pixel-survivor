@@ -1,0 +1,1379 @@
+{
+  "viewport": {
+    "width": 660.9638554216868,
+    "height": 305.421686746988
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "radius": 388.0589323548029,
+  "linked": [
+    1,
+    3,
+    4
+  ],
+  "targets": [
+    {
+      "id": 1,
+      "x": 25,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "x": -297.43373493975906,
+      "y": 0
+    },
+    {
+      "id": 3,
+      "x": 0,
+      "y": 134.3855421686747
+    },
+    {
+      "id": 4,
+      "x": 0,
+      "y": -134.3855421686747
+    },
+    {
+      "id": 5,
+      "x": -304.04337349397593,
+      "y": -134.3855421686747
+    },
+    {
+      "id": 6,
+      "x": -304.04337349397593,
+      "y": 134.3855421686747
+    },
+    {
+      "id": 7,
+      "x": 304.04337349397593,
+      "y": -134.3855421686747
+    },
+    {
+      "id": 8,
+      "x": 304.04337349397593,
+      "y": 134.3855421686747
+    }
+  ],
+  "hits": [
+    {
+      "id": 1,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 3,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 4,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 2,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 5,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 6,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 7,
+      "at": 601.6989866666679
+    },
+    {
+      "id": 8,
+      "at": 601.6989866666679
+    }
+  ],
+  "frames": [
+    {
+      "age": 0.08320000000014716,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recoil",
+        "casting": false,
+        "dim": 0.15054335999986015,
+        "flash": 0.16094524498977503,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.14976666666700567,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recoil",
+        "casting": false,
+        "dim": 0.09392508166641218,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.3495266666674297,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recovery",
+        "casting": false,
+        "dim": 0.0038213360665511273,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.4161066666675879,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 19,
+          "alpha": 0.26599999999999996,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 4,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 1,
+          "activeCells": [
+            0,
+            6,
+            10,
+            2
+          ]
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.5159200000008468,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 28,
+          "alpha": 0.26599999999999996,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 7,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 1,
+          "activeCells": [
+            17,
+            12,
+            1,
+            19,
+            7,
+            13,
+            16
+          ]
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.7821333333345137,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 24,
+          "alpha": 0.17297026414667796,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 6,
+          "geometry": 40,
+          "builds": 1,
+          "pass": 2,
+          "activeCells": [
+            4,
+            17,
+            12,
+            1,
+            19,
+            7
+          ]
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 1.0317333333346141,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 0,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 75,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "age": 0,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.016646666666702004,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.03328666666675417,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.04992000000004282,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.06656000000009499,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.08320000000014716,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.09984000000019932,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.1164800000002515,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.13312000000030366,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.14976666666700567,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.16640666666705783,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.18304666666711,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.199693333333812,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.216340000000514,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.232986666667216,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.24963333333391802,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.26628000000062,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.28293333333397186,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.29958000000067386,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.31622666666737587,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.3328800000007277,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.3495266666674297,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.3661733333341317,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.3828200000008337,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.3994666666675357,
+      "segments": 9,
+      "alpha": 0.2536201257818019,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 2,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        0,
+        6
+      ]
+    },
+    {
+      "age": 0.4161066666675879,
+      "segments": 19,
+      "alpha": 0.26599999999999996,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 4,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        0,
+        6,
+        10,
+        2
+      ]
+    },
+    {
+      "age": 0.43274000000087653,
+      "segments": 23,
+      "alpha": 0.25735500002914513,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 5,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        0,
+        6,
+        10,
+        2,
+        15
+      ]
+    },
+    {
+      "age": 0.4493733333341652,
+      "segments": 31,
+      "alpha": 0.2540885534549445,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        0,
+        6,
+        10,
+        2,
+        15,
+        8,
+        4
+      ]
+    },
+    {
+      "age": 0.46601333333421735,
+      "segments": 30,
+      "alpha": 0.26599999999999996,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        10,
+        2,
+        15,
+        8,
+        4,
+        17,
+        12
+      ]
+    },
+    {
+      "age": 0.482646666667506,
+      "segments": 24,
+      "alpha": 0.2542516666945751,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        15,
+        8,
+        4,
+        17,
+        12,
+        1
+      ]
+    },
+    {
+      "age": 0.49928000000079464,
+      "segments": 28,
+      "alpha": 0.25455698112808717,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        8,
+        4,
+        17,
+        12,
+        1,
+        19,
+        7
+      ]
+    },
+    {
+      "age": 0.5159200000008468,
+      "segments": 28,
+      "alpha": 0.26599999999999996,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        17,
+        12,
+        1,
+        19,
+        7,
+        13,
+        16
+      ]
+    },
+    {
+      "age": 0.5325533333341355,
+      "segments": 24,
+      "alpha": 0.25114833336000325,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        1,
+        19,
+        7,
+        13,
+        16,
+        3
+      ]
+    },
+    {
+      "age": 0.5491933333341876,
+      "segments": 29,
+      "alpha": 0.25499194968124717,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        19,
+        7,
+        13,
+        16,
+        3,
+        11,
+        18
+      ]
+    },
+    {
+      "age": 0.5658266666674763,
+      "segments": 30,
+      "alpha": 0.26599999999999996,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        13,
+        16,
+        3,
+        11,
+        18,
+        5,
+        14
+      ]
+    },
+    {
+      "age": 0.5824666666675284,
+      "segments": 26,
+      "alpha": 0.24826666669532219,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        3,
+        11,
+        18,
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.5991133333342304,
+      "segments": 22,
+      "alpha": 0.2052047798697111,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 5,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        11,
+        18,
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.6157600000009325,
+      "segments": 13,
+      "alpha": 0.12165735848588596,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 3,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.6324000000009846,
+      "segments": 4,
+      "alpha": 0.038143396221473204,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 1,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 1,
+      "activeCells": [
+        9
+      ]
+    },
+    {
+      "age": 0.6490400000010368,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.665680000001089,
+      "segments": 4,
+      "alpha": 0.01627920002606876,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 1,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        0
+      ]
+    },
+    {
+      "age": 0.6823200000011411,
+      "segments": 9,
+      "alpha": 0.17524080002731746,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 2,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        0,
+        6
+      ]
+    },
+    {
+      "age": 0.6989600000011933,
+      "segments": 19,
+      "alpha": 0.18443737358059376,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 4,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        0,
+        6,
+        10,
+        2
+      ]
+    },
+    {
+      "age": 0.7156000000012455,
+      "segments": 27,
+      "alpha": 0.19152,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        0,
+        6,
+        10,
+        2,
+        15,
+        8
+      ]
+    },
+    {
+      "age": 0.7322400000012976,
+      "segments": 27,
+      "alpha": 0.17332560003106312,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        6,
+        10,
+        2,
+        15,
+        8,
+        4
+      ]
+    },
+    {
+      "age": 0.7488733333345863,
+      "segments": 30,
+      "alpha": 0.18475055093886894,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        10,
+        2,
+        15,
+        8,
+        4,
+        17,
+        12
+      ]
+    },
+    {
+      "age": 0.7655066666678749,
+      "segments": 28,
+      "alpha": 0.19152,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        15,
+        8,
+        4,
+        17,
+        12,
+        1,
+        19
+      ]
+    },
+    {
+      "age": 0.7821333333345137,
+      "segments": 24,
+      "alpha": 0.17297026414667796,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        4,
+        17,
+        12,
+        1,
+        19,
+        7
+      ]
+    },
+    {
+      "age": 0.7987666666678024,
+      "segments": 28,
+      "alpha": 0.18513599999589608,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        17,
+        12,
+        1,
+        19,
+        7,
+        13,
+        16
+      ]
+    },
+    {
+      "age": 0.815400000001091,
+      "segments": 28,
+      "alpha": 0.19152,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        1,
+        19,
+        7,
+        13,
+        16,
+        3,
+        11
+      ]
+    },
+    {
+      "age": 0.8320333333343797,
+      "segments": 25,
+      "alpha": 0.17333162263772856,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        7,
+        13,
+        16,
+        3,
+        11,
+        18
+      ]
+    },
+    {
+      "age": 0.8486666666676683,
+      "segments": 30,
+      "alpha": 0.18549735848694673,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 7,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        13,
+        16,
+        3,
+        11,
+        18,
+        5,
+        14
+      ]
+    },
+    {
+      "age": 0.865300000000957,
+      "segments": 26,
+      "alpha": 0.19152,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 6,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        3,
+        11,
+        18,
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.8819333333342456,
+      "segments": 18,
+      "alpha": 0.137557132072175,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 4,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        18,
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.8985733333342978,
+      "segments": 13,
+      "alpha": 0.07742707924179781,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 3,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        5,
+        14,
+        9
+      ]
+    },
+    {
+      "age": 0.9152200000009998,
+      "segments": 4,
+      "alpha": 0.01727293584544372,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 1,
+      "geometry": 40,
+      "builds": 1,
+      "pass": 2,
+      "activeCells": [
+        9
+      ]
+    },
+    {
+      "age": 0.9318666666677018,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.9485133333344038,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.9651600000011058,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.9818066666678078,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 0.99844666666786,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 1.0150866666679121,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    },
+    {
+      "age": 1.0317333333346141,
+      "segments": 0,
+      "alpha": 0,
+      "sparks": 0,
+      "radius": 388.0589323548029,
+      "arcs": 0,
+      "geometry": 0,
+      "builds": 1,
+      "pass": 0,
+      "activeCells": []
+    }
+  ],
+  "errors": []
+}

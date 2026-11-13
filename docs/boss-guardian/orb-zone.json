@@ -1,0 +1,83 @@
+{
+  "fixture": "Causal probe only: Mage56+shieldV; other4abilities disabled,3normalHP Guardians130px away,180s,actual HP/no test invulnerability. Not a full-build balance result.",
+  "results": [
+    {
+      "phase": "baseline",
+      "mode": "afk",
+      "damage": 116,
+      "hits": 14,
+      "orbs": 0,
+      "shots": 0,
+      "peakOrbs": 0,
+      "seconds": 179.9999999998363,
+      "hp": 124,
+      "blinks": 0,
+      "guardians": 3
+    },
+    {
+      "phase": "baseline",
+      "mode": "move",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 0,
+      "shots": 0,
+      "peakOrbs": 0,
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 0,
+      "guardians": 1
+    },
+    {
+      "phase": "baseline",
+      "mode": "blink",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 0,
+      "shots": 0,
+      "peakOrbs": 0,
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 34,
+      "guardians": 1
+    },
+    {
+      "phase": "after",
+      "mode": "afk",
+      "damage": 240,
+      "hits": 11,
+      "orbs": 45,
+      "shots": 45,
+      "peakOrbs": 2,
+      "seconds": 143.1499999998698,
+      "hp": 0,
+      "blinks": 0,
+      "guardians": 0
+    },
+    {
+      "phase": "after",
+      "mode": "move",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 20,
+      "shots": 20,
+      "peakOrbs": 3,
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 0,
+      "guardians": 1
+    },
+    {
+      "phase": "after",
+      "mode": "blink",
+      "damage": 0,
+      "hits": 0,
+      "orbs": 19,
+      "shots": 19,
+      "peakOrbs": 2,
+      "seconds": 179.9999999998363,
+      "hp": 240,
+      "blinks": 1,
+      "guardians": 1
+    }
+  ]
+}

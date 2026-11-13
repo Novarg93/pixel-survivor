@@ -7,6 +7,8 @@ import { lightningCinematic } from '../ultimates/lightningCinematic';
 import { LightningGroundArt } from './LightningGroundArt';
 import { FrostUltimateArt } from './FrostUltimateArt';
 import { FireUltimateArt } from './FireUltimateArt';
+import {WarBannerArt} from './WarBannerArt';
+import {WarriorUltimateArt} from './WarriorUltimateArt';
 
 // One batch and sixteen reusable ash silhouettes. No emitters, timers, tweens or gameplay writes.
 export class UltimateArt {
@@ -20,13 +22,17 @@ export class UltimateArt {
   private frost:FrostUltimateArt;
   private fire:FireUltimateArt;
   private lightning:LightningUltimateArt;
-  constructor(private scene:Phaser.Scene){this.lightning=new LightningUltimateArt(scene);this.g=scene.add.graphics().setName('ultimate-feedback').setDepth(14.2);this.lighting=scene.add.graphics().setName('lightning-world-light').setDepth(9);this.ground=new LightningGroundArt(scene);this.frost=new FrostUltimateArt(scene);this.fire=new FireUltimateArt(scene);}
+  private banner:WarBannerArt;
+  private warrior:WarriorUltimateArt;
+  constructor(private scene:Phaser.Scene){this.warrior=new WarriorUltimateArt(scene);this.banner=new WarBannerArt(scene);this.lightning=new LightningUltimateArt(scene);this.g=scene.add.graphics().setName('ultimate-feedback').setDepth(14.2);this.lighting=scene.add.graphics().setName('lightning-world-light').setDepth(9);this.ground=new LightningGroundArt(scene);this.frost=new FrostUltimateArt(scene);this.fire=new FireUltimateArt(scene);}
   render(w:World,intensity:number,hands:readonly Point[],reducedMotion:boolean,reducedFlash:boolean,hero?:Phaser.GameObjects.Sprite){
     const g=this.g.clear(),u=w.ultimate,now=w.elapsed, strength=Math.max(.35,intensity), live=w.status!=='over'&&!!u.selected;
     const state=this.state=lightningCinematic(now,u.started,u.released,live&&u.selected==='lightning',intensity,reducedMotion||reducedFlash);
     this.ground.render(u.ground,now,live&&u.selected==='lightning',intensity,reducedMotion||reducedFlash);
     this.frost.render(w,intensity,reducedMotion||reducedFlash);
     this.fire.render(w,intensity,reducedMotion,reducedFlash);
+    this.banner.render(w,intensity);
+    this.warrior.render(w,intensity,reducedMotion);
     this.lightning.render(w,intensity,hands,reducedMotion||reducedFlash,hero?.depth??10);
     this.lighting.clear();
     if(state.dim>0||state.flash>0){
@@ -56,6 +62,6 @@ export class UltimateArt {
     }
     for(let i=this.ashCount;i<this.ash.length;i++)this.ash[i].setVisible(false).setActive(false);
   }
-  diagnostics(){return{lightning:this.lightning.diagnostics(),batches:9,fire:this.fire.diagnostics(),ground:this.ground.diagnostics(),frost:this.frost.diagnostics(),allocatedAsh:this.ash.length,activeAsh:this.ashCount,allocatedAura:this.glow.length,activeAura:this.glow.filter(i=>i.visible).length,...this.state};}
-  destroy(){this.lightning.destroy();this.g.destroy();this.lighting.destroy();this.ground.destroy();this.frost.destroy();this.fire.destroy();for(const image of [...this.ash,...this.glow])image.destroy();this.ash=[];this.glow=[];}
+  diagnostics(){return{warrior:this.warrior.diagnostics(),banner:this.banner.diagnostics(),lightning:this.lightning.diagnostics(),batches:10,fire:this.fire.diagnostics(),ground:this.ground.diagnostics(),frost:this.frost.diagnostics(),allocatedAsh:this.ash.length,activeAsh:this.ashCount,allocatedAura:this.glow.length,activeAura:this.glow.filter(i=>i.visible).length,...this.state};}
+  destroy(){this.warrior.destroy();this.banner.destroy();this.lightning.destroy();this.g.destroy();this.lighting.destroy();this.ground.destroy();this.frost.destroy();this.fire.destroy();for(const image of [...this.ash,...this.glow])image.destroy();this.ash=[];this.glow=[];}
 }

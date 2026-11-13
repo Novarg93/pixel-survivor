@@ -1,0 +1,131 @@
+{
+  "fixture": "Independent recheck of archived baseline World with current shared legal build and pilot; no test invulnerability",
+  "replays": [
+    {
+      "start": 0,
+      "matches": true
+    },
+    {
+      "start": 180,
+      "matches": true
+    },
+    {
+      "start": 480,
+      "matches": true
+    },
+    {
+      "start": 570,
+      "matches": true
+    }
+  ],
+  "trials": [
+    {
+      "seed": 12345,
+      "mode": "afk",
+      "matches": true,
+      "actual": {
+        "seconds": 34.95,
+        "hp": 0,
+        "damageTaken": 180,
+        "kills": 246,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 12345,
+      "mode": "move",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 127.44,
+        "damageTaken": 106.56,
+        "kills": 1207,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 12345,
+      "mode": "blink",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 144.11,
+        "damageTaken": 35.89,
+        "kills": 1154,
+        "blinks": 28
+      }
+    },
+    {
+      "seed": 67890,
+      "mode": "afk",
+      "matches": true,
+      "actual": {
+        "seconds": 46.1,
+        "hp": 0,
+        "damageTaken": 180,
+        "kills": 337,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 67890,
+      "mode": "move",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 180,
+        "damageTaken": 41.72,
+        "kills": 1237,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 67890,
+      "mode": "blink",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 113.02,
+        "damageTaken": 66.98,
+        "kills": 1250,
+        "blinks": 31
+      }
+    },
+    {
+      "seed": 77,
+      "mode": "afk",
+      "matches": true,
+      "actual": {
+        "seconds": 46.75,
+        "hp": 0,
+        "damageTaken": 180,
+        "kills": 349,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 77,
+      "mode": "move",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 103.96,
+        "damageTaken": 76.04,
+        "kills": 1249,
+        "blinks": 0
+      }
+    },
+    {
+      "seed": 77,
+      "mode": "blink",
+      "matches": true,
+      "actual": {
+        "seconds": 180,
+        "hp": 180,
+        "damageTaken": 0,
+        "kills": 1249,
+        "blinks": 30
+      }
+    }
+  ]
+}

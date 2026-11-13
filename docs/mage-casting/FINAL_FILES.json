@@ -1,0 +1,194 @@
+[
+  {
+    "path": "public/assets/hd/mage-casting.json",
+    "status": "added",
+    "bytes": 40367,
+    "sha256": "decb33d081c38ba7d6482ae4875b1f2d8c9824a0f4dd4cf63cce6481dd7afd67"
+  },
+  {
+    "path": "public/assets/hd/mage-casting.png",
+    "status": "added",
+    "bytes": 239840,
+    "sha256": "475708bc9136b0561b830d330eab463bf900dd79c14dc1e9302e0f4b0147d16a"
+  },
+  {
+    "path": "scripts/build-mage-casting-art.mjs",
+    "status": "added",
+    "bytes": 1527,
+    "sha256": "07fdfa35dbc754215d205ca84bfa8cbc4ed2c4be7e97f7eac0f364a04f55c875"
+  },
+  {
+    "path": "scripts/inspect-mage-casting-art.mjs",
+    "status": "added",
+    "bytes": 2636,
+    "sha256": "bae311d306e7cc6052c395cb50fc876a0aab4ef69eb8b5b700bf1cda277ad6a1"
+  },
+  {
+    "path": "scripts/mage-art-source.mjs",
+    "status": "modified",
+    "bytes": 6151,
+    "sha256": "ed8d47ff13a627d0e417125bed6094f68d39f6acc2497381024f30d28f3333c5"
+  },
+  {
+    "path": "scripts/mage-casting-art-source.mjs",
+    "status": "added",
+    "bytes": 3603,
+    "sha256": "4787ce2e54550491f696d39a3ff6d9eb7a31a3da67c88833e8afb3f9367fac07"
+  },
+  {
+    "path": "scripts/ts-art-loader.mjs",
+    "status": "added",
+    "bytes": 477,
+    "sha256": "2d2f85a497a444a8efba457371b62b58c13afd93f8c48b76f18c4a8d1f324ea2"
+  },
+  {
+    "path": "src/game/abilities/arcaneShield.ts",
+    "status": "modified",
+    "bytes": 342,
+    "sha256": "2a1c0aff8caf48c1c22c29117c16215c4856d6ad775fbc9c062f1c2c507919b0"
+  },
+  {
+    "path": "src/game/abilities/chainLightning.ts",
+    "status": "modified",
+    "bytes": 1398,
+    "sha256": "0f70b10769c5af80f2aacf0400b22267ad5aac6b5d9676d4fda575322a1de721"
+  },
+  {
+    "path": "src/game/abilities/fireball.ts",
+    "status": "modified",
+    "bytes": 1017,
+    "sha256": "bef2d88bc512296de375a2b3343c75f3eafc3258871b78694616104b34cf948f"
+  },
+  {
+    "path": "src/game/abilities/frostNova.ts",
+    "status": "modified",
+    "bytes": 1211,
+    "sha256": "a5933dd2d61857907e3c07109845c136674b280d284f1de3634691380d408bc3"
+  },
+  {
+    "path": "src/game/abilities/meteor.ts",
+    "status": "modified",
+    "bytes": 1698,
+    "sha256": "e5e90659748693e8f2ce21c2b35c885b57e52e090953a3279c4310f8215b59ae"
+  },
+  {
+    "path": "src/game/abilities/tickAbilities.ts",
+    "status": "modified",
+    "bytes": 1184,
+    "sha256": "addf23cfdd712dcd492340a41f331a2c74784b0a5940e9fc1872c3f4c4ab8c05"
+  },
+  {
+    "path": "src/game/art/GameArt.ts",
+    "status": "modified",
+    "bytes": 18664,
+    "sha256": "2975f8bbc90ee60a7fa7f23e01ffc2e70410e35026222bd73e9612e6f40397a1"
+  },
+  {
+    "path": "src/game/art/MageCastingArt.ts",
+    "status": "added",
+    "bytes": 4712,
+    "sha256": "2226c1f6a779a8d88117046352d427ca5665f0b919fbb5fee43831cc2e37f1d8"
+  },
+  {
+    "path": "src/game/art/MageCastingController.ts",
+    "status": "added",
+    "bytes": 7999,
+    "sha256": "f144f2e8404dc384d7f8a30272bcf85a3aa6418d93f257c39f93c4f528e3cc85"
+  },
+  {
+    "path": "src/game/art/assetRegistry.ts",
+    "status": "modified",
+    "bytes": 11413,
+    "sha256": "e2bdc1d00f342f5154e8a6571707372e60fa3921ba484210f884c69b599b4c50"
+  },
+  {
+    "path": "src/game/art/mageCastingPack.ts",
+    "status": "added",
+    "bytes": 2576,
+    "sha256": "a32f6edb44d702a1c410a6f8afa97902c6cf0a1b72e8cfb043397745eb4ca9b9"
+  },
+  {
+    "path": "src/game/art/mageCastingPoses.ts",
+    "status": "added",
+    "bytes": 2254,
+    "sha256": "0168aac7b56a97a31763c7cbcb09ec85ac31d869d1393cec83144a439a1af701"
+  },
+  {
+    "path": "src/game/events/gameFeedback.ts",
+    "status": "modified",
+    "bytes": 568,
+    "sha256": "f8617f865835d8e99384322c1f010064412d6aa68956ee5e700e982ccf7c1b7a"
+  },
+  {
+    "path": "src/game/scenes/GameScene.ts",
+    "status": "modified",
+    "bytes": 15932,
+    "sha256": "29960dc8672f237c0655eec08b1cb95ac698c833b6a47ad21e7799ae5d2be932"
+  },
+  {
+    "path": "src/game/systems/World.ts",
+    "status": "modified",
+    "bytes": 22662,
+    "sha256": "f8acbbd17713494d004ea5150ea95f5aafe4b1b6e9dea52efad3ea4326fe79bf"
+  },
+  {
+    "path": "tests/e2e/audio.spec.ts",
+    "status": "modified",
+    "bytes": 13132,
+    "sha256": "84f9f2b07ac06b1c791a7025470b151dbb00388564ba00b3aee8619602b85ac8"
+  },
+  {
+    "path": "tests/e2e/encounter-director.spec.ts",
+    "status": "modified",
+    "bytes": 7706,
+    "sha256": "4875ed5b107672121e246a4c02d8326f851a8d94a0c3379d5cdbc795acaa6564"
+  },
+  {
+    "path": "tests/e2e/frost-armageddon.spec.ts",
+    "status": "modified",
+    "bytes": 14696,
+    "sha256": "55afd206a8d37f6f6d71a1265b5911808be501bd89d47c8b8210648280215470"
+  },
+  {
+    "path": "tests/e2e/hd-integration.spec.ts",
+    "status": "modified",
+    "bytes": 8258,
+    "sha256": "99cc4f7e61ec5de747019880126aa9669df4e3327ca741485e299403b0b431fc"
+  },
+  {
+    "path": "tests/e2e/mage-casting-performance.spec.ts",
+    "status": "added",
+    "bytes": 3422,
+    "sha256": "d35ed4e5c90f5639331f9cb47992d2e45d593d818664d113ffc40c2a26cb28af"
+  },
+  {
+    "path": "tests/e2e/mage-casting.spec.ts",
+    "status": "added",
+    "bytes": 13286,
+    "sha256": "ae838f564fea8f546827eae613431b62689bb0308bb657d7300e8ccc69185387"
+  },
+  {
+    "path": "tests/e2e/mobility-specialization-stress.spec.ts",
+    "status": "modified",
+    "bytes": 4773,
+    "sha256": "4dd672804035b7015f26052466ea55b2dc6415bee6f89e35eb65418f443fb64c"
+  },
+  {
+    "path": "tests/e2e/production.spec.ts",
+    "status": "modified",
+    "bytes": 4239,
+    "sha256": "8bb9327bf1428dd126b05074cf25e4b7beca6e5eb75d543df663c5b4263a0b95"
+  },
+  {
+    "path": "tests/unit/asset-registry.test.ts",
+    "status": "modified",
+    "bytes": 4441,
+    "sha256": "0aa3b4721341bc009601271b99715ee7096e30a0a117daa3ec45b3d1c0345059"
+  },
+  {
+    "path": "tests/unit/mage-casting.test.ts",
+    "status": "added",
+    "bytes": 8643,
+    "sha256": "be008a2a8d568e91f895332cd8d84c5747c63f470f343c5a9e370cf24d86bd41"
+  }
+]

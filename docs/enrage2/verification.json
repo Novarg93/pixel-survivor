@@ -1,0 +1,31 @@
+{
+  "checkpoint": "d1fa0cc",
+  "branch": "feature/endgame-enrage-2",
+  "codeTestFiles": 42,
+  "changedSinceQA": [],
+  "documentationExtra": "README.md",
+  "full": {
+    "startTime": "2026-11-03T18:11:56.748Z",
+    "duration": 911575.751,
+    "expected": 212,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-03T18:17:09.273Z",
+    "duration": 24690.003,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "performance": {
+    "startTime": "2026-11-03T18:27:32.808Z",
+    "duration": 36599.212,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

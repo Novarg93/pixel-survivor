@@ -1,0 +1,1059 @@
+{
+  "measuredAt": "2026-10-31T17:16:03.195Z",
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+    "logicalCores": 12,
+    "ramGiB": 31.6,
+    "platform": "win32",
+    "arch": "x64",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  "setup": "Peak wave at 20min, 150 mobs + 2 bosses initially; test-only invulnerability, rank III abilities, moving keyboard pilot; not a normal survival balance run.",
+  "realSeconds": 60,
+  "gameSeconds": 60.77523999995219,
+  "initialElapsed": 1200,
+  "fps": {
+    "min": 59.7890625,
+    "median": 60.1394357955229,
+    "average": 60.171224154599415
+  },
+  "updateMs": {
+    "median": 0.5,
+    "p95": 2.7000000029802322
+  },
+  "maxima": {
+    "mobs": 150,
+    "projectiles": 34,
+    "orbs": 216,
+    "bosses": 2,
+    "chunks": 48
+  },
+  "samples": [
+    {
+      "fps": 59.5,
+      "updateMs": 0.5999999940395355,
+      "enemies": 132,
+      "projectiles": 3,
+      "orbs": 18,
+      "effects": 19,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 155,
+      "pooledSprites": 18,
+      "allocations": {
+        "orbs": 18,
+        "projectiles": 3,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.625,
+      "updateMs": 1.3999999910593033,
+      "enemies": 138,
+      "projectiles": 0,
+      "orbs": 19,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 159,
+      "pooledSprites": 14,
+      "allocations": {
+        "orbs": 19,
+        "projectiles": 3,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.71875,
+      "updateMs": 0.5,
+      "enemies": 130,
+      "projectiles": 23,
+      "orbs": 33,
+      "effects": 17,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 188,
+      "pooledSprites": 17,
+      "allocations": {
+        "orbs": 34,
+        "projectiles": 23,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.7890625,
+      "updateMs": 0.5999999940395355,
+      "enemies": 135,
+      "projectiles": 34,
+      "orbs": 34,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 205,
+      "pooledSprites": 0,
+      "allocations": {
+        "orbs": 35,
+        "projectiles": 34,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.841796875,
+      "updateMs": 0.4000000059604645,
+      "enemies": 142,
+      "projectiles": 33,
+      "orbs": 35,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 212,
+      "pooledSprites": 2,
+      "allocations": {
+        "orbs": 35,
+        "projectiles": 34,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.88134765625,
+      "updateMs": 0.4000000059604645,
+      "enemies": 148,
+      "projectiles": 3,
+      "orbs": 37,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 190,
+      "pooledSprites": 26,
+      "allocations": {
+        "orbs": 37,
+        "projectiles": 34,
+        "effects": 19
+      }
+    },
+    {
+      "fps": 59.9110107421875,
+      "updateMs": 0.29999999701976776,
+      "enemies": 116,
+      "projectiles": 4,
+      "orbs": 64,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 186,
+      "pooledSprites": 33,
+      "allocations": {
+        "orbs": 65,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.933258056640625,
+      "updateMs": 2.9000000059604645,
+      "enemies": 112,
+      "projectiles": 7,
+      "orbs": 64,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 185,
+      "pooledSprites": 34,
+      "allocations": {
+        "orbs": 65,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.94994354248047,
+      "updateMs": 0.4000000059604645,
+      "enemies": 119,
+      "projectiles": 6,
+      "orbs": 64,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 191,
+      "pooledSprites": 28,
+      "allocations": {
+        "orbs": 65,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.96245765686035,
+      "updateMs": 0.4000000059604645,
+      "enemies": 126,
+      "projectiles": 8,
+      "orbs": 64,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 200,
+      "pooledSprites": 19,
+      "allocations": {
+        "orbs": 65,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.971843242645264,
+      "updateMs": 0.3999999910593033,
+      "enemies": 128,
+      "projectiles": 7,
+      "orbs": 68,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 205,
+      "pooledSprites": 14,
+      "allocations": {
+        "orbs": 69,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.97888243198395,
+      "updateMs": 0.6000000089406967,
+      "enemies": 107,
+      "projectiles": 10,
+      "orbs": 93,
+      "effects": 26,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 212,
+      "pooledSprites": 21,
+      "allocations": {
+        "orbs": 93,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.98416182398796,
+      "updateMs": 0.5,
+      "enemies": 112,
+      "projectiles": 7,
+      "orbs": 94,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 215,
+      "pooledSprites": 18,
+      "allocations": {
+        "orbs": 94,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.98812136799097,
+      "updateMs": 0.3999999910593033,
+      "enemies": 114,
+      "projectiles": 3,
+      "orbs": 97,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 216,
+      "pooledSprites": 17,
+      "allocations": {
+        "orbs": 97,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.99109102599323,
+      "updateMs": 0.3999999910593033,
+      "enemies": 108,
+      "projectiles": 2,
+      "orbs": 98,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 210,
+      "pooledSprites": 23,
+      "allocations": {
+        "orbs": 98,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.99331826949492,
+      "updateMs": 0.3999999910593033,
+      "enemies": 112,
+      "projectiles": 2,
+      "orbs": 98,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 214,
+      "pooledSprites": 19,
+      "allocations": {
+        "orbs": 99,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.99498870212119,
+      "updateMs": 0.5,
+      "enemies": 115,
+      "projectiles": 4,
+      "orbs": 102,
+      "effects": 8,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 223,
+      "pooledSprites": 10,
+      "allocations": {
+        "orbs": 102,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.99624152659089,
+      "updateMs": 0.5,
+      "enemies": 109,
+      "projectiles": 4,
+      "orbs": 114,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 229,
+      "pooledSprites": 11,
+      "allocations": {
+        "orbs": 116,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 59.99718114494317,
+      "updateMs": 0.3999999910593033,
+      "enemies": 114,
+      "projectiles": 7,
+      "orbs": 113,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 236,
+      "pooledSprites": 4,
+      "allocations": {
+        "orbs": 116,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.24788585870738,
+      "updateMs": 0.5999999940395355,
+      "enemies": 120,
+      "projectiles": 9,
+      "orbs": 115,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 246,
+      "pooledSprites": 0,
+      "allocations": {
+        "orbs": 116,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.18591439403053,
+      "updateMs": 0.5999999940395355,
+      "enemies": 121,
+      "projectiles": 6,
+      "orbs": 119,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 248,
+      "pooledSprites": 3,
+      "allocations": {
+        "orbs": 120,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.1394357955229,
+      "updateMs": 0.5,
+      "enemies": 122,
+      "projectiles": 2,
+      "orbs": 123,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 249,
+      "pooledSprites": 3,
+      "allocations": {
+        "orbs": 123,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.104576846642175,
+      "updateMs": 0.29999999701976776,
+      "enemies": 111,
+      "projectiles": 1,
+      "orbs": 138,
+      "effects": 16,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 252,
+      "pooledSprites": 15,
+      "allocations": {
+        "orbs": 138,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.07843263498163,
+      "updateMs": 0.5,
+      "enemies": 107,
+      "projectiles": 1,
+      "orbs": 140,
+      "effects": 2,
+      "bosses": 2,
+      "chunks": 40,
+      "sprites": 250,
+      "pooledSprites": 17,
+      "allocations": {
+        "orbs": 140,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.058824476236225,
+      "updateMs": 3.4000000059604645,
+      "enemies": 113,
+      "projectiles": 1,
+      "orbs": 141,
+      "effects": 3,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 257,
+      "pooledSprites": 10,
+      "allocations": {
+        "orbs": 141,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.04411835717717,
+      "updateMs": 0.5,
+      "enemies": 120,
+      "projectiles": 1,
+      "orbs": 140,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 263,
+      "pooledSprites": 4,
+      "allocations": {
+        "orbs": 141,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.03308876788287,
+      "updateMs": 0.29999999701976776,
+      "enemies": 126,
+      "projectiles": 1,
+      "orbs": 142,
+      "effects": 3,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 271,
+      "pooledSprites": 2,
+      "allocations": {
+        "orbs": 142,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.024816575912155,
+      "updateMs": 0.3999999910593033,
+      "enemies": 133,
+      "projectiles": 6,
+      "orbs": 143,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 284,
+      "pooledSprites": 0,
+      "allocations": {
+        "orbs": 143,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.018612431934116,
+      "updateMs": 0.5,
+      "enemies": 124,
+      "projectiles": 6,
+      "orbs": 158,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 290,
+      "pooledSprites": 12,
+      "allocations": {
+        "orbs": 159,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.01395932395059,
+      "updateMs": 0.4000000059604645,
+      "enemies": 128,
+      "projectiles": 3,
+      "orbs": 160,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 293,
+      "pooledSprites": 9,
+      "allocations": {
+        "orbs": 160,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.01046949296294,
+      "updateMs": 0.3999999910593033,
+      "enemies": 130,
+      "projectiles": 10,
+      "orbs": 163,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 305,
+      "pooledSprites": 2,
+      "allocations": {
+        "orbs": 163,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.0078521197222,
+      "updateMs": 0.6000000089406967,
+      "enemies": 131,
+      "projectiles": 11,
+      "orbs": 163,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 307,
+      "pooledSprites": 3,
+      "allocations": {
+        "orbs": 163,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.25588908979165,
+      "updateMs": 0.5,
+      "enemies": 139,
+      "projectiles": 9,
+      "orbs": 163,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 313,
+      "pooledSprites": 4,
+      "allocations": {
+        "orbs": 163,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.19191681734374,
+      "updateMs": 0.4000000059604645,
+      "enemies": 130,
+      "projectiles": 12,
+      "orbs": 176,
+      "effects": 17,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 320,
+      "pooledSprites": 16,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.39393761300781,
+      "updateMs": 0.5,
+      "enemies": 138,
+      "projectiles": 12,
+      "orbs": 168,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 320,
+      "pooledSprites": 16,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.295453209755856,
+      "updateMs": 0.5,
+      "enemies": 143,
+      "projectiles": 14,
+      "orbs": 154,
+      "effects": 6,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 313,
+      "pooledSprites": 23,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.22158990731689,
+      "updateMs": 0.5,
+      "enemies": 145,
+      "projectiles": 13,
+      "orbs": 154,
+      "effects": 8,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 314,
+      "pooledSprites": 22,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.16619243048767,
+      "updateMs": 0.5,
+      "enemies": 148,
+      "projectiles": 12,
+      "orbs": 155,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 317,
+      "pooledSprites": 19,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.12464432286575,
+      "updateMs": 0.5,
+      "enemies": 144,
+      "projectiles": 4,
+      "orbs": 155,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 305,
+      "pooledSprites": 31,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.34348324214931,
+      "updateMs": 0.5,
+      "enemies": 123,
+      "projectiles": 4,
+      "orbs": 175,
+      "effects": 2,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 304,
+      "pooledSprites": 32,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.50761243161198,
+      "updateMs": 0.5999999940395355,
+      "enemies": 130,
+      "projectiles": 7,
+      "orbs": 175,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 314,
+      "pooledSprites": 22,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.630709323708984,
+      "updateMs": 0.5,
+      "enemies": 137,
+      "projectiles": 8,
+      "orbs": 174,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 321,
+      "pooledSprites": 15,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.47303199278174,
+      "updateMs": 0.5999999940395355,
+      "enemies": 144,
+      "projectiles": 5,
+      "orbs": 174,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 325,
+      "pooledSprites": 11,
+      "allocations": {
+        "orbs": 176,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.35477399458631,
+      "updateMs": 0.5,
+      "enemies": 146,
+      "projectiles": 7,
+      "orbs": 180,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 335,
+      "pooledSprites": 1,
+      "allocations": {
+        "orbs": 180,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.26608049593973,
+      "updateMs": 0.5,
+      "enemies": 150,
+      "projectiles": 6,
+      "orbs": 180,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 338,
+      "pooledSprites": 1,
+      "allocations": {
+        "orbs": 180,
+        "projectiles": 34,
+        "effects": 29
+      }
+    },
+    {
+      "fps": 60.4495603719548,
+      "updateMs": 0.6000000089406967,
+      "enemies": 127,
+      "projectiles": 3,
+      "orbs": 210,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 342,
+      "pooledSprites": 24,
+      "allocations": {
+        "orbs": 210,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.5871702789661,
+      "updateMs": 0.4000000059604645,
+      "enemies": 132,
+      "projectiles": 3,
+      "orbs": 210,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 347,
+      "pooledSprites": 19,
+      "allocations": {
+        "orbs": 210,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.44037770922458,
+      "updateMs": 0.5,
+      "enemies": 132,
+      "projectiles": 7,
+      "orbs": 214,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 355,
+      "pooledSprites": 11,
+      "allocations": {
+        "orbs": 214,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.33028328191843,
+      "updateMs": 2.7000000029802322,
+      "enemies": 140,
+      "projectiles": 4,
+      "orbs": 214,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 360,
+      "pooledSprites": 6,
+      "allocations": {
+        "orbs": 214,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.49771246143882,
+      "updateMs": 0.5999999940395355,
+      "enemies": 143,
+      "projectiles": 3,
+      "orbs": 216,
+      "effects": 3,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 364,
+      "pooledSprites": 3,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.37328434607912,
+      "updateMs": 0.5,
+      "enemies": 133,
+      "projectiles": 3,
+      "orbs": 212,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 350,
+      "pooledSprites": 17,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.52996325955934,
+      "updateMs": 0.699999988079071,
+      "enemies": 140,
+      "projectiles": 11,
+      "orbs": 212,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 365,
+      "pooledSprites": 2,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.3974724446695,
+      "updateMs": 0.5999999940395355,
+      "enemies": 140,
+      "projectiles": 7,
+      "orbs": 211,
+      "effects": 3,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 360,
+      "pooledSprites": 7,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.298104333502124,
+      "updateMs": 0.7000000029802322,
+      "enemies": 143,
+      "projectiles": 2,
+      "orbs": 213,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 360,
+      "pooledSprites": 7,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.22357825012659,
+      "updateMs": 0.5,
+      "enemies": 139,
+      "projectiles": 0,
+      "orbs": 212,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 353,
+      "pooledSprites": 14,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.417683687594945,
+      "updateMs": 0.7000000029802322,
+      "enemies": 136,
+      "projectiles": 5,
+      "orbs": 186,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 329,
+      "pooledSprites": 38,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.31326276569621,
+      "updateMs": 0.7999999970197678,
+      "enemies": 127,
+      "projectiles": 8,
+      "orbs": 203,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 340,
+      "pooledSprites": 27,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.234947074272156,
+      "updateMs": 0.699999988079071,
+      "enemies": 132,
+      "projectiles": 9,
+      "orbs": 205,
+      "effects": 1,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 348,
+      "pooledSprites": 19,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.17621030570412,
+      "updateMs": 0.5999999940395355,
+      "enemies": 137,
+      "projectiles": 4,
+      "orbs": 207,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 350,
+      "pooledSprites": 17,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    },
+    {
+      "fps": 60.13215772927809,
+      "updateMs": 0.5,
+      "enemies": 145,
+      "projectiles": 6,
+      "orbs": 204,
+      "effects": 0,
+      "bosses": 2,
+      "chunks": 48,
+      "sprites": 357,
+      "pooledSprites": 10,
+      "allocations": {
+        "orbs": 217,
+        "projectiles": 34,
+        "effects": 30
+      }
+    }
+  ],
+  "errors": []
+}

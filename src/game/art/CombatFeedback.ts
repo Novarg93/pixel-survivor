@@ -4,6 +4,7 @@ import type { Settings } from '../services/storage';
 import { drawMageMagic } from './MageMagic';
 import { drawWarriorMagic, SlamPresentation } from './WarriorMagic';
 import { drawMobility } from './EncounterArt';
+import type {WarriorSlash} from './warriorHeroPack';
 export class CombatFeedback {
   private graphics: Phaser.GameObjects.Graphics;
   private labels = new Map<number, Phaser.GameObjects.Text>();
@@ -11,11 +12,11 @@ export class CombatFeedback {
   private slams = new SlamPresentation();
   constructor(private scene: Phaser.Scene) { this.graphics = scene.add.graphics().setName('friendly-feedback').setDepth(14); }
   prepare(w: World) { this.slams.prepare(w); }
-  update(w: World, settings: Settings) {
+  update(w: World, settings: Settings, slash?:WarriorSlash|null) {
     const g = this.graphics.clear(), intensity = settings.effectsIntensity ?? 0.7, active = new Set<number>();
     this.slams.update(w);
     drawMageMagic(g, w, intensity, e => this.slams.owns(e));
-    drawWarriorMagic(g, w, intensity, this.slams.bursts);
+    drawWarriorMagic(g, w, intensity, this.slams.bursts,slash);
     drawMobility(g, w, w.mobility, intensity);
     for (const z of w.zones) { if(z.wall||z.necrotic||z.source==='meteor')continue; g.fillStyle(0xf68d57, intensity * 0.12).fillCircle(z.x, z.y, z.radius).lineStyle(1, 0xffb76b, intensity * 0.6).strokeCircle(z.x, z.y, z.radius); for (let i = 0; i < 6; i++) g.fillRect(z.x + Math.cos(i * 4) * z.radius * 0.7, z.y + Math.sin(i * 4) * z.radius * 0.7 - Math.sin(w.elapsed * 7 + i) * 4, 3, 4); }
     for (const e of w.effects) {

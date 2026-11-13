@@ -1,3 +1,10 @@
+import {warriorSoundsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorUltimatesIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorBuffsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCleaveIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorSkillsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCombatIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorHeroIntegration} from '../helpers/approvedWardenIntegration';
 import {it,expect} from 'vitest';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -25,6 +32,6 @@ it('decodes every original into finite non-silent minute-long audio and records 
 it('preserves the review proof and allows only the later explicit music integration',()=>{
   const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')) as Record<string,string>;
   const walk=(dir:string):string[]=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
-  expect(Object.keys(baseline)).toHaveLength(363);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());for(const[file,digest]of Object.entries(baseline))expect(sha(readFileSync(file)),file).toBe(wardenApprovedHash(file,digest));
+  expect(Object.keys(baseline)).toHaveLength(363);expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...musicRuntimeIntegration.added,...mageUploadedIntegration.added,...wardenSoundsIntegration.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added,...warriorHeroIntegration.added,...warriorCombatIntegration.added,...warriorSkillsIntegration.added,...warriorCleaveIntegration.added,...warriorBuffsIntegration.added,...warriorUltimatesIntegration.added,...warriorSoundsIntegration.added].sort());for(const[file,digest]of Object.entries(baseline))expect(sha(readFileSync(file)),file).toBe(wardenApprovedHash(file,digest));
   expect(JSON.parse(readFileSync(`${root}/runtime-verification.json`,'utf8'))).toEqual({protectedFiles:363,changed:[],inventoryUnchanged:true,runtimeIntegration:false});
 });

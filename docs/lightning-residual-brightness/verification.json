@@ -1,0 +1,16 @@
+{
+  "changed": [
+    "src/game/art/LightningGroundArt.ts",
+    "tests/e2e/lightning-aftershock.spec.ts",
+    "tests/unit/lightning-devastation.test.ts"
+  ],
+  "e2e": {
+    "startTime": "2026-11-05T11:51:44.796Z",
+    "duration": 27654.054,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "increasePercent": 15.789473684210531
+}

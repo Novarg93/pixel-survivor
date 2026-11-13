@@ -1,0 +1,1078 @@
+﻿[
+    {
+        "path":  "src/App.vue",
+        "sha256":  "EF8FD288AEAA7684FB9CA8F0310AB5879B05F559ADDCC47193F32BADF0943F01"
+    },
+    {
+        "path":  "src/env.d.ts",
+        "sha256":  "E056F1E4EA8A95A5F4CB430A0F8F12435D3C78E7DEB80E58CED5C3AFFCB015E9"
+    },
+    {
+        "path":  "src/game/abilities/arcaneShield.ts",
+        "sha256":  "9D5F62DB7813E921B4F5D33F29D4670ABDD35BD779F97A5D707C4FF057F28E13"
+    },
+    {
+        "path":  "src/game/abilities/chainLightning.ts",
+        "sha256":  "0F70B10769C5AF80F2AACF0400B22267AD5AAC6B5D9676D4FDA575322A1DE721"
+    },
+    {
+        "path":  "src/game/abilities/definitions.ts",
+        "sha256":  "149995E1B525C470D44D8B9FB32E993B1677D615C7C4F5654A0373465DAFA877"
+    },
+    {
+        "path":  "src/game/abilities/evolutions.ts",
+        "sha256":  "AC93EBA986B4A8FE88DE4B28C12CC8621806585E964B815108A27BBDC7F79923"
+    },
+    {
+        "path":  "src/game/abilities/fireball.ts",
+        "sha256":  "BEF2D88BC512296DE375A2B3343C75F3EAFC3258871B78694616104B34CF948F"
+    },
+    {
+        "path":  "src/game/abilities/frostNova.ts",
+        "sha256":  "A5933DD2D61857907E3C07109845C136674B280D284F1DE3634691380D408BC3"
+    },
+    {
+        "path":  "src/game/abilities/meteor.ts",
+        "sha256":  "E5E90659748693E8F2CE21C2B35C885B57E52E090953A3279C4310F8215B59AE"
+    },
+    {
+        "path":  "src/game/abilities/targeting.ts",
+        "sha256":  "15E07EF0F44F2A836FEC5EB4E4477F7DBA01D52AFDB9C903C45A6E0296FC5757"
+    },
+    {
+        "path":  "src/game/abilities/tickAbilities.ts",
+        "sha256":  "ADDF23CFDD712DCD492340A41F331A2C74784B0A5940E9FC1872C3F4C4AB8C05"
+    },
+    {
+        "path":  "src/game/abilities/types.ts",
+        "sha256":  "DC3529F14226DF4E2087BFF3538DBE5650E54F993934280970E4F43815435FBB"
+    },
+    {
+        "path":  "src/game/abilities/warrior.ts",
+        "sha256":  "0773BA38E33364389452592EE43E7AF308826DFB4C38B78C0C87BD8BA7F2ABDB"
+    },
+    {
+        "path":  "src/game/art/abilityVisual.ts",
+        "sha256":  "A7ABC4E19DFF4767DF94FD03377D250F6A07281213BE4E2451EF5CD96227B478"
+    },
+    {
+        "path":  "src/game/art/assetRegistry.ts",
+        "sha256":  "E2BDC1D00F342F5154E8A6571707372E60FA3921BA484210F884C69B599B4C50"
+    },
+    {
+        "path":  "src/game/art/BossAnimation.ts",
+        "sha256":  "48F329A7356E2B11BE3F4F1D1E15C1C033F6D33805DB9826526C6EA2E60B73DE"
+    },
+    {
+        "path":  "src/game/art/bossPack.ts",
+        "sha256":  "2350B7FE695ABDFF3F5145970EF30C9E61C53FACB4D3323153515A6DAA0FED66"
+    },
+    {
+        "path":  "src/game/art/CombatFeedback.ts",
+        "sha256":  "8F88A8C9540F2EE056447EA293A490BF0B5D92DF7870F9FCDC8EF15A5A84C277"
+    },
+    {
+        "path":  "src/game/art/EliteAdornment.ts",
+        "sha256":  "A4D77377CB542408063ABA6655F1ECBF6D7D52EFD1BB7373126DFEB5B0D8D056"
+    },
+    {
+        "path":  "src/game/art/EncounterArt.ts",
+        "sha256":  "873894012D287FAD1044DEDBA5692F78C0AFD104A09802BEE63A4D0AE792393D"
+    },
+    {
+        "path":  "src/game/art/EnemyAnimation.ts",
+        "sha256":  "C317C10E60A5A87232AEE7705639D6BBB2177FEDDC06EEC4CD442D21E10CB8E2"
+    },
+    {
+        "path":  "src/game/art/enemyPack.ts",
+        "sha256":  "E1E0F3DC7CCAF340CF831C45F7C94A3C90E6D363F4A495E4B60B57584380654E"
+    },
+    {
+        "path":  "src/game/art/GameArt.ts",
+        "sha256":  "2975F8BBC90EE60A7FA7F23E01FFC2E70410E35026222BD73E9612E6F40397A1"
+    },
+    {
+        "path":  "src/game/art/generatedLootIcons.json",
+        "sha256":  "5B0F913A3D62BCB5B335883A7CABEE94550A624A8A22C352AF6B3A4EBDA76D4E"
+    },
+    {
+        "path":  "src/game/art/GuardianAnimation.ts",
+        "sha256":  "72D0ADF59989ACC650D40A019775EB1641B4565349A6048245C469F7E425972C"
+    },
+    {
+        "path":  "src/game/art/guardianArt.ts",
+        "sha256":  "6ADE7DAE0FCB8BE21C0111098BD701E1CABF55C952E58FC7A91E25D1BAA09EEB"
+    },
+    {
+        "path":  "src/game/art/guardianPack.ts",
+        "sha256":  "ACE86DCA73662E5B9A44EC73EA8C438A3275E090E0779FC7DCBFAD9E6296A14D"
+    },
+    {
+        "path":  "src/game/art/hdCoreLayout.ts",
+        "sha256":  "DFCFCBA47767EF71B88A5CD1367CE0E2BEEE23703E666101E39C5689ACEEE81F"
+    },
+    {
+        "path":  "src/game/art/hdForest.ts",
+        "sha256":  "D6148AF5F63DF1D86BBF19EC164513A056DDEBC55EAD262E94F1A9A1C73C8E78"
+    },
+    {
+        "path":  "src/game/art/hdGrove.ts",
+        "sha256":  "46199E7C382264ADB8979CBE57CB47A29EBE0D5DD9D7BCD0F930B2D63A5E2B2F"
+    },
+    {
+        "path":  "src/game/art/lootPack.ts",
+        "sha256":  "39450B7B3CDF9C82BD782534937B2B11E7915E633F3256F55C21366644CE36A0"
+    },
+    {
+        "path":  "src/game/art/lootPixels.ts",
+        "sha256":  "A1478E3F2A397A5F67B5659DE79BF56DC14281EB53B4A433F0CB7F4DF997B0E1"
+    },
+    {
+        "path":  "src/game/art/LootPresentation.ts",
+        "sha256":  "8BF3F03444A2BC055BE4BAD54D79A412D4C562C8F684E850D8D6C856818ACE5F"
+    },
+    {
+        "path":  "src/game/art/MageCastingArt.ts",
+        "sha256":  "2226C1F6A779A8D88117046352D427CA5665F0B919FBB5FEE43831CC2E37F1D8"
+    },
+    {
+        "path":  "src/game/art/MageCastingController.ts",
+        "sha256":  "0CA5DBEE1BA25363132EA4C1032D9B1757ED1F8F99229FCF7A3C10287D510778"
+    },
+    {
+        "path":  "src/game/art/mageCastingPack.ts",
+        "sha256":  "A32F6EDB44D702A1C410A6F8AFA97902C6CF0A1B72E8CFB043397745EB4CA9B9"
+    },
+    {
+        "path":  "src/game/art/mageCastingPoses.ts",
+        "sha256":  "0168AAC7B56A97A31763C7CBCB09EC85AC31D869D1393CEC83144A439A1AF701"
+    },
+    {
+        "path":  "src/game/art/MageMagic.ts",
+        "sha256":  "9DEC3A9F204DA296E16545B6AFC9E1DDFA841AF56C2C9BE854696889A91A9C22"
+    },
+    {
+        "path":  "src/game/art/magePack.ts",
+        "sha256":  "1D436BCA78A4335DDD7C532FA1D29B0F194D58A981AF8C6FDE4E43730412596F"
+    },
+    {
+        "path":  "src/game/art/PickupAnimation.ts",
+        "sha256":  "429ADAED18244C6824A2916DBAA364039D4C7D7F53B8141E8F86D5C077FC3B1B"
+    },
+    {
+        "path":  "src/game/art/PlayerHealthBar.ts",
+        "sha256":  "2DA2724B7203CF72E80A8711C4A2617E6277A02C4391D5D1CD3B89679F6ABA59"
+    },
+    {
+        "path":  "src/game/art/RunnerAnimation.ts",
+        "sha256":  "127A2A24B91F77BC2EC9A6E03A2C71563440AC2A204072A85FEDE855479368D6"
+    },
+    {
+        "path":  "src/game/art/runnerPack.ts",
+        "sha256":  "463DC6C751238AC9A3C490AF84627F4493C031D6F9F542A8C3715614F31F5DDE"
+    },
+    {
+        "path":  "src/game/art/textures.ts",
+        "sha256":  "BC34203DF2A4BA9BA840C06F5FB05113ECD5D1FD723F5BEAC96C15CC5C59DBA3"
+    },
+    {
+        "path":  "src/game/art/WarriorMagic.ts",
+        "sha256":  "7EFA9389C63F32073529DD173FC99B8C4E03BE97E671A88ABF7A120509963D60"
+    },
+    {
+        "path":  "src/game/audio/AudioBackend.ts",
+        "sha256":  "DB50081B00AD4AA53794C1C26B9E78DE1C3CDC1D63BBD667AFAAF2231383440C"
+    },
+    {
+        "path":  "src/game/audio/AudioController.ts",
+        "sha256":  "C4D074C2A05584A09E8EA4631BA4A5194C2DD0A1ADF03191E70A25105D033CE7"
+    },
+    {
+        "path":  "src/game/audio/AudioPresentation.ts",
+        "sha256":  "74E49B8C590A344A0B25544164BCD2060E9544353F8AF5FC33BB9B9D6AE91E0C"
+    },
+    {
+        "path":  "src/game/audio/catalog.ts",
+        "sha256":  "57DAA56127D68F55365523BCB46B2F44B84C67EC57DB0464F124514FDFD71CC1"
+    },
+    {
+        "path":  "src/game/audio/PhaserAudioBackend.ts",
+        "sha256":  "0F60813F2C5A800A9184538F1B9B773C77BAC4003F25FFF5F0C73341E0209CE0"
+    },
+    {
+        "path":  "src/game/audio/README.md",
+        "sha256":  "DDFCF6263217E863AEC81C743929932480CDE2538A4C6686A98287BF0D14C5A0"
+    },
+    {
+        "path":  "src/game/audio/synthesis.ts",
+        "sha256":  "D02C061CB25DE7E01E2D0D12A90FCE1E1991BE7CF4B056FD8149088C90C4C904"
+    },
+    {
+        "path":  "src/game/bootstrap/createGame.ts",
+        "sha256":  "51F0B3237CC309ACEDD06CA38F1BC8B28810FA76205D6401B4A52D8DA6C72AC5"
+    },
+    {
+        "path":  "src/game/bootstrap/publicCharacters.ts",
+        "sha256":  "19475AD172787BCE1B870614005C3FFB0797699DDAC3B455E6110003E4F26341"
+    },
+    {
+        "path":  "src/game/config/biomes.ts",
+        "sha256":  "79C452E23127945795E87DA163CF889C3A76C7EDCD75753E7FCCB10F5D1F4533"
+    },
+    {
+        "path":  "src/game/config/bossEnrage.ts",
+        "sha256":  "939DCF538216B4C1B3DDF7D62FCF73DAD6AF6DF37048004F66E0A0CE19639366"
+    },
+    {
+        "path":  "src/game/config/characters.ts",
+        "sha256":  "1BC14B2A5ED664C524A6CE8C4FCF6D19AE88C81723E33EED9A29784AE1059C41"
+    },
+    {
+        "path":  "src/game/config/chargeBoss.ts",
+        "sha256":  "7211E11F4D0C287EADB5E68D00DF295EB239061B7FA7ED6ED3A27E780BB46D9E"
+    },
+    {
+        "path":  "src/game/config/encounterDirector.ts",
+        "sha256":  "287DFB1CD4CBC454933E023699F11985389A6B3D3D262257BCE7F1083DAE0451"
+    },
+    {
+        "path":  "src/game/config/encounters.ts",
+        "sha256":  "4AE146545B58F2FF4FCC178542A30ED91E6634E8A8E9E78E6ED51A4463C7FC30"
+    },
+    {
+        "path":  "src/game/config/endgame.ts",
+        "sha256":  "7BF48AD2E721E594C3E6B3DC7C527DEE1CD19F8FF9178E71E380A61F17C5D206"
+    },
+    {
+        "path":  "src/game/config/enemyDefinitions.ts",
+        "sha256":  "7731EEAF748A54887F692D5F209410D4802E45FD97245545C4E8DCB80219B7A1"
+    },
+    {
+        "path":  "src/game/config/gameBalance.ts",
+        "sha256":  "B4659926FC44D8C376AEFC98C6747FD79A11008402ED4DCEAB6D74DE36ACB09F"
+    },
+    {
+        "path":  "src/game/config/guardianOrbs.ts",
+        "sha256":  "AEE1C9BEECF0285380E746A1F8A124E5DD2785279BEC069573A8AA2373B915B0"
+    },
+    {
+        "path":  "src/game/config/mageAbilities.ts",
+        "sha256":  "6998E3A20306FBE4FC777F43F7A75BB2F9121C6A7A779C2201A3D42D004D999B"
+    },
+    {
+        "path":  "src/game/config/mobilityUpgrades.ts",
+        "sha256":  "E10D2B2BAD67255C726856A21CD4251F4AE35FADD26A0C0C01AF0275B0BDD322"
+    },
+    {
+        "path":  "src/game/config/pacing.ts",
+        "sha256":  "3AE50C39D2062F63DF7F731A9DDFD712F579505ABE98F427626F9CC2AFA60F39"
+    },
+    {
+        "path":  "src/game/config/survivalEnrage.ts",
+        "sha256":  "72F3BC555A197862E2A20B14E5AC2721AD43BC2EC816FEF268A590D3366E2789"
+    },
+    {
+        "path":  "src/game/entities/types.ts",
+        "sha256":  "5465F0ED735849C3EFCDD356AE61BBD910EC0A2D263AAEE29AA12D6810F85708"
+    },
+    {
+        "path":  "src/game/events/bridge.ts",
+        "sha256":  "3EE9913438EAC457564BFAAE73DFE9BDD60E9E6F94E080138997CC44DC35D541"
+    },
+    {
+        "path":  "src/game/events/gameFeedback.ts",
+        "sha256":  "F8617F865835D8E99384322C1F010064412D6AA68956EE5E700E982CCF7C1B7A"
+    },
+    {
+        "path":  "src/game/input/GamepadInputController.ts",
+        "sha256":  "85A721A8754722D9D969659245F7DF560C7DF1B2A01B53011BDDF862B8EEA5E6"
+    },
+    {
+        "path":  "src/game/input/HeldInputTracker.ts",
+        "sha256":  "DED23FCBCB48195B64333DE78A0D4E8580ABF2DE0B2733B53267AB93274234AA"
+    },
+    {
+        "path":  "src/game/input/movement.ts",
+        "sha256":  "5DFD71A5046CB91B5C79AEDFB130542A38456434573BA4D5891BAE3EEF058437"
+    },
+    {
+        "path":  "src/game/loot/ArtifactSystem.ts",
+        "sha256":  "E89D522C0934E5358178FB24639DAEB3BD8409B2DC4B3B5349198868A0A1E651"
+    },
+    {
+        "path":  "src/game/loot/BuffSystem.ts",
+        "sha256":  "090F855E368584CA984998C3FE72FEA9F5637FA97315F7DC63FC38CEAF7D8449"
+    },
+    {
+        "path":  "src/game/loot/lootPools.ts",
+        "sha256":  "775B597FF2DC0708270DBC8DE4271100F8CD3B70FEC79514EC79BCC8C7D09ED6"
+    },
+    {
+        "path":  "src/game/loot/LootSystem.ts",
+        "sha256":  "3EB06A846D5CC78B4CF0D041052DCF39C6BA41AFFA75DBBC8778248FAA9467BF"
+    },
+    {
+        "path":  "src/game/loot/types.ts",
+        "sha256":  "174AF961D31AE5C33F2BDF717E23F824AB436445CD455C5E001EE9C8D8A976A6"
+    },
+    {
+        "path":  "src/game/radar/radar.ts",
+        "sha256":  "868C811C2596AB1F8572344FCF8D44C08ED3BEA05B4E5693DE5BD0C5284FA5F1"
+    },
+    {
+        "path":  "src/game/radar/RadarPublisher.ts",
+        "sha256":  "4C9D95CA7A14F66441956740B25DADA7AC42A874AB28DE04751725FFC93720FC"
+    },
+    {
+        "path":  "src/game/scenes/GameScene.ts",
+        "sha256":  "15F1E29EE585A454DC1A547E741CD304FFC5D9A38E926EA30415A286428F0EB5"
+    },
+    {
+        "path":  "src/game/services/storage.ts",
+        "sha256":  "ECEADFD0B78F42B26AF316CD24919E5D170B0D24550DB6924A755D43420086DB"
+    },
+    {
+        "path":  "src/game/systems/AbsorbPool.ts",
+        "sha256":  "0346915C63E7048CAFE523E649DEE048BC54A900BEF7772A0D562BAA92AF4D54"
+    },
+    {
+        "path":  "src/game/systems/BossMagic.ts",
+        "sha256":  "73B229C3709964FE399539B3BF81ED5EE3EEF4EF81859E20996553ADA97A521F"
+    },
+    {
+        "path":  "src/game/systems/BossSystem.ts",
+        "sha256":  "DA9572A9443D7CE3968883852C939756695A9A4CC0252001EF06C2CA45101DD3"
+    },
+    {
+        "path":  "src/game/systems/ChargeBoss.ts",
+        "sha256":  "0B73E249912844FADCF6081541211FBC97E757AF4584736DDA3E26573300B4EF"
+    },
+    {
+        "path":  "src/game/systems/CombatSystem.ts",
+        "sha256":  "612DF49D437A926686661184834549A38BB991EEB422325478E17E9C0DD5558F"
+    },
+    {
+        "path":  "src/game/systems/Cooldown.ts",
+        "sha256":  "1492F437E9F8284F0AD0838659F66004BF92FCABB591DDD6B058B39768B05246"
+    },
+    {
+        "path":  "src/game/systems/DifficultyDirector.ts",
+        "sha256":  "41752114FEB57DE6FB261D324FADF402CA8D846857F6A65DC0EB8AE38BEDEA82"
+    },
+    {
+        "path":  "src/game/systems/EclipseBoss.ts",
+        "sha256":  "A9E0F8B21BDFAFB93D3D93BEC125FD21223F5E0DB9D60F3BDE8B5AB1B4E9975F"
+    },
+    {
+        "path":  "src/game/systems/EncounterDirector.ts",
+        "sha256":  "10CB4BBC74E9097DA78DA461EEE7D601EBB1BB33010655CE6881BD3A540B7743"
+    },
+    {
+        "path":  "src/game/systems/encounterSchedule.ts",
+        "sha256":  "8140A5BB64EDFAC40EACB0847111F007E1FC362C1E559B4CBEE56882F77A457A"
+    },
+    {
+        "path":  "src/game/systems/EndgamePressure.ts",
+        "sha256":  "76176BCCE37DA61CC6F1A5058CCC400E3DE20F60C45A4F0C34027B2A93F2E600"
+    },
+    {
+        "path":  "src/game/systems/EnemySystem.ts",
+        "sha256":  "0651828031C7BAD6E9DF5CD500BF785AF65F0D693A5F4517111271663B2A0062"
+    },
+    {
+        "path":  "src/game/systems/ExperienceSystem.ts",
+        "sha256":  "7AE3FC55007B07855976B4337E8A2319C09D94FAE4477C2C550601CA744FADF1"
+    },
+    {
+        "path":  "src/game/systems/FrostControl.ts",
+        "sha256":  "9E4904654BEE6BDE9203921F2F5CDC589CF5B2A6F08292375CD9601A34EDE5D2"
+    },
+    {
+        "path":  "src/game/systems/GuardianEncounter.ts",
+        "sha256":  "B0A4F7FD119F2E2146A4AA11CB9AB2D9B9164790EC7D8BDBEFD0B6A0A1CD40C5"
+    },
+    {
+        "path":  "src/game/systems/GuardianOrbs.ts",
+        "sha256":  "38989BE059E0B2582CDE78630E5B1E6776A7A8B52425F34E30F4DAF23730959C"
+    },
+    {
+        "path":  "src/game/systems/MobilitySystem.ts",
+        "sha256":  "B523484FCA3B23CACF9310599FC72A753C2AFE95F59F9ED7F4C5D5169AFBB02A"
+    },
+    {
+        "path":  "src/game/systems/ObjectPool.ts",
+        "sha256":  "16DC9E7587F48CCE382107F90756F92B7341C6A7B65B0CB4A1BF2327A72C806F"
+    },
+    {
+        "path":  "src/game/systems/RareGuardianSystem.ts",
+        "sha256":  "C9923671385971992912C082C607CA33ACEFE60C304D066A28E6C5F4DD8A6653"
+    },
+    {
+        "path":  "src/game/systems/ScoreSystem.ts",
+        "sha256":  "83B5EF966C66E28AC51B5CBEC36212F818D80BD316833D24C2BA29761450DF96"
+    },
+    {
+        "path":  "src/game/systems/SpatialGrid.ts",
+        "sha256":  "9C15F337107882910D046DA5729C53D1031DBB82EB4DC835919F279E1E339203"
+    },
+    {
+        "path":  "src/game/systems/SpawnClock.ts",
+        "sha256":  "93437151EE30086D4C0A30FCB3E022C389852B6AD11AF52863B3BFBD5AAB9FD1"
+    },
+    {
+        "path":  "src/game/systems/SpawnSystem.ts",
+        "sha256":  "9852CE2F2CDB75F20D312E164C4CF768CCBD991700DA17AC511F8DA805206C8A"
+    },
+    {
+        "path":  "src/game/systems/SpecialEnemies.ts",
+        "sha256":  "E1C4F97203BBA56F804E7EF65288E8B389C82B3D3CE47BC2EFAE50ECA228033C"
+    },
+    {
+        "path":  "src/game/systems/UpgradeSystem.ts",
+        "sha256":  "D3177AB1CE90819D090B03264756C9F42F6D314BE52D64F9DC6EB5D7D2F3DA45"
+    },
+    {
+        "path":  "src/game/systems/World.ts",
+        "sha256":  "3D4B9F0A7995BA4E28E7C249C6F8DBBCFE70B46B894C2E3F6297A7A7AFE6C868"
+    },
+    {
+        "path":  "src/game/systems/WorldChunkSystem.ts",
+        "sha256":  "70017ACB00E9060C2FA01B6FDE381EDD25DC7B991E3FA92BAC92144FB7A0B393"
+    },
+    {
+        "path":  "src/game/utils/math.ts",
+        "sha256":  "D9300D77F589AA58F04A522BF49E9CB003041DD0A9F3D4D945D3F1E34212EA3A"
+    },
+    {
+        "path":  "src/game/utils/SeededRandom.ts",
+        "sha256":  "9BAF0299BF889A68E7279D9B4B3D9F2680D2C2D22ECE6EFB67BF575E98508F64"
+    },
+    {
+        "path":  "src/game/utils/worldTiles.ts",
+        "sha256":  "218A2C37C9F9B8C24B9024EFA42BFA6F1626AD5AA45EBF32EC9C0294430E4D48"
+    },
+    {
+        "path":  "src/main.ts",
+        "sha256":  "3BCF330A07333D58AFE14B657491BF24F39D9B00DB9A223B056602B1610EB806"
+    },
+    {
+        "path":  "src/style.css",
+        "sha256":  "0B188090C74315207591884E3C4EB18A2371FDC14BF8951FDEF1305DD089E19F"
+    },
+    {
+        "path":  "src/ui/components/BossBars.vue",
+        "sha256":  "3CBF1BB336978F8AB88399F7A729D8C0F7AC4229725C8CBA26600D37AA808500"
+    },
+    {
+        "path":  "src/ui/components/BuffDock.vue",
+        "sha256":  "10AF814ABC5D7C4EB0B96B3C5216DDDA477A317B8438F85988160125434CE180"
+    },
+    {
+        "path":  "src/ui/components/DialogFrame.vue",
+        "sha256":  "4703D658548E47ABFFC63151CB4CC67288F855722D970CAF94FBAB24E2EB44D9"
+    },
+    {
+        "path":  "src/ui/components/EventTimeline.vue",
+        "sha256":  "751463649BF3523A9CD728D2CD7DEF0C1D03C0E13090BD155DD50FF96FA75D8C"
+    },
+    {
+        "path":  "src/ui/components/GameHUD.vue",
+        "sha256":  "4A613AA086FA7FA45FD6C29871E20B246C432955E41781890F55DEE560F0DF3A"
+    },
+    {
+        "path":  "src/ui/components/GameRadar.vue",
+        "sha256":  "9DC479162333FC9B9D341211AC284B7E3CD7F13E1BE737F6795C273DAA26DA02"
+    },
+    {
+        "path":  "src/ui/components/LevelUpModal.vue",
+        "sha256":  "99FC71933AEE49A0E54CDA3C184B178323501AA360C0E20D3D4A77976B5ABAAE"
+    },
+    {
+        "path":  "src/ui/components/LocalRecords.vue",
+        "sha256":  "8BB3F6CBAB3BD71F8EAD2995F22A42FC7D95426F4C4AEE138C9C63CA6C9B09C0"
+    },
+    {
+        "path":  "src/ui/components/MainMenu.vue",
+        "sha256":  "BDDA4139269AA4DDC3EEB1E9B085E9ABF2951EF3987670A355F7669E93D46CA4"
+    },
+    {
+        "path":  "src/ui/components/MobilityControl.vue",
+        "sha256":  "D7750A2D162B5427E3AD69906006AEE4EEFCB3910051247883E6985D82F84313"
+    },
+    {
+        "path":  "src/ui/components/RunArtifacts.vue",
+        "sha256":  "883E1D991C787D9E255D0D4EE3D830B79E50671DF0E3837EA33DD3C783F2210D"
+    },
+    {
+        "path":  "src/ui/components/RunStatistics.vue",
+        "sha256":  "8256BC3F465C2231B610954056AC9091D812767F7250D00E993BF6588823D254"
+    },
+    {
+        "path":  "src/ui/components/SettingsPanel.vue",
+        "sha256":  "2DDBAE540B60F78A045BF7FF5CC5C74F3B6913348C29A8835573A220891532EA"
+    },
+    {
+        "path":  "src/ui/components/UpgradeEmblem.vue",
+        "sha256":  "B163DE83619714246B2FBDFBBF7CDC6588A3A97279F464776A3702393CD48AB2"
+    },
+    {
+        "path":  "src/ui/components/VirtualJoystick.vue",
+        "sha256":  "75B547EE7C0A39DB5123AAD714F500EA775E3641D9D652C38D42685DA3446CBE"
+    },
+    {
+        "path":  "src/ui/focus.ts",
+        "sha256":  "121D3DD390A245D7A4DF0028C50A43A0E32A2B96BD18A3F606CA60D8EA20E6C6"
+    },
+    {
+        "path":  "src/ui/format.ts",
+        "sha256":  "8DDDBFEAE8C85A2D5B9A7C9D515D6F258A1CAEA39F8D963DD5A2C5BCBD122714"
+    },
+    {
+        "path":  "src/ui/gamepadNavigation.ts",
+        "sha256":  "C056001FA4400F737A227B630C10EDE5EE1A648AB9F81C59B35FB2CF7C7009A2"
+    },
+    {
+        "path":  "src/ui/hd-theme.css",
+        "sha256":  "DAE95C879E02EA9201C83AD13EF0495B0E18D26184F0461AAFB02C3ECBDF821D"
+    },
+    {
+        "path":  "src/ui/hudStatus.ts",
+        "sha256":  "A3AF593DB45764112553D748369A53DDEA424C047AB02CED0BF9F77FFD57EC83"
+    },
+    {
+        "path":  "src/ui/inputDevice.ts",
+        "sha256":  "ABE9A33D8AD3B358D72F95A44D69C4A665FB78A429C0AE0241FEDC121D37BB72"
+    },
+    {
+        "path":  "src/ui/mobile-layout.css",
+        "sha256":  "90DE37C4A2BC22E122A45AC72630304295EEA1D8AF50D2D6220311EDC7A20BC5"
+    },
+    {
+        "path":  "src/ui/mobileViewport.ts",
+        "sha256":  "053A95F96F6FA9E3AF806971DF5431F6774E0135F73D8E5CB4EF67D1277C16C3"
+    },
+    {
+        "path":  "src/ui/upgradeCards.ts",
+        "sha256":  "E08DD5AE5B513017ADFA0EDC8D6E10E9FA8FF08DCDE5D0F0EEFB09D8EF6A0541"
+    },
+    {
+        "path":  "src/ui/UpgradeConfirmation.ts",
+        "sha256":  "65C55B50FD5291E1D788C48D1B7BC52DD216F543E7440A7A5EE60825B0893C4A"
+    },
+    {
+        "path":  "src/ui/upgradeEmblems.ts",
+        "sha256":  "7469D7FF5861AE9AE75D953C531D6EAB80D9DD9E12F7993E0DB5B0D9036623F4"
+    },
+    {
+        "path":  "src/ui/upgradeIdentity.ts",
+        "sha256":  "7FCCDA9CA05E1E585981A85F2C806ACA8C2A057C2570E0F31BFCD0A5FD62CCE6"
+    },
+    {
+        "path":  "src/ui/upgradeInput.ts",
+        "sha256":  "2447F4839BA60F45EA4051EAEF59443AD39C460E1A2D8F847D65151353B04D10"
+    },
+    {
+        "path":  "tests/e2e/audio.spec.ts",
+        "sha256":  "A379B77F88C03AD4822FCD4495A25DD617A136F14F134E1BC4A6D5C6BE1AD2C6"
+    },
+    {
+        "path":  "tests/e2e/balance-hotfix.spec.ts",
+        "sha256":  "50A67B3E6DEE4A618C0C9DEA512C473EB8496561DA2865D3BA5C174E03430F35"
+    },
+    {
+        "path":  "tests/e2e/boss-guardian.spec.ts",
+        "sha256":  "D3A8482368A410D9D70DEE5B0675C6D08647566CCE934065F15F32B15BAD2864"
+    },
+    {
+        "path":  "tests/e2e/boss-guardian-performance.spec.ts",
+        "sha256":  "885E0A2F23022B4FF5C907FE12890030B5C8AE9F14ED0704E0A5B2E1460DD515"
+    },
+    {
+        "path":  "tests/e2e/camera-fireball-cleanup.spec.ts",
+        "sha256":  "2DE0129FBBA24F32D4B81253CDAA20B03A603B61963D8708290C2DB695DE90C2"
+    },
+    {
+        "path":  "tests/e2e/combat-balance-2.spec.ts",
+        "sha256":  "8B3A81306A5D32B366555A9ABECC2EDC880CC0E9063EDC7DD589BEB5BF94FCAB"
+    },
+    {
+        "path":  "tests/e2e/combat-balance-diagnosis.spec.ts",
+        "sha256":  "8FD1F4C62F679CC2E790F7679DBAD05B16BE3F02F3FC66E24989E573A86949C6"
+    },
+    {
+        "path":  "tests/e2e/combat-balance-survival.spec.ts",
+        "sha256":  "D85C4B4313E367123452F3F8CE2E81B83A0D30CF78EB2532DBC7C98CB1D8D6BE"
+    },
+    {
+        "path":  "tests/e2e/compact-timeline.spec.ts",
+        "sha256":  "4259B6B52389DC7C2345D3E140EE75CC7CA13BB0BCC7D95FA2DCC41A4ACBDC2B"
+    },
+    {
+        "path":  "tests/e2e/encounter-director.spec.ts",
+        "sha256":  "DE1340DD299914C98E0CBFC9A2C4DAB2D44F4DF6501E9D5754DAB5A794EF4727"
+    },
+    {
+        "path":  "tests/e2e/encounter-survival.spec.ts",
+        "sha256":  "05308DEB6F29861E3802A933267B75CEC3191AF6C68961C064B98CE0437F908E"
+    },
+    {
+        "path":  "tests/e2e/endgame.spec.ts",
+        "sha256":  "D6B6108DC236DA11EE384C6BCB9516C2222C28DE50876B7E0E56BE81C70627CE"
+    },
+    {
+        "path":  "tests/e2e/endgame-performance.spec.ts",
+        "sha256":  "410758F20F8B25F34C9A898AB3136EB6ACC93F6CB80DB8BA61EF822FCF46E480"
+    },
+    {
+        "path":  "tests/e2e/final-qa.spec.ts",
+        "sha256":  "7E13C2246DCFC17ADC4B0C01035E07A28572199E772A1DEC7670F52105B440E1"
+    },
+    {
+        "path":  "tests/e2e/frost-armageddon.spec.ts",
+        "sha256":  "250A17D8605D7DF683485B1D3A10EF87E1C88FE45CAAC6D985D6220D26C7284C"
+    },
+    {
+        "path":  "tests/e2e/frost-audio-hotfix.spec.ts",
+        "sha256":  "1B889204C5FFE8661CA4D6BA5795864E32301AEB143712E7E64E192D26C7FECF"
+    },
+    {
+        "path":  "tests/e2e/game.spec.ts",
+        "sha256":  "6BA82908ED93C3E9B35B178AD38F9AF669B3AE89AB3AACDDC957AB5A84931B37"
+    },
+    {
+        "path":  "tests/e2e/gamepad.spec.ts",
+        "sha256":  "0727FB5DF9FE2DF9328C0398942DD2FB2273867C9C30971A98BA1C226855B4D9"
+    },
+    {
+        "path":  "tests/e2e/gamepad-performance.spec.ts",
+        "sha256":  "232C2BAE5DF3B1F1DFF8B0E05923C42998781A4F6CA9656FF1EAE4E23954ACE7"
+    },
+    {
+        "path":  "tests/e2e/gameplay-guardian.spec.ts",
+        "sha256":  "C80634C12E79F31A708BA5D17827EECBC57ECCB81337DE39F33C94A588334FBD"
+    },
+    {
+        "path":  "tests/e2e/gameplay-mobility.spec.ts",
+        "sha256":  "FF85CEFE9CAFBA54E9157EAADFE591F10E6F9B5037CB2FE6196C3F25B883C0FC"
+    },
+    {
+        "path":  "tests/e2e/gameplay-stress.spec.ts",
+        "sha256":  "EA727DFCB1D5311FDE7245BD09BC8F2357E64A561B12C467A0EFB55E005AD0D4"
+    },
+    {
+        "path":  "tests/e2e/gameplay-visuals.spec.ts",
+        "sha256":  "9C877C4E7D361E2785BFADBF10333E848D3379E0AA1C09A34891951B08F94CF0"
+    },
+    {
+        "path":  "tests/e2e/hd-bosses.spec.ts",
+        "sha256":  "9AF5C83EDB0201A6387359B1FB720C5C548B67EBBEB51A0479AD47C28A14D712"
+    },
+    {
+        "path":  "tests/e2e/hd-elites.spec.ts",
+        "sha256":  "83245BAD3BE2ABCE5B8D9840E385FA4A8D922F4F92806FD7BB6EAA049B13574D"
+    },
+    {
+        "path":  "tests/e2e/hd-enemies.spec.ts",
+        "sha256":  "D06EB0F963A5087C84860B1D7C8D2608B04168E74BB7A1D4F5D93354F5A94E40"
+    },
+    {
+        "path":  "tests/e2e/hd-integration.spec.ts",
+        "sha256":  "FA6659189604452D204984DD71D54B849EF5A461C5659A8422BA6C5971D0F754"
+    },
+    {
+        "path":  "tests/e2e/hd-live-stress.spec.ts",
+        "sha256":  "7B14AFEAEDBE476D00BAC5A1341FE3DAD9E2D4A3A6184DC9D4DE214B16B36068"
+    },
+    {
+        "path":  "tests/e2e/hd-loot.spec.ts",
+        "sha256":  "94F7BC7B0CFD5267988265E410CA2864846C02ED0AD8BB921A4803DA3892DE35"
+    },
+    {
+        "path":  "tests/e2e/hd-mage.spec.ts",
+        "sha256":  "E912251B1109FF657DCCB98929C4179AC491FD828CFCC04F4041D743DA522E99"
+    },
+    {
+        "path":  "tests/e2e/hd-performance.spec.ts",
+        "sha256":  "A342BC12C8DACD08BBBEB8DF39871A16CBE17F7346B025CDDE4D852447E6E51A"
+    },
+    {
+        "path":  "tests/e2e/hd-rework-performance.spec.ts",
+        "sha256":  "1FD11B4189A77B66E93F6BA288DAE42243C0AF1A05F3BB21D84C5F9D9B3C3676"
+    },
+    {
+        "path":  "tests/e2e/hd-ui.spec.ts",
+        "sha256":  "4A4ADCE4FB3FC7A639F1D391B0BB1408D725AF38117D76BA19E0A44378D67C67"
+    },
+    {
+        "path":  "tests/e2e/hd-warrior.spec.ts",
+        "sha256":  "9677EF10CB2A007DD306E536587C139C3ACF5C1AC3BC612742A6FD6D8AD95427"
+    },
+    {
+        "path":  "tests/e2e/held-movement.spec.ts",
+        "sha256":  "4448C6CF3E4861DE1C4C1802630EDE8308D69D818D12C37109E8EBA218C2724C"
+    },
+    {
+        "path":  "tests/e2e/levelup-hotfix.spec.ts",
+        "sha256":  "0930D29B25A992FB2AFDDC6D793C8BEAD114F9338003D512E0265A47B7B02957"
+    },
+    {
+        "path":  "tests/e2e/loot.spec.ts",
+        "sha256":  "E4E1ED467C13CC8AB39DC5455C85A5498ED1EDE626BD6673057C61E34FA83D9D"
+    },
+    {
+        "path":  "tests/e2e/mage-casting.spec.ts",
+        "sha256":  "4ABF814ED7EA8737C2A8918752C60EF998AD703B1A192BAD0A7564B1BB96A604"
+    },
+    {
+        "path":  "tests/e2e/mage-casting-performance.spec.ts",
+        "sha256":  "DC736C12CB934F58666D71E8AACD5C53F9080FDFF56C0FD1FD223689B0299E54"
+    },
+    {
+        "path":  "tests/e2e/mobile-landscape.spec.ts",
+        "sha256":  "3FAC9C72952F64336D536F29AAFAE79F3D397662199BB5C805E21494451AF5DC"
+    },
+    {
+        "path":  "tests/e2e/mobility-hud.spec.ts",
+        "sha256":  "18E1C6B976151F4DBA448D0C902B89D4A6659FB0936B870A89E2CF53AED41480"
+    },
+    {
+        "path":  "tests/e2e/mobility-specialization-stress.spec.ts",
+        "sha256":  "F00649A234612B8C0224DDFF109E2BC6926E4915F89608D8F4EEC680C9B0F5A9"
+    },
+    {
+        "path":  "tests/e2e/mvp-ui.spec.ts",
+        "sha256":  "93E11BB2D643516838D3CF9DA4BB1D240817F62276B1C293E350A23A2E7D9CD9"
+    },
+    {
+        "path":  "tests/e2e/performance.spec.ts",
+        "sha256":  "B16EEC2B5746733E812020E4DBD71502F697AAFE97BD326C96B9F7DA52D3D2A6"
+    },
+    {
+        "path":  "tests/e2e/phase2.spec.ts",
+        "sha256":  "4D3EBC556EFEE53B55CE40B0619C6E8221B76AEB35AE751E2031AE9CC24C187F"
+    },
+    {
+        "path":  "tests/e2e/phase3.spec.ts",
+        "sha256":  "FDC796E5189ADB57D183071A1990655BCB96142DAE6E03835A79917293998E6C"
+    },
+    {
+        "path":  "tests/e2e/production.spec.ts",
+        "sha256":  "2EBEFC0DDCA7B7A5DF1E431D28239A70047AF4657CB5E3871D8565BBAF1B0090"
+    },
+    {
+        "path":  "tests/e2e/runner-art.spec.ts",
+        "sha256":  "A4CE25DD5612049FAEB91FE34BFBFE3BB485A991109F57196234CD67B8A3041B"
+    },
+    {
+        "path":  "tests/e2e/runner-performance.spec.ts",
+        "sha256":  "A4FE0D0521BFD0D845A23AB41F5A6BC6192932AAA925EF1A6F03D54FBB830CB7"
+    },
+    {
+        "path":  "tests/e2e/survival-enrage.spec.ts",
+        "sha256":  "151FC8086E56BC3B252CF8F6FAF95CBCC9A3B28F2A2E0718F58FE6DD1E26112C"
+    },
+    {
+        "path":  "tests/e2e/survival-enrage-performance.spec.ts",
+        "sha256":  "683526339AC114E78151E3A97176E1A3F6875DEBED087880DAC844DF291B0C72"
+    },
+    {
+        "path":  "tests/e2e/upgrade-identity-charge.spec.ts",
+        "sha256":  "6E8BE16609AFC6C08D29A5E9CC945FE2AEB15DFACA6B9ECDA854970C782D8663"
+    },
+    {
+        "path":  "tests/fixtures/balance-hotfix-baseline.json",
+        "sha256":  "2E6547F3A22FE3F68F18B479AD98CA0E5EE6FA7E91898BC47F85FBCC91E2F315"
+    },
+    {
+        "path":  "tests/fixtures/pre-enrage-replay.json",
+        "sha256":  "0751AC49CE1266FF7D16AF0CFC1A6399BD9BD673BAE446C423D63916BF23BAC9"
+    },
+    {
+        "path":  "tests/fixtures/pre-phase2-ordinary-replay.json",
+        "sha256":  "36DBDCA23548A609C1777748C2504F159DD69485D59B6800B0FE1BB569176BB0"
+    },
+    {
+        "path":  "tests/helpers/bossGuardian.ts",
+        "sha256":  "D2BC310DFF9BC8974B7DA98B1AAD1CF93362A6A4A02F874A6543A9B5B1D993CF"
+    },
+    {
+        "path":  "tests/helpers/character.ts",
+        "sha256":  "C78AB18D37BDC5A57606D64F88D06AAC54F0E1FB6B7B8FEE44B6BDE7C74C2451"
+    },
+    {
+        "path":  "tests/helpers/combatBalance.ts",
+        "sha256":  "4823B4788BC0D9DE6E589A14CA0486209B095ADBCFAACE349A320658CB259071"
+    },
+    {
+        "path":  "tests/helpers/earlyReplay.ts",
+        "sha256":  "02B29CA1529E54BB98274BB1AEE49749D12C4BC59BC2C9692F2CD61F1BC5CA8C"
+    },
+    {
+        "path":  "tests/helpers/encounterPilot.ts",
+        "sha256":  "604E442056B3AE89FF90F5320EA161D235C303AF3B676EE60B8D37D38D3F8BE4"
+    },
+    {
+        "path":  "tests/helpers/encounterTrial.ts",
+        "sha256":  "B351740944EED48C30655D874316B77FD00BD2C9C4602606D9F0DD3C547CF25C"
+    },
+    {
+        "path":  "tests/helpers/endgame.ts",
+        "sha256":  "61C10304663D4DEEFED77EAF251955B39C077798B20C8E668D1901F416F974B9"
+    },
+    {
+        "path":  "tests/helpers/gamepad.ts",
+        "sha256":  "0486519BAC28D4ACBFF589FEE9DD71DADF79553238657A84FB7ABF0F09FDA7AB"
+    },
+    {
+        "path":  "tests/helpers/survivalEnrage.ts",
+        "sha256":  "51D49597E3BC9A7B5223CAC1B46907BCA5C890C601C9F00111F0ABD584008E13"
+    },
+    {
+        "path":  "tests/unit/abilities.test.ts",
+        "sha256":  "B52C1A87F8029B95B503BBCCCF6C06108C6FDAD86DAA12ADFCBD0A900227BC4B"
+    },
+    {
+        "path":  "tests/unit/ability-visual.test.ts",
+        "sha256":  "E0B7D5ECA53FA5C1B669207556CB20D53F12B569B355AAC1E6BF93808049F101"
+    },
+    {
+        "path":  "tests/unit/arcane-absorb.test.ts",
+        "sha256":  "86712B6D7245826C6615B555AC0C23AA147BC83EF5F3EE6DD0BC4F493B0C4C16"
+    },
+    {
+        "path":  "tests/unit/armageddon-benchmark.test.ts",
+        "sha256":  "564B8A54A16FE88B9BC3E59330A75F014598189E7FED897210FD141270B89AAB"
+    },
+    {
+        "path":  "tests/unit/asset-registry.test.ts",
+        "sha256":  "0AA3B4721341BC009601271B99715EE7096E30A0A117DAA3EC45B3D1C0345059"
+    },
+    {
+        "path":  "tests/unit/audio.test.ts",
+        "sha256":  "21C931EACC072CC4508DDE6FF5ECAE123084976C64FD62D8621328077CB51105"
+    },
+    {
+        "path":  "tests/unit/balance-hotfix.test.ts",
+        "sha256":  "B170156E298A497A5F4EF55999851926EBDE2339767F85924D805B15F920906F"
+    },
+    {
+        "path":  "tests/unit/boss-art.test.ts",
+        "sha256":  "BBD9A87A2F713A2004A5517EC296639DD383BDFCCFEACFE8145B718A1699F064"
+    },
+    {
+        "path":  "tests/unit/boss-enrage.test.ts",
+        "sha256":  "EB9CDE38C6A6A44C689DB1CC9FAB2FF95FB9E4ED78104502DEF91D01F8BD60E5"
+    },
+    {
+        "path":  "tests/unit/bosses.test.ts",
+        "sha256":  "5221BCB386C6C1C4AB64678481CA1AFA1E87879C89C63660F17BCE538A2FD00F"
+    },
+    {
+        "path":  "tests/unit/boss-ttk.test.ts",
+        "sha256":  "62DC833909447F771581B8F8042FB0D51AC0C131DE46982A63555D60B15AEDB9"
+    },
+    {
+        "path":  "tests/unit/bridge.test.ts",
+        "sha256":  "BA1C244C77D94DDABB849B66B713BF3682F64EDC297088B29386F5A36E6198D3"
+    },
+    {
+        "path":  "tests/unit/charge-boss.test.ts",
+        "sha256":  "C400A8159E7FD07F5513D28BB9E186E0B510C1921C6D7194EBA50F0AB62D4631"
+    },
+    {
+        "path":  "tests/unit/combat.test.ts",
+        "sha256":  "DBC5ED1CE1446A5BA4650DF9A06E474DC8FAE8244FCEA19D46283F0DFAA9A739"
+    },
+    {
+        "path":  "tests/unit/combat-balance.test.ts",
+        "sha256":  "57AC4381F0D5E140BE90D943E04BCC817FC4FAA6CBB948AE24BD28D2F91CC7E6"
+    },
+    {
+        "path":  "tests/unit/combat-balance-2.test.ts",
+        "sha256":  "574AB0DFFD9DDDF54A5CA9C525CD605A570E09EEEF19080706163FA2C21A5EBE"
+    },
+    {
+        "path":  "tests/unit/director.test.ts",
+        "sha256":  "5B150CA5A436BE949AEAFD0FB6D9F23DBB1CFE0D12AE305008A4C04CDA23C0C8"
+    },
+    {
+        "path":  "tests/unit/encounter-director.test.ts",
+        "sha256":  "D9D4231D70C4D8F16AC748CF19F77286F2A5186AFFE397AB3833EC6AED61F261"
+    },
+    {
+        "path":  "tests/unit/encounter-survival.test.ts",
+        "sha256":  "C294AC895ECFD020DCDB52CB3DD13554D95E4761AE16DCF0BEB24AABA5BDA3BA"
+    },
+    {
+        "path":  "tests/unit/encounter-timeline.test.ts",
+        "sha256":  "3E569A05A7439519D96ED7EEB9634DE3BE817B34CD4BF5AC954FFCFA87584BDB"
+    },
+    {
+        "path":  "tests/unit/endgame.test.ts",
+        "sha256":  "8E6136E19CB1D979B47D1F5E5DB7B9A0F6FED91A878F0CD4820C46340243804E"
+    },
+    {
+        "path":  "tests/unit/enemy-art.test.ts",
+        "sha256":  "423B5B2EB1ADE1F384689A3E2348964DF1CAB40708B94286473A58FF666CD5F0"
+    },
+    {
+        "path":  "tests/unit/fireball-cleanup.test.ts",
+        "sha256":  "33B6FAA5AAC0C6BA05691CC3C95C7B5CC9999656D7F86E3FCCC4360D3A7E5BC5"
+    },
+    {
+        "path":  "tests/unit/frost-armageddon.test.ts",
+        "sha256":  "87571C53B422514A8C64BC6A3CF935F98402BE92D347DE42181D705DA034B0B2"
+    },
+    {
+        "path":  "tests/unit/frost-sound.test.ts",
+        "sha256":  "76F58025F762BA0E4D7DA8F993FBFE32549F0E7D35EE6231CB7719748E5F814C"
+    },
+    {
+        "path":  "tests/unit/gamepad.test.ts",
+        "sha256":  "0A728CABB57280DBCAD8E057BF3B99D576B311C75C0397018612E9B846BE2596"
+    },
+    {
+        "path":  "tests/unit/guardian-art.test.ts",
+        "sha256":  "C1681B60996C98896E8DC6E7286AAF26408C0A31945D1304C59173E020AF3A35"
+    },
+    {
+        "path":  "tests/unit/guardian-encounter.test.ts",
+        "sha256":  "14EB40719B37F278D6C69184DAD0A64CBF88BB958E0A61530172DCAD4EEFB6DB"
+    },
+    {
+        "path":  "tests/unit/guardian-orbs.test.ts",
+        "sha256":  "95993811E5FCBAB9900892E37A64070C04BB7A2CA57F24EC1DA8E8403D3C4560"
+    },
+    {
+        "path":  "tests/unit/guardians-artifacts.test.ts",
+        "sha256":  "C0F52A1B9CAEB8FE7F00ACF8AAF2A2B9D53468B3A1924B5AFBE3AF9A9B8DD758"
+    },
+    {
+        "path":  "tests/unit/guardian-warning-art.test.ts",
+        "sha256":  "18C41C684D4990C7963D6E24341BCFAAB3583BB82B7709DC19B8F500328185CD"
+    },
+    {
+        "path":  "tests/unit/held-input.test.ts",
+        "sha256":  "3AA625EFD13E2F6BFB151213552D98A1DA9105878BC3C43F10E291AACA2FE0D4"
+    },
+    {
+        "path":  "tests/unit/levelup-hotfix.test.ts",
+        "sha256":  "80EC65C4C0AF7CFC456B333D455BA7BAEC1DC5C7F18950F451F5EF63A1B3F57D"
+    },
+    {
+        "path":  "tests/unit/loot.test.ts",
+        "sha256":  "38A951A018467DD227E97C82BE4F67E89B4C92E6D2BC44980A49ACF8F2CD551E"
+    },
+    {
+        "path":  "tests/unit/loot-art.test.ts",
+        "sha256":  "3A8D21CEDEBDE65F7CDEBFF696E32A0E3BE0ECD75EF7086E7DCD8A20B7E46CFF"
+    },
+    {
+        "path":  "tests/unit/mage-art.test.ts",
+        "sha256":  "ADB841ACE18C10BEF7572A318B7F1A1A4E768C86E7A3C7C066798F888F116673"
+    },
+    {
+        "path":  "tests/unit/mage-casting.test.ts",
+        "sha256":  "9B451DE9BDA9B5E0CBDFC5304533820F164E4394E92C34A3CC2F283FBEAE29B4"
+    },
+    {
+        "path":  "tests/unit/mobility.test.ts",
+        "sha256":  "34CAC4D1790899B6F0A28CDCE97534F280E8053B4F7D7CDFA8ED6C05E656BB86"
+    },
+    {
+        "path":  "tests/unit/mobility-specializations.test.ts",
+        "sha256":  "DC46334F41844DFB2621C7551D696BCEF39FEF8B04F9E18EAF84DE474AD52AAD"
+    },
+    {
+        "path":  "tests/unit/pacing.test.ts",
+        "sha256":  "11FCE99B0413CCD4C9A4EE801E6D9AAFE9D497D48542435119F6D564301356DF"
+    },
+    {
+        "path":  "tests/unit/pacing-simulation.test.ts",
+        "sha256":  "F21F3BA0C8BAAC592EF8166EA28F31C208A3B2A295624993EFA71BE9EF20D448"
+    },
+    {
+        "path":  "tests/unit/phase2-biomes.test.ts",
+        "sha256":  "F06B17C5C6AD66201DF69BA4CCF73EE229EAE413B2636D8AEB0E635912442A96"
+    },
+    {
+        "path":  "tests/unit/phase2-boss.test.ts",
+        "sha256":  "EFF1542C7074D37DD95EC63E47275584931F2B828894F2F5E1321279876AC7BA"
+    },
+    {
+        "path":  "tests/unit/phase2-enemies.test.ts",
+        "sha256":  "49967F805F948E55629B8E3E9F3A61B0478BB58AE1FCC7DD8D0E2453DFFDF43F"
+    },
+    {
+        "path":  "tests/unit/phase2-evolutions.test.ts",
+        "sha256":  "A031F95695A88DD9309AEFEDE692603A42DE4ED814B295EBF6E9D9F48C8FB197"
+    },
+    {
+        "path":  "tests/unit/phase2-feedback.test.ts",
+        "sha256":  "D6AB93A127DC0B9BD8F50F528DA37496B73DFA94F664CA37A63B6B1D987BDAF9"
+    },
+    {
+        "path":  "tests/unit/phase2-spawn.test.ts",
+        "sha256":  "2BC8959528216811ED8A74866B6FF459BFFDAB04EF923AE704EC2BDBBFAAEC1B"
+    },
+    {
+        "path":  "tests/unit/phase2-statistics.test.ts",
+        "sha256":  "EFF84300480ABADCA4011840076663DE42D2FBB29006398A4EAAC14AFB8A422E"
+    },
+    {
+        "path":  "tests/unit/phase2-warrior.test.ts",
+        "sha256":  "908598591E4E3B767C040F07808F429974BF08A5CFD768D36B9A9ECFC0992FFB"
+    },
+    {
+        "path":  "tests/unit/public-characters.test.ts",
+        "sha256":  "2C38DC0D6DDA04AE6990FFA84D809767B93397845A7B6FD5EE0ACE1502F7FB24"
+    },
+    {
+        "path":  "tests/unit/radar-publisher.test.ts",
+        "sha256":  "4A88F34D916DD51773B23422D104E304373F940FC48353B9DCBDBC707220BFF9"
+    },
+    {
+        "path":  "tests/unit/records.test.ts",
+        "sha256":  "5CE40FA0324F9C0E754B18E3BF3337576FA3A556CC5A2F5AE4C7B0C208907D4F"
+    },
+    {
+        "path":  "tests/unit/reliability.test.ts",
+        "sha256":  "54D0448E738830414C67995923F6DCE81ACA9EA0E82385BBA592E12046EE84AC"
+    },
+    {
+        "path":  "tests/unit/runner-art.test.ts",
+        "sha256":  "CA991063DA603044D8857B68D9D71449D668C08AB5CA08DB546921670FAA5746"
+    },
+    {
+        "path":  "tests/unit/survival-enrage.test.ts",
+        "sha256":  "54106AD6D753F20099F40BB98ACB601D2C18A5BF38B94F1F7123E715FBD91267"
+    },
+    {
+        "path":  "tests/unit/upgrade-cards.test.ts",
+        "sha256":  "AE3953D985E5210CA593E586C8997A015A16031F8165E53F469B46B6700B441F"
+    },
+    {
+        "path":  "tests/unit/upgrade-identity.test.ts",
+        "sha256":  "4D08C76F8A8236731820B71C1CDFC406A4CC2161CF1D0F2EDFD0FDBFCF0783FD"
+    },
+    {
+        "path":  "tests/unit/upgrades.test.ts",
+        "sha256":  "B9C7874AB3689DC4268918C0824ECB1CE67B3E84483A2FE409152B0724EDCB0C"
+    },
+    {
+        "path":  "tests/unit/ux.test.ts",
+        "sha256":  "275E30DABFD43424A79A3CA98E4DF67340FD4D168880F744B6726DC5FE541D65"
+    },
+    {
+        "path":  "tests/unit/warrior-art.test.ts",
+        "sha256":  "33A883DC6CF64C879802909B77BE0B76E17A027771D1EC73B34BF57D8CBD409F"
+    },
+    {
+        "path":  "tests/unit/world.test.ts",
+        "sha256":  "77DD503C61F672B87B8CA2731246FE6F05F16271A117730C086A40C4161229D6"
+    },
+    {
+        "path":  "tests/unit/world-chunks.test.ts",
+        "sha256":  "B29DC9F77FE0EEFE140E52BFD11E1161387348BCF54110143E1B4ABCF5D5FAFF"
+    }
+]

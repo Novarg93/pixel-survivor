@@ -1,0 +1,56 @@
+{
+  "full": {
+    "startTime": "2026-11-05T06:58:39.272Z",
+    "duration": 1713477.854,
+    "expected": 326,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "artFinal": {
+    "startTime": "2026-11-05T07:28:16.283Z",
+    "duration": 69759.446,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-05T07:29:44.721Z",
+    "duration": 36264.17,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "deltaAfterFull": [
+    "public/assets\\hd\\mage-casting.png",
+    "tests\\unit\\frost-seal.test.ts",
+    "src\\game\\art\\mageCastingPoses.ts"
+  ],
+  "protectedLightningChanged": [],
+  "atlas": {
+    "checked": 270,
+    "changed": []
+  },
+  "stress": [
+    {
+      "width": 1280,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.90000000000009,
+      "maxFrozen": 156
+    },
+    {
+      "width": 844,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.90000000000009,
+      "maxFrozen": 156
+    },
+    {
+      "width": 1024,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.900000000000546,
+      "maxFrozen": 156
+    }
+  ]
+}

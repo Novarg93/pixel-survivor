@@ -1,0 +1,97 @@
+{
+  "build": {
+    "profile": "typical",
+    "ultimate": "frost",
+    "choices": 53,
+    "level": 54,
+    "stats": {
+      "damage": 2.25,
+      "cooldown": 0.5904900000000002,
+      "projectiles": 4,
+      "area": 1.4499999999999997,
+      "pickup": 55
+    },
+    "hp": 200,
+    "speed": 189
+  },
+  "phases": [
+    {
+      "phase": "inactive",
+      "at": 1199.9166366666668,
+      "hp": 200
+    },
+    {
+      "phase": "intro",
+      "at": 1200.0165500000003,
+      "hp": 200
+    },
+    {
+      "phase": "phase1",
+      "at": 1202.313850000005,
+      "hp": 200
+    },
+    {
+      "phase": "ritual1",
+      "at": 1243.9973599999678,
+      "hp": 200
+    },
+    {
+      "phase": "phase2",
+      "at": 1257.6473999999553,
+      "hp": 200
+    },
+    {
+      "phase": "phase3",
+      "at": 1302.3808999999142,
+      "hp": 200
+    },
+    {
+      "phase": "dying",
+      "at": 1332.4643599998865,
+      "hp": 200
+    }
+  ],
+  "frames": [
+    {
+      "phase": "inactive",
+      "bytes": 734022
+    },
+    {
+      "phase": "intro",
+      "bytes": 732890
+    },
+    {
+      "phase": "phase1",
+      "bytes": 772198
+    },
+    {
+      "phase": "ritual1",
+      "bytes": 754802
+    },
+    {
+      "phase": "phase2",
+      "bytes": 801126
+    },
+    {
+      "phase": "phase3",
+      "bytes": 745170
+    },
+    {
+      "phase": "dying",
+      "bytes": 804998
+    }
+  ],
+  "outcome": "victory",
+  "duration": 134.68110666667877,
+  "hp": 200,
+  "stats": {
+    "combos": 14,
+    "meteors": 30,
+    "orbs": 3,
+    "blocked": 15,
+    "gates": 2,
+    "delays": 0,
+    "missingSupports": 0
+  },
+  "blinks": 37
+}

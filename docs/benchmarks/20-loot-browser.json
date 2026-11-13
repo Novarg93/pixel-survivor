@@ -1,0 +1,708 @@
+{
+  "measuredAt": "2026-11-10T20:38:04.095Z",
+  "browser": "156.0.8078.4",
+  "setup": "10 real seconds, Warrior/Dark Forest, initial 150 tanks, test invulnerability, six drops/four chests repeatedly pooled, both buffs and keyboard movement; combat abilities disabled to isolate loot costs.",
+  "samples": [
+    {
+      "fps": 51.75,
+      "updateMs": 0.6000000238418579,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 0,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 7,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 51.75,
+      "updateMs": 1,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 9,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 53.8125,
+      "updateMs": 0.8999999761581421,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 12,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 53.8125,
+      "updateMs": 0.6000000238418579,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 14,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 55.609375,
+      "updateMs": 0.8000000715255737,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 16,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 55.609375,
+      "updateMs": 0.6000000238418579,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 19,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 56.70703125,
+      "updateMs": 0.6999999284744263,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 21,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 56.70703125,
+      "updateMs": 0.5999999046325684,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 24,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 57.5302734375,
+      "updateMs": 0.6999999284744263,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 26,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 57.5302734375,
+      "updateMs": 0.6000000238418579,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 29,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 58.147705078125,
+      "updateMs": 0.5,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 31,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 58.147705078125,
+      "updateMs": 0.5,
+      "enemies": 150,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 160,
+      "pooledSprites": 10,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 34,
+        "markers": 160,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 58.61077880859375,
+      "updateMs": 0.5999999046325684,
+      "enemies": 137,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 147,
+      "pooledSprites": 23,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 36,
+        "markers": 152,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 58.61077880859375,
+      "updateMs": 0.6000000238418579,
+      "enemies": 116,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 126,
+      "pooledSprites": 44,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 39,
+        "markers": 126,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.20808410644531,
+      "updateMs": 0.8999999761581421,
+      "enemies": 120,
+      "projectiles": 0,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 130,
+      "pooledSprites": 40,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 41,
+        "markers": 131,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 0,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.406063079833984,
+      "updateMs": 1,
+      "enemies": 125,
+      "projectiles": 1,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 136,
+      "pooledSprites": 34,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 44,
+        "markers": 135,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 1,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.406063079833984,
+      "updateMs": 0.7000000476837158,
+      "enemies": 130,
+      "projectiles": 3,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 143,
+      "pooledSprites": 27,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 46,
+        "markers": 141,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 3,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.55454730987549,
+      "updateMs": 0.8000000715255737,
+      "enemies": 134,
+      "projectiles": 4,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 148,
+      "pooledSprites": 22,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 48,
+        "markers": 143,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 6,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 4,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.55454730987549,
+      "updateMs": 0.7999999523162842,
+      "enemies": 138,
+      "projectiles": 5,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 153,
+      "pooledSprites": 17,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 51,
+        "markers": 149,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 5,
+        "effects": 2
+      }
+    },
+    {
+      "fps": 59.665910482406616,
+      "updateMs": 0.5,
+      "enemies": 134,
+      "projectiles": 6,
+      "orbs": 0,
+      "effects": 0,
+      "bosses": 0,
+      "chunks": 48,
+      "sprites": 150,
+      "pooledSprites": 20,
+      "guardians": 0,
+      "artifacts": {
+        "items": 0,
+        "allocated": 0
+      },
+      "radar": {
+        "updates": 53,
+        "markers": 144,
+        "listeners": 1
+      },
+      "loot": {
+        "items": 6,
+        "chests": 4,
+        "buffs": 2,
+        "trail": 5,
+        "allocatedItems": 6,
+        "allocatedChests": 4
+      },
+      "allocations": {
+        "orbs": 0,
+        "projectiles": 6,
+        "effects": 2
+      }
+    }
+  ],
+  "errors": []
+}

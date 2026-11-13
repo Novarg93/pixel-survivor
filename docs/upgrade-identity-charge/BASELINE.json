@@ -1,0 +1,22 @@
+{
+  "commit": "c7ff2b5edd3e484a2c5488543544042998910e13",
+  "branch": "feature/upgrade-identity-charge",
+  "upgradeSystemLfSha256": "a3d8f62bb02cd86b31eea9111848a63b00a37e3849d123aaf47e586b3094f88d",
+  "upgradeSystemUnchanged": true,
+  "before": {
+    "pursuit": 24,
+    "pursuitStopRange": 150,
+    "windup": 1.1,
+    "chargeSpeed": 400,
+    "chargeDuration": 0.65,
+    "recovery": 1.6,
+    "cooldownAfterRecovery": 2.6,
+    "hp": 4500,
+    "damage": 28
+  },
+  "validationBeforeTask": {
+    "unit": 240,
+    "devE2E": 121,
+    "productionE2E": 4
+  }
+}

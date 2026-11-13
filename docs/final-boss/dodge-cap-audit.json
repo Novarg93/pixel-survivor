@@ -1,0 +1,209 @@
+{
+  "context": "Six lawful full-pilot fights. Geometric dodge means no contact at a completed attack window or outside every circle at group impact. Protected contacts include invulnerability and ultimate protection; Absorb contacts count as accepted. finiteCapCalls counts explicit maxDamage arguments; hitsAtCap counts observed damage equal to that cap. No HP edits or invulnerability overrides.",
+  "rows": [
+    {
+      "seed": 42,
+      "build": {
+        "profile": "typical",
+        "ultimate": "lightning",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 120.74999999999528,
+      "hp": 160,
+      "counters": {
+        "chargeDodges": 11,
+        "swordDodges": 14,
+        "meteorGroupDodges": 26,
+        "contactAttempts": 6,
+        "acceptedContacts": 5,
+        "protectedContacts": 1,
+        "hpLost": 40,
+        "finiteCapCalls": 4,
+        "hitsAtCap": 1
+      },
+      "blocked": 17,
+      "repeat": false
+    },
+    {
+      "seed": 713,
+      "build": {
+        "profile": "typical",
+        "ultimate": "lightning",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 120.74999999999528,
+      "hp": 160,
+      "counters": {
+        "chargeDodges": 11,
+        "swordDodges": 14,
+        "meteorGroupDodges": 26,
+        "contactAttempts": 6,
+        "acceptedContacts": 5,
+        "protectedContacts": 1,
+        "hpLost": 40,
+        "finiteCapCalls": 4,
+        "hitsAtCap": 1
+      },
+      "blocked": 17,
+      "repeat": false
+    },
+    {
+      "seed": 42,
+      "build": {
+        "profile": "typical",
+        "ultimate": "frost",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 136.74999999999685,
+      "hp": 196,
+      "counters": {
+        "chargeDodges": 11,
+        "swordDodges": 11,
+        "meteorGroupDodges": 28,
+        "contactAttempts": 6,
+        "acceptedContacts": 4,
+        "protectedContacts": 2,
+        "hpLost": 4,
+        "finiteCapCalls": 4,
+        "hitsAtCap": 0
+      },
+      "blocked": 16,
+      "repeat": false
+    },
+    {
+      "seed": 713,
+      "build": {
+        "profile": "typical",
+        "ultimate": "frost",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 136.74999999999685,
+      "hp": 196,
+      "counters": {
+        "chargeDodges": 11,
+        "swordDodges": 11,
+        "meteorGroupDodges": 28,
+        "contactAttempts": 6,
+        "acceptedContacts": 4,
+        "protectedContacts": 2,
+        "hpLost": 4,
+        "finiteCapCalls": 4,
+        "hitsAtCap": 0
+      },
+      "blocked": 16,
+      "repeat": false
+    },
+    {
+      "seed": 42,
+      "build": {
+        "profile": "typical",
+        "ultimate": "fire",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 116.8499999999955,
+      "hp": 200,
+      "counters": {
+        "chargeDodges": 12,
+        "swordDodges": 13,
+        "meteorGroupDodges": 24,
+        "contactAttempts": 7,
+        "acceptedContacts": 5,
+        "protectedContacts": 2,
+        "hpLost": 4,
+        "finiteCapCalls": 66,
+        "hitsAtCap": 0
+      },
+      "blocked": 12,
+      "repeat": false
+    },
+    {
+      "seed": 713,
+      "build": {
+        "profile": "typical",
+        "ultimate": "fire",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "outcome": "victory",
+      "duration": 116.8499999999955,
+      "hp": 200,
+      "counters": {
+        "chargeDodges": 12,
+        "swordDodges": 13,
+        "meteorGroupDodges": 24,
+        "contactAttempts": 7,
+        "acceptedContacts": 5,
+        "protectedContacts": 2,
+        "hpLost": 4,
+        "finiteCapCalls": 66,
+        "hitsAtCap": 0
+      },
+      "blocked": 12,
+      "repeat": false
+    }
+  ]
+}

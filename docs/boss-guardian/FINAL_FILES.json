@@ -1,0 +1,110 @@
+[
+  {
+    "path": "src/game/art/EncounterArt.ts",
+    "sha256": "873894012d287fad1044dedba5692f78c0afd104a09802bee63a4d0ae792393d"
+  },
+  {
+    "path": "src/game/audio/AudioPresentation.ts",
+    "sha256": "0b02974336f9338a89e27999a4dc23b263e00c2c7f1cd4978522420900ffb53b"
+  },
+  {
+    "path": "src/game/entities/types.ts",
+    "sha256": "ed903fc278669a63987f804c111a0794d5fbe8286955cb0ef2d32f52c0cbcbae"
+  },
+  {
+    "path": "src/game/scenes/GameScene.ts",
+    "sha256": "436070feadbb372e38b11ab0fe549b1586dac9c40fbc12127273257975344197"
+  },
+  {
+    "path": "src/game/systems/BossSystem.ts",
+    "sha256": "57640c0d2ae8249b3ad9bbb3c464cbaa1540befe11002524dbd31896eb6d9504"
+  },
+  {
+    "path": "src/game/systems/EclipseBoss.ts",
+    "sha256": "d82568465f0f5f340de9d52ee0073b56e7fecadc6bc2d47c2253c3465b577eac"
+  },
+  {
+    "path": "src/game/systems/EncounterDirector.ts",
+    "sha256": "18aa5cf4206d2f39222a82dab12481e27eb4f1564cef50bf9844ea422c124545"
+  },
+  {
+    "path": "src/game/systems/GuardianEncounter.ts",
+    "sha256": "3e8841aed22f8075bb69d9e6d4ea03b013a9858ba56ce31c1059c4836572b3de"
+  },
+  {
+    "path": "src/game/systems/RareGuardianSystem.ts",
+    "sha256": "28a830138fe9f481c3f8da195f26b72c5ffb8d88ad49f9a3a8175b6d4b4a489a"
+  },
+  {
+    "path": "src/game/systems/World.ts",
+    "sha256": "00e3c4ed89a4b071f091141a4278173ca4185057f54b56432d5c6eab3fa7dda0"
+  },
+  {
+    "path": "tests/e2e/audio.spec.ts",
+    "sha256": "5e7b4a0b3499ccf6f5619e826e7645ab1164bd194af19601409a9759aea66b10"
+  },
+  {
+    "path": "tests/e2e/encounter-director.spec.ts",
+    "sha256": "8b55372b62b384e290d5c72f1a23db110fdb1bb7d1ae88c6515622e24d65532b"
+  },
+  {
+    "path": "tests/e2e/gameplay-stress.spec.ts",
+    "sha256": "efca4086eefecd34e6733951ed8c1528c410c99e693225dab9397b3ae687ef5b"
+  },
+  {
+    "path": "tests/helpers/encounterPilot.ts",
+    "sha256": "d78282bcb3a467a2936fd13781da203280330f39b9db85b6370ade5047c66edb"
+  },
+  {
+    "path": "tests/unit/charge-boss.test.ts",
+    "sha256": "c400a8159e7fd07f5513d28bb9e186e0b510c1921c6d7194eba50f0ab62d4631"
+  },
+  {
+    "path": "tests/unit/encounter-director.test.ts",
+    "sha256": "4c6766a10f1c9f878d050b92734224fe26d6fc376e7efe5e52b5c7b5d95f0343"
+  },
+  {
+    "path": "tests/unit/survival-enrage.test.ts",
+    "sha256": "908c025ef45dbbee04b9c2a44e9aee079cd0b92e118ebde7fa9eb976bafeb671"
+  },
+  {
+    "path": "scripts/measure-boss-guardian.mjs",
+    "sha256": "1d62ff0d7bfcb5899df08bbb914d0f84af65995b02152c74edd17309e8eb7e40"
+  },
+  {
+    "path": "src/game/config/bossEnrage.ts",
+    "sha256": "15db7cba2661b8a8d515af3bb37805978f061a1e55dc9e9fba78d418de7f8d0a"
+  },
+  {
+    "path": "src/game/config/guardianOrbs.ts",
+    "sha256": "4a2adfc2c3d0c7bd52de32926d888f237f363200e342b7a1f4e2adac093120fe"
+  },
+  {
+    "path": "src/game/systems/BossMagic.ts",
+    "sha256": "4b8ce4f23afbc0876489dd112536268eabea7d0b6415adcd65374cd52c1e018b"
+  },
+  {
+    "path": "src/game/systems/GuardianOrbs.ts",
+    "sha256": "a74381f04e42cb23cdd7b7a4a5917693adb081c575f8b4bcafc70f98d8b2409a"
+  },
+  {
+    "path": "tests/e2e/boss-guardian-performance.spec.ts",
+    "sha256": "a5f2091ffdd293bf24f7f79b7854f11ec3f92e561cffaaa83ecb286a28bb1a0e"
+  },
+  {
+    "path": "tests/e2e/boss-guardian.spec.ts",
+    "sha256": "bf93287dd06577696b461a23f199a7e4009d9692a18842fa28802f399127250a"
+  },
+  {
+    "path": "tests/helpers/bossGuardian.ts",
+    "sha256": "107e2879e4a872509c67c10cec737ca50a02ad79f0e00c077fd2d050addba863"
+  },
+  {
+    "path": "tests/unit/boss-enrage.test.ts",
+    "sha256": "a6c5d2e3669d6c14495f2b2cad14943c924d82aea4e3b3b2604fa1d10c3feae8"
+  },
+  {
+    "path": "tests/unit/guardian-orbs.test.ts",
+    "sha256": "b36eec34861b2160f319a62c8701862be38a4d699beac0dee910c73a8575b521"
+  }
+]

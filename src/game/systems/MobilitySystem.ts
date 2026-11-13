@@ -38,10 +38,11 @@ export class MobilitySystem extends AbsorbPool {
         wall: { variant: this.variant, from: { ...this.from }, to: { ...this.arrival }, width: this.variant === 'flame-trail' ? S.flameWidth[rank] : S.slowingWidth[rank], nextHit: new Map() } });
     } else if (this.variant === 'arcane-sprint') w.buffs.refresh('arcane-sprint', w.elapsed, S.sprintDuration, { speed: S.sprintSpeed[rank] });
     else if (this.variant === 'absorb-shield') this.refreshAbsorb(w.effectiveMaxHp * S.absorbFraction[rank],w.elapsed + S.absorbDuration);
-    else if (this.variant === 'berserk') w.buffs.refresh('berserk', w.elapsed, S.berserkDuration, { damage: S.berserkDamage[rank], cooldown: S.berserkCooldown[rank] });
+    else if (this.variant === 'berserk') w.buffs.refresh('berserk', w.elapsed, S.berserkDuration, { damage: S.berserkDamage[rank], cooldown: S.berserkCooldown[rank], speed: S.berserkSpeed[rank] });
   }
   activate(w: World, input: Point = { x: 0, y: 0 }) {
     if(w.outcome)return false;
+    if(w.character==='warrior'&&w.ultimate.warriorBodyActive(w.elapsed))return false;
     if (w.status !== 'playing' || w.elapsed < this.readyAt || this.remaining > 0 || !Number.isFinite(input.x + input.y + w.player.x + w.player.y)) return false;
     const c = MOBILITY[w.character], v = direction(input.x, input.y);
     this.direction = v.x || v.y ? v : { ...w.facing };
@@ -54,7 +55,7 @@ export class MobilitySystem extends AbsorbPool {
     this.started = w.elapsed; this.readyAt = w.elapsed + this.castCooldown; this.protectedUntil = w.elapsed + c.protection; this.sequence++;
     this.dashHits.clear(); w.facing = { ...this.direction };
     if (w.character === 'mage') { w.player.x = this.to.x; w.player.y = this.to.y; this.arrive(w); }
-    else this.remaining = this.distance;
+    else {this.remaining = this.distance;w.warrior.pendingSpear=undefined;w.warrior.cleave=undefined;w.warrior.gestureUntil=w.elapsed+c.duration;}
     w.ultimate.onBlink(w);
     return true;
   }

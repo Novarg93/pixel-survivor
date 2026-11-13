@@ -1,0 +1,7958 @@
+[
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.8499999999865,
+      1223.4999999999786,
+      1232.3499999999706,
+      1241.1999999999625,
+      1249.9999999999545,
+      1258.7999999999465,
+      1267.5999999999385,
+      1276.3999999999305,
+      1285.1999999999225,
+      1293.9999999999145,
+      1326.549999999885,
+      1330.5499999998813,
+      1334.5499999998776,
+      1338.549999999874,
+      1342.6499999998703,
+      1346.8499999998664,
+      1351.0499999998626,
+      1355.2499999998588,
+      1359.449999999855,
+      1363.6499999998512,
+      1367.6499999998475,
+      1371.8499999998437,
+      1376.1499999998398,
+      1396.4999999998213,
+      1400.4999999998176,
+      1404.599999999814,
+      1408.5999999998103,
+      1412.7999999998065,
+      1416.9999999998026,
+      1421.1999999997988,
+      1425.399999999795
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1305.2499999999043,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1305.2499999999043,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1323.2999999998879,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1323.2999999998879,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1382.3499999998342,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1382.3499999998342,
+        "count": 5
+      }
+    ],
+    "travelDistance": 31734.117580344664,
+    "movingSeconds": 121.89999999999522,
+    "guardianTtk": [
+      {
+        "id": 1018,
+        "hp": 1800,
+        "first": 1302.249999999907,
+        "seconds": 21.249999999980673
+      },
+      {
+        "id": 1016,
+        "hp": 1800,
+        "first": 1307.2499999999025,
+        "seconds": 5.9499999999945885
+      },
+      {
+        "id": 1017,
+        "hp": 1800,
+        "first": 1314.6999999998957,
+        "seconds": 5.999999999994543
+      },
+      {
+        "id": 1787,
+        "hp": 1350,
+        "first": 1379.7499999998365,
+        "seconds": 13.69999999998754
+      },
+      {
+        "id": 1788,
+        "hp": 1350,
+        "first": 1384.9999999998317,
+        "seconds": 4.349999999996044
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 227.40000000001746,
+    "hp": 0,
+    "bossHp": 47035.650000000336,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1301.8499999999074,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1323.4999999998877,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1378.9999999998372,
+        "hp": 140
+      },
+      {
+        "phase": "phase2",
+        "at": 1393.449999999824,
+        "hp": 140
+      }
+    ],
+    "damage": [
+      {
+        "at": 1335.299999999877,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1361.3999999998532,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1406.649999999812,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1418.9499999998009,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1423.149999999797,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1427.3499999997932,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 6,
+    "blinks": 52,
+    "diagnostics": {
+      "combos": 32,
+      "meteors": 33,
+      "orbs": 5,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.8499999999865,
+      1223.4999999999786,
+      1232.3499999999706,
+      1241.1999999999625,
+      1249.9999999999545,
+      1258.7999999999465,
+      1267.5999999999385,
+      1276.3999999999305,
+      1285.1999999999225,
+      1293.9999999999145,
+      1326.549999999885,
+      1330.5499999998813,
+      1334.5499999998776,
+      1338.549999999874,
+      1342.6499999998703,
+      1346.8499999998664,
+      1351.0499999998626,
+      1355.2499999998588,
+      1359.449999999855,
+      1363.6499999998512,
+      1367.6499999998475,
+      1371.8499999998437,
+      1376.1499999998398,
+      1396.4999999998213,
+      1400.4999999998176,
+      1404.599999999814,
+      1408.5999999998103,
+      1412.7999999998065,
+      1416.9999999998026,
+      1421.1999999997988,
+      1425.399999999795
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1305.2499999999043,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1305.2499999999043,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1323.2999999998879,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1323.2999999998879,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1382.3499999998342,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1382.3499999998342,
+        "count": 5
+      }
+    ],
+    "travelDistance": 31734.117580344664,
+    "movingSeconds": 121.89999999999522,
+    "guardianTtk": [
+      {
+        "id": 1018,
+        "hp": 1800,
+        "first": 1302.249999999907,
+        "seconds": 21.249999999980673
+      },
+      {
+        "id": 1016,
+        "hp": 1800,
+        "first": 1307.2499999999025,
+        "seconds": 5.9499999999945885
+      },
+      {
+        "id": 1017,
+        "hp": 1800,
+        "first": 1314.6999999998957,
+        "seconds": 5.999999999994543
+      },
+      {
+        "id": 1787,
+        "hp": 1350,
+        "first": 1379.7499999998365,
+        "seconds": 13.69999999998754
+      },
+      {
+        "id": 1788,
+        "hp": 1350,
+        "first": 1384.9999999998317,
+        "seconds": 4.349999999996044
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 227.40000000001746,
+    "hp": 0,
+    "bossHp": 47035.650000000336,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1301.8499999999074,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1323.4999999998877,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1378.9999999998372,
+        "hp": 140
+      },
+      {
+        "phase": "phase2",
+        "at": 1393.449999999824,
+        "hp": 140
+      }
+    ],
+    "damage": [
+      {
+        "at": 1335.299999999877,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1361.3999999998532,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1406.649999999812,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1418.9499999998009,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1423.149999999797,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1427.3499999997932,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 6,
+    "blinks": 52,
+    "diagnostics": {
+      "combos": 32,
+      "meteors": 33,
+      "orbs": 5,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.3499999999797,
+      1230.9499999999719,
+      1239.549999999964,
+      1255.5999999999494,
+      1264.0499999999417,
+      1272.649999999934,
+      1281.349999999926,
+      1297.3999999999114,
+      1305.8499999999037,
+      1314.5499999998958,
+      1351.5999999998621,
+      1355.7999999998583,
+      1359.7999999998547,
+      1364.1999999998507,
+      1368.5999999998467,
+      1373.0499999998426,
+      1385.2499999998315,
+      1389.4499999998277,
+      1393.6499999998239,
+      1397.84999999982,
+      1401.9999999998163,
+      1406.1999999998125,
+      1423.249999999797,
+      1427.3999999997932,
+      1431.4999999997895
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1295.7999999999129,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1327.3499999998842,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1327.3499999998842,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1345.3999999998678,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1345.3999999998678,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1413.8999999998055,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1413.8999999998055,
+        "count": 5
+      }
+    ],
+    "travelDistance": 29209.433286539497,
+    "movingSeconds": 127.3999999999949,
+    "guardianTtk": [
+      {
+        "id": 1067,
+        "hp": 1800,
+        "first": 1324.0999999998871,
+        "seconds": 14.849999999986494
+      },
+      {
+        "id": 1068,
+        "hp": 1800,
+        "first": 1329.8999999998819,
+        "seconds": 5.9499999999945885
+      },
+      {
+        "id": 1069,
+        "hp": 1800,
+        "first": 1341.5499999998713,
+        "seconds": 6.9999999999936335
+      },
+      {
+        "id": 1909,
+        "hp": 1350,
+        "first": 1410.5499999998085,
+        "seconds": 4.499999999995907
+      },
+      {
+        "id": 1910,
+        "hp": 1350,
+        "first": 1415.8999999998036,
+        "seconds": 4.299999999996089
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 232.4500000000186,
+    "hp": 0,
+    "bossHp": 53241.450000000434,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1323.9499999998873,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1348.549999999865,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1410.5499999998085,
+        "hp": 16
+      },
+      {
+        "phase": "phase2",
+        "at": 1420.1999999997997,
+        "hp": 16
+      }
+    ],
+    "damage": [
+      {
+        "at": 1365.04999999985,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1390.299999999827,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1398.6999999998193,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1407.0499999998117,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1432.3999999997886,
+        "amount": 16,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 6,
+    "blinks": 53,
+    "diagnostics": {
+      "combos": 26,
+      "meteors": 35,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.3499999999797,
+      1230.9499999999719,
+      1239.549999999964,
+      1255.5999999999494,
+      1264.0499999999417,
+      1272.649999999934,
+      1281.349999999926,
+      1297.3999999999114,
+      1305.8499999999037,
+      1314.5499999998958,
+      1351.5999999998621,
+      1355.7999999998583,
+      1359.7999999998547,
+      1364.1999999998507,
+      1368.5999999998467,
+      1373.0499999998426,
+      1385.2499999998315,
+      1389.4499999998277,
+      1393.6499999998239,
+      1397.84999999982,
+      1401.9999999998163,
+      1406.1999999998125,
+      1423.249999999797,
+      1427.3999999997932,
+      1431.4999999997895
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1295.7999999999129,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1327.3499999998842,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1327.3499999998842,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1345.3999999998678,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1345.3999999998678,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1413.8999999998055,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1413.8999999998055,
+        "count": 5
+      }
+    ],
+    "travelDistance": 29209.433286539497,
+    "movingSeconds": 127.3999999999949,
+    "guardianTtk": [
+      {
+        "id": 1067,
+        "hp": 1800,
+        "first": 1324.0999999998871,
+        "seconds": 14.849999999986494
+      },
+      {
+        "id": 1068,
+        "hp": 1800,
+        "first": 1329.8999999998819,
+        "seconds": 5.9499999999945885
+      },
+      {
+        "id": 1069,
+        "hp": 1800,
+        "first": 1341.5499999998713,
+        "seconds": 6.9999999999936335
+      },
+      {
+        "id": 1909,
+        "hp": 1350,
+        "first": 1410.5499999998085,
+        "seconds": 4.499999999995907
+      },
+      {
+        "id": 1910,
+        "hp": 1350,
+        "first": 1415.8999999998036,
+        "seconds": 4.299999999996089
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 232.4500000000186,
+    "hp": 0,
+    "bossHp": 53241.450000000434,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1323.9499999998873,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1348.549999999865,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1410.5499999998085,
+        "hp": 16
+      },
+      {
+        "phase": "phase2",
+        "at": 1420.1999999997997,
+        "hp": 16
+      }
+    ],
+    "damage": [
+      {
+        "at": 1365.04999999985,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1390.299999999827,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1398.6999999998193,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1407.0499999998117,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1432.3999999997886,
+        "amount": 16,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 6,
+    "blinks": 53,
+    "diagnostics": {
+      "combos": 26,
+      "meteors": 35,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.8499999999865,
+      1223.4999999999786,
+      1232.3499999999706,
+      1241.1999999999625,
+      1249.9999999999545,
+      1258.7999999999465,
+      1267.5999999999385,
+      1276.3999999999305,
+      1285.1999999999225,
+      1313.149999999897,
+      1317.2999999998933,
+      1321.3499999998896,
+      1325.399999999886,
+      1329.3999999998823,
+      1333.3999999998787,
+      1337.5999999998749,
+      1341.799999999871,
+      1345.9999999998672,
+      1350.1999999998634,
+      1354.1999999998598,
+      1358.399999999856,
+      1362.5999999998521,
+      1382.8499999998337,
+      1386.84999999983,
+      1391.0499999998262,
+      1395.2499999998224,
+      1399.3999999998186,
+      1403.5999999998148,
+      1407.799999999811,
+      1411.9499999998072,
+      1415.9499999998036,
+      1420.0999999997998,
+      1424.0999999997962,
+      1428.599999999792,
+      1433.149999999788,
+      1437.599999999784,
+      1442.0999999997798,
+      1446.5999999997757,
+      1450.9999999997717,
+      1459.9499999997636,
+      1468.4999999997558,
+      1477.2999999997478,
+      1485.89999999974,
+      1493.8999999997327,
+      1504.599999999723,
+      1513.1999999997151,
+      1521.5999999997075,
+      1530.1999999996997,
+      1538.9999999996917
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1296.649999999912,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1296.649999999912,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1368.7999999998465,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1368.7999999998465,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1456.9999999997663,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1456.9999999997663,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1471.9999999997526,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1471.9999999997526,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1486.999999999739,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1486.999999999739,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1501.9999999997253,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1501.9999999997253,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1516.9999999997117,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1516.9999999997117,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1531.999999999698,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1531.999999999698,
+        "count": 4
+      },
+      {
+        "owner": "boss",
+        "at": 1533.049999999697,
+        "count": 1
+      },
+      {
+        "owner": "arena",
+        "at": 1546.9999999996844,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1546.9999999996844,
+        "count": 4
+      }
+    ],
+    "travelDistance": 48654.84938079449,
+    "movingSeconds": 194.70000000001002,
+    "guardianTtk": [
+      {
+        "id": 978,
+        "hp": 1800,
+        "first": 1293.549999999915,
+        "seconds": 4.649999999995771
+      },
+      {
+        "id": 976,
+        "hp": 1800,
+        "first": 1298.3499999999106,
+        "seconds": 5.049999999995407
+      },
+      {
+        "id": 977,
+        "hp": 1800,
+        "first": 1304.2999999999051,
+        "seconds": 5.799999999994725
+      },
+      {
+        "id": 1753,
+        "hp": 1350,
+        "first": 1366.3499999998487,
+        "seconds": 7.799999999992906
+      },
+      {
+        "id": 1752,
+        "hp": 1350,
+        "first": 1377.049999999839,
+        "seconds": 2.749999999997499
+      }
+    ],
+    "outcome": "victory",
+    "duration": 351.8000000000457,
+    "hp": 142,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1293.2499999999152,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1310.0999999998999,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1365.4499999998495,
+        "hp": 162
+      },
+      {
+        "phase": "phase2",
+        "at": 1379.7999999998365,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1453.999999999769,
+        "hp": 62
+      },
+      {
+        "phase": "dying",
+        "at": 1549.549999999682,
+        "hp": 142
+      },
+      {
+        "phase": "defeated",
+        "at": 1551.74999999968,
+        "hp": 142
+      }
+    ],
+    "damage": [
+      {
+        "at": 1322.1999999998889,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1330.2999999998815,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1339.549999999873,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1343.7499999998693,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1401.3499999998169,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1405.549999999813,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1409.7499999998092,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1424.9499999997954,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1434.0499999997871,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1442.999999999779,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1451.899999999771,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1474.4999999997503,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1504.1999999997233,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1506.5999999997211,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1519.0499999997098,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1549.3499999996823,
+        "amount": 54,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      }
+    ],
+    "ultimates": 8,
+    "blinks": 79,
+    "diagnostics": {
+      "combos": 50,
+      "meteors": 86,
+      "orbs": 6,
+      "blocked": 0,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 15.15000000000008,
+    "hp": 0,
+    "bossHp": 103640.40000000026,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 14,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1215.0999999999863,
+        "amount": 28,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1240.1499999999635,
+      1248.8499999999556,
+      1257.3499999999478,
+      1266.04999999994,
+      1274.799999999932,
+      1283.2499999999243,
+      1291.4999999999168,
+      1299.949999999909,
+      1331.89999999988,
+      1336.0999999998762,
+      1340.0999999998726,
+      1344.099999999869,
+      1348.0999999998653,
+      1352.0999999998617,
+      1356.099999999858,
+      1360.0999999998544,
+      1364.0999999998508
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1312.099999999898,
+        "count": 5
+      }
+    ],
+    "travelDistance": 11822.400524467199,
+    "movingSeconds": 73.44999999999797,
+    "guardianTtk": [
+      {
+        "id": 1094,
+        "hp": 1800,
+        "first": 1308.9999999999009,
+        "seconds": 19.849999999981947
+      },
+      {
+        "id": 1092,
+        "hp": 1800,
+        "first": 1314.249999999896,
+        "seconds": 5.8499999999946795
+      },
+      {
+        "id": 1093,
+        "hp": 1800,
+        "first": 1322.5499999998885,
+        "seconds": 4.9999999999954525
+      }
+    ],
+    "outcome": "defeat",
+    "duration": 164.90000000000325,
+    "hp": 0,
+    "bossHp": 64712.55000000063,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1308.6999999999011,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1328.8499999998828,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1336.9499999998754,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1344.9499999998682,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1352.949999999861,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1356.8499999998573,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1364.84999999985,
+        "amount": 14,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 21,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "level": 36,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.8499999999865,
+      1223.4999999999786,
+      1232.3499999999706,
+      1241.1999999999625,
+      1249.9999999999545,
+      1258.7999999999465,
+      1267.5999999999385,
+      1276.3999999999305,
+      1285.1999999999225,
+      1313.149999999897,
+      1317.2999999998933,
+      1321.3499999998896,
+      1325.399999999886,
+      1329.3999999998823,
+      1333.3999999998787,
+      1337.5999999998749,
+      1341.799999999871,
+      1345.9999999998672,
+      1350.1999999998634,
+      1354.1999999998598,
+      1358.399999999856,
+      1362.5999999998521,
+      1382.8499999998337,
+      1386.84999999983,
+      1391.0499999998262,
+      1395.2499999998224,
+      1399.3999999998186,
+      1403.5999999998148,
+      1407.799999999811,
+      1411.9499999998072,
+      1415.9499999998036,
+      1420.0999999997998,
+      1424.0999999997962,
+      1428.599999999792,
+      1433.149999999788,
+      1437.599999999784,
+      1442.0999999997798,
+      1446.5999999997757,
+      1450.9999999997717,
+      1459.9499999997636,
+      1468.4999999997558,
+      1477.2999999997478,
+      1485.89999999974,
+      1493.8999999997327,
+      1504.599999999723,
+      1513.1999999997151,
+      1521.5999999997075,
+      1530.1999999996997,
+      1538.9999999996917
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1296.649999999912,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1296.649999999912,
+        "count": 5
+      },
+      {
+        "owner": "boss",
+        "at": 1368.7999999998465,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1368.7999999998465,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1456.9999999997663,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1456.9999999997663,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1471.9999999997526,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1471.9999999997526,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1486.999999999739,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1486.999999999739,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1501.9999999997253,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1501.9999999997253,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1516.9999999997117,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1516.9999999997117,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1531.999999999698,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1531.999999999698,
+        "count": 4
+      },
+      {
+        "owner": "boss",
+        "at": 1533.049999999697,
+        "count": 1
+      },
+      {
+        "owner": "arena",
+        "at": 1546.9999999996844,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1546.9999999996844,
+        "count": 4
+      }
+    ],
+    "travelDistance": 48654.84938079449,
+    "movingSeconds": 194.70000000001002,
+    "guardianTtk": [
+      {
+        "id": 978,
+        "hp": 1800,
+        "first": 1293.549999999915,
+        "seconds": 4.649999999995771
+      },
+      {
+        "id": 976,
+        "hp": 1800,
+        "first": 1298.3499999999106,
+        "seconds": 5.049999999995407
+      },
+      {
+        "id": 977,
+        "hp": 1800,
+        "first": 1304.2999999999051,
+        "seconds": 5.799999999994725
+      },
+      {
+        "id": 1753,
+        "hp": 1350,
+        "first": 1366.3499999998487,
+        "seconds": 7.799999999992906
+      },
+      {
+        "id": 1752,
+        "hp": 1350,
+        "first": 1377.049999999839,
+        "seconds": 2.749999999997499
+      }
+    ],
+    "outcome": "victory",
+    "duration": 351.8000000000457,
+    "hp": 142,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1293.2499999999152,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1310.0999999998999,
+        "hp": 200
+      },
+      {
+        "phase": "ritual2",
+        "at": 1365.4499999998495,
+        "hp": 162
+      },
+      {
+        "phase": "phase2",
+        "at": 1379.7999999998365,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1453.999999999769,
+        "hp": 62
+      },
+      {
+        "phase": "dying",
+        "at": 1549.549999999682,
+        "hp": 142
+      },
+      {
+        "phase": "defeated",
+        "at": 1551.74999999968,
+        "hp": 142
+      }
+    ],
+    "damage": [
+      {
+        "at": 1322.1999999998889,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1330.2999999998815,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1339.549999999873,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1343.7499999998693,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1401.3499999998169,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1405.549999999813,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1409.7499999998092,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1424.9499999997954,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1434.0499999997871,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1442.999999999779,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1451.899999999771,
+        "amount": 46,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1474.4999999997503,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1504.1999999997233,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1506.5999999997211,
+        "amount": 14,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1519.0499999997098,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      },
+      {
+        "at": 1549.3499999996823,
+        "amount": 54,
+        "attack": "basicMelee",
+        "cause": "meteor"
+      }
+    ],
+    "ultimates": 8,
+    "blinks": 79,
+    "diagnostics": {
+      "combos": 50,
+      "meteors": 86,
+      "orbs": 6,
+      "blocked": 0,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": true
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1223.3999999999787,
+      1231.999999999971,
+      1248.1999999999562,
+      1252.3999999999523,
+      1256.5999999999485,
+      1260.7999999999447,
+      1264.9999999999409,
+      1269.199999999937,
+      1273.549999999933,
+      1278.2499999999288,
+      1282.449999999925,
+      1286.899999999921,
+      1294.599999999914,
+      1303.0999999999062,
+      1311.8999999998982
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1291.9999999999163,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1291.9999999999163,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1307.0499999999026,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1307.0499999999026,
+        "count": 4
+      }
+    ],
+    "travelDistance": 18283.00015880651,
+    "movingSeconds": 65.34999999999843,
+    "guardianTtk": [
+      {
+        "id": 950,
+        "hp": 1800,
+        "first": 1234.199999999969,
+        "seconds": 1.9499999999982265
+      },
+      {
+        "id": 951,
+        "hp": 1800,
+        "first": 1238.9999999999645,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 952,
+        "hp": 1800,
+        "first": 1243.0999999999608,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 120.74999999999528,
+    "hp": 160,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1245.149999999959,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1288.949999999919,
+        "hp": 160
+      },
+      {
+        "phase": "dying",
+        "at": 1318.4999999998922,
+        "hp": 160
+      },
+      {
+        "phase": "defeated",
+        "at": 1320.6999999998902,
+        "hp": 160
+      }
+    ],
+    "damage": [
+      {
+        "at": 1266.949999999939,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1283.2999999999242,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 33,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 17,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1223.3999999999787,
+      1231.999999999971,
+      1248.1999999999562,
+      1252.3999999999523,
+      1256.5999999999485,
+      1260.7999999999447,
+      1264.9999999999409,
+      1269.199999999937,
+      1273.549999999933,
+      1278.2499999999288,
+      1282.449999999925,
+      1286.899999999921,
+      1294.599999999914,
+      1303.0999999999062,
+      1311.8999999998982
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1291.9999999999163,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1291.9999999999163,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1307.0499999999026,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1307.0499999999026,
+        "count": 4
+      }
+    ],
+    "travelDistance": 18283.00015880651,
+    "movingSeconds": 65.34999999999843,
+    "guardianTtk": [
+      {
+        "id": 950,
+        "hp": 1800,
+        "first": 1234.199999999969,
+        "seconds": 1.9499999999982265
+      },
+      {
+        "id": 951,
+        "hp": 1800,
+        "first": 1238.9999999999645,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 952,
+        "hp": 1800,
+        "first": 1243.0999999999608,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 120.74999999999528,
+    "hp": 160,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1245.149999999959,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1288.949999999919,
+        "hp": 160
+      },
+      {
+        "phase": "dying",
+        "at": 1318.4999999998922,
+        "hp": 160
+      },
+      {
+        "phase": "defeated",
+        "at": 1320.6999999998902,
+        "hp": 160
+      }
+    ],
+    "damage": [
+      {
+        "at": 1266.949999999939,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1283.2999999999242,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 33,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 17,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.4999999999795,
+      1231.0999999999717,
+      1259.0499999999463,
+      1263.0999999999426,
+      1267.6499999999385,
+      1279.9999999999272,
+      1284.0499999999236,
+      1288.2499999999197,
+      1292.8499999999156,
+      1297.3499999999115,
+      1314.8999999998955,
+      1322.9499999998882,
+      1331.5999999998803
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1247.299999999957,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1247.299999999957,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.7999999999056,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.7999999999056,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1318.849999999892,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1318.849999999892,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1333.8499999998783,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1333.8499999998783,
+        "count": 4
+      }
+    ],
+    "travelDistance": 18063.59975280435,
+    "movingSeconds": 76.5499999999978,
+    "guardianTtk": [
+      {
+        "id": 946,
+        "hp": 1800,
+        "first": 1244.8499999999592,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 947,
+        "hp": 1800,
+        "first": 1249.549999999955,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 945,
+        "hp": 1800,
+        "first": 1253.849999999951,
+        "seconds": 2.1499999999980446
+      }
+    ],
+    "outcome": "victory",
+    "duration": 136.74999999999685,
+    "hp": 196,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1243.94999999996,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1255.999999999949,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1300.7499999999084,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1334.4999999998777,
+        "hp": 196
+      },
+      {
+        "phase": "defeated",
+        "at": 1336.6999999998757,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1316.8499999998937,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 38,
+    "diagnostics": {
+      "combos": 14,
+      "meteors": 39,
+      "orbs": 3,
+      "blocked": 16,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.4999999999795,
+      1231.0999999999717,
+      1259.0499999999463,
+      1263.0999999999426,
+      1267.6499999999385,
+      1279.9999999999272,
+      1284.0499999999236,
+      1288.2499999999197,
+      1292.8499999999156,
+      1297.3499999999115,
+      1314.8999999998955,
+      1322.9499999998882,
+      1331.5999999998803
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1247.299999999957,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1247.299999999957,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.7999999999056,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.7999999999056,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1318.849999999892,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1318.849999999892,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1333.8499999998783,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1333.8499999998783,
+        "count": 4
+      }
+    ],
+    "travelDistance": 18063.59975280435,
+    "movingSeconds": 76.5499999999978,
+    "guardianTtk": [
+      {
+        "id": 946,
+        "hp": 1800,
+        "first": 1244.8499999999592,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 947,
+        "hp": 1800,
+        "first": 1249.549999999955,
+        "seconds": 2.0499999999981355
+      },
+      {
+        "id": 945,
+        "hp": 1800,
+        "first": 1253.849999999951,
+        "seconds": 2.1499999999980446
+      }
+    ],
+    "outcome": "victory",
+    "duration": 136.74999999999685,
+    "hp": 196,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1243.94999999996,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1255.999999999949,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1300.7499999999084,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1334.4999999998777,
+        "hp": 196
+      },
+      {
+        "phase": "defeated",
+        "at": 1336.6999999998757,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1316.8499999998937,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 38,
+    "diagnostics": {
+      "combos": 14,
+      "meteors": 39,
+      "orbs": 3,
+      "blocked": 16,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1223.3999999999787,
+      1246.4999999999577,
+      1250.699999999954,
+      1254.89999999995,
+      1259.0499999999463,
+      1263.1999999999425,
+      1267.6999999999384,
+      1271.8499999999347,
+      1276.0499999999308,
+      1280.4999999999268,
+      1291.249999999917,
+      1299.8499999999092,
+      1308.3499999999015
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1235.0499999999681,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1235.0499999999681,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1288.5999999999194,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1288.5999999999194,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1303.6499999999057,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.6499999999057,
+        "count": 4
+      }
+    ],
+    "travelDistance": 17614.132002172224,
+    "movingSeconds": 64.69999999999847,
+    "guardianTtk": [
+      {
+        "id": 915,
+        "hp": 1800,
+        "first": 1232.5999999999704,
+        "seconds": 1.799999999998363
+      },
+      {
+        "id": 914,
+        "hp": 1800,
+        "first": 1238.499999999965,
+        "seconds": 1.3499999999987722
+      },
+      {
+        "id": 916,
+        "hp": 1800,
+        "first": 1242.1499999999617,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 116.8499999999955,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1231.6499999999712,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1243.4499999999605,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1285.5499999999222,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1314.5999999998958,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1316.7999999998938,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1252.6499999999521,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 32,
+    "diagnostics": {
+      "combos": 15,
+      "meteors": 29,
+      "orbs": 2,
+      "blocked": 12,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 16.400000000000098,
+    "hp": 0,
+    "bossHp": 92349.78750000068,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.599999999995,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1206.7999999999938,
+        "amount": 48,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1207.9999999999927,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 48,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1223.049999999979,
+      1231.6499999999712,
+      1250.499999999954,
+      1254.6499999999503,
+      1258.7999999999465,
+      1262.9499999999427,
+      1267.049999999939,
+      1271.1999999999352,
+      1275.3499999999315,
+      1279.4999999999277,
+      1283.599999999924,
+      1287.94999999992,
+      1296.799999999912,
+      1305.1999999999043,
+      1313.6499999998966
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.8499999999665,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1294.1999999999143,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1309.2499999999006,
+        "count": 4
+      }
+    ],
+    "travelDistance": 11503.146814143249,
+    "movingSeconds": 63.749999999998515,
+    "guardianTtk": [
+      {
+        "id": 980,
+        "hp": 1800,
+        "first": 1234.2499999999688,
+        "seconds": 2.399999999997817
+      },
+      {
+        "id": 981,
+        "hp": 1800,
+        "first": 1240.0999999999635,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 982,
+        "hp": 1800,
+        "first": 1245.3999999999587,
+        "seconds": 2.0499999999981355
+      }
+    ],
+    "outcome": "victory",
+    "duration": 123.8999999999951,
+    "hp": 164,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.4499999999696,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1247.4499999999568,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1291.149999999917,
+        "hp": 164
+      },
+      {
+        "phase": "dying",
+        "at": 1321.6499999998894,
+        "hp": 164
+      },
+      {
+        "phase": "defeated",
+        "at": 1323.8499999998874,
+        "hp": 164
+      }
+    ],
+    "damage": [
+      {
+        "at": 1284.4499999999232,
+        "amount": 36,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 17,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 11,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1223.3999999999787,
+      1246.4999999999577,
+      1250.699999999954,
+      1254.89999999995,
+      1259.0499999999463,
+      1263.1999999999425,
+      1267.6999999999384,
+      1271.8499999999347,
+      1276.0499999999308,
+      1280.4999999999268,
+      1291.249999999917,
+      1299.8499999999092,
+      1308.3499999999015
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1235.0499999999681,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1235.0499999999681,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1288.5999999999194,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1288.5999999999194,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1303.6499999999057,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1303.6499999999057,
+        "count": 4
+      }
+    ],
+    "travelDistance": 17614.132002172224,
+    "movingSeconds": 64.69999999999847,
+    "guardianTtk": [
+      {
+        "id": 915,
+        "hp": 1800,
+        "first": 1232.5999999999704,
+        "seconds": 1.799999999998363
+      },
+      {
+        "id": 914,
+        "hp": 1800,
+        "first": 1238.499999999965,
+        "seconds": 1.3499999999987722
+      },
+      {
+        "id": 916,
+        "hp": 1800,
+        "first": 1242.1499999999617,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 116.8499999999955,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1231.6499999999712,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1243.4499999999605,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1285.5499999999222,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1314.5999999998958,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1316.7999999998938,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1252.6499999999521,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 32,
+    "diagnostics": {
+      "combos": 15,
+      "meteors": 29,
+      "orbs": 2,
+      "blocked": 12,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1237.8499999999656,
+      1241.899999999962,
+      1246.3999999999578,
+      1250.599999999954,
+      1254.7499999999502,
+      1258.7999999999465,
+      1262.9999999999427,
+      1273.3999999999332,
+      1281.9999999999254
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1227.0499999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1227.0499999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1270.5499999999358,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1270.5499999999358,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1285.5999999999221,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1285.5999999999221,
+        "count": 4
+      }
+    ],
+    "travelDistance": 14860.089999999935,
+    "movingSeconds": 51.99999999999918,
+    "guardianTtk": [
+      {
+        "id": 830,
+        "hp": 1800,
+        "first": 1223.8999999999783,
+        "seconds": 2.199999999997999
+      },
+      {
+        "id": 831,
+        "hp": 1800,
+        "first": 1230.2999999999724,
+        "seconds": 1.049999999999045
+      },
+      {
+        "id": 829,
+        "hp": 1800,
+        "first": 1233.8999999999692,
+        "seconds": 0.8999999999991815
+      }
+    ],
+    "outcome": "victory",
+    "duration": 90.39999999999701,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6999999999784,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1234.7999999999683,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1267.4999999999386,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1288.1499999999198,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1290.3499999999178,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 25,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 25,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1237.5499999999658,
+      1241.749999999962,
+      1245.8999999999583,
+      1250.1499999999544,
+      1254.2999999999506,
+      1258.4999999999468,
+      1262.699999999943,
+      1273.7999999999329,
+      1282.2999999999251
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.8999999999755,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.8999999999755,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1270.9499999999355,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1270.9499999999355,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1285.9999999999218,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1285.9999999999218,
+        "count": 4
+      }
+    ],
+    "travelDistance": 14580.81409295755,
+    "movingSeconds": 51.7499999999992,
+    "guardianTtk": [
+      {
+        "id": 831,
+        "hp": 1800,
+        "first": 1223.8999999999783,
+        "seconds": 2.199999999997999
+      },
+      {
+        "id": 830,
+        "hp": 1800,
+        "first": 1229.8499999999729,
+        "seconds": 0.9999999999990905
+      },
+      {
+        "id": 832,
+        "hp": 1800,
+        "first": 1233.4499999999696,
+        "seconds": 1.049999999999045
+      }
+    ],
+    "outcome": "victory",
+    "duration": 90.84999999999698,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.5499999999786,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1234.4999999999686,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1267.8999999999382,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1288.5999999999194,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1290.7999999999174,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 25,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 2,
+      "blocked": 21,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.4999999999795,
+      1231.0999999999717,
+      1246.9999999999573,
+      1251.1499999999535,
+      1255.3499999999497,
+      1259.5499999999458,
+      1264.0999999999417,
+      1268.2999999999379,
+      1286.4499999999214,
+      1295.1499999999135
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1236.4999999999668,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.4999999999668,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1283.499999999924,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1283.499999999924,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1298.5499999999104,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1298.5499999999104,
+        "count": 4
+      }
+    ],
+    "travelDistance": 15539.489382484975,
+    "movingSeconds": 60.19999999999872,
+    "guardianTtk": [
+      {
+        "id": 853,
+        "hp": 1800,
+        "first": 1233.4999999999695,
+        "seconds": 10.449999999990496
+      },
+      {
+        "id": 855,
+        "hp": 1800,
+        "first": 1234.199999999969,
+        "seconds": 1.2999999999988177
+      },
+      {
+        "id": 854,
+        "hp": 1800,
+        "first": 1239.1499999999644,
+        "seconds": 1.799999999998363
+      }
+    ],
+    "outcome": "victory",
+    "duration": 104.4999999999962,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.1499999999699,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1243.94999999996,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1280.4499999999268,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1302.249999999907,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1304.449999999905,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 29,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 30,
+      "orbs": 3,
+      "blocked": 12,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1222.4999999999795,
+      1231.0999999999717,
+      1246.9999999999573,
+      1251.1499999999535,
+      1255.3499999999497,
+      1259.5499999999458,
+      1264.0999999999417,
+      1268.2999999999379,
+      1286.4499999999214,
+      1295.1499999999135
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1236.4999999999668,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1236.4999999999668,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1283.499999999924,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1283.499999999924,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1298.5499999999104,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1298.5499999999104,
+        "count": 4
+      }
+    ],
+    "travelDistance": 15539.489382484975,
+    "movingSeconds": 60.19999999999872,
+    "guardianTtk": [
+      {
+        "id": 855,
+        "hp": 1800,
+        "first": 1233.4999999999695,
+        "seconds": 10.449999999990496
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1234.199999999969,
+        "seconds": 1.2999999999988177
+      },
+      {
+        "id": 856,
+        "hp": 1800,
+        "first": 1239.1499999999644,
+        "seconds": 1.799999999998363
+      }
+    ],
+    "outcome": "victory",
+    "duration": 104.4999999999962,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.1499999999699,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1243.94999999996,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1280.4499999999268,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1302.249999999907,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1304.449999999905,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 29,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 30,
+      "orbs": 3,
+      "blocked": 12,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1236.299999999967,
+      1240.4499999999632,
+      1244.6499999999594,
+      1248.8499999999556,
+      1253.0499999999518,
+      1257.2999999999479,
+      1261.449999999944,
+      1270.349999999936,
+      1279.249999999928
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.449999999976,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.449999999976,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1267.6999999999384,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1267.6999999999384,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1282.7499999999247,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1282.7499999999247,
+        "count": 4
+      }
+    ],
+    "travelDistance": 13995.70701622965,
+    "movingSeconds": 49.9999999999993,
+    "guardianTtk": [
+      {
+        "id": 815,
+        "hp": 1800,
+        "first": 1223.3999999999787,
+        "seconds": 6.649999999993952
+      },
+      {
+        "id": 816,
+        "hp": 1800,
+        "first": 1223.7499999999784,
+        "seconds": 1.2499999999988631
+      },
+      {
+        "id": 814,
+        "hp": 1800,
+        "first": 1231.799999999971,
+        "seconds": 1.4499999999986812
+      }
+    ],
+    "outcome": "victory",
+    "duration": 86.9999999999972,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.099999999979,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1233.2499999999698,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1264.6499999999412,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1284.749999999923,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1286.949999999921,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 24,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 10,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.399999999987
+    ],
+    "meteorGroups": [],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 17.90000000000012,
+    "hp": 0,
+    "bossHp": 83171.25000000047,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1206.7999999999938,
+        "amount": 42,
+        "attack": "chargeTravel",
+        "cause": "charge"
+      },
+      {
+        "at": 1209.4999999999914,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1211.6999999999894,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1213.8999999999874,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.3499999999851,
+        "amount": 42,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1217.8499999999838,
+        "amount": 26,
+        "attack": "basicMelee",
+        "cause": "other"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 0,
+      "orbs": 0,
+      "blocked": 0,
+      "gates": 0,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "comboTimes": [
+      1206.0499999999945,
+      1214.6499999999867,
+      1241.3499999999624,
+      1245.4999999999586,
+      1249.6499999999548,
+      1253.7499999999511,
+      1257.8999999999473,
+      1262.0499999999436,
+      1266.1999999999398,
+      1274.849999999932,
+      1283.2999999999242
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.9999999999754,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1272.3499999999342,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1287.3999999999205,
+        "count": 4
+      }
+    ],
+    "travelDistance": 9571.021640038518,
+    "movingSeconds": 50.749999999999254,
+    "guardianTtk": [
+      {
+        "id": 858,
+        "hp": 1800,
+        "first": 1224.8499999999774,
+        "seconds": 1.6999999999984539
+      },
+      {
+        "id": 857,
+        "hp": 1800,
+        "first": 1224.8999999999774,
+        "seconds": 8.94999999999186
+      },
+      {
+        "id": 859,
+        "hp": 1800,
+        "first": 1236.9999999999663,
+        "seconds": 1.2999999999988177
+      }
+    ],
+    "outcome": "victory",
+    "duration": 92.59999999999688,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.6499999999785,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1238.2999999999652,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1269.299999999937,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1290.3499999999178,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1292.5499999999158,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 4,
+      "blocked": 26,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "level": 60,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1206.2499999999943,
+      1214.7999999999865,
+      1236.299999999967,
+      1240.4499999999632,
+      1244.6499999999594,
+      1248.8499999999556,
+      1253.0499999999518,
+      1257.2999999999479,
+      1261.449999999944,
+      1270.349999999936,
+      1279.249999999928
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1226.449999999976,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1226.449999999976,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1267.6999999999384,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1267.6999999999384,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1282.7499999999247,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1282.7499999999247,
+        "count": 4
+      }
+    ],
+    "travelDistance": 13995.70701622965,
+    "movingSeconds": 49.9999999999993,
+    "guardianTtk": [
+      {
+        "id": 815,
+        "hp": 1800,
+        "first": 1223.3999999999787,
+        "seconds": 6.649999999993952
+      },
+      {
+        "id": 816,
+        "hp": 1800,
+        "first": 1223.7499999999784,
+        "seconds": 1.2499999999988631
+      },
+      {
+        "id": 814,
+        "hp": 1800,
+        "first": 1231.799999999971,
+        "seconds": 1.4499999999986812
+      }
+    ],
+    "outcome": "victory",
+    "duration": 86.9999999999972,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1223.099999999979,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1233.2499999999698,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1264.6499999999412,
+        "hp": 200
+      },
+      {
+        "phase": "dying",
+        "at": 1284.749999999923,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1286.949999999921,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 3,
+    "blinks": 24,
+    "diagnostics": {
+      "combos": 11,
+      "meteors": 29,
+      "orbs": 3,
+      "blocked": 10,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  }
+]

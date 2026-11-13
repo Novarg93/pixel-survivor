@@ -7,7 +7,7 @@ import { pressureAt, formationEdge } from '../../src/game/systems/EndgamePressur
 import { EnemySystem } from '../../src/game/systems/EnemySystem';
 import { applyUpgrade, chooseUpgrades, eligibleUpgrades } from '../../src/game/systems/UpgradeSystem';
 import { MOBILITY_UPGRADES } from '../../src/game/config/mobilityUpgrades';
-import { cleave } from '../../src/game/abilities/warrior';
+import { cleave, tickCleave } from '../../src/game/abilities/warrior';
 import { GUARDIAN_ENCOUNTER as G } from '../../src/game/config/encounters';
 
 function quiet(character: 'mage' | 'warrior' = 'mage') {
@@ -113,9 +113,9 @@ it('Sprint refreshes a bounded 2s buff; Absorb is consumed after armor and Iron 
 it('Berserk strengthens repeated Cleaves for2s and expires without altering base damage', () => {
   const w = quiet('warrior'); w.abilities.cleave.level = 1; applyUpgrade(w, 'mobility-berserk');
   w.mobility.activate(w, { x: 1, y: 0 }); advance(w, .2); expect(cleave(w)).toBe(false); expect(w.buffs.remaining('berserk',w.elapsed)).toBeGreaterThan(0);
-  const e = w.spawn('tank', { x: w.player.x + 40, y: 0 })!; e.hp=e.maxHp=1000; cleave(w); expect(e.maxHp - e.hp).toBeCloseTo(34 * 1.25);
-  const hp = e.hp; cleave(w); expect(hp - e.hp).toBeCloseTo(34 * 1.25);
-  w.elapsed=2.3; const after=e.hp; cleave(w); expect(after-e.hp).toBeCloseTo(34); expect(w.stats.damage).toBe(1);
+  const e = w.spawn('tank', { x: w.player.x + 40, y: 0 })!; e.hp=e.maxHp=1000; cleave(w);w.elapsed=w.warrior.cleave!.hitAt;tickCleave(w); expect(e.maxHp - e.hp).toBeCloseTo(34 * 1.25);
+  const hp = e.hp;w.elapsed=w.warrior.cleave!.started+w.warrior.cleave!.duration;tickCleave(w);cleave(w);w.elapsed=w.warrior.cleave!.hitAt;tickCleave(w); expect(hp - e.hp).toBeCloseTo(34 * 1.25);
+  w.elapsed=2.3; const after=e.hp; cleave(w);w.elapsed=w.warrior.cleave!.hitAt;tickCleave(w); expect(after-e.hp).toBeCloseTo(34); expect(w.stats.damage).toBe(1);
 });
 
 it('late speeds and pressure continue growing at 8/10/12/16min with hard readable floors and fixed HP scaling', () => {

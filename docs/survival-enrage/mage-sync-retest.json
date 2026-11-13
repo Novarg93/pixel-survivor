@@ -1,0 +1,184 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "mage-casting.spec.ts",
+      "--grep",
+      "sequences.*390",
+      "--reporter=list,json",
+      "--output=.tmp/survival-enrage/mage-sync-retest"
+    ],
+    "configFile": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\playwright.config.ts",
+    "rootDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Novarg/Desktop/PixelSurvivor/.tmp/survival-enrage/mage-sync-retest",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Novarg/Desktop/PixelSurvivor/tests/e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\survival-enrage\\mage-sync-retest",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e",
+        "testIgnore": [
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "channel": "chromium",
+          "baseURL": "http://127.0.0.1:5223",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "mage-casting.spec.ts",
+      "file": "mage-casting.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mage conductor real Canvas sequences, all spells, walking and Blink 390",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15353,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\mage-casting.spec.ts:57:137",
+                    "location": {
+                      "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\mage-casting.spec.ts",
+                      "column": 137,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       if(scenario.spell==='meteor')expect(Math.max(...active.map(f=>f.casting.active?.beats??0))).toBe(3);\n  56 |       if(scenario.name==='blink'){const blink=result.frames.filter(f=>f.casting.mode==='blink');expect(blink.length).toBeGreaterThan(0);for(const row of blink){expect(row.casting.visible).toBe(false);expect(row.casting.x).toBeCloseTo(row.player.x);}}\n> 57 |       if(scenario.late){expect(result.metrics.enemies).toBe(150);expect(result.metrics.bosses).toBe(3);expect(result.metrics.guardians).toBe(3);for(const ability of ['fireball','frost','lightning','meteor','shield'] as const)expect(result.frames.at(-1)!.casting.requested[ability]).toBeGreaterThan(result.before[ability]);expect(new Set(active.map(f=>f.casting.armsFrame)).size).toBeGreaterThan(5);}\n     |                                                                                                                                         ^\n  58 |       for(const row of active){expect(row.casting.width).toBe(24);expect(row.casting.height).toBe(30);expect(row.casting.origin).toEqual({x:.5,y:.75});expect(row.casting.pending).toBeLessThanOrEqual(1);}\n  59 |       const prefix=`${directory}/${scenario.name}-${width}`;mkdirSync(prefix,{recursive:true});\n  60 |       for(const file of readdirSync(prefix))if(/^\\d{3}\\.png$/.test(file))unlinkSync(`${prefix}/${file}`);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\mage-casting.spec.ts",
+                        "column": 137,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  55 |       if(scenario.spell==='meteor')expect(Math.max(...active.map(f=>f.casting.active?.beats??0))).toBe(3);\n  56 |       if(scenario.name==='blink'){const blink=result.frames.filter(f=>f.casting.mode==='blink');expect(blink.length).toBeGreaterThan(0);for(const row of blink){expect(row.casting.visible).toBe(false);expect(row.casting.x).toBeCloseTo(row.player.x);}}\n> 57 |       if(scenario.late){expect(result.metrics.enemies).toBe(150);expect(result.metrics.bosses).toBe(3);expect(result.metrics.guardians).toBe(3);for(const ability of ['fireball','frost','lightning','meteor','shield'] as const)expect(result.frames.at(-1)!.casting.requested[ability]).toBeGreaterThan(result.before[ability]);expect(new Set(active.map(f=>f.casting.armsFrame)).size).toBeGreaterThan(5);}\n     |                                                                                                                                         ^\n  58 |       for(const row of active){expect(row.casting.width).toBe(24);expect(row.casting.height).toBe(30);expect(row.casting.origin).toEqual({x:.5,y:.75});expect(row.casting.pending).toBeLessThanOrEqual(1);}\n  59 |       const prefix=`${directory}/${scenario.name}-${width}`;mkdirSync(prefix,{recursive:true});\n  60 |       for(const file of readdirSync(prefix))if(/^\\d{3}\\.png$/.test(file))unlinkSync(`${prefix}/${file}`);\n    at C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\mage-casting.spec.ts:57:137"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T12:44:38.494Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\.tmp\\survival-enrage\\mage-sync-retest\\mage-casting-Mage-conducto-c0e1d-pells-walking-and-Blink-390\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Novarg\\Desktop\\PixelSurvivor\\tests\\e2e\\mage-casting.spec.ts",
+                    "column": 137,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c52730d50b8b09886ade-d2e502e4f69ffc5ebdf5",
+          "file": "mage-casting.spec.ts",
+          "line": 30,
+          "column": 31
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T12:44:37.862Z",
+    "duration": 16324.711000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

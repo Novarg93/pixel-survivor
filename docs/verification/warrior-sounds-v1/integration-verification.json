@@ -1,0 +1,38 @@
+{
+  "baselineFiles": 459,
+  "changed": [
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/catalog.ts",
+    "src/game/audio/samples.ts",
+    "src/game/events/gameFeedback.ts",
+    "src/game/ultimates/UltimateSystem.ts"
+  ],
+  "added": [
+    "public/assets/audio/warrior-uploaded-v1/banner.wav",
+    "public/assets/audio/warrior-uploaded-v1/charge.wav",
+    "public/assets/audio/warrior-uploaded-v1/cleave.wav",
+    "public/assets/audio/warrior-uploaded-v1/shield_block.wav",
+    "public/assets/audio/warrior-uploaded-v1/spear_throw.wav",
+    "public/assets/audio/warrior-uploaded-v1/spear_ultimate.wav",
+    "public/assets/audio/warrior-uploaded-v1/stomp.wav",
+    "public/assets/audio/warrior-uploaded-v1/ultimate_stomp.wav",
+    "public/assets/audio/warrior-uploaded-v1/whirlwind.wav"
+  ],
+  "unchanged": 454,
+  "currentSHA256": {
+    "src/game/audio/AudioPresentation.ts": "fc31d03225ff7c98921a84a2550a705a3e333a1bd99b08060c584efab71741ef",
+    "src/game/audio/catalog.ts": "5771ec0d9888cd6dd026b6202ece5d9a804cd68c6577818cc1f586cc2e52556b",
+    "src/game/audio/samples.ts": "b95b948776e975182a3c0827e032c070b9f944cddb84e7c566b25adf286a378c",
+    "src/game/events/gameFeedback.ts": "12f5420d35b96defbc92833fc56406ab3372cb2e89586e2bd1511652e6c6c782",
+    "src/game/ultimates/UltimateSystem.ts": "98181c9174e6d6e92f8d834d733dd919cea8a5a8984768cf2a8644e5bd0877c5",
+    "public/assets/audio/warrior-uploaded-v1/banner.wav": "8ed5f851c8327582c209305c32b30476fdc76515902f41191ed1ebe90d3086a6",
+    "public/assets/audio/warrior-uploaded-v1/charge.wav": "a934f47b9edab575dec34981b92ad4b22c26de70570f6842f7ed1755769a2170",
+    "public/assets/audio/warrior-uploaded-v1/cleave.wav": "2af2eeebfa2430b85ca683dc4cbe70b90e21ffcd78713a512c880181e8da3da4",
+    "public/assets/audio/warrior-uploaded-v1/shield_block.wav": "66e2a4499dd93947c93ee5829b23206cb64b35dc090c19409dfea844581c8314",
+    "public/assets/audio/warrior-uploaded-v1/spear_throw.wav": "62424cb796f9955e3c876c1c42b7e6fdb6214eb05ffeb9a668f7c6c9962934c2",
+    "public/assets/audio/warrior-uploaded-v1/spear_ultimate.wav": "ee95e6f75addbc837ce1583c708dfd5b970095a3da934bfde9a638ddc157fd31",
+    "public/assets/audio/warrior-uploaded-v1/stomp.wav": "b23416e66581cc3903ba9f20a6fd46a08630ce1cd548fdfffb4046716cacabe3",
+    "public/assets/audio/warrior-uploaded-v1/ultimate_stomp.wav": "e86b672e1a417811d48b045d90348514c40e6071e316c716e9d100833f139692",
+    "public/assets/audio/warrior-uploaded-v1/whirlwind.wav": "04dbd379725cf5882397b95beea6d60aa52c95e4b44be8010f4ee20eff8ee4fa"
+  }
+}

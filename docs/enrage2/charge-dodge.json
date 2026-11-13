@@ -1,0 +1,41 @@
+{
+  "fixture": "25min,max profile,singleCharger,default characters,autoattacks disabled ONLY to isolate dodge,realHP/no test invulnerability,12s",
+  "result": [
+    {
+      "character": "mage",
+      "mode": "move",
+      "charges": 6,
+      "speed": 320,
+      "hp": 100,
+      "maxHp": 100,
+      "mobility": 0
+    },
+    {
+      "character": "mage",
+      "mode": "mobility",
+      "charges": 6,
+      "speed": 320,
+      "hp": 100,
+      "maxHp": 100,
+      "mobility": 2
+    },
+    {
+      "character": "warrior",
+      "mode": "move",
+      "charges": 6,
+      "speed": 320,
+      "hp": 150,
+      "maxHp": 150,
+      "mobility": 0
+    },
+    {
+      "character": "warrior",
+      "mode": "mobility",
+      "charges": 6,
+      "speed": 320,
+      "hp": 150,
+      "maxHp": 150,
+      "mobility": 3
+    }
+  ]
+}

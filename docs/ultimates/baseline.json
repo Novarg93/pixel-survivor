@@ -1,0 +1,285 @@
+{
+  "hp": [
+    {
+      "time": 900,
+      "rows": [
+        {
+          "kind": "grunt",
+          "elite": false,
+          "hp": 36.85
+        },
+        {
+          "kind": "grunt",
+          "elite": true,
+          "hp": 73.7
+        },
+        {
+          "kind": "runner",
+          "elite": false,
+          "hp": 26.8
+        },
+        {
+          "kind": "runner",
+          "elite": true,
+          "hp": 53.6
+        },
+        {
+          "kind": "tank",
+          "elite": false,
+          "hp": 175.875
+        },
+        {
+          "kind": "tank",
+          "elite": true,
+          "hp": 351.75
+        },
+        {
+          "kind": "caster",
+          "elite": false,
+          "hp": 70.35000000000001
+        },
+        {
+          "kind": "caster",
+          "elite": true,
+          "hp": 140.70000000000002
+        },
+        {
+          "kind": "rusher",
+          "elite": false,
+          "hp": 83.75
+        },
+        {
+          "kind": "rusher",
+          "elite": true,
+          "hp": 167.5
+        },
+        {
+          "kind": "splitter",
+          "elite": false,
+          "hp": 108.875
+        },
+        {
+          "kind": "splitter",
+          "elite": true,
+          "hp": 217.75
+        },
+        {
+          "kind": "charger",
+          "elite": false,
+          "hp": 5276.25
+        },
+        {
+          "kind": "sorcerer",
+          "elite": false,
+          "hp": 6683.25
+        },
+        {
+          "kind": "eclipse",
+          "elite": false,
+          "hp": 8442
+        },
+        {
+          "kind": "guardian",
+          "elite": false,
+          "hp": 6331.5
+        }
+      ]
+    },
+    {
+      "time": 1020,
+      "rows": [
+        {
+          "kind": "grunt",
+          "elite": false,
+          "hp": 36.85
+        },
+        {
+          "kind": "grunt",
+          "elite": true,
+          "hp": 73.7
+        },
+        {
+          "kind": "runner",
+          "elite": false,
+          "hp": 26.8
+        },
+        {
+          "kind": "runner",
+          "elite": true,
+          "hp": 53.6
+        },
+        {
+          "kind": "tank",
+          "elite": false,
+          "hp": 175.875
+        },
+        {
+          "kind": "tank",
+          "elite": true,
+          "hp": 351.75
+        },
+        {
+          "kind": "caster",
+          "elite": false,
+          "hp": 70.35000000000001
+        },
+        {
+          "kind": "caster",
+          "elite": true,
+          "hp": 140.70000000000002
+        },
+        {
+          "kind": "rusher",
+          "elite": false,
+          "hp": 83.75
+        },
+        {
+          "kind": "rusher",
+          "elite": true,
+          "hp": 167.5
+        },
+        {
+          "kind": "splitter",
+          "elite": false,
+          "hp": 108.875
+        },
+        {
+          "kind": "splitter",
+          "elite": true,
+          "hp": 217.75
+        },
+        {
+          "kind": "charger",
+          "elite": false,
+          "hp": 5559.75
+        },
+        {
+          "kind": "sorcerer",
+          "elite": false,
+          "hp": 7042.35
+        },
+        {
+          "kind": "eclipse",
+          "elite": false,
+          "hp": 8895.6
+        },
+        {
+          "kind": "guardian",
+          "elite": false,
+          "hp": 6671.700000000001
+        }
+      ]
+    },
+    {
+      "time": 1200,
+      "rows": [
+        {
+          "kind": "grunt",
+          "elite": false,
+          "hp": 36.85
+        },
+        {
+          "kind": "grunt",
+          "elite": true,
+          "hp": 73.7
+        },
+        {
+          "kind": "runner",
+          "elite": false,
+          "hp": 26.8
+        },
+        {
+          "kind": "runner",
+          "elite": true,
+          "hp": 53.6
+        },
+        {
+          "kind": "tank",
+          "elite": false,
+          "hp": 175.875
+        },
+        {
+          "kind": "tank",
+          "elite": true,
+          "hp": 351.75
+        },
+        {
+          "kind": "caster",
+          "elite": false,
+          "hp": 70.35000000000001
+        },
+        {
+          "kind": "caster",
+          "elite": true,
+          "hp": 140.70000000000002
+        },
+        {
+          "kind": "rusher",
+          "elite": false,
+          "hp": 83.75
+        },
+        {
+          "kind": "rusher",
+          "elite": true,
+          "hp": 167.5
+        },
+        {
+          "kind": "splitter",
+          "elite": false,
+          "hp": 108.875
+        },
+        {
+          "kind": "splitter",
+          "elite": true,
+          "hp": 217.75
+        },
+        {
+          "kind": "charger",
+          "elite": false,
+          "hp": 5985
+        },
+        {
+          "kind": "sorcerer",
+          "elite": false,
+          "hp": 7581
+        },
+        {
+          "kind": "eclipse",
+          "elite": false,
+          "hp": 9576
+        },
+        {
+          "kind": "guardian",
+          "elite": false,
+          "hp": 7182
+        }
+      ]
+    }
+  ],
+  "dps": [
+    {
+      "build": "V",
+      "dps": 170.3866667230924,
+      "blinkInterval": 6.049999999994498,
+      "effectiveDamage": 1,
+      "effectiveCooldown": 1,
+      "fixture": "60s fixed20Hz, five rankV; stationary immortal single tank65px, Blink returns only in measurement; no evolutions, no buffs, no incoming damage"
+    },
+    {
+      "build": "V-damage",
+      "dps": 1433.0250004768372,
+      "blinkInterval": 3.5499999999967713,
+      "effectiveDamage": 2.25,
+      "effectiveCooldown": 0.5904900000000002,
+      "fixture": "60s fixed20Hz, five rankV; stationary immortal single tank65px, Blink returns only in measurement; no evolutions, no buffs, no incoming damage"
+    },
+    {
+      "build": "V-damage-artifacts",
+      "dps": 2203.1234999676544,
+      "blinkInterval": 2.949999999997317,
+      "effectiveDamage": 2.79,
+      "effectiveCooldown": 0.4842018000000002,
+      "fixture": "60s fixed20Hz, five rankV; stationary immortal single tank65px, Blink returns only in measurement; no evolutions, no buffs, no incoming damage"
+    }
+  ]
+}

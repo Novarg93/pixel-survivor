@@ -1,0 +1,170 @@
+[
+  {
+    "path": "src/game/config/encounterDirector.ts",
+    "sha": "287dfb1cd4cbc454933e023699f11985389a6b3d3d262257bce7f1083dae0451"
+  },
+  {
+    "path": "src/game/config/guardianOrbs.ts",
+    "sha": "aee1c9beecf0285380e746a1f8a124e5dd2785279bec069573a8aa2373b915b0"
+  },
+  {
+    "path": "src/game/config/survivalEnrage.ts",
+    "sha": "72f3bc555a197862e2a20b14e5ac2721ad43bc2ec816fef268a590d3366e2789"
+  },
+  {
+    "path": "src/game/entities/types.ts",
+    "sha": "5465f0ed735849c3efcdd356ae61bbd910ec0a2d263aaee29aa12d6810f85708"
+  },
+  {
+    "path": "src/game/systems/BossMagic.ts",
+    "sha": "73b229c3709964fe399539b3bf81ed5ee3eef4ef81859e20996553ada97a521f"
+  },
+  {
+    "path": "src/game/systems/BossSystem.ts",
+    "sha": "da9572a9443d7ce3968883852c939756695a9a4cc0252001ef06c2ca45101dd3"
+  },
+  {
+    "path": "src/game/systems/ChargeBoss.ts",
+    "sha": "0b73e249912844fadcf6081541211fbc97e757af4584736dda3e26573300b4ef"
+  },
+  {
+    "path": "src/game/systems/DifficultyDirector.ts",
+    "sha": "41752114feb57de6fb261d324fadf402ca8d846857f6a65dc0eb8ae38bedea82"
+  },
+  {
+    "path": "src/game/systems/EclipseBoss.ts",
+    "sha": "a9e0f8b21bdfafb93d3d93bec125fd21223f5e0db9d60f3bde8b5ab1b4e9975f"
+  },
+  {
+    "path": "src/game/systems/EncounterDirector.ts",
+    "sha": "a7a3c50469403731f663287fddce6fb96ec3ab8e259223f1cb23957e9d718469"
+  },
+  {
+    "path": "src/game/systems/EndgamePressure.ts",
+    "sha": "76176bcce37da61cc6f1a5058ccc400e3de20f60c45a4f0c34027b2a93f2e600"
+  },
+  {
+    "path": "src/game/systems/GuardianEncounter.ts",
+    "sha": "b0a4f7fd119f2e2146a4aa11cb9ab2d9b9164790ec7d8bdbefd0b6a0a1cd40c5"
+  },
+  {
+    "path": "src/game/systems/GuardianOrbs.ts",
+    "sha": "38989be059e0b2582cde78630e5b1e6776a7a8b52425f34e30f4daf23730959c"
+  },
+  {
+    "path": "src/game/systems/RareGuardianSystem.ts",
+    "sha": "c9923671385971992912c082c607ca33acefe60c304d066a28e6c5f4dd8a6653"
+  },
+  {
+    "path": "src/game/systems/World.ts",
+    "sha": "c7594c2358535e639905c6379dc55b13b64983cfed8959a2a1a8e8c69d0d5f9f"
+  },
+  {
+    "path": "tests/e2e/audio.spec.ts",
+    "sha": "14265a4a1166c608f753ffb3abaa745a97221a4ab5cd23699be6e06a3614ed8e"
+  },
+  {
+    "path": "tests/e2e/boss-guardian-performance.spec.ts",
+    "sha": "885e0a2f23022b4ff5c907fe12890030b5c8ae9f14ed0704e0a5b2e1460dd515"
+  },
+  {
+    "path": "tests/e2e/boss-guardian.spec.ts",
+    "sha": "d3a8482368a410d9d70dee5b0675c6d08647566cce934065f15f32b15bad2864"
+  },
+  {
+    "path": "tests/e2e/encounter-director.spec.ts",
+    "sha": "eabe90b6658ca8f41df9d062b8437c0589dac4f5c879e81e0a1b44f241d95af9"
+  },
+  {
+    "path": "tests/e2e/frost-armageddon.spec.ts",
+    "sha": "250a17d8605d7df683485b1d3a10ef87e1c88fe45caac6d985d6220d26c7284c"
+  },
+  {
+    "path": "tests/e2e/gameplay-guardian.spec.ts",
+    "sha": "1b2fbc0b9a65c150568eb480e0d2269fbb4ff14ebb1324fdcc1de0bcab600112"
+  },
+  {
+    "path": "tests/e2e/gameplay-stress.spec.ts",
+    "sha": "3a55334852b387294ff4cab4d9e472393a75f5035b86c04e48f8a73bef68244d"
+  },
+  {
+    "path": "tests/e2e/mage-casting-performance.spec.ts",
+    "sha": "dc736c12cb934f58666d71e8aacd5c53f9080fdff56c0fd1fd223689b0299e54"
+  },
+  {
+    "path": "tests/e2e/mage-casting.spec.ts",
+    "sha": "4abf814ed7ea8737c2a8918752c60ef998ad703b1a192bad0a7564b1bb96a604"
+  },
+  {
+    "path": "tests/e2e/mobility-specialization-stress.spec.ts",
+    "sha": "a935feb59f9fd397a18d2d5b54c7e805ce0b45ad806197473493fb52e64a71b0"
+  },
+  {
+    "path": "tests/e2e/survival-enrage-performance.spec.ts",
+    "sha": "683526339ac114e78151e3a97176e1a3f6875debed087880dac844df291b0c72"
+  },
+  {
+    "path": "tests/fixtures/pre-enrage-replay.json",
+    "sha": "10251ca7561919504e0271212261aee42609dbc72ad1db722a39f63bdcacbbda"
+  },
+  {
+    "path": "tests/helpers/encounterPilot.ts",
+    "sha": "604e442056b3ae89ff90f5320ea161d235c303af3b676ee60b8d37d38d3f8be4"
+  },
+  {
+    "path": "tests/unit/combat-balance-2.test.ts",
+    "sha": "574ab0dffd9dddf54a5ca9c525cd605a570e09eeef19080706163fa2c21a5ebe"
+  },
+  {
+    "path": "tests/unit/encounter-director.test.ts",
+    "sha": "d9d4231d70c4d8f16ac748cf19f77286f2a5186affe397ab3833ec6aed61f261"
+  },
+  {
+    "path": "tests/unit/frost-armageddon.test.ts",
+    "sha": "87571c53b422514a8c64bc6a3cf935f98402be92d347de42181d705da034b0b2"
+  },
+  {
+    "path": "tests/unit/guardian-encounter.test.ts",
+    "sha": "54abae2acff66f24e8b8e6cb28f886c6631ef4a259f410b4a95c5cd79e6bcbc4"
+  },
+  {
+    "path": "tests/unit/guardians-artifacts.test.ts",
+    "sha": "c0f52a1b9caeb8fe7f00acf8aaf2a2b9d53468b3a1924b5afbe3af9a9b8dd758"
+  },
+  {
+    "path": "tests/unit/pacing.test.ts",
+    "sha": "11fce99b0413ccd4c9a4ee801e6d9aafe9d497d48542435119f6d564301356df"
+  },
+  {
+    "path": "tests/unit/survival-enrage.test.ts",
+    "sha": "54106ad6d753f20099f40bb98acb601d2c18a5bf38b94f1f7123e715fbd91267"
+  },
+  {
+    "path": "scripts/measure-endgame.mjs",
+    "sha": "f37061db53d226aeb0145384b970ab027d84b0c8ac76d09c5a43ebad8d6c5833"
+  },
+  {
+    "path": "src/game/config/endgame.ts",
+    "sha": "dc2c2fbc108de82c34360f636c1081163fee13cd5c925d2ed97073875efa425f"
+  },
+  {
+    "path": "tests/e2e/endgame-performance.spec.ts",
+    "sha": "410758f20f8b25f34c9a898ab3136eb6acc93f6cb80db8ba61ef822fcf46e480"
+  },
+  {
+    "path": "tests/e2e/endgame.spec.ts",
+    "sha": "d6b6108dc236da11ee384c6bcb9516c2222c28de50876b7e0e56be81c70627ce"
+  },
+  {
+    "path": "tests/fixtures/pre-phase2-ordinary-replay.json",
+    "sha": "f3bf2b9fa5719c270f5a143ae62357e96f09bcf7d08f8880b6b8ccd325320f4d"
+  },
+  {
+    "path": "tests/helpers/endgame.ts",
+    "sha": "add3ce4671dc0b895b3a083ae11f3c11ddf021ce4b66bc1e64098f3c83f0b6a3"
+  },
+  {
+    "path": "tests/unit/endgame.test.ts",
+    "sha": "81341a8e2f64f3a73e629a48068b8ff4f81927d37af92a1f7ec57541bd0d39ee"
+  }
+]

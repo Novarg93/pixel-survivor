@@ -1,0 +1,17 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {historicalRuntimeHash} from './berserk-sprint-scope.mjs';
+import {beforeWarriorUltimatesFiles} from './warrior-ultimates-scope.mjs';
+import assert from 'node:assert/strict';
+import process from 'node:process';
+const root='art/generated/warrior-buffs-v4',baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
+const changed=['src/game/abilities/definitions.ts','src/game/abilities/warrior.ts','src/game/art/GameArt.ts','src/game/art/MageCastingController.ts','src/game/art/UltimateArt.ts','src/game/art/WarriorMovingCleaveArt.ts','src/game/config/ultimates.ts','src/game/config/warriorAbilities.ts','src/game/entities/types.ts','src/game/systems/UpgradeSystem.ts','src/game/systems/World.ts','src/game/ultimates/UltimateSystem.ts','src/ui/upgradeCards.ts','src/ui/upgradeEmblems.ts','src/ui/upgradeIdentity.ts'];
+const added=['public/assets/hd/war-banner-v1/object.png','src/game/art/WarBannerArt.ts','src/game/ultimates/WarBanner.ts'];
+const hash=historicalRuntimeHash;
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+assert.deepEqual(beforeWarriorUltimatesFiles([...walk('src'),...walk('public')]).sort(),[...Object.keys(baseline),...added].sort());
+assert.deepEqual(Object.keys(baseline).filter(p=>hash(p)!==baseline[p]).sort(),changed);
+assert.equal(hash(added[0]),hash('art/generated/warrior-concept-pack-v1/layers/war-banner-a-object.png'));
+const proof={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,currentSHA256:Object.fromEntries([...changed,...added].map(p=>[p,hash(p)]))};
+if(process.argv.includes('--record'))writeFileSync(`${root}/integration-verification.json`,JSON.stringify(proof,null,2)+'\n');
+else assert.deepEqual(proof,JSON.parse(readFileSync(`${root}/integration-verification.json`,'utf8')));
+globalThis.console.log(JSON.stringify({baselineFiles:proof.baselineFiles,changed:changed.length,added:added.length,unchanged:proof.unchanged,bannerSourceUnchanged:true}));

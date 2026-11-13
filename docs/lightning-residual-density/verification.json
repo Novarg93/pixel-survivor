@@ -1,0 +1,61 @@
+{
+  "changed": [
+    "src/game/art/LightningGroundArt.ts",
+    "tests/e2e/lightning-aftershock.spec.ts",
+    "tests/e2e/lightning-cinematic.spec.ts",
+    "tests/e2e/lightning-devastation.spec.ts",
+    "tests/unit/lightning-devastation.test.ts"
+  ],
+  "e2e": {
+    "startTime": "2026-11-05T11:41:00.259Z",
+    "duration": 38901.030000000006,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-05T11:44:06.333Z",
+    "duration": 34966.346,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "views": [
+    {
+      "width": 1280,
+      "visited": [
+        26,
+        26,
+        26,
+        26,
+        26
+      ],
+      "maxConcurrent": 7,
+      "first": 0.39936000000045624,
+      "last": 1.9648433333350113,
+      "hits": 8,
+      "damageTimestamps": 1,
+      "medianFps": 59.88023952095874,
+      "p95": 16.799999999999272
+    },
+    {
+      "width": 844,
+      "visited": [
+        26,
+        26,
+        26,
+        26,
+        26
+      ],
+      "maxConcurrent": 7,
+      "first": 0.39917999999954645,
+      "last": 1.9645166666666682,
+      "hits": 8,
+      "damageTimestamps": 1,
+      "medianFps": 59.88023952095874,
+      "p95": 16.800000000000182
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "fixture": "12real seconds per case,150 highHP regulars+3bosses+3active Guardians+five skills V+mobilityIII; invulnerability exclusively to hold performance load; Chromium on this host",
+  "result": [
+    {
+      "hero": "Mage",
+      "width": 1280,
+      "medianFps": 59.57331848144531,
+      "p95UpdateMs": 0.7999999821186066,
+      "peakRegular": 150,
+      "minBosses": 3,
+      "minGuardians": 3,
+      "peakActiveGuardians": 3,
+      "peakProjectiles": 40,
+      "peakEffects": 96,
+      "peakHazards": 9,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "errors": [],
+      "raw": "screenshots\\encounter-director-2\\stress-Mage-1280.json"
+    },
+    {
+      "hero": "Mage",
+      "width": 390,
+      "medianFps": 59.84954833984375,
+      "p95UpdateMs": 0.699999988079071,
+      "peakRegular": 150,
+      "minBosses": 3,
+      "minGuardians": 3,
+      "peakActiveGuardians": 3,
+      "peakProjectiles": 40,
+      "peakEffects": 96,
+      "peakHazards": 7,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "errors": [],
+      "raw": "screenshots\\encounter-director-2\\stress-Mage-390.json"
+    },
+    {
+      "hero": "Warrior",
+      "width": 1280,
+      "medianFps": 59.962890625,
+      "p95UpdateMs": 0.800000011920929,
+      "peakRegular": 150,
+      "minBosses": 3,
+      "minGuardians": 3,
+      "peakActiveGuardians": 3,
+      "peakProjectiles": 40,
+      "peakEffects": 95,
+      "peakHazards": 6,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "errors": [],
+      "raw": "screenshots\\encounter-director-2\\stress-Warrior-1280.json"
+    },
+    {
+      "hero": "Warrior",
+      "width": 390,
+      "medianFps": 59.69224548339844,
+      "p95UpdateMs": 0.9000000059604645,
+      "peakRegular": 150,
+      "minBosses": 3,
+      "minGuardians": 3,
+      "peakActiveGuardians": 3,
+      "peakProjectiles": 40,
+      "peakEffects": 96,
+      "peakHazards": 9,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "errors": [],
+      "raw": "screenshots\\encounter-director-2\\stress-Warrior-390.json"
+    }
+  ],
+  "hardware": {
+    "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+    "logicalCpus": 12,
+    "ramGiB": 32,
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.16.0"
+  }
+}

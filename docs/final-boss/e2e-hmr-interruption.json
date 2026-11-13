@@ -1,0 +1,20 @@
+{
+  "case": "gamepad maximum load and bounded polling390",
+  "error": "DEV window.__PIXEL__ undefined during page reload",
+  "viewerModifiedLocal": "2026-11-07 12:14:25 +03:00",
+  "errorContextWrittenLocal": "2026-11-07 12:14:25 +03:00",
+  "viteLog": "12:14:25 [vite] (client) page reload art/generated/secondary-bosses-review-01/viewer.js",
+  "cause": "Editing a loaded standalone classic viewer.js introduced a dead-end HMR update and Vite broadcast full-reload to connected pages. Runtime source was unchanged.",
+  "evidence": [
+    ".tmp/final-integration-v1/sequential-results/gamepad-performance-gamepa-4ae48-oad-and-bounded-polling-390/error-context.md",
+    "node_modules/vite/dist/node/chunks/config.js:26358"
+  ],
+  "resolution": "Freeze all staging JS during the remainder of regression; rerun the identical failed test after the suite. Do not weaken assertions.",
+  "rerun": {
+    "passed": 1,
+    "failed": 0,
+    "durationSeconds": 13.5,
+    "testUnmodified": true,
+    "log": ".tmp/final-integration-v1/e2e-hmr-rerun.log"
+  }
+}

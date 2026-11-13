@@ -1,0 +1,677 @@
+{
+  "fixture": "Actual World.step .05 displacement, isolated enemy400px away, full pursuit vector; no test invulnerability, automatic player abilities disabled; elite uses active frenzy",
+  "rows": [
+    {
+      "seconds": 570,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 60.80316666666704,
+      "expected": 60.80316666666666
+    },
+    {
+      "seconds": 570,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 115.37400875000003,
+      "expected": 115.37400874999997
+    },
+    {
+      "seconds": 570,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 97.75708333333341,
+      "expected": 97.75708333333333
+    },
+    {
+      "seconds": 570,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 109.00499999999965,
+      "expected": 109.005
+    },
+    {
+      "seconds": 570,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 43.202250000000504,
+      "expected": 43.20225
+    },
+    {
+      "seconds": 570,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 81.9762693749999,
+      "expected": 81.97626937499999
+    },
+    {
+      "seconds": 570,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 51.2026666666668,
+      "expected": 51.202666666666666
+    },
+    {
+      "seconds": 570,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 97.15705999999955,
+      "expected": 97.15705999999999
+    },
+    {
+      "seconds": 570,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 62.35358333333352,
+      "expected": 62.35358333333333
+    },
+    {
+      "seconds": 570,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 97.3802083333328,
+      "expected": 97.38020833333333
+    },
+    {
+      "seconds": 570,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 54.40283333333355,
+      "expected": 54.402833333333334
+    },
+    {
+      "seconds": 570,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 103.22937625000009,
+      "expected": 103.22937624999997
+    },
+    {
+      "seconds": 600,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 62.69999999999982,
+      "expected": 62.699999999999996
+    },
+    {
+      "seconds": 600,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 118.97325000000023,
+      "expected": 118.97324999999998
+    },
+    {
+      "seconds": 600,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 102.00000000000045,
+      "expected": 102
+    },
+    {
+      "seconds": 600,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 112.00000000000045,
+      "expected": 112
+    },
+    {
+      "seconds": 600,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 44.55000000000041,
+      "expected": 44.55
+    },
+    {
+      "seconds": 600,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 84.53362500000026,
+      "expected": 84.53362499999999
+    },
+    {
+      "seconds": 600,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 52.79999999999973,
+      "expected": 52.8
+    },
+    {
+      "seconds": 600,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 100.18800000000056,
+      "expected": 100.18799999999997
+    },
+    {
+      "seconds": 600,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 64.50000000000045,
+      "expected": 64.5
+    },
+    {
+      "seconds": 600,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 100.49999999999955,
+      "expected": 100.5
+    },
+    {
+      "seconds": 600,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 56.100000000000136,
+      "expected": 56.099999999999994
+    },
+    {
+      "seconds": 600,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 106.44975000000045,
+      "expected": 106.44974999999997
+    },
+    {
+      "seconds": 630,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 64.58099999999945,
+      "expected": 64.581
+    },
+    {
+      "seconds": 630,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 122.54244749999998,
+      "expected": 122.54244749999998
+    },
+    {
+      "seconds": 630,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 105.05999999999972,
+      "expected": 105.06
+    },
+    {
+      "seconds": 630,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 115.36000000000058,
+      "expected": 115.36
+    },
+    {
+      "seconds": 630,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 45.8865000000003,
+      "expected": 45.8865
+    },
+    {
+      "seconds": 630,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 87.06963374999987,
+      "expected": 87.06963374999998
+    },
+    {
+      "seconds": 630,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 54.384000000000015,
+      "expected": 54.384
+    },
+    {
+      "seconds": 630,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 103.1936399999995,
+      "expected": 103.19363999999999
+    },
+    {
+      "seconds": 630,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 66.43500000000017,
+      "expected": 66.435
+    },
+    {
+      "seconds": 630,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 103.51499999999987,
+      "expected": 103.515
+    },
+    {
+      "seconds": 630,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 57.78299999999945,
+      "expected": 57.783
+    },
+    {
+      "seconds": 630,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 109.64324250000004,
+      "expected": 109.64324249999997
+    },
+    {
+      "seconds": 660,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 66.46200000000022,
+      "expected": 66.46199999999999
+    },
+    {
+      "seconds": 660,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 126.11164499999973,
+      "expected": 126.11164499999998
+    },
+    {
+      "seconds": 660,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 108.12000000000012,
+      "expected": 108.12
+    },
+    {
+      "seconds": 660,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 118.71999999999957,
+      "expected": 118.72
+    },
+    {
+      "seconds": 660,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 47.223000000000184,
+      "expected": 47.223
+    },
+    {
+      "seconds": 660,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 89.60564249999948,
+      "expected": 89.60564249999997
+    },
+    {
+      "seconds": 660,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 55.9680000000003,
+      "expected": 55.967999999999996
+    },
+    {
+      "seconds": 660,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 106.19927999999959,
+      "expected": 106.19927999999999
+    },
+    {
+      "seconds": 660,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 68.36999999999989,
+      "expected": 68.37
+    },
+    {
+      "seconds": 660,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 106.5300000000002,
+      "expected": 106.53
+    },
+    {
+      "seconds": 660,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 59.465999999999894,
+      "expected": 59.465999999999994
+    },
+    {
+      "seconds": 660,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 112.83673499999963,
+      "expected": 112.83673499999998
+    },
+    {
+      "seconds": 720,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 70.22399999999948,
+      "expected": 70.224
+    },
+    {
+      "seconds": 720,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 720,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 114.23999999999978,
+      "expected": 114.24000000000001
+    },
+    {
+      "seconds": 720,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 125.43999999999983,
+      "expected": 125.44000000000001
+    },
+    {
+      "seconds": 720,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 49.89599999999996,
+      "expected": 49.896
+    },
+    {
+      "seconds": 720,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 94.67765999999983,
+      "expected": 94.67765999999999
+    },
+    {
+      "seconds": 720,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 59.13599999999974,
+      "expected": 59.136
+    },
+    {
+      "seconds": 720,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 112.21055999999976,
+      "expected": 112.21055999999999
+    },
+    {
+      "seconds": 720,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 72.24000000000046,
+      "expected": 72.24000000000001
+    },
+    {
+      "seconds": 720,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 112.55999999999972,
+      "expected": 112.56000000000002
+    },
+    {
+      "seconds": 720,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 62.83199999999965,
+      "expected": 62.832
+    },
+    {
+      "seconds": 720,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 119.22371999999996,
+      "expected": 119.22371999999999
+    },
+    {
+      "seconds": 900,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 81.50999999999954,
+      "expected": 81.51
+    },
+    {
+      "seconds": 900,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 900,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 132.5999999999999,
+      "expected": 132.60000000000002
+    },
+    {
+      "seconds": 900,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 145.59999999999945,
+      "expected": 145.6
+    },
+    {
+      "seconds": 900,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 57.91500000000042,
+      "expected": 57.915
+    },
+    {
+      "seconds": 900,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 109.89371249999976,
+      "expected": 109.89371249999999
+    },
+    {
+      "seconds": 900,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 68.64000000000033,
+      "expected": 68.64
+    },
+    {
+      "seconds": 900,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 900,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 83.84999999999991,
+      "expected": 83.85000000000001
+    },
+    {
+      "seconds": 900,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 130.65000000000055,
+      "expected": 130.65
+    },
+    {
+      "seconds": 900,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 72.93000000000006,
+      "expected": 72.93
+    },
+    {
+      "seconds": 900,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 1200,
+      "kind": "grunt",
+      "elite": false,
+      "frenzy": false,
+      "measured": 100.32000000000039,
+      "expected": 100.32000000000001
+    },
+    {
+      "seconds": 1200,
+      "kind": "grunt",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 1200,
+      "kind": "runner",
+      "elite": false,
+      "frenzy": false,
+      "measured": 137.69999999999982,
+      "expected": 137.70000000000002
+    },
+    {
+      "seconds": 1200,
+      "kind": "runner",
+      "elite": true,
+      "frenzy": true,
+      "measured": 147.99999999999955,
+      "expected": 148
+    },
+    {
+      "seconds": 1200,
+      "kind": "tank",
+      "elite": false,
+      "frenzy": false,
+      "measured": 71.28000000000043,
+      "expected": 71.28
+    },
+    {
+      "seconds": 1200,
+      "kind": "tank",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 1200,
+      "kind": "caster",
+      "elite": false,
+      "frenzy": false,
+      "measured": 84.47999999999979,
+      "expected": 84.48
+    },
+    {
+      "seconds": 1200,
+      "kind": "caster",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    },
+    {
+      "seconds": 1200,
+      "kind": "rusher",
+      "elite": false,
+      "frenzy": false,
+      "measured": 96.74999999999955,
+      "expected": 96.75
+    },
+    {
+      "seconds": 1200,
+      "kind": "rusher",
+      "elite": true,
+      "frenzy": true,
+      "measured": 137.99999999999955,
+      "expected": 138
+    },
+    {
+      "seconds": 1200,
+      "kind": "splitter",
+      "elite": false,
+      "frenzy": false,
+      "measured": 89.75999999999999,
+      "expected": 89.76
+    },
+    {
+      "seconds": 1200,
+      "kind": "splitter",
+      "elite": true,
+      "frenzy": true,
+      "measured": 127.99999999999955,
+      "expected": 128
+    }
+  ]
+}

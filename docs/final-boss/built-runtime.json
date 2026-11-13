@@ -1,0 +1,301 @@
+{
+  "context": "Separate minified Vite ES library of actual World and legal trial; never shipped in public dist and no production DEV hook. Public Vue/Phaser smoke is tested separately.",
+  "victory": {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "comboTimes": [
+      1213.7999999999874,
+      1225.7999999999765,
+      1261.1999999999443,
+      1281.249999999926,
+      1293.2999999999151,
+      1314.1999999998961,
+      1326.2499999998852
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1212.2999999999888,
+        "count": 1
+      },
+      {
+        "owner": "boss",
+        "at": 1247.299999999957,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1248.7999999999556,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1305.449999999904,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1306.9999999999027,
+        "count": 4
+      },
+      {
+        "owner": "arena",
+        "at": 1320.4999999998904,
+        "count": 5
+      },
+      {
+        "owner": "arena",
+        "at": 1322.049999999889,
+        "count": 4
+      }
+    ],
+    "travelDistance": 16913.508870898022,
+    "movingSeconds": 62.1999999999986,
+    "guardianTtk": [
+      {
+        "id": 975,
+        "hp": 1800,
+        "first": 1244.7999999999593,
+        "seconds": 2.1499999999980446
+      },
+      {
+        "id": 976,
+        "hp": 1800,
+        "first": 1251.2499999999534,
+        "seconds": 2.199999999997999
+      },
+      {
+        "id": 974,
+        "hp": 1800,
+        "first": 1255.9499999999491,
+        "seconds": 2.199999999997999
+      }
+    ],
+    "outcome": "victory",
+    "duration": 135.99999999999667,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1243.94999999996,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1258.149999999947,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1302.3999999999069,
+        "hp": 192
+      },
+      {
+        "phase": "dying",
+        "at": 1333.7499999998784,
+        "hp": 188
+      },
+      {
+        "phase": "defeated",
+        "at": 1335.9499999998764,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1216.1999999999853,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1283.649999999924,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1328.699999999883,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 38,
+    "diagnostics": {
+      "combos": 7,
+      "meteors": 30,
+      "orbs": 3,
+      "blocked": 18,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  "defeat": {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "level": 54,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "comboTimes": [
+      1206.3999999999942,
+      1218.3999999999833,
+      1230.3999999999724
+    ],
+    "meteorGroups": [
+      {
+        "owner": "boss",
+        "at": 1236.6499999999667,
+        "count": 6
+      },
+      {
+        "owner": "boss",
+        "at": 1238.1499999999653,
+        "count": 5
+      }
+    ],
+    "travelDistance": 0,
+    "movingSeconds": 0,
+    "guardianTtk": [],
+    "outcome": "defeat",
+    "duration": 39.49999999999989,
+    "hp": 0,
+    "bossHp": 75600,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.249999999998,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1233.2499999999698,
+        "hp": 24
+      }
+    ],
+    "damage": [
+      {
+        "at": 1205.7999999999947,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1208.749999999992,
+        "amount": 4,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1210.2999999999906,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1212.4999999999886,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1216.8999999999846,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1220.7499999999811,
+        "amount": 64,
+        "attack": "swordActive",
+        "cause": "sword"
+      },
+      {
+        "at": 1224.4999999999777,
+        "amount": 4,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1226.6999999999757,
+        "amount": 32,
+        "attack": "basicMelee",
+        "cause": "other"
+      },
+      {
+        "at": 1239.4499999999641,
+        "amount": 24,
+        "attack": "ritualChannel",
+        "cause": "meteor"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 11,
+      "orbs": 3,
+      "blocked": 15,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  }
+}

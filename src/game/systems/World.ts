@@ -1,4 +1,7 @@
 import {fireballDuration} from '../art/fireballPack';
+import {isWarriorAttackUltimate} from '../config/ultimates';
+import {WARRIOR_CAST} from '../config/warriorAbilities';
+import type {CleaveSwing} from '../config/warriorCleave';
 import {ASTRAL_VFX} from '../config/astralRevenant';
 import {NecroticFlameWalls} from './NecroticFlameWalls';
 import { FinalEncounter } from './FinalEncounter';
@@ -65,7 +68,7 @@ export class World {
   get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
   get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown') * this.buffs.modifier('cooldown', this.elapsed); }
   get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
-  get absorb(){return this.shield.absorbValue(this.elapsed)+this.mobility.absorbValue(this.elapsed);}
+  get absorb(){return this.shield.absorbValue(this.elapsed)+this.mobility.absorbValue(this.elapsed)+this.blockShield.absorbValue(this.elapsed);}
   get guardians() { return this.enemies.filter(e => e.kind === 'guardian'); }
   get rareGuardian() { return this.guardians[0]; }
   get combatTargets() { return this.enemies.filter(e => this.canDamageTarget(e) && (e.kind !== 'guardian' || e.discovered || guardianVisible(this, e)));  }
@@ -73,6 +76,8 @@ export class World {
   canDamageTarget(e: Enemy) { return e.hp > 0 && this.finalEncounter.canTarget(e); }
   clearHostileThreats() { this.necroticFlames.clear();this.retainProjectiles(p=>!p.hostile);this.impacts=this.impacts.filter(i=>!i.hostile);this.zones=this.zones.filter(z=>z.ownerId===undefined);this.effects=this.effects.filter(e=>{if(e.ownerId===undefined)return true;this.effectPool.release(e);return false;}); }
   clearTemporaryState() {
+    this.warrior.cleave=undefined;this.blockShield.clearAbsorb();this.warrior.ironUntil=0;
+    this.warrior.pendingSpear=undefined;this.warrior.gestureUntil=0;
     this.finalEncounter.cancel();
     this.necroticFlames.clear();
     this.feedbackEvents = []; this.sounds = []; this.shield.clearAbsorb(); this.ultimate.clear();
@@ -108,7 +113,8 @@ export class World {
   stats = { damage: 1, cooldown: 1, projectiles: 1, area: 1, pickup: 55 };
   abilities = initialAbilities();
   readonly shield = new AbsorbPool();
-  warrior = { whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0 };
+  readonly blockShield = new AbsorbPool();
+  warrior: {cleave?:CleaveSwing;cleaveSequence:number;whirlwindUntil:number;whirlwindTick:number;bladesUntil:number;bladesTick:number;ironUntil:number;gestureUntil:number;throwSequence:number;throwStarted:number;throwDirection:Point;pendingSpear?:{releaseAt:number;vx:number;vy:number;damage:number;pierce:number;hitRadius:number}} = { cleaveSequence:0,whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0,gestureUntil:0,throwSequence:0,throwStarted:-1,throwDirection:{x:1,y:0} };
   get character() { return this.options.character ?? 'mage'; }
   get biome() { return playableMap(this.options.biome); }
   get abilityDefinitions() { return abilitiesFor(this.character); }
@@ -162,7 +168,7 @@ export class World {
   shoot(shot: Omit<Projectile, 'id' | 'expires'>) {
     if(shot.homing&&(!shot.hostile||!this.guardians.some(e=>e.id===shot.ownerId)||this.projectiles.filter(p=>p.homing&&p.ownerId===shot.ownerId&&p.expires>this.elapsed).length>=GUARDIAN_ORBS.perOwner))return;
     if (this.projectiles.length >= BALANCE.projectileCap || (shot.hostile && this.hostileProjectileSlots===0)) return;
-    const projectile = this.projectilePool.acquire({ ...shot, appearance:shot.appearance??(shot.homing?'astral-volley':undefined), started:this.elapsed, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
+    const projectile = this.projectilePool.acquire({ ...shot, hitRadius:shot.hitRadius, appearance:shot.appearance??(shot.homing?'astral-volley':undefined), started:this.elapsed, homing:shot.homing, id: this.id(), expires: this.elapsed + (shot.homing?(shot.homing.lifetime??GUARDIAN_ORBS[shot.homing.variant].lifetime):2.5), hits: [], ownerId: shot.ownerId, pierce: shot.pierce ?? 0, source: shot.source, exploded: false });
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
@@ -226,18 +232,20 @@ export class World {
     if (this.outcome || this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
     const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
-    const arcane=this.shield.absorbDamage(this.elapsed,incoming);
-    const mobility=this.mobility.absorbDamage(this.elapsed,incoming-arcane),absorbed=arcane+mobility;
+    const block=this.blockShield.absorbDamage(this.elapsed,incoming);
+    const arcane=this.shield.absorbDamage(this.elapsed,incoming-block);
+    const mobility=this.mobility.absorbDamage(this.elapsed,incoming-block-arcane),absorbed=block+arcane+mobility;
     if(arcane>0){this.feedback({type:'impact',source:'shield',strength:arcane});if(this.shield.absorbValue(this.elapsed)===0)shieldPulse(this);}
     const hpHit = receiveDamage(this.player, incoming - absorbed, this.elapsed);
     const hit = hpHit || absorbed > 0;
-    if (mobility > 0 && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
+    if ((mobility > 0 || block > 0) && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
     if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.outcome='defeat'; this.status = 'over'; this.clearTemporaryState(); } }
     return hit;
   }
   step(rawDelta: number, input: MovementInput = { x: 0, y: 0 }) {
     if (this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
+    if(isWarriorAttackUltimate(this.ultimate.selected)){this.ultimate.update(this);if(this.status!=='playing')return;}
     if(this.finalEncounter.phase==='dying'){this.finalEncounter.update(this,dt);return;}
     if(!this.practiceDuel&&this.elapsed+1e-7>=FINAL_BOSS.at)this.finalEncounter.begin(this);
     const vector = direction(input.x, input.y);
@@ -266,7 +274,7 @@ export class World {
     this.finalEncounter.update(this,dt);
     if (this.outcome || this.status !== 'playing') return;
     this.mobility.tick(this);
-    if (this.ultimate.selected === 'fire') this.ultimate.update(this);
+    if (this.ultimate.selected === 'fire'||this.ultimate.selected==='banner') this.ultimate.update(this);
     this.enemies = this.enemies.filter(e => { const keep = this.practiceDuel || !!e.finalRole || e.kind === 'guardian' || distance(e, this.player) < Math.max(BALANCE.despawnDistance, Math.hypot(this.width, this.height) / 2 + 200) * (e.boss ? 2 : 1); if (!keep && e.boss) this.clearOwnedEffects(e.id); return keep; });
     tickAbilities(this);
     for (const shot of [...this.projectiles]) {
@@ -275,8 +283,9 @@ export class World {
       if(shot.homing&&!steerGuardianOrb(this,shot,dt))continue;
       const old = { x: shot.x, y: shot.y }; shot.x += shot.vx * dt; shot.y += shot.vy * dt;
       if(this.ultimate.selected==='fire'&&this.ultimate.fire.absorb(this,old,shot))continue;
+      if(shot.hostile&&shot.expires>this.elapsed&&this.character==='warrior'&&this.warrior.ironUntil>this.elapsed&&segmentDistance(this.player,old,shot)<WARRIOR_CAST.blockProjectileRadius+(shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius:3)){shot.expires=0;this.effect('shield',this.player,24,0xb5c9da,.15);continue;}
       if (shot.hostile) { if (segmentDistance(this.player, old, shot) < (shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius+9:12)) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
-      const targets = this.combatTargets.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + 4).sort((a, b) => distance(old, a) - distance(old, b));
+      const targets = this.combatTargets.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + (shot.source==='blades'?(shot.hitRadius??WARRIOR_CAST.spearHitRadius):4)).sort((a, b) => distance(old, a) - distance(old, b));
       for (const target of targets) {
         if(shot.source==='fireball')this.effect('fireball-impact',shot,4,0xffffff,fireballDuration('explosion'),{x:shot.vx,y:shot.vy},undefined,'fireball');
         this.damageEnemy(target, shot.damage, shot.source); shot.hits?.push(target.id);
@@ -330,7 +339,7 @@ export class World {
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
-      ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire']}} : {}),
+      ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']+this.scoring.damage['ultimate-earthbreaker']+this.scoring.damage['ultimate-ruin']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire'],earthbreaker:this.scoring.damage['ultimate-earthbreaker'],ruin:this.scoring.damage['ultimate-ruin']}} : {}),
       mobility: this.mobility.snapshot(this), guardianPhase: this.guardianSystem.encounter?.phase ?? null,
       buffs: this.buffs.snapshot(this.elapsed), lootNotice: this.loot.notice?.name ?? null,
       artifacts: this.artifacts.snapshot(), runNotice: this.guardianSystem.notice?.text ?? this.artifacts.notice?.text ?? null, guardianKills: this.scoring.guardianKills,

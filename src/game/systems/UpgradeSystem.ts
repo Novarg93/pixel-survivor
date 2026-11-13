@@ -1,4 +1,4 @@
-import { ULTIMATE_DEFINITIONS, isUltimateId } from '../config/ultimates';
+import { ultimateDefinitions, isUltimateId } from '../config/ultimates';
 import type { World } from './World';
 import { ABILITIES } from '../abilities/definitions';
 import { distance } from '../utils/math';
@@ -12,8 +12,8 @@ const RANK_TEXT = {
   cleave: '+8 базового урона широкого удара.',
   whirlwind: '+4 урона каждому из круговых импульсов.',
   slam: '+15 урона и +5px радиуса удара.',
-  blades: '+4 урона клинков. На II/IV ранге ещё один клинок.',
-  iron: '+0.5с действия железной кожи.',
+  blades: '+12 урона копья и +1 пробитая цель (до 7 целей).',
+  iron: '+5% maxHP к Absorb и +0.5с действия Shield Block. Повторный каст обновляет запас.',
 };
 export interface UpgradeDefinition { id: string; name: string; description: string; max: number; apply: (world: World) => void; eligible?: (world: World) => boolean }
 export const UPGRADES: UpgradeDefinition[] = [
@@ -36,11 +36,12 @@ export const SUPPLIES: UpgradeDefinition[] = [
 ];
 export function eligibleUpgrades(w: World) { return UPGRADES.filter(u => (u.id !== 'projectiles' || w.character === 'mage') && (w.upgrades[u.id] ?? 0) < u.max && (!u.eligible || u.eligible(w))); }
 export function chooseUpgrades(w: World) {
-  if(w.ultimate.eligible(w)) return ULTIMATE_DEFINITIONS.map(d=>({id:`ultimate-${d.id}`,name:d.name,description:d.description,max:1,apply:()=>undefined}));
+  const ultimates=w.ultimate.eligible(w)?ultimateDefinitions(w.character).map(d=>({id:`ultimate-${d.id}`,name:d.name,description:d.description,max:1,apply:()=>undefined})):[];
+  if(ultimates.length>=3)return ultimates;
   const eligible = eligibleUpgrades(w);
-  if (!w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) return eligible.filter(u => u.id.startsWith('mobility-'));
+  if (!ultimates.length && !w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) return eligible.filter(u => u.id.startsWith('mobility-'));
   const pool = eligible.length >= 3 ? [...eligible] : [...eligible, ...SUPPLIES];
-  const result: UpgradeDefinition[] = [];
+  const result: UpgradeDefinition[] = [...ultimates];
   while (result.length < 3 && pool.length) result.push(pool.splice(w.rng.int(pool.length), 1)[0]);
   return result;
 }

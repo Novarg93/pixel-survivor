@@ -9,9 +9,9 @@ export const ABILITIES: AbilityDefinition[] = [
   { id: 'shield', name: 'Тайный щит', cooldown: 12, color: 0xa5c4ff, icon: '◇', description:'Absorb 15/20/25/30/35% maxHP на 6–10с. Излишек урона проходит в HP. Повторное применение заменяет остаток, не складывает щиты.' },
   { id: 'cleave', name: 'Cleave', cooldown: 0.85, color: 0xf4d2a0, icon: '⚔', character: 'warrior', description: 'Автоматический широкий удар по ближайшим врагам.' },
   { id: 'whirlwind', name: 'Whirlwind', cooldown: 3.6, color: 0xd7e8bd, icon: '◎', character: 'warrior', description: 'Серия круговых ударов в течение 1.2с.' },
-  { id: 'slam', name: 'Ground Slam', cooldown: 4.8, color: 0xe5c48a, icon: '⌁', character: 'warrior', description: 'Размеченный удар по области после задержки 0.65с.' },
-  { id: 'blades', name: 'Bladestorm', cooldown: 6.6, color: 0xc4e2ec, icon: '✧', character: 'warrior', description: 'Клинки вращаются вокруг героя и поражают при касании.' },
-  { id: 'iron', name: 'Iron Skin', cooldown: 11, color: 0xacb8cb, icon: '▣', character: 'warrior', description: 'На время уменьшает получаемый урон на 50%.' },
+  { id: 'slam', name: 'Ground Stomp', cooldown: 4.8, color: 0xe5c48a, icon: '⌁', character: 'warrior', description: 'Размеченный удар по области после задержки 0.65с.' },
+  { id: 'blades', name: 'Piercing Throw', cooldown: 6.6, color: 0xc4e2ec, icon: '➶', character: 'warrior', description: 'Копьё до 360px с полосой попадания 28px, расширяемой бонусами площади. Пробивает 3–7 целей, каждую один раз.' },
+  { id: 'iron', name: 'Shield Block', cooldown: 11, color: 0xacb8cb, icon: '▣', character: 'warrior', description: 'Снижает урон на 50%, поглощает вражеские снаряды и даёт Absorb 20–40% максимального HP на время блока. Повторный каст обновляет запас без накопления.' },
 ];
 export function abilitiesFor(character: CharacterId) { return ABILITIES.filter(a => (a.character ?? 'mage') === character); }
 export function initialAbilities(character: CharacterId = 'mage'): Record<AbilityId, AbilityState> {

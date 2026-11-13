@@ -1,0 +1,1063 @@
+{
+  "phase": "after",
+  "fixture": "Mage40,39 legal choices,FireballV/FrostII/LightningV/MeteorV/ShieldI;180HP,speed175.5,damage2.25,CDR.59049,4projectiles,area1.3;actual seeded World dt.05 for180s from12:00 just after current encounter cleared without rewards, future schedule runs normally; fixed build bypasses offers only, real XP/loot/damage, no test invulnerability; movement uses shared hazard-aware pilot with/without legal Blink",
+  "pressureProbe": "30s actual World per enemy kind, position held190px and invulnerability in cadence probe ONLY; no survival claim for isolated probes",
+  "table": [
+    {
+      "seconds": 570,
+      "enrage": {
+        "active": false,
+        "tick": 0,
+        "spawn": 1,
+        "speed": 1,
+        "attack": 1,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.62,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 186,
+        "perSecond": 6.210350584307179,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 540,
+        "name": "Час затмения",
+        "interval": 0.62,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.2,
+        "weights": {
+          "grunt": 15,
+          "runner": 22,
+          "tank": 20,
+          "caster": 20,
+          "rusher": 12,
+          "splitter": 11
+        }
+      },
+      "pressure": {
+        "progress": 0.1875,
+        "casterCooldown": 3.5,
+        "eliteCasterCooldown": 2.6125,
+        "casterFirstShot": 1.775,
+        "casterStrafe": 0.471875,
+        "casterWarning": 0.73125,
+        "projectileSpeed": 112.5,
+        "rusherWarning": 0.821875,
+        "rusherRecovery": 1.10625,
+        "rusherApproach": 1.775,
+        "rusherRange": 251.25,
+        "frenzyCycle": 6.625
+      },
+      "bossAggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 31.405,
+          "speed": 60.800000000000004
+        },
+        "runner": {
+          "hp": 22.84,
+          "speed": 97.75
+        },
+        "tank": {
+          "hp": 149.8875,
+          "speed": 43.2
+        },
+        "caster": {
+          "hp": 59.955,
+          "speed": 51.2
+        },
+        "rusher": {
+          "hp": 71.375,
+          "speed": 62.35000000000001
+        },
+        "splitter": {
+          "hp": 92.7875,
+          "speed": 54.400000000000006
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 9,
+          "shotsIn30s": 8
+        },
+        "rusher": {
+          "startsIn30s": 7,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 7,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 8,
+          "shotsIn30s": 40
+        },
+        "eclipse": {
+          "startsIn30s": 7,
+          "shotsIn30s": 70
+        }
+      }
+    },
+    {
+      "seconds": 600,
+      "enrage": {
+        "active": true,
+        "tick": 0,
+        "spawn": 1,
+        "speed": 1,
+        "attack": 1,
+        "notice": true
+      },
+      "cadence": {
+        "interval": 0.6,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 192,
+        "perSecond": 6.410684474123539,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 600,
+        "name": "Survival Overdrive",
+        "interval": 0.6,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.22,
+        "weights": {
+          "grunt": 8,
+          "runner": 25,
+          "tank": 12,
+          "caster": 25,
+          "rusher": 20,
+          "splitter": 10
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 3.4,
+        "eliteCasterCooldown": 2.55,
+        "casterFirstShot": 1.7,
+        "casterStrafe": 0.5125,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 1.075,
+        "rusherApproach": 1.7,
+        "rusherRange": 255,
+        "frenzyCycle": 6.5
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 31.9,
+          "speed": 62.699999999999996
+        },
+        "runner": {
+          "hp": 23.2,
+          "speed": 102
+        },
+        "tank": {
+          "hp": 152.25,
+          "speed": 44.55
+        },
+        "caster": {
+          "hp": 60.9,
+          "speed": 52.8
+        },
+        "rusher": {
+          "hp": 72.5,
+          "speed": 64.5
+        },
+        "splitter": {
+          "hp": 94.25,
+          "speed": 56.099999999999994
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 9,
+          "shotsIn30s": 8
+        },
+        "rusher": {
+          "startsIn30s": 7,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 7,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 9,
+          "shotsIn30s": 45
+        },
+        "eclipse": {
+          "startsIn30s": 8,
+          "shotsIn30s": 80
+        }
+      }
+    },
+    {
+      "seconds": 630,
+      "enrage": {
+        "active": true,
+        "tick": 1,
+        "spawn": 1.08,
+        "speed": 1.03,
+        "attack": 1.04,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.5555555555555555,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 210,
+        "perSecond": 7.011686143572621,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 600,
+        "name": "Survival Overdrive",
+        "interval": 0.6,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.22,
+        "weights": {
+          "grunt": 8,
+          "runner": 25,
+          "tank": 12,
+          "caster": 25,
+          "rusher": 20,
+          "splitter": 10
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 3.269230769230769,
+        "eliteCasterCooldown": 2.4519230769230766,
+        "casterFirstShot": 1.6346153846153846,
+        "casterStrafe": 0.5245,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 1.033653846153846,
+        "rusherApproach": 1.6346153846153846,
+        "rusherRange": 256.5,
+        "frenzyCycle": 6.25
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.6480000000000001,
+        "frequency": 2.08
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 32.395,
+          "speed": 64.581
+        },
+        "runner": {
+          "hp": 23.560000000000002,
+          "speed": 105.06
+        },
+        "tank": {
+          "hp": 154.6125,
+          "speed": 45.8865
+        },
+        "caster": {
+          "hp": 61.845000000000006,
+          "speed": 54.384
+        },
+        "rusher": {
+          "hp": 73.625,
+          "speed": 66.435
+        },
+        "splitter": {
+          "hp": 95.7125,
+          "speed": 57.783
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 9,
+          "shotsIn30s": 9
+        },
+        "rusher": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 9,
+          "shotsIn30s": 45
+        },
+        "eclipse": {
+          "startsIn30s": 8,
+          "shotsIn30s": 80
+        }
+      }
+    },
+    {
+      "seconds": 660,
+      "enrage": {
+        "active": true,
+        "tick": 2,
+        "spawn": 1.16,
+        "speed": 1.06,
+        "attack": 1.08,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.5172413793103449,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 225,
+        "perSecond": 7.512520868113523,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 660,
+        "name": "Перекрёстный огонь",
+        "interval": 0.6,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.23,
+        "weights": {
+          "grunt": 6,
+          "runner": 22,
+          "tank": 10,
+          "caster": 30,
+          "rusher": 20,
+          "splitter": 12
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 3.148148148148148,
+        "eliteCasterCooldown": 2.3611111111111107,
+        "casterFirstShot": 1.574074074074074,
+        "casterStrafe": 0.5365,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 0.9953703703703702,
+        "rusherApproach": 1.574074074074074,
+        "rusherRange": 258,
+        "frenzyCycle": 6.018518518518518
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.6960000000000002,
+        "frequency": 2.16
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 32.89,
+          "speed": 66.46199999999999
+        },
+        "runner": {
+          "hp": 23.92,
+          "speed": 108.12
+        },
+        "tank": {
+          "hp": 156.97500000000002,
+          "speed": 47.223
+        },
+        "caster": {
+          "hp": 62.790000000000006,
+          "speed": 55.967999999999996
+        },
+        "rusher": {
+          "hp": 74.75,
+          "speed": 68.37
+        },
+        "splitter": {
+          "hp": 97.17500000000001,
+          "speed": 59.465999999999994
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 10,
+          "shotsIn30s": 9
+        },
+        "rusher": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 9,
+          "shotsIn30s": 45
+        },
+        "eclipse": {
+          "startsIn30s": 8,
+          "shotsIn30s": 80
+        }
+      }
+    },
+    {
+      "seconds": 720,
+      "enrage": {
+        "active": true,
+        "tick": 4,
+        "spawn": 1.32,
+        "speed": 1.12,
+        "attack": 1.16,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.45454545454545453,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 255,
+        "perSecond": 8.514190317195325,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 720,
+        "name": "Бегущие руны",
+        "interval": 0.6,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.24,
+        "weights": {
+          "grunt": 5,
+          "runner": 30,
+          "tank": 8,
+          "caster": 22,
+          "rusher": 25,
+          "splitter": 10
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 2.931034482758621,
+        "eliteCasterCooldown": 2.1982758620689653,
+        "casterFirstShot": 1.4655172413793105,
+        "casterStrafe": 0.5604999999999999,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 0.9267241379310345,
+        "rusherApproach": 1.4655172413793105,
+        "rusherRange": 261,
+        "frenzyCycle": 5.603448275862069
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.7920000000000003,
+        "frequency": 2.32
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 33.88,
+          "speed": 70.224
+        },
+        "runner": {
+          "hp": 24.64,
+          "speed": 114.24000000000001
+        },
+        "tank": {
+          "hp": 161.70000000000002,
+          "speed": 49.896
+        },
+        "caster": {
+          "hp": 64.68,
+          "speed": 59.136
+        },
+        "rusher": {
+          "hp": 77,
+          "speed": 72.24000000000001
+        },
+        "splitter": {
+          "hp": 100.10000000000001,
+          "speed": 62.832
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 10,
+          "shotsIn30s": 10
+        },
+        "rusher": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 8,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 10,
+          "shotsIn30s": 50
+        },
+        "eclipse": {
+          "startsIn30s": 9,
+          "shotsIn30s": 80
+        }
+      }
+    },
+    {
+      "seconds": 900,
+      "enrage": {
+        "active": true,
+        "tick": 10,
+        "spawn": 1.8,
+        "speed": 1.3,
+        "attack": 1.4,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.3333333333333333,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 348,
+        "perSecond": 11.619365609348915,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 840,
+        "name": "Кольцо охоты",
+        "interval": 0.6,
+        "burst": 3,
+        "cap": 150,
+        "elite": 0.26,
+        "weights": {
+          "grunt": 5,
+          "runner": 24,
+          "tank": 12,
+          "caster": 25,
+          "rusher": 22,
+          "splitter": 12
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 2.428571428571429,
+        "eliteCasterCooldown": 1.8214285714285714,
+        "casterFirstShot": 1.2142857142857144,
+        "casterStrafe": 0.6325,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 0.7678571428571429,
+        "rusherApproach": 1.2142857142857144,
+        "rusherRange": 270,
+        "frenzyCycle": 4.642857142857143
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 36.85,
+          "speed": 81.51
+        },
+        "runner": {
+          "hp": 26.8,
+          "speed": 132.60000000000002
+        },
+        "tank": {
+          "hp": 175.875,
+          "speed": 57.915
+        },
+        "caster": {
+          "hp": 70.35000000000001,
+          "speed": 68.64
+        },
+        "rusher": {
+          "hp": 83.75,
+          "speed": 83.85000000000001
+        },
+        "splitter": {
+          "hp": 108.875,
+          "speed": 72.93
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 12,
+          "shotsIn30s": 12
+        },
+        "rusher": {
+          "startsIn30s": 9,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 9,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 11,
+          "shotsIn30s": 50
+        },
+        "eclipse": {
+          "startsIn30s": 9,
+          "shotsIn30s": 90
+        }
+      }
+    },
+    {
+      "seconds": 1200,
+      "enrage": {
+        "active": true,
+        "tick": 20,
+        "spawn": 2,
+        "speed": 1.6,
+        "attack": 1.65,
+        "notice": false
+      },
+      "cadence": {
+        "interval": 0.3,
+        "burst": 3
+      },
+      "spawn": {
+        "seconds": 29.95,
+        "spawned": 387,
+        "perSecond": 12.921535893155259,
+        "fixture": "Continuously free regular slots; actual SpawnClock, default spawnRate1.3, director disabled; invulnerability only for cadence probe"
+      },
+      "profile": {
+        "from": 1200,
+        "name": "Бесконечная чаща",
+        "interval": 0.5,
+        "burst": 4,
+        "cap": 150,
+        "elite": 0.28,
+        "weights": {
+          "grunt": 10,
+          "runner": 30,
+          "tank": 20,
+          "caster": 20,
+          "rusher": 10,
+          "splitter": 10
+        }
+      },
+      "pressure": {
+        "progress": 0.25,
+        "casterCooldown": 2.0606060606060606,
+        "eliteCasterCooldown": 1.5454545454545454,
+        "casterFirstShot": 1.0303030303030303,
+        "casterStrafe": 0.7074999999999999,
+        "casterWarning": 0.725,
+        "projectileSpeed": 115,
+        "rusherWarning": 0.8125,
+        "rusherRecovery": 0.6515151515151515,
+        "rusherApproach": 1.0303030303030303,
+        "rusherRange": 285,
+        "frenzyCycle": 4.5
+      },
+      "bossAggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "speeds": {
+        "grunt": {
+          "hp": 41.8,
+          "speed": 100.32000000000001
+        },
+        "runner": {
+          "hp": 30.4,
+          "speed": 137.70000000000002
+        },
+        "tank": {
+          "hp": 199.5,
+          "speed": 71.28
+        },
+        "caster": {
+          "hp": 79.8,
+          "speed": 84.48
+        },
+        "rusher": {
+          "hp": 95,
+          "speed": 96.75
+        },
+        "splitter": {
+          "hp": 123.5,
+          "speed": 89.76
+        }
+      },
+      "attacks": {
+        "caster": {
+          "startsIn30s": 14,
+          "shotsIn30s": 14
+        },
+        "rusher": {
+          "startsIn30s": 10,
+          "shotsIn30s": 0
+        },
+        "charger": {
+          "startsIn30s": 9,
+          "shotsIn30s": 0
+        },
+        "sorcerer": {
+          "startsIn30s": 11,
+          "shotsIn30s": 50
+        },
+        "eclipse": {
+          "startsIn30s": 9,
+          "shotsIn30s": 90
+        }
+      }
+    }
+  ],
+  "trials": [
+    {
+      "seed": 12345,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 32.7,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 14,
+      "attempts": 31,
+      "blocked": 4,
+      "shots": 33,
+      "acceptedShots": 33,
+      "rusherAttacks": 34,
+      "bossAttacks": 1,
+      "peakRegular": 24,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "kills": 327,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 12345,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 115.74,
+      "maxHp": 180,
+      "damageTaken": 64.26,
+      "hits": 5,
+      "attempts": 18,
+      "blocked": 11,
+      "shots": 495,
+      "acceptedShots": 495,
+      "rusherAttacks": 222,
+      "bossAttacks": 42,
+      "peakRegular": 61,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1957,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 12345,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 113.24,
+      "maxHp": 180,
+      "damageTaken": 132.82,
+      "hits": 10,
+      "attempts": 47,
+      "blocked": 7,
+      "shots": 474,
+      "acceptedShots": 474,
+      "rusherAttacks": 216,
+      "bossAttacks": 38,
+      "peakRegular": 66,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1968,
+      "blinks": 37,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 67890,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 32,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 12,
+      "attempts": 31,
+      "blocked": 4,
+      "shots": 27,
+      "acceptedShots": 27,
+      "rusherAttacks": 31,
+      "bossAttacks": 1,
+      "peakRegular": 24,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "kills": 314,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 67890,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 83.95,
+      "maxHp": 180,
+      "damageTaken": 96.05,
+      "hits": 5,
+      "attempts": 23,
+      "blocked": 5,
+      "shots": 588,
+      "acceptedShots": 588,
+      "rusherAttacks": 202,
+      "bossAttacks": 55,
+      "peakRegular": 69,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1918,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 67890,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 71.27,
+      "maxHp": 180,
+      "damageTaken": 108.73,
+      "hits": 7,
+      "attempts": 25,
+      "blocked": 5,
+      "shots": 428,
+      "acceptedShots": 428,
+      "rusherAttacks": 201,
+      "bossAttacks": 35,
+      "peakRegular": 71,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1983,
+      "blinks": 32,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 77,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 34.85,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 13,
+      "attempts": 29,
+      "blocked": 4,
+      "shots": 27,
+      "acceptedShots": 27,
+      "rusherAttacks": 33,
+      "bossAttacks": 2,
+      "peakRegular": 26,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "kills": 345,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 77,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 102.92,
+      "maxHp": 180,
+      "damageTaken": 93.57,
+      "hits": 7,
+      "attempts": 26,
+      "blocked": 6,
+      "shots": 611,
+      "acceptedShots": 611,
+      "rusherAttacks": 227,
+      "bossAttacks": 44,
+      "peakRegular": 73,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1967,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 77,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": true,
+      "seconds": 180,
+      "survived": true,
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 30.47,
+      "hits": 2,
+      "attempts": 14,
+      "blocked": 9,
+      "shots": 498,
+      "acceptedShots": 498,
+      "rusherAttacks": 244,
+      "bossAttacks": 40,
+      "peakRegular": 58,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "kills": 1991,
+      "blinks": 36,
+      "invalidInvulnerability": false
+    }
+  ],
+  "regularOnly": [
+    {
+      "seed": 12345,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": false,
+      "seconds": 32.7,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 14,
+      "attempts": 30,
+      "blocked": 4,
+      "shots": 29,
+      "acceptedShots": 29,
+      "rusherAttacks": 36,
+      "bossAttacks": 0,
+      "peakRegular": 24,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "kills": 326,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 67890,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": false,
+      "seconds": 32.55,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 12,
+      "attempts": 31,
+      "blocked": 4,
+      "shots": 22,
+      "acceptedShots": 22,
+      "rusherAttacks": 33,
+      "bossAttacks": 0,
+      "peakRegular": 24,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "kills": 319,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "seed": 77,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "width": 640,
+      "height": 360,
+      "scheduled": false,
+      "seconds": 35.55,
+      "survived": false,
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 13,
+      "attempts": 31,
+      "blocked": 4,
+      "shots": 23,
+      "acceptedShots": 23,
+      "rusherAttacks": 36,
+      "bossAttacks": 0,
+      "peakRegular": 26,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "kills": 356,
+      "blinks": 0,
+      "invalidInvulnerability": false
+    }
+  ]
+}

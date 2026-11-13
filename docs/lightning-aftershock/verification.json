@@ -1,0 +1,202 @@
+{
+  "sourceFiles": 337,
+  "changedDuringFull": [],
+  "changedSinceBaseline": [
+    "src/game/art/LightningGroundArt.ts",
+    "tests/e2e/lightning-devastation.spec.ts",
+    "tests/unit/lightning-devastation.test.ts"
+  ],
+  "added": [
+    "tests/e2e/lightning-aftershock.spec.ts"
+  ],
+  "unrecorded": [],
+  "full": {
+    "startTime": "2026-11-05T09:55:05.448Z",
+    "duration": 1230405.165,
+    "expected": 329,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-05T09:53:00.888Z",
+    "duration": 36297.03,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "views": [
+    {
+      "width": 1280,
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "radius": 391.1511950137164,
+      "hits": 8,
+      "uniqueHits": 8,
+      "damageTimestamps": 1,
+      "rearUnlinked": [
+        2,
+        5,
+        6
+      ],
+      "frames": [
+        {
+          "age": 0,
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 0,
+          "geometry": 112,
+          "builds": 1
+        },
+        {
+          "age": 0.08315666666658217,
+          "segments": 477,
+          "alpha": 0.7,
+          "sparks": 18,
+          "radius": 391.1511950137164,
+          "arcs": 112,
+          "geometry": 112,
+          "builds": 1
+        },
+        {
+          "age": 0.14968999999973676,
+          "segments": 477,
+          "alpha": 0.6673336636251788,
+          "sparks": 18,
+          "radius": 391.1511950137164,
+          "arcs": 112,
+          "geometry": 112,
+          "builds": 1
+        },
+        {
+          "age": 0.28280666666637444,
+          "segments": 471,
+          "alpha": 0.37132047026198917,
+          "sparks": 16,
+          "radius": 391.1511950137164,
+          "arcs": 110,
+          "geometry": 112,
+          "builds": 1
+        },
+        {
+          "age": 0.4158533333327341,
+          "segments": 75,
+          "alpha": 0.07546293677322839,
+          "sparks": 3,
+          "radius": 391.1511950137164,
+          "arcs": 18,
+          "geometry": 112,
+          "builds": 1
+        },
+        {
+          "age": 0.5322566666658304,
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 1
+        }
+      ],
+      "medianBeforeFps": 59.88023952095874,
+      "medianCastFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999727
+    },
+    {
+      "width": 844,
+      "viewport": {
+        "width": 660.9638554216868,
+        "height": 305.421686746988
+      },
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "radius": 388.0589323548029,
+      "hits": 8,
+      "uniqueHits": 8,
+      "damageTimestamps": 1,
+      "rearUnlinked": [
+        2,
+        5,
+        6
+      ],
+      "frames": [
+        {
+          "age": 0,
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 103,
+          "builds": 1
+        },
+        {
+          "age": 0.08323333333351002,
+          "segments": 446,
+          "alpha": 0.7,
+          "sparks": 14,
+          "radius": 388.0589323548029,
+          "arcs": 103,
+          "geometry": 103,
+          "builds": 1
+        },
+        {
+          "age": 0.14984000000026754,
+          "segments": 446,
+          "alpha": 0.6666125279768275,
+          "sparks": 14,
+          "radius": 388.0589323548029,
+          "arcs": 103,
+          "geometry": 103,
+          "builds": 1
+        },
+        {
+          "age": 0.2829800000006344,
+          "segments": 442,
+          "alpha": 0.36707020822633546,
+          "sparks": 14,
+          "radius": 388.0589323548029,
+          "arcs": 102,
+          "geometry": 103,
+          "builds": 1
+        },
+        {
+          "age": 0.41607333333399765,
+          "segments": 96,
+          "alpha": 0.06763288052698697,
+          "sparks": 5,
+          "radius": 388.0589323548029,
+          "arcs": 22,
+          "geometry": 103,
+          "builds": 1
+        },
+        {
+          "age": 0.5325066666671319,
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 388.0589323548029,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 1
+        }
+      ],
+      "medianBeforeFps": 59.88023952095874,
+      "medianCastFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999727
+    }
+  ],
+  "localPreview": 200
+}

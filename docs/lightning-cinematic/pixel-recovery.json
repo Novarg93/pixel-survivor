@@ -1,0 +1,85 @@
+{
+  "before": 59.55067708333333,
+  "dark": 49.361302083333335,
+  "after": 59.55067708333333,
+  "baselineAt": 617.0998133333334,
+  "recoveredAt": 617.0998133333334,
+  "hudBefore": [
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none"
+  ],
+  "hudDuring": [
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none"
+  ],
+  "state": {
+    "lightning": {
+      "active": [],
+      "allocated": 155,
+      "limit": 1181,
+      "segmentLength": 80,
+      "atlasBytes": 10790208
+    },
+    "batches": 9,
+    "fire": {
+      "phase": "idle",
+      "objects": 5,
+      "batches": 4,
+      "radius": 164,
+      "glowWidth": 128,
+      "glowHeight": 128,
+      "glowAlpha": 0,
+      "bodyFlames": 0,
+      "heatColumns": 0,
+      "burning": 0,
+      "bursts": 0,
+      "ring": false
+    },
+    "ground": {
+      "segments": 29,
+      "alpha": 0.2196679245312704,
+      "sparks": 0,
+      "radius": 391.1511950137164,
+      "arcs": 7,
+      "geometry": 130,
+      "builds": 1,
+      "pass": 4,
+      "activeCells": [
+        8,
+        21,
+        4,
+        17,
+        12,
+        22,
+        1
+      ]
+    },
+    "frost": {
+      "phase": "idle",
+      "frozen": 0,
+      "batches": 3,
+      "nova": null
+    },
+    "allocatedAsh": 16,
+    "activeAsh": 0,
+    "allocatedAura": 2,
+    "activeAura": 0,
+    "phase": "idle",
+    "casting": false,
+    "dim": 0,
+    "flash": 0,
+    "aura": false,
+    "auraStrength": 0,
+    "sky": false,
+    "skyAlpha": 0,
+    "web": 0
+  }
+}

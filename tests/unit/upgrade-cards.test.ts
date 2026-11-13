@@ -30,3 +30,8 @@ it('reads ranked control/meteor and Blink bonuses from existing balance data wit
   for (const u of UPGRADES) upgradeCard({ ...u, tier: 3 });
   expect(JSON.stringify(w)).toBe(before);
 });
+it.each([1, 2, 3])('shows the Berserk rank%i sprint bonus and refresh rule in the upgrade card', tier => {
+  const card = upgradeCard({ id: 'mobility-berserk', tier, description: '' });
+  expect(card.summary).toContain(`скорость движения +${[30, 35, 40][tier - 1]}%`);
+  expect(card.summary).toContain('На 2с'); expect(card.summary).toContain('без накопления');
+});

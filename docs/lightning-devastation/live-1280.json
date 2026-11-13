@@ -1,0 +1,591 @@
+{
+  "linked": 3,
+  "hits": [
+    {
+      "id": 1,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 3,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 4,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 2,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 5,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 6,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 7,
+      "at": 601.7987800000011
+    },
+    {
+      "id": 8,
+      "at": 601.7987800000011
+    }
+  ],
+  "frames": [
+    {
+      "age": 0.26619333333349005,
+      "live": 8,
+      "kills": 0,
+      "art": {
+        "lightning": {
+          "active": [],
+          "allocated": 0,
+          "limit": 1181,
+          "segmentLength": 80,
+          "atlasBytes": 10790208
+        },
+        "batches": 9,
+        "fire": {
+          "phase": "idle",
+          "objects": 5,
+          "batches": 4,
+          "radius": 164,
+          "glowWidth": 128,
+          "glowHeight": 128,
+          "glowAlpha": 0,
+          "bodyFlames": 0,
+          "heatColumns": 0,
+          "burning": 0,
+          "bursts": 0,
+          "ring": false
+        },
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 0,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 0,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "frozen": 0,
+          "batches": 3,
+          "nova": null
+        },
+        "allocatedAsh": 0,
+        "activeAsh": 0,
+        "allocatedAura": 0,
+        "activeAura": 0,
+        "phase": "invocation",
+        "casting": true,
+        "dim": 0.24,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 1,
+        "web": 0
+      },
+      "bytes": 748730
+    },
+    {
+      "age": 0.6156466666672031,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "lightning": {
+          "active": [
+            {
+              "kind": "primary",
+              "frame": "ultimate-branch-4",
+              "x": 15.211267605633802,
+              "y": -24.14486921529175,
+              "width": 30.278595500136994,
+              "height": 84,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": 1.1856291487838575,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 1,
+              "segmentIndex": 0,
+              "segmentCount": 1
+            },
+            {
+              "kind": "impact",
+              "frame": "ultimate-impact-8",
+              "x": 25,
+              "y": 0,
+              "width": 100,
+              "height": 60,
+              "originX": 0.5,
+              "originY": 0.5,
+              "rotation": 0,
+              "depth": 14.3,
+              "alpha": 1,
+              "targetId": 1
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 25,
+              "y": 0,
+              "width": 62.414540186711385,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": 1.8242375995931337,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 3,
+              "segmentIndex": 0,
+              "segmentCount": 3
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 11.53404720685652,
+              "y": 51.98992748424713,
+              "width": 63.284872749359984,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": 1.5353114039788582,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 3,
+              "segmentIndex": 1,
+              "segmentCount": 3
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 13.465952793143483,
+              "y": 106.41007251575286,
+              "width": 62.414540186711406,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": 1.8242375995931337,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 3,
+              "segmentIndex": 2,
+              "segmentCount": 3
+            },
+            {
+              "kind": "impact",
+              "frame": "ultimate-impact-8",
+              "x": 0,
+              "y": 158.4,
+              "width": 100,
+              "height": 60,
+              "originX": 0.5,
+              "originY": 0.5,
+              "rotation": 0,
+              "depth": 14.3,
+              "alpha": 1,
+              "targetId": 3
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 25,
+              "y": 0,
+              "width": 62.414540186711385,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": -1.8242375995931337,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 4,
+              "segmentIndex": 0,
+              "segmentCount": 3
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 11.53404720685652,
+              "y": -51.98992748424713,
+              "width": 63.284872749359984,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": -1.5353114039788582,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 4,
+              "segmentIndex": 1,
+              "segmentCount": 3
+            },
+            {
+              "kind": "branch",
+              "frame": "ultimate-branch-4",
+              "x": 13.465952793143483,
+              "y": -106.41007251575286,
+              "width": 62.414540186711406,
+              "height": 57.75000000000001,
+              "originX": 0.027131782945736434,
+              "originY": 0.47619047619047616,
+              "rotation": -1.8242375995931337,
+              "depth": 14.2,
+              "alpha": 1,
+              "targetId": 4,
+              "segmentIndex": 2,
+              "segmentCount": 3
+            },
+            {
+              "kind": "impact",
+              "frame": "ultimate-impact-8",
+              "x": 0,
+              "y": -158.4,
+              "width": 100,
+              "height": 60,
+              "originX": 0.5,
+              "originY": 0.5,
+              "rotation": 0,
+              "depth": 14.3,
+              "alpha": 1,
+              "targetId": 4
+            }
+          ],
+          "allocated": 10,
+          "limit": 1181,
+          "segmentLength": 80,
+          "atlasBytes": 10790208
+        },
+        "batches": 9,
+        "fire": {
+          "phase": "idle",
+          "objects": 5,
+          "batches": 4,
+          "radius": 164,
+          "glowWidth": 128,
+          "glowHeight": 128,
+          "glowAlpha": 0,
+          "bodyFlames": 0,
+          "heatColumns": 0,
+          "burning": 0,
+          "bursts": 0,
+          "ring": false
+        },
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 0,
+          "geometry": 130,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "frozen": 0,
+          "batches": 3,
+          "nova": null
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recoil",
+        "casting": false,
+        "dim": 0.15054969606661883,
+        "flash": 0.16096476576707344,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "bytes": 790278
+    },
+    {
+      "age": 1.1149000000017395,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "lightning": {
+          "active": [],
+          "allocated": 10,
+          "limit": 1181,
+          "segmentLength": 80,
+          "atlasBytes": 10790208
+        },
+        "batches": 9,
+        "fire": {
+          "phase": "idle",
+          "objects": 5,
+          "batches": 4,
+          "radius": 164,
+          "glowWidth": 128,
+          "glowHeight": 128,
+          "glowAlpha": 0,
+          "bodyFlames": 0,
+          "heatColumns": 0,
+          "burning": 0,
+          "bursts": 0,
+          "ring": false
+        },
+        "ground": {
+          "segments": 24,
+          "alpha": 0.28669666671492167,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 6,
+          "geometry": 130,
+          "builds": 1,
+          "pass": 1,
+          "activeCells": [
+            7,
+            23,
+            13,
+            16,
+            3,
+            24
+          ]
+        },
+        "frost": {
+          "phase": "idle",
+          "frozen": 0,
+          "batches": 3,
+          "nova": null
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "bytes": 778666
+    },
+    {
+      "age": 1.9143766666689999,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "lightning": {
+          "active": [],
+          "allocated": 10,
+          "limit": 1181,
+          "segmentLength": 80,
+          "atlasBytes": 10790208
+        },
+        "batches": 9,
+        "fire": {
+          "phase": "idle",
+          "objects": 5,
+          "batches": 4,
+          "radius": 164,
+          "glowWidth": 128,
+          "glowHeight": 128,
+          "glowAlpha": 0,
+          "bodyFlames": 0,
+          "heatColumns": 0,
+          "burning": 0,
+          "bursts": 0,
+          "ring": false
+        },
+        "ground": {
+          "segments": 18,
+          "alpha": 0.20116003018095094,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 4,
+          "geometry": 130,
+          "builds": 1,
+          "pass": 4,
+          "activeCells": [
+            0,
+            6,
+            20,
+            10
+          ]
+        },
+        "frost": {
+          "phase": "idle",
+          "frozen": 0,
+          "batches": 3,
+          "nova": null
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 0,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "bytes": 801586
+    },
+    {
+      "age": 2.6643966666682672,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "lightning": {
+          "active": [],
+          "allocated": 10,
+          "limit": 1181,
+          "segmentLength": 80,
+          "atlasBytes": 10790208
+        },
+        "batches": 9,
+        "fire": {
+          "phase": "idle",
+          "objects": 5,
+          "batches": 4,
+          "radius": 164,
+          "glowWidth": 128,
+          "glowHeight": 128,
+          "glowAlpha": 0,
+          "bodyFlames": 0,
+          "heatColumns": 0,
+          "burning": 0,
+          "bursts": 0,
+          "ring": false
+        },
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 0,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 1,
+          "pass": 0,
+          "activeCells": []
+        },
+        "frost": {
+          "phase": "idle",
+          "frozen": 0,
+          "batches": 3,
+          "nova": null
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 0,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "bytes": 825590
+    }
+  ],
+  "audio": {
+    "unlocked": true,
+    "supported": true,
+    "running": true,
+    "status": "playing",
+    "voices": 0,
+    "tracks": 0,
+    "peakVoices": 2,
+    "peakLoops": 2,
+    "requested": {
+      "ui.select": 1,
+      "ui.start": 1,
+      "ultimate.charge": 1,
+      "ultimate.sky": 1,
+      "ultimate.overload": 1,
+      "ultimate.lightning": 1,
+      "pickup.xp": 1
+    },
+    "played": {
+      "ui.select": 1,
+      "ui.start": 1,
+      "ultimate.charge": 1,
+      "ultimate.sky": 1,
+      "ultimate.overload": 1,
+      "ultimate.lightning": 1,
+      "pickup.xp": 1
+    },
+    "rejected": {
+      "blocked": 0,
+      "muted": 0,
+      "throttled": 0,
+      "budget": 0,
+      "unavailable": 0
+    },
+    "volumes": {
+      "master": 0.3,
+      "music": 0.32,
+      "sfx": 0.8,
+      "ui": 0.6400000000000001,
+      "ambient": 0.17600000000000002
+    },
+    "muted": false,
+    "nodes": 11,
+    "sources": 1,
+    "loops": 1,
+    "failedAssets": 0,
+    "samplesLoaded": 16,
+    "samplesPending": 0,
+    "sampleFallbacks": 0,
+    "samplePlays": {
+      "mage-ultimate-charge": 1,
+      "mage-ultimate-sky": 1,
+      "mage-ultimate-overload": 1,
+      "mage-ultimate-release": 1
+    },
+    "decodedBytes": 5015060,
+    "rms": 0.0037977724979253026,
+    "music": {
+      "target": "dying",
+      "current": "dying",
+      "players": 2,
+      "playing": 1,
+      "pending": 0,
+      "crossfades": 1,
+      "repeats": 0,
+      "failed": [],
+      "decks": [
+        {
+          "track": "dying",
+          "time": 0,
+          "duration": 60,
+          "playing": false,
+          "pending": false
+        },
+        {
+          "track": "dying",
+          "time": 3.018667,
+          "duration": 60,
+          "playing": true,
+          "pending": false
+        }
+      ]
+    }
+  },
+  "errors": []
+}

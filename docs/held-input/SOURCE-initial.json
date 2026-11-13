@@ -1,0 +1,18 @@
+﻿[
+    {
+        "sha256":  "642917FC31A217BEF1DB7741A55E2CD3ABAC8871C4618690BBEFC371F7E2979F",
+        "path":  "src/game/input/HeldInputTracker.ts"
+    },
+    {
+        "sha256":  "A4329E14170C4A0CCCBA46697D81E5CAE207023A51971E60DFF0811272A5FC10",
+        "path":  "src/game/scenes/GameScene.ts"
+    },
+    {
+        "sha256":  "D84EC6B1127A086D48B4DFCC671168849C452982775811E933D318ED9CA116FD",
+        "path":  "tests/unit/held-input.test.ts"
+    },
+    {
+        "sha256":  "1B3A6E933E6AEBC378B1EBB5C3569F54DB8CADC5007913E2FB26DCC613F23FAB",
+        "path":  "tests/e2e/held-movement.spec.ts"
+    }
+]

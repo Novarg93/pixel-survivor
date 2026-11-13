@@ -1,0 +1,353 @@
+{
+  "viewport": {
+    "width": 640,
+    "height": 360
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "radius": 391.1511950137164,
+  "linked": [
+    1,
+    3,
+    4
+  ],
+  "targets": [
+    {
+      "id": 1,
+      "x": 25,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "x": -288,
+      "y": 0
+    },
+    {
+      "id": 3,
+      "x": 0,
+      "y": 158.4
+    },
+    {
+      "id": 4,
+      "x": 0,
+      "y": -158.4
+    },
+    {
+      "id": 5,
+      "x": -294.40000000000003,
+      "y": -158.4
+    },
+    {
+      "id": 6,
+      "x": -294.40000000000003,
+      "y": 158.4
+    },
+    {
+      "id": 7,
+      "x": 294.40000000000003,
+      "y": -158.4
+    },
+    {
+      "id": 8,
+      "x": 294.40000000000003,
+      "y": 158.4
+    }
+  ],
+  "hits": [
+    {
+      "id": 1,
+      "at": 601.682370000001
+    },
+    {
+      "id": 3,
+      "at": 601.682370000001
+    },
+    {
+      "id": 4,
+      "at": 601.682370000001
+    },
+    {
+      "id": 2,
+      "at": 601.682370000001
+    },
+    {
+      "id": 5,
+      "at": 601.682370000001
+    },
+    {
+      "id": 6,
+      "at": 601.682370000001
+    },
+    {
+      "id": 7,
+      "at": 601.682370000001
+    },
+    {
+      "id": 8,
+      "at": 601.682370000001
+    }
+  ],
+  "frames": [
+    {
+      "age": 0,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 0,
+          "geometry": 112,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "release",
+        "casting": false,
+        "dim": 0.24,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 98,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.08315666666658217,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 477,
+          "alpha": 0.7,
+          "sparks": 18,
+          "radius": 391.1511950137164,
+          "arcs": 112,
+          "geometry": 112,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recoil",
+        "casting": false,
+        "dim": 0.150584546816747,
+        "flash": 0.16107204237921238,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "objects": 99,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.14968999999973676,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 477,
+          "alpha": 0.6673336636251788,
+          "sparks": 18,
+          "radius": 391.1511950137164,
+          "arcs": 112,
+          "geometry": 112,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recoil",
+        "casting": false,
+        "dim": 0.09398264415019768,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "objects": 99,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.28280666666637444,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 471,
+          "alpha": 0.37132047026198917,
+          "sparks": 16,
+          "radius": 391.1511950137164,
+          "arcs": 110,
+          "geometry": 112,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "recovery",
+        "casting": false,
+        "dim": 0.020601416066769407,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 1
+      },
+      "objects": 99,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.4158533333327341,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 75,
+          "alpha": 0.07546293677322839,
+          "sparks": 3,
+          "radius": 391.1511950137164,
+          "arcs": 18,
+          "geometry": 112,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 99,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "age": 0.5322566666658304,
+      "live": 0,
+      "kills": 8,
+      "art": {
+        "batches": 5,
+        "ground": {
+          "segments": 0,
+          "alpha": 0,
+          "sparks": 0,
+          "radius": 391.1511950137164,
+          "arcs": 0,
+          "geometry": 0,
+          "builds": 1
+        },
+        "frost": {
+          "phase": "idle",
+          "segments": 0,
+          "geometry": 0,
+          "frozen": 0,
+          "batches": 2
+        },
+        "allocatedAsh": 8,
+        "activeAsh": 8,
+        "allocatedAura": 2,
+        "activeAura": 0,
+        "phase": "idle",
+        "casting": false,
+        "dim": 0,
+        "flash": 0,
+        "aura": false,
+        "auraStrength": 0,
+        "sky": false,
+        "skyAlpha": 0,
+        "web": 0
+      },
+      "objects": 99,
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "errors": []
+}

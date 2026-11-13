@@ -1,0 +1,67 @@
+{
+  "branch": "main",
+  "transitionWindowsSeconds": [
+    [
+      300,
+      302.5
+    ],
+    [
+      600,
+      602.5
+    ],
+    [
+      900,
+      902.5
+    ]
+  ],
+  "ultimateEligibility": {
+    "secondsAtLeast": 300,
+    "queuedLevelAtLeast": 30,
+    "offer": "on level-up, both thresholds inclusive"
+  },
+  "check": {
+    "exit": 0,
+    "tests": 586,
+    "files": 72
+  },
+  "browser": {
+    "uniqueScenariosCovered": 42,
+    "initial": {
+      "passed": 41,
+      "total": 42,
+      "exit": 1
+    },
+    "lightningRepeat": {
+      "passed": 5,
+      "total": 6,
+      "exit": 1
+    },
+    "correctedPixelControl": {
+      "passed": 1,
+      "total": 1,
+      "exit": 0
+    },
+    "recoveryPixelDifference": 0,
+    "note": "One test fixture isolated the cinematic by matching the fog clock; no runtime edits after initial run."
+  },
+  "production": {
+    "passed": 7,
+    "total": 7,
+    "seconds": 35.6,
+    "exit": 0
+  },
+  "diffCheck": 0,
+  "videos": [
+    "screenshots/atmosphere-fast/transitions-1280.webm",
+    "screenshots/atmosphere-fast/transitions-844.webm"
+  ],
+  "blockers": [],
+  "next": "accepted and pushed; stopped",
+  "commit": true,
+  "push": true,
+  "deploy": false,
+  "commitHash": "e60adef439ade3bd470aec429d28ad5857c7ebc4",
+  "remoteMainVerified": true,
+  "ahead": 0,
+  "behind": 0
+}

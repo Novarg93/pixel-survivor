@@ -1,0 +1,131 @@
+{
+  "context": "Isolated30s DPS measurement, actual abilities, no ult activation. Target held at100/240world units,1e9HP to avoid death; encounter attacks disabled. This is not survival/TTK evidence.",
+  "rows": [
+    {
+      "build": {
+        "profile": "moderate",
+        "ultimate": "lightning",
+        "choices": 35,
+        "level": 36,
+        "stats": {
+          "damage": 1.5,
+          "cooldown": 0.7290000000000001,
+          "projectiles": 2,
+          "area": 1.2999999999999998,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 100,
+      "seconds": 30,
+      "hpRemoved": 9407.999997615814,
+      "dps": 313.5999999205271
+    },
+    {
+      "build": {
+        "profile": "moderate",
+        "ultimate": "lightning",
+        "choices": 35,
+        "level": 36,
+        "stats": {
+          "damage": 1.5,
+          "cooldown": 0.7290000000000001,
+          "projectiles": 2,
+          "area": 1.2999999999999998,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 240,
+      "seconds": 30,
+      "hpRemoved": 9307.199997663498,
+      "dps": 310.2399999221166
+    },
+    {
+      "build": {
+        "profile": "typical",
+        "ultimate": "lightning",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 100,
+      "seconds": 30,
+      "hpRemoved": 31919.062494277954,
+      "dps": 1063.968749809265
+    },
+    {
+      "build": {
+        "profile": "typical",
+        "ultimate": "lightning",
+        "choices": 53,
+        "level": 54,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.4499999999999997,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 240,
+      "seconds": 30,
+      "hpRemoved": 21378.26249718666,
+      "dps": 712.608749906222
+    },
+    {
+      "build": {
+        "profile": "high",
+        "ultimate": "lightning",
+        "choices": 59,
+        "level": 60,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.5999999999999996,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 100,
+      "seconds": 30,
+      "hpRemoved": 46008.000014305115,
+      "dps": 1533.600000476837
+    },
+    {
+      "build": {
+        "profile": "high",
+        "ultimate": "lightning",
+        "choices": 59,
+        "level": 60,
+        "stats": {
+          "damage": 2.25,
+          "cooldown": 0.5904900000000002,
+          "projectiles": 4,
+          "area": 1.5999999999999996,
+          "pickup": 55
+        },
+        "hp": 200,
+        "speed": 189
+      },
+      "range": 240,
+      "seconds": 30,
+      "hpRemoved": 34052.40000844002,
+      "dps": 1135.080000281334
+    }
+  ]
+}

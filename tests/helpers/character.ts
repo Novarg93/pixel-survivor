@@ -1,7 +1,7 @@
 import { expect, type Page } from '@playwright/test';
 import type { CharacterId } from '../../src/game/config/characters';
 
-// Explicit DEV fixture. Public menu access remains Mage-only in every build.
+// Explicit DEV fixture. Public menu also supports the accepted Warrior.
 // Existing Warrior gameplay/restart assertions must keep exercising Warrior.
 export async function selectTestCharacter(page: Page, hero: string) {
   if (hero !== 'Mage' && hero !== 'Warrior') throw new Error('Unknown fixture character: ' + hero);

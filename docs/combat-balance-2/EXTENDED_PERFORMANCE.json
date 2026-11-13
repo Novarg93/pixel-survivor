@@ -1,0 +1,1301 @@
+{
+  "fixture": "DPR1/pixelScale3; actual AI and five rank3 autoattacks ON; moving keyboard pilot; invulnerability; initial150mixed+3boss+Guardian+loot+5artifacts+buffs; test refill after kills keeps150. 0.5s warmup+6s RAF. No normal balance/phone/VRAM claim. Test-only XP offers validated and dismissed to hold five rankIII skills.",
+  "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+  "browser": "156.0.8078.4",
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "results": [
+    {
+      "hero": "Mage",
+      "dark": false,
+      "width": 1280,
+      "fps": 59.99999999999999,
+      "frameMsP95": 16.799999999999272,
+      "updateMsP95": 1.4000000059604645,
+      "minMobs": 150,
+      "maxProjectiles": 50,
+      "maxEffects": 96,
+      "maxOrbs": 114,
+      "maxObjects": 556,
+      "replenished": 91,
+      "heldUpgrades": 0,
+      "kills": 135,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "fireball",
+          "level": 3,
+          "readyIn": 0.41865000000029795
+        },
+        {
+          "id": "frost",
+          "level": 3,
+          "readyIn": 1.4486400000012054
+        },
+        {
+          "id": "lightning",
+          "level": 3,
+          "readyIn": 3.1293299999999817
+        },
+        {
+          "id": "meteor",
+          "level": 3,
+          "readyIn": 4.08064000000104
+        },
+        {
+          "id": "shield",
+          "level": 3,
+          "readyIn": 4.816403333331436
+        }
+      ],
+      "actors": 294
+    },
+    {
+      "hero": "Mage",
+      "dark": false,
+      "width": 390,
+      "fps": 60.000664827310985,
+      "frameMsP95": 16.799999999999955,
+      "updateMsP95": 1.300000011920929,
+      "minMobs": 150,
+      "maxProjectiles": 50,
+      "maxEffects": 96,
+      "maxOrbs": 127,
+      "maxObjects": 580,
+      "replenished": 99,
+      "heldUpgrades": 0,
+      "kills": 150,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "fireball",
+          "level": 3,
+          "readyIn": 0.36867000000029293
+        },
+        {
+          "id": "frost",
+          "level": 3,
+          "readyIn": 1.3986400000012509
+        },
+        {
+          "id": "lightning",
+          "level": 3,
+          "readyIn": 3.079340000000002
+        },
+        {
+          "id": "meteor",
+          "level": 3,
+          "readyIn": 4.030640000001085
+        },
+        {
+          "id": "shield",
+          "level": 3,
+          "readyIn": 4.766113333332214
+        }
+      ],
+      "actors": 311
+    },
+    {
+      "hero": "Mage",
+      "dark": true,
+      "width": 1280,
+      "fps": 59.8333333333333,
+      "frameMsP95": 16.799999999999727,
+      "updateMsP95": 1.300000011920929,
+      "minMobs": 150,
+      "maxProjectiles": 50,
+      "maxEffects": 96,
+      "maxOrbs": 119,
+      "maxObjects": 566,
+      "replenished": 92,
+      "heldUpgrades": 0,
+      "kills": 140,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "fireball",
+          "level": 3,
+          "readyIn": 0.41867000000024746
+        },
+        {
+          "id": "frost",
+          "level": 3,
+          "readyIn": 1.4486800000011044
+        },
+        {
+          "id": "lightning",
+          "level": 3,
+          "readyIn": 3.1293399999999565
+        },
+        {
+          "id": "meteor",
+          "level": 3,
+          "readyIn": 4.080680000000939
+        },
+        {
+          "id": "shield",
+          "level": 3,
+          "readyIn": 4.816026666665721
+        }
+      ],
+      "actors": 295
+    },
+    {
+      "hero": "Mage",
+      "dark": true,
+      "width": 390,
+      "fps": 59.833333333333215,
+      "frameMsP95": 16.799999999999955,
+      "updateMsP95": 1.4000000059604645,
+      "minMobs": 150,
+      "maxProjectiles": 48,
+      "maxEffects": 96,
+      "maxOrbs": 132,
+      "maxObjects": 584,
+      "replenished": 100,
+      "heldUpgrades": 0,
+      "kills": 153,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "fireball",
+          "level": 3,
+          "readyIn": 0.40200000000027103
+        },
+        {
+          "id": "frost",
+          "level": 3,
+          "readyIn": 1.4319900000011785
+        },
+        {
+          "id": "lightning",
+          "level": 3,
+          "readyIn": 3.11266999999998
+        },
+        {
+          "id": "meteor",
+          "level": 3,
+          "readyIn": 4.063990000001013
+        },
+        {
+          "id": "shield",
+          "level": 3,
+          "readyIn": 4.799356666665744
+        }
+      ],
+      "actors": 312
+    },
+    {
+      "hero": "Warrior",
+      "dark": false,
+      "width": 1280,
+      "fps": 60.00100001666686,
+      "frameMsP95": 16.799999999999727,
+      "updateMsP95": 1.4000000059604645,
+      "minMobs": 150,
+      "maxProjectiles": 48,
+      "maxEffects": 96,
+      "maxOrbs": 151,
+      "maxObjects": 595,
+      "replenished": 191,
+      "heldUpgrades": 0,
+      "kills": 253,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "cleave",
+          "level": 3,
+          "readyIn": 0.6146900000001096
+        },
+        {
+          "id": "whirlwind",
+          "level": 3,
+          "readyIn": 0.2673400000028323
+        },
+        {
+          "id": "slam",
+          "level": 3,
+          "readyIn": 2.512030000001687
+        },
+        {
+          "id": "blades",
+          "level": 3,
+          "readyIn": 5.507990000000291
+        },
+        {
+          "id": "iron",
+          "level": 3,
+          "readyIn": 3.826256666665131
+        }
+      ],
+      "actors": 340
+    },
+    {
+      "hero": "Warrior",
+      "dark": false,
+      "width": 390,
+      "fps": 59.9999999999999,
+      "frameMsP95": 16.799999999999955,
+      "updateMsP95": 1.4000000059604645,
+      "minMobs": 150,
+      "maxProjectiles": 48,
+      "maxEffects": 96,
+      "maxOrbs": 155,
+      "maxObjects": 598,
+      "replenished": 206,
+      "heldUpgrades": 1,
+      "kills": 274,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "cleave",
+          "level": 3,
+          "readyIn": 0.732340000000022
+        },
+        {
+          "id": "whirlwind",
+          "level": 3,
+          "readyIn": 0.28401000000280874
+        },
+        {
+          "id": "slam",
+          "level": 3,
+          "readyIn": 2.5286900000016885
+        },
+        {
+          "id": "blades",
+          "level": 3,
+          "readyIn": 5.920660000000225
+        },
+        {
+          "id": "iron",
+          "level": 3,
+          "readyIn": 3.842659999999114
+        }
+      ],
+      "actors": 344
+    },
+    {
+      "hero": "Warrior",
+      "dark": true,
+      "width": 1280,
+      "fps": 59.833333333333314,
+      "frameMsP95": 16.799999999999727,
+      "updateMsP95": 1.5,
+      "minMobs": 150,
+      "maxProjectiles": 48,
+      "maxEffects": 96,
+      "maxOrbs": 140,
+      "maxObjects": 599,
+      "replenished": 178,
+      "heldUpgrades": 0,
+      "kills": 242,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "cleave",
+          "level": 3,
+          "readyIn": 0.7323499999999967
+        },
+        {
+          "id": "whirlwind",
+          "level": 3,
+          "readyIn": 0.28401000000280874
+        },
+        {
+          "id": "slam",
+          "level": 3,
+          "readyIn": 2.528670000001739
+        },
+        {
+          "id": "blades",
+          "level": 3,
+          "readyIn": 5.92069000000015
+        },
+        {
+          "id": "iron",
+          "level": 3,
+          "readyIn": 3.842796666664526
+        }
+      ],
+      "actors": 328
+    },
+    {
+      "hero": "Warrior",
+      "dark": true,
+      "width": 390,
+      "fps": 59.83233612773109,
+      "frameMsP95": 16.799999999999955,
+      "updateMsP95": 1.4000000059604645,
+      "minMobs": 150,
+      "maxProjectiles": 48,
+      "maxEffects": 96,
+      "maxOrbs": 114,
+      "maxObjects": 557,
+      "replenished": 187,
+      "heldUpgrades": 1,
+      "kills": 248,
+      "playing": "playing",
+      "abilities": [
+        {
+          "id": "cleave",
+          "level": 3,
+          "readyIn": 0.7656700000000001
+        },
+        {
+          "id": "whirlwind",
+          "level": 3,
+          "readyIn": 0.31732000000283733
+        },
+        {
+          "id": "slam",
+          "level": 3,
+          "readyIn": 2.5619800000017676
+        },
+        {
+          "id": "blades",
+          "level": 3,
+          "readyIn": 5.953980000000229
+        },
+        {
+          "id": "iron",
+          "level": 3,
+          "readyIn": 3.8760199999990164
+        }
+      ],
+      "actors": 300
+    }
+  ],
+  "restarts": [
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    },
+    {
+      "heroFrame": "warrior-down-idle-0",
+      "atlasFrames": 37,
+      "runner": {
+        "atlasFrames": 36,
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "textures": [
+        "hd-core",
+        "hd-runner",
+        "hd-mage",
+        "hd-enemies",
+        "hd-guardian",
+        "hd-loot",
+        "hd-bosses",
+        "chunk--2--3",
+        "chunk--2--2",
+        "chunk--2--1",
+        "chunk--2-0",
+        "chunk--2-1",
+        "chunk--2-2",
+        "chunk--1--3",
+        "chunk--1--2",
+        "chunk--1--1",
+        "chunk--1-0",
+        "chunk--1-1",
+        "chunk--1-2",
+        "chunk-0--3",
+        "chunk-0--2",
+        "chunk-0--1",
+        "chunk-0-0",
+        "chunk-0-1",
+        "chunk-0-2",
+        "chunk-1--3",
+        "chunk-1--2",
+        "chunk-1--1",
+        "chunk-1-0",
+        "chunk-1-1",
+        "chunk-1-2"
+      ],
+      "chunks": 24,
+      "textureBytes": 30403920,
+      "loot": {
+        "tracked": 0,
+        "active": 0,
+        "allocated": 0,
+        "frames": []
+      },
+      "packed": {
+        "tracked": 150,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "replaced": 0,
+        "corpses": []
+      },
+      "guardian": {
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "frame": null
+      },
+      "eliteAdornments": 0,
+      "bosses": {
+        "tracked": 0,
+        "activeDeaths": 0,
+        "allocatedDeaths": 0,
+        "corpses": []
+      },
+      "shadows": 151,
+      "cleaves": 0,
+      "objects": 330,
+      "layers": [
+        {
+          "name": "friendly-feedback",
+          "depth": 14
+        },
+        {
+          "name": "hostile-tells",
+          "depth": 20
+        }
+      ],
+      "tweens": 0,
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "blurListeners": 4,
+      "actors": 151
+    }
+  ],
+  "errors": []
+}

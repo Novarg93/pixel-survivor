@@ -1,0 +1,2409 @@
+{
+  "fixture": "Actual Phaser RAF, seed12345, same fixed Mage40 build as deterministic comparisons,45s maximum, no test invulnerability; future encounters follow real director",
+  "result": {
+    "mode": "move",
+    "seconds": 45.01382999996315,
+    "status": "paused",
+    "hp": 180,
+    "maxHp": 180,
+    "damageTaken": 0,
+    "hits": 0,
+    "blocked": 0,
+    "attempts": 0,
+    "shots": 52,
+    "kills": 377,
+    "blinks": 0,
+    "peakRegular": 67,
+    "peakBosses": 1,
+    "peakGuardians": 0,
+    "invalidInvulnerability": false
+  },
+  "samples": [
+    {
+      "mode": "move",
+      "seconds": 0.9818600000012339,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 2,
+      "blinks": 0,
+      "peakRegular": 6,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 55,
+        "updateMs": 0.3999999985098839,
+        "enemies": 4,
+        "projectiles": 5,
+        "orbs": 2,
+        "effects": 7,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 11,
+        "pooledSprites": 2,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 7,
+          "markers": 4,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 0,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 0,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 2,
+          "projectiles": 5,
+          "effects": 8
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 1.9804000000025326,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 4,
+      "blinks": 0,
+      "peakRegular": 12,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 56.25,
+        "updateMs": 0.7000000029802322,
+        "enemies": 11,
+        "projectiles": 15,
+        "orbs": 4,
+        "effects": 4,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 30,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 12,
+          "markers": 11,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 0,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 0,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 4,
+          "projectiles": 15,
+          "effects": 8
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 2.9971100000014985,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 12,
+      "blinks": 0,
+      "peakRegular": 14,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 57.1875,
+        "updateMs": 0.5,
+        "enemies": 12,
+        "projectiles": 30,
+        "orbs": 12,
+        "effects": 18,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 54,
+        "pooledSprites": 0,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 16,
+          "markers": 9,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 0,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 0,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 12,
+          "projectiles": 30,
+          "effects": 18
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 3.997110000000589,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 17,
+      "blinks": 0,
+      "peakRegular": 19,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 57.890625,
+        "updateMs": 0.5,
+        "enemies": 18,
+        "projectiles": 30,
+        "orbs": 15,
+        "effects": 6,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 64,
+        "pooledSprites": 0,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 21,
+          "markers": 20,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 16,
+          "projectiles": 30,
+          "effects": 18
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 5.013779999999656,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 26,
+      "blinks": 0,
+      "peakRegular": 19,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 58.41796875,
+        "updateMs": 0.5,
+        "enemies": 18,
+        "projectiles": 24,
+        "orbs": 22,
+        "effects": 12,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 65,
+        "pooledSprites": 3,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 26,
+          "markers": 19,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 22,
+          "projectiles": 30,
+          "effects": 18
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 6.030439999998748,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 27,
+      "blinks": 0,
+      "peakRegular": 26,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 58.8134765625,
+        "updateMs": 0.7000000029802322,
+        "enemies": 26,
+        "projectiles": 25,
+        "orbs": 21,
+        "effects": 2,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 73,
+        "pooledSprites": 3,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 31,
+          "markers": 27,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 22,
+          "projectiles": 30,
+          "effects": 18
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 7.030439999997839,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 35,
+      "blinks": 0,
+      "peakRegular": 30,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.110107421875,
+        "updateMs": 0.7000000029802322,
+        "enemies": 29,
+        "projectiles": 25,
+        "orbs": 28,
+        "effects": 20,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 83,
+        "pooledSprites": 2,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 36,
+          "markers": 30,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 1,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 1,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 28,
+          "projectiles": 30,
+          "effects": 23
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 8.047109999996906,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 41,
+      "blinks": 0,
+      "peakRegular": 32,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.33258056640625,
+        "updateMs": 0.7999999970197678,
+        "enemies": 32,
+        "projectiles": 23,
+        "orbs": 34,
+        "effects": 3,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 91,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 40,
+          "markers": 31,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 34,
+          "projectiles": 30,
+          "effects": 23
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 9.047099999996021,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 50,
+      "blinks": 0,
+      "peakRegular": 34,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.49943542480469,
+        "updateMs": 0.7000000029802322,
+        "enemies": 27,
+        "projectiles": 21,
+        "orbs": 43,
+        "effects": 25,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 93,
+        "pooledSprites": 13,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 45,
+          "markers": 30,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 43,
+          "projectiles": 30,
+          "effects": 25
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 10.063759999995114,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 53,
+      "blinks": 0,
+      "peakRegular": 34,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.624576568603516,
+        "updateMs": 0.7000000029802322,
+        "enemies": 33,
+        "projectiles": 21,
+        "orbs": 46,
+        "effects": 9,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 102,
+        "pooledSprites": 7,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 50,
+          "markers": 35,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 46,
+          "projectiles": 30,
+          "effects": 25
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 11.35713999999382,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 69,
+      "blinks": 0,
+      "peakRegular": 38,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.71843242645264,
+        "updateMs": 0.8999999985098839,
+        "enemies": 33,
+        "projectiles": 17,
+        "orbs": 62,
+        "effects": 12,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 114,
+        "pooledSprites": 10,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 56,
+          "markers": 34,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 62,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 12.380449999992948,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 73,
+      "blinks": 0,
+      "peakRegular": 38,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.78882431983948,
+        "updateMs": 0.7000000029802322,
+        "enemies": 36,
+        "projectiles": 24,
+        "orbs": 66,
+        "effects": 10,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 128,
+        "pooledSprites": 4,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 61,
+          "markers": 37,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 66,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 13.380469999991988,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 79,
+      "blinks": 0,
+      "peakRegular": 40,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.84161823987961,
+        "updateMs": 0.5,
+        "enemies": 40,
+        "projectiles": 20,
+        "orbs": 72,
+        "effects": 3,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 134,
+        "pooledSprites": 2,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 66,
+          "markers": 41,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 72,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 14.397139999991055,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 85,
+      "blinks": 0,
+      "peakRegular": 43,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.881213679909706,
+        "updateMs": 0.7999999970197678,
+        "enemies": 42,
+        "projectiles": 20,
+        "orbs": 78,
+        "effects": 6,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 142,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 70,
+          "markers": 40,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 78,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 15.397119999990196,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 96,
+      "blinks": 0,
+      "peakRegular": 43,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.91091025993228,
+        "updateMs": 0.6000000014901161,
+        "enemies": 40,
+        "projectiles": 23,
+        "orbs": 88,
+        "effects": 2,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 153,
+        "pooledSprites": 2,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 75,
+          "markers": 37,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 88,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 16.413819999989187,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 0,
+      "kills": 100,
+      "blinks": 0,
+      "peakRegular": 44,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.93318269494921,
+        "updateMs": 0.7000000029802322,
+        "enemies": 43,
+        "projectiles": 19,
+        "orbs": 92,
+        "effects": 5,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 156,
+        "pooledSprites": 5,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 80,
+          "markers": 43,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 92,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 17.39712999998835,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 1,
+      "kills": 103,
+      "blinks": 0,
+      "peakRegular": 50,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.94988702121191,
+        "updateMs": 0.6000000014901161,
+        "enemies": 48,
+        "projectiles": 25,
+        "orbs": 94,
+        "effects": 7,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 169,
+        "pooledSprites": 3,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 85,
+          "markers": 48,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 94,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 18.41379999998742,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 1,
+      "kills": 111,
+      "blinks": 0,
+      "peakRegular": 52,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.96241526590893,
+        "updateMs": 0.8000000044703484,
+        "enemies": 49,
+        "projectiles": 25,
+        "orbs": 101,
+        "effects": 12,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 177,
+        "pooledSprites": 6,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 89,
+          "markers": 50,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 102,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 19.43047999998646,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 1,
+      "kills": 115,
+      "blinks": 0,
+      "peakRegular": 53,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.9718114494317,
+        "updateMs": 0.6000000014901161,
+        "enemies": 52,
+        "projectiles": 25,
+        "orbs": 105,
+        "effects": 5,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 184,
+        "pooledSprites": 0,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 94,
+          "markers": 53,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 105,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 20.430449999985626,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 2,
+      "kills": 121,
+      "blinks": 0,
+      "peakRegular": 57,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.97885858707377,
+        "updateMs": 0.8000000044703484,
+        "enemies": 57,
+        "projectiles": 28,
+        "orbs": 110,
+        "effects": 2,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 197,
+        "pooledSprites": 0,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 99,
+          "markers": 57,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 2,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 2,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 110,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 21.447129999984668,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 4,
+      "kills": 127,
+      "blinks": 0,
+      "peakRegular": 57,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.98414394030533,
+        "updateMs": 1,
+        "enemies": 57,
+        "projectiles": 25,
+        "orbs": 115,
+        "effects": 7,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 200,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 104,
+          "markers": 58,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 3,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 115,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 22.44710999998381,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 4,
+      "kills": 134,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.238107955229,
+        "updateMs": 0.7999999970197678,
+        "enemies": 55,
+        "projectiles": 25,
+        "orbs": 121,
+        "effects": 8,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 204,
+        "pooledSprites": 6,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 108,
+          "markers": 54,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 3,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 121,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 23.44712999998285,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 4,
+      "kills": 141,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.17858096642175,
+        "updateMs": 0.7999999970197678,
+        "enemies": 57,
+        "projectiles": 23,
+        "orbs": 128,
+        "effects": 5,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 211,
+        "pooledSprites": 4,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 113,
+          "markers": 56,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 3,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 128,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 24.46378999998194,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 4,
+      "kills": 146,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.38393572481631,
+        "updateMs": 0.6999999955296516,
+        "enemies": 55,
+        "projectiles": 23,
+        "orbs": 132,
+        "effects": 4,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 213,
+        "pooledSprites": 6,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 118,
+          "markers": 57,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 3,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 132,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 25.463799999981006,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 158,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.28795179361224,
+        "updateMs": 0.7999999970197678,
+        "enemies": 53,
+        "projectiles": 23,
+        "orbs": 141,
+        "effects": 4,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 221,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 123,
+          "markers": 55,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 4,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 143,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 26.480449999980124,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 164,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.215963845209174,
+        "updateMs": 0.7999999970197678,
+        "enemies": 54,
+        "projectiles": 24,
+        "orbs": 147,
+        "effects": 8,
+        "bosses": 0,
+        "chunks": 40,
+        "sprites": 229,
+        "pooledSprites": 5,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 128,
+          "markers": 56,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 4,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 147,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 27.48047999997914,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 170,
+      "blinks": 0,
+      "peakRegular": 59,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.161972883906884,
+        "updateMs": 21.69999999552965,
+        "enemies": 53,
+        "projectiles": 19,
+        "orbs": 153,
+        "effects": 3,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 229,
+        "pooledSprites": 7,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 132,
+          "markers": 57,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 4,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 153,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 28.53048999997816,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 172,
+      "blinks": 0,
+      "peakRegular": 60,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.12147966293016,
+        "updateMs": 0.8000000044703484,
+        "enemies": 59,
+        "projectiles": 24,
+        "orbs": 155,
+        "effects": 4,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 241,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 137,
+          "markers": 62,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 155,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 29.530479999977274,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 176,
+      "blinks": 0,
+      "peakRegular": 61,
+      "peakBosses": 0,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.09110974719762,
+        "updateMs": 0.8999999985098839,
+        "enemies": 60,
+        "projectiles": 20,
+        "orbs": 158,
+        "effects": 5,
+        "bosses": 0,
+        "chunks": 48,
+        "sprites": 241,
+        "pooledSprites": 6,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 142,
+          "markers": 61,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 158,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 30.54716999997629,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 5,
+      "kills": 180,
+      "blinks": 0,
+      "peakRegular": 63,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.31833231039822,
+        "updateMs": 1.1000000014901161,
+        "enemies": 62,
+        "projectiles": 29,
+        "orbs": 161,
+        "effects": 3,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 256,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 147,
+          "markers": 65,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 3,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 161,
+          "projectiles": 30,
+          "effects": 29
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 31.547179999975356,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 6,
+      "kills": 190,
+      "blinks": 0,
+      "peakRegular": 65,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.23874923279867,
+        "updateMs": 0.7999999970197678,
+        "enemies": 63,
+        "projectiles": 29,
+        "orbs": 169,
+        "effects": 9,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 266,
+        "pooledSprites": 1,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 152,
+          "markers": 66,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 4,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 4,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 169,
+          "projectiles": 30,
+          "effects": 33
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 32.56379999997455,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 12,
+      "kills": 212,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.134296443449244,
+        "updateMs": 0.8999999985098839,
+        "enemies": 52,
+        "projectiles": 25,
+        "orbs": 188,
+        "effects": 27,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 270,
+        "pooledSprites": 9,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 157,
+          "markers": 57,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 4,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 5,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 188,
+          "projectiles": 30,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 33.56379999997364,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 13,
+      "kills": 224,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.10072233258693,
+        "updateMs": 0.8000000044703484,
+        "enemies": 51,
+        "projectiles": 31,
+        "orbs": 198,
+        "effects": 4,
+        "bosses": 1,
+        "chunks": 40,
+        "sprites": 286,
+        "pooledSprites": 5,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 161,
+          "markers": 57,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 5,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 5,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 199,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 34.563809999972705,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 15,
+      "kills": 249,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.0755417494402,
+        "updateMs": 1,
+        "enemies": 39,
+        "projectiles": 15,
+        "orbs": 211,
+        "effects": 32,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 271,
+        "pooledSprites": 21,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 166,
+          "markers": 47,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 5,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 5,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 217,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 35.580509999971696,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 22,
+      "kills": 267,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.30665631208015,
+        "updateMs": 13.399999998509884,
+        "enemies": 32,
+        "projectiles": 27,
+        "orbs": 210,
+        "effects": 21,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 275,
+        "pooledSprites": 17,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 171,
+          "markers": 38,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 5,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 5,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 217,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 36.597139999970864,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 22,
+      "kills": 279,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.22999223406011,
+        "updateMs": 0.8999999985098839,
+        "enemies": 31,
+        "projectiles": 28,
+        "orbs": 214,
+        "effects": 5,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 279,
+        "pooledSprites": 13,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 176,
+          "markers": 37,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 5,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 5,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 218,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 37.613819999969905,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 25,
+      "kills": 300,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.17249417554508,
+        "updateMs": 0.3999999985098839,
+        "enemies": 29,
+        "projectiles": 19,
+        "orbs": 227,
+        "effects": 17,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 282,
+        "pooledSprites": 10,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 181,
+          "markers": 36,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 227,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 38.61380999996902,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 31,
+      "kills": 305,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.129370631658816,
+        "updateMs": 0.8000000044703484,
+        "enemies": 33,
+        "projectiles": 24,
+        "orbs": 230,
+        "effects": 5,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 294,
+        "pooledSprites": 3,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 185,
+          "markers": 40,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 231,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 39.63049999996804,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 32,
+      "kills": 319,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.09702797374411,
+        "updateMs": 1,
+        "enemies": 31,
+        "projectiles": 25,
+        "orbs": 240,
+        "effects": 10,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 303,
+        "pooledSprites": 4,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 190,
+          "markers": 34,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 40.6305099999671,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 33,
+      "kills": 323,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 59.822770980308086,
+        "updateMs": 1,
+        "enemies": 36,
+        "projectiles": 21,
+        "orbs": 238,
+        "effects": 2,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 302,
+        "pooledSprites": 5,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 195,
+          "markers": 39,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 32,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 41.647169999966195,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 40,
+      "kills": 336,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.11707823523106,
+        "updateMs": 0.6999999955296516,
+        "enemies": 34,
+        "projectiles": 22,
+        "orbs": 240,
+        "effects": 8,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 303,
+        "pooledSprites": 12,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 200,
+          "markers": 38,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 35,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 42.66384999996524,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 42,
+      "kills": 356,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.08780867642329,
+        "updateMs": 0.8999999985098839,
+        "enemies": 29,
+        "projectiles": 32,
+        "orbs": 240,
+        "effects": 29,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 308,
+        "pooledSprites": 7,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 205,
+          "markers": 35,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 35,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 43.6638599999643,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 44,
+      "kills": 365,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.06585650731747,
+        "updateMs": 0.9000000059604645,
+        "enemies": 29,
+        "projectiles": 28,
+        "orbs": 240,
+        "effects": 2,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 304,
+        "pooledSprites": 11,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 210,
+          "markers": 36,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 35,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 44.680539999963344,
+      "status": "playing",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 52,
+      "kills": 374,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.0493923804881,
+        "updateMs": 0.7000000029802322,
+        "enemies": 29,
+        "projectiles": 30,
+        "orbs": 236,
+        "effects": 9,
+        "bosses": 1,
+        "chunks": 48,
+        "sprites": 302,
+        "pooledSprites": 13,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 214,
+          "markers": 33,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 35,
+          "effects": 45
+        }
+      }
+    },
+    {
+      "mode": "move",
+      "seconds": 45.01382999996315,
+      "status": "paused",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 52,
+      "kills": 377,
+      "blinks": 0,
+      "peakRegular": 67,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false,
+      "metrics": {
+        "fps": 60.03704428536608,
+        "updateMs": 0.5,
+        "enemies": 31,
+        "projectiles": 29,
+        "orbs": 230,
+        "effects": 10,
+        "bosses": 1,
+        "chunks": 40,
+        "sprites": 297,
+        "pooledSprites": 18,
+        "guardians": 0,
+        "artifacts": {
+          "items": 0,
+          "allocated": 0
+        },
+        "radar": {
+          "updates": 217,
+          "markers": 38,
+          "listeners": 1
+        },
+        "loot": {
+          "items": 6,
+          "chests": 0,
+          "buffs": 0,
+          "trail": 0,
+          "allocatedItems": 6,
+          "allocatedChests": 0
+        },
+        "allocations": {
+          "orbs": 240,
+          "projectiles": 35,
+          "effects": 45
+        }
+      }
+    }
+  ],
+  "errors": []
+}

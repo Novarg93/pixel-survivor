@@ -1,0 +1,66 @@
+{
+  "form": {
+    "phase": "form",
+    "objects": 6,
+    "batches": 4,
+    "radius": 164,
+    "mantle": true,
+    "perimeter": false,
+    "glowWidth": 419.5179140330132,
+    "glowHeight": 308.70186126957583,
+    "glowAlpha": 0.616,
+    "bodyFlames": 7,
+    "heatColumns": 7,
+    "burning": 4,
+    "bursts": 0,
+    "ring": false
+  },
+  "hp": 100,
+  "health": {
+    "x": -17,
+    "y": -44,
+    "width": 34,
+    "height": 5,
+    "hp": 1,
+    "absorb": 0.75,
+    "visible": true,
+    "depth": 11,
+    "objects": 1
+  },
+  "enemies": [
+    {
+      "x": 134,
+      "y": 0,
+      "hp": 999876
+    },
+    {
+      "x": -134,
+      "y": 0,
+      "hp": 999876
+    },
+    {
+      "x": 0,
+      "y": 134,
+      "hp": 999876
+    },
+    {
+      "x": 0,
+      "y": -134,
+      "hp": 999876
+    },
+    {
+      "x": 220,
+      "y": 0,
+      "hp": 1000000
+    },
+    {
+      "x": -220,
+      "y": 0,
+      "hp": 1000000
+    }
+  ],
+  "activeDifference": 0,
+  "fadeDifference": 0,
+  "restoredDifference": 512,
+  "errors": []
+}

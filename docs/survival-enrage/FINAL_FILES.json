@@ -1,0 +1,210 @@
+[
+  {
+    "path": "scripts/measure-survival-enrage.mjs",
+    "sha256": "aa69cf1cb31cdfe4acae49278908905917ec29d525a3c8515b8795851ce417e5"
+  },
+  {
+    "path": "src/game/abilities/arcaneShield.ts",
+    "sha256": "bf4be77ff37d6c7a41df3bc21bfe2a09039fb01da26356900b6f1dc0315026ad"
+  },
+  {
+    "path": "src/game/abilities/definitions.ts",
+    "sha256": "bfe019db06eaaadf3217c313a4c391934c6c0ad09760aac87a11fe55a1f9bc5d"
+  },
+  {
+    "path": "src/game/art/MageCastingController.ts",
+    "sha256": "82f8e60e17272f94c0ed34b13bc0519d3b13a41fd0d431f09fccdb5bf0236db4"
+  },
+  {
+    "path": "src/game/art/MageMagic.ts",
+    "sha256": "668eff8285cab1507d1b1c6dd35b546d2b97b71b872750609bbddeda6b89f5cd"
+  },
+  {
+    "path": "src/game/art/PlayerHealthBar.ts",
+    "sha256": "2da2724b7203cf72e80a8711c4a2617e6277a02c4391d5d1cd3b89679f6aba59"
+  },
+  {
+    "path": "src/game/config/encounterDirector.ts",
+    "sha256": "0d95cf1d121bed1d9bf8bd84d048be278f790ea5b443acefa8a810347fed2e3c"
+  },
+  {
+    "path": "src/game/config/survivalEnrage.ts",
+    "sha256": "d16792bf5c91869da54dc8b92531d98816c5ec35fe2a8c801625f4b3d25e58d8"
+  },
+  {
+    "path": "src/game/systems/AbsorbPool.ts",
+    "sha256": "bce7a5018794a9144577b63d205ef49a148ed3ed32e57e53bb7b478ffcafafbf"
+  },
+  {
+    "path": "src/game/systems/DifficultyDirector.ts",
+    "sha256": "3e7b7baaa29d356d91bbc18c141c3458d26183470027bcc320083f71dc7e4d89"
+  },
+  {
+    "path": "src/game/systems/EncounterDirector.ts",
+    "sha256": "cd213accfdaba084f6f30548be2916eacdb7fc0b4e226168070de25081e8e53f"
+  },
+  {
+    "path": "src/game/systems/EndgamePressure.ts",
+    "sha256": "9f7f92b1d88dcc53c5830e97fc81f0810b71411fc97bb71da64ff4d01f00a8c2"
+  },
+  {
+    "path": "src/game/systems/MobilitySystem.ts",
+    "sha256": "b523484fca3b23cacf9310599fc72a753c2afe95f59f9ed7f4c5d5169afbb02a"
+  },
+  {
+    "path": "src/game/systems/UpgradeSystem.ts",
+    "sha256": "d3177ab1ce90819d090b03264756c9f42f6d314be52d64f9dc6eb5d7d2f3da45"
+  },
+  {
+    "path": "src/game/systems/World.ts",
+    "sha256": "bc66920a62692d77719980675fbf81c1bbef1480eba9b1ce79cd95ca1f9b66e7"
+  },
+  {
+    "path": "src/ui/components/GameHUD.vue",
+    "sha256": "3fcc6941d2bf2cf1cb7946b7dd65e3f39515cc6362a6246a553e1ee6cdd03367"
+  },
+  {
+    "path": "tests/e2e/audio.spec.ts",
+    "sha256": "df0c4a687caffbcfe645dc949c1a0edd870504ec3f9654831136c075d9ad831c"
+  },
+  {
+    "path": "tests/e2e/combat-balance-diagnosis.spec.ts",
+    "sha256": "8fd1f4c62f679cc2e790f7679dbad05b16be3f02f3fc66e24989e573a86949c6"
+  },
+  {
+    "path": "tests/e2e/combat-balance-survival.spec.ts",
+    "sha256": "d85c4b4313e367123452f3f8ce2e81b83a0d30cf78eb2532dbc7c98cb1d8d6be"
+  },
+  {
+    "path": "tests/e2e/encounter-director.spec.ts",
+    "sha256": "e5e0bbfa9b5d8717e231d2585006601d7f1b8029036ac28daac8be09272df10d"
+  },
+  {
+    "path": "tests/e2e/final-qa.spec.ts",
+    "sha256": "3620f703375a0dc21d4f9ed15cb3cbcdf067e4898bc68a52585e0618df58ed52"
+  },
+  {
+    "path": "tests/e2e/frost-armageddon.spec.ts",
+    "sha256": "60c234d2b03ac1cc3c2ba4620b8ee08d9395109fb1898fbbd86a7067f76bbec5"
+  },
+  {
+    "path": "tests/e2e/gameplay-mobility.spec.ts",
+    "sha256": "3070377c60e0dbcf92311c5c6dfc60483260ecc0f10d5debcc50c937f1f7a522"
+  },
+  {
+    "path": "tests/e2e/gameplay-visuals.spec.ts",
+    "sha256": "265c04f53fd854e4df8aa07a93556d3cd9b32ce29831e2ecb626b8d42f4be7f3"
+  },
+  {
+    "path": "tests/e2e/hd-mage.spec.ts",
+    "sha256": "e912251b1109ff657dccb98929c4179ac491fd828cfcc04f4041d743da522e99"
+  },
+  {
+    "path": "tests/e2e/hd-rework-performance.spec.ts",
+    "sha256": "3963a969a7ea6398e79cd2658de6f3691e485c692f651c2bd43c3ac41d9f9d83"
+  },
+  {
+    "path": "tests/e2e/hd-ui.spec.ts",
+    "sha256": "dea8ca4f59e4ce5b4f90f13f7201fd1bcd128dfcf0c4b99bd9139fe87ad5bb32"
+  },
+  {
+    "path": "tests/e2e/loot.spec.ts",
+    "sha256": "0b8abc1f32c4b77317ad08fdf2c9254ea6f6b09ab41f64a1fcca7281c6b61bb9"
+  },
+  {
+    "path": "tests/e2e/mage-casting.spec.ts",
+    "sha256": "6f27ca5415747e4ff43b6f0347c66df9ad20c5f91dfbd15d1a3d844946b083f2"
+  },
+  {
+    "path": "tests/e2e/mobility-specialization-stress.spec.ts",
+    "sha256": "75cdd05b62e5f0cfc35df819359af262f36e3aa8b9895b9269d65137d1375a3a"
+  },
+  {
+    "path": "tests/e2e/phase3.spec.ts",
+    "sha256": "33c0764b804a698c6fd34acd9a8744989cdfd6c973f588c808246a0b8285b3cc"
+  },
+  {
+    "path": "tests/e2e/survival-enrage-performance.spec.ts",
+    "sha256": "9b68712ccc869f3562bee8a8f2eeaf529ebc754e67e31015bc580d3ef485e709"
+  },
+  {
+    "path": "tests/e2e/survival-enrage.spec.ts",
+    "sha256": "2ce0b3db98be0b0b649aad38fe8e9576d6eb8d74626f9effe0f7275d856b0720"
+  },
+  {
+    "path": "tests/fixtures/pre-enrage-replay.json",
+    "sha256": "172ce82ed290e3d9aead94547050f717e932b5544430614b088e14213a1e2e77"
+  },
+  {
+    "path": "tests/helpers/combatBalance.ts",
+    "sha256": "4823b4788bc0d9de6e589a14ca0486209b095adbcfaace349a320658cb259071"
+  },
+  {
+    "path": "tests/helpers/earlyReplay.ts",
+    "sha256": "e47f24699caa1a64611e90620970cf8f4295e31e255c4924f15955c49310085d"
+  },
+  {
+    "path": "tests/helpers/encounterPilot.ts",
+    "sha256": "b478bbb3429b2d4c39cdf7bf05e07c0190318f1ee2cecb8ffd722ea7ebe2b512"
+  },
+  {
+    "path": "tests/helpers/encounterTrial.ts",
+    "sha256": "b351740944eed48c30655d874316b77fd00bd2c9c4602606d9f0dd3c547cf25c"
+  },
+  {
+    "path": "tests/helpers/survivalEnrage.ts",
+    "sha256": "3db74b2ce1537c7739451a4e23c2f4836683aa35fd28274ca45a60d3841b4928"
+  },
+  {
+    "path": "tests/unit/abilities.test.ts",
+    "sha256": "b52c1a87f8029b95b503bbcccf6c06108c6fdad86daa12adfcbd0a900227bc4b"
+  },
+  {
+    "path": "tests/unit/ability-visual.test.ts",
+    "sha256": "e0b7d5eca53fa5c1b669207556cb20d53f12b569b355aac1e6bf93808049f101"
+  },
+  {
+    "path": "tests/unit/arcane-absorb.test.ts",
+    "sha256": "408fb5ecb3beebf6f5959be0e41812e514096b35222c663565d67b5a474e710c"
+  },
+  {
+    "path": "tests/unit/combat-balance-2.test.ts",
+    "sha256": "6161c0e42b7ecd2601ff5e3fc63a6d5c714575c06db80b6636a7443ef102a259"
+  },
+  {
+    "path": "tests/unit/encounter-director.test.ts",
+    "sha256": "c6819a4af782c32bc356f2d2a2eb8c6c6c04d294f54081e97e8daca09528d4c6"
+  },
+  {
+    "path": "tests/unit/guardians-artifacts.test.ts",
+    "sha256": "12d374bc43b42381ac29cc950c990e30cb6bc03a93f45c8055ee9e7e34724508"
+  },
+  {
+    "path": "tests/unit/mage-casting.test.ts",
+    "sha256": "f5d27848ceae330afb0f04f936e7c1b5efd303bffa965583f7f2a72d4031db0f"
+  },
+  {
+    "path": "tests/unit/mobility-specializations.test.ts",
+    "sha256": "dc46334f41844dfb2621c7551d696bcef39fef8b04f9e18eaf84de474ad52aad"
+  },
+  {
+    "path": "tests/unit/pacing-simulation.test.ts",
+    "sha256": "f21f3ba0c8baac592ef8166ea28f31c208a3b2a295624993efa71be9ef20d448"
+  },
+  {
+    "path": "tests/unit/pacing.test.ts",
+    "sha256": "645ffe9bcc6ea6d688604f5b5a820d6ecfc15591aa5b43b45b5cc297ec5ac21d"
+  },
+  {
+    "path": "tests/unit/phase2-boss.test.ts",
+    "sha256": "eff1542c7074d37dd95ec63e47275584931f2b828894f2f5e1321279876ac7ba"
+  },
+  {
+    "path": "tests/unit/phase2-evolutions.test.ts",
+    "sha256": "a031f95695a88dd9309aefede692603a42de4ed814b295ebf6e9d9f48c8fb197"
+  },
+  {
+    "path": "tests/unit/survival-enrage.test.ts",
+    "sha256": "51ac8ae07babbc7d7a9b1487eb37085d2d7d7a1c1e2500cde3d6c6ba426d5f2a"
+  }
+]

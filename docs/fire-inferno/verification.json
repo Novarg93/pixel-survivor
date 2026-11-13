@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-05",
+  "branch": "main",
+  "base": "633a572884db466c212faeb223c6aaa24e25fe76",
+  "scope": "Fire Ultimate Living Inferno only",
+  "checks": {
+    "check": {
+      "exit": 0,
+      "unitFiles": 70,
+      "unitTests": 558
+    },
+    "e2e": {
+      "exit": 0,
+      "passed": 335,
+      "durationMinutes": 20.8
+    },
+    "production": {
+      "exit": 0,
+      "passed": 7,
+      "seconds": 35.1
+    },
+    "diffCheck": {
+      "exit": 0
+    }
+  },
+  "protectedFilesUnchanged": 68,
+  "testedFiles": 342,
+  "changedDuringAndAfterRun": [],
+  "comparisons": [
+    {
+      "width": 1280,
+      "baseline": {
+        "frames": 93,
+        "median": 16.699999999999818,
+        "p95": 16.700000000000273,
+        "fps": 59.99999999999999
+      },
+      "fire": {
+        "frames": 166,
+        "median": 16.699999999999818,
+        "p95": 16.800000000000182,
+        "fps": 60.00144581797153
+      },
+      "actors": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3
+      }
+    },
+    {
+      "width": 844,
+      "baseline": {
+        "frames": 93,
+        "median": 16.699999999999818,
+        "p95": 16.700000000000273,
+        "fps": 60.003871217497895
+      },
+      "fire": {
+        "frames": 166,
+        "median": 16.699999999999818,
+        "p95": 16.700000000000728,
+        "fps": 60.00144581797151
+      },
+      "actors": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3
+      }
+    }
+  ],
+  "realCombat": [
+    {
+      "width": 1280,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.700000000000273,
+      "actors": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3
+      },
+      "errors": []
+    },
+    {
+      "width": 844,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.700000000000273,
+      "actors": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3
+      },
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999955,
+      "actors": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3
+      },
+      "errors": []
+    }
+  ],
+  "manualAcceptance": "pending",
+  "pushed": false,
+  "deployed": false
+}

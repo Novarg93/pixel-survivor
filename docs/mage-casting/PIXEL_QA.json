@@ -1,0 +1,1559 @@
+{
+  "frames": [
+    {
+      "name": "body-mage-down-idle-0",
+      "pixels": 1581,
+      "border": 0,
+      "soft": 0,
+      "hash": 563026532
+    },
+    {
+      "name": "body-lean-mage-down-idle-0",
+      "pixels": 1582,
+      "border": 0,
+      "soft": 0,
+      "hash": 2469536905
+    },
+    {
+      "name": "body-mage-down-idle-1",
+      "pixels": 1602,
+      "border": 0,
+      "soft": 0,
+      "hash": 3299365510
+    },
+    {
+      "name": "body-lean-mage-down-idle-1",
+      "pixels": 1602,
+      "border": 0,
+      "soft": 0,
+      "hash": 1294659038
+    },
+    {
+      "name": "body-mage-down-idle-2",
+      "pixels": 1579,
+      "border": 0,
+      "soft": 0,
+      "hash": 3776569812
+    },
+    {
+      "name": "body-lean-mage-down-idle-2",
+      "pixels": 1580,
+      "border": 0,
+      "soft": 0,
+      "hash": 3562263657
+    },
+    {
+      "name": "body-mage-down-walk-0",
+      "pixels": 1567,
+      "border": 0,
+      "soft": 0,
+      "hash": 849749940
+    },
+    {
+      "name": "body-lean-mage-down-walk-0",
+      "pixels": 1575,
+      "border": 0,
+      "soft": 0,
+      "hash": 2242966220
+    },
+    {
+      "name": "body-mage-down-walk-1",
+      "pixels": 1576,
+      "border": 0,
+      "soft": 0,
+      "hash": 1085446030
+    },
+    {
+      "name": "body-lean-mage-down-walk-1",
+      "pixels": 1580,
+      "border": 0,
+      "soft": 0,
+      "hash": 1347358838
+    },
+    {
+      "name": "body-mage-down-walk-2",
+      "pixels": 1576,
+      "border": 0,
+      "soft": 0,
+      "hash": 1085446030
+    },
+    {
+      "name": "body-lean-mage-down-walk-2",
+      "pixels": 1580,
+      "border": 0,
+      "soft": 0,
+      "hash": 1347358838
+    },
+    {
+      "name": "body-mage-down-walk-3",
+      "pixels": 1567,
+      "border": 0,
+      "soft": 0,
+      "hash": 849749940
+    },
+    {
+      "name": "body-lean-mage-down-walk-3",
+      "pixels": 1575,
+      "border": 0,
+      "soft": 0,
+      "hash": 2242966220
+    },
+    {
+      "name": "body-mage-down-walk-4",
+      "pixels": 1597,
+      "border": 0,
+      "soft": 0,
+      "hash": 1400294047
+    },
+    {
+      "name": "body-lean-mage-down-walk-4",
+      "pixels": 1601,
+      "border": 0,
+      "soft": 0,
+      "hash": 517476863
+    },
+    {
+      "name": "body-mage-down-walk-5",
+      "pixels": 1597,
+      "border": 0,
+      "soft": 0,
+      "hash": 1400294047
+    },
+    {
+      "name": "body-lean-mage-down-walk-5",
+      "pixels": 1601,
+      "border": 0,
+      "soft": 0,
+      "hash": 517476863
+    },
+    {
+      "name": "body-mage-up-idle-0",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 3831623324
+    },
+    {
+      "name": "body-lean-mage-up-idle-0",
+      "pixels": 1584,
+      "border": 0,
+      "soft": 0,
+      "hash": 55638385
+    },
+    {
+      "name": "body-mage-up-idle-1",
+      "pixels": 1603,
+      "border": 0,
+      "soft": 0,
+      "hash": 373887455
+    },
+    {
+      "name": "body-lean-mage-up-idle-1",
+      "pixels": 1603,
+      "border": 0,
+      "soft": 0,
+      "hash": 2826939567
+    },
+    {
+      "name": "body-mage-up-idle-2",
+      "pixels": 1580,
+      "border": 0,
+      "soft": 0,
+      "hash": 2766983089
+    },
+    {
+      "name": "body-lean-mage-up-idle-2",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 1989864908
+    },
+    {
+      "name": "body-mage-up-walk-0",
+      "pixels": 1570,
+      "border": 0,
+      "soft": 0,
+      "hash": 1828925113
+    },
+    {
+      "name": "body-lean-mage-up-walk-0",
+      "pixels": 1578,
+      "border": 0,
+      "soft": 0,
+      "hash": 2421515241
+    },
+    {
+      "name": "body-mage-up-walk-1",
+      "pixels": 1579,
+      "border": 0,
+      "soft": 0,
+      "hash": 444787775
+    },
+    {
+      "name": "body-lean-mage-up-walk-1",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 885661375
+    },
+    {
+      "name": "body-mage-up-walk-2",
+      "pixels": 1579,
+      "border": 0,
+      "soft": 0,
+      "hash": 444787775
+    },
+    {
+      "name": "body-lean-mage-up-walk-2",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 885661375
+    },
+    {
+      "name": "body-mage-up-walk-3",
+      "pixels": 1570,
+      "border": 0,
+      "soft": 0,
+      "hash": 1828925113
+    },
+    {
+      "name": "body-lean-mage-up-walk-3",
+      "pixels": 1578,
+      "border": 0,
+      "soft": 0,
+      "hash": 2421515241
+    },
+    {
+      "name": "body-mage-up-walk-4",
+      "pixels": 1600,
+      "border": 0,
+      "soft": 0,
+      "hash": 3144306430
+    },
+    {
+      "name": "body-lean-mage-up-walk-4",
+      "pixels": 1604,
+      "border": 0,
+      "soft": 0,
+      "hash": 3706794038
+    },
+    {
+      "name": "body-mage-up-walk-5",
+      "pixels": 1600,
+      "border": 0,
+      "soft": 0,
+      "hash": 3144306430
+    },
+    {
+      "name": "body-lean-mage-up-walk-5",
+      "pixels": 1604,
+      "border": 0,
+      "soft": 0,
+      "hash": 3706794038
+    },
+    {
+      "name": "body-mage-side-idle-0",
+      "pixels": 1560,
+      "border": 0,
+      "soft": 0,
+      "hash": 4012516905
+    },
+    {
+      "name": "body-lean-mage-side-idle-0",
+      "pixels": 1561,
+      "border": 0,
+      "soft": 0,
+      "hash": 1463667708
+    },
+    {
+      "name": "body-mage-side-idle-1",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 2087726063
+    },
+    {
+      "name": "body-lean-mage-side-idle-1",
+      "pixels": 1583,
+      "border": 0,
+      "soft": 0,
+      "hash": 4156098007
+    },
+    {
+      "name": "body-mage-side-idle-2",
+      "pixels": 1560,
+      "border": 0,
+      "soft": 0,
+      "hash": 2642293129
+    },
+    {
+      "name": "body-lean-mage-side-idle-2",
+      "pixels": 1561,
+      "border": 0,
+      "soft": 0,
+      "hash": 351968596
+    },
+    {
+      "name": "body-mage-side-walk-0",
+      "pixels": 1546,
+      "border": 0,
+      "soft": 0,
+      "hash": 4274369649
+    },
+    {
+      "name": "body-lean-mage-side-walk-0",
+      "pixels": 1554,
+      "border": 0,
+      "soft": 0,
+      "hash": 1480290625
+    },
+    {
+      "name": "body-mage-side-walk-1",
+      "pixels": 1556,
+      "border": 0,
+      "soft": 0,
+      "hash": 2748717086
+    },
+    {
+      "name": "body-lean-mage-side-walk-1",
+      "pixels": 1560,
+      "border": 0,
+      "soft": 0,
+      "hash": 3639438758
+    },
+    {
+      "name": "body-mage-side-walk-2",
+      "pixels": 1556,
+      "border": 0,
+      "soft": 0,
+      "hash": 2748717086
+    },
+    {
+      "name": "body-lean-mage-side-walk-2",
+      "pixels": 1560,
+      "border": 0,
+      "soft": 0,
+      "hash": 3639438758
+    },
+    {
+      "name": "body-mage-side-walk-3",
+      "pixels": 1546,
+      "border": 0,
+      "soft": 0,
+      "hash": 4274369649
+    },
+    {
+      "name": "body-lean-mage-side-walk-3",
+      "pixels": 1554,
+      "border": 0,
+      "soft": 0,
+      "hash": 1480290625
+    },
+    {
+      "name": "body-mage-side-walk-4",
+      "pixels": 1577,
+      "border": 0,
+      "soft": 0,
+      "hash": 1952637551
+    },
+    {
+      "name": "body-lean-mage-side-walk-4",
+      "pixels": 1581,
+      "border": 0,
+      "soft": 0,
+      "hash": 3330785583
+    },
+    {
+      "name": "body-mage-side-walk-5",
+      "pixels": 1577,
+      "border": 0,
+      "soft": 0,
+      "hash": 1952637551
+    },
+    {
+      "name": "body-lean-mage-side-walk-5",
+      "pixels": 1581,
+      "border": 0,
+      "soft": 0,
+      "hash": 3330785583
+    },
+    {
+      "name": "arms-fireball-down-0",
+      "pixels": 252,
+      "border": 0,
+      "soft": 0,
+      "hash": 4030552061
+    },
+    {
+      "name": "arms-fireball-down-1",
+      "pixels": 254,
+      "border": 0,
+      "soft": 0,
+      "hash": 3197429482
+    },
+    {
+      "name": "arms-fireball-down-2",
+      "pixels": 316,
+      "border": 0,
+      "soft": 0,
+      "hash": 2687899622
+    },
+    {
+      "name": "arms-fireball-down-3",
+      "pixels": 333,
+      "border": 0,
+      "soft": 0,
+      "hash": 2686076520
+    },
+    {
+      "name": "arms-fireball-down-4",
+      "pixels": 280,
+      "border": 0,
+      "soft": 0,
+      "hash": 314907722
+    },
+    {
+      "name": "arms-fireball-down-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-fireball-up-0",
+      "pixels": 250,
+      "border": 0,
+      "soft": 0,
+      "hash": 871760653
+    },
+    {
+      "name": "arms-fireball-up-1",
+      "pixels": 259,
+      "border": 0,
+      "soft": 0,
+      "hash": 928384327
+    },
+    {
+      "name": "arms-fireball-up-2",
+      "pixels": 308,
+      "border": 0,
+      "soft": 0,
+      "hash": 2065163282
+    },
+    {
+      "name": "arms-fireball-up-3",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 1104576505
+    },
+    {
+      "name": "arms-fireball-up-4",
+      "pixels": 243,
+      "border": 0,
+      "soft": 0,
+      "hash": 1864437544
+    },
+    {
+      "name": "arms-fireball-up-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-fireball-left-0",
+      "pixels": 263,
+      "border": 0,
+      "soft": 0,
+      "hash": 1479733088
+    },
+    {
+      "name": "arms-fireball-left-1",
+      "pixels": 275,
+      "border": 0,
+      "soft": 0,
+      "hash": 393699999
+    },
+    {
+      "name": "arms-fireball-left-2",
+      "pixels": 282,
+      "border": 0,
+      "soft": 0,
+      "hash": 1327690237
+    },
+    {
+      "name": "arms-fireball-left-3",
+      "pixels": 256,
+      "border": 0,
+      "soft": 0,
+      "hash": 2346016098
+    },
+    {
+      "name": "arms-fireball-left-4",
+      "pixels": 266,
+      "border": 0,
+      "soft": 0,
+      "hash": 2633001774
+    },
+    {
+      "name": "arms-fireball-left-5",
+      "pixels": 295,
+      "border": 0,
+      "soft": 0,
+      "hash": 1043306576
+    },
+    {
+      "name": "arms-fireball-right-0",
+      "pixels": 261,
+      "border": 0,
+      "soft": 0,
+      "hash": 439187784
+    },
+    {
+      "name": "arms-fireball-right-1",
+      "pixels": 246,
+      "border": 0,
+      "soft": 0,
+      "hash": 2930382290
+    },
+    {
+      "name": "arms-fireball-right-2",
+      "pixels": 308,
+      "border": 0,
+      "soft": 0,
+      "hash": 4032183461
+    },
+    {
+      "name": "arms-fireball-right-3",
+      "pixels": 318,
+      "border": 0,
+      "soft": 0,
+      "hash": 1250178518
+    },
+    {
+      "name": "arms-fireball-right-4",
+      "pixels": 310,
+      "border": 0,
+      "soft": 0,
+      "hash": 442269857
+    },
+    {
+      "name": "arms-fireball-right-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-fireball-strong-down-0",
+      "pixels": 252,
+      "border": 0,
+      "soft": 0,
+      "hash": 4030552061
+    },
+    {
+      "name": "arms-fireball-strong-down-1",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 2658253709
+    },
+    {
+      "name": "arms-fireball-strong-down-2",
+      "pixels": 354,
+      "border": 0,
+      "soft": 0,
+      "hash": 2007228218
+    },
+    {
+      "name": "arms-fireball-strong-down-3",
+      "pixels": 373,
+      "border": 0,
+      "soft": 0,
+      "hash": 3746018903
+    },
+    {
+      "name": "arms-fireball-strong-down-4",
+      "pixels": 304,
+      "border": 0,
+      "soft": 0,
+      "hash": 1230337133
+    },
+    {
+      "name": "arms-fireball-strong-down-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-fireball-strong-up-0",
+      "pixels": 250,
+      "border": 0,
+      "soft": 0,
+      "hash": 871760653
+    },
+    {
+      "name": "arms-fireball-strong-up-1",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 218597441
+    },
+    {
+      "name": "arms-fireball-strong-up-2",
+      "pixels": 376,
+      "border": 0,
+      "soft": 0,
+      "hash": 777791450
+    },
+    {
+      "name": "arms-fireball-strong-up-3",
+      "pixels": 330,
+      "border": 0,
+      "soft": 0,
+      "hash": 3884440422
+    },
+    {
+      "name": "arms-fireball-strong-up-4",
+      "pixels": 311,
+      "border": 0,
+      "soft": 0,
+      "hash": 3912750647
+    },
+    {
+      "name": "arms-fireball-strong-up-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-fireball-strong-left-0",
+      "pixels": 263,
+      "border": 0,
+      "soft": 0,
+      "hash": 1479733088
+    },
+    {
+      "name": "arms-fireball-strong-left-1",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3165132125
+    },
+    {
+      "name": "arms-fireball-strong-left-2",
+      "pixels": 293,
+      "border": 0,
+      "soft": 0,
+      "hash": 347639708
+    },
+    {
+      "name": "arms-fireball-strong-left-3",
+      "pixels": 259,
+      "border": 0,
+      "soft": 0,
+      "hash": 391331643
+    },
+    {
+      "name": "arms-fireball-strong-left-4",
+      "pixels": 262,
+      "border": 0,
+      "soft": 0,
+      "hash": 1624104185
+    },
+    {
+      "name": "arms-fireball-strong-left-5",
+      "pixels": 295,
+      "border": 0,
+      "soft": 0,
+      "hash": 1043306576
+    },
+    {
+      "name": "arms-fireball-strong-right-0",
+      "pixels": 261,
+      "border": 0,
+      "soft": 0,
+      "hash": 439187784
+    },
+    {
+      "name": "arms-fireball-strong-right-1",
+      "pixels": 243,
+      "border": 0,
+      "soft": 0,
+      "hash": 3872119107
+    },
+    {
+      "name": "arms-fireball-strong-right-2",
+      "pixels": 293,
+      "border": 0,
+      "soft": 0,
+      "hash": 2306458532
+    },
+    {
+      "name": "arms-fireball-strong-right-3",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3485475013
+    },
+    {
+      "name": "arms-fireball-strong-right-4",
+      "pixels": 276,
+      "border": 0,
+      "soft": 0,
+      "hash": 1366720614
+    },
+    {
+      "name": "arms-fireball-strong-right-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 3245855629
+    },
+    {
+      "name": "arms-frost-down-0",
+      "pixels": 250,
+      "border": 0,
+      "soft": 0,
+      "hash": 943514453
+    },
+    {
+      "name": "arms-frost-down-1",
+      "pixels": 317,
+      "border": 0,
+      "soft": 0,
+      "hash": 3054253323
+    },
+    {
+      "name": "arms-frost-down-2",
+      "pixels": 349,
+      "border": 0,
+      "soft": 0,
+      "hash": 1342125668
+    },
+    {
+      "name": "arms-frost-down-3",
+      "pixels": 319,
+      "border": 0,
+      "soft": 0,
+      "hash": 3115896176
+    },
+    {
+      "name": "arms-frost-down-4",
+      "pixels": 316,
+      "border": 0,
+      "soft": 0,
+      "hash": 2994507781
+    },
+    {
+      "name": "arms-frost-down-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 743597672
+    },
+    {
+      "name": "arms-frost-up-0",
+      "pixels": 250,
+      "border": 0,
+      "soft": 0,
+      "hash": 943514453
+    },
+    {
+      "name": "arms-frost-up-1",
+      "pixels": 317,
+      "border": 0,
+      "soft": 0,
+      "hash": 3054253323
+    },
+    {
+      "name": "arms-frost-up-2",
+      "pixels": 349,
+      "border": 0,
+      "soft": 0,
+      "hash": 1342125668
+    },
+    {
+      "name": "arms-frost-up-3",
+      "pixels": 333,
+      "border": 0,
+      "soft": 0,
+      "hash": 1419068583
+    },
+    {
+      "name": "arms-frost-up-4",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 3665653289
+    },
+    {
+      "name": "arms-frost-up-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 743597672
+    },
+    {
+      "name": "arms-frost-left-0",
+      "pixels": 264,
+      "border": 0,
+      "soft": 0,
+      "hash": 2238296013
+    },
+    {
+      "name": "arms-frost-left-1",
+      "pixels": 326,
+      "border": 0,
+      "soft": 0,
+      "hash": 1732354390
+    },
+    {
+      "name": "arms-frost-left-2",
+      "pixels": 358,
+      "border": 0,
+      "soft": 0,
+      "hash": 622296093
+    },
+    {
+      "name": "arms-frost-left-3",
+      "pixels": 299,
+      "border": 0,
+      "soft": 0,
+      "hash": 2568087984
+    },
+    {
+      "name": "arms-frost-left-4",
+      "pixels": 252,
+      "border": 0,
+      "soft": 0,
+      "hash": 1388923529
+    },
+    {
+      "name": "arms-frost-left-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 958410045
+    },
+    {
+      "name": "arms-frost-right-0",
+      "pixels": 250,
+      "border": 0,
+      "soft": 0,
+      "hash": 943514453
+    },
+    {
+      "name": "arms-frost-right-1",
+      "pixels": 317,
+      "border": 0,
+      "soft": 0,
+      "hash": 3054253323
+    },
+    {
+      "name": "arms-frost-right-2",
+      "pixels": 349,
+      "border": 0,
+      "soft": 0,
+      "hash": 1342125668
+    },
+    {
+      "name": "arms-frost-right-3",
+      "pixels": 383,
+      "border": 0,
+      "soft": 0,
+      "hash": 3171077724
+    },
+    {
+      "name": "arms-frost-right-4",
+      "pixels": 300,
+      "border": 0,
+      "soft": 0,
+      "hash": 3679848605
+    },
+    {
+      "name": "arms-frost-right-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 743597672
+    },
+    {
+      "name": "arms-lightning-down-0",
+      "pixels": 246,
+      "border": 0,
+      "soft": 0,
+      "hash": 2989758821
+    },
+    {
+      "name": "arms-lightning-down-1",
+      "pixels": 247,
+      "border": 0,
+      "soft": 0,
+      "hash": 4187262844
+    },
+    {
+      "name": "arms-lightning-down-2",
+      "pixels": 307,
+      "border": 0,
+      "soft": 0,
+      "hash": 2315529316
+    },
+    {
+      "name": "arms-lightning-down-3",
+      "pixels": 335,
+      "border": 0,
+      "soft": 0,
+      "hash": 1735720308
+    },
+    {
+      "name": "arms-lightning-down-4",
+      "pixels": 270,
+      "border": 0,
+      "soft": 0,
+      "hash": 4052491234
+    },
+    {
+      "name": "arms-lightning-down-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-lightning-up-0",
+      "pixels": 244,
+      "border": 0,
+      "soft": 0,
+      "hash": 3718282101
+    },
+    {
+      "name": "arms-lightning-up-1",
+      "pixels": 273,
+      "border": 0,
+      "soft": 0,
+      "hash": 3259567228
+    },
+    {
+      "name": "arms-lightning-up-2",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 3820090290
+    },
+    {
+      "name": "arms-lightning-up-3",
+      "pixels": 298,
+      "border": 0,
+      "soft": 0,
+      "hash": 3332435569
+    },
+    {
+      "name": "arms-lightning-up-4",
+      "pixels": 239,
+      "border": 0,
+      "soft": 0,
+      "hash": 2810209571
+    },
+    {
+      "name": "arms-lightning-up-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-lightning-left-0",
+      "pixels": 229,
+      "border": 0,
+      "soft": 0,
+      "hash": 1527823928
+    },
+    {
+      "name": "arms-lightning-left-1",
+      "pixels": 282,
+      "border": 0,
+      "soft": 0,
+      "hash": 1614799869
+    },
+    {
+      "name": "arms-lightning-left-2",
+      "pixels": 297,
+      "border": 0,
+      "soft": 0,
+      "hash": 1165306399
+    },
+    {
+      "name": "arms-lightning-left-3",
+      "pixels": 239,
+      "border": 0,
+      "soft": 0,
+      "hash": 3819912843
+    },
+    {
+      "name": "arms-lightning-left-4",
+      "pixels": 216,
+      "border": 0,
+      "soft": 0,
+      "hash": 1328548018
+    },
+    {
+      "name": "arms-lightning-left-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 339037245
+    },
+    {
+      "name": "arms-lightning-right-0",
+      "pixels": 224,
+      "border": 0,
+      "soft": 0,
+      "hash": 4183787861
+    },
+    {
+      "name": "arms-lightning-right-1",
+      "pixels": 243,
+      "border": 0,
+      "soft": 0,
+      "hash": 2913521956
+    },
+    {
+      "name": "arms-lightning-right-2",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 809200274
+    },
+    {
+      "name": "arms-lightning-right-3",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 1390579946
+    },
+    {
+      "name": "arms-lightning-right-4",
+      "pixels": 276,
+      "border": 0,
+      "soft": 0,
+      "hash": 2490381510
+    },
+    {
+      "name": "arms-lightning-right-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-lightning-strong-down-0",
+      "pixels": 246,
+      "border": 0,
+      "soft": 0,
+      "hash": 2989758821
+    },
+    {
+      "name": "arms-lightning-strong-down-1",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 1977469825
+    },
+    {
+      "name": "arms-lightning-strong-down-2",
+      "pixels": 354,
+      "border": 0,
+      "soft": 0,
+      "hash": 4053081945
+    },
+    {
+      "name": "arms-lightning-strong-down-3",
+      "pixels": 373,
+      "border": 0,
+      "soft": 0,
+      "hash": 3815953264
+    },
+    {
+      "name": "arms-lightning-strong-down-4",
+      "pixels": 304,
+      "border": 0,
+      "soft": 0,
+      "hash": 58874442
+    },
+    {
+      "name": "arms-lightning-strong-down-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-lightning-strong-up-0",
+      "pixels": 244,
+      "border": 0,
+      "soft": 0,
+      "hash": 3718282101
+    },
+    {
+      "name": "arms-lightning-strong-up-1",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 641997769
+    },
+    {
+      "name": "arms-lightning-strong-up-2",
+      "pixels": 376,
+      "border": 0,
+      "soft": 0,
+      "hash": 4287166374
+    },
+    {
+      "name": "arms-lightning-strong-up-3",
+      "pixels": 330,
+      "border": 0,
+      "soft": 0,
+      "hash": 2182347885
+    },
+    {
+      "name": "arms-lightning-strong-up-4",
+      "pixels": 311,
+      "border": 0,
+      "soft": 0,
+      "hash": 1659252239
+    },
+    {
+      "name": "arms-lightning-strong-up-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-lightning-strong-left-0",
+      "pixels": 229,
+      "border": 0,
+      "soft": 0,
+      "hash": 1527823928
+    },
+    {
+      "name": "arms-lightning-strong-left-1",
+      "pixels": 295,
+      "border": 0,
+      "soft": 0,
+      "hash": 712329660
+    },
+    {
+      "name": "arms-lightning-strong-left-2",
+      "pixels": 314,
+      "border": 0,
+      "soft": 0,
+      "hash": 1940499277
+    },
+    {
+      "name": "arms-lightning-strong-left-3",
+      "pixels": 258,
+      "border": 0,
+      "soft": 0,
+      "hash": 2905080990
+    },
+    {
+      "name": "arms-lightning-strong-left-4",
+      "pixels": 227,
+      "border": 0,
+      "soft": 0,
+      "hash": 1298684383
+    },
+    {
+      "name": "arms-lightning-strong-left-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 339037245
+    },
+    {
+      "name": "arms-lightning-strong-right-0",
+      "pixels": 224,
+      "border": 0,
+      "soft": 0,
+      "hash": 4183787861
+    },
+    {
+      "name": "arms-lightning-strong-right-1",
+      "pixels": 263,
+      "border": 0,
+      "soft": 0,
+      "hash": 2785085400
+    },
+    {
+      "name": "arms-lightning-strong-right-2",
+      "pixels": 310,
+      "border": 0,
+      "soft": 0,
+      "hash": 1329816473
+    },
+    {
+      "name": "arms-lightning-strong-right-3",
+      "pixels": 294,
+      "border": 0,
+      "soft": 0,
+      "hash": 3050559998
+    },
+    {
+      "name": "arms-lightning-strong-right-4",
+      "pixels": 252,
+      "border": 0,
+      "soft": 0,
+      "hash": 3998609726
+    },
+    {
+      "name": "arms-lightning-strong-right-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-meteor-down-0",
+      "pixels": 231,
+      "border": 0,
+      "soft": 0,
+      "hash": 1995678168
+    },
+    {
+      "name": "arms-meteor-down-1",
+      "pixels": 344,
+      "border": 0,
+      "soft": 0,
+      "hash": 4175753878
+    },
+    {
+      "name": "arms-meteor-down-2",
+      "pixels": 446,
+      "border": 0,
+      "soft": 0,
+      "hash": 912638033
+    },
+    {
+      "name": "arms-meteor-down-3",
+      "pixels": 319,
+      "border": 0,
+      "soft": 0,
+      "hash": 1810855711
+    },
+    {
+      "name": "arms-meteor-down-4",
+      "pixels": 316,
+      "border": 0,
+      "soft": 0,
+      "hash": 2066927925
+    },
+    {
+      "name": "arms-meteor-down-5",
+      "pixels": 279,
+      "border": 0,
+      "soft": 0,
+      "hash": 558923048
+    },
+    {
+      "name": "arms-meteor-up-0",
+      "pixels": 231,
+      "border": 0,
+      "soft": 0,
+      "hash": 1995678168
+    },
+    {
+      "name": "arms-meteor-up-1",
+      "pixels": 344,
+      "border": 0,
+      "soft": 0,
+      "hash": 4175753878
+    },
+    {
+      "name": "arms-meteor-up-2",
+      "pixels": 446,
+      "border": 0,
+      "soft": 0,
+      "hash": 912638033
+    },
+    {
+      "name": "arms-meteor-up-3",
+      "pixels": 333,
+      "border": 0,
+      "soft": 0,
+      "hash": 1827717516
+    },
+    {
+      "name": "arms-meteor-up-4",
+      "pixels": 320,
+      "border": 0,
+      "soft": 0,
+      "hash": 3074653802
+    },
+    {
+      "name": "arms-meteor-up-5",
+      "pixels": 279,
+      "border": 0,
+      "soft": 0,
+      "hash": 558923048
+    },
+    {
+      "name": "arms-meteor-left-0",
+      "pixels": 239,
+      "border": 0,
+      "soft": 0,
+      "hash": 3923540944
+    },
+    {
+      "name": "arms-meteor-left-1",
+      "pixels": 336,
+      "border": 0,
+      "soft": 0,
+      "hash": 3437597498
+    },
+    {
+      "name": "arms-meteor-left-2",
+      "pixels": 416,
+      "border": 0,
+      "soft": 0,
+      "hash": 1701875446
+    },
+    {
+      "name": "arms-meteor-left-3",
+      "pixels": 315,
+      "border": 0,
+      "soft": 0,
+      "hash": 504700704
+    },
+    {
+      "name": "arms-meteor-left-4",
+      "pixels": 304,
+      "border": 0,
+      "soft": 0,
+      "hash": 2809740789
+    },
+    {
+      "name": "arms-meteor-left-5",
+      "pixels": 282,
+      "border": 0,
+      "soft": 0,
+      "hash": 3504284653
+    },
+    {
+      "name": "arms-meteor-right-0",
+      "pixels": 231,
+      "border": 0,
+      "soft": 0,
+      "hash": 1995678168
+    },
+    {
+      "name": "arms-meteor-right-1",
+      "pixels": 344,
+      "border": 0,
+      "soft": 0,
+      "hash": 4175753878
+    },
+    {
+      "name": "arms-meteor-right-2",
+      "pixels": 446,
+      "border": 0,
+      "soft": 0,
+      "hash": 912638033
+    },
+    {
+      "name": "arms-meteor-right-3",
+      "pixels": 309,
+      "border": 0,
+      "soft": 0,
+      "hash": 233033808
+    },
+    {
+      "name": "arms-meteor-right-4",
+      "pixels": 296,
+      "border": 0,
+      "soft": 0,
+      "hash": 3423903049
+    },
+    {
+      "name": "arms-meteor-right-5",
+      "pixels": 279,
+      "border": 0,
+      "soft": 0,
+      "hash": 558923048
+    },
+    {
+      "name": "arms-shield-down-0",
+      "pixels": 247,
+      "border": 0,
+      "soft": 0,
+      "hash": 2438013392
+    },
+    {
+      "name": "arms-shield-down-1",
+      "pixels": 235,
+      "border": 0,
+      "soft": 0,
+      "hash": 2608552099
+    },
+    {
+      "name": "arms-shield-down-2",
+      "pixels": 227,
+      "border": 0,
+      "soft": 0,
+      "hash": 3090889331
+    },
+    {
+      "name": "arms-shield-down-3",
+      "pixels": 196,
+      "border": 0,
+      "soft": 0,
+      "hash": 3053359718
+    },
+    {
+      "name": "arms-shield-down-4",
+      "pixels": 245,
+      "border": 0,
+      "soft": 0,
+      "hash": 2004810124
+    },
+    {
+      "name": "arms-shield-down-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-shield-up-0",
+      "pixels": 247,
+      "border": 0,
+      "soft": 0,
+      "hash": 2438013392
+    },
+    {
+      "name": "arms-shield-up-1",
+      "pixels": 259,
+      "border": 0,
+      "soft": 0,
+      "hash": 3402646924
+    },
+    {
+      "name": "arms-shield-up-2",
+      "pixels": 249,
+      "border": 0,
+      "soft": 0,
+      "hash": 4273585024
+    },
+    {
+      "name": "arms-shield-up-3",
+      "pixels": 219,
+      "border": 0,
+      "soft": 0,
+      "hash": 3116654279
+    },
+    {
+      "name": "arms-shield-up-4",
+      "pixels": 224,
+      "border": 0,
+      "soft": 0,
+      "hash": 1378083630
+    },
+    {
+      "name": "arms-shield-up-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    },
+    {
+      "name": "arms-shield-left-0",
+      "pixels": 259,
+      "border": 0,
+      "soft": 0,
+      "hash": 80225568
+    },
+    {
+      "name": "arms-shield-left-1",
+      "pixels": 254,
+      "border": 0,
+      "soft": 0,
+      "hash": 1858888022
+    },
+    {
+      "name": "arms-shield-left-2",
+      "pixels": 289,
+      "border": 0,
+      "soft": 0,
+      "hash": 2109406119
+    },
+    {
+      "name": "arms-shield-left-3",
+      "pixels": 231,
+      "border": 0,
+      "soft": 0,
+      "hash": 2398055279
+    },
+    {
+      "name": "arms-shield-left-4",
+      "pixels": 274,
+      "border": 0,
+      "soft": 0,
+      "hash": 2110973385
+    },
+    {
+      "name": "arms-shield-left-5",
+      "pixels": 292,
+      "border": 0,
+      "soft": 0,
+      "hash": 339037245
+    },
+    {
+      "name": "arms-shield-right-0",
+      "pixels": 247,
+      "border": 0,
+      "soft": 0,
+      "hash": 2438013392
+    },
+    {
+      "name": "arms-shield-right-1",
+      "pixels": 235,
+      "border": 0,
+      "soft": 0,
+      "hash": 2608552099
+    },
+    {
+      "name": "arms-shield-right-2",
+      "pixels": 227,
+      "border": 0,
+      "soft": 0,
+      "hash": 3090889331
+    },
+    {
+      "name": "arms-shield-right-3",
+      "pixels": 196,
+      "border": 0,
+      "soft": 0,
+      "hash": 3053359718
+    },
+    {
+      "name": "arms-shield-right-4",
+      "pixels": 245,
+      "border": 0,
+      "soft": 0,
+      "hash": 2004810124
+    },
+    {
+      "name": "arms-shield-right-5",
+      "pixels": 287,
+      "border": 0,
+      "soft": 0,
+      "hash": 2488916536
+    }
+  ],
+  "bad": []
+}

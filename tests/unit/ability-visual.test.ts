@@ -28,7 +28,7 @@ it.each<AbilityId>(['fireball', 'frost', 'lightning', 'meteor', 'shield', 'cleav
     if (id === 'lightning' || id === 'cleave' || id === 'whirlwind') w.effect(id, { x: 0, y: 0 }, 60, 0xffffff, 1, { x: 70, y: 10 });
     if (id === 'slam') w.impacts.push({ x: 50, y: 20, id: w.id(), damage: 10, radius: 60, hostile: false, landAt: .5, source: id });
     if (id === 'shield') w.shield.refreshAbsorb(15,10);
-    if (id === 'blades') w.warrior.bladesUntil = 10;
+    if (id === 'blades') w.shoot({x:0,y:0,vx:340,vy:0,damage:42,hostile:false,source:'blades'});
     if (id === 'iron') w.warrior.ironUntil = 10;
     const calls: unknown[] = [];
     const proxy: object = new Proxy({}, { get: (_target, method) => (...args: unknown[]) => { calls.push([method, ...args]); return proxy; } });
@@ -40,5 +40,5 @@ it.each<AbilityId>(['fireball', 'frost', 'lightning', 'meteor', 'shield', 'cleav
     expect(JSON.stringify(w)).toBe(before); expect(calls.length).toBeLessThan(1200);
     return calls;
   }
-  if(id==='fireball'||id==='lightning')expect(render(5)).toEqual(render(1));else expect(render(5)).not.toEqual(render(1));
+  if(id==='fireball'||id==='lightning'||id==='blades')expect(render(5)).toEqual(render(1));else expect(render(5)).not.toEqual(render(1));
 });

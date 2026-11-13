@@ -1,0 +1,115 @@
+{
+  "fixture": "Mage45, elapsed600s, five Mage spells rankV, maximum legal CDR floor,150mixed regular+3bosses+3Guardians; real WASD/Blink; fixture-only invulnerability",
+  "measurement": "12 real seconds per viewport; first2 samples excluded; median FPS and nearest-rank95th percentile of10 once-per-second Scene.update samples. Desktop Chromium DPR1 on current PC, no claim of continuous whole-frame profile or physical mobile hardware.",
+  "comparison": [
+    {
+      "viewport": "1280x720",
+      "before": {
+        "medianFps": 59.09898376464844,
+        "sampledP95UpdateMs": 1.4000000059604645,
+        "resources": {
+          "objects": 55,
+          "textures": 55,
+          "bytes": 36695376,
+          "clock": [
+            0,
+            0,
+            0
+          ],
+          "tweens": 0,
+          "blur": 4,
+          "bridge": {
+            "commands": 1,
+            "snapshots": 1,
+            "metrics": 1
+          }
+        }
+      },
+      "after": {
+        "medianFps": 59.41572570800781,
+        "sampledP95UpdateMs": 1.6000000014901161,
+        "resources": {
+          "objects": 57,
+          "textures": 56,
+          "bytes": 41864528,
+          "clock": [
+            0,
+            0,
+            0
+          ],
+          "tweens": 0,
+          "blur": 4,
+          "bridge": {
+            "commands": 1,
+            "snapshots": 1,
+            "metrics": 1
+          }
+        }
+      },
+      "delta": {
+        "objects": 2,
+        "textures": 1,
+        "rgbaBytes": 5169152
+      },
+      "loadSamples": 12,
+      "all150_3_3": true,
+      "fixedResourcesAcrossFiveRestarts": true,
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "before": {
+        "medianFps": 59.24510955810547,
+        "sampledP95UpdateMs": 1.5,
+        "resources": {
+          "objects": 31,
+          "textures": 31,
+          "bytes": 30403920,
+          "clock": [
+            0,
+            0,
+            0
+          ],
+          "tweens": 0,
+          "blur": 4,
+          "bridge": {
+            "commands": 1,
+            "snapshots": 1,
+            "metrics": 1
+          }
+        }
+      },
+      "after": {
+        "medianFps": 59.31907653808594,
+        "sampledP95UpdateMs": 1.5,
+        "resources": {
+          "objects": 33,
+          "textures": 32,
+          "bytes": 35573072,
+          "clock": [
+            0,
+            0,
+            0
+          ],
+          "tweens": 0,
+          "blur": 4,
+          "bridge": {
+            "commands": 1,
+            "snapshots": 1,
+            "metrics": 1
+          }
+        }
+      },
+      "delta": {
+        "objects": 2,
+        "textures": 1,
+        "rgbaBytes": 5169152
+      },
+      "loadSamples": 12,
+      "all150_3_3": true,
+      "fixedResourcesAcrossFiveRestarts": true,
+      "errors": []
+    }
+  ],
+  "memoryScope": "Fixed textures RGBA byte estimate and object/listener/timer/tween counts, not browser heap/GPU memory profiling."
+}

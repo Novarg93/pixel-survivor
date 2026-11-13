@@ -41,8 +41,8 @@ it.each(baseline.hp)('retains spawn HP reduction at minute$minute and the approv
   for (const kind of ['grunt', 'runner', 'tank', 'caster', 'rusher', 'splitter'] as const) expect(ENEMIES[kind]).toEqual(baseline.definitions[kind]);
 });
 it('records actual runtime HP after the hotfix and preserves other specialization values', () => {
-  expect(S).toEqual({ ...baseline.mobility, wallDuration: [3, 3.5, 4] });
-  expect(PLAYER_HEALTH_BAR).toEqual({ ...baseline.healthBar, height: 5 });
+  expect(S).toEqual({ ...baseline.mobility, wallDuration: [3, 3.5, 4], berserkSpeed: [1.3, 1.35, 1.4] });
+  expect(PLAYER_HEALTH_BAR).toEqual({ ...baseline.healthBar, height: 5, offsetY: -46 });
   const hp = baseline.hp.map(row => { const w = quiet(); w.elapsed = row.minute * 60; return { minute: row.minute,
     enemies: Object.fromEntries(kinds.map(kind => { const e = w.spawn(kind, { x: 80, y: 0 })!; return [kind, { hp: e.hp, maxHp: e.maxHp }]; })) }; });
   mkdirSync('.tmp/balance-hotfix', { recursive: true }); writeFileSync('.tmp/balance-hotfix/after.json', JSON.stringify({ hp, mobility: S, healthBar: PLAYER_HEALTH_BAR }, null, 2));

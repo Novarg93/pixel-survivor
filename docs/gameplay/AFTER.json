@@ -1,0 +1,239 @@
+{
+  "seed": 12345,
+  "seconds": 600,
+  "fixture": "invulnerable circular pilot, first eligible upgrade, 20Hz simulation",
+  "peak": 71,
+  "encounterOverlaps": 0,
+  "bosses": [
+    {
+      "kind": "charger",
+      "at": 180
+    },
+    {
+      "kind": "sorcerer",
+      "at": 360
+    },
+    {
+      "kind": "eclipse",
+      "at": 540
+    }
+  ],
+  "guardians": [
+    239.4,
+    448.35
+  ],
+  "minutes": [
+    {
+      "minute": 1,
+      "wave": "Камни просыпаются",
+      "interval": 0.9,
+      "burst": 1,
+      "cap": 65,
+      "elite": 0,
+      "speedMultiplier": 1.05,
+      "runnerSpeedMultiplier": 1.05,
+      "spawned": 59,
+      "alive": 5,
+      "kills": 32,
+      "level": 1,
+      "kinds": {
+        "grunt": 1,
+        "runner": 4,
+        "tank": 0
+      }
+    },
+    {
+      "minute": 2,
+      "wave": "Рунные дозорные",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 80,
+      "elite": 0.04,
+      "speedMultiplier": 1.1025,
+      "runnerSpeedMultiplier": 1.1025,
+      "spawned": 87,
+      "alive": 7,
+      "kills": 80,
+      "level": 3,
+      "kinds": {
+        "grunt": 6,
+        "runner": 1,
+        "tank": 0,
+        "caster": 0
+      }
+    },
+    {
+      "minute": 3,
+      "wave": "Терновый вызов",
+      "interval": 0.85,
+      "burst": 2,
+      "cap": 90,
+      "elite": 0.06,
+      "speedMultiplier": 1.1576250000000001,
+      "runnerSpeedMultiplier": 1.1576250000000001,
+      "spawned": 184,
+      "alive": 28,
+      "kills": 150,
+      "level": 6,
+      "kinds": {
+        "grunt": 9,
+        "runner": 12,
+        "tank": 7,
+        "caster": 0
+      }
+    },
+    {
+      "minute": 4,
+      "wave": "Прорыв из чащи",
+      "interval": 0.8,
+      "burst": 2,
+      "cap": 105,
+      "elite": 0.08,
+      "speedMultiplier": 1.2155062500000002,
+      "runnerSpeedMultiplier": 1.2155062500000002,
+      "spawned": 182,
+      "alive": 22,
+      "kills": 220,
+      "level": 9,
+      "kinds": {
+        "grunt": 1,
+        "runner": 8,
+        "tank": 5,
+        "caster": 8,
+        "rusher": 0
+      }
+    },
+    {
+      "minute": 5,
+      "wave": "Осколочный рой",
+      "interval": 0.78,
+      "burst": 3,
+      "cap": 120,
+      "elite": 0.1,
+      "speedMultiplier": 1.2762815625000004,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 196,
+      "alive": 29,
+      "kills": 297,
+      "level": 12,
+      "kinds": {
+        "grunt": 5,
+        "runner": 8,
+        "tank": 7,
+        "caster": 4,
+        "rusher": 5,
+        "splitter": 0
+      }
+    },
+    {
+      "minute": 6,
+      "wave": "Рунная осада",
+      "interval": 0.75,
+      "burst": 3,
+      "cap": 130,
+      "elite": 0.12,
+      "speedMultiplier": 1.3400956406250004,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 318,
+      "alive": 44,
+      "kills": 442,
+      "level": 16,
+      "kinds": {
+        "grunt": 8,
+        "runner": 10,
+        "tank": 10,
+        "caster": 11,
+        "rusher": 3,
+        "splitter": 2
+      }
+    },
+    {
+      "minute": 7,
+      "wave": "Охота элит",
+      "interval": 0.7,
+      "burst": 3,
+      "cap": 140,
+      "elite": 0.16,
+      "speedMultiplier": 1.4071004226562505,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 326,
+      "alive": 46,
+      "kills": 599,
+      "level": 19,
+      "kinds": {
+        "grunt": 9,
+        "runner": 12,
+        "tank": 8,
+        "caster": 10,
+        "rusher": 4,
+        "splitter": 3
+      }
+    },
+    {
+      "minute": 8,
+      "wave": "Сходятся угрозы",
+      "interval": 0.65,
+      "burst": 3,
+      "cap": 150,
+      "elite": 0.18,
+      "speedMultiplier": 1.45,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 339,
+      "alive": 39,
+      "kills": 769,
+      "level": 20,
+      "kinds": {
+        "grunt": 5,
+        "runner": 11,
+        "tank": 5,
+        "caster": 8,
+        "rusher": 3,
+        "splitter": 7
+      }
+    },
+    {
+      "minute": 9,
+      "wave": "Час затмения",
+      "interval": 0.62,
+      "burst": 3,
+      "cap": 150,
+      "elite": 0.2,
+      "speedMultiplier": 1.45,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 372,
+      "alive": 48,
+      "kills": 931,
+      "level": 24,
+      "kinds": {
+        "grunt": 10,
+        "runner": 11,
+        "tank": 6,
+        "caster": 10,
+        "rusher": 8,
+        "splitter": 3
+      }
+    },
+    {
+      "minute": 10,
+      "wave": "Ночь осколков",
+      "interval": 0.6,
+      "burst": 3,
+      "cap": 150,
+      "elite": 0.22,
+      "speedMultiplier": 1.45,
+      "runnerSpeedMultiplier": 1.25,
+      "spawned": 404,
+      "alive": 57,
+      "kills": 1122,
+      "level": 25,
+      "kinds": {
+        "grunt": 7,
+        "runner": 12,
+        "tank": 13,
+        "caster": 10,
+        "rusher": 9,
+        "splitter": 6
+      }
+    }
+  ]
+}

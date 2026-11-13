@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-03",
+  "branch": "feature/mage-casting-conductor",
+  "base": "3e5febf; current uncommitted Audio MVP and completed Frost/Level-Up work preserved before branching",
+  "checks": {
+    "check": {
+      "command": "npm.cmd run check",
+      "status": "passed",
+      "exitCode": 0,
+      "unitTests": 365,
+      "unitFiles": 51,
+      "typecheck": true,
+      "lint": true,
+      "build": true,
+      "log": ".tmp/mage-casting/check.log"
+    },
+    "e2e": {
+      "command": "npm.cmd run test:e2e",
+      "port": 5205,
+      "status": "passed",
+      "passed": 178,
+      "durationMinutes": 29.8,
+      "lastRun": {
+        "status": "passed",
+        "failedTests": []
+      },
+      "log": ".tmp/mage-casting/full-e2e-final.log"
+    },
+    "production": {
+      "command": "npm.cmd run test:e2e:production",
+      "port": 5206,
+      "status": "passed",
+      "exitCode": 0,
+      "passed": 4,
+      "durationSeconds": 28.5,
+      "lastRun": {
+        "status": "passed",
+        "failedTests": []
+      },
+      "log": ".tmp/mage-casting/production.log"
+    },
+    "diff": {
+      "command": "git diff --check",
+      "status": "passed",
+      "exitCode": 0
+    }
+  },
+  "source": {
+    "finalFileCount": 32,
+    "hashesStillMatch": true,
+    "snapshot": ".tmp/mage-casting/source-after.zip",
+    "snapshotSha256": "ce576569390bd2e98af074736d8e7c21596d4a05f47132c03425ae26ea1008a7",
+    "preservedHotfixAndOriginalMage": true,
+    "invariants": "INVARIANTS.json"
+  },
+  "art": {
+    "frames": 222,
+    "bodyFrames": 54,
+    "originalMageReproducible": {
+      "originalMagePngReproducedByteForByte": true
+    },
+    "visualReview": "VISUAL_REVIEW.json",
+    "videosRecorded": [
+      "screenshots/mage-casting/mage-conductor-1280.webm",
+      "screenshots/mage-casting/mage-conductor-390.webm"
+    ],
+    "videosWatchedEndToEnd": false
+  },
+  "performance": "PERFORMANCE.json",
+  "changesToBalance": false,
+  "newRuntimeTimersOrListeners": false,
+  "commit": false,
+  "push": false,
+  "merge": false,
+  "deploy": false,
+  "blockers": [],
+  "manualAcceptancePending": [
+    "Frost Nova sound listening",
+    "Mage artistic feel, including late combat",
+    "Physical mobile/high-DPR device outside current desktop viewport test"
+  ]
+}

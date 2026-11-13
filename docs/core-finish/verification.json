@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-05",
+  "branch": "main",
+  "base": "52de131",
+  "limits": {
+    "level": 70,
+    "victory": 1200
+  },
+  "unit": {
+    "files": 71,
+    "passed": 562,
+    "exit": 0
+  },
+  "targeted": {
+    "passed": 7,
+    "exit": 0
+  },
+  "full": {
+    "total": 340,
+    "passed": 339,
+    "failed": 1,
+    "minutes": 21.3,
+    "reason": "60s load fixture from19:30 reached new20:00 victory; fixture moved to18:50"
+  },
+  "recovery": {
+    "file": "performance.spec.ts",
+    "passed": 2,
+    "exit": 0,
+    "all340CasesCovered": true
+  },
+  "production": {
+    "passed": 7,
+    "seconds": 28.1,
+    "exit": 0
+  },
+  "diffCheck": {
+    "exit": 0
+  },
+  "frozenFiles": 346,
+  "changedAfterFullRun": [
+    "tests/e2e/performance.spec.ts"
+  ],
+  "runtimeUnchangedAfterFullRun": true,
+  "benchmark": {
+    "gameSeconds": 59.83007999996289,
+    "fps": {
+      "min": 57.57421875,
+      "median": 59.89598768949509,
+      "average": 59.78502079642133
+    },
+    "maxima": {
+      "mobs": 150,
+      "projectiles": 49,
+      "orbs": 240,
+      "bosses": 3,
+      "chunks": 48
+    },
+    "errors": []
+  },
+  "manualAcceptance": "accepted for push",
+  "committed": true,
+  "pushed": true,
+  "deployed": false,
+  "commit": "5a5707d"
+}

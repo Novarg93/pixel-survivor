@@ -1,0 +1,23 @@
+{
+  "base": "633a572884db466c212faeb223c6aaa24e25fe76",
+  "branch": "main",
+  "changed": [
+    "src/game/art/FireUltimateArt.ts",
+    "src/game/art/UltimateArt.ts",
+    "src/game/audio/AudioController.ts",
+    "src/game/audio/AudioPresentation.ts",
+    "src/game/audio/catalog.ts",
+    "src/game/audio/synthesis.ts",
+    "src/game/config/ultimates.ts",
+    "src/game/events/gameFeedback.ts",
+    "src/game/systems/World.ts",
+    "src/game/ultimates/FireUltimate.ts",
+    "src/game/ultimates/UltimateSystem.ts",
+    "tests/e2e/fire-inferno.spec.ts",
+    "tests/fixtures/non-fire-pcm.json",
+    "tests/unit/audio.test.ts",
+    "tests/unit/fire-inferno.test.ts"
+  ],
+  "protectedCount": 68,
+  "protectedFailures": []
+}

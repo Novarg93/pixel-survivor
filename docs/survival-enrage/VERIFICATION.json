@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-03",
+  "branch": "feature/survival-enrage-arcane-absorb",
+  "checkpoint": "d7bb99486125c42aee37cb70146ab8002dfe6761",
+  "unit": {
+    "files": 53,
+    "tests": 406,
+    "exit": 0
+  },
+  "full": {
+    "startTime": "2026-11-03T12:47:17.367Z",
+    "duration": 1161763.839,
+    "expected": 188,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "production": {
+    "startTime": "2026-11-03T13:07:50.220Z",
+    "duration": 29089.403000000002,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "isolatedPerformance": {
+    "startTime": "2026-11-03T13:07:18.590Z",
+    "duration": 30383.369,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "exits": {
+    "check-final": 0,
+    "e2e-full": 0,
+    "e2e-performance-final": 0,
+    "e2e-production": 0,
+    "diff-check": 0
+  },
+  "sourceHashes": {
+    "files": 52,
+    "unchangedDuringFinalQA": true
+  },
+  "fps": [
+    {
+      "width": 1280,
+      "medianFps": 59.332305908203125,
+      "sampledP95UpdateMs": 1.1000000014901161
+    },
+    {
+      "width": 390,
+      "medianFps": 59.33258056640625,
+      "sampledP95UpdateMs": 1.1000000014901161
+    }
+  ],
+  "raf": [
+    {
+      "width": 1280,
+      "mode": "afk",
+      "seconds": 45.89551999996161,
+      "status": "over",
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 179.99999999999997,
+      "hits": 15,
+      "blocked": 4,
+      "attempts": 35,
+      "shots": 51,
+      "kills": 480,
+      "blinks": 0,
+      "peakRegular": 25,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "width": 1280,
+      "mode": "move",
+      "seconds": 45.009063999966315,
+      "status": "paused",
+      "hp": 165.98870407573344,
+      "maxHp": 180,
+      "damageTaken": 14.011295924266562,
+      "hits": 1,
+      "blocked": 0,
+      "attempts": 21,
+      "shots": 49,
+      "kills": 363,
+      "blinks": 0,
+      "peakRegular": 74,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "width": 1280,
+      "mode": "blink",
+      "seconds": 45.010999999965975,
+      "status": "paused",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 10,
+      "shots": 52,
+      "kills": 378,
+      "blinks": 7,
+      "peakRegular": 61,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "width": 390,
+      "mode": "afk",
+      "seconds": 34.93031999997527,
+      "status": "over",
+      "hp": 0,
+      "maxHp": 180,
+      "damageTaken": 180,
+      "hits": 11,
+      "blocked": 5,
+      "attempts": 36,
+      "shots": 31,
+      "kills": 339,
+      "blinks": 0,
+      "peakRegular": 18,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "width": 390,
+      "mode": "move",
+      "seconds": 45.01195333329974,
+      "status": "paused",
+      "hp": 165.05008020266686,
+      "maxHp": 180,
+      "damageTaken": 14.949919797333138,
+      "hits": 1,
+      "blocked": 1,
+      "attempts": 9,
+      "shots": 43,
+      "kills": 372,
+      "blinks": 0,
+      "peakRegular": 39,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    },
+    {
+      "width": 390,
+      "mode": "blink",
+      "seconds": 45.01203666663412,
+      "status": "paused",
+      "hp": 180,
+      "maxHp": 180,
+      "damageTaken": 0,
+      "hits": 0,
+      "blocked": 0,
+      "attempts": 0,
+      "shots": 47,
+      "kills": 406,
+      "blinks": 8,
+      "peakRegular": 42,
+      "peakBosses": 1,
+      "peakGuardians": 0,
+      "invalidInvulnerability": false
+    }
+  ]
+}

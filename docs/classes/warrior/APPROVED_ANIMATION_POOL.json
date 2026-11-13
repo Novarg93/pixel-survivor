@@ -1,0 +1,1510 @@
+{
+  "version": 17,
+  "date": "2026-11-13",
+  "scope": "Final skills v5 plus previously accepted Idle/Run/autoattacks integrated in game",
+  "runtimeIntegration": true,
+  "sources": {
+    "auto-east-c1": {
+      "manifest": "art/generated/warrior-approved-attacks-v3/manifest.json",
+      "clip": "east-forehand",
+      "jobId": "e56cb604-8061-4d25-80c0-6d8d3970157c",
+      "collection": "clips",
+      "bakedEffect": false
+    },
+    "auto-east-c3": {
+      "manifest": "art/generated/warrior-approved-attacks-v3/manifest.json",
+      "clip": "east-overhead",
+      "jobId": "45391128-d9e4-4223-8399-bb9d152b8ea9",
+      "collection": "clips",
+      "bakedEffect": false
+    },
+    "auto-nw-c1": {
+      "manifest": "art/generated/warrior-approved-attacks-v3/manifest.json",
+      "clip": "north-west-forehand",
+      "jobId": "2937c6ea-32c4-465e-baaa-9c8e912ff657",
+      "collection": "clips",
+      "bakedEffect": false
+    },
+    "auto-nw-c3": {
+      "manifest": "art/generated/warrior-approved-attacks-v3/manifest.json",
+      "clip": "north-west-overhead",
+      "jobId": "a2a9a0bf-ac8d-4163-8f2f-9aab7dcb2b2c",
+      "collection": "clips",
+      "bakedEffect": false
+    },
+    "auto-heavy-c": {
+      "manifest": "art/generated/warrior-cleave-review-v1/manifest.json",
+      "clip": "cleave-c",
+      "jobId": "3111d31d-31d3-470b-a8bb-b9cba8faf334",
+      "collection": "variants",
+      "bakedEffect": true,
+      "frontOnly": true,
+      "reviewNote": "После нисходящего слеша остаётся короткое кольцо у ног. Оно есть в исходных кадрах и сохранено для оценки."
+    },
+    "skill-cleave-a": {
+      "manifest": "art/generated/warrior-cleave-review-v1/manifest.json",
+      "clip": "cleave-a",
+      "jobId": "e79ebf3c-1617-4f9a-935a-87e21e866b03",
+      "collection": "variants",
+      "bakedEffect": true
+    },
+    "warrior-whirlwind-user-south": {
+      "manifest": "art/generated/warrior-whirlwind-user-recipe-v5/manifest.json",
+      "collection": "variants",
+      "clip": "user-south",
+      "artifact": "art/generated/warrior/animation/whirlwind/whirlwind.png",
+      "artifactSHA256": "f0fb133643cb919c29dc331c4864db6b83f31111a6efcd6ee5331174644ba381",
+      "jobId": null,
+      "bakedEffect": true,
+      "provenance": "User-exported PNG; UI settings reported by user"
+    },
+    "warrior-stomp-recipe-south": {
+      "manifest": "art/generated/warrior-skill-recipe-review-v1/manifest.json",
+      "collection": "variants",
+      "clip": "stomp",
+      "jobId": "15874bd6-d9db-4505-82d8-b0d2811137dd",
+      "bakedEffect": false,
+      "effect": null
+    },
+    "warrior-block-recipe-south": {
+      "manifest": "art/generated/warrior-skill-recipe-review-v1/manifest.json",
+      "collection": "variants",
+      "clip": "block",
+      "jobId": "83c63a69-c5d9-4ed3-8180-e82182464292",
+      "bakedEffect": false,
+      "effect": null
+    },
+    "warrior-throw-old-south": {
+      "manifest": "art/generated/warrior-animation-review-v1/manifest.json",
+      "collection": "clips",
+      "clip": "gesture-throw",
+      "jobId": "b3e3f431-c32f-403e-bad8-4396bcb67e40",
+      "bakedEffect": false,
+      "effect": "vfx-piercing-throw",
+      "accepted": false,
+      "currentApprovalStatus": "revoked"
+    },
+    "warrior-charge-old-south": {
+      "manifest": "art/generated/warrior-animation-review-v1/manifest.json",
+      "collection": "clips",
+      "clip": "gesture-charge",
+      "jobId": "b7a03eab-d0a2-4f62-9ed3-4cf24f30b6a9",
+      "bakedEffect": false,
+      "effect": "charge-a/b"
+    },
+    "warrior-north-stance-cell4": {
+      "artifact": "art/warrior/8-proections.png",
+      "artifactSHA256": "8786f04a27fd2d54eae01c1f0f9346b00353f544ad5c85d072c4f4681a6264f3",
+      "crop": {
+        "x": 0,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "derivedArtifact": "art/generated/warrior-movement-attacks-review-v4/references/north-base-cell-4.png",
+      "accepted": true
+    },
+    "runtime-front-idle": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "front-idle",
+      "jobId": "c0d2f10a-961d-4212-a8e2-4f0bb4d23ef9",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-front-c1": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "front-c1",
+      "jobId": "e56cb604-8061-4d25-80c0-6d8d3970157c",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-front-c3": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "front-c3",
+      "jobId": "45391128-d9e4-4223-8399-bb9d152b8ea9",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-front-heavy": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "front-heavy",
+      "jobId": "3111d31d-31d3-470b-a8bb-b9cba8faf334",
+      "accepted": true,
+      "bakedEffect": true
+    },
+    "runtime-north-idle": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "north-idle",
+      "jobId": "10ef8d0d-bcc5-4400-aa63-c69c2f52d7c2",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-north-run": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "north-run",
+      "jobId": "fbfd63b2-7e91-4e68-9ead-f23900024f11",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-front-run": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "front-run",
+      "jobId": "073e0f50-e867-4b71-99c7-c26687b3df4c",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "runtime-north-c1": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "north-c1",
+      "jobId": "c814a798-2ac9-4748-a60a-56e75b7cee03",
+      "accepted": true,
+      "bakedEffect": true
+    },
+    "runtime-north-c3": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "north-c3",
+      "jobId": "a0749dd3-4ed2-4ff3-80e9-9538cf0277d1",
+      "accepted": true,
+      "bakedEffect": true
+    },
+    "runtime-north-heavy": {
+      "manifest": "src/game/art/warriorHeroManifest.json",
+      "collection": "clips",
+      "clip": "north-heavy",
+      "jobId": "284a4966-8a00-4cf7-8828-5c73542925ca",
+      "accepted": true,
+      "bakedEffect": true
+    },
+    "warrior-skills-v2-north-whirlwind": {
+      "manifest": "art/generated/warrior-skills-directions-review-v3/manifest.json",
+      "collection": "clips",
+      "clip": "north-whirlwind",
+      "jobId": "dc3a933a-3f26-4ad6-bd73-29cecf53b9e4",
+      "accepted": true,
+      "bakedEffect": true
+    },
+    "warrior-skills-v2-north-block": {
+      "manifest": "art/generated/warrior-skills-directions-review-v3/manifest.json",
+      "collection": "clips",
+      "clip": "north-block",
+      "jobId": "ba9b481b-8a97-471b-8e86-5d3c22d02e65",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "warrior-skills-v2-north-charge": {
+      "manifest": "art/generated/warrior-skills-directions-review-v3/manifest.json",
+      "collection": "clips",
+      "clip": "north-charge",
+      "jobId": "fb45c2ee-19a7-4ffa-be81-ca5ce99340ff",
+      "accepted": true,
+      "bakedEffect": false
+    },
+    "warrior-skills-v4-north-throw": {
+      "manifest": "art/generated/warrior-skills-directions-review-v4/manifest.json",
+      "collection": "clips",
+      "clip": "north-throw",
+      "jobId": "9feaa107-7277-42a5-83ff-339051f509e7",
+      "accepted": true,
+      "bakedEffect": false,
+      "nativeFile": "art/generated/warrior-skills-directions-review-v4/aseprite/north-throw.aseprite"
+    },
+    "warrior-skills-runtime-v1-front-cleave": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-cleave",
+      "jobId": "e79ebf3c-1617-4f9a-935a-87e21e866b03",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-cleave"
+    },
+    "warrior-skills-runtime-v1-front-whirlwind": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-whirlwind",
+      "jobId": null,
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-whirlwind"
+    },
+    "warrior-skills-runtime-v1-front-stomp": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-stomp",
+      "jobId": "15874bd6-d9db-4505-82d8-b0d2811137dd",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-stomp"
+    },
+    "warrior-skills-runtime-v1-front-block": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-block",
+      "jobId": "83c63a69-c5d9-4ed3-8180-e82182464292",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-block"
+    },
+    "warrior-skills-runtime-v1-front-charge": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-charge",
+      "jobId": "b7a03eab-d0a2-4f62-9ed3-4cf24f30b6a9",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-charge"
+    },
+    "warrior-skills-runtime-v1-north-whirlwind": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-whirlwind",
+      "jobId": "dc3a933a-3f26-4ad6-bd73-29cecf53b9e4",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-whirlwind"
+    },
+    "warrior-skills-runtime-v1-north-block": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-block",
+      "jobId": "ba9b481b-8a97-471b-8e86-5d3c22d02e65",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-block"
+    },
+    "warrior-skills-runtime-v1-north-charge": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-charge",
+      "jobId": "fb45c2ee-19a7-4ffa-be81-ca5ce99340ff",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-charge"
+    },
+    "warrior-skills-runtime-v1-north-cleave": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-cleave",
+      "jobId": "b3e81996-a1b6-493f-9044-7d48b1fd88c4",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-cleave"
+    },
+    "warrior-skills-runtime-v1-north-stomp": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-stomp",
+      "jobId": "c09d1ec3-806c-45e5-b327-7b14755d3f66",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-stomp"
+    },
+    "warrior-skills-runtime-v1-front-throw": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "front-throw",
+      "jobId": "7e0546df-ecb4-44a7-857a-48f831daa531",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "front-throw"
+    },
+    "warrior-skills-runtime-v1-north-throw": {
+      "manifest": "src/game/art/warriorSkillsManifest.json",
+      "collection": "clips",
+      "clip": "north-throw",
+      "jobId": "9feaa107-7277-42a5-83ff-339051f509e7",
+      "accepted": true,
+      "canonicalManifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+      "canonicalClip": "north-throw"
+    }
+  },
+  "cleave": {
+    "source": "skill-cleave-a",
+    "accepted": true,
+    "directions": [
+      "south",
+      "south-west",
+      "west",
+      "east",
+      "south-east"
+    ]
+  },
+  "autoAttackPool": {
+    "south": [
+      {
+        "source": "runtime-front-c1",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-c3",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-heavy",
+        "flip": false
+      }
+    ],
+    "south-west": [
+      {
+        "source": "runtime-front-c1",
+        "flip": true
+      },
+      {
+        "source": "runtime-front-c3",
+        "flip": true
+      },
+      {
+        "source": "runtime-front-heavy",
+        "flip": true
+      }
+    ],
+    "west": [
+      {
+        "source": "runtime-front-c1",
+        "flip": true
+      },
+      {
+        "source": "runtime-front-c3",
+        "flip": true
+      },
+      {
+        "source": "runtime-front-heavy",
+        "flip": true
+      }
+    ],
+    "north-west": [
+      {
+        "source": "runtime-north-c1",
+        "flip": true
+      },
+      {
+        "source": "runtime-north-c3",
+        "flip": true
+      },
+      {
+        "source": "runtime-north-heavy",
+        "flip": true
+      }
+    ],
+    "north": [
+      {
+        "source": "runtime-north-c1",
+        "flip": false
+      },
+      {
+        "source": "runtime-north-c3",
+        "flip": false
+      },
+      {
+        "source": "runtime-north-heavy",
+        "flip": false
+      }
+    ],
+    "north-east": [
+      {
+        "source": "runtime-north-c1",
+        "flip": false
+      },
+      {
+        "source": "runtime-north-c3",
+        "flip": false
+      },
+      {
+        "source": "runtime-north-heavy",
+        "flip": false
+      }
+    ],
+    "east": [
+      {
+        "source": "runtime-front-c1",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-c3",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-heavy",
+        "flip": false
+      }
+    ],
+    "south-east": [
+      {
+        "source": "runtime-front-c1",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-c3",
+        "flip": false
+      },
+      {
+        "source": "runtime-front-heavy",
+        "flip": false
+      }
+    ]
+  },
+  "reason": "Direct user selection: Cleave A accepted, C added to auto-attack pool. C is front-only; north group retains its accepted back-facing C1/C3.",
+  "latestWhirlwindTrialsAccepted": false,
+  "whirlwind": {
+    "source": "warrior-whirlwind-user-south",
+    "directions": [
+      "south",
+      "south-west",
+      "west",
+      "east",
+      "south-east"
+    ],
+    "flip": false,
+    "requestedFrameCount": 12,
+    "deliveredFrameCount": 13,
+    "note": "Accepted SOUTH start/recovery; no acceptance inferred for other starting directions or new trials."
+  },
+  "whirlwindDecision": "User explicitly returned from shield-strike idea to Whirlwind and supplied a suitable SOUTH animation. Shield demo is abandoned; new recipe trials remain unapproved.",
+  "skills": {
+    "cleave": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-cleave",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-cleave",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-cleave",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-cleave",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-cleave",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-cleave",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-cleave",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-cleave",
+          "flip": false
+        }
+      }
+    },
+    "whirlwind": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-whirlwind",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-whirlwind",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-whirlwind",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-whirlwind",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-whirlwind",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-whirlwind",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-whirlwind",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-whirlwind",
+          "flip": false
+        }
+      }
+    },
+    "stomp": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-stomp",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-stomp",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-stomp",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-stomp",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-stomp",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-stomp",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-stomp",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-stomp",
+          "flip": false
+        }
+      }
+    },
+    "block": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-block",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-block",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-block",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-block",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-block",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-block",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-block",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-block",
+          "flip": false
+        }
+      }
+    },
+    "throw": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-throw",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-throw",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-throw",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-throw",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-throw",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-throw",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-throw",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-throw",
+          "flip": false
+        }
+      }
+    },
+    "charge": {
+      "accepted": true,
+      "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+      "routes": {
+        "south": {
+          "source": "warrior-skills-runtime-v1-front-charge",
+          "flip": false
+        },
+        "south-west": {
+          "source": "warrior-skills-runtime-v1-front-charge",
+          "flip": true
+        },
+        "west": {
+          "source": "warrior-skills-runtime-v1-front-charge",
+          "flip": true
+        },
+        "north-west": {
+          "source": "warrior-skills-runtime-v1-north-charge",
+          "flip": true
+        },
+        "north": {
+          "source": "warrior-skills-runtime-v1-north-charge",
+          "flip": false
+        },
+        "north-east": {
+          "source": "warrior-skills-runtime-v1-north-charge",
+          "flip": false
+        },
+        "east": {
+          "source": "warrior-skills-runtime-v1-front-charge",
+          "flip": false
+        },
+        "south-east": {
+          "source": "warrior-skills-runtime-v1-front-charge",
+          "flip": false
+        }
+      }
+    }
+  },
+  "pendingNorthReview": {
+    "manifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+    "accepted": true,
+    "integrated": true,
+    "resolvedBy": "acceptedSkillRuntime"
+  },
+  "latestProjectionDecision": "Final v5 explicitly accepted 2026-11-13: N/NE direct from cell 4; NW mirror; W/SW front mirror. All 12 final skill clips integrated.",
+  "northStance": {
+    "source": "warrior-north-stance-cell4",
+    "accepted": true,
+    "routes": {
+      "north": {
+        "flip": false
+      },
+      "north-east": {
+        "flip": false
+      },
+      "north-west": {
+        "flip": true
+      }
+    },
+    "decision": "User chose the fourth row-major cell. N/NE direct; NW mirrored. This supersedes the incorrect shield-facing-camera reference."
+  },
+  "supersededNorthAutoAttackPool": {
+    "north": [
+      {
+        "source": "auto-nw-c1",
+        "flip": false
+      },
+      {
+        "source": "auto-nw-c3",
+        "flip": false
+      }
+    ],
+    "north-east": [
+      {
+        "source": "auto-nw-c1",
+        "flip": true
+      },
+      {
+        "source": "auto-nw-c3",
+        "flip": true
+      }
+    ],
+    "north-west": [
+      {
+        "source": "auto-nw-c1",
+        "flip": false
+      },
+      {
+        "source": "auto-nw-c3",
+        "flip": false
+      }
+    ]
+  },
+  "invalidNorthReference": {
+    "artifact": "art/generated/warrior-north-skills-review-v1/references/north-west-192.png",
+    "reason": "User rejected the shield facing the viewer; old northern source is unsuitable",
+    "supersededBy": "warrior-north-stance-cell4"
+  },
+  "movementAttackReviewHistory": [
+    {
+      "manifest": "art/generated/warrior-movement-attacks-review-v4/manifest.json",
+      "reference": "warrior-north-stance-cell4",
+      "clips": [
+        "north-idle",
+        "north-run",
+        "north-c1",
+        "north-c3",
+        "north-heavy"
+      ],
+      "routes": {
+        "north": {
+          "flip": false
+        },
+        "north-east": {
+          "flip": false
+        },
+        "north-west": {
+          "flip": true
+        }
+      },
+      "accepted": false
+    }
+  ],
+  "acceptedMovementAttackReview": {
+    "manifest": "art/generated/warrior-movement-attacks-review-v5/manifest.json",
+    "revisionOf": "art/generated/warrior-movement-attacks-review-v4/manifest.json",
+    "reference": "warrior-north-stance-cell4",
+    "newClips": [
+      "front-run",
+      "north-c1",
+      "north-c3",
+      "north-heavy"
+    ],
+    "retainedNorthClips": [
+      "north-idle",
+      "north-run"
+    ],
+    "routes": {
+      "north": {
+        "flip": false
+      },
+      "north-east": {
+        "flip": false
+      },
+      "north-west": {
+        "flip": true
+      }
+    },
+    "playbackFrames": {
+      "idle": 13,
+      "run": 13,
+      "c1": 13,
+      "c3": 13,
+      "heavy": 17
+    },
+    "preserveAllSourceFrames": true,
+    "accepted": true,
+    "allClipsAccepted": true,
+    "clips": [
+      "front-idle",
+      "front-c1",
+      "front-c3",
+      "front-heavy",
+      "north-idle",
+      "north-run",
+      "front-run",
+      "north-c1",
+      "north-c3",
+      "north-heavy"
+    ],
+    "runtimeManifest": "src/game/art/warriorHeroManifest.json"
+  },
+  "movementPool": {
+    "south": {
+      "idle": {
+        "source": "runtime-front-idle",
+        "flip": false
+      },
+      "run": {
+        "source": "runtime-front-run",
+        "flip": false
+      }
+    },
+    "south-west": {
+      "idle": {
+        "source": "runtime-front-idle",
+        "flip": true
+      },
+      "run": {
+        "source": "runtime-front-run",
+        "flip": true
+      }
+    },
+    "west": {
+      "idle": {
+        "source": "runtime-front-idle",
+        "flip": true
+      },
+      "run": {
+        "source": "runtime-front-run",
+        "flip": true
+      }
+    },
+    "north-west": {
+      "idle": {
+        "source": "runtime-north-idle",
+        "flip": true
+      },
+      "run": {
+        "source": "runtime-north-run",
+        "flip": true
+      }
+    },
+    "north": {
+      "idle": {
+        "source": "runtime-north-idle",
+        "flip": false
+      },
+      "run": {
+        "source": "runtime-north-run",
+        "flip": false
+      }
+    },
+    "north-east": {
+      "idle": {
+        "source": "runtime-north-idle",
+        "flip": false
+      },
+      "run": {
+        "source": "runtime-north-run",
+        "flip": false
+      }
+    },
+    "east": {
+      "idle": {
+        "source": "runtime-front-idle",
+        "flip": false
+      },
+      "run": {
+        "source": "runtime-front-run",
+        "flip": false
+      }
+    },
+    "south-east": {
+      "idle": {
+        "source": "runtime-front-idle",
+        "flip": false
+      },
+      "run": {
+        "source": "runtime-front-run",
+        "flip": false
+      }
+    }
+  },
+  "runtimeIntegrationScope": {
+    "locomotion": true,
+    "autoAttacks": true,
+    "skills": true,
+    "manifest": "src/game/art/warriorHeroManifest.json",
+    "charge": true,
+    "skillsManifest": "src/game/art/warriorSkillsManifest.json"
+  },
+  "supersededNorthSkillReviews": [
+    {
+      "manifest": "art/generated/warrior-north-skills-review-v1/manifest.json",
+      "skills": [
+        "cleave",
+        "whirlwind",
+        "stomp",
+        "block",
+        "throw",
+        "charge"
+      ],
+      "proposedRoutes": {
+        "north": {
+          "group": "north-west",
+          "flip": false
+        },
+        "north-west": {
+          "group": "north-west",
+          "flip": false
+        },
+        "north-east": {
+          "group": "north-west",
+          "flip": true
+        }
+      },
+      "accepted": false,
+      "suspended": true,
+      "reason": "Incorrect input reference rejected by user; regenerate abilities later from selected cell 4."
+    },
+    {
+      "manifest": "art/generated/warrior-skills-directions-review-v2/manifest.json",
+      "reference": "warrior-north-stance-cell4",
+      "referenceFile": "art/generated/warrior-skills-directions-review-v2/references/north-base-cell-4.png",
+      "skills": [
+        "cleave",
+        "whirlwind",
+        "stomp",
+        "block",
+        "throw",
+        "charge"
+      ],
+      "accepted": false,
+      "suspended": true,
+      "newSourceFrames": 78,
+      "routes": {
+        "north": {
+          "flip": false
+        },
+        "north-east": {
+          "flip": false
+        },
+        "north-west": {
+          "flip": true
+        }
+      },
+      "note": "Six new PixMiniMax trials from correct cell4; previous wrong-reference series remains archived and suspended.",
+      "reviewedOn": "2026-11-12",
+      "feedback": "Whirlwind/Block/Charge accepted; Cleave shield needs repair; north Stomp rejected; all Throw rejected."
+    }
+  ],
+  "runtimeTiming": {
+    "idleFrameMs": 120,
+    "runFrameMs": 75,
+    "autoAttackFrameMs": 60,
+    "chargeFrameMs": {
+      "front": 20,
+      "north": 13.846153846153847
+    },
+    "chargeDurationMs": 180,
+    "reason": "User requested slightly faster autoattacks and priority of real Charge over attacks; artwork preserved.",
+    "skillFrameMs": 75
+  },
+  "runtimeCharge": {
+    "manifest": "src/game/art/warriorSkillsManifest.json",
+    "front": "front-charge",
+    "north": "north-charge",
+    "temporaryNorthFrontFallback": false,
+    "acceptedNorthNotYetIntegrated": false,
+    "durationMs": 180
+  },
+  "pendingSkillReview": {
+    "manifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+    "clips": [],
+    "accepted": true,
+    "resolvedBy": "2026-11-13 explicit all-skills approval",
+    "runtimeManifest": "src/game/art/warriorSkillsManifest.json"
+  },
+  "skillReviewHistory": [
+    {
+      "date": "2026-11-12",
+      "pendingSkillReview": {
+        "manifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+        "clips": [
+          "north-cleave",
+          "north-stomp",
+          "front-throw",
+          "north-whirlwind"
+        ],
+        "accepted": false,
+        "retainedAcceptedNorth": [
+          "north-block",
+          "north-throw",
+          "north-charge"
+        ],
+        "shieldRepairPixels": 691,
+        "northThrowShieldRepair": {
+          "tool": "Aseprite Lua API",
+          "nativeFile": "art/generated/warrior-skills-directions-review-v4/aseprite/north-throw.aseprite",
+          "clip": "north-throw",
+          "frames": 13,
+          "frameMs": 75,
+          "editedFrames": 6,
+          "editedPixels": 1104,
+          "outsideChanges": 0,
+          "alphaChanges": 0,
+          "animationAccepted": true
+        },
+        "northWhirlwindShieldRepair": {
+          "tool": "Aseprite Lua API",
+          "nativeFile": "art/generated/warrior-skills-directions-review-v5/aseprite/north-whirlwind.aseprite",
+          "clip": "north-whirlwind",
+          "frames": 13,
+          "frameMs": 75,
+          "editedFrames": 3,
+          "editedPixels": 574,
+          "outsideChanges": 0,
+          "alphaChanges": 0,
+          "animationAccepted": false,
+          "originalMotionAccepted": true
+        }
+      },
+      "pendingNorthReview": {
+        "manifest": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+        "reference": "warrior-north-stance-cell4",
+        "clips": [
+          "north-cleave",
+          "north-stomp",
+          "north-whirlwind"
+        ],
+        "accepted": false,
+        "suspended": false,
+        "routes": {
+          "north": {
+            "flip": false
+          },
+          "north-east": {
+            "flip": false
+          },
+          "north-west": {
+            "flip": true
+          }
+        }
+      }
+    }
+  ],
+  "acceptedSkillRuntime": {
+    "manifest": "src/game/art/warriorSkillsManifest.json",
+    "source": "art/generated/warrior-skills-directions-review-v5/manifest.json",
+    "accepted": true,
+    "integrated": true,
+    "clips": [
+      "front-cleave",
+      "front-whirlwind",
+      "front-stomp",
+      "front-block",
+      "front-charge",
+      "north-whirlwind",
+      "north-block",
+      "north-charge",
+      "north-cleave",
+      "north-stomp",
+      "front-throw",
+      "north-throw"
+    ],
+    "routes": {
+      "south": {
+        "group": "front",
+        "flip": false,
+        "accepted": true
+      },
+      "south-west": {
+        "group": "front",
+        "flip": true,
+        "accepted": true
+      },
+      "west": {
+        "group": "front",
+        "flip": true,
+        "accepted": true
+      },
+      "north-west": {
+        "group": "north",
+        "flip": true,
+        "accepted": true
+      },
+      "north": {
+        "group": "north",
+        "flip": false,
+        "accepted": true
+      },
+      "north-east": {
+        "group": "north",
+        "flip": false,
+        "accepted": true
+      },
+      "east": {
+        "group": "front",
+        "flip": false,
+        "accepted": true
+      },
+      "south-east": {
+        "group": "front",
+        "flip": false,
+        "accepted": true
+      }
+    },
+    "registryIds": [
+      "warrior-skills-runtime-v1-front-cleave",
+      "warrior-skills-runtime-v1-front-whirlwind",
+      "warrior-skills-runtime-v1-front-stomp",
+      "warrior-skills-runtime-v1-front-block",
+      "warrior-skills-runtime-v1-front-charge",
+      "warrior-skills-runtime-v1-north-whirlwind",
+      "warrior-skills-runtime-v1-north-block",
+      "warrior-skills-runtime-v1-north-charge",
+      "warrior-skills-runtime-v1-north-cleave",
+      "warrior-skills-runtime-v1-north-stomp",
+      "warrior-skills-runtime-v1-front-throw",
+      "warrior-skills-runtime-v1-north-throw"
+    ]
+  },
+  "skillRoutingHistory": [
+    {
+      "date": "2026-11-12",
+      "skills": {
+        "cleave": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-cleave",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-cleave",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-cleave",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-cleave",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-cleave",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-cleave",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-cleave",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-cleave",
+              "flip": false
+            }
+          }
+        },
+        "whirlwind": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-whirlwind",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-whirlwind",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-whirlwind",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-whirlwind",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-whirlwind",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-whirlwind",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-whirlwind",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-whirlwind",
+              "flip": false
+            }
+          }
+        },
+        "stomp": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-stomp",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-stomp",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-stomp",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-stomp",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-stomp",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-stomp",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-stomp",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-stomp",
+              "flip": false
+            }
+          }
+        },
+        "block": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-block",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-block",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-block",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-block",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-block",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-block",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-block",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-block",
+              "flip": false
+            }
+          }
+        },
+        "throw": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-throw",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-throw",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-throw",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-throw",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-throw",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-throw",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-throw",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-throw",
+              "flip": false
+            }
+          }
+        },
+        "charge": {
+          "accepted": true,
+          "runtimeManifest": "src/game/art/warriorSkillsManifest.json",
+          "routes": {
+            "south": {
+              "source": "warrior-skills-runtime-v1-front-charge",
+              "flip": false
+            },
+            "south-west": {
+              "source": "warrior-skills-runtime-v1-front-charge",
+              "flip": true
+            },
+            "west": {
+              "source": "warrior-skills-runtime-v1-front-charge",
+              "flip": true
+            },
+            "north-west": {
+              "source": "warrior-skills-runtime-v1-north-charge",
+              "flip": true
+            },
+            "north": {
+              "source": "warrior-skills-runtime-v1-north-charge",
+              "flip": false
+            },
+            "north-east": {
+              "source": "warrior-skills-runtime-v1-north-charge",
+              "flip": false
+            },
+            "east": {
+              "source": "warrior-skills-runtime-v1-front-charge",
+              "flip": false
+            },
+            "south-east": {
+              "source": "warrior-skills-runtime-v1-front-charge",
+              "flip": false
+            }
+          }
+        }
+      },
+      "runtimeCharge": {
+        "manifest": "src/game/art/warriorHeroManifest.json",
+        "clip": "legacy-charge",
+        "canonicalManifest": "art/generated/warrior-animation-review-v1/manifest.json",
+        "canonicalClip": "gesture-charge",
+        "jobId": "b7a03eab-d0a2-4f62-9ed3-4cf24f30b6a9",
+        "temporaryNorthFrontFallback": true,
+        "newNorthSourcePending": null,
+        "acceptedNorthSource": {
+          "manifest": "art/generated/warrior-skills-directions-review-v3/manifest.json",
+          "clip": "north-charge"
+        },
+        "acceptedNorthNotYetIntegrated": true
+      },
+      "runtimeTiming": {
+        "idleFrameMs": 120,
+        "runFrameMs": 75,
+        "autoAttackFrameMs": 60,
+        "chargeFrameMs": {
+          "front": 20,
+          "north": 13.846153846153847
+        },
+        "chargeDurationMs": 180,
+        "reason": "User requested slightly faster autoattacks and priority of real Charge over attacks; artwork preserved.",
+        "skillFrameMs": 75
+      },
+      "runtimeIntegrationScope": {
+        "locomotion": true,
+        "autoAttacks": true,
+        "skills": false,
+        "manifest": "src/game/art/warriorHeroManifest.json",
+        "charge": true
+      }
+    }
+  ],
+  "runtimeCleaveSync": {
+    "revision": 3,
+    "date": "2026-11-13",
+    "timing": "src/game/config/warriorCleave.ts",
+    "movingLayers": "src/game/art/WarriorMovingCleaveArt.ts",
+    "damageAtContact": true,
+    "renderQueue": false,
+    "playbackDuration": "min(native clip duration, effective cooldown)",
+    "sourcePNGsUnchanged": true,
+    "newGeneration": false,
+    "report": "docs/classes/warrior/CLEAVE_SYNC_V3_REPORT.md"
+  },
+  "runtimeBuffsV4": {
+    "date": "2026-11-13",
+    "spearHitWidth": 28,
+    "spearAreaScaling": true,
+    "movingSkills": [
+      "cleave",
+      "stomp",
+      "block",
+      "throw",
+      "charge"
+    ],
+    "wholeBodySkills": [
+      "whirlwind"
+    ],
+    "blockAbsorbFractions": [
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "blockAbsorbsHostileProjectiles": true,
+    "banner": {
+      "implemented": true,
+      "duration": 15,
+      "radius": 140,
+      "healMaxHpPerSecond": 0.1,
+      "level": 30,
+      "time": 300,
+      "rechargeSuccessfulCharges": 10,
+      "source": "art/generated/warrior-concept-pack-v1/layers/war-banner-a-object.png",
+      "sourceSHA256": "a206ae2b6eef17bd0d3b76a2dfe4c77675598be6f5d3a87399956cd8176d2225",
+      "newGeneration": false
+    },
+    "report": "docs/classes/warrior/BUFFS_V4_REPORT.md"
+  },
+  "acceptedUltimateRuntime": {
+    "accepted": true,
+    "integrated": true,
+    "acceptance": {
+      "date": "2026-11-13",
+      "text": "давай интегрировать принятые варианты ультмейтов в игру",
+      "review": "art/generated/warrior-ultimates-animation-review-v1/viewer.html"
+    },
+    "manifest": "src/game/art/warriorUltimatesManifest.json",
+    "concepts": {
+      "banner": "war-banner-a",
+      "earthbreaker": "earthbreaker-a",
+      "ruin": "spear-of-ruin-b"
+    },
+    "clips": [
+      "gesture-earthbreaker",
+      "gesture-ruin",
+      "vfx-earthbreaker",
+      "vfx-spear-of-ruin",
+      "gesture-banner",
+      "vfx-war-banner"
+    ],
+    "northBodyReuse": {
+      "banner": "north-block",
+      "earthbreaker": "north-stomp",
+      "ruin": "north-throw",
+      "source": "src/game/art/warriorSkillsManifest.json",
+      "selectedBaseCell": 4
+    },
+    "registryIds": [
+      "warrior-ultimates-accepted-v1-gesture-earthbreaker",
+      "warrior-ultimates-accepted-v1-gesture-ruin",
+      "warrior-ultimates-accepted-v1-vfx-earthbreaker",
+      "warrior-ultimates-accepted-v1-vfx-spear-of-ruin",
+      "warrior-ultimates-accepted-v1-gesture-banner",
+      "warrior-ultimates-accepted-v1-vfx-war-banner"
+    ]
+  }
+}

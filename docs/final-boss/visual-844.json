@@ -1,0 +1,427 @@
+{
+  "geometry": {
+    "center": {
+      "x": 0,
+      "y": 0
+    },
+    "vertices": 0,
+    "meteorCount": 9
+  },
+  "restarts": [
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 57,
+      "textures": 62,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": [
+    {
+      "attack": "chargeWindup",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387290
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.08336000000000003,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387106
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.16669,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387062
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.26666999999999996,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387574
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.3333499999999999,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387618
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.41667999999999994,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387554
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.51667,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387358
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.5833400000000001,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387254
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 248.680064,
+      "y": 195,
+      "bytes": 387186
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.09998999999999994,
+      "scale": 1.2769230769230768,
+      "x": 302.3213461924571,
+      "y": 195,
+      "bytes": 389034
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.16668000000000005,
+      "scale": 1.2769230769230768,
+      "x": 338.09829498148576,
+      "y": 195,
+      "bytes": 387374
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.2500300000000002,
+      "scale": 1.2769230769230768,
+      "x": 382.8127751369144,
+      "y": 195,
+      "bytes": 387962
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 388790
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.09997999999999993,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 389058
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.18332,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 388190
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.25000000000000006,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 388566
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 397070
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.08333999999999996,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 397722
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.16669000000000006,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 397742
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.26665999999999995,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 396774
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.34998999999999997,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 395846
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.41666999999999993,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 396210
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.5000099999999998,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 396670
+    },
+    {
+      "attack": "swordActive",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 396942
+    },
+    {
+      "attack": "swordActive",
+      "age": 0.08334000000000005,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 396614
+    },
+    {
+      "attack": "recovery",
+      "age": 0,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 398146
+    },
+    {
+      "attack": "recovery",
+      "age": 0.09998999999999997,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 408938
+    },
+    {
+      "attack": "recovery",
+      "age": 0.16666999999999998,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 403974
+    },
+    {
+      "attack": "recovery",
+      "age": 0.26664999999999994,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 398330
+    },
+    {
+      "attack": "recovery",
+      "age": 0.34998999999999997,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 391086
+    },
+    {
+      "attack": "recovery",
+      "age": 0.4333299999999999,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 389126
+    },
+    {
+      "attack": "recovery",
+      "age": 0.5166699999999999,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 389158
+    },
+    {
+      "attack": "recovery",
+      "age": 0.5833399999999997,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 388478
+    },
+    {
+      "attack": "recovery",
+      "age": 0.6666699999999997,
+      "scale": 1.2769230769230768,
+      "x": 422,
+      "y": 195,
+      "bytes": 389102
+    }
+  ],
+  "errors": []
+}

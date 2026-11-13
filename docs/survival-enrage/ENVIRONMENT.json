@@ -1,0 +1,16 @@
+{
+  "platform": "win32",
+  "release": "10.0.19045",
+  "arch": "x64",
+  "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+  "logicalCpus": 12,
+  "totalMemGiB": 31.6,
+  "node": "v22.16.0",
+  "chromium": {
+    "name": "chromium",
+    "revision": "1248",
+    "installByDefault": true,
+    "browserVersion": "156.0.8078.4",
+    "title": "Chrome for Testing"
+  }
+}

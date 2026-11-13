@@ -1,0 +1,1485 @@
+{
+  "version": 2,
+  "source": "art/generated/warrior-movement-attacks-review-v5/manifest.json",
+  "chargeSource": "art/generated/warrior-north-skills-review-v1/manifest.json",
+  "accepted": true,
+  "canvas": 192,
+  "displaySize": 96,
+  "sourcePixelsUnmodified": true,
+  "sourceFrameCount": 127,
+  "playbackFrameCount": 147,
+  "pages": [
+    {
+      "index": 0,
+      "width": 1024,
+      "height": 970,
+      "sha256": "97d5dfe0e864818e6ccd033939c6888eedd0b9ee14118d15430d5522aca7832d"
+    },
+    {
+      "index": 1,
+      "width": 1024,
+      "height": 970,
+      "sha256": "e85e11b56f11637648275820cdac5f395b923cd14b85400114efbad7a580d352"
+    },
+    {
+      "index": 2,
+      "width": 1024,
+      "height": 970,
+      "sha256": "936458b334cf49af0538a040516d907d7f978a673c115918da70677afea74900"
+    },
+    {
+      "index": 3,
+      "width": 1024,
+      "height": 970,
+      "sha256": "c3014fb4ef833f22b9f63a289becc29a4e46cf9e991a59343e2343d09e26c976"
+    },
+    {
+      "index": 4,
+      "width": 1024,
+      "height": 776,
+      "sha256": "b6034101d8ed13503bc7ce4070be723569c005bb74f92376fd28ef4b612c687b"
+    },
+    {
+      "index": 5,
+      "width": 1024,
+      "height": 388,
+      "sha256": "59618f6a30f9f030c78954ee2d1b7afcf2c5f8b5f3a2e649fb2f3512dc91e08f"
+    }
+  ],
+  "locations": {
+    "front-idle/0": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-idle/00.png",
+      "sha256": "5835ef2dfa79030ea18230ce09d04161affe9673fdb55d46e10c3920e2715894",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "front-idle/1": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-idle/01.png",
+      "sha256": "7ad553d4d3fefff23e349a05c5253eeac59b8f4607f568cde8b2b5f48cbf3b1c",
+      "pixelSHA256": "82827280c0b4a111fbf1fc11f536b6d7c0c42b8fddfb4300955ef09226fdf587"
+    },
+    "front-idle/2": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-idle/02.png",
+      "sha256": "9d66891bac8fa5e88c6cdd0069ad60cf39b608f9590dbee1dc65c0c8bdceb9fc",
+      "pixelSHA256": "cbc58ce7c20ffd73ba5b1ac1390136532c6009dcb22c3a2aa66efa9d103e5154"
+    },
+    "front-idle/3": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-idle/03.png",
+      "sha256": "253f75b908bddcaf5017fec4fcf3b6553ee38bf4b98e38a2f4ca6f63fb920cb3",
+      "pixelSHA256": "03efd2f0f0ad67167fe44e4649885cc623831965ba5735116e86fa259dc75193"
+    },
+    "front-idle/4": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-idle/04.png",
+      "sha256": "8522c58f9f7e9997dfa0a06c61d8e56eebbe691572792c8507c003db9a050844",
+      "pixelSHA256": "c2abdcd90361da24755cfc804dc8ac2db318c57cc00a4b45f34a3317143863af"
+    },
+    "front-c1/0": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/00.png",
+      "sha256": "5835ef2dfa79030ea18230ce09d04161affe9673fdb55d46e10c3920e2715894",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "front-c1/1": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/01.png",
+      "sha256": "570c0b9da01503697ed555a3e53469ec4d21d4a51511dc63c9af1bf1a926a5af",
+      "pixelSHA256": "33516503f3d59fac200b2a9fcf992c28da065458d197eb907f770a1f26de1176"
+    },
+    "front-c1/2": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/02.png",
+      "sha256": "43681be2a1341c7953349264f03d820dcfd299d5ba61ed69cd16ff02f15da896",
+      "pixelSHA256": "aeefa3cba6d9a484468b353f06265b9c6d777fc9c8ae1cf1d99012ab760a5a7f"
+    },
+    "front-c1/3": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/03.png",
+      "sha256": "0f461dbfef319a4505f28dffec0db7b8c04217f89df9aa0b2f0b1aac778dc265",
+      "pixelSHA256": "b0096ca6ecf6b292d975c6fc1625782ca46d6240de3fa30cecb39732b6fc9481"
+    },
+    "front-c1/4": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/04.png",
+      "sha256": "c3d2efdc78ab195f371c2296a6861304da870c74135dcb40c7296929f28c579f",
+      "pixelSHA256": "fdb10b26d8e969c43218e0f512f78482d185fc69182221b2db66461af80b570b"
+    },
+    "front-c1/5": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/05.png",
+      "sha256": "a1bd8353f9ebcb3f716e10fc8d7f574866685b5f10caa6dd049b1f9e9974ed3f",
+      "pixelSHA256": "32f392ee4e7d3907982d9edc24a22c756d5f675279817255dc2fc8fe330945d7"
+    },
+    "front-c1/6": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/06.png",
+      "sha256": "3e4b86dafbe003af49e83c25d0924e47094df74a762fd9de2752e3d3447a3200",
+      "pixelSHA256": "280d271b79ccd7f3291023104761f47bdb31656867272ab8ab11839b3cce6503"
+    },
+    "front-c1/7": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/07.png",
+      "sha256": "797de2cba018c22a5a1ec10cc925833c2d1c5b164ceb16b2b3085512d2764cfc",
+      "pixelSHA256": "1b340a37d8302fd25e75eacbeeece9d57570bcdc1c6a58e91f29f679113a031c"
+    },
+    "front-c1/8": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c1/08.png",
+      "sha256": "a785a3f22dcb95b8559bd8bb2a75acba9d29558176a86930f9158e2217cef06e",
+      "pixelSHA256": "b53a944feee24aa6eac225b280843ac71a6fa8613a20ede5b5a898219bd129d1"
+    },
+    "front-c3/0": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/00.png",
+      "sha256": "5835ef2dfa79030ea18230ce09d04161affe9673fdb55d46e10c3920e2715894",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "front-c3/1": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/01.png",
+      "sha256": "0c0ff42f08e9ae3ea8610089fa673dc4d25ec44ad5916e4e7c1017c52d9eba3d",
+      "pixelSHA256": "5a7191aae53712229c9dc4142eb20203ddc38c174384b4a27254848e294c5e28"
+    },
+    "front-c3/2": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/02.png",
+      "sha256": "38d71f38a038b0f6532b3de8cb230045caec737dfc020417d6c7b3f104d26735",
+      "pixelSHA256": "d2215e07dc6ad413b2b0c4f8d6399e1b5aff2666e0ec08002c7ee740b1ff27fe"
+    },
+    "front-c3/3": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/03.png",
+      "sha256": "a8f047a7855c2de7c71a52d137ca39a9f4ae8fe66c08fd77934aced669e5e7b1",
+      "pixelSHA256": "d2d559605b0c16bcb7a05d266607269aad14d7545dfe86ac1d79994169356f75"
+    },
+    "front-c3/4": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/04.png",
+      "sha256": "35e94afb0e2ba3b435d53afb706997e6f4ef806788b12d70a27e25816664a6d3",
+      "pixelSHA256": "340dd1f6cb7697fcf811c0a1ac6d5a5c26bc027451827fe5c597eb432bc7f9a5"
+    },
+    "front-c3/5": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/05.png",
+      "sha256": "454b148f8fb156f6dba79f22b87ea310d2adb970369aabc6c46bacc520987c68",
+      "pixelSHA256": "e9a7a526804c4a27ccdcb92f186a1163e86d55db59f90f319c4af543af1f5d00"
+    },
+    "front-c3/6": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/06.png",
+      "sha256": "1af9743f1f32bce98628e362667c93fa86b7ba91c0d1f38a03d0259b572ba421",
+      "pixelSHA256": "40659e406006b146e850ab519f6a597872192867352ce4b4b8ceaad46bea450f"
+    },
+    "front-c3/7": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/07.png",
+      "sha256": "20389a6d9fcae748015f18e62959aea0f55474438679b181734a82ffa6ce3326",
+      "pixelSHA256": "19b5607e3a7fc381e0b227196ce2a057ce1d8b2055fe59fae876436a123537c7"
+    },
+    "front-c3/8": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-c3/08.png",
+      "sha256": "59f1dd6348af84cebc61b37b8ac94e01e629fb1845813b6a4fd8f9ca61955b47",
+      "pixelSHA256": "0c918c1556be3ca069f3f06f625a4aaf784dade0aef5494d2dd484d742407f98"
+    },
+    "front-heavy/0": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/00.png",
+      "sha256": "5835ef2dfa79030ea18230ce09d04161affe9673fdb55d46e10c3920e2715894",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "front-heavy/1": {
+      "page": 0,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/01.png",
+      "sha256": "e0846cd7aef1168b6a52bc0ba056749cd6ed75552f52809c37321484fc79ea69",
+      "pixelSHA256": "5eb28f6868ed2de38177c0dc3c1aa06fdfd49a1f95c44b64fe7988fe3b59bbbc"
+    },
+    "front-heavy/2": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/02.png",
+      "sha256": "c4056dd3555061c3cc036caaacb3fece7f39639b6310ad04ebc1964ad050471d",
+      "pixelSHA256": "e2310f40f4427c24319a46f5fae5d652a70739ff7c4e6acaed9f8f0b3c8ae1af"
+    },
+    "front-heavy/3": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/03.png",
+      "sha256": "fd777ba1cd0bbecc381af02df68d9b91318a312f5a804cd70bb107863de269b4",
+      "pixelSHA256": "1e5feec6a2f47595427970febd10203aa6bd3880cdbfc16931daf69de1a7f003"
+    },
+    "front-heavy/4": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/04.png",
+      "sha256": "e719ba22f63025b5d7b31169132dbf561d54f3a03b0c550a2c845bc4265437d1",
+      "pixelSHA256": "63db65da25de4dab0183412dd16a9f407d7c9da5deab1c682fd9417fad4b822e"
+    },
+    "front-heavy/5": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/05.png",
+      "sha256": "ed6e783ce495ca9dd7cdc7ca1c60cfe90ad6647f99f459f11b3464011375711c",
+      "pixelSHA256": "68ae2ffd16303635ad2a93f5cab4b4286ff7d15def175daa0d164d01788ebba0"
+    },
+    "front-heavy/6": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/06.png",
+      "sha256": "3327b81d78874755932bfa9a9f55cfb77ba3c201637e50c662576aa895e173c8",
+      "pixelSHA256": "1918e7b917e08cf4e6692d7fb9d77c5126bb9d41ea535d9a80806380ed1dbfcb"
+    },
+    "front-heavy/7": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/07.png",
+      "sha256": "9076f92ee50402052460d09fc9b2c57d9d7c59ab1c408d9d47a8bde6348b23d5",
+      "pixelSHA256": "2406fd620cae5fc7d3a95e175cd3516d80eb8161f221b22c6071851af8356781"
+    },
+    "front-heavy/8": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/08.png",
+      "sha256": "0433d8407142e249b1e83af219c8ffb3957ad2c32fbdcde59cb1df73143c6ce2",
+      "pixelSHA256": "246b3e4f117a84ae8475b085d3246d853b8268c851edce28cf880e7798a54ca8"
+    },
+    "front-heavy/9": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/09.png",
+      "sha256": "5c853bdbf52e2518bb10e2998152931eff58d9e6c23dca415d5dc272c12bffc8",
+      "pixelSHA256": "4af1ae1add2c8f91830f4e87d00f23014dc4d94ece92a7427fecaaa646179714"
+    },
+    "front-heavy/10": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/10.png",
+      "sha256": "854820fbd7bf13e41aa0d7d90892f1f086ae50cb71f00c8647908e9b59b39d4d",
+      "pixelSHA256": "ec897752ae9a510ba4fed1ee4834e9c75b31bd5a07ed132ddf7f77d4c79b3804"
+    },
+    "front-heavy/11": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/11.png",
+      "sha256": "d43f61af59b31b2b45c12e829ec64093ef30191b083b550ae3eb11922cee0eaa",
+      "pixelSHA256": "0097f3cfde86af369b39a02d8d385690a440b0fa6fbdcdca2d18474d064d7674"
+    },
+    "front-heavy/12": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/12.png",
+      "sha256": "81977a3814eb5f70d212b6da4685e7c1c2850fe4ca146afd039e33a88d53e70e",
+      "pixelSHA256": "b256162d93b88c9ea7b3f20909c361f3a4a4862f1b74d705c09621c9a440fb63"
+    },
+    "front-heavy/13": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/13.png",
+      "sha256": "81977a3814eb5f70d212b6da4685e7c1c2850fe4ca146afd039e33a88d53e70e",
+      "pixelSHA256": "b256162d93b88c9ea7b3f20909c361f3a4a4862f1b74d705c09621c9a440fb63"
+    },
+    "front-heavy/14": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/14.png",
+      "sha256": "81977a3814eb5f70d212b6da4685e7c1c2850fe4ca146afd039e33a88d53e70e",
+      "pixelSHA256": "b256162d93b88c9ea7b3f20909c361f3a4a4862f1b74d705c09621c9a440fb63"
+    },
+    "front-heavy/15": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/15.png",
+      "sha256": "81977a3814eb5f70d212b6da4685e7c1c2850fe4ca146afd039e33a88d53e70e",
+      "pixelSHA256": "b256162d93b88c9ea7b3f20909c361f3a4a4862f1b74d705c09621c9a440fb63"
+    },
+    "front-heavy/16": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-heavy/16.png",
+      "sha256": "81977a3814eb5f70d212b6da4685e7c1c2850fe4ca146afd039e33a88d53e70e",
+      "pixelSHA256": "b256162d93b88c9ea7b3f20909c361f3a4a4862f1b74d705c09621c9a440fb63"
+    },
+    "north-idle/0": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/00.png",
+      "sha256": "dcdbf58073692a4f011e8fe164ba72bd38f46db82865992c7284b7044bddb45a",
+      "pixelSHA256": "6d336aea79040e6c03fca6e2ed764fd1f927c95ef90ea25c628c663caddcf34b"
+    },
+    "north-idle/1": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/01.png",
+      "sha256": "dd7d8b7ad54277905217a865e51fcce401ddb47c23961f87c10efdedebda68f3",
+      "pixelSHA256": "263bd5083301bb7b893b6a7691a18872de47196cd7f7f4032fcdb80043e23162"
+    },
+    "north-idle/2": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/02.png",
+      "sha256": "4012bd8d7320a437be0afeb693e3865a1b5cf14e962b32d0bdcd6490f0e233d5",
+      "pixelSHA256": "19d702d132fd5155249ce447f917b07b00c6e441bd1ef22436598fd27e0c97d8"
+    },
+    "north-idle/3": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/03.png",
+      "sha256": "aaae8b8866a5da59d78e012da105c44ae7779adaafebea7586c5b0c7effaa479",
+      "pixelSHA256": "7d538d7ef21255512478e9087eed00c7f66515ff17202f51de3afea97b1bb44a"
+    },
+    "north-idle/4": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/04.png",
+      "sha256": "91f82e3486adc7f2599646dee8e6d902da277c8c23c7aa8e8d2e3f896fcdb3b1",
+      "pixelSHA256": "f7922dc3103e06035d8d04a82b005d4af72a497c6f524ba5ea7881f3baaaf95e"
+    },
+    "north-idle/5": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/05.png",
+      "sha256": "8dc0e8de1ad353b9c4773c392adadfaec5eaa45e4bc832ecf34e5cdb959b0496",
+      "pixelSHA256": "03535c73dec133f25da7da3d87aacc31424cba12475801f1319101bfa8abbafa"
+    },
+    "north-idle/6": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/06.png",
+      "sha256": "09c0c7e726485a41aa19d688ed13e8b686076d1a1464584892cf73be533a5691",
+      "pixelSHA256": "147861f3f78470cb5ecbd9efee9be4994e7ea5335b4c6700c4eced52d2281445"
+    },
+    "north-idle/7": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/07.png",
+      "sha256": "c8fa8113b05813f0b6f90b1c9babe6b65b004e4758ad246695c3d1878be80def",
+      "pixelSHA256": "95fb95e3aaaffede1448294ef69a3707751b2928b350b5e03b643fd7cf63bc15"
+    },
+    "north-idle/8": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/08.png",
+      "sha256": "d5b513be7d279b2bbee85087e56639663b50b6c31777b3028d52ca224faea4f3",
+      "pixelSHA256": "56edf8dd6e6db94a202d560babf8eeecfde06c7567dfe3c7ba708e65ebbd2af0"
+    },
+    "north-idle/9": {
+      "page": 1,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/09.png",
+      "sha256": "9ea17dca30327612bb3c246a22c5ac4c79d37ec2702a3ca473eadc05ee345346",
+      "pixelSHA256": "4eafd995601624d74e646bc4958073a142ae7da796b66e5f302367cdd4094b8e"
+    },
+    "north-idle/10": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/10.png",
+      "sha256": "ad813238d9997384b9d78278e911debaf79ec32f6a2a6d808011482dc0ab8434",
+      "pixelSHA256": "b61a9dd1856dbceb96dacdd307d6554f8b4902a4e208593e5dc03de3470c899f"
+    },
+    "north-idle/11": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/11.png",
+      "sha256": "98b252a860d0f9c84e7a4258e76100c3e88acb56c4d5a549aa5539e9de9eeea1",
+      "pixelSHA256": "2c4d96766f119981ba19ab9e1708535dc311ff0fb791c366f4493a8077621fa6"
+    },
+    "north-idle/12": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-idle/12.png",
+      "sha256": "8f9297789c02bc296264a4c91d09c0992a0a4be74a26878287e40021190d9922",
+      "pixelSHA256": "c4895e1d5f8e417d70c4380db6a721e89aef6fd5027d6776c8dc902a07ba02d5"
+    },
+    "north-run/0": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/00.png",
+      "sha256": "dcdbf58073692a4f011e8fe164ba72bd38f46db82865992c7284b7044bddb45a",
+      "pixelSHA256": "6d336aea79040e6c03fca6e2ed764fd1f927c95ef90ea25c628c663caddcf34b"
+    },
+    "north-run/1": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/01.png",
+      "sha256": "2276eff9e79ff9ffba8ecdae9495d8f1d35c15c415aa95a77ad172ff9db6c2ae",
+      "pixelSHA256": "97948539454c35acae61839953accac6b925a7bdb68f825c20ee795b6f74a395"
+    },
+    "north-run/2": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/02.png",
+      "sha256": "bcedc5b62214ff4fe9868ab60a5cc37e6f8309803f739045f8b57aa2f5bf3134",
+      "pixelSHA256": "741db0496d4fdca249621baf02e0e2a4d47be2c3f57e8ed485fc4589ec3f0356"
+    },
+    "north-run/3": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/03.png",
+      "sha256": "ccf917a51a7d4f6f65ead86b992421dcd164f2ece892657e1efa362073743cf5",
+      "pixelSHA256": "a9bf5e19d093c502253b0400e65ff50ca63ab2f7610b0f93b6c6763e3a60f192"
+    },
+    "north-run/4": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/04.png",
+      "sha256": "de48446173e225a69ff3d8c872a4168036fc08297b8b6305f0829cc3a390a602",
+      "pixelSHA256": "fe8709f610ff0c9556a1675969a2ffaf344a3be5d6b339fba980ea954ce05f14"
+    },
+    "north-run/5": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/05.png",
+      "sha256": "4e001234ba9a12dc6f6a39187d7b25fad83c2f92e95c631b4755109f14bb9cac",
+      "pixelSHA256": "cad752442876a62ff6d6057495ac773b85621a85b04e4bc8e325c226c84150a4"
+    },
+    "north-run/6": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/06.png",
+      "sha256": "cd4bcbde056605a60fd6fd4177d20348c203da95e77e2678bb2e9a19f7a08038",
+      "pixelSHA256": "3a6a0dcf6304a249aa5c403a775f7d707d84058590d428d69e47fa4a65c2c3aa"
+    },
+    "north-run/7": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/07.png",
+      "sha256": "58451674be255d944f72a7ae0cd7a2fe678eefaf2ddb003290ad82da2ef446b2",
+      "pixelSHA256": "427a485875dd8f3a3a0b3997fa4154b5a985683928a0a4d80654447243f686fa"
+    },
+    "north-run/8": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/08.png",
+      "sha256": "ef2f0de4873c914b7d9b952bcf931ad56f1e4c9415781281d6af4eb9df2601e8",
+      "pixelSHA256": "eab46ec77833bd0328382848338388f25aa841ddc42026dbb0c7c27820777f91"
+    },
+    "north-run/9": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/09.png",
+      "sha256": "6cd491e41488b1c6cca6962588157e3a577e846db4b8055a785f2d35d6b83db3",
+      "pixelSHA256": "2b78bf5f426d7fc1d6bf1cbe8acc639ec10b41ebfd514b1a1bee3ea669351581"
+    },
+    "north-run/10": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/10.png",
+      "sha256": "149ed3d0cda3973138fa862b7a6cf1d2d94c216dc87a5f627fc8220d6fe1ca09",
+      "pixelSHA256": "cded8db700345422cc84458e2b6964eb001ea56ff4522502e658902279cccb1f"
+    },
+    "north-run/11": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/11.png",
+      "sha256": "3a0363804e2c3ea8b5949669a8264ee0d0d83063ea3d32e6b9618702a0c9e678",
+      "pixelSHA256": "a470ef3add79a287289e5419e78a01ba9d6a0343ebd2821c55042bf53d85fbe5"
+    },
+    "north-run/12": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-run/12.png",
+      "sha256": "76b81e0cb685172a8082b20739e2606933a9a9101d8621f52118cfd46a04ade7",
+      "pixelSHA256": "7339e7b38194364d5216d5659801c645078396dc3bbda3dd1f4eca6778a76c4b"
+    },
+    "front-run/0": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/00.png",
+      "sha256": "013f191f1fa3f7aceda0bd54e86c0174c3a22c4a21d7133690c7dea4a3c32b34",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "front-run/1": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/01.png",
+      "sha256": "2b949a48a6634ecce7a2086a5344bfb1616c909085ed98b0e72ebed2d3983eae",
+      "pixelSHA256": "5c906216ab4e0d6e65af02d725d17b585d115006a064debaed519cd1b897f55c"
+    },
+    "front-run/2": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/02.png",
+      "sha256": "e7dde01091d91dd992c54acce914a036086ec1b2e4ec8d41c04b9a66abb1266d",
+      "pixelSHA256": "597f38afef5f55bd378b623182ce7298a421c3b618e21b651affdefb31ffb7e2"
+    },
+    "front-run/3": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/03.png",
+      "sha256": "ae9764d161bb908f508dd22c0c2bb4ef57542c764e6f1b42590952d1580ffdee",
+      "pixelSHA256": "1b9bf3dd88f12128a1188e7061f63f2b723a547672cada724e436e8143f9c74f"
+    },
+    "front-run/4": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/04.png",
+      "sha256": "547d223324fe50dddb157e37b23b58380381ebef137afc792f175d1136bdd4f7",
+      "pixelSHA256": "36269c15260f7891d84cdb19a6f63f6883fa8e50f40fbc25e39dfb84cee7d427"
+    },
+    "front-run/5": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/05.png",
+      "sha256": "27eb24eace0ccacc34b7a8d0483d0c5017b26db4466d1ed581e857d657a4258a",
+      "pixelSHA256": "aa1139a3159da33c8f2c926d4ce4cb5e9eb061fb7e4802fc17520fd4dccb5a9e"
+    },
+    "front-run/6": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/06.png",
+      "sha256": "4616ba9f30ea04ad856a9cb5dcf8537a9af638e5b807d4248ee36c4c0a35cac1",
+      "pixelSHA256": "531fb2e3c9b357f91ec184d9456648c597844adca78c595121b9f9e942896302"
+    },
+    "front-run/7": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/07.png",
+      "sha256": "dbcf1d08ca08fcb3be30e13206e1255715a90270aa44afdba94247b8f0f6261c",
+      "pixelSHA256": "069ec603a85b4bb998c3d7e6eeea9b8bc70dc773c99489df9dd2751cca8b07ee"
+    },
+    "front-run/8": {
+      "page": 2,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/08.png",
+      "sha256": "131567d639012e2ba7b71a24a75593af080fdac81b27755a54c45f8530bc3830",
+      "pixelSHA256": "13d1663033301de9d48841e1938264de979ad1f5d6e8ed3edf5779d065b96e7b"
+    },
+    "front-run/9": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/09.png",
+      "sha256": "3237f4a014babcc5bf4d18fe147c62a6eeb49bb28e6b8284f50fa791b4f6cf8d",
+      "pixelSHA256": "214613cb6263f691cf9147c2b1287bb3f504ffc396796f1df7e6fe1196d146ac"
+    },
+    "front-run/10": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/10.png",
+      "sha256": "90f46ddc1fb738de3397153485a45d5fb1fc32fb1407418c399e9aaca43811e7",
+      "pixelSHA256": "09296a92b34a598a6a133eaaf3b27186cb2f6eefa0b3ec4d73f122b22a9b4ea5"
+    },
+    "front-run/11": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/11.png",
+      "sha256": "d267d0b57dd94190783a4e38533d110f9c78241f2b2ec24c3a55011ba9dea4d1",
+      "pixelSHA256": "0a95367b48a6cabc87d31774867d853001556e11782b7057666f20eaff3acaf7"
+    },
+    "front-run/12": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/front-run/12.png",
+      "sha256": "e5d23af3e79de9f9e8a0dba57b8fcba28d0f6db3ca4ef4f124854da2ceac2766",
+      "pixelSHA256": "ffe4e3bf2993eac2121f784435fdc87d2be169fddbaca6b66e4321f245323484"
+    },
+    "north-c1/0": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/00.png",
+      "sha256": "029b992bb11eb6c7b54db10048dab9d8afc30a5713a320c9a6d83e9f5945befe",
+      "pixelSHA256": "6d336aea79040e6c03fca6e2ed764fd1f927c95ef90ea25c628c663caddcf34b"
+    },
+    "north-c1/1": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/01.png",
+      "sha256": "cca402ae41f3305c4f3af939467e2fd066a859da7eb0895c448d94b73a8a0344",
+      "pixelSHA256": "75dced7cf130279ec0c83388ca87660c2a1bd6f285c6b45fb5bf2abd99d157a2"
+    },
+    "north-c1/2": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/02.png",
+      "sha256": "8b591c9c080a9a5f6de2866973f85ce0e42ac26fdd07b57fb6cbad1623b05538",
+      "pixelSHA256": "2794a320423bb1397a8e4da9ff4c1834a9b2947228c829954808ad686cbcc5dc"
+    },
+    "north-c1/3": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/03.png",
+      "sha256": "3434fc3fca5768e08425d2626cb9583f8009b218d28c92476232a8da86cc09cc",
+      "pixelSHA256": "6c3487bd0598d58abc37109ad3ce8f6929e94230b0a25e1b8801d13259a47a12"
+    },
+    "north-c1/4": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/04.png",
+      "sha256": "811981af5cfdb07e9a772ecb72090511997987769e6a6b067fb3df3590e00788",
+      "pixelSHA256": "a0b1bd83efb352c2912243de5961bf7004881dc7eb3724bf088650f28c88ddf1"
+    },
+    "north-c1/5": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/05.png",
+      "sha256": "c4460d9a4891bd48254e78b183325837169513f4813acd4d37f75e0f3f05ae57",
+      "pixelSHA256": "76f29c639eaa8a78254a8975ca4c8be6779aa9ed7cf283558b7195f75e3a5518"
+    },
+    "north-c1/6": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/06.png",
+      "sha256": "ab701d7f85d3f728cc4d878665fa1d17d4f2b79031a24c204bc3dcba67853766",
+      "pixelSHA256": "627bb1bd6608ac0fc01d3ab6910b89c42090ab3cd1b82dc6da473679ce04cf82"
+    },
+    "north-c1/7": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/07.png",
+      "sha256": "f3e159e18b5276cbeace44874c9ed37be8d283840290ea41e19162c46f8e0d84",
+      "pixelSHA256": "0576961d5e684dde16c3eb4528dfc93f72d0580b9cc2978da53890ee8a37f8a3"
+    },
+    "north-c1/8": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/08.png",
+      "sha256": "1aa70e4bd82a3743a04d5580e82c0e7acfa352902b0ddb18ba3ff82aaa216900",
+      "pixelSHA256": "617755cfcfef4227858d3352f6522f3376fd9528c83bcfe19410ab52e89b4ea2"
+    },
+    "north-c1/9": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/09.png",
+      "sha256": "c8c2a8e49ef4bd29a6ed448d738de5ffbd3f465e4f850a1b47135b6fac210f01",
+      "pixelSHA256": "109e40c0651e49e3350d5e548b01dc8750963aef0fec7e55e45df68d310542ad"
+    },
+    "north-c1/10": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/10.png",
+      "sha256": "216177009bf6b0f8c87b8287232fe1cff4da4bc9a5cd892fe4e5e2e7968d8ce9",
+      "pixelSHA256": "e920d29fb52085e3ff1e8c56193f88e0700d4b622e172b8e38dfd6ee88c7163d"
+    },
+    "north-c1/11": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/11.png",
+      "sha256": "f61d3fb47d91f66f7e3d5be8776685dd78d8b7a2575b8e57424d17ce19d5c60d",
+      "pixelSHA256": "5bd126c53990db1646ff80726fcc7579a2479e6760e3467a791945a3af9b371d"
+    },
+    "north-c1/12": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c1/12.png",
+      "sha256": "0f288b54f364359360dd6f01f93a7b37e10ea34efbe6ec544cd80c69c68c119c",
+      "pixelSHA256": "ae9e4b444367fdd823337e06dc473dc853ef8474626c06ac28c37c505e4871a9"
+    },
+    "north-c3/0": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/00.png",
+      "sha256": "029b992bb11eb6c7b54db10048dab9d8afc30a5713a320c9a6d83e9f5945befe",
+      "pixelSHA256": "6d336aea79040e6c03fca6e2ed764fd1f927c95ef90ea25c628c663caddcf34b"
+    },
+    "north-c3/1": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/01.png",
+      "sha256": "65d7596611ee2024e02d7121a422598c56d9d3e5c5d59b1d10c2b1d79d3c6f03",
+      "pixelSHA256": "915016653457671069520e686e806561732f4fad13b26aceb8f339a817780c57"
+    },
+    "north-c3/2": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/02.png",
+      "sha256": "ce39d75c6c6dd5db3e55350176f4f43f1802f11f41ea6c0257b434cae2a384a6",
+      "pixelSHA256": "cb25f86d5e7cafb317718434fe836c220b4afd85ab0c63f79d6b34f46f9a4541"
+    },
+    "north-c3/3": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/03.png",
+      "sha256": "cb0698a27ac85931c708c24d0a3085980d7ba47545d4160ae4ce41dc33cecfab",
+      "pixelSHA256": "ba13b628143d00ec074aaee923faad850a24f8be7f0bfe840c97d42b6bd2d21c"
+    },
+    "north-c3/4": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/04.png",
+      "sha256": "e560644d101b0e95c4a1182a59e9d708afe40a56af21baca5470189b19298047",
+      "pixelSHA256": "73fa435bf206e12316e3bf25293786d330527086900f43bc67830d64fdce2a9d"
+    },
+    "north-c3/5": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/05.png",
+      "sha256": "21d184194de7cefdcd82a1933f412a3f8d54a8d81c8a7ae36d49176b8e91c12b",
+      "pixelSHA256": "d3035eacd2abbff98005adcf89cefbc94e95982a1e38076672d22bbe710eaf59"
+    },
+    "north-c3/6": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/06.png",
+      "sha256": "fe602642558f74c59afc85bdba6e975464b84d600a06ecd049551396632c60f2",
+      "pixelSHA256": "63f0012f676b4798fc9807f3b376c41e311785193f457621f694bc46e0a7466b"
+    },
+    "north-c3/7": {
+      "page": 3,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/07.png",
+      "sha256": "60306395e92bc8b99176b01ed9880823ce65c6b36d8851e45bf2012bc255b8c7",
+      "pixelSHA256": "cc21ad129f3ccb483efecfea62c41dc7f41e4adcae229528844456bc16b560f5"
+    },
+    "north-c3/8": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/08.png",
+      "sha256": "29a267563ba27a8855342e1fa69c62157ba18f373b5506f145ca005261f25765",
+      "pixelSHA256": "e66758ad4712672f573a7a418d62a4f36d44b4d568367a77844f8b4b0646c33e"
+    },
+    "north-c3/9": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/09.png",
+      "sha256": "d6af677b4899ca54da3c0c2893326d5ff2b48a49efbcc25d0b11cb6594b5c93c",
+      "pixelSHA256": "2ea51c5b61c7ca062ee3d363357ece415c5356c7583b063eea1b885a639a0e50"
+    },
+    "north-c3/10": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/10.png",
+      "sha256": "c2d8e587ba5df30df6a0e078a68dd0e5fa988aab92d44d9af8622c5d150f7839",
+      "pixelSHA256": "170034256650b95328496289c5a629275e53c06c78ebd013e0a98376a03aa5f8"
+    },
+    "north-c3/11": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/11.png",
+      "sha256": "b988901413d1bbebbc268065b44d711bcbf8eb2f86e80c55d6aa494a22972086",
+      "pixelSHA256": "7755408c449dc9acf631b8a3b66b9890e6c92f48a2131fe77386a866bef861d1"
+    },
+    "north-c3/12": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-c3/12.png",
+      "sha256": "e78ff259a6b272903f2040df1307ffa4b2631f719d8e5e76eb4e8535a34677c8",
+      "pixelSHA256": "fa208d530129975301a50228bb12cd171c531aec88c7360e3e7c5cb19edab50f"
+    },
+    "north-heavy/0": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/00.png",
+      "sha256": "029b992bb11eb6c7b54db10048dab9d8afc30a5713a320c9a6d83e9f5945befe",
+      "pixelSHA256": "6d336aea79040e6c03fca6e2ed764fd1f927c95ef90ea25c628c663caddcf34b"
+    },
+    "north-heavy/1": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/01.png",
+      "sha256": "1f7fa012d3dfff9ed430c51ce5292f1cf9d1f689428275654b6a90be81913f4f",
+      "pixelSHA256": "e00d608688b2cbb6dbef1e65792d1f3728c0fa2476f0569b02374086e800bf28"
+    },
+    "north-heavy/2": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/02.png",
+      "sha256": "cc2cb5f70e3183638a2495ba592aa21f7d54d138883ae35d833dada9cfd0b487",
+      "pixelSHA256": "26d3576bf99977d2281aee5cecbdb970d07d9cf4db530bde66082fc13d4c502d"
+    },
+    "north-heavy/3": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/03.png",
+      "sha256": "5b524ad88e2e8ec14236b4f6b2c5e228b03ab3fcad58fd46647dff7c5bdad77e",
+      "pixelSHA256": "263f2ecf343c59223355d205eb3dbb7e679b1ed0dc39aaff53b4a9970ffe87f1"
+    },
+    "north-heavy/4": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/04.png",
+      "sha256": "b5c5842e7339473f81ff2c28016710e59d6a628af42c68538c844aa24628bcb3",
+      "pixelSHA256": "1adbaaa959b5da5a6732fba06a9c565abc5bb68316525516300169c753f29a28"
+    },
+    "north-heavy/5": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/05.png",
+      "sha256": "e40efa694c9bce4c1425485d22f8bf26f4e9d6f72da365ec05811b412d37c34e",
+      "pixelSHA256": "1a8163d01dfa6aa04c577d5ed5eb477dae8bb513be5e11179d3c7b926d41e946"
+    },
+    "north-heavy/6": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/06.png",
+      "sha256": "ea45a9c650e7af49cf8e66a2440e3e62c8672c0f0ad1015cdf5014f046aa0df8",
+      "pixelSHA256": "154e05f93fc7ac5d434d5756aba911fd8bfdd017766945ec1e030cb2c0498229"
+    },
+    "north-heavy/7": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/07.png",
+      "sha256": "405272a99c69fc9942b918acb05d473192cedc64e0e89ed6b87405190ae74f10",
+      "pixelSHA256": "dfb12eaee96976452c36508b8199c519f0c3995d481cb4513b28aea7ef4b1ec0"
+    },
+    "north-heavy/8": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/08.png",
+      "sha256": "4c055a8e29573e8809a60852b9d88d6b3f51d759b4f098f43c2cb66843d34c53",
+      "pixelSHA256": "499acbf1449d084791daa7c246a138bb4daa89505261bca646e511af1fbb833a"
+    },
+    "north-heavy/9": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/09.png",
+      "sha256": "72b9c7b5119aca625d92d074ba78365bdb1f9285859b73d7d0d98452361882ee",
+      "pixelSHA256": "d1a54dbcd02cff8b4eb8b44ddf7a06d5c534f6cf109b8a8b6f5f747944378a0f"
+    },
+    "north-heavy/10": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/10.png",
+      "sha256": "bd44e8f381162273fe7c5dd469dc84c7ea4b3fd941f651869fea33474bb9ea30",
+      "pixelSHA256": "fec3a42555a9aed82c90d686d20b2479bb1e277ba546068f2c246fe21d3c2e23"
+    },
+    "north-heavy/11": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/11.png",
+      "sha256": "d07165477be40edd60fc68cee43badac8e57182f3871cc8b6a04b2dcbea74d07",
+      "pixelSHA256": "2d56cc06d396847b25c4a16a9bd00534295fb78afeff8d127093cc8731e734c6"
+    },
+    "north-heavy/12": {
+      "page": 4,
+      "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
+      "source": "raw/north-heavy/12.png",
+      "sha256": "d95c3dda66ea1a9a2888d8001efce85a966955726d13e0a9ef607b631845b673",
+      "pixelSHA256": "be30b02944550ece178063b4a517249d47d15be5f029615b999683b012d95654"
+    },
+    "legacy-charge/0": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/00.png",
+      "sha256": "5835ef2dfa79030ea18230ce09d04161affe9673fdb55d46e10c3920e2715894",
+      "pixelSHA256": "41e22ffd256cc4c6ea934ebddfcbc496ec023e4fd8b2f57433dff5cf8dc54acd"
+    },
+    "legacy-charge/1": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/01.png",
+      "sha256": "58a5865a6692a1b3aa156fa15e80e722fc0135d513811c4aaf48feebbd9bb6f1",
+      "pixelSHA256": "d07ae4280dc0ebdde8d511cf3e0fdb169f5b8eb7b3edaf5dc7d6462da4bdbad7"
+    },
+    "legacy-charge/2": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/02.png",
+      "sha256": "d377cb324ff223e437c5f6e95096dd7daa6558c214267ab375db8ed97df0315c",
+      "pixelSHA256": "2426fb461895fa21fd76080aa30df1e1ada59b3e9995849f613716cf6ef6822a"
+    },
+    "legacy-charge/3": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/03.png",
+      "sha256": "f352431febad9d98e473bd537cc9894dfddfe44c0be72db3e588b91282140c21",
+      "pixelSHA256": "6b4531114a0134d1410a4ef9e0a39fc5ae2bbc47b80056af6d4332b89a1c4c68"
+    },
+    "legacy-charge/4": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/04.png",
+      "sha256": "9402725fdb6ce3813fd3b018a7f3ede330fdbd552be5109f0e4a36be88087a5c",
+      "pixelSHA256": "3572a1461d3cbbc9f7f0b780df5d3a730a92eab181ace4c55c5cd44873434245"
+    },
+    "legacy-charge/5": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/05.png",
+      "sha256": "98f592962e88a59fdc80c16bfbc8bd8fd1f15098732265fe7ad3282e293408e4",
+      "pixelSHA256": "c1287a688ec6999798a12d0b570fa1fe70dda32105818c660a18e7f3484fb637"
+    },
+    "legacy-charge/6": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/06.png",
+      "sha256": "36fc2af3d024bdca3d17c41141e4a7389c55f8766958ec58b9e8ad4d35a41f6a",
+      "pixelSHA256": "695248a3de4a816fad61f5d8f642ca24841c12fd489566fbf0fa641c745a06b3"
+    },
+    "legacy-charge/7": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/07.png",
+      "sha256": "878e19d0e47d963b57fca15b0aa39257af454c9d5f77b5da5a4ddafc0b03d482",
+      "pixelSHA256": "11bd6dc02268aaa67a7e3bde954efff061271ca9188215062216fabacd9dd425"
+    },
+    "legacy-charge/8": {
+      "page": 5,
+      "sourceRoot": "art/generated/warrior-north-skills-review-v1",
+      "source": "raw/front-charge/08.png",
+      "sha256": "18a3281266ef916ab45ab04c2134de072f76f4d39a009ddbfc18979a158fa54c",
+      "pixelSHA256": "077f11715bcaafbe23702b9d3686d17f89f30111e66b01150d8c854b6d7db6c0"
+    }
+  },
+  "clips": {
+    "front-idle": {
+      "frames": [
+        "front-idle/0",
+        "front-idle/0",
+        "front-idle/1",
+        "front-idle/1",
+        "front-idle/1",
+        "front-idle/2",
+        "front-idle/2",
+        "front-idle/2",
+        "front-idle/3",
+        "front-idle/3",
+        "front-idle/3",
+        "front-idle/4",
+        "front-idle/4"
+      ],
+      "frameMs": 120,
+      "sourceFrameMs": 120,
+      "periodMs": 1560,
+      "impactFrame": 5,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": true,
+      "jobId": "c0d2f10a-961d-4212-a8e2-4f0bb4d23ef9",
+      "frameMap": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "sourceFrameCount": 5
+    },
+    "front-c1": {
+      "frames": [
+        "front-c1/0",
+        "front-c1/1",
+        "front-c1/1",
+        "front-c1/2",
+        "front-c1/3",
+        "front-c1/3",
+        "front-c1/4",
+        "front-c1/5",
+        "front-c1/5",
+        "front-c1/6",
+        "front-c1/7",
+        "front-c1/7",
+        "front-c1/8"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 780,
+      "impactFrame": 7,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "e56cb604-8061-4d25-80c0-6d8d3970157c",
+      "frameMap": [
+        0,
+        1,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        5,
+        6,
+        7,
+        7,
+        8
+      ],
+      "sourceFrameCount": 9
+    },
+    "front-c3": {
+      "frames": [
+        "front-c3/0",
+        "front-c3/1",
+        "front-c3/1",
+        "front-c3/2",
+        "front-c3/3",
+        "front-c3/3",
+        "front-c3/4",
+        "front-c3/5",
+        "front-c3/5",
+        "front-c3/6",
+        "front-c3/7",
+        "front-c3/7",
+        "front-c3/8"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 780,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "45391128-d9e4-4223-8399-bb9d152b8ea9",
+      "frameMap": [
+        0,
+        1,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        5,
+        6,
+        7,
+        7,
+        8
+      ],
+      "sourceFrameCount": 9
+    },
+    "front-heavy": {
+      "frames": [
+        "front-heavy/0",
+        "front-heavy/1",
+        "front-heavy/2",
+        "front-heavy/3",
+        "front-heavy/4",
+        "front-heavy/5",
+        "front-heavy/6",
+        "front-heavy/7",
+        "front-heavy/8",
+        "front-heavy/9",
+        "front-heavy/10",
+        "front-heavy/11",
+        "front-heavy/12",
+        "front-heavy/13",
+        "front-heavy/14",
+        "front-heavy/15",
+        "front-heavy/16"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 1020,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "3111d31d-31d3-470b-a8bb-b9cba8faf334",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sourceFrameCount": 17
+    },
+    "north-idle": {
+      "frames": [
+        "north-idle/0",
+        "north-idle/1",
+        "north-idle/2",
+        "north-idle/3",
+        "north-idle/4",
+        "north-idle/5",
+        "north-idle/6",
+        "north-idle/7",
+        "north-idle/8",
+        "north-idle/9",
+        "north-idle/10",
+        "north-idle/11",
+        "north-idle/12"
+      ],
+      "frameMs": 120,
+      "sourceFrameMs": 120,
+      "periodMs": 1560,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": true,
+      "jobId": "10ef8d0d-bcc5-4400-aa63-c69c2f52d7c2",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "north-run": {
+      "frames": [
+        "north-run/0",
+        "north-run/1",
+        "north-run/2",
+        "north-run/3",
+        "north-run/4",
+        "north-run/5",
+        "north-run/6",
+        "north-run/7",
+        "north-run/8",
+        "north-run/9",
+        "north-run/10",
+        "north-run/11",
+        "north-run/12"
+      ],
+      "frameMs": 75,
+      "sourceFrameMs": 75,
+      "periodMs": 975,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": true,
+      "jobId": "fbfd63b2-7e91-4e68-9ead-f23900024f11",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "front-run": {
+      "frames": [
+        "front-run/0",
+        "front-run/1",
+        "front-run/2",
+        "front-run/3",
+        "front-run/4",
+        "front-run/5",
+        "front-run/6",
+        "front-run/7",
+        "front-run/8",
+        "front-run/9",
+        "front-run/10",
+        "front-run/11",
+        "front-run/12"
+      ],
+      "frameMs": 75,
+      "sourceFrameMs": 75,
+      "periodMs": 975,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": true,
+      "jobId": "073e0f50-e867-4b71-99c7-c26687b3df4c",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "north-c1": {
+      "frames": [
+        "north-c1/0",
+        "north-c1/1",
+        "north-c1/2",
+        "north-c1/3",
+        "north-c1/4",
+        "north-c1/5",
+        "north-c1/6",
+        "north-c1/7",
+        "north-c1/8",
+        "north-c1/9",
+        "north-c1/10",
+        "north-c1/11",
+        "north-c1/12"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 780,
+      "impactFrame": 5,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "c814a798-2ac9-4748-a60a-56e75b7cee03",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "north-c3": {
+      "frames": [
+        "north-c3/0",
+        "north-c3/1",
+        "north-c3/2",
+        "north-c3/3",
+        "north-c3/4",
+        "north-c3/5",
+        "north-c3/6",
+        "north-c3/7",
+        "north-c3/8",
+        "north-c3/9",
+        "north-c3/10",
+        "north-c3/11",
+        "north-c3/12"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 780,
+      "impactFrame": 5,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "a0749dd3-4ed2-4ff3-80e9-9538cf0277d1",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "north-heavy": {
+      "frames": [
+        "north-heavy/0",
+        "north-heavy/1",
+        "north-heavy/2",
+        "north-heavy/2",
+        "north-heavy/3",
+        "north-heavy/4",
+        "north-heavy/5",
+        "north-heavy/5",
+        "north-heavy/6",
+        "north-heavy/7",
+        "north-heavy/8",
+        "north-heavy/8",
+        "north-heavy/9",
+        "north-heavy/10",
+        "north-heavy/11",
+        "north-heavy/11",
+        "north-heavy/12"
+      ],
+      "frameMs": 60,
+      "sourceFrameMs": 75,
+      "periodMs": 1020,
+      "impactFrame": 6,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "284a4966-8a00-4cf7-8828-5c73542925ca",
+      "frameMap": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        5,
+        6,
+        7,
+        8,
+        8,
+        9,
+        10,
+        11,
+        11,
+        12
+      ],
+      "sourceFrameCount": 13
+    },
+    "legacy-charge": {
+      "frames": [
+        "legacy-charge/0",
+        "legacy-charge/1",
+        "legacy-charge/2",
+        "legacy-charge/3",
+        "legacy-charge/4",
+        "legacy-charge/5",
+        "legacy-charge/6",
+        "legacy-charge/7",
+        "legacy-charge/8"
+      ],
+      "frameMs": 20,
+      "sourceFrameMs": 90,
+      "periodMs": 180,
+      "impactFrame": 4,
+      "pivot": {
+        "x": 96,
+        "y": 132
+      },
+      "loop": false,
+      "jobId": "b7a03eab-d0a2-4f62-9ed3-4cf24f30b6a9",
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "sourceFrameCount": 9
+    }
+  },
+  "routes": {
+    "south": {
+      "group": "front",
+      "flipX": false,
+      "accepted": true
+    },
+    "south-west": {
+      "group": "front",
+      "flipX": true,
+      "accepted": true
+    },
+    "west": {
+      "group": "front",
+      "flipX": true,
+      "accepted": true
+    },
+    "north-west": {
+      "group": "north",
+      "flipX": true,
+      "accepted": true
+    },
+    "north": {
+      "group": "north",
+      "flipX": false,
+      "accepted": true
+    },
+    "north-east": {
+      "group": "north",
+      "flipX": false,
+      "accepted": true
+    },
+    "east": {
+      "group": "front",
+      "flipX": false,
+      "accepted": true
+    },
+    "south-east": {
+      "group": "front",
+      "flipX": false,
+      "accepted": true
+    }
+  },
+  "sources": {
+    "front": {
+      "idle": "front-idle",
+      "run": "front-run",
+      "attack": {
+        "c1": "front-c1",
+        "c3": "front-c3",
+        "heavy": "front-heavy"
+      }
+    },
+    "north": {
+      "idle": "north-idle",
+      "run": "north-run",
+      "attack": {
+        "c1": "north-c1",
+        "c3": "north-c3",
+        "heavy": "north-heavy"
+      }
+    }
+  }
+}

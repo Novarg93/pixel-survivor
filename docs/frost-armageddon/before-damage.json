@@ -1,0 +1,485 @@
+{
+  "fixture": "Single cast; same seeded static durable tanks, five targets/group; one/three separated visible groups, ranksI-V, statsDamage1.5+one damage artifact1.08; no evolutions or incoming damage suppression, no survival claim.",
+  "rows": [
+    {
+      "groups": 1,
+      "rank": 1,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 1,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 1,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 2,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 2,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 2,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 3,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 3,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 3,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 4,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 4,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 4,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 5,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 5,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 1,
+      "rank": 5,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": 140,
+          "y": 0,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 1,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 1,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 1,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 120,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 648,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 2,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 2,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 2,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 157.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 850.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 3,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 3,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 3,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 195,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1053,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 4,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 4,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 4,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 232.5,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1255.5,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 5,
+      "seed": 7,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 5,
+      "seed": 31,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    },
+    {
+      "groups": 3,
+      "rank": 5,
+      "seed": 12345,
+      "impacts": [
+        {
+          "x": -190,
+          "y": -95,
+          "damage": 270,
+          "landAt": 0.85
+        }
+      ],
+      "damage": 1458,
+      "statsDamage": 1.5,
+      "artifactDamage": 1.08
+    }
+  ]
+}

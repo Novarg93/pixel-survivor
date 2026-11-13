@@ -1,0 +1,102 @@
+{
+  "baseline": "e9934b0",
+  "normalization": "LF UTF8 SHA256",
+  "files": [
+    {
+      "path": "src/game/systems/BossSystem.ts",
+      "before": "823c2218f5779f798513a6160398b54bafd28961583a763708be566b99a7dc13",
+      "after": "823c2218f5779f798513a6160398b54bafd28961583a763708be566b99a7dc13",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/GuardianEncounter.ts",
+      "before": "498903ff98d18e8a96dee657b0c16ab82cdfe46b2f50b09e4df43fcfe3f4dbed",
+      "after": "498903ff98d18e8a96dee657b0c16ab82cdfe46b2f50b09e4df43fcfe3f4dbed",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/RareGuardianSystem.ts",
+      "before": "a69452a57c89a519e079e4ec9502f06a978974da3468aeb4a7b92e8b7f7ef7e3",
+      "after": "a69452a57c89a519e079e4ec9502f06a978974da3468aeb4a7b92e8b7f7ef7e3",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/EncounterDirector.ts",
+      "before": "1ddd95910605d75d71b57f6ef6525abf24540dcffd36a179507aef6200d51492",
+      "after": "1ddd95910605d75d71b57f6ef6525abf24540dcffd36a179507aef6200d51492",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/EnemySystem.ts",
+      "before": "d9414600dce6bc7abb48634193757c43e79c4f477b3b51f9db0e0f34c768c816",
+      "after": "d9414600dce6bc7abb48634193757c43e79c4f477b3b51f9db0e0f34c768c816",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/DifficultyDirector.ts",
+      "before": "cc91135c04f8c9fdf4c23ab0b5b3bc95cf3b3a8e95b511d9a43d4e5a44041cb7",
+      "after": "cc91135c04f8c9fdf4c23ab0b5b3bc95cf3b3a8e95b511d9a43d4e5a44041cb7",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/SpecialEnemies.ts",
+      "before": "396087d2193519c38aa84d35fe7c7c4c7ac47061765e7f663ba5e3578ab6e02f",
+      "after": "396087d2193519c38aa84d35fe7c7c4c7ac47061765e7f663ba5e3578ab6e02f",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/World.ts",
+      "before": "58d06d13636bf7cdfdef4be1343dac62e575deba357376d2efe2dfca65b992e4",
+      "after": "58d06d13636bf7cdfdef4be1343dac62e575deba357376d2efe2dfca65b992e4",
+      "equal": true
+    },
+    {
+      "path": "src/game/config/pacing.ts",
+      "before": "cc4014c8a1577db61a6b66c28cc3109fad6873144d61534332ff21436f747350",
+      "after": "cc4014c8a1577db61a6b66c28cc3109fad6873144d61534332ff21436f747350",
+      "equal": true
+    },
+    {
+      "path": "src/game/config/encounterDirector.ts",
+      "before": "4b257c462689a2ab59749c543ba36adc938252dff4de1402fd2e7177c671d1e5",
+      "after": "4b257c462689a2ab59749c543ba36adc938252dff4de1402fd2e7177c671d1e5",
+      "equal": true
+    },
+    {
+      "path": "src/game/config/encounters.ts",
+      "before": "b6fc40a2013af3e47d637f8f6fbae2d01228db6182ec74acf7d7de981b49826f",
+      "after": "b6fc40a2013af3e47d637f8f6fbae2d01228db6182ec74acf7d7de981b49826f",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/Cooldown.ts",
+      "before": "7c2241f4dd016ce565055acb12f5d40278b054e40c7b90177e91af0612dec4be",
+      "after": "7c2241f4dd016ce565055acb12f5d40278b054e40c7b90177e91af0612dec4be",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/UpgradeSystem.ts",
+      "before": "3c4081fbc096dda7930c0490443667181b22960ceb3d84748cd928ca136fb4cc",
+      "after": "3c4081fbc096dda7930c0490443667181b22960ceb3d84748cd928ca136fb4cc",
+      "equal": true
+    },
+    {
+      "path": "src/game/systems/ExperienceSystem.ts",
+      "before": "7ae3fc55007b07855976b4337e8a2319c09d94fae4477c2c550601ca744fadf1",
+      "after": "7ae3fc55007b07855976b4337e8a2319c09d94fae4477c2c550601ca744fadf1",
+      "equal": true
+    },
+    {
+      "path": "src/game/art/EncounterArt.ts",
+      "before": "51c15360d7bdf3eaacc76ce6f1121c7b86c6997815f5fa794b181975181ce53c",
+      "after": "51c15360d7bdf3eaacc76ce6f1121c7b86c6997815f5fa794b181975181ce53c",
+      "equal": true
+    },
+    {
+      "path": "src/game/loot/BuffSystem.ts",
+      "before": "9fc25c281b64824fc41b7ba2c3a000b6ac677d72c860445bd158dd81bf8887c4",
+      "after": "9fc25c281b64824fc41b7ba2c3a000b6ac677d72c860445bd158dd81bf8887c4",
+      "equal": true
+    }
+  ]
+}

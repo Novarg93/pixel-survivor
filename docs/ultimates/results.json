@@ -1,0 +1,24 @@
+{
+  "check": {
+    "exit": 0,
+    "unit": 504,
+    "files": 64
+  },
+  "full": {
+    "exit": 0,
+    "passed": 305,
+    "minutes": 27.6,
+    "failed": 0,
+    "skipped": 0,
+    "retries": 0
+  },
+  "production": {
+    "exit": 0,
+    "passed": 6,
+    "seconds": 33.3
+  },
+  "diffCheckExit": 0,
+  "manifestFiles": 320,
+  "manifestUnchanged": true,
+  "base": "679ab2005ec708a0b6546143761052b4830a3611"
+}

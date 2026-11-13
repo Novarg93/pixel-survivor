@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-05",
+  "branch": "main",
+  "radius": {
+    "before": 82,
+    "after": 164
+  },
+  "changed": [
+    "src/game/art/EncounterArt.ts",
+    "src/game/art/FireUltimateArt.ts",
+    "src/game/art/MageMagic.ts",
+    "src/game/art/playerShieldVisuals.ts",
+    "src/game/config/ultimates.ts",
+    "tests/e2e/fire-inferno.spec.ts",
+    "tests/e2e/fire-radius.spec.ts",
+    "tests/unit/fire-inferno.test.ts",
+    "tests/unit/fire-shield-presentation.test.ts"
+  ],
+  "checks": {
+    "check": {
+      "passed": 563,
+      "files": 71,
+      "exit": 0
+    },
+    "targetedE2E": {
+      "passed": 17,
+      "seconds": 50.9,
+      "exit": 0
+    },
+    "production": {
+      "passed": 7,
+      "seconds": 34.2,
+      "exit": 0
+    },
+    "diffCheck": {
+      "exit": 0
+    }
+  },
+  "canvas": [
+    {
+      "width": 1280,
+      "form": {
+        "phase": "form",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 421.47649300110527,
+        "glowHeight": 310.1430797555303,
+        "glowAlpha": 0.616,
+        "bodyFlames": 18,
+        "heatColumns": 7,
+        "burning": 4,
+        "bursts": 0,
+        "ring": false
+      },
+      "hp": 100,
+      "health": {
+        "x": -17,
+        "y": -33,
+        "width": 34,
+        "height": 5,
+        "hp": 1,
+        "absorb": 0.75,
+        "visible": true,
+        "depth": 11,
+        "objects": 1
+      },
+      "enemies": [
+        {
+          "x": 134,
+          "y": 0,
+          "hp": 999876
+        },
+        {
+          "x": -134,
+          "y": 0,
+          "hp": 999876
+        },
+        {
+          "x": 0,
+          "y": 134,
+          "hp": 999876
+        },
+        {
+          "x": 0,
+          "y": -134,
+          "hp": 999876
+        },
+        {
+          "x": 220,
+          "y": 0,
+          "hp": 1000000
+        },
+        {
+          "x": -220,
+          "y": 0,
+          "hp": 1000000
+        }
+      ],
+      "activeDifference": 0,
+      "fadeDifference": 0,
+      "restoredDifference": 13867,
+      "errors": []
+    },
+    {
+      "width": 844,
+      "form": {
+        "phase": "form",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 419.7940277203592,
+        "glowHeight": 308.90503926592476,
+        "glowAlpha": 0.616,
+        "bodyFlames": 18,
+        "heatColumns": 7,
+        "burning": 4,
+        "bursts": 0,
+        "ring": false
+      },
+      "hp": 100,
+      "health": {
+        "x": -17,
+        "y": -33,
+        "width": 34,
+        "height": 5,
+        "hp": 1,
+        "absorb": 0.75,
+        "visible": true,
+        "depth": 11,
+        "objects": 1
+      },
+      "enemies": [
+        {
+          "x": 134,
+          "y": 0,
+          "hp": 999876
+        },
+        {
+          "x": -134,
+          "y": 0,
+          "hp": 999876
+        },
+        {
+          "x": 0,
+          "y": 134,
+          "hp": 999876
+        },
+        {
+          "x": 0,
+          "y": -134,
+          "hp": 999876
+        },
+        {
+          "x": 220,
+          "y": 0,
+          "hp": 1000000
+        },
+        {
+          "x": -220,
+          "y": 0,
+          "hp": 1000000
+        }
+      ],
+      "activeDifference": 0,
+      "fadeDifference": 0,
+      "restoredDifference": 5651,
+      "errors": []
+    }
+  ],
+  "performance": [
+    {
+      "width": 1280,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999955,
+      "enemies": 150,
+      "bosses": 3,
+      "guardians": 3
+    },
+    {
+      "width": 844,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999955,
+      "enemies": 150,
+      "bosses": 3,
+      "guardians": 3
+    },
+    {
+      "width": 1024,
+      "medianFps": 59.88023952095874,
+      "p95FrameMs": 16.799999999999727,
+      "enemies": 150,
+      "bosses": 3,
+      "guardians": 3
+    }
+  ],
+  "manualAcceptance": "pending",
+  "pushed": false,
+  "deployed": false
+}

@@ -1,0 +1,61 @@
+﻿ M src/App.vue
+ M src/game/art/BossAnimation.ts
+ M src/game/art/GameArt.ts
+ M src/game/art/GuardianAnimation.ts
+ M src/game/art/assetRegistry.ts
+ M src/game/art/bossPack.ts
+ M src/game/audio/AudioPresentation.ts
+ M src/game/audio/catalog.ts
+ M src/game/config/encounterDirector.ts
+ M src/game/config/enemyDefinitions.ts
+ M src/game/entities/types.ts
+ M src/game/events/gameFeedback.ts
+ M src/game/radar/radar.ts
+ M src/game/scenes/GameScene.ts
+ M src/game/services/storage.ts
+ M src/game/systems/EncounterDirector.ts
+ M src/game/systems/EnemySystem.ts
+ M src/game/systems/GuardianOrbs.ts
+ M src/game/systems/MobilitySystem.ts
+ M src/game/systems/RareGuardianSystem.ts
+ M src/game/systems/ScoreSystem.ts
+ M src/game/systems/World.ts
+ M src/game/ultimates/UltimateSystem.ts
+ M src/ui/components/GameHUD.vue
+ M src/ui/components/GameRadar.vue
+ M src/ui/components/RunStatistics.vue
+ M tests/e2e/fire-inferno.spec.ts
+ M tests/e2e/gamepad.spec.ts
+ M tests/e2e/hd-integration.spec.ts
+ M tests/e2e/levelup-hotfix.spec.ts
+ M tests/e2e/production.spec.ts
+ M tests/e2e/run-finish.spec.ts
+ M tests/e2e/upgrade-identity-charge.spec.ts
+ M tests/helpers/earlyReplay.ts
+ M tests/unit/asset-registry.test.ts
+ M tests/unit/run-finish.test.ts
+?? PIXEL_SURVIVOR_FINAL_BOSS_SPEC.md
+?? public/assets/hd/ash-guard.json
+?? public/assets/hd/ash-guard.png
+?? scripts/ash-guard-art-source.mjs
+?? scripts/build-ash-guard-art.mjs
+?? scripts/inspect-ash-guard-art.mjs
+?? scripts/verify-final-built.mjs
+?? src/game/art/FinalBossArt.ts
+?? src/game/art/ashGuardPack.ts
+?? src/game/config/finalBoss.ts
+?? src/game/systems/FinalEncounter.ts
+?? src/ui/components/FinalBossBar.vue
+?? tests/e2e/final-boss-accessibility.spec.ts
+?? tests/e2e/final-boss-art.spec.ts
+?? tests/e2e/final-boss-mobile.spec.ts
+?? tests/e2e/final-boss-performance.spec.ts
+?? tests/e2e/final-boss-results.spec.ts
+?? tests/e2e/final-boss.spec.ts
+?? tests/helpers/finalBossTrial.ts
+?? tests/unit/ash-guard-art.test.ts
+?? tests/unit/final-boss-balance.test.ts
+?? tests/unit/final-boss-contracts.test.ts
+?? tests/unit/final-boss-dps.test.ts
+?? tests/unit/final-boss-telemetry.test.ts
+?? tests/unit/final-boss.test.ts

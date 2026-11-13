@@ -1,0 +1,644 @@
+{
+  "fixture": "Actual single update displacement,isolated,no slow,no invulnerability; ordinary World.step;boss actual BossSystem with natural successful prior-birth history and next-newborn cohort,approach only",
+  "rows": [
+    {
+      "t": 599,
+      "kind": "grunt",
+      "actualSpeed": 62.636666666667224,
+      "expected": 62.63666666666667
+    },
+    {
+      "t": 599,
+      "kind": "runner",
+      "actualSpeed": 101.85833333333335,
+      "expected": 101.85833333333335
+    },
+    {
+      "t": 599,
+      "kind": "rusher",
+      "actualSpeed": 64.42833333333283,
+      "expected": 64.42833333333334
+    },
+    {
+      "t": 599,
+      "kind": "caster",
+      "actualSpeed": 52.7466666666669,
+      "expected": 52.74666666666667
+    },
+    {
+      "t": 599,
+      "kind": "charger",
+      "actualSpeed": 69.60000000000036,
+      "expected": 69.6,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      }
+    },
+    {
+      "t": 599,
+      "kind": "sorcerer",
+      "actualSpeed": 26.100000000000136,
+      "expected": 26.099999999999998,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      }
+    },
+    {
+      "t": 599,
+      "kind": "eclipse",
+      "actualSpeed": 43.96537728713341,
+      "expected": 43.96537728713356,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      }
+    },
+    {
+      "t": 600,
+      "kind": "grunt",
+      "actualSpeed": 62.69999999999982,
+      "expected": 62.699999999999996
+    },
+    {
+      "t": 600,
+      "kind": "runner",
+      "actualSpeed": 102.00000000000045,
+      "expected": 102
+    },
+    {
+      "t": 600,
+      "kind": "rusher",
+      "actualSpeed": 64.50000000000045,
+      "expected": 64.5
+    },
+    {
+      "t": 600,
+      "kind": "caster",
+      "actualSpeed": 52.79999999999973,
+      "expected": 52.8
+    },
+    {
+      "t": 600,
+      "kind": "charger",
+      "actualSpeed": 84.47999999999979,
+      "expected": 84.48000000000002,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7600000000000002,
+        "frequency": 2.3
+      }
+    },
+    {
+      "t": 600,
+      "kind": "sorcerer",
+      "actualSpeed": 31.680000000000064,
+      "expected": 31.680000000000003,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7600000000000002,
+        "frequency": 2.3
+      }
+    },
+    {
+      "t": 600,
+      "kind": "eclipse",
+      "actualSpeed": 53.36487174162438,
+      "expected": 53.3648717416242,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7600000000000002,
+        "frequency": 2.3
+      }
+    },
+    {
+      "t": 870,
+      "kind": "grunt",
+      "actualSpeed": 79.6289999999999,
+      "expected": 79.62899999999999
+    },
+    {
+      "t": 870,
+      "kind": "runner",
+      "actualSpeed": 129.5399999999995,
+      "expected": 129.54
+    },
+    {
+      "t": 870,
+      "kind": "rusher",
+      "actualSpeed": 81.91500000000019,
+      "expected": 81.915
+    },
+    {
+      "t": 870,
+      "kind": "caster",
+      "actualSpeed": 67.05600000000004,
+      "expected": 67.056
+    },
+    {
+      "t": 870,
+      "kind": "charger",
+      "actualSpeed": 92.16000000000008,
+      "expected": 92.16,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      }
+    },
+    {
+      "t": 870,
+      "kind": "sorcerer",
+      "actualSpeed": 55.295999999999594,
+      "expected": 55.296,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.072,
+        "frequency": 5.2
+      }
+    },
+    {
+      "t": 870,
+      "kind": "eclipse",
+      "actualSpeed": 93.14595794901702,
+      "expected": 93.14595794901678,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.072,
+        "frequency": 5.2
+      }
+    },
+    {
+      "t": 900,
+      "kind": "grunt",
+      "actualSpeed": 81.50999999999954,
+      "expected": 81.51
+    },
+    {
+      "t": 900,
+      "kind": "runner",
+      "actualSpeed": 132.5999999999999,
+      "expected": 132.60000000000002
+    },
+    {
+      "t": 900,
+      "kind": "rusher",
+      "actualSpeed": 83.84999999999991,
+      "expected": 83.85000000000001
+    },
+    {
+      "t": 900,
+      "kind": "caster",
+      "actualSpeed": 68.64000000000033,
+      "expected": 68.64
+    },
+    {
+      "t": 900,
+      "kind": "charger",
+      "actualSpeed": 92.16000000000008,
+      "expected": 92.16,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "late": {
+        "index": 1,
+        "movement": 1,
+        "frequency": 1,
+        "projectile": 1,
+        "volley": 7
+      }
+    },
+    {
+      "t": 900,
+      "kind": "sorcerer",
+      "actualSpeed": 55.295999999999594,
+      "expected": 55.296,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.072,
+        "frequency": 5.2
+      },
+      "late": {
+        "index": 1,
+        "movement": 1,
+        "frequency": 1,
+        "projectile": 1,
+        "volley": 7
+      }
+    },
+    {
+      "t": 900,
+      "kind": "eclipse",
+      "actualSpeed": 93.14595794901702,
+      "expected": 93.14595794901678,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.072,
+        "frequency": 5.2
+      },
+      "late": {
+        "index": 1,
+        "movement": 1,
+        "frequency": 1,
+        "projectile": 1,
+        "volley": 7
+      }
+    },
+    {
+      "t": 930,
+      "kind": "grunt",
+      "actualSpeed": 83.95530000000008,
+      "expected": 83.95530000000001
+    },
+    {
+      "t": 930,
+      "kind": "runner",
+      "actualSpeed": 136.57799999999952,
+      "expected": 136.578
+    },
+    {
+      "t": 930,
+      "kind": "rusher",
+      "actualSpeed": 86.36550000000057,
+      "expected": 86.36550000000001
+    },
+    {
+      "t": 930,
+      "kind": "caster",
+      "actualSpeed": 70.69920000000025,
+      "expected": 70.6992
+    },
+    {
+      "t": 930,
+      "kind": "charger",
+      "actualSpeed": 97.22880000000032,
+      "expected": 97.22879999999999,
+      "aggression": {
+        "wave": 5,
+        "movement": 2.0256,
+        "frequency": 2.8340000000000005
+      },
+      "late": {
+        "index": 4,
+        "movement": 1.055,
+        "frequency": 1.09,
+        "projectile": 1.039,
+        "volley": 7
+      }
+    },
+    {
+      "t": 930,
+      "kind": "sorcerer",
+      "actualSpeed": 58.33727999999951,
+      "expected": 58.33728,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.24096,
+        "frequency": 5.668000000000001
+      },
+      "late": {
+        "index": 4,
+        "movement": 1.055,
+        "frequency": 1.09,
+        "projectile": 1.039,
+        "volley": 7
+      }
+    },
+    {
+      "t": 930,
+      "kind": "eclipse",
+      "actualSpeed": 98.26898563621303,
+      "expected": 98.2689856362127,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.24096,
+        "frequency": 5.668000000000001
+      },
+      "late": {
+        "index": 4,
+        "movement": 1.055,
+        "frequency": 1.09,
+        "projectile": 1.039,
+        "volley": 7
+      }
+    },
+    {
+      "t": 960,
+      "kind": "grunt",
+      "actualSpeed": 86.40059999999949,
+      "expected": 86.40060000000001
+    },
+    {
+      "t": 960,
+      "kind": "runner",
+      "actualSpeed": 140.55600000000027,
+      "expected": 140.556
+    },
+    {
+      "t": 960,
+      "kind": "rusher",
+      "actualSpeed": 88.88100000000009,
+      "expected": 88.881
+    },
+    {
+      "t": 960,
+      "kind": "caster",
+      "actualSpeed": 72.75840000000017,
+      "expected": 72.75840000000001
+    },
+    {
+      "t": 960,
+      "kind": "charger",
+      "actualSpeed": 102.29760000000056,
+      "expected": 102.29760000000002,
+      "aggression": {
+        "wave": 5,
+        "movement": 2.1312,
+        "frequency": 3.0680000000000005
+      },
+      "late": {
+        "index": 7,
+        "movement": 1.11,
+        "frequency": 1.1800000000000002,
+        "projectile": 1.078,
+        "volley": 8
+      }
+    },
+    {
+      "t": 960,
+      "kind": "sorcerer",
+      "actualSpeed": 61.37856000000056,
+      "expected": 61.37856000000001,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.4099200000000005,
+        "frequency": 6.136000000000001
+      },
+      "late": {
+        "index": 7,
+        "movement": 1.11,
+        "frequency": 1.1800000000000002,
+        "projectile": 1.078,
+        "volley": 8
+      }
+    },
+    {
+      "t": 960,
+      "kind": "eclipse",
+      "actualSpeed": 103.39201332340909,
+      "expected": 103.39201332340865,
+      "aggression": {
+        "wave": 5,
+        "movement": 3.4099200000000005,
+        "frequency": 6.136000000000001
+      },
+      "late": {
+        "index": 7,
+        "movement": 1.11,
+        "frequency": 1.1800000000000002,
+        "projectile": 1.078,
+        "volley": 8
+      }
+    },
+    {
+      "t": 1080,
+      "kind": "grunt",
+      "actualSpeed": 96.18180000000052,
+      "expected": 96.1818
+    },
+    {
+      "t": 1080,
+      "kind": "runner",
+      "actualSpeed": 156.46799999999985,
+      "expected": 156.46800000000002
+    },
+    {
+      "t": 1080,
+      "kind": "rusher",
+      "actualSpeed": 98.94300000000044,
+      "expected": 98.94300000000001
+    },
+    {
+      "t": 1080,
+      "kind": "caster",
+      "actualSpeed": 80.99519999999984,
+      "expected": 80.9952
+    },
+    {
+      "t": 1080,
+      "kind": "charger",
+      "actualSpeed": 122.57280000000037,
+      "expected": 122.5728,
+      "aggression": {
+        "wave": 5,
+        "movement": 2.5536,
+        "frequency": 4.004
+      },
+      "late": {
+        "index": 19,
+        "movement": 1.33,
+        "frequency": 1.5399999999999998,
+        "projectile": 1.234,
+        "volley": 10
+      }
+    },
+    {
+      "t": 1080,
+      "kind": "sorcerer",
+      "actualSpeed": 73.54368000000022,
+      "expected": 73.54368000000001,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.0857600000000005,
+        "frequency": 8.008
+      },
+      "late": {
+        "index": 19,
+        "movement": 1.33,
+        "frequency": 1.5399999999999998,
+        "projectile": 1.234,
+        "volley": 10
+      }
+    },
+    {
+      "t": 1080,
+      "kind": "eclipse",
+      "actualSpeed": 123.88412407219225,
+      "expected": 123.88412407219232,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.0857600000000005,
+        "frequency": 8.008
+      },
+      "late": {
+        "index": 19,
+        "movement": 1.33,
+        "frequency": 1.5399999999999998,
+        "projectile": 1.234,
+        "volley": 10
+      }
+    },
+    {
+      "t": 1200,
+      "kind": "grunt",
+      "actualSpeed": 105.96300000000042,
+      "expected": 105.963
+    },
+    {
+      "t": 1200,
+      "kind": "runner",
+      "actualSpeed": 168.99999999999977,
+      "expected": 169
+    },
+    {
+      "t": 1200,
+      "kind": "rusher",
+      "actualSpeed": 109.00499999999965,
+      "expected": 109.00500000000001
+    },
+    {
+      "t": 1200,
+      "kind": "caster",
+      "actualSpeed": 89.23199999999952,
+      "expected": 89.232
+    },
+    {
+      "t": 1200,
+      "kind": "charger",
+      "actualSpeed": 133.63200000000006,
+      "expected": 133.632,
+      "aggression": {
+        "wave": 5,
+        "movement": 2.784,
+        "frequency": 4.94
+      },
+      "late": {
+        "index": 31,
+        "movement": 1.45,
+        "frequency": 1.9000000000000001,
+        "projectile": 1.3900000000000001,
+        "volley": 11
+      }
+    },
+    {
+      "t": 1200,
+      "kind": "sorcerer",
+      "actualSpeed": 85.70879999999988,
+      "expected": 85.7088,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.7616,
+        "frequency": 9.88
+      },
+      "late": {
+        "index": 31,
+        "movement": 1.5499999999999998,
+        "frequency": 1.9000000000000001,
+        "projectile": 1.3900000000000001,
+        "volley": 11
+      }
+    },
+    {
+      "t": 1200,
+      "kind": "eclipse",
+      "actualSpeed": 144.37623482097635,
+      "expected": 144.37623482097598,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.7616,
+        "frequency": 9.88
+      },
+      "late": {
+        "index": 31,
+        "movement": 1.5499999999999998,
+        "frequency": 1.9000000000000001,
+        "projectile": 1.3900000000000001,
+        "volley": 11
+      }
+    },
+    {
+      "t": 1500,
+      "kind": "grunt",
+      "actualSpeed": 130.41600000000017,
+      "expected": 130.416
+    },
+    {
+      "t": 1500,
+      "kind": "runner",
+      "actualSpeed": 190,
+      "expected": 190
+    },
+    {
+      "t": 1500,
+      "kind": "rusher",
+      "actualSpeed": 134.16000000000054,
+      "expected": 134.16
+    },
+    {
+      "t": 1500,
+      "kind": "caster",
+      "actualSpeed": 109.82399999999984,
+      "expected": 109.824
+    },
+    {
+      "t": 1500,
+      "kind": "charger",
+      "actualSpeed": 133.63200000000006,
+      "expected": 133.632,
+      "aggression": {
+        "wave": 5,
+        "movement": 2.784,
+        "frequency": 7.280000000000001
+      },
+      "late": {
+        "index": 61,
+        "movement": 1.45,
+        "frequency": 2.8000000000000003,
+        "projectile": 1.6,
+        "volley": 11
+      }
+    },
+    {
+      "t": 1500,
+      "kind": "sorcerer",
+      "actualSpeed": 88.4735999999998,
+      "expected": 88.4736,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.9152000000000005,
+        "frequency": 14.560000000000002
+      },
+      "late": {
+        "index": 61,
+        "movement": 1.6,
+        "frequency": 2.8000000000000003,
+        "projectile": 1.6,
+        "volley": 11
+      }
+    },
+    {
+      "t": 1500,
+      "kind": "eclipse",
+      "actualSpeed": 149.03353271842724,
+      "expected": 149.03353271842684,
+      "aggression": {
+        "wave": 5,
+        "movement": 4.9152000000000005,
+        "frequency": 14.560000000000002
+      },
+      "late": {
+        "index": 61,
+        "movement": 1.6,
+        "frequency": 2.8000000000000003,
+        "projectile": 1.6,
+        "volley": 11
+      }
+    }
+  ]
+}

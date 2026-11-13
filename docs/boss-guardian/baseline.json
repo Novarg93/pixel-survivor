@@ -1,0 +1,990 @@
+{
+  "phase": "baseline",
+  "fixture": "Legal55choices Mage56,5skillsV/5evolutions,8artifacts damage3/CDR3/health2,initial240HP,speed189,180s real World fixed dt.05; no test invulnerability; offers bypassed to hold build; reconstructs all successful30s births from630 through start, clearing encounters without rewards; then actual schedule",
+  "table": [
+    {
+      "kind": "charger",
+      "seconds": 570,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      },
+      "hp": 4496.625,
+      "damage": 33.32,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 570,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      },
+      "hp": 5695.725,
+      "damage": 26.18,
+      "volleys": 8,
+      "shots": 40,
+      "times": [
+        572.2999999999979,
+        575.9999999999945,
+        579.6999999999912,
+        583.3999999999878,
+        587.0999999999844,
+        590.7999999999811,
+        594.4999999999777,
+        598.1999999999744
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 570,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 4,
+        "movement": 1.45,
+        "frequency": 1.75
+      },
+      "hp": 7194.6,
+      "damage": 28.56,
+      "volleys": 7,
+      "shots": 70,
+      "times": [
+        572.4499999999978,
+        576.649999999994,
+        580.8499999999901,
+        585.0499999999863,
+        589.2499999999825,
+        593.4499999999787,
+        597.6499999999749
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 600,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "hp": 4567.5,
+      "damage": 33.6,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 600,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "hp": 5785.5,
+      "damage": 26.4,
+      "volleys": 9,
+      "shots": 45,
+      "times": [
+        602.199999999998,
+        605.6499999999949,
+        609.0999999999917,
+        612.5499999999886,
+        615.9999999999854,
+        619.4499999999823,
+        622.8999999999792,
+        626.349999999976,
+        629.7999999999729
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 600,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "hp": 7308,
+      "damage": 28.799999999999997,
+      "volleys": 8,
+      "shots": 80,
+      "times": [
+        602.3499999999979,
+        606.2499999999943,
+        610.1499999999908,
+        614.0499999999872,
+        617.9499999999837,
+        621.8499999999801,
+        625.7499999999766,
+        629.649999999973
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 630,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6480000000000001,
+        "frequency": 2.08
+      },
+      "hp": 4638.375,
+      "damage": 33.879999999999995,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 630,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6480000000000001,
+        "frequency": 2.08
+      },
+      "hp": 5875.275000000001,
+      "damage": 26.619999999999997,
+      "volleys": 9,
+      "shots": 45,
+      "times": [
+        632.149999999998,
+        635.499999999995,
+        638.849999999992,
+        642.1999999999889,
+        645.5499999999859,
+        648.8999999999828,
+        652.2499999999798,
+        655.5999999999767,
+        658.9499999999737
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 630,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6480000000000001,
+        "frequency": 2.08
+      },
+      "hp": 7421.400000000001,
+      "damage": 29.04,
+      "volleys": 8,
+      "shots": 80,
+      "times": [
+        632.2999999999979,
+        636.0499999999945,
+        639.7999999999911,
+        643.5499999999877,
+        647.2999999999843,
+        651.0499999999809,
+        654.7999999999774,
+        658.549999999974
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 720,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7920000000000003,
+        "frequency": 2.32
+      },
+      "hp": 4851,
+      "damage": 34.72,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 720,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7920000000000003,
+        "frequency": 2.32
+      },
+      "hp": 6144.6,
+      "damage": 27.28,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        722.0499999999981,
+        725.1499999999953,
+        728.2499999999925,
+        731.3499999999897,
+        734.4499999999869,
+        737.549999999984,
+        740.6499999999812,
+        743.7499999999784,
+        746.8499999999756,
+        749.9499999999728
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 720,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.7920000000000003,
+        "frequency": 2.32
+      },
+      "hp": 7761.6,
+      "damage": 29.759999999999998,
+      "volleys": 8,
+      "shots": 80,
+      "times": [
+        722.199999999998,
+        725.6999999999948,
+        729.1999999999916,
+        732.6999999999884,
+        736.1999999999853,
+        739.6999999999821,
+        743.1999999999789,
+        746.6999999999757
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    }
+  ],
+  "cohorts": [
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 1,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 1,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 1,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 2,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 2,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 2,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 3,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 3,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 3,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 4,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 4,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 4,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 5,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 5,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 5,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    },
+    {
+      "kind": "charger",
+      "seconds": 900,
+      "index": 6,
+      "speed": 24,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 5276.25,
+      "damage": 36.4,
+      "volleys": 0,
+      "shots": 0,
+      "times": []
+    },
+    {
+      "kind": "sorcerer",
+      "seconds": 900,
+      "index": 6,
+      "speed": 18,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 6683.25,
+      "damage": 28.6,
+      "volleys": 10,
+      "shots": 50,
+      "times": [
+        901.9499999999982,
+        904.8499999999956,
+        907.749999999993,
+        910.6499999999903,
+        913.5499999999877,
+        916.449999999985,
+        919.3499999999824,
+        922.2499999999798,
+        925.1499999999771,
+        928.0499999999745
+      ]
+    },
+    {
+      "kind": "eclipse",
+      "seconds": 900,
+      "index": 6,
+      "speed": 26,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.92,
+        "frequency": 2.6
+      },
+      "hp": 8442,
+      "damage": 31.200000000000003,
+      "volleys": 9,
+      "shots": 90,
+      "times": [
+        902.0999999999981,
+        905.3999999999951,
+        908.6999999999921,
+        911.9999999999891,
+        915.2999999999861,
+        918.5999999999831,
+        921.8999999999801,
+        925.1999999999771,
+        928.4999999999741
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "seed": 12345,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 50.47,
+      "hits": 6,
+      "shots": 224,
+      "kills": 2002,
+      "peakRegular": 22,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 189.53,
+      "survived": true
+    },
+    {
+      "seed": 12345,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 205,
+      "kills": 1888,
+      "peakRegular": 60,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    },
+    {
+      "seed": 12345,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0.48,
+      "hits": 1,
+      "shots": 153,
+      "kills": 1847,
+      "peakRegular": 55,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 24,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 239.52,
+      "survived": true
+    },
+    {
+      "seed": 67890,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 246.09,
+      "hits": 13,
+      "shots": 260,
+      "kills": 2026,
+      "peakRegular": 22,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 65.91,
+      "survived": true
+    },
+    {
+      "seed": 67890,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 149,
+      "kills": 1877,
+      "peakRegular": 63,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 260,
+      "survived": true
+    },
+    {
+      "seed": 67890,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 238,
+      "kills": 1896,
+      "peakRegular": 54,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 28,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    },
+    {
+      "seed": 77,
+      "mode": "afk",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 216.17,
+      "hits": 13,
+      "shots": 248,
+      "kills": 2079,
+      "peakRegular": 21,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 23.83,
+      "survived": true
+    },
+    {
+      "seed": 77,
+      "mode": "move",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 153,
+      "kills": 1960,
+      "peakRegular": 53,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    },
+    {
+      "seed": 77,
+      "mode": "blink",
+      "start": 720,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 252,
+      "kills": 1947,
+      "peakRegular": 57,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 30,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    }
+  ],
+  "late": [
+    {
+      "seed": 12345,
+      "mode": "afk",
+      "start": 900,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 240,
+      "hits": 14,
+      "shots": 162,
+      "kills": 1374,
+      "peakRegular": 24,
+      "peakBosses": 1,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 93.55,
+      "hp": 0,
+      "survived": false
+    },
+    {
+      "seed": 12345,
+      "mode": "move",
+      "start": 900,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 273,
+      "kills": 2554,
+      "peakRegular": 76,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "blinks": 0,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    },
+    {
+      "seed": 12345,
+      "mode": "blink",
+      "start": 900,
+      "duration": 180,
+      "artifacts": true,
+      "damage": 0,
+      "hits": 0,
+      "shots": 268,
+      "kills": 2550,
+      "peakRegular": 65,
+      "peakBosses": 2,
+      "peakGuardians": 3,
+      "blinks": 33,
+      "invalidInvulnerability": false,
+      "seconds": 180,
+      "hp": 240,
+      "survived": true
+    }
+  ]
+}

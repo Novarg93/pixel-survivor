@@ -90,7 +90,7 @@ it('defers early level30 until a later level-up after five minutes, preserves qu
   w.elapsed=300;expect(w.status).toBe('playing');expect(w.choices).toHaveLength(0);
   w.gainXp(6000);expect(w.choices).toHaveLength(3);expect(w.choices.every(c=>c.id.startsWith('ultimate-'))).toBe(true);
   w.selectUpgrade('ultimate-lightning');expect(w.experience.pending).toBe(3);expect(w.status).toBe('upgrade');expect(w.choices.every(c=>!c.id.startsWith('ultimate-'))).toBe(true);
-  const warrior=new World(1,{character:'warrior'});warrior.elapsed=1000;warrior.experience.level=60;expect(warrior.ultimate.eligible(warrior)).toBe(false);
+  const warrior=new World(1,{character:'warrior'});warrior.elapsed=1000;warrior.experience.level=60;expect(warrior.ultimate.eligible(warrior)).toBe(true);expect(warrior.ultimate.choose(warrior,'fire')).toBe(false);
 });
 it('ash is exclusive to ultimate kills and physics objects stay bounded through a 150 enemy atomic kill',()=>{
   const w=setup();w.experience.level=40;for(let i=0;i<150;i++)w.spawn('tank',{x:20+i%15*12,y:Math.floor(i/15)*10-50});

@@ -93,7 +93,7 @@ it.each([1, 2, 3])('rank%i scales configured wall/dash/shield/buffs without muta
     if (u.id === 'slowing-flame') expect(w.zones[0].wall!.width).toBe(S.slowingWidth[rank - 1]);
     if (u.id === 'arcane-sprint') expect(w.effectiveSpeed / w.player.speed).toBe(S.sprintSpeed[rank - 1]);
     if (u.id === 'absorb-shield') expect(w.mobility.absorbValue(w.elapsed)).toBe(w.effectiveMaxHp * S.absorbFraction[rank - 1]);
-    if (u.id === 'berserk') { expect(w.effectiveDamage).toBe(S.berserkDamage[rank - 1]); expect(w.effectiveCooldown).toBe(S.berserkCooldown[rank - 1]); }
+    if (u.id === 'berserk') { expect(w.effectiveDamage).toBe(S.berserkDamage[rank - 1]); expect(w.effectiveCooldown).toBe(S.berserkCooldown[rank - 1]); expect(w.effectiveSpeed / w.player.speed).toBe(S.berserkSpeed[rank - 1]); }
     expect(w.stats).toEqual(stats);
   }
 });
@@ -127,6 +127,27 @@ it('refreshes shield capacity/duration and Sprint without unlimited stacking', (
   const mage = setup('arcane-sprint'); const speed = mage.player.speed; mage.mobility.activate(mage);
   mage.elapsed = 1; mage.mobility.readyAt = 0; mage.mobility.activate(mage); expect(mage.effectiveSpeed).toBeCloseTo(speed * 1.3);
   mage.elapsed = 2.99; expect(mage.effectiveSpeed).toBeCloseTo(speed * 1.3); mage.elapsed = 3; expect(mage.effectiveSpeed).toBe(speed);
+});
+it.each([1, 2, 3])('Berserk rank%i sprints after arrival, moves faster, refreshes without stacking and expires in game time', rank => {
+  const w = setup('berserk', rank), baseSpeed = w.player.speed, multiplier = [1.3, 1.35, 1.4][rank - 1];
+  expect(w.mobility.activate(w, { x: 1, y: 0 })).toBe(true);
+  expect(w.effectiveSpeed).toBe(baseSpeed); finishDash(w);
+  expect(w.effectiveSpeed).toBeCloseTo(baseSpeed * multiplier);
+  const x = w.player.x; w.step(.05, { x: 1, y: 0 });
+  expect(w.player.x - x).toBeCloseTo(baseSpeed * multiplier * .05);
+  w.elapsed += 1; w.mobility.readyAt = w.elapsed;
+  expect(w.mobility.activate(w, { x: 1, y: 0 })).toBe(true); finishDash(w);
+  expect(w.effectiveSpeed).toBeCloseTo(baseSpeed * multiplier);
+  expect(w.buffs.snapshot(w.elapsed).filter(b => b.id === 'berserk')).toHaveLength(1);
+  const remaining = w.buffs.remaining('berserk', w.elapsed), frozen = w.elapsed;
+  w.pause(); w.step(.05, { x: 1, y: 0 });
+  expect(w.elapsed).toBe(frozen); expect(w.buffs.remaining('berserk', w.elapsed)).toBe(remaining); w.resume();
+  w.buffs.activate('haste', w.elapsed);
+  expect(w.effectiveSpeed).toBeCloseTo(baseSpeed * multiplier * w.buffs.multiplier('haste', w.elapsed));
+  w.elapsed += remaining;
+  expect(w.buffs.remaining('berserk', w.elapsed)).toBe(0);
+  expect(w.effectiveSpeed).toBeCloseTo(baseSpeed * w.buffs.multiplier('haste', w.elapsed));
+  expect(w.effectiveDamage).toBe(1); expect(w.effectiveCooldown).toBe(1); expect(w.player.speed).toBe(baseSpeed);
 });
 it('Berserk samples CDR only for new cooldowns, composes with global CDR and obeys the shared floor', () => {
   const w = setup('berserk'); w.stats.cooldown = .5; w.mobility.activate(w); const deadline = w.mobility.readyAt; expect(deadline).toBe(2);

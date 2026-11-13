@@ -1,0 +1,4236 @@
+{
+  "transitions": [
+    {
+      "startTime": 300,
+      "first": {
+        "phase": "normal",
+        "target": "darkened",
+        "blend": 0.00013231725530309384,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0.000004631103935608285,
+          "vignette": 0.00001852441574243314,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": true,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "last": {
+        "phase": "darkened",
+        "target": "darkened",
+        "blend": 1,
+        "style": {
+          "tint": 14081250,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0.035,
+          "vignette": 0.14,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": true,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 14081250
+          }
+        ],
+        "textureBytes": 196608
+      }
+    },
+    {
+      "startTime": 600,
+      "first": {
+        "phase": "darkened",
+        "target": "creepy",
+        "blend": 0.00013279372378036125,
+        "style": {
+          "tint": 14081250,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0.03500464778033232,
+          "vignette": 0.14002124699580487,
+          "fog": 0.000018591121329250576,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": true,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 14081250
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 14081250
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "last": {
+        "phase": "creepy",
+        "target": "creepy",
+        "blend": 1,
+        "style": {
+          "tint": 10664386,
+          "veilColor": 5467001,
+          "fogColor": 9942969,
+          "veil": 0.07,
+          "vignette": 0.3,
+          "fog": 0.14,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": true,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 10664386
+          }
+        ],
+        "textureBytes": 196608
+      }
+    },
+    {
+      "startTime": 900,
+      "first": {
+        "phase": "creepy",
+        "target": "burning",
+        "blend": 0.00019078558323226238,
+        "style": {
+          "tint": 10664386,
+          "veilColor": 5467001,
+          "fogColor": 9942969,
+          "veil": 0.06999713821625152,
+          "vignette": 0.2999904607208384,
+          "fog": 0.1399980921441677,
+          "glow": 0.0000877613682868407,
+          "embers": 0.00019078558323226238
+        },
+        "active": true,
+        "motes": 28,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 10664386
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 10664386
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "last": {
+        "phase": "burning",
+        "target": "burning",
+        "blend": 1,
+        "style": {
+          "tint": 12364450,
+          "veilColor": 7420977,
+          "fogColor": 12100246,
+          "veil": 0.055,
+          "vignette": 0.25,
+          "fog": 0.13,
+          "glow": 0.46,
+          "embers": 1
+        },
+        "active": true,
+        "motes": 28,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": true
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--4--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3--3",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3--2",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3--1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3-0",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3-1",
+            "tint": 12364450
+          },
+          {
+            "key": "chunk-3-2",
+            "tint": 12364450
+          }
+        ],
+        "textureBytes": 196608
+      }
+    }
+  ],
+  "records": [
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    },
+    {
+      "objects": 76,
+      "textures": 59,
+      "mood": {
+        "phase": "normal",
+        "target": "normal",
+        "blend": 1,
+        "style": {
+          "tint": 16777215,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0,
+          "vignette": 0,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "active": false,
+        "motes": 0,
+        "objects": 8,
+        "layers": [
+          {
+            "name": "atmosphere-veil",
+            "depth": -29,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-vignette",
+            "depth": -28,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-0",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-glow-1",
+            "depth": -27,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-0",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-1",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-fog-2",
+            "depth": -26,
+            "visible": false
+          },
+          {
+            "name": "atmosphere-embers-ash",
+            "depth": -25,
+            "visible": true
+          }
+        ],
+        "terrain": [
+          {
+            "key": "chunk--5--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--5-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--4-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--3-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--2-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk--1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-0-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-1-2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--3",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--2",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2--1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-0",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-1",
+            "tint": 16777215
+          },
+          {
+            "key": "chunk-2-2",
+            "tint": 16777215
+          }
+        ],
+        "textureBytes": 196608
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ],
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      }
+    }
+  ],
+  "errors": []
+}

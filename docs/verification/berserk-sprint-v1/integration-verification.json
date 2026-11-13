@@ -1,0 +1,17 @@
+{
+  "baselineFiles": 453,
+  "changed": [
+    "src/game/config/mobilityUpgrades.ts",
+    "src/game/systems/MobilitySystem.ts",
+    "src/ui/components/BuffDock.vue",
+    "src/ui/upgradeCards.ts"
+  ],
+  "added": [],
+  "unchanged": 449,
+  "currentSHA256": {
+    "src/game/config/mobilityUpgrades.ts": "1a7bce8d42f65e8d89455901cb616778a546cfc82820bb2783ab9c26b639a6e6",
+    "src/game/systems/MobilitySystem.ts": "cca7e30dc830f9681f8a73020fa43e8a00c12382de47e44ec21b7fcb77e85a96",
+    "src/ui/components/BuffDock.vue": "20fe4e933851964e3c479910ecc53c4e5de6713a4bb346448800909d801e0492",
+    "src/ui/upgradeCards.ts": "8d876899fd972ebfd883203c1945cf6854ef09bae0c3c08fcfff1cb9c0818f6f"
+  }
+}

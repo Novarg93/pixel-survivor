@@ -1,0 +1,46 @@
+{
+  "fixture": "all6 slots occupied at11min; one boss and one Guardian killed before12min; no automatic AI survival claim",
+  "events": [
+    {
+      "minute": 11,
+      "at": 660,
+      "label": "Endgame Encounter",
+      "requestedBosses": 3,
+      "requestedGuardians": 3,
+      "bosses": [],
+      "guardians": [],
+      "skippedBosses": 3,
+      "skippedGuardians": 3,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "missedMinutes": 0
+    },
+    {
+      "minute": 12,
+      "at": 720,
+      "label": "Endgame Encounter",
+      "requestedBosses": 3,
+      "requestedGuardians": 3,
+      "bosses": [
+        {
+          "id": 18,
+          "kind": "charger"
+        }
+      ],
+      "guardians": [
+        20
+      ],
+      "skippedBosses": 2,
+      "skippedGuardians": 2,
+      "aggression": {
+        "wave": 5,
+        "movement": 1.6,
+        "frequency": 2
+      },
+      "missedMinutes": 0
+    }
+  ]
+}

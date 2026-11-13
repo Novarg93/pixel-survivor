@@ -1,0 +1,49 @@
+{
+  "commands": [
+    {
+      "command": "npm.cmd run check",
+      "exit": 0,
+      "unitTests": 578,
+      "unitFiles": 72
+    },
+    {
+      "command": "npm.cmd run test:e2e",
+      "exit": 0,
+      "passed": 345,
+      "durationMinutes": 57.3
+    },
+    {
+      "command": "npm.cmd run test:e2e:production",
+      "exit": 0,
+      "passed": 7,
+      "durationSeconds": 37.7
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "branch": "main",
+  "commit": false,
+  "push": false,
+  "deploy": false,
+  "screenshots": [
+    "screenshots/atmosphere/normal-1280.png",
+    "screenshots/atmosphere/darkened-1280.png",
+    "screenshots/atmosphere/creepy-1280.png",
+    "screenshots/atmosphere/burning-1280.png",
+    "screenshots/atmosphere/normal-844.png",
+    "screenshots/atmosphere/darkened-844.png",
+    "screenshots/atmosphere/creepy-844.png",
+    "screenshots/atmosphere/burning-844.png"
+  ],
+  "environment": {
+    "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+    "platform": "win32",
+    "os": "10.0.19045",
+    "browser": "156.0.8078.4",
+    "node": "v22.16.0"
+  },
+  "blockers": [],
+  "next": "manual acceptance"
+}

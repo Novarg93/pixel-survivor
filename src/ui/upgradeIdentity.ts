@@ -31,7 +31,7 @@ export const GENERAL_CARD_COLORS = {
 } as const;
 const mobilityColors = new Map<string, string>(MOBILITY_UPGRADES.map(u => [`mobility-${u.id}` satisfies `mobility-${MobilityVariant}`, u.color]));
 export function upgradeIdentity(id: string) {
-  if(id.startsWith('ultimate-')) { const family: AbilityId=id==='ultimate-fire'?'fireball':id==='ultimate-frost'?'frost':'lightning';return {family,color:SKILL_CARD_COLORS[family]}; }
+  if(id.startsWith('ultimate-')) { const family: AbilityId=id==='ultimate-banner'?'iron':id==='ultimate-earthbreaker'?'slam':id==='ultimate-ruin'?'blades':id==='ultimate-fire'?'fireball':id==='ultimate-frost'?'frost':'lightning';return {family,color:SKILL_CARD_COLORS[family]}; }
   const skill = skillFamilies.get(id);
   if (skill) return { family: skill, color: SKILL_CARD_COLORS[skill] };
   const mobility = mobilityColors.get(id);

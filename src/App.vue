@@ -79,11 +79,11 @@ function startRun(practice:PracticeBoss|null) {
   const current = mobileViewport();
   if (current.blocked) return;
   if (current.touch && inputDevice.value !== 'gamepad') fullscreen.enter(document.documentElement);
-  character.value = PUBLIC_CHARACTER;
+  if(practice)character.value = PUBLIC_CHARACTER;
   if(practice)biome.value='grove';
   storageFailed.value=false;
   screen.value = 'game';
-  commands.emit({ type: practice?'boss-practice':'restart', practiceBoss:practice??undefined, character: PUBLIC_CHARACTER, biome: biome.value });
+  commands.emit({ type: practice?'boss-practice':'restart', practiceBoss:practice??undefined, character: character.value, biome: biome.value });
 }
 function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value); commands.emit({ type: 'settings', value }); }
 function openSettings() { commands.emit({ type: 'pause' }); screen.value = 'settings'; }

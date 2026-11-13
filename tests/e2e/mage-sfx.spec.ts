@@ -9,7 +9,7 @@ for(const[width,height]of [[1280,720],[844,390]])test(`local Mage samples and re
     Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});
     localStorage.setItem('pixel-survivor-v1',JSON.stringify({version:2,settings:{volume:.5,musicVolume:0,sfxVolume:.8,muted:false,pixelScale:2},records:[]}));
   });
-  await page.goto('/?test=1');await page.waitForFunction(()=>window.__PIXEL__?.audio().samplesLoaded===27);
+  await page.goto('/?test=1');await page.waitForFunction(()=>window.__PIXEL__?.audio().samplesLoaded===36);
   expect(await page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);
   const button=page.getByRole('button',{name:/Бой со Стражем/});await expect(button).toContainText('Гнев Небес');await page.screenshot({path:`${directory}/menu-${width}.png`});await button.click();
   await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
@@ -35,9 +35,9 @@ for(const[width,height]of [[1280,720],[844,390]])test(`local Mage samples and re
   }
   await page.keyboard.press('Space');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().samplePlays?.['mage-blink']??0)).toBeGreaterThan(0);
   expect(await page.evaluate(()=>window.__PIXEL__!.world.ultimate.charge)).toBe(1);
-  const audio=await page.evaluate(()=>window.__PIXEL__!.audio());expect(audio.failedAssets).toBe(0);expect(audio.samplesPending).toBe(0);expect(audio.sampleFallbacks).toBe(0);expect(audio.decodedBytes).toBeLessThan(15e6);expect(audio.peakVoices).toBeLessThanOrEqual(12);
+  const audio=await page.evaluate(()=>window.__PIXEL__!.audio());expect(audio.failedAssets).toBe(0);expect(audio.samplesPending).toBe(0);expect(audio.sampleFallbacks).toBe(0);expect(audio.decodedBytes).toBeLessThan(26e6);expect(audio.peakVoices).toBeLessThanOrEqual(12);
   await page.keyboard.press('Escape');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);
-  for(let i=0;i<3;i++){await page.evaluate(()=>window.__PIXEL__!.restartScene());await page.waitForFunction(()=>window.__PIXEL__?.world.status==='menu'&&window.__PIXEL__?.audio().samplesLoaded===27);expect(await page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);}
+  for(let i=0;i<3;i++){await page.evaluate(()=>window.__PIXEL__!.restartScene());await page.waitForFunction(()=>window.__PIXEL__?.world.status==='menu'&&window.__PIXEL__?.audio().samplesLoaded===36);expect(await page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);}
   expect(requests).toHaveLength(11);expect(errors).toEqual([]);writeFileSync(`${directory}/evidence-${width}.json`,JSON.stringify({audio,requests:requests.length,errors,realMenu:true,realUltimate:true,sceneRestarts:3},null,2));
 });
 test('missing local samples use immediate procedural fallback and never replay a deferred event',async({page})=>{

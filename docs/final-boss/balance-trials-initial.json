@@ -1,0 +1,5092 @@
+[
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 140.19999999999763,
+    "hp": 102,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1235.9999999999673,
+        "hp": 172
+      },
+      {
+        "phase": "phase2",
+        "at": 1259.4999999999459,
+        "hp": 172
+      },
+      {
+        "phase": "phase3",
+        "at": 1306.599999999903,
+        "hp": 130
+      },
+      {
+        "phase": "defeated",
+        "at": 1340.1499999998725,
+        "hp": 102
+      }
+    ],
+    "damage": [
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1276.94999999993,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1288.999999999919,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1301.049999999908,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1314.7999999998956,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1338.8499999998737,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 32,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 0,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "lightning",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 140.19999999999763,
+    "hp": 102,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1235.9999999999673,
+        "hp": 172
+      },
+      {
+        "phase": "phase2",
+        "at": 1259.4999999999459,
+        "hp": 172
+      },
+      {
+        "phase": "phase3",
+        "at": 1306.599999999903,
+        "hp": 130
+      },
+      {
+        "phase": "defeated",
+        "at": 1340.1499999998725,
+        "hp": 102
+      }
+    ],
+    "damage": [
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1276.94999999993,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1288.999999999919,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1301.049999999908,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1314.7999999998956,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1338.8499999998737,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 32,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 0,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 144.19999999999854,
+    "hp": 144,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1237.1499999999662,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1260.7999999999447,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1310.2999999998997,
+        "hp": 158
+      },
+      {
+        "phase": "defeated",
+        "at": 1344.149999999869,
+        "hp": 144
+      }
+    ],
+    "damage": [
+      {
+        "at": 1227.8999999999746,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1266.1999999999398,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1298.2999999999106,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1318.4999999998922,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 33,
+    "diagnostics": {
+      "combos": 8,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "frost",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 144.19999999999854,
+    "hp": 144,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1237.1499999999662,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1260.7999999999447,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1310.2999999998997,
+        "hp": 158
+      },
+      {
+        "phase": "defeated",
+        "at": 1344.149999999869,
+        "hp": 144
+      }
+    ],
+    "damage": [
+      {
+        "at": 1227.8999999999746,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1266.1999999999398,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1298.2999999999106,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1318.4999999998922,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 33,
+    "diagnostics": {
+      "combos": 8,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 132.24999999999582,
+    "hp": 48,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1232.8499999999701,
+        "hp": 172
+      },
+      {
+        "phase": "phase2",
+        "at": 1254.94999999995,
+        "hp": 172
+      },
+      {
+        "phase": "phase3",
+        "at": 1298.1499999999107,
+        "hp": 130
+      },
+      {
+        "phase": "defeated",
+        "at": 1332.1999999998798,
+        "hp": 48
+      }
+    ],
+    "damage": [
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1272.3999999999342,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1284.4499999999232,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1296.4999999999122,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1306.3499999999033,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1318.3999999998923,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1321.4999999998895,
+        "amount": 54,
+        "attack": "approach"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 30,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 2,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 71.84999999999806,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.2999999999652,
+        "hp": 158
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.6499999999567,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1250.499999999954,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1255.6999999999493,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1258.4999999999468,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1263.749999999942,
+        "amount": 28,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1266.4999999999395,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1271.7999999999347,
+        "amount": 2,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 4,
+      "orbs": 12,
+      "blocked": 0,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 147.9999999999994,
+    "hp": 172,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1238.0999999999653,
+        "hp": 186
+      },
+      {
+        "phase": "phase2",
+        "at": 1261.9999999999436,
+        "hp": 186
+      },
+      {
+        "phase": "phase3",
+        "at": 1311.8499999998983,
+        "hp": 172
+      },
+      {
+        "phase": "defeated",
+        "at": 1347.9499999998654,
+        "hp": 172
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1267.3999999999387,
+        "amount": 14,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 25,
+      "orbs": 6,
+      "blocked": 1,
+      "gates": 2,
+      "delays": 8,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "moderate",
+      "ultimate": "fire",
+      "choices": 35,
+      "stats": {
+        "damage": 1.5,
+        "cooldown": 0.7290000000000001,
+        "projectiles": 2,
+        "area": 1.2999999999999998,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 132.24999999999582,
+    "hp": 48,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1232.8499999999701,
+        "hp": 172
+      },
+      {
+        "phase": "phase2",
+        "at": 1254.94999999995,
+        "hp": 172
+      },
+      {
+        "phase": "phase3",
+        "at": 1298.1499999999107,
+        "hp": 130
+      },
+      {
+        "phase": "defeated",
+        "at": 1332.1999999998798,
+        "hp": 48
+      }
+    ],
+    "damage": [
+      {
+        "at": 1219.899999999982,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1231.899999999971,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1272.3999999999342,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1284.4499999999232,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1296.4999999999122,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1306.3499999999033,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1318.3999999998923,
+        "amount": 14,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1321.4999999998895,
+        "amount": 54,
+        "attack": "approach"
+      }
+    ],
+    "ultimates": 4,
+    "blinks": 30,
+    "diagnostics": {
+      "combos": 10,
+      "meteors": 20,
+      "orbs": 6,
+      "blocked": 2,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 50.64999999999926,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.0499999999881,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1224.249999999978,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1239.9499999999637,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1250.599999999954,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1229.649999999973,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1248.1499999999562,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 14,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 7,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "lightning",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 50.64999999999926,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.0499999999881,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1224.249999999978,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1239.9499999999637,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1250.599999999954,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1229.649999999973,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1248.1499999999562,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 14,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 7,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 54.64999999999903,
+    "hp": 196,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.0499999999881,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1224.3499999999779,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1244.2499999999598,
+        "hp": 196
+      },
+      {
+        "phase": "defeated",
+        "at": 1254.5999999999503,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1229.749999999973,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 15,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 17,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "frost",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 54.64999999999903,
+    "hp": 196,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.0499999999881,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1224.3499999999779,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1244.2499999999598,
+        "hp": 196
+      },
+      {
+        "phase": "defeated",
+        "at": 1254.5999999999503,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1229.749999999973,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 15,
+    "diagnostics": {
+      "combos": 2,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 17,
+      "gates": 2,
+      "delays": 7,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 47.79999999999942,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1212.049999999989,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1223.7999999999784,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1238.8499999999647,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1247.7499999999566,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1229.1999999999734,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.0499999999572,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 13,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 6,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 55.04999999999901,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1222.8499999999792,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1223.7499999999784,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1225.7499999999766,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1230.849999999972,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1231.7499999999711,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1233.7499999999693,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1238.8999999999646,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1241.749999999962,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1246.9499999999573,
+        "amount": 18,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1254.99999999995,
+        "amount": 4,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 5,
+      "orbs": 15,
+      "blocked": 9,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 53.24999999999911,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1213.5499999999877,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1227.1499999999753,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1243.1999999999607,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1253.1999999999516,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1232.5499999999704,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1251.3999999999533,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 4,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 5,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "typical",
+      "ultimate": "fire",
+      "choices": 53,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.4499999999999997,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 47.79999999999942,
+    "hp": 188,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1212.049999999989,
+        "hp": 196
+      },
+      {
+        "phase": "phase2",
+        "at": 1223.7999999999784,
+        "hp": 196
+      },
+      {
+        "phase": "phase3",
+        "at": 1238.8499999999647,
+        "hp": 192
+      },
+      {
+        "phase": "defeated",
+        "at": 1247.7499999999566,
+        "hp": 188
+      }
+    ],
+    "damage": [
+      {
+        "at": 1207.8999999999928,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1229.1999999999734,
+        "amount": 4,
+        "attack": "swordActive"
+      },
+      {
+        "at": 1247.0499999999572,
+        "amount": 4,
+        "attack": "swordActive"
+      }
+    ],
+    "ultimates": 2,
+    "blinks": 13,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 6,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 39.94999999999987,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.3499999999906,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1221.6499999999803,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1233.8499999999692,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1239.8999999999637,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 11,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 10,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "lightning",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 39.94999999999987,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.3499999999906,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1221.6499999999803,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1233.8499999999692,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1239.8999999999637,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 11,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 10,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 41.54999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1212.2499999999889,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.7499999999793,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.4999999999686,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4999999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 11,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 16,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "frost",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 41.54999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1212.2499999999889,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.7499999999793,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.4999999999686,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4999999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 11,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 16,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 42,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 37.699999999999996,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1209.849999999991,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1219.799999999982,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1231.3999999999714,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1237.6499999999658,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 10,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 9,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "afk",
+    "outcome": "defeat",
+    "duration": 68.59999999999825,
+    "hp": 0,
+    "bossHp": 25200,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.99999999999,
+        "hp": 200
+      }
+    ],
+    "damage": [
+      {
+        "at": 1220.2999999999815,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1221.1999999999807,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1228.2999999999743,
+        "amount": 32,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1235.199999999968,
+        "amount": 2,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1237.1999999999662,
+        "amount": 8,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1239.1999999999643,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1244.3999999999596,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1247.199999999957,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1252.4499999999523,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1255.1999999999498,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1260.499999999945,
+        "amount": 8,
+        "attack": "meteorCast"
+      },
+      {
+        "at": 1263.1999999999425,
+        "amount": 24,
+        "attack": "ritualChannel"
+      },
+      {
+        "at": 1268.5499999999377,
+        "amount": 6,
+        "attack": "meteorCast"
+      }
+    ],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 1,
+      "meteors": 7,
+      "orbs": 21,
+      "blocked": 29,
+      "gates": 1,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "move",
+    "outcome": "victory",
+    "duration": 41.49999999999978,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1210.5999999999904,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1222.5999999999794,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1234.099999999969,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1241.4499999999623,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 0,
+    "blinks": 0,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 3,
+      "blocked": 8,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  },
+  {
+    "seed": 713,
+    "build": {
+      "profile": "high",
+      "ultimate": "fire",
+      "choices": 59,
+      "stats": {
+        "damage": 2.25,
+        "cooldown": 0.5904900000000002,
+        "projectiles": 4,
+        "area": 1.5999999999999996,
+        "pickup": 55
+      },
+      "hp": 200,
+      "speed": 189
+    },
+    "pilot": "full",
+    "outcome": "victory",
+    "duration": 37.699999999999996,
+    "hp": 200,
+    "bossHp": 0,
+    "phases": [
+      {
+        "phase": "inactive",
+        "at": 1199.95,
+        "hp": 200
+      },
+      {
+        "phase": "intro",
+        "at": 1200,
+        "hp": 200
+      },
+      {
+        "phase": "phase1",
+        "at": 1202.4999999999977,
+        "hp": 200
+      },
+      {
+        "phase": "ritual1",
+        "at": 1209.849999999991,
+        "hp": 200
+      },
+      {
+        "phase": "phase2",
+        "at": 1219.799999999982,
+        "hp": 200
+      },
+      {
+        "phase": "phase3",
+        "at": 1231.3999999999714,
+        "hp": 200
+      },
+      {
+        "phase": "defeated",
+        "at": 1237.6499999999658,
+        "hp": 200
+      }
+    ],
+    "damage": [],
+    "ultimates": 2,
+    "blinks": 10,
+    "diagnostics": {
+      "combos": 3,
+      "meteors": 10,
+      "orbs": 2,
+      "blocked": 9,
+      "gates": 2,
+      "delays": 0,
+      "missingSupports": 0
+    },
+    "repeat": false
+  }
+]

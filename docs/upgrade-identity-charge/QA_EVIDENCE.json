@@ -1,0 +1,2768 @@
+{
+  "hardware": {
+    "cpu": "AMD Ryzen 5 7500F 6-Core Processor             ",
+    "logicalCpus": 12,
+    "ramGiB": 32,
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.16.0"
+  },
+  "performance": [
+    {
+      "hero": "Mage",
+      "width": 1280,
+      "beforeFps": 59.57331848144531,
+      "afterFps": 59.76081848144531,
+      "beforeP95Ms": 0.7999999821186066,
+      "afterP95Ms": 0.800000011920929,
+      "samples": [
+        {
+          "fps": 55.75,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 75,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 156,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 8,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 1,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 56.8125,
+          "updateMs": 0.9000000059604645,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 1,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 156,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 13,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 1,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.609375,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 24,
+          "orbs": 0,
+          "effects": 81,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 180,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 18,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 24,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.20703125,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 24,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 180,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 22,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 25,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.6552734375,
+          "updateMs": 0.800000011920929,
+          "enemies": 150,
+          "projectiles": 17,
+          "orbs": 0,
+          "effects": 1,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 173,
+          "pooledSprites": 19,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 27,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 36,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.241455078125,
+          "updateMs": 0.4000000059604645,
+          "enemies": 150,
+          "projectiles": 35,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 191,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 32,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 36,
+            "effects": 96
+          },
+          "impacts": 7,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.68109130859375,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 25,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 181,
+          "pooledSprites": 11,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 37,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 36,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.76081848144531,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 17,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 173,
+          "pooledSprites": 19,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 42,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 36,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.820613861083984,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 42,
+          "orbs": 0,
+          "effects": 1,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 198,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 46,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.86546039581299,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 196,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 51,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.14909529685974,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 24,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 180,
+          "pooledSprites": 18,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 56,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.111821472644806,
+          "updateMs": 0.7999999821186066,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 96,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 196,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 61,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "hero": "Mage",
+      "width": 390,
+      "beforeFps": 59.84954833984375,
+      "afterFps": 59.70501708984375,
+      "beforeP95Ms": 0.699999988079071,
+      "afterP95Ms": 0.7000000178813934,
+      "samples": [
+        {
+          "fps": 57,
+          "updateMs": 1,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 82,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 156,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 8,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 1,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.75,
+          "updateMs": 0.800000011920929,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 156,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 13,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 1,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.3125,
+          "updateMs": 0.7000000178813934,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 88,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 18,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.734375,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 22,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.30078125,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 3,
+          "orbs": 0,
+          "effects": 1,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 159,
+          "pooledSprites": 38,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 27,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.4755859375,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 29,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 185,
+          "pooledSprites": 12,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 32,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 7,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.606689453125,
+          "updateMs": 0.4000000059604645,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 17,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 37,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.70501708984375,
+          "updateMs": 0.3999999761581421,
+          "enemies": 150,
+          "projectiles": 13,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 169,
+          "pooledSprites": 28,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 42,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.02876281738281,
+          "updateMs": 0.4000000059604645,
+          "enemies": 150,
+          "projectiles": 32,
+          "orbs": 0,
+          "effects": 4,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 188,
+          "pooledSprites": 9,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 47,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.02157211303711,
+          "updateMs": 0.4000000059604645,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 1,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 196,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 51,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.01617908477783,
+          "updateMs": 0.6000000238418579,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 56,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.012134313583374,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 96,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 196,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 61,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "hero": "Warrior",
+      "width": 1280,
+      "beforeFps": 59.962890625,
+      "afterFps": 59.29920959472656,
+      "beforeP95Ms": 0.800000011920929,
+      "afterP95Ms": 0.9000000059604645,
+      "samples": [
+        {
+          "fps": 54.75,
+          "updateMs": 0.9000000059604645,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 95,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 156,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 8,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 0,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 56.0625,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 46,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 156,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 13,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 0,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.046875,
+          "updateMs": 0.5999999940395355,
+          "enemies": 150,
+          "projectiles": 23,
+          "orbs": 0,
+          "effects": 19,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 179,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 17,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 25,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.78515625,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 21,
+          "orbs": 0,
+          "effects": 76,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 177,
+          "pooledSprites": 4,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 22,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 25,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.3388671875,
+          "updateMs": 0.9000000059604645,
+          "enemies": 150,
+          "projectiles": 17,
+          "orbs": 0,
+          "effects": 70,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 173,
+          "pooledSprites": 21,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 27,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 38,
+            "effects": 96
+          },
+          "impacts": 1,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.754150390625,
+          "updateMs": 0.8999999761581421,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 92,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 196,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 32,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.06561279296875,
+          "updateMs": 0.5999999940395355,
+          "enemies": 150,
+          "projectiles": 25,
+          "orbs": 0,
+          "effects": 38,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 181,
+          "pooledSprites": 15,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 36,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 9,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.29920959472656,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 17,
+          "orbs": 0,
+          "effects": 72,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 173,
+          "pooledSprites": 23,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 41,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.72440719604492,
+          "updateMs": 0.5999999940395355,
+          "enemies": 150,
+          "projectiles": 41,
+          "orbs": 0,
+          "effects": 40,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 197,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 46,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.04330539703369,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 24,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 195,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 51,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 1,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.03247904777527,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 24,
+          "orbs": 0,
+          "effects": 96,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 180,
+          "pooledSprites": 17,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 56,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.02435928583145,
+          "updateMs": 0.7000000178813934,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 20,
+          "bosses": 3,
+          "chunks": 48,
+          "sprites": 196,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 61,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "hero": "Warrior",
+      "width": 390,
+      "beforeFps": 59.69224548339844,
+      "afterFps": 59.96916198730469,
+      "beforeP95Ms": 0.9000000059604645,
+      "afterP95Ms": 0.800000011920929,
+      "samples": [
+        {
+          "fps": 56.25,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 45,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 156,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 8,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 0,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.1875,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 0,
+          "orbs": 0,
+          "effects": 59,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 156,
+          "pooledSprites": 0,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 13,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 0,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 57.890625,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 23,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 17,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 58.66796875,
+          "updateMs": 0.800000011920929,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 96,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 1,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 22,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 40,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.0009765625,
+          "updateMs": 0.7000000178813934,
+          "enemies": 150,
+          "projectiles": 2,
+          "orbs": 0,
+          "effects": 56,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 158,
+          "pooledSprites": 39,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 27,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 4,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.500732421875,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 30,
+          "orbs": 0,
+          "effects": 0,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 186,
+          "pooledSprites": 11,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 32,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 41,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.62554931640625,
+          "updateMs": 0.5,
+          "enemies": 150,
+          "projectiles": 39,
+          "orbs": 0,
+          "effects": 15,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 195,
+          "pooledSprites": 3,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 37,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.96916198730469,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 11,
+          "orbs": 0,
+          "effects": 77,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 167,
+          "pooledSprites": 31,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 41,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 6,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.976871490478516,
+          "updateMs": 0.7000000178813934,
+          "enemies": 150,
+          "projectiles": 32,
+          "orbs": 0,
+          "effects": 45,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 188,
+          "pooledSprites": 10,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 46,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 59.98265361785889,
+          "updateMs": 0.699999988079071,
+          "enemies": 150,
+          "projectiles": 40,
+          "orbs": 0,
+          "effects": 40,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 196,
+          "pooledSprites": 2,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 51,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 1,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.236990213394165,
+          "updateMs": 0.5999999940395355,
+          "enemies": 150,
+          "projectiles": 15,
+          "orbs": 0,
+          "effects": 96,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 171,
+          "pooledSprites": 27,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 56,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 3,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fps": 60.177742660045624,
+          "updateMs": 0.5999999940395355,
+          "enemies": 150,
+          "projectiles": 37,
+          "orbs": 0,
+          "effects": 73,
+          "bosses": 3,
+          "chunks": 30,
+          "sprites": 193,
+          "pooledSprites": 5,
+          "guardians": 3,
+          "artifacts": {
+            "items": 0,
+            "allocated": 0
+          },
+          "radar": {
+            "updates": 61,
+            "markers": 156,
+            "listeners": 1
+          },
+          "loot": {
+            "items": 0,
+            "chests": 0,
+            "buffs": 0,
+            "trail": 0,
+            "allocatedItems": 0,
+            "allocatedChests": 0
+          },
+          "allocations": {
+            "orbs": 0,
+            "projectiles": 42,
+            "effects": 96
+          },
+          "impacts": 0,
+          "zones": 0,
+          "states": 3,
+          "clock": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "evidence": [
+        {
+          "ids": [
+            "rank-fireball",
+            "rank-frost",
+            "rank-lightning"
+          ],
+          "colors": [
+            {
+              "family": "fireball",
+              "color": "rgb(240, 82, 82)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.654724 0.177234 0.0797688 / 0.335272) 0px 0px 17.1163px 0px",
+              "rankContrast": 9.489212021586765
+            },
+            {
+              "family": "frost",
+              "color": "rgb(217, 243, 247)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.85098 0.952941 0.968627 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "lightning",
+              "color": "rgb(69, 143, 255)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.270588 0.560784 1 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-fireball"
+        },
+        {
+          "ids": [
+            "evolve-fireball",
+            "evolve-frost",
+            "evolve-lightning"
+          ],
+          "colors": [
+            {
+              "family": "fireball",
+              "color": "rgb(240, 82, 82)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.654724 0.177234 0.0797688 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "frost",
+              "color": "rgb(217, 243, 247)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.85098 0.952941 0.968627 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "lightning",
+              "color": "rgb(69, 143, 255)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.270588 0.560784 1 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "evolve-frost"
+        },
+        {
+          "ids": [
+            "rank-meteor",
+            "rank-shield",
+            "damage"
+          ],
+          "colors": [
+            {
+              "family": "meteor",
+              "color": "rgb(245, 158, 70)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.771643 0.0663702 0.128649 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "shield",
+              "color": "rgb(181, 140, 250)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.709804 0.54902 0.980392 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "general",
+              "color": "rgb(165, 180, 195)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.647059 0.705882 0.764706 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "damage"
+        },
+        {
+          "ids": [
+            "evolve-meteor",
+            "evolve-shield",
+            "mobility-shockwave"
+          ],
+          "colors": [
+            {
+              "family": "meteor",
+              "color": "rgb(245, 158, 70)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.771643 0.0663702 0.128649 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "shield",
+              "color": "rgb(181, 140, 250)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.709804 0.54902 0.980392 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "mobility",
+              "color": "rgb(155, 203, 197)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.607843 0.796078 0.772549 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "evolve-meteor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "evidence": [
+        {
+          "ids": [
+            "rank-fireball",
+            "rank-frost",
+            "rank-lightning"
+          ],
+          "colors": [
+            {
+              "family": "fireball",
+              "color": "rgb(240, 82, 82)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.941176 0.321569 0.321569 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "frost",
+              "color": "rgb(217, 243, 247)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.946441 -0.0245012 -0.0129457 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "lightning",
+              "color": "rgb(69, 143, 255)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.270588 0.560784 1 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-fireball"
+        },
+        {
+          "ids": [
+            "evolve-fireball",
+            "evolve-frost",
+            "evolve-lightning"
+          ],
+          "colors": [
+            {
+              "family": "fireball",
+              "color": "rgb(240, 82, 82)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.654724 0.177234 0.0797688 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "frost",
+              "color": "rgb(217, 243, 247)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.85098 0.952941 0.968627 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "lightning",
+              "color": "rgb(69, 143, 255)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.270588 0.560784 1 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "evolve-frost"
+        },
+        {
+          "ids": [
+            "rank-meteor",
+            "rank-shield",
+            "damage"
+          ],
+          "colors": [
+            {
+              "family": "meteor",
+              "color": "rgb(245, 158, 70)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.771643 0.0663702 0.128649 / 0.266207) 0px 0px 12.9724px 0px",
+              "rankContrast": 11.018453543180353
+            },
+            {
+              "family": "shield",
+              "color": "rgb(181, 140, 250)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.723197 0.0787276 -0.138456 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "general",
+              "color": "rgb(165, 180, 195)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.647059 0.705882 0.764706 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "damage"
+        },
+        {
+          "ids": [
+            "evolve-meteor",
+            "evolve-shield",
+            "mobility-shockwave"
+          ],
+          "colors": [
+            {
+              "family": "meteor",
+              "color": "rgb(245, 158, 70)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.771643 0.0663702 0.128649 / 0.157652) 0px 0px 12.9822px 0px",
+              "rankContrast": 11.018453543180353
+            },
+            {
+              "family": "shield",
+              "color": "rgb(181, 140, 250)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.723197 0.0787276 -0.138456 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "mobility",
+              "color": "rgb(155, 203, 197)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.607843 0.796078 0.772549 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "evolve-meteor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "evidence": [
+        {
+          "ids": [
+            "rank-cleave",
+            "rank-whirlwind",
+            "rank-slam"
+          ],
+          "colors": [
+            {
+              "family": "cleave",
+              "color": "rgb(255, 208, 145)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.884395 0.0261253 0.0921234 / 0.296877) 0px 0px 14.8126px 0px",
+              "rankContrast": 10.304237355824965
+            },
+            {
+              "family": "whirlwind",
+              "color": "rgb(129, 156, 174)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.505882 0.611765 0.682353 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "slam",
+              "color": "rgb(216, 180, 126)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.847059 0.705882 0.494118 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-cleave"
+        },
+        {
+          "ids": [
+            "rank-blades",
+            "rank-iron",
+            "mobility-impact-dash"
+          ],
+          "colors": [
+            {
+              "family": "blades",
+              "color": "rgb(224, 237, 240)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.937238 -0.012051 -0.00786495 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "iron",
+              "color": "rgb(124, 156, 172)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.486275 0.611765 0.67451 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "mobility",
+              "color": "rgb(155, 203, 197)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.607843 0.796078 0.772549 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-iron"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "evidence": [
+        {
+          "ids": [
+            "rank-cleave",
+            "rank-whirlwind",
+            "rank-slam"
+          ],
+          "colors": [
+            {
+              "family": "cleave",
+              "color": "rgb(255, 208, 145)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 1 0.815686 0.568627 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "whirlwind",
+              "color": "rgb(129, 156, 174)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.678288 -0.0217096 -0.0339619 / 0.296771) 0px 0px 14.8062px 0px",
+              "rankContrast": 10.41331565895946
+            },
+            {
+              "family": "slam",
+              "color": "rgb(216, 180, 126)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.847059 0.705882 0.494118 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-cleave"
+        },
+        {
+          "ids": [
+            "rank-blades",
+            "rank-iron",
+            "mobility-impact-dash"
+          ],
+          "colors": [
+            {
+              "family": "blades",
+              "color": "rgb(224, 237, 240)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, oklab(0.937238 -0.012051 -0.00786495 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "iron",
+              "color": "rgb(124, 156, 172)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.486275 0.611765 0.67451 / 0.25) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            },
+            {
+              "family": "mobility",
+              "color": "rgb(155, 203, 197)",
+              "widths": [
+                "3px",
+                "3px",
+                "3px",
+                "3px"
+              ],
+              "glow": "rgb(17, 29, 45) 0px 0px 0px 3px inset, rgb(8, 15, 29) 0px 4px 0px 0px, color(srgb 0.607843 0.796078 0.772549 / 0.12) 0px 0px 12px 0px",
+              "rankContrast": 11.426787451397674
+            }
+          ],
+          "selected": "rank-iron"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "charges": [
+    {
+      "dodges": [
+        {
+          "mode": "walk",
+          "hp": 100,
+          "max": 100,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 0,
+          "invulnerableUntil": 0
+        },
+        {
+          "mode": "Blink",
+          "hp": 100,
+          "max": 100,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 1,
+          "invulnerableUntil": 0
+        },
+        {
+          "mode": "Dash",
+          "hp": 150,
+          "max": 150,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 1,
+          "invulnerableUntil": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "dodges": [
+        {
+          "mode": "walk",
+          "hp": 100,
+          "max": 100,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 0,
+          "invulnerableUntil": 0
+        },
+        {
+          "mode": "Blink",
+          "hp": 100,
+          "max": 100,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 1,
+          "invulnerableUntil": 0
+        },
+        {
+          "mode": "Dash",
+          "hp": 150,
+          "max": 150,
+          "direction": {
+            "x": 0,
+            "y": 1
+          },
+          "mobility": 1,
+          "invulnerableUntil": 0
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

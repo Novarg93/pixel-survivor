@@ -1,0 +1,265 @@
+{
+  "commit": "e9934b00b2705fe1eaa003a46399585e02cd2255",
+  "definitions": {
+    "guardian": {
+      "hp": 5400,
+      "speed": 0,
+      "damage": 20,
+      "score": 500,
+      "xp": 40,
+      "radius": 17,
+      "color": 15911794
+    },
+    "grunt": {
+      "hp": 22,
+      "speed": 38,
+      "damage": 10,
+      "score": 10,
+      "xp": 5,
+      "radius": 10,
+      "color": 9943413
+    },
+    "runner": {
+      "hp": 16,
+      "speed": 68,
+      "damage": 8,
+      "score": 15,
+      "xp": 7,
+      "radius": 8,
+      "color": 14130021
+    },
+    "tank": {
+      "hp": 105,
+      "speed": 27,
+      "damage": 18,
+      "score": 30,
+      "xp": 16,
+      "radius": 15,
+      "color": 9151138
+    },
+    "caster": {
+      "hp": 42,
+      "speed": 32,
+      "damage": 12,
+      "score": 25,
+      "xp": 12,
+      "radius": 10,
+      "color": 12029898
+    },
+    "rusher": {
+      "hp": 50,
+      "speed": 43,
+      "damage": 14,
+      "score": 25,
+      "xp": 10,
+      "radius": 10,
+      "color": 14787954
+    },
+    "splitter": {
+      "hp": 65,
+      "speed": 34,
+      "damage": 12,
+      "score": 35,
+      "xp": 14,
+      "radius": 12,
+      "color": 8371628
+    },
+    "charger": {
+      "hp": 4500,
+      "speed": 24,
+      "damage": 28,
+      "score": 1000,
+      "xp": 100,
+      "radius": 23,
+      "color": 12745822
+    },
+    "sorcerer": {
+      "hp": 5700,
+      "speed": 18,
+      "damage": 22,
+      "score": 1000,
+      "xp": 120,
+      "radius": 22,
+      "color": 10849235
+    },
+    "eclipse": {
+      "hp": 7200,
+      "speed": 26,
+      "damage": 24,
+      "score": 1500,
+      "xp": 150,
+      "radius": 24,
+      "color": 9159893
+    }
+  },
+  "mobility": {
+    "wallDuration": 2,
+    "wallTick": 0.5,
+    "wallCap": 2,
+    "wallSlow": 0.6,
+    "slowRefresh": 0.15,
+    "flameDamage": [
+      12,
+      18,
+      24
+    ],
+    "flameWidth": [
+      10,
+      12,
+      14
+    ],
+    "slowingWidth": [
+      12,
+      18,
+      24
+    ],
+    "sprintSpeed": [
+      1.3,
+      1.35,
+      1.4
+    ],
+    "sprintDuration": 2,
+    "cleaveDamage": [
+      36,
+      48,
+      60
+    ],
+    "cleaveWidth": [
+      12,
+      14,
+      16
+    ],
+    "absorbFraction": [
+      0.25,
+      0.3,
+      0.35
+    ],
+    "absorbDuration": 3,
+    "berserkDamage": [
+      1.25,
+      1.3,
+      1.35
+    ],
+    "berserkCooldown": [
+      0.75,
+      0.7,
+      0.65
+    ],
+    "berserkDuration": 2
+  },
+  "healthBar": {
+    "width": 34,
+    "height": 6,
+    "offsetY": -33,
+    "depth": 11,
+    "hpColor": 7851914,
+    "absorbColor": 12185343
+  },
+  "hp": [
+    {
+      "minute": 3,
+      "enemies": {
+        "charger": {
+          "hp": 5107.5,
+          "maxHp": 5107.5
+        },
+        "sorcerer": {
+          "hp": 6469.5,
+          "maxHp": 6469.5
+        },
+        "eclipse": {
+          "hp": 8172,
+          "maxHp": 8172
+        },
+        "guardian": {
+          "hp": 6129,
+          "maxHp": 6129
+        }
+      }
+    },
+    {
+      "minute": 5,
+      "enemies": {
+        "charger": {
+          "hp": 5512.5,
+          "maxHp": 5512.5
+        },
+        "sorcerer": {
+          "hp": 6982.500000000001,
+          "maxHp": 6982.500000000001
+        },
+        "eclipse": {
+          "hp": 8820,
+          "maxHp": 8820
+        },
+        "guardian": {
+          "hp": 6615.000000000001,
+          "maxHp": 6615.000000000001
+        }
+      }
+    },
+    {
+      "minute": 7,
+      "enemies": {
+        "charger": {
+          "hp": 5917.5,
+          "maxHp": 5917.5
+        },
+        "sorcerer": {
+          "hp": 7495.5,
+          "maxHp": 7495.5
+        },
+        "eclipse": {
+          "hp": 9468,
+          "maxHp": 9468
+        },
+        "guardian": {
+          "hp": 7101,
+          "maxHp": 7101
+        }
+      }
+    },
+    {
+      "minute": 9,
+      "enemies": {
+        "charger": {
+          "hp": 6322.5,
+          "maxHp": 6322.5
+        },
+        "sorcerer": {
+          "hp": 8008.5,
+          "maxHp": 8008.5
+        },
+        "eclipse": {
+          "hp": 10116,
+          "maxHp": 10116
+        },
+        "guardian": {
+          "hp": 7587,
+          "maxHp": 7587
+        }
+      }
+    },
+    {
+      "minute": 10,
+      "enemies": {
+        "charger": {
+          "hp": 6525,
+          "maxHp": 6525
+        },
+        "sorcerer": {
+          "hp": 8265,
+          "maxHp": 8265
+        },
+        "eclipse": {
+          "hp": 10440,
+          "maxHp": 10440
+        },
+        "guardian": {
+          "hp": 7830,
+          "maxHp": 7830
+        }
+      }
+    }
+  ]
+}

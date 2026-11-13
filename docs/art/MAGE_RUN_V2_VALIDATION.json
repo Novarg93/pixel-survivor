@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "deterministicOutputs": 6,
+  "protectedFiles": 79,
+  "unit": {
+    "files": 118,
+    "tests": 973,
+    "workers": 2
+  },
+  "devE2E": 34,
+  "productionE2E": 9,
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "build": "PASS",
+  "fullGameE2ESuiteRun": false,
+  "outputs": {
+    "public/assets/hd/mage-run-v2/atlas.png": "32cac7de563b6591af0c54ab144a455a6df8519f89704054d3d267c0a790e66e",
+    "public/assets/hd/mage-run-v2/atlas.json": "3b4e7f29fae12eb0b8a29197915c425020e751d6f7054a8bcdbb33a78b935d91",
+    "src/game/art/mageRunManifestV2.json": "9aee2d664d5fedb6f54808eae7c4dd67c15b2fa023ecb7db25a6022d83a61d97",
+    "public/assets/hd/mage-moving-cast-v2/upper.png": "75d4a7b9292ef500e049d342ea57b9fb8cc2877e1249530231fc8e8e3cd2a69d",
+    "public/assets/hd/mage-moving-cast-v2/upper.json": "ab87d482337a5f56c7ac7c0a56b44ad264ecbbb76f01f43f833d7c22ea18a882",
+    "src/game/art/mageMovingCastManifestV2.json": "f32412c2fc326c817aab64f92f227278005579fb7f045cbd217b9493cd377016"
+  }
+}

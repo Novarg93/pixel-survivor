@@ -1,0 +1,30 @@
+{
+  "mode": "headed Chromium, actual tab switch, no dispatched focus/keyboard events",
+  "events": [
+    {
+      "type": "focus",
+      "trusted": true,
+      "hidden": false
+    },
+    {
+      "type": "blur",
+      "trusted": true,
+      "hidden": false
+    },
+    {
+      "type": "focus",
+      "trusted": true,
+      "hidden": false
+    }
+  ],
+  "resumed": {
+    "x": 6.7455,
+    "y": 0,
+    "mobility": 0
+  },
+  "afterFreshPress": {
+    "x": 15.731099999999984,
+    "y": 0,
+    "mobility": 0
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "geometry": {
+    "center": {
+      "x": 0,
+      "y": 0
+    },
+    "vertices": 0,
+    "meteorCount": 9
+  },
+  "restarts": [
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "objects": 121,
+      "textures": 126,
+      "listeners": {
+        "commands": 1,
+        "snapshots": 1,
+        "metrics": 1
+      },
+      "clock": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": [
+    {
+      "attack": "chargeWindup",
+      "age": 0,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1506322
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.08667000000000001,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1506442
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.17998999999999998,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1505866
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.26333,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1504854
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.3333399999999999,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1505682
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.41666999999999993,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1506278
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.50832,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1505622
+    },
+    {
+      "attack": "chargeWindup",
+      "age": 0.58831,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1504962
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0,
+      "scale": 2,
+      "x": 688.53504,
+      "y": 540,
+      "bytes": 1505086
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.08336000000000005,
+      "scale": 2,
+      "x": 758.5781704411429,
+      "y": 540,
+      "bytes": 1510358
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.18336000000000002,
+      "scale": 2,
+      "x": 842.6030390125715,
+      "y": 540,
+      "bytes": 1507450
+    },
+    {
+      "attack": "chargeTravel",
+      "age": 0.25336000000000003,
+      "scale": 2,
+      "x": 901.4204470125715,
+      "y": 540,
+      "bytes": 1506622
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1506418
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.09998999999999995,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1508378
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.16666999999999998,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1506682
+    },
+    {
+      "attack": "chargeBrake",
+      "age": 0.25002000000000013,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1506294
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1530410
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.09997999999999992,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1532258
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.1832899999999998,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1531698
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.26662999999999987,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1532306
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.34995999999999994,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1529422
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.43326999999999977,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1532130
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.5166199999999999,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1532742
+    },
+    {
+      "attack": "swordWindup",
+      "age": 0.5999699999999999,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1529854
+    },
+    {
+      "attack": "swordActive",
+      "age": 0,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1531102
+    },
+    {
+      "attack": "swordActive",
+      "age": 0.1,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1528686
+    },
+    {
+      "attack": "recovery",
+      "age": 0,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1534462
+    },
+    {
+      "attack": "recovery",
+      "age": 0.09668000000000002,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1558258
+    },
+    {
+      "attack": "recovery",
+      "age": 0.16667000000000007,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1545446
+    },
+    {
+      "attack": "recovery",
+      "age": 0.25001000000000007,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1540302
+    },
+    {
+      "attack": "recovery",
+      "age": 0.33334,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1520810
+    },
+    {
+      "attack": "recovery",
+      "age": 0.41668000000000005,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1509222
+    },
+    {
+      "attack": "recovery",
+      "age": 0.51667,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1508718
+    },
+    {
+      "attack": "recovery",
+      "age": 0.5999999999999999,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1508282
+    },
+    {
+      "attack": "recovery",
+      "age": 0.6666699999999999,
+      "scale": 2,
+      "x": 960,
+      "y": 540,
+      "bytes": 1507438
+    }
+  ],
+  "errors": []
+}

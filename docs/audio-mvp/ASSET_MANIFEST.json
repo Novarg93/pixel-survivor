@@ -1,0 +1,271 @@
+{
+  "provenance": {
+    "origin": "Original procedural PCM synthesis and original sparse underscore composed for Pixel Survivor. No third-party samples or melodies.",
+    "usage": "Generated audio is original project content, distributable with Pixel Survivor; no third-party audio attribution required.",
+    "authoring": "src/game/audio/synthesis.ts + catalog.ts",
+    "networkAssets": 0
+  },
+  "rows": [
+    {
+      "id": "click",
+      "seconds": 0.07,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 6176,
+      "peak": 0.36039218306541443,
+      "rms": 0.10333814389537993
+    },
+    {
+      "id": "chime",
+      "seconds": 0.3,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 26460,
+      "peak": 0.5030098557472229,
+      "rms": 0.12774873193065797
+    },
+    {
+      "id": "xp",
+      "seconds": 0.12,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 10584,
+      "peak": 0.4364388585090637,
+      "rms": 0.11886718622431314
+    },
+    {
+      "id": "heal",
+      "seconds": 0.38,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 33516,
+      "peak": 0.5218074917793274,
+      "rms": 0.1299526591855647
+    },
+    {
+      "id": "relic",
+      "seconds": 0.6,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 52920,
+      "peak": 0.5623729228973389,
+      "rms": 0.13305392742313446
+    },
+    {
+      "id": "hurt",
+      "seconds": 0.18,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 15876,
+      "peak": 0.45098164677619934,
+      "rms": 0.08327933034484364
+    },
+    {
+      "id": "death",
+      "seconds": 0.8,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 70560,
+      "peak": 0.47822853922843933,
+      "rms": 0.10305759672110669
+    },
+    {
+      "id": "wind",
+      "seconds": 0.22,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 19404,
+      "peak": 0.4867810308933258,
+      "rms": 0.06482183359824734
+    },
+    {
+      "id": "blink",
+      "seconds": 0.25,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 22052,
+      "peak": 0.4859725534915924,
+      "rms": 0.11626116220065517
+    },
+    {
+      "id": "fire",
+      "seconds": 0.18,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 15876,
+      "peak": 0.32980015873908997,
+      "rms": 0.05866463143574016
+    },
+    {
+      "id": "frost",
+      "seconds": 0.42,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 37044,
+      "peak": 0.5434855222702026,
+      "rms": 0.11879227124529838
+    },
+    {
+      "id": "lightning",
+      "seconds": 0.2,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 17640,
+      "peak": 0.4260762333869934,
+      "rms": 0.05951298897064275
+    },
+    {
+      "id": "meteor",
+      "seconds": 0.5,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 44100,
+      "peak": 0.457674115896225,
+      "rms": 0.0635102403121766
+    },
+    {
+      "id": "shield",
+      "seconds": 0.35,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 30868,
+      "peak": 0.5504776835441589,
+      "rms": 0.1307983341155207
+    },
+    {
+      "id": "metal",
+      "seconds": 0.2,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 17640,
+      "peak": 0.4330272376537323,
+      "rms": 0.09707576472525062
+    },
+    {
+      "id": "stone",
+      "seconds": 0.65,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 57332,
+      "peak": 0.5141982436180115,
+      "rms": 0.11267273372415039
+    },
+    {
+      "id": "threat",
+      "seconds": 0.65,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 57332,
+      "peak": 0.5421192646026611,
+      "rms": 0.09699697819942028
+    },
+    {
+      "id": "laser",
+      "seconds": 0.4,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 35280,
+      "peak": 0.5065362453460693,
+      "rms": 0.11377094477934764
+    },
+    {
+      "id": "dash",
+      "seconds": 0.24,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 21168,
+      "peak": 0.42727115750312805,
+      "rms": 0.06475063161746872
+    },
+    {
+      "id": "whirl",
+      "seconds": 0.5,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 44100,
+      "peak": 0.5047768950462341,
+      "rms": 0.06432733324653009
+    },
+    {
+      "id": "blades",
+      "seconds": 0.4,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 35280,
+      "peak": 0.4795534312725067,
+      "rms": 0.1088632945056034
+    },
+    {
+      "id": "iron",
+      "seconds": 0.5,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 44100,
+      "peak": 0.5499534010887146,
+      "rms": 0.12654793936282105
+    },
+    {
+      "id": "slam",
+      "seconds": 0.42,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural patch",
+      "bytes": 37044,
+      "peak": 0.4585290253162384,
+      "rms": 0.08021289694793202
+    },
+    {
+      "id": "grove",
+      "seconds": 8,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural composition",
+      "bytes": 705600,
+      "peak": 0.30798614025115967,
+      "rms": 0.05317331716519232
+    },
+    {
+      "id": "forest",
+      "seconds": 8,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural composition",
+      "bytes": 705600,
+      "peak": 0.19377653300762177,
+      "rms": 0.04663542832716497
+    },
+    {
+      "id": "underscore",
+      "seconds": 16,
+      "channels": 1,
+      "sampleRate": 22050,
+      "source": "original procedural composition",
+      "bytes": 1411200,
+      "peak": 0.1537867784500122,
+      "rms": 0.04049477554540178
+    }
+  ],
+  "decodedBytes": 3574752
+}

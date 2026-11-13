@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "date": "2026-11-13",
+  "scope": "Read-only audit requested by user; no generation, no estimates, no installs or connection changes.",
+  "generationCalls": 0,
+  "creditsSpent": 0,
+  "connection": {
+    "observedInterface": "ElevenCreative Flows / hosted-style MCP",
+    "classification": "Hosted ElevenCreative/Flows interface, not the deprecated local text_to_sound_effects server",
+    "basis": [
+      "creative_* tools",
+      "cloud flow/node/session/generation records",
+      "existing ElevenCreative node can be read"
+    ],
+    "transportEndpointDirectlyVerified": false,
+    "transportNote": "Client-side connection URL is not exposed by the tools. No claim to have inspected hidden client configuration.",
+    "officialHostedEndpoint": "https://api.elevenlabs.io/v1/mcp"
+  },
+  "toolSchemas": [
+    {
+      "tool": "mcp__elevenlabs__creative_generate_in_flow",
+      "modelIdRequired": true,
+      "sfxV2InEnum": true,
+      "sfxV3InEnum": false,
+      "ttsV3InEnum": true,
+      "hasModelParameters": false,
+      "inputs": "exec tool declaration:\n```ts\ndeclare const tools: { mcp__elevenlabs__creative_generate_in_flow(args: { connect_from?: Array<string>; estimate_only?: boolean; flow_id?: string; generations_count?: number; model_id: <explicit enum; SFX v2 only>; node_type: \"image-generation\" | \"video-generation\" | \"tts\" | \"sfx\" | \"music\" | \"composition\" | \"image-transform\" | \"llm\" | \"avatar\" | \"speech-to-text\" | \"dubbing-audio\" | \"dubbing-video\" | \"voice-changer\" | \"voice-isolator\" | \"voice-creation\" | \"video-to-music\" | \"audio-effects\" | \"studio-video\"; prompt: string; view_state_id?: string; voice_id?: string; }): "
+    },
+    {
+      "tool": "mcp__elevenlabs__creative_add_flow_node",
+      "modelIdRequired": true,
+      "sfxV2InEnum": true,
+      "sfxV3InEnum": false,
+      "ttsV3InEnum": true,
+      "hasModelParameters": true,
+      "inputs": "exec tool declaration:\n```ts\ndeclare const tools: { mcp__elevenlabs__creative_add_flow_node(args: { connect_from?: Array<string>; flow_id?: string; label?: string; model_id: <explicit enum; SFX v2 only>; model_parameters?: { [key: string]: unknown; }; node_type: \"image-generation\" | \"video-generation\" | \"tts\" | \"sfx\" | \"music\" | \"composition\" | \"image-transform\" | \"llm\" | \"avatar\" | \"speech-to-text\" | \"dubbing-audio\" | \"dubbing-video\" | \"voice-changer\" | \"voice-isolator\" | \"voice-creation\" | \"video-to-music\" | \"audio-effects\" | \"studio-video\"; prompt?: string; voice_id?: string; }): "
+    }
+  ],
+  "sfxCatalog": [
+    {
+      "type": "sfx",
+      "display_name": "Sound Effects",
+      "description": "Generate sound effects from text descriptions.",
+      "output_port": {
+        "key": "output",
+        "modality": "audio"
+      },
+      "guidelines": [],
+      "available_models": [
+        {
+          "id": "eleven_text_to_sound_v2",
+          "name": "ElevenLabs Sound Effects v2",
+          "modality": "audio"
+        }
+      ],
+      "default_model_id": "eleven_text_to_sound_v2",
+      "parameters": [
+        {
+          "name": "duration_seconds",
+          "type": "number",
+          "required": false,
+          "min_value": 0.5,
+          "max_value": 30,
+          "number_type": "float"
+        },
+        {
+          "name": "prompt_influence",
+          "type": "number",
+          "required": false,
+          "default": 0.3,
+          "min_value": 0,
+          "max_value": 1,
+          "number_type": "float",
+          "description": "How strongly the prompt guides the output (0=loose, 1=strict)."
+        },
+        {
+          "name": "loop",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Whether to generate a seamlessly looping sound effect."
+        }
+      ]
+    }
+  ],
+  "sfxModelSchema": {
+    "model_id": "eleven_text_to_sound_v2",
+    "model_name": "ElevenLabs Sound Effects v2",
+    "node_type": "sfx",
+    "parameters": [
+      {
+        "name": "duration_seconds",
+        "type": "number",
+        "required": false,
+        "min_value": 0.5,
+        "max_value": 30,
+        "number_type": "float"
+      },
+      {
+        "name": "prompt_influence",
+        "type": "number",
+        "required": false,
+        "default": 0.3,
+        "min_value": 0,
+        "max_value": 1,
+        "number_type": "float",
+        "description": "How strongly the prompt guides the output (0=loose, 1=strict)."
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "required": false,
+        "default": false,
+        "description": "Whether to generate a seamlessly looping sound effect."
+      }
+    ],
+    "input_ports": [
+      {
+        "key": "prompt",
+        "modality": "text",
+        "required": false
+      }
+    ]
+  },
+  "existingNode": {
+    "flowId": "O72m8QPxkxvumqMT7GEW",
+    "nodeId": "pFzu4KbAK3tregUGADhc",
+    "modelId": "eleven_text_to_sound_v2",
+    "parameters": {
+      "duration_seconds": 0.5,
+      "prompt_influence": 0.3,
+      "loop": false
+    },
+    "lastExistingGeneration": [
+      {
+        "id": "CcKZpPEQMvmn6lDRVL9d",
+        "status": "completed",
+        "model_id": "eleven_text_to_sound_v2"
+      }
+    ]
+  },
+  "v3SupportedByCurrentExposedSchema": false,
+  "guaranteedSfxV3ViaCurrentMcp": false,
+  "notes": [
+    "eleven_v3 is a TTS model, not eleven_text_to_sound_v3.",
+    "A family prompting guide heading mentioning v3 does not override the model enum or workspace catalog.",
+    "creative_generate_in_flow has no model_parameters argument; duration/influence/loop require a configured node plus creative_run_flow_nodes.",
+    "automatic prompt improvement is absent from the live SFX parameter schema.",
+    "Plugin directory search returned no plugin entry; this does not negate the live ElevenLabs tools."
+  ],
+  "officialApiAlternative": {
+    "method": "POST",
+    "url": "https://api.elevenlabs.io/v1/sound-generation",
+    "requiredExplicitModel": "eleven_text_to_sound_v3",
+    "bodyExample": {
+      "text": "One quick dry sword swish through empty air.",
+      "model_id": "eleven_text_to_sound_v3",
+      "duration_seconds": 0.5,
+      "prompt_influence": 0.3,
+      "loop": false
+    },
+    "executed": false,
+    "apiDefaultDocumented": "eleven_text_to_sound_v2",
+    "automaticPromptImprovementInPublishedSchema": false
+  },
+  "skillAlternative": {
+    "repository": "https://github.com/elevenlabs/skills",
+    "skill": "sound-effects",
+    "source": "https://github.com/elevenlabs/skills/blob/main/sound-effects/SKILL.md",
+    "explicitV3ExamplesVerified": true,
+    "installed": false,
+    "apiRequestExecuted": false
+  },
+  "sources": [
+    "https://elevenlabs.io/docs/eleven-api/resources/mcp-server",
+    "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert",
+    "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+    "https://elevenlabs.io/docs/changelog/2026/8/22",
+    "https://github.com/elevenlabs/elevenlabs-mcp",
+    "https://github.com/elevenlabs/skills/blob/main/sound-effects/SKILL.md"
+  ]
+}

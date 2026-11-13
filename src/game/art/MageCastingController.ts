@@ -96,7 +96,7 @@ export class MageCastingController {
     }
     this.advance(w.elapsed);
     const u=w.ultimate;
-    if(u.selected && u.sequence>0 && w.elapsed<u.started+CAST_DURATION[`ultimate-${u.selected}`]){
+    if((u.selected==='lightning'||u.selected==='frost'||u.selected==='fire') && u.sequence>0 && w.elapsed<u.started+CAST_DURATION[`ultimate-${u.selected}`]){
       this.directional=undefined;
       const ability: MageGesture=`ultimate-${u.selected}`,fresh=u.sequence!==this.ultimateSequence;
       if(fresh){this.ultimateSequence=u.sequence;this.requested[ability]=(this.requested[ability]??0)+1;}

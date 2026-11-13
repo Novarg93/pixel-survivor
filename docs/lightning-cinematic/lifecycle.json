@@ -1,0 +1,802 @@
+[
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  },
+  {
+    "objects": 81,
+    "textures": 86,
+    "clock": [
+      0,
+      0,
+      0
+    ],
+    "tweens": 0,
+    "listeners": {
+      "commands": 1,
+      "snapshots": 1,
+      "metrics": 1
+    },
+    "native": {
+      "window:keydown:true": 2,
+      "window:keyup:true": 2,
+      "window:keydown:false": 2,
+      "window:keyup:false": 1,
+      "document:visibilitychange:false": 3,
+      "window:blur:false": 1,
+      "window:focus:false": 1,
+      "window:gamepaddisconnected:false": 1,
+      "document:keydown:true": 1
+    },
+    "ultimate": {
+      "lightning": {
+        "active": [],
+        "allocated": 0,
+        "limit": 1181,
+        "segmentLength": 80,
+        "atlasBytes": 10790208
+      },
+      "batches": 9,
+      "fire": {
+        "phase": "idle",
+        "objects": 5,
+        "batches": 4,
+        "radius": 164,
+        "glowWidth": 128,
+        "glowHeight": 128,
+        "glowAlpha": 0,
+        "bodyFlames": 0,
+        "heatColumns": 0,
+        "burning": 0,
+        "bursts": 0,
+        "ring": false
+      },
+      "ground": {
+        "segments": 0,
+        "alpha": 0,
+        "sparks": 0,
+        "radius": 0,
+        "arcs": 0,
+        "geometry": 0,
+        "builds": 0,
+        "pass": 0,
+        "activeCells": []
+      },
+      "frost": {
+        "phase": "idle",
+        "frozen": 0,
+        "batches": 3,
+        "nova": null
+      },
+      "allocatedAsh": 0,
+      "activeAsh": 0,
+      "allocatedAura": 0,
+      "activeAura": 0,
+      "phase": "idle",
+      "casting": false,
+      "dim": 0,
+      "flash": 0,
+      "aura": false,
+      "auraStrength": 0,
+      "sky": false,
+      "skyAlpha": 0,
+      "web": 0
+    }
+  }
+]

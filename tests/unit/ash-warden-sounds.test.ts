@@ -1,3 +1,10 @@
+import {warriorSoundsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorUltimatesIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorBuffsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCleaveIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorSkillsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCombatIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorHeroIntegration} from '../helpers/approvedWardenIntegration';
 import {it,expect} from 'vitest';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -34,7 +41,7 @@ async function setup(){
 }
 it('ships all five original boss WAVs byte-for-byte and preserves every Mage key/gain',()=>{
   const manifest=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8'))as{entries:{id:keyof typeof ASH_WARDEN_SAMPLES;source:string;file:string;sha256:string;analysis:{seconds:number;invalidSamples:number}}[]};
-  expect(manifest.entries).toHaveLength(5);expect(audioSampleIds).toHaveLength(27);expect(new Set(audioSampleIds).size).toBe(27);
+  expect(manifest.entries).toHaveLength(5);expect(audioSampleIds).toHaveLength(36);expect(new Set(audioSampleIds).size).toBe(36);
   for(const e of manifest.entries){expect(readFileSync(e.file).equals(readFileSync(e.source))).toBe(true);expect(sha(readFileSync(e.file))).toBe(e.sha256);expect(audioSampleKey(e.id)).toContain(e.sha256.slice(0,12));expect(e.analysis).toMatchObject({seconds:1,invalidSamples:0});}
   for(const id of mageSampleIds){expect(audioSampleKey(id)).toBe(mageSampleKey(id));expect(audioSampleGain(id)).toBe(mageSampleGain(id));}
   expect(audioSampleForEvent('armageddon.impact')).toBe('mage-meteor');expect(audioSampleForEvent('ultimate.lightning')).toBe('mage-ultimate-release');
@@ -73,6 +80,6 @@ it('limits runtime changes to the explicit user-authorized sound integration',()
   const proof=JSON.parse(readFileSync(`${root}/integration-verification.json`,'utf8'))as{changed:string[];added:string[];currentSHA256:Record<string,string>};
   const walk=(d:string):string[]=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
   expect(proof.changed).toHaveLength(8);expect(proof.added).toHaveLength(7);
-  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added].sort());
+  expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...arcaneShieldIntegration.added,...frostNovaIntegration.added,...fireUltimateIntegration.added,...frostUltimateIntegration.added,...minibossAssetsIntegration.added,...visualCleanupIntegration.added,...warriorHeroIntegration.added,...warriorCombatIntegration.added,...warriorSkillsIntegration.added,...warriorCleaveIntegration.added,...warriorBuffsIntegration.added,...warriorUltimatesIntegration.added,...warriorSoundsIntegration.added].sort());
   for(const f of [...Object.keys(baseline),...proof.added])expect(sha(readFileSync(f)),f).toBe(wardenApprovedHash(f,proof.currentSHA256[f]??baseline[f]!));
 });

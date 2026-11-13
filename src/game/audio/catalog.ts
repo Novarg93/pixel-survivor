@@ -42,6 +42,8 @@ export const SOUND_CATALOG = {
   'final.death':cue('death','sfx',11,.2,.65),
 
   'ultimate.charge':cue('stormCharge','sfx',11,.3,.35), 'ultimate.sky':cue('skyStrike','sfx',11,.3,.8), 'ultimate.overload':cue('stormTension','sfx',11,.3,.26), 'ultimate.lightning':cue('storm','sfx',11,.5,.85), 'ultimate.frost':cue('frostCharge','sfx',11,.5,.35), 'ultimate.frostImpact':cue('frostImpact','sfx',11,.5,.65), 'ultimate.frostSeal':cue('frostSeal','sfx',11,.5,.5), 'ultimate.fire':cue('inferno','sfx',11,.5,.7), 'ultimate.embers':cue('embers','sfx',5,.9,.3),
+  'ultimate.banner':cue('shield','sfx',11,.5,.55), 'ultimate.earthbreaker':cue('slam','sfx',11,.5,.65), 'ultimate.ruin':cue('blades','sfx',11,.5,.65),
+  'groundSlam.cast':cue('slam','sfx',6,.18,.5),
   'ultimate.singe':cue('fire','sfx',5,.16,.18),
   'ui.start': cue('chime', 'ui', 8, .25), 'ui.select': cue('click', 'ui', 3, .1, .35),
   'ui.upgrade': cue('relic', 'ui', 8, .3, .45), 'ui.pause': cue('click', 'ui', 8, .15, .4), 'ui.gameOver': cue('threat', 'ui', 9, 1, .3),
@@ -61,5 +63,5 @@ export const SOUND_CATALOG = {
 } as const;
 export type SoundEvent = keyof typeof SOUND_CATALOG;
 export const AUDIO_BUDGET = { voices: 12, sfx: 10, ui: 2, loops: 5, sampleRate: 22050 } as const;
-export const AUDIO_PROVENANCE = { origin: 'User-uploaded Mage and Ash Warden sounds, original procedural UI/fallback, retained ElevenLabs SFX and five approved music takes for Pixel Survivor.', usage: 'Mage uploads: art/main-hero-mage-v2/sounds; Ash Warden uploads: art/final-boss/sound. Source hashes and audits: art/generated/mage-uploaded-sounds-v1 and art/generated/ash-warden-uploaded-sounds-v1. Existing generation provenance remains archived; music variants are2. Runtime uses local files only.', authoring: 'src/game/audio/synthesis.ts + catalog.ts + samples.ts + musicTracks.ts', networkAssets: 0 } as const;
+export const AUDIO_PROVENANCE = { origin: 'User-uploaded Warrior, Mage and Ash Warden sounds, original procedural UI/fallback, retained ElevenLabs SFX and five approved music takes for Pixel Survivor.', usage: 'Warrior uploads: art/warrior/sounds (docs/verification/warrior-sounds-v1); Mage uploads: art/main-hero-mage-v2/sounds; Ash Warden uploads: art/final-boss/sound. Source hashes and audits: art/generated/mage-uploaded-sounds-v1 and art/generated/ash-warden-uploaded-sounds-v1. Existing generation provenance remains archived; music variants are2. Runtime uses local files only.', authoring: 'src/game/audio/synthesis.ts + catalog.ts + samples.ts + musicTracks.ts', networkAssets: 0 } as const;
 export const AUDIO_ASSET_MANIFEST = [...Object.entries(PATCHES).map(([id, patch]) => ({ id, seconds: patch[0], channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural patch' })), ...(['grove', 'forest', 'underscore'] as const).map(id => ({ id, seconds: id === 'underscore' ? 16 : 8, channels: 1, sampleRate: AUDIO_BUDGET.sampleRate, source: 'original procedural composition' }))];

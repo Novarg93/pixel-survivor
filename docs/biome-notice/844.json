@@ -1,0 +1,1058 @@
+{
+  "rows": [
+    {
+      "phase": "normal",
+      "target": "dusk",
+      "blend": 0.5,
+      "style": {
+        "tint": 16316925,
+        "veilColor": 8491421,
+        "fogColor": 10994893,
+        "veil": 0.0125,
+        "vignette": 0.06,
+        "fog": 0,
+        "glow": 0,
+        "embers": 0
+      },
+      "active": true,
+      "motes": 0,
+      "objects": 8,
+      "layers": [
+        {
+          "name": "atmosphere-veil",
+          "depth": -29,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-vignette",
+          "depth": -28,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-glow-0",
+          "depth": -27,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-glow-1",
+          "depth": -27,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-fog-0",
+          "depth": -26,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-fog-1",
+          "depth": -26,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-fog-2",
+          "depth": -26,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-embers-ash",
+          "depth": -25,
+          "visible": true
+        }
+      ],
+      "terrain": [
+        {
+          "key": "chunk--3--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -384,
+          "y": -256
+        },
+        {
+          "key": "chunk--3--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -384,
+          "y": -128
+        },
+        {
+          "key": "chunk--3-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -384,
+          "y": 0
+        },
+        {
+          "key": "chunk--3-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -384,
+          "y": 128
+        },
+        {
+          "key": "chunk--2--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -256,
+          "y": -256
+        },
+        {
+          "key": "chunk--2--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -256,
+          "y": -128
+        },
+        {
+          "key": "chunk--2-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -256,
+          "y": 0
+        },
+        {
+          "key": "chunk--2-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -256,
+          "y": 128
+        },
+        {
+          "key": "chunk--1--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -128,
+          "y": -256
+        },
+        {
+          "key": "chunk--1--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -128,
+          "y": -128
+        },
+        {
+          "key": "chunk--1-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -128,
+          "y": 0
+        },
+        {
+          "key": "chunk--1-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": -128,
+          "y": 128
+        },
+        {
+          "key": "chunk-0--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 0,
+          "y": -256
+        },
+        {
+          "key": "chunk-0--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 0,
+          "y": -128
+        },
+        {
+          "key": "chunk-0-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "key": "chunk-0-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 0,
+          "y": 128
+        },
+        {
+          "key": "chunk-1--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 128,
+          "y": -256
+        },
+        {
+          "key": "chunk-1--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 128,
+          "y": -128
+        },
+        {
+          "key": "chunk-1-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 128,
+          "y": 0
+        },
+        {
+          "key": "chunk-1-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 128,
+          "y": 128
+        },
+        {
+          "key": "chunk-2--2",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 256,
+          "y": -256
+        },
+        {
+          "key": "chunk-2--1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 256,
+          "y": -128
+        },
+        {
+          "key": "chunk-2-0",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 256,
+          "y": 0
+        },
+        {
+          "key": "chunk-2-1",
+          "tint": 16316925,
+          "phase": "normal",
+          "target": "dusk",
+          "blend": 0.5,
+          "x": 256,
+          "y": 128
+        }
+      ],
+      "environment": {
+        "phase": "normal",
+        "target": "dusk",
+        "blend": 0.5,
+        "style": {
+          "tint": 16316925,
+          "veilColor": 8491421,
+          "fogColor": 10994893,
+          "veil": 0.0125,
+          "vignette": 0.06,
+          "fog": 0,
+          "glow": 0,
+          "embers": 0
+        },
+        "chunks": 24,
+        "surfaces": 48,
+        "peakSurfaces": 48,
+        "builds": 52,
+        "atlasBytes": 1835008,
+        "chunkTextureBytes": 12582912,
+        "estimatedResidentBytes": 27000832,
+        "textureKeys": [
+          "chunk--3--2-normal",
+          "chunk--3--2-dusk",
+          "chunk--3--1-normal",
+          "chunk--3--1-dusk",
+          "chunk--3-0-normal",
+          "chunk--3-0-dusk",
+          "chunk--3-1-normal",
+          "chunk--3-1-dusk",
+          "chunk--2--2-normal",
+          "chunk--2--2-dusk",
+          "chunk--2--1-normal",
+          "chunk--2--1-dusk",
+          "chunk--2-0-normal",
+          "chunk--2-0-dusk",
+          "chunk--2-1-normal",
+          "chunk--2-1-dusk",
+          "chunk--1--2-normal",
+          "chunk--1--2-dusk",
+          "chunk--1--1-normal",
+          "chunk--1--1-dusk",
+          "chunk--1-0-normal",
+          "chunk--1-0-dusk",
+          "chunk--1-1-normal",
+          "chunk--1-1-dusk",
+          "chunk-0--2-normal",
+          "chunk-0--2-dusk",
+          "chunk-0--1-normal",
+          "chunk-0--1-dusk",
+          "chunk-0-0-normal",
+          "chunk-0-0-dusk",
+          "chunk-0-1-normal",
+          "chunk-0-1-dusk",
+          "chunk-1--2-normal",
+          "chunk-1--2-dusk",
+          "chunk-1--1-normal",
+          "chunk-1--1-dusk",
+          "chunk-1-0-normal",
+          "chunk-1-0-dusk",
+          "chunk-1-1-normal",
+          "chunk-1-1-dusk",
+          "chunk-2--2-normal",
+          "chunk-2--2-dusk",
+          "chunk-2--1-normal",
+          "chunk-2--1-dusk",
+          "chunk-2-0-normal",
+          "chunk-2-0-dusk",
+          "chunk-2-1-normal",
+          "chunk-2-1-dusk"
+        ]
+      },
+      "textureBytes": 196608
+    },
+    {
+      "phase": "dusk",
+      "target": "dying",
+      "blend": 0.5,
+      "style": {
+        "tint": 15397109,
+        "veilColor": 6979211,
+        "fogColor": 10469059,
+        "veil": 0.030000000000000002,
+        "vignette": 0.16,
+        "fog": 0.0425,
+        "glow": 0,
+        "embers": 0
+      },
+      "active": true,
+      "motes": 0,
+      "objects": 8,
+      "layers": [
+        {
+          "name": "atmosphere-veil",
+          "depth": -29,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-vignette",
+          "depth": -28,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-glow-0",
+          "depth": -27,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-glow-1",
+          "depth": -27,
+          "visible": false
+        },
+        {
+          "name": "atmosphere-fog-0",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-fog-1",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-fog-2",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-embers-ash",
+          "depth": -25,
+          "visible": true
+        }
+      ],
+      "terrain": [
+        {
+          "key": "chunk--3--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -384,
+          "y": -256
+        },
+        {
+          "key": "chunk--3--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -384,
+          "y": -128
+        },
+        {
+          "key": "chunk--3-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -384,
+          "y": 0
+        },
+        {
+          "key": "chunk--3-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -384,
+          "y": 128
+        },
+        {
+          "key": "chunk--2--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -256,
+          "y": -256
+        },
+        {
+          "key": "chunk--2--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -256,
+          "y": -128
+        },
+        {
+          "key": "chunk--2-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -256,
+          "y": 0
+        },
+        {
+          "key": "chunk--2-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -256,
+          "y": 128
+        },
+        {
+          "key": "chunk--1--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -128,
+          "y": -256
+        },
+        {
+          "key": "chunk--1--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -128,
+          "y": -128
+        },
+        {
+          "key": "chunk--1-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -128,
+          "y": 0
+        },
+        {
+          "key": "chunk--1-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": -128,
+          "y": 128
+        },
+        {
+          "key": "chunk-0--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 0,
+          "y": -256
+        },
+        {
+          "key": "chunk-0--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 0,
+          "y": -128
+        },
+        {
+          "key": "chunk-0-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "key": "chunk-0-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 0,
+          "y": 128
+        },
+        {
+          "key": "chunk-1--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 128,
+          "y": -256
+        },
+        {
+          "key": "chunk-1--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 128,
+          "y": -128
+        },
+        {
+          "key": "chunk-1-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 128,
+          "y": 0
+        },
+        {
+          "key": "chunk-1-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 128,
+          "y": 128
+        },
+        {
+          "key": "chunk-2--2",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 256,
+          "y": -256
+        },
+        {
+          "key": "chunk-2--1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 256,
+          "y": -128
+        },
+        {
+          "key": "chunk-2-0",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 256,
+          "y": 0
+        },
+        {
+          "key": "chunk-2-1",
+          "tint": 15397109,
+          "phase": "dusk",
+          "target": "dying",
+          "blend": 0.5,
+          "x": 256,
+          "y": 128
+        }
+      ],
+      "environment": {
+        "phase": "dusk",
+        "target": "dying",
+        "blend": 0.5,
+        "style": {
+          "tint": 15397109,
+          "veilColor": 6979211,
+          "fogColor": 10469059,
+          "veil": 0.030000000000000002,
+          "vignette": 0.16,
+          "fog": 0.0425,
+          "glow": 0,
+          "embers": 0
+        },
+        "chunks": 24,
+        "surfaces": 48,
+        "peakSurfaces": 48,
+        "builds": 76,
+        "atlasBytes": 1835008,
+        "chunkTextureBytes": 12582912,
+        "estimatedResidentBytes": 27000832,
+        "textureKeys": [
+          "chunk--3--2-dusk",
+          "chunk--3--2-dying",
+          "chunk--3--1-dusk",
+          "chunk--3--1-dying",
+          "chunk--3-0-dusk",
+          "chunk--3-0-dying",
+          "chunk--3-1-dusk",
+          "chunk--3-1-dying",
+          "chunk--2--2-dusk",
+          "chunk--2--2-dying",
+          "chunk--2--1-dusk",
+          "chunk--2--1-dying",
+          "chunk--2-0-dusk",
+          "chunk--2-0-dying",
+          "chunk--2-1-dusk",
+          "chunk--2-1-dying",
+          "chunk--1--2-dusk",
+          "chunk--1--2-dying",
+          "chunk--1--1-dusk",
+          "chunk--1--1-dying",
+          "chunk--1-0-dusk",
+          "chunk--1-0-dying",
+          "chunk--1-1-dusk",
+          "chunk--1-1-dying",
+          "chunk-0--2-dusk",
+          "chunk-0--2-dying",
+          "chunk-0--1-dusk",
+          "chunk-0--1-dying",
+          "chunk-0-0-dusk",
+          "chunk-0-0-dying",
+          "chunk-0-1-dusk",
+          "chunk-0-1-dying",
+          "chunk-1--2-dusk",
+          "chunk-1--2-dying",
+          "chunk-1--1-dusk",
+          "chunk-1--1-dying",
+          "chunk-1-0-dusk",
+          "chunk-1-0-dying",
+          "chunk-1-1-dusk",
+          "chunk-1-1-dying",
+          "chunk-2--2-dusk",
+          "chunk-2--2-dying",
+          "chunk-2--1-dusk",
+          "chunk-2--1-dying",
+          "chunk-2-0-dusk",
+          "chunk-2-0-dying",
+          "chunk-2-1-dusk",
+          "chunk-2-1-dying"
+        ]
+      },
+      "textureBytes": 196608
+    },
+    {
+      "phase": "dying",
+      "target": "burning",
+      "blend": 0.5,
+      "style": {
+        "tint": 15461352,
+        "veilColor": 6444117,
+        "fogColor": 11054504,
+        "veil": 0.030000000000000002,
+        "vignette": 0.19,
+        "fog": 0.08,
+        "glow": 0.08,
+        "embers": 0.5
+      },
+      "active": true,
+      "motes": 18,
+      "objects": 8,
+      "layers": [
+        {
+          "name": "atmosphere-veil",
+          "depth": -29,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-vignette",
+          "depth": -28,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-glow-0",
+          "depth": -27,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-glow-1",
+          "depth": -27,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-fog-0",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-fog-1",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-fog-2",
+          "depth": -26,
+          "visible": true
+        },
+        {
+          "name": "atmosphere-embers-ash",
+          "depth": -25,
+          "visible": true
+        }
+      ],
+      "terrain": [
+        {
+          "key": "chunk--3--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -384,
+          "y": -256
+        },
+        {
+          "key": "chunk--3--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -384,
+          "y": -128
+        },
+        {
+          "key": "chunk--3-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -384,
+          "y": 0
+        },
+        {
+          "key": "chunk--3-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -384,
+          "y": 128
+        },
+        {
+          "key": "chunk--2--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -256,
+          "y": -256
+        },
+        {
+          "key": "chunk--2--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -256,
+          "y": -128
+        },
+        {
+          "key": "chunk--2-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -256,
+          "y": 0
+        },
+        {
+          "key": "chunk--2-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -256,
+          "y": 128
+        },
+        {
+          "key": "chunk--1--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -128,
+          "y": -256
+        },
+        {
+          "key": "chunk--1--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -128,
+          "y": -128
+        },
+        {
+          "key": "chunk--1-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -128,
+          "y": 0
+        },
+        {
+          "key": "chunk--1-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": -128,
+          "y": 128
+        },
+        {
+          "key": "chunk-0--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 0,
+          "y": -256
+        },
+        {
+          "key": "chunk-0--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 0,
+          "y": -128
+        },
+        {
+          "key": "chunk-0-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "key": "chunk-0-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 0,
+          "y": 128
+        },
+        {
+          "key": "chunk-1--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 128,
+          "y": -256
+        },
+        {
+          "key": "chunk-1--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 128,
+          "y": -128
+        },
+        {
+          "key": "chunk-1-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 128,
+          "y": 0
+        },
+        {
+          "key": "chunk-1-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 128,
+          "y": 128
+        },
+        {
+          "key": "chunk-2--2",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 256,
+          "y": -256
+        },
+        {
+          "key": "chunk-2--1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 256,
+          "y": -128
+        },
+        {
+          "key": "chunk-2-0",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 256,
+          "y": 0
+        },
+        {
+          "key": "chunk-2-1",
+          "tint": 15461352,
+          "phase": "dying",
+          "target": "burning",
+          "blend": 0.5,
+          "x": 256,
+          "y": 128
+        }
+      ],
+      "environment": {
+        "phase": "dying",
+        "target": "burning",
+        "blend": 0.5,
+        "style": {
+          "tint": 15461352,
+          "veilColor": 6444117,
+          "fogColor": 11054504,
+          "veil": 0.030000000000000002,
+          "vignette": 0.19,
+          "fog": 0.08,
+          "glow": 0.08,
+          "embers": 0.5
+        },
+        "chunks": 24,
+        "surfaces": 48,
+        "peakSurfaces": 48,
+        "builds": 100,
+        "atlasBytes": 1835008,
+        "chunkTextureBytes": 12582912,
+        "estimatedResidentBytes": 27000832,
+        "textureKeys": [
+          "chunk--3--2-dying",
+          "chunk--3--2-burning",
+          "chunk--3--1-dying",
+          "chunk--3--1-burning",
+          "chunk--3-0-dying",
+          "chunk--3-0-burning",
+          "chunk--3-1-dying",
+          "chunk--3-1-burning",
+          "chunk--2--2-dying",
+          "chunk--2--2-burning",
+          "chunk--2--1-dying",
+          "chunk--2--1-burning",
+          "chunk--2-0-dying",
+          "chunk--2-0-burning",
+          "chunk--2-1-dying",
+          "chunk--2-1-burning",
+          "chunk--1--2-dying",
+          "chunk--1--2-burning",
+          "chunk--1--1-dying",
+          "chunk--1--1-burning",
+          "chunk--1-0-dying",
+          "chunk--1-0-burning",
+          "chunk--1-1-dying",
+          "chunk--1-1-burning",
+          "chunk-0--2-dying",
+          "chunk-0--2-burning",
+          "chunk-0--1-dying",
+          "chunk-0--1-burning",
+          "chunk-0-0-dying",
+          "chunk-0-0-burning",
+          "chunk-0-1-dying",
+          "chunk-0-1-burning",
+          "chunk-1--2-dying",
+          "chunk-1--2-burning",
+          "chunk-1--1-dying",
+          "chunk-1--1-burning",
+          "chunk-1-0-dying",
+          "chunk-1-0-burning",
+          "chunk-1-1-dying",
+          "chunk-1-1-burning",
+          "chunk-2--2-dying",
+          "chunk-2--2-burning",
+          "chunk-2--1-dying",
+          "chunk-2--1-burning",
+          "chunk-2-0-dying",
+          "chunk-2-0-burning",
+          "chunk-2-1-dying",
+          "chunk-2-1-burning"
+        ]
+      },
+      "textureBytes": 196608
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,77 @@
+{
+  "checkedOn": "2026-11-06",
+  "scope": "Preparation audit only; no image or animation generation submitted",
+  "MCP": {
+    "pixellabTools": 107,
+    "asepriteTools": 65,
+    "expectedAsepriteTools": 73,
+    "asepriteRuntime": {
+      "executable": null,
+      "batch": "unavailable",
+      "liveConnected": false,
+      "extensionInstalled": false
+    }
+  },
+  "pixelLab": {
+    "before": {
+      "remaining": 40,
+      "used": 0,
+      "creditsUSD": 0
+    },
+    "after": {
+      "remaining": 40,
+      "used": 0,
+      "creditsUSD": 0
+    },
+    "paidCalls": 0
+  },
+  "validation": {
+    "npmCheck": {
+      "exitCode": 0,
+      "typecheck": "passed",
+      "lint": "passed",
+      "unitTests": 655,
+      "unitFiles": 82,
+      "build": "passed",
+      "warning": "Vite warns that a minified Phaser chunk exceeds 500 kB"
+    },
+    "existingPNGMeasurements": "passed; local Chromium, no image files created",
+    "documentChecks": "passed",
+    "inventoryChecks": "passed",
+    "measurementChecks": "passed",
+    "gitDiffCheck": {
+      "exitCode": 0
+    },
+    "newCanvasRuntimeVerification": false,
+    "asepriteExportRoundTrip": false,
+    "e2eRunForAudit": false
+  },
+  "protectedFiles": {
+    "fileCount": 418,
+    "beforeSha256": "2a9163d6e690c9c0956ff1d1c16f02e6dd3e6dd56744ac5d8e22d40d04fc5e53",
+    "afterSha256": "2a9163d6e690c9c0956ff1d1c16f02e6dd3e6dd56744ac5d8e22d40d04fc5e53",
+    "changed": [],
+    "missing": [],
+    "unchanged": true
+  },
+  "reviewedImages": [
+    "public/assets/hd/mage.png",
+    "screenshots/final-boss/sword-right-active-1280.png",
+    "screenshots/final-boss/phase3-stance-844.png"
+  ],
+  "writtenFiles": [
+    "docs/final-boss/PIXELLAB_AUDIT.md",
+    "docs/final-boss/audit-existing-art.mjs",
+    "docs/final-boss/model-audit-tools.json",
+    "docs/final-boss/model-audit-measurements.json",
+    "docs/final-boss/model-audit-validation.json",
+    "docs/PROGRESS.md",
+    "docs/DECISIONS.md"
+  ],
+  "next": "Stop for manual acceptance; obtain approved concept PNG and available Aseprite runtime before production",
+  "gitMutations": {
+    "commit": false,
+    "push": false,
+    "deploy": false
+  }
+}

@@ -21,7 +21,7 @@ const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; hel
    <div class="eyebrow"><span class="spark">✦</span> ОДНА ИСКРА ПРОТИВ ЦЕЛОЙ ЧАЩИ</div>
    <h1 class="wordmark">PIXEL<br><span>SURVIVOR</span><i>✦</i></h1>
    <p class="menu-description">Чаща пробуждается.<br>Двигайся. Собирай магию. Продержись ещё минуту.</p>
-   <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="true" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button class="coming-soon" aria-disabled="true" :aria-pressed="false" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>В разработке</small></button></div>
+   <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="character === 'mage'" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>150 HP · меч и щит</small></button></div>
    <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
    <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>

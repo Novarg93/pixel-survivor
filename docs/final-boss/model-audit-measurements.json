@@ -1,0 +1,284 @@
+[
+  {
+    "name": "mage",
+    "atlas": [
+      1024,
+      372
+    ],
+    "frameCount": 58,
+    "frames": [
+      {
+        "name": "mage-down-idle-0",
+        "cell": [
+          64,
+          80
+        ],
+        "bounds": {
+          "minX": 11,
+          "minY": 4,
+          "maxX": 56,
+          "maxY": 74,
+          "width": 46,
+          "height": 71
+        },
+        "nonzero": 1945,
+        "partialAlpha": 0,
+        "edge": 0
+      }
+    ]
+  },
+  {
+    "name": "bosses",
+    "atlas": [
+      2048,
+      2016
+    ],
+    "frameCount": 216,
+    "frames": [
+      {
+        "name": "charger-1-right-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 9,
+          "minY": 8,
+          "maxX": 117,
+          "maxY": 116,
+          "width": 109,
+          "height": 109
+        },
+        "nonzero": 8154,
+        "partialAlpha": 0,
+        "edge": 0
+      },
+      {
+        "name": "sorcerer-1-right-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 11,
+          "minY": 5,
+          "maxX": 115,
+          "maxY": 118,
+          "width": 105,
+          "height": 114
+        },
+        "nonzero": 6724,
+        "partialAlpha": 0,
+        "edge": 0
+      },
+      {
+        "name": "eclipse-1-right-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 17,
+          "minY": 6,
+          "maxX": 111,
+          "maxY": 117,
+          "width": 95,
+          "height": 112
+        },
+        "nonzero": 6579,
+        "partialAlpha": 0,
+        "edge": 0
+      },
+      {
+        "name": "eclipse-2-right-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 7,
+          "minY": 6,
+          "maxX": 120,
+          "maxY": 117,
+          "width": 114,
+          "height": 112
+        },
+        "nonzero": 7020,
+        "partialAlpha": 0,
+        "edge": 0
+      }
+    ]
+  },
+  {
+    "name": "ash-guard",
+    "atlas": [
+      2304,
+      1792
+    ],
+    "frameCount": 252,
+    "frames": [
+      {
+        "name": "ash-down-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 30,
+          "minY": 27,
+          "maxX": 97,
+          "maxY": 105,
+          "width": 68,
+          "height": 79
+        },
+        "nonzero": 3994,
+        "partialAlpha": 297,
+        "edge": 0
+      },
+      {
+        "name": "ash-down-swordActive-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 27,
+          "minY": 27,
+          "maxX": 102,
+          "maxY": 103,
+          "width": 76,
+          "height": 77
+        },
+        "nonzero": 4031,
+        "partialAlpha": 304,
+        "edge": 0
+      },
+      {
+        "name": "ash-down-phase3Idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 28,
+          "minY": 9,
+          "maxX": 95,
+          "maxY": 105,
+          "width": 68,
+          "height": 97
+        },
+        "nonzero": 4247,
+        "partialAlpha": 339,
+        "edge": 0
+      },
+      {
+        "name": "ash-up-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 30,
+          "minY": 23,
+          "maxX": 97,
+          "maxY": 103,
+          "width": 68,
+          "height": 81
+        },
+        "nonzero": 3960,
+        "partialAlpha": 300,
+        "edge": 0
+      },
+      {
+        "name": "ash-up-swordActive-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 16,
+          "minY": 27,
+          "maxX": 94,
+          "maxY": 103,
+          "width": 79,
+          "height": 77
+        },
+        "nonzero": 4073,
+        "partialAlpha": 308,
+        "edge": 0
+      },
+      {
+        "name": "ash-up-phase3Idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 28,
+          "minY": 9,
+          "maxX": 95,
+          "maxY": 105,
+          "width": 68,
+          "height": 97
+        },
+        "nonzero": 4247,
+        "partialAlpha": 339,
+        "edge": 0
+      },
+      {
+        "name": "ash-side-idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 34,
+          "minY": 27,
+          "maxX": 109,
+          "maxY": 103,
+          "width": 76,
+          "height": 77
+        },
+        "nonzero": 3880,
+        "partialAlpha": 303,
+        "edge": 0
+      },
+      {
+        "name": "ash-side-swordActive-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 31,
+          "minY": 6,
+          "maxX": 87,
+          "maxY": 103,
+          "width": 57,
+          "height": 98
+        },
+        "nonzero": 3849,
+        "partialAlpha": 307,
+        "edge": 0
+      },
+      {
+        "name": "ash-side-phase3Idle-0",
+        "cell": [
+          128,
+          128
+        ],
+        "bounds": {
+          "minX": 32,
+          "minY": 9,
+          "maxX": 88,
+          "maxY": 105,
+          "width": 57,
+          "height": 97
+        },
+        "nonzero": 3890,
+        "partialAlpha": 298,
+        "edge": 0
+      }
+    ]
+  }
+]

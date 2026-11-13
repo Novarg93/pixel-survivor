@@ -104,8 +104,8 @@ it('preserves Armageddon rhythm and strength and maps all ten ability identities
   for (const strength of [1, .75, .75]) { b.now += .15; w.feedback({ type: 'impact', source: 'meteor', strength }); p.observe(w); }
   const impacts = b.calls.filter(x => x.asset === 'meteor'); expect(impacts).toHaveLength(3); impacts.forEach((x, i) => expect(x.gain).toBeCloseTo(i ? .45 : .6));
   for (const ability of ['fireball', 'frost', 'lightning', 'shield', 'cleave', 'whirlwind', 'blades', 'iron'] as const) { b.now += 1; b.stopAll(); w.feedback({ type: 'ability', ability }); p.observe(w); }
-  b.now += 1; b.stopAll(); w.feedback({ type: 'impact', source: 'slam' }); p.observe(w);
-  for (const event of ['fireball.cast', 'frostNova.cast', 'lightning.cast', 'arcaneShield.trigger', 'cleave.swing', 'whirlwind.active', 'bladestorm.active', 'ironSkin.trigger', 'groundSlam.impact']) expect(c.diagnostics().played[event as keyof typeof SOUND_CATALOG]).toBeGreaterThan(0);
+  b.now += 1; b.stopAll(); w.feedback({ type: 'ability', ability: 'slam' }); p.observe(w);
+  for (const event of ['fireball.cast', 'frostNova.cast', 'lightning.cast', 'arcaneShield.trigger', 'cleave.swing', 'whirlwind.active', 'bladestorm.active', 'ironSkin.trigger', 'groundSlam.cast']) expect(c.diagnostics().played[event as keyof typeof SOUND_CATALOG]).toBeGreaterThan(0);
 });
 it('does not consume gameplay RNG or change combat state while presenting audio', async () => {
   const { c } = await setup(), w = new World(31), other = new World(31), p = new AudioPresentation(c);

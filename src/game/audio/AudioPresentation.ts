@@ -9,7 +9,7 @@ import {WARDEN_AUDIO_LEAD} from './samples';
 import {FINAL_BOSS} from '../config/finalBoss';
 import {ultimateFrozen} from '../systems/UltimateFreeze';
 
-export const ABILITY_AUDIO: Partial<Record<AbilityId, SoundEvent>> = { fireball: 'fireball.cast', frost: 'frostNova.cast', lightning: 'lightning.cast', shield: 'arcaneShield.trigger', cleave: 'cleave.swing', whirlwind: 'whirlwind.active', blades: 'bladestorm.active', iron: 'ironSkin.trigger' };
+export const ABILITY_AUDIO: Partial<Record<AbilityId, SoundEvent>> = { fireball: 'fireball.cast', frost: 'frostNova.cast', lightning: 'lightning.cast', shield: 'arcaneShield.trigger', slam: 'groundSlam.cast', cleave: 'cleave.swing', whirlwind: 'whirlwind.active', blades: 'bladestorm.active', iron: 'ironSkin.trigger' };
 // Encounter-stage music continues through all mini-bosses, including practice.
 export function musicBossActive(w:World){
   return w.finalEncounter.phase!=='inactive'&&w.finalEncounter.phase!=='defeated';
@@ -52,7 +52,7 @@ export class AudioPresentation {
       if (event.type === 'ability') { const cue = ABILITY_AUDIO[event.ability]; if (cue) add(cue); }
       else if (event.type === 'pickup') add(`pickup.${event.kind}`);
       else if (event.source === 'meteor') add('armageddon.impact', event.strength);
-      else if (event.source === 'slam') add('groundSlam.impact');
+      // Stomp recording plays once on activation, including a cast that misses.
       else if (event.source === 'fireball') add('fireball.impact');
       else if (event.source === 'cleave') add('cleave.impact');
     }
@@ -61,6 +61,9 @@ export class AudioPresentation {
       if(cue==='final-stop'||cue==='final-sword'&&w.finalEncounter.attack.kind==='basicMelee')continue;
       if(cue==='final-orb'&&pending.has('mini.totemCast'))continue;
       if(cue.startsWith('final-'))add(('final.'+cue.slice(6)) as SoundEvent);
+      else if(cue==='warrior-banner')add('ultimate.banner');
+      else if(cue==='warrior-earthbreaker')add('ultimate.earthbreaker');
+      else if(cue==='warrior-ruin')add('ultimate.ruin');
       else if(cue==='ultimate-charge')add('ultimate.charge');
       else if(cue==='ultimate-sky'){this.audio.stopEvent('ultimate.charge');add('ultimate.sky');}
       else if(cue==='ultimate-overload')add('ultimate.overload');
@@ -72,7 +75,7 @@ export class AudioPresentation {
       else if(cue==='ultimate-embers')add('ultimate.embers');
       else if(cue==='ultimate-singe')add('ultimate.singe');
       else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
-      else if (cue === 'shield') add('arcaneShield.trigger');
+      else if (cue === 'shield') add(w.character==='warrior'?'ironSkin.trigger':'arcaneShield.trigger');
       else if (cue === 'charge'&&!pending.has('mini.briarCharge')) add('encounter.charge');
     }
     for (const event of w.encounterDirector.history) if (event.minute > this.encounter) { if (event.bosses.length) add('encounter.bossArrive'); this.encounter = event.minute; }

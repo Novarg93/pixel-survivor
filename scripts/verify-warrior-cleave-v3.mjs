@@ -1,0 +1,17 @@
+import {readFileSync,readdirSync} from 'node:fs';
+import {historicalRuntimeHash} from './berserk-sprint-scope.mjs';
+import {beforeWarriorUltimatesFiles} from './warrior-ultimates-scope.mjs';
+import assert from 'node:assert/strict';
+import process from 'node:process';
+const root='art/generated/warrior-cleave-sync-v3',baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
+const changed=['src/game/abilities/tickAbilities.ts','src/game/abilities/warrior.ts','src/game/art/GameArt.ts','src/game/art/WarriorHeroAnimation.ts','src/game/systems/MobilitySystem.ts','src/game/systems/World.ts'];
+const added=['src/game/art/WarriorMovingCleaveArt.ts','src/game/config/warriorCleave.ts'];
+const hash=historicalRuntimeHash;
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
+const later=JSON.parse(readFileSync('art/generated/warrior-buffs-v4/integration-verification.json','utf8'));
+const proof=JSON.parse(readFileSync(`${root}/integration-verification.json`,'utf8'));
+assert.deepEqual(proof.changed,changed);assert.deepEqual(proof.added,added);
+assert.deepEqual(beforeWarriorUltimatesFiles([...walk('src'),...walk('public')]).sort(),[...Object.keys(baseline),...added,...later.added].sort());
+for(const p of [...Object.keys(baseline),...added])assert.equal(hash(p),later.currentSHA256[p]??proof.currentSHA256[p]??baseline[p],p);
+if(process.argv.includes('--record'))throw Error('Historical v3 proof is immutable; record the current v4 proof instead');
+globalThis.console.log(JSON.stringify({baselineFiles:proof.baselineFiles,changed:changed.length,added:added.length,unchanged:proof.unchanged}));

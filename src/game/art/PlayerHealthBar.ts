@@ -2,7 +2,7 @@ import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 
 // Above the hero (10), below projectiles (12), friendly magic (14) and tells (20).
-export const PLAYER_HEALTH_BAR = { width: 34, height: 5, offsetY: -33, depth: 11, hpColor: 0x77cf8a, absorbColor: 0xb9eeff } as const;
+export const PLAYER_HEALTH_BAR = { width: 34, height: 5, offsetY: -46, depth: 11, hpColor: 0x77cf8a, absorbColor: 0xb9eeff } as const;
 export function playerHealthLayout(w: Pick<World, 'player' | 'effectiveMaxHp' | 'absorb' | 'status' | 'character'>) {
   const c = PLAYER_HEALTH_BAR;
   return { x: w.player.x - c.width / 2, y: w.player.y + (w.character==='mage'?-44:c.offsetY), width: c.width, height: c.height,

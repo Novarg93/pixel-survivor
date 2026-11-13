@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-03",
+  "branch": "feature/audio-mvp",
+  "head": "3e5febfb7c33999a4b3713a00fa5dd38414e7217",
+  "checks": {
+    "check": {
+      "exit": 0,
+      "unitTests": 341,
+      "files": 48,
+      "log": ".tmp/audio-mvp/check-retry.log"
+    },
+    "e2e": {
+      "exit": 0,
+      "passed": 158,
+      "durationMinutes": 28.3,
+      "log": ".tmp/audio-mvp/full-e2e-retry.log"
+    },
+    "production": {
+      "exit": 0,
+      "passed": 4,
+      "durationSeconds": 28.3,
+      "log": ".tmp/audio-mvp/production.log"
+    },
+    "diffCheck": 0,
+    "unchangedBalanceFiles": true
+  },
+  "subjectiveListening": "Pending user acceptance; no physical-device or speaker/headphone claim.",
+  "hashes": {
+    "screenshots/audio-mvp/lifecycle-1280.json": "1df3bfb9508c9f6b19922f819a86d36b48caf9850ca1f7a9d5af5fc12887c9ff",
+    "screenshots/audio-mvp/lifecycle-390.json": "2855b6f90d71eed91db29eb7467b8ab14518deaae0be708023eaa679141ebe76",
+    "screenshots/audio-mvp/settings-1280.png": "26d34fd5594b217012c39f22aac9ac986a7375203eb0ed0c4d3cab8e21d2be97",
+    "screenshots/audio-mvp/settings-390.png": "f7cd1e59508a02af30729bedf905e96d37bb2d0f6b66cb2378b54ec792ccb8ba",
+    "screenshots/audio-mvp/stress-canvas-Mage-1280.png": "c087e234a9d4a33ab5e31be3f4bbbb956a9461964d5123681841a8f83db862d8",
+    "screenshots/audio-mvp/stress-canvas-Mage-390.png": "42c7054cfeba5f69531011990cf3c3338ea09eebe216ed93a61d604cad60ba68",
+    "screenshots/audio-mvp/stress-canvas-Warrior-1280.png": "55a4c21016c58b4cc0a2b2fca7c9142f9e78cf60fb7343a99308a5718cf336b1",
+    "screenshots/audio-mvp/stress-canvas-Warrior-390.png": "5b2abc5dbf46cb571be974f83f6a6195f4c47ccf53b9615672703f212b27a4a2",
+    "screenshots/audio-mvp/stress-Mage-1280.json": "ec526647f781209eb8abc529926589075fff7d1cb9230fe8829cc1c4a108824e",
+    "screenshots/audio-mvp/stress-Mage-1280.png": "6d44a356c4d40014ab1615bc2450ae6f7e30864f681cf4a601eca1d965c5b8ef",
+    "screenshots/audio-mvp/stress-Mage-390.json": "de884d3cf7bf7c0b20b49d27d2d64141979edc68d93a953475ae9ee9c34cb7da",
+    "screenshots/audio-mvp/stress-Mage-390.png": "975ce0f71257e60123f4d02a959ce86e0b0bcee5f8d3e0b64f822d3213feaf20",
+    "screenshots/audio-mvp/stress-Warrior-1280.json": "cfaf3c155e391ff514e1d286a557bc1e84da60808ed0ad6cf2804d8e60a78ba7",
+    "screenshots/audio-mvp/stress-Warrior-1280.png": "fe6d6dfa4b19bc9185c8ae9d116db75e2cf390ba2bcd1688bcf0e9a30c8fcee4",
+    "screenshots/audio-mvp/stress-Warrior-390.json": "1c56574b53c8aea53a9c33f738d5982da55fdd57ffe489865feb5c8fd9aa601a",
+    "screenshots/audio-mvp/stress-Warrior-390.png": "089aa866a3c3f55c3b97b3cbb859bdd0f662b3766e8a9ed5f4eda60f2933ec71",
+    "src/game/audio/AudioBackend.ts": "db50081b00ad4aa53794c1c26b9e78de1c3cdc1d63bbd667afaaf2231383440c",
+    "src/game/audio/AudioController.ts": "c4d074c2a05584a09e8ea4631ba4a5194c2dd0a1adf03191e70a25105d033ce7",
+    "src/game/audio/AudioPresentation.ts": "359c5084d3e9054896398d562fcd4331e81809db32fc1fc5c385f2c26233afb4",
+    "src/game/audio/catalog.ts": "a2e738ae97af8aacd24ce37dcf358dec1f733f47c97b295b72b742cd33c069f5",
+    "src/game/audio/PhaserAudioBackend.ts": "0f60813f2c5a800a9184538f1b9b773c77bac4003f25fff5f0c73341e0209ce0",
+    "src/game/audio/README.md": "ddfcf6263217e863aec81c743929932480cde2538a4c6686a98287bf0d14c5a0",
+    "src/game/audio/synthesis.ts": "89a6c713e8756670c49fc29848b7c64544b2a16d75668ece309a68da57eb61f7",
+    "tests/unit/audio.test.ts": "b07eac62e3a6cc9119491b6b02163664a910edb1cf78cede1810b6d41715713e",
+    "tests/e2e/audio.spec.ts": "d32091c14bcebe56f648d34c363347890ef20a6e620a7ccf35249e407ce374e7",
+    "tests/e2e/production.spec.ts": "eb5733a0d158c154cdeecb024b4baa24d68456671a4adcdf233d816f86df9e1c",
+    "tests/fixtures/balance-hotfix-baseline.json": "2e6547f3a22fe3f68f18b479ad98ca0e5ee6fa7e91898bc47f85fbcc91e2f315",
+    "docs/audio-mvp/ASSET_MANIFEST.json": "c72c1532b72db701d06b682c3d9835cafee72f6db28d86fcd46716011d9a780b",
+    "docs/audio-mvp/MEASUREMENTS.json": "5a515284779701b0ff51c9d9a03f4e7a9c790e2585510ab78f14598526a0e5fd",
+    "docs/audio-mvp/sfx-preview.wav": "575e29e1ecfbaad3bac8449ba2d10c5845675963a6e35e7492caac5f98a105de",
+    "docs/audio-mvp/underscore-grove.wav": "229e004ad2c979545e336f36afa5d2f75cc948a40a2c43cdec29dbb5a3205b20"
+  }
+}

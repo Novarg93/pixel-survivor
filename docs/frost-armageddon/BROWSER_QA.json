@@ -1,0 +1,746 @@
+{
+  "ranks": [
+    {
+      "path": "screenshots/frost-armageddon/rank1-1280.json",
+      "rank": 1,
+      "width": 1280,
+      "nova": {
+        "time": 20.016653333333334,
+        "x": 149.5983389146291,
+        "y": 24.890447195640082,
+        "radius": 73,
+        "expires": 21.216653333333333,
+        "readyAt": 22.816653333333335
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": 6.085635676784372,
+            "y": 141.99816579163533,
+            "launchAt": 20.22163999999999,
+            "landAt": 21.07163999999999,
+            "damage": 80
+          }
+        ],
+        "roots": [
+          {
+            "x": 0,
+            "y": 142
+          },
+          {
+            "x": 3.041948811732257,
+            "y": 144.99956002590426
+          },
+          {
+            "x": 6.085635676784372,
+            "y": 141.99816579163533
+          }
+        ],
+        "frostReady": 22.411669999999997,
+        "meteorReady": 25.821639999999988
+      },
+      "landings": [
+        21.071660000000062
+      ],
+      "totalDamage": 240,
+      "errors": []
+    },
+    {
+      "path": "screenshots/frost-armageddon/rank3-1280.json",
+      "rank": 3,
+      "width": 1280,
+      "nova": {
+        "time": 20.01664,
+        "x": 159.38671411150554,
+        "y": 28.146620852152157,
+        "radius": 87.6,
+        "expires": 21.216639999999998,
+        "readyAt": 22.396639999999998
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": -171.809637404402,
+            "y": -80.85159407265976,
+            "launchAt": 20.200000000000017,
+            "landAt": 21.05000000000002,
+            "damage": 130
+          },
+          {
+            "x": 171,
+            "y": -80,
+            "launchAt": 20.350000000000016,
+            "landAt": 21.200000000000017,
+            "damage": 97.5
+          }
+        ],
+        "roots": [
+          {
+            "x": -171.809637404402,
+            "y": -80.85159407265976
+          },
+          {
+            "x": -168.81623695033633,
+            "y": -77.83742661781974
+          },
+          {
+            "x": -165.7975368912878,
+            "y": -80.87684726404282
+          }
+        ],
+        "frostReady": 22.39667,
+        "meteorReady": 25.80000000000002
+      },
+      "landings": [
+        21.05004000000008,
+        21.200050000000093
+      ],
+      "totalDamage": 682.5,
+      "errors": []
+    },
+    {
+      "path": "screenshots/frost-armageddon/rank5-1280.json",
+      "rank": 5,
+      "width": 1280,
+      "nova": {
+        "time": 20.0166444,
+        "x": 159.38681638425663,
+        "y": 28.146659034326063,
+        "radius": 105.11999999999999,
+        "expires": 22.0166444,
+        "readyAt": 22.3966444
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": 3.041948811732257,
+            "y": 144.99956002590426,
+            "launchAt": 20.206650000000007,
+            "landAt": 21.05665000000001,
+            "damage": 180
+          },
+          {
+            "x": -167,
+            "y": -77,
+            "launchAt": 20.356650000000005,
+            "landAt": 21.206650000000007,
+            "damage": 135
+          },
+          {
+            "x": 165,
+            "y": -80,
+            "launchAt": 20.506650000000008,
+            "landAt": 21.35665000000001,
+            "damage": 135
+          }
+        ],
+        "roots": [
+          {
+            "x": 0,
+            "y": 142
+          },
+          {
+            "x": 3.041948811732257,
+            "y": 144.99956002590426
+          },
+          {
+            "x": 6.085635676784372,
+            "y": 141.99816579163533
+          }
+        ],
+        "frostReady": 22.415,
+        "meteorReady": 25.806650000000005
+      },
+      "landings": [
+        21.07328000000008,
+        21.22331000000009,
+        21.373310000000103
+      ],
+      "totalDamage": 1350,
+      "errors": []
+    },
+    {
+      "path": "screenshots/frost-armageddon/rank1-390.json",
+      "rank": 1,
+      "width": 390,
+      "nova": {
+        "time": 20.01664,
+        "x": 29.285134994210523,
+        "y": 138.30290928522672,
+        "radius": 73,
+        "expires": 21.216639999999998,
+        "readyAt": 22.81664
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": -22.294066144372984,
+            "y": 149.97826315305463,
+            "launchAt": 20.200039999999998,
+            "landAt": 21.05004,
+            "damage": 80
+          }
+        ],
+        "roots": [
+          {
+            "x": -25.339813833015292,
+            "y": 146.9709202314887
+          },
+          {
+            "x": -22.294066144372984,
+            "y": 149.97826315305463
+          },
+          {
+            "x": -19.25984766307442,
+            "y": 146.98304795504163
+          }
+        ],
+        "frostReady": 22.413339999999998,
+        "meteorReady": 25.800039999999996
+      },
+      "landings": [
+        21.050050000000066
+      ],
+      "totalDamage": 240,
+      "errors": []
+    },
+    {
+      "path": "screenshots/frost-armageddon/rank3-390.json",
+      "rank": 3,
+      "width": 390,
+      "nova": {
+        "time": 20.0149776,
+        "x": 22.806548187470543,
+        "y": 137.81682570842327,
+        "radius": 87.6,
+        "expires": 21.2149776,
+        "readyAt": 22.3949776
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": -19.25984766307442,
+            "y": -146.98304795504163,
+            "launchAt": 20.200070000000014,
+            "landAt": 21.050070000000016,
+            "damage": 130
+          },
+          {
+            "x": -22,
+            "y": 148,
+            "launchAt": 20.350070000000013,
+            "landAt": 21.200070000000014,
+            "damage": 97.5
+          }
+        ],
+        "roots": [
+          {
+            "x": -25.339813833015292,
+            "y": -146.9709202314887
+          },
+          {
+            "x": -22.306205989017506,
+            "y": -143.97642047456756
+          },
+          {
+            "x": -19.25984766307442,
+            "y": -146.98304795504163
+          }
+        ],
+        "frostReady": 22.39667,
+        "meteorReady": 25.800070000000012
+      },
+      "landings": [
+        21.06669000000008,
+        21.216700000000092
+      ],
+      "totalDamage": 682.5,
+      "errors": []
+    },
+    {
+      "path": "screenshots/frost-armageddon/rank5-390.json",
+      "rank": 5,
+      "width": 390,
+      "nova": {
+        "time": 20.016646666666666,
+        "x": 26.05073903170911,
+        "y": 134.58693796457956,
+        "radius": 105.11999999999999,
+        "expires": 22.016646666666666,
+        "readyAt": 22.396646666666665
+      },
+      "casterShotWhileRooted": true,
+      "meteor": {
+        "impacts": [
+          {
+            "x": -19.25984766307442,
+            "y": 146.98304795504163,
+            "launchAt": 20.208330000000007,
+            "landAt": 21.05833000000001,
+            "damage": 180
+          },
+          {
+            "x": 28,
+            "y": 3,
+            "launchAt": 20.358330000000006,
+            "landAt": 21.208330000000007,
+            "damage": 135
+          },
+          {
+            "x": -19,
+            "y": -145,
+            "launchAt": 20.508330000000008,
+            "landAt": 21.35833000000001,
+            "damage": 135
+          }
+        ],
+        "roots": [
+          {
+            "x": -25.339813833015292,
+            "y": 146.9709202314887
+          },
+          {
+            "x": -22.294066144372984,
+            "y": 149.97826315305463
+          },
+          {
+            "x": -19.25984766307442,
+            "y": 146.98304795504163
+          }
+        ],
+        "frostReady": 22.40833,
+        "meteorReady": 25.808330000000005
+      },
+      "landings": [
+        21.05835000000008,
+        21.20836000000009,
+        21.358350000000105
+      ],
+      "totalDamage": 1350,
+      "errors": []
+    }
+  ],
+  "stress": [
+    {
+      "path": "screenshots/frost-armageddon/stress-1280.json",
+      "width": 1280,
+      "fixture": "12s real RAF,150regular+3boss+3activeGuardian,allMageV+Frost/Meteor evolutions,globalCDRfloor; invulnerability only for constant load.",
+      "medianFps": 58.88182067871094,
+      "p95UpdateMs": 2.399999976158142,
+      "cycles": [
+        {
+          "objects": 55,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-enemies",
+            "hd-guardian",
+            "hd-loot",
+            "hd-bosses"
+          ]
+        },
+        {
+          "objects": 55,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-enemies",
+            "hd-guardian",
+            "hd-loot",
+            "hd-bosses"
+          ]
+        },
+        {
+          "objects": 55,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-enemies",
+            "hd-guardian",
+            "hd-loot",
+            "hd-bosses"
+          ]
+        },
+        {
+          "objects": 55,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-enemies",
+            "hd-guardian",
+            "hd-loot",
+            "hd-bosses"
+          ]
+        },
+        {
+          "objects": 55,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-enemies",
+            "hd-guardian",
+            "hd-loot",
+            "hd-bosses"
+          ]
+        }
+      ],
+      "errors": [],
+      "peaks": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3,
+        "effects": 96,
+        "projectiles": 40,
+        "hazards": 13,
+        "roots": 144,
+        "meteorImpacts": 3,
+        "states": 3
+      }
+    },
+    {
+      "path": "screenshots/frost-armageddon/stress-390.json",
+      "width": 390,
+      "fixture": "12s real RAF,150regular+3boss+3activeGuardian,allMageV+Frost/Meteor evolutions,globalCDRfloor; invulnerability only for constant load.",
+      "medianFps": 59.310333251953125,
+      "p95UpdateMs": 1.5,
+      "cycles": [
+        {
+          "objects": 31,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-guardian",
+            "hd-enemies",
+            "hd-bosses",
+            "hd-loot"
+          ]
+        },
+        {
+          "objects": 31,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-guardian",
+            "hd-enemies",
+            "hd-bosses",
+            "hd-loot"
+          ]
+        },
+        {
+          "objects": 31,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-guardian",
+            "hd-enemies",
+            "hd-bosses",
+            "hd-loot"
+          ]
+        },
+        {
+          "objects": 31,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-guardian",
+            "hd-enemies",
+            "hd-bosses",
+            "hd-loot"
+          ]
+        },
+        {
+          "objects": 31,
+          "textures": [
+            "hd-core",
+            "hd-runner",
+            "hd-mage",
+            "hd-guardian",
+            "hd-enemies",
+            "hd-bosses",
+            "hd-loot"
+          ]
+        }
+      ],
+      "errors": [],
+      "peaks": {
+        "enemies": 150,
+        "bosses": 3,
+        "guardians": 3,
+        "effects": 96,
+        "projectiles": 40,
+        "hazards": 13,
+        "roots": 132,
+        "meteorImpacts": 3,
+        "states": 3
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/frost-armageddon/cards-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "f7aba5fa6554cf11e950637e82dec2067e5cdba14b5a06baee6fa5549941642f"
+    },
+    {
+      "path": "screenshots/frost-armageddon/cards-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "02ff8232d8b217f4875f6cb05a80813b89d98c3348edb52a9ebfd98a03bd3d8e"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "07f8f5336682b4fad87a26b262eecab698893f8f1c16e02bba93bbf32f8e72ba"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "701569ca1a90d83ad7c082667365ac987dcc75c6def07549ba6882bf7219f323"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "9c9f80c990856a4d9fb872a10d58993a9f96df7e590d872af768a6c499a37a89"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5f92def11435a578f6c1f0aa0a92f4af72c7dfde6000f3f32f72890eb86bc9ee"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "726e29cea4208b59156459e6bc005c9d08fc06ff36cf10c6c03608e42edbbc60"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-canvas-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "38a7bf068905d43bb144362b534e24f4fa78e900475c52d882e329b32a006faf"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "28e292c139337783a410bd4c3c363525a89e47967da950d5c72c48a4ee4eaf22"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "fa506b129730c7dd31c2c35c98d0b25dd9f61e125874d86044dcaf36be86bbdc"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "3e0547694cbf4a9f869b166f590b6524ed5a314a6efa71ab1180f57a2bf3dc46"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cd6d518a2b76952d781c48e0f0f792093e8fc485557ba22167d9be533723caea"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "e9140009dd0b3c254704d693a485dc5265f9490bcfa3f6893d3595be6456eba1"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-expired-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "99606139297ed02219a85456f3a7872d073b2fb4d902ab6484c270fcc3d35fa6"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "07f8f5336682b4fad87a26b262eecab698893f8f1c16e02bba93bbf32f8e72ba"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "701569ca1a90d83ad7c082667365ac987dcc75c6def07549ba6882bf7219f323"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "9c9f80c990856a4d9fb872a10d58993a9f96df7e590d872af768a6c499a37a89"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5f92def11435a578f6c1f0aa0a92f4af72c7dfde6000f3f32f72890eb86bc9ee"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "726e29cea4208b59156459e6bc005c9d08fc06ff36cf10c6c03608e42edbbc60"
+    },
+    {
+      "path": "screenshots/frost-armageddon/frost-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "38a7bf068905d43bb144362b534e24f4fa78e900475c52d882e329b32a006faf"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b4615b17056a1d3dd655a931aa605f29ffb3d65c124d8ba27f0c5fce809f0b31"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e157d00d97431d57f6a08cfda8477cd30bf65445b7b19b3c567cbfec897e0193"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "6b5726dd8211dc16ca9d6d79e53c55f37524a8cc70107d9bd975086da65efd2c"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6313612860a2376400c8954ccc05e425939df7dc78304762ef0c21c92cd4fd87"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "384c3a6ed3ad7c44ad0094c2f8b60b9b14a9f70c2e1ea6d55a491d3ca2efca53"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-canvas-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8327247afa3a7f84a9b5eb41c431dee018f034c49025f55b73f28215c8c018b5"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "5df00958fa888d4c67f0bcd1b7727d99487916f1aa56b88f7fddb1633b902602"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "03eebe5e044927b81b4251f24ca9692288fa0f869f75a815d77cc5efab79e6f9"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b7103fa8fc00db961a41c9862421715980bb31a7e12901744072c94fc5491666"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3f716dfee1841700c341b356df1e7aaa37908a6117f5ea90a507eeb5a9733a44"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "d93e4e844e1121c3af64d8a7fc2c2bb227b34eecc7ef1052f6fcde2f7d1ed71d"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-impact-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0f9d2a8fd9de667aca44e4e6f03e365a259f2b9ddd86f0ba4f8a2ad8b8b9ea37"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank1-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b4615b17056a1d3dd655a931aa605f29ffb3d65c124d8ba27f0c5fce809f0b31"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank1-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e157d00d97431d57f6a08cfda8477cd30bf65445b7b19b3c567cbfec897e0193"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank3-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "6b5726dd8211dc16ca9d6d79e53c55f37524a8cc70107d9bd975086da65efd2c"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank3-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6313612860a2376400c8954ccc05e425939df7dc78304762ef0c21c92cd4fd87"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank5-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "384c3a6ed3ad7c44ad0094c2f8b60b9b14a9f70c2e1ea6d55a491d3ca2efca53"
+    },
+    {
+      "path": "screenshots/frost-armageddon/meteor-rank5-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8327247afa3a7f84a9b5eb41c431dee018f034c49025f55b73f28215c8c018b5"
+    },
+    {
+      "path": "screenshots/frost-armageddon/stress-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "094d7da38851a1332f3461a18138d8e941b9d4aac644548ea2e371fc4ee6a334"
+    },
+    {
+      "path": "screenshots/frost-armageddon/stress-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a1e523b14ce98872755ee461a7b90551760b7dfd4aa8a14a0071848a56f307c6"
+    },
+    {
+      "path": "screenshots/frost-armageddon/stress-canvas-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "eca5747cd48acd425f5c4260f2b898ac2490baedc07883e4a9bb85cab5e6e094"
+    },
+    {
+      "path": "screenshots/frost-armageddon/stress-canvas-390.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4d95a5345ff2d5383d704318f8796ca343c769b5d024db0d994f3a691b1a6a28"
+    }
+  ]
+}

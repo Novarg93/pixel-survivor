@@ -1,0 +1,689 @@
+{
+  "version": 2,
+  "source": "art/generated/warrior-animation-review-v1",
+  "reviewStatus": "accepted-user-integration",
+  "acceptance": {
+    "date": "2026-11-13",
+    "text": "давай интегрировать принятые варианты ультмейтов в игру",
+    "review": "art/generated/warrior-ultimates-animation-review-v1/viewer.html"
+  },
+  "sourceConcepts": {
+    "banner": "war-banner-a",
+    "earthbreaker": "earthbreaker-a",
+    "ruin": "spear-of-ruin-b"
+  },
+  "width": 2048,
+  "height": 1358,
+  "atlasSHA256": "81df14d30602322f450a7dd1a5fc34805de19015f8b442d76344a3586bb2892e",
+  "clips": {
+    "gesture-earthbreaker": {
+      "frames": [
+        "gesture-earthbreaker/0",
+        "gesture-earthbreaker/1",
+        "gesture-earthbreaker/2",
+        "gesture-earthbreaker/3",
+        "gesture-earthbreaker/4",
+        "gesture-earthbreaker/5",
+        "gesture-earthbreaker/6",
+        "gesture-earthbreaker/7",
+        "gesture-earthbreaker/8",
+        "gesture-earthbreaker/9",
+        "gesture-earthbreaker/10",
+        "gesture-earthbreaker/11",
+        "gesture-earthbreaker/12"
+      ],
+      "frameMs": 90,
+      "periodMs": 1170,
+      "width": 128,
+      "height": 128,
+      "pivot": {
+        "x": 64,
+        "y": 100
+      },
+      "jobId": "5e628268-2408-45cd-915c-23307de19a00",
+      "sourceFrames": [
+        "gesture-earthbreaker/0",
+        "gesture-earthbreaker/1",
+        "gesture-earthbreaker/2",
+        "gesture-earthbreaker/3",
+        "gesture-earthbreaker/4",
+        "gesture-earthbreaker/5",
+        "gesture-earthbreaker/6",
+        "gesture-earthbreaker/7",
+        "gesture-earthbreaker/8",
+        "gesture-earthbreaker/9",
+        "gesture-earthbreaker/10",
+        "gesture-earthbreaker/11",
+        "gesture-earthbreaker/12"
+      ]
+    },
+    "gesture-ruin": {
+      "frames": [
+        "gesture-ruin/0",
+        "gesture-ruin/1",
+        "gesture-ruin/2",
+        "gesture-ruin/3",
+        "gesture-ruin/4",
+        "gesture-ruin/5",
+        "gesture-ruin/7",
+        "gesture-ruin/8",
+        "gesture-ruin/9",
+        "gesture-ruin/10",
+        "gesture-ruin/11",
+        "gesture-ruin/12"
+      ],
+      "frameMs": 90,
+      "periodMs": 1080,
+      "width": 128,
+      "height": 128,
+      "pivot": {
+        "x": 64,
+        "y": 100
+      },
+      "jobId": "fb1d403e-ea3e-442b-bc1b-974319eeb622",
+      "sourceFrames": [
+        "gesture-ruin/0",
+        "gesture-ruin/1",
+        "gesture-ruin/2",
+        "gesture-ruin/3",
+        "gesture-ruin/4",
+        "gesture-ruin/5",
+        "gesture-ruin/6",
+        "gesture-ruin/7",
+        "gesture-ruin/8",
+        "gesture-ruin/9",
+        "gesture-ruin/10",
+        "gesture-ruin/11",
+        "gesture-ruin/12"
+      ]
+    },
+    "vfx-earthbreaker": {
+      "frames": [
+        "vfx-earthbreaker/0",
+        "vfx-earthbreaker/1",
+        "vfx-earthbreaker/2",
+        "vfx-earthbreaker/3",
+        "vfx-earthbreaker/4",
+        "vfx-earthbreaker/5",
+        "vfx-earthbreaker/6",
+        "vfx-earthbreaker/7",
+        "vfx-earthbreaker/8",
+        "vfx-earthbreaker/9",
+        "vfx-earthbreaker/10",
+        "vfx-earthbreaker/11",
+        "vfx-earthbreaker/12"
+      ],
+      "frameMs": 90,
+      "periodMs": 1170,
+      "width": 224,
+      "height": 160,
+      "pivot": {
+        "x": 41,
+        "y": 80
+      },
+      "jobId": "e0aff92e-8e3c-483c-93dc-18033dc763a9",
+      "sourceFrames": [
+        "vfx-earthbreaker/0",
+        "vfx-earthbreaker/1",
+        "vfx-earthbreaker/2",
+        "vfx-earthbreaker/3",
+        "vfx-earthbreaker/4",
+        "vfx-earthbreaker/5",
+        "vfx-earthbreaker/6",
+        "vfx-earthbreaker/7",
+        "vfx-earthbreaker/8",
+        "vfx-earthbreaker/9",
+        "vfx-earthbreaker/10",
+        "vfx-earthbreaker/11",
+        "vfx-earthbreaker/12"
+      ]
+    },
+    "vfx-spear-of-ruin": {
+      "frames": [
+        "vfx-spear-of-ruin/0",
+        "vfx-spear-of-ruin/1",
+        "vfx-spear-of-ruin/2",
+        "vfx-spear-of-ruin/3",
+        "vfx-spear-of-ruin/4",
+        "vfx-spear-of-ruin/5",
+        "vfx-spear-of-ruin/6",
+        "vfx-spear-of-ruin/7",
+        "vfx-spear-of-ruin/8"
+      ],
+      "frameMs": 75,
+      "periodMs": 675,
+      "width": 224,
+      "height": 96,
+      "pivot": {
+        "x": 112,
+        "y": 48
+      },
+      "jobId": "972464e2-73b1-400e-9ded-4c78e0096ee7",
+      "sourceFrames": [
+        "vfx-spear-of-ruin/0",
+        "vfx-spear-of-ruin/1",
+        "vfx-spear-of-ruin/2",
+        "vfx-spear-of-ruin/3",
+        "vfx-spear-of-ruin/4",
+        "vfx-spear-of-ruin/5",
+        "vfx-spear-of-ruin/6",
+        "vfx-spear-of-ruin/7",
+        "vfx-spear-of-ruin/8"
+      ]
+    },
+    "gesture-banner": {
+      "frames": [
+        "gesture-banner/0",
+        "gesture-banner/1",
+        "gesture-banner/2",
+        "gesture-banner/3",
+        "gesture-banner/4",
+        "gesture-banner/5",
+        "gesture-banner/6",
+        "gesture-banner/7",
+        "gesture-banner/8"
+      ],
+      "frameMs": 90,
+      "periodMs": 810,
+      "width": 128,
+      "height": 128,
+      "pivot": {
+        "x": 64,
+        "y": 100
+      },
+      "jobId": "0c7f8e93-b0c3-4a3b-bfff-f780ef9d3c97",
+      "sourceFrames": [
+        "gesture-banner/0",
+        "gesture-banner/1",
+        "gesture-banner/2",
+        "gesture-banner/3",
+        "gesture-banner/4",
+        "gesture-banner/5",
+        "gesture-banner/6",
+        "gesture-banner/7",
+        "gesture-banner/8"
+      ]
+    },
+    "vfx-war-banner": {
+      "frames": [
+        "vfx-war-banner/0",
+        "vfx-war-banner/1",
+        "vfx-war-banner/2",
+        "vfx-war-banner/5",
+        "vfx-war-banner/6",
+        "vfx-war-banner/7",
+        "vfx-war-banner/8"
+      ],
+      "frameMs": 75,
+      "periodMs": 525,
+      "width": 192,
+      "height": 192,
+      "pivot": {
+        "x": 96,
+        "y": 131
+      },
+      "jobId": "4281ec45-3bd6-4613-ab97-d55ea69fc5a2",
+      "sourceFrames": [
+        "vfx-war-banner/0",
+        "vfx-war-banner/1",
+        "vfx-war-banner/2",
+        "vfx-war-banner/3",
+        "vfx-war-banner/4",
+        "vfx-war-banner/5",
+        "vfx-war-banner/6",
+        "vfx-war-banner/7",
+        "vfx-war-banner/8"
+      ]
+    }
+  },
+  "locations": {
+    "gesture-earthbreaker/0": {
+      "source": "raw/gesture-earthbreaker/00.png",
+      "sha256": "850658fec08cc0de296f8d4f0689e618eadde6b7d1265cd0cc83ab04b8dc459e",
+      "pixelSHA256": "90878cd6978cba3987d008f4ffc4eb534c00a09ac837a80fb226aeb7c7dc1f2d",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/1": {
+      "source": "raw/gesture-earthbreaker/01.png",
+      "sha256": "59b0ca6b66d8001c55cc66e2c53c9f34c817d12fac678c09b30d699b3f93ed95",
+      "pixelSHA256": "91ef950caa70fbab02cf4816df05ff521930073f47ef6b31e81176d14f3647c5",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/2": {
+      "source": "raw/gesture-earthbreaker/02.png",
+      "sha256": "0521bf079a1bb03ff2eb99369e8d5ae9941669740bd416e5479050c009dfd47c",
+      "pixelSHA256": "64eaa8ac0b7d36d3249e73edbf693abef2f3697dd19ab780561a17d6416c2f72",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/3": {
+      "source": "raw/gesture-earthbreaker/03.png",
+      "sha256": "77e603c3ae748f60230eb9af33854c9361ab669182d311b85d02d70f8530de2b",
+      "pixelSHA256": "aa9e065088d34a9ee8a7747b615b85a68de4ed5589749ef5513146022af5437d",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/4": {
+      "source": "raw/gesture-earthbreaker/04.png",
+      "sha256": "d1240b90cdd6b3089597d08182cf2c4ca2283d5a0b91edc7fc741a7af15e99ab",
+      "pixelSHA256": "aef3a0b687560ce8c8f3f44403444056088887e5d4ceb2cc8753e4014c619765",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/5": {
+      "source": "raw/gesture-earthbreaker/05.png",
+      "sha256": "c4f4c0b6701579ee926bd35f5a8103b8aa0bddb4a5c9d881cec3f20d1ece1196",
+      "pixelSHA256": "ef26493d89ad4c0ed60125ded75a40dc8abb749e16fb861fdc38e6d0b3c2b662",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/6": {
+      "source": "raw/gesture-earthbreaker/06.png",
+      "sha256": "d66449354f8bd923135c0fc4b8e712c74b5186f81d28f10f856a995963ad4989",
+      "pixelSHA256": "71dae02a8fc979543152f3ac764d3211507395b2c41b4613d866cacb1afc92dc",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/7": {
+      "source": "raw/gesture-earthbreaker/07.png",
+      "sha256": "e997a8437a00dd3992d0b867be1a4c44342e634e2e08dfe342055a2a76307eaf",
+      "pixelSHA256": "1389a10f05586b0fb46564eb9c80d6b1cf8c20ed0b6983ae1a850f8bde02513b",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/8": {
+      "source": "raw/gesture-earthbreaker/08.png",
+      "sha256": "5cb84e673a6ab796d629a599e475c0977c052196d41f97dee239c23738ddf4df",
+      "pixelSHA256": "9cacdb36517f92b0f368f6fcd72d617dd540593eaab54463120576e49dda2643",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/9": {
+      "source": "raw/gesture-earthbreaker/09.png",
+      "sha256": "7f395b85e703182bb3860a85e46e674e435952a6a36d1d3929260684e77395a1",
+      "pixelSHA256": "53a8cc3d2388512308371517eb3ace832b9af6c9d5ee44365062fbe3d3385e8f",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/10": {
+      "source": "raw/gesture-earthbreaker/10.png",
+      "sha256": "1aa4e6749f1dce9c520901e3ce35278f591eaa9398c8735b891718b381e9f1df",
+      "pixelSHA256": "1dd8ad656ab8d8d5e9ca2128a161a0af7e7f66e7ea7625e2d471c16200096ec4",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/11": {
+      "source": "raw/gesture-earthbreaker/11.png",
+      "sha256": "0e87473b33ee241c0566e1199f5ae7b4e09db98fffbe6c297d2e725e6e3a9fd9",
+      "pixelSHA256": "113dde6807c44fc530d50e75d4ad7bf123d258e5f0dc3edf1f1bf368a5ef9761",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-earthbreaker/12": {
+      "source": "raw/gesture-earthbreaker/12.png",
+      "sha256": "058e07e0009a208265802b9dbb7f3a3cad72c2df1a9894ec9236939b8325fe44",
+      "pixelSHA256": "093a34d04731afb4b3eb7af263c213fbbc06102c8f4398b350d242b7f0e53619",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/0": {
+      "source": "raw/gesture-ruin-v2/00.png",
+      "sha256": "430f5555409ec4bf1f73c9bf0471397b23ed4b8934f9bd8e0f2b3c5871c994d3",
+      "pixelSHA256": "87193341acfb4f234836a624eafbfeaf98e128c4caca9e2e188a7a8fb9ffff6b",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/1": {
+      "source": "raw/gesture-ruin-v2/01.png",
+      "sha256": "ca585f57dc674068c15a9c6bd6f9d44693f63ef5636a21d433b03383cc94eaae",
+      "pixelSHA256": "431845aadbe9a82aef5c8c8b57b22a8bba2f2f108ac1aa3f7aa3a8d93b21cbdf",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/2": {
+      "source": "raw/gesture-ruin-v2/02.png",
+      "sha256": "453c4253de04d2fe9de25d07924ca547c75138d446d8cc657580343eb8a4482a",
+      "pixelSHA256": "46dba2d6aaf041e72df54df2b7d3e3d61b709cc7e60236fabeff0d64f3223934",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/3": {
+      "source": "raw/gesture-ruin-v2/03.png",
+      "sha256": "b50a5534040a7443f0bf9aa38f723ae586f0ed21fa8bd643d8ef9dab9002f3ce",
+      "pixelSHA256": "e34f54060e5941aa960903708260d10f658fc760a493c0752bf063a62c026f24",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/4": {
+      "source": "raw/gesture-ruin-v2/04.png",
+      "sha256": "5a0f6c67ca20c4d133a513fea9567e5ac7c70c2d0d76e284ea62f9f261e18950",
+      "pixelSHA256": "f3b9b52ce8ce062ffe500f260b82b77a0b97c82929ac3f718f367b0c8ac7c17a",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/5": {
+      "source": "../warrior-spear-empty-hand-review-v1/frames/ultimate-05.png",
+      "sha256": "854355a952f3f6542dd63f2749cae067ac0a5de29c5f4194fee47a56174deace",
+      "pixelSHA256": "8de666c3da7d8aa6cde13fbdf9405e9a11cecbbc56f729f96d6045dbed22ec9c",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/7": {
+      "source": "raw/gesture-ruin-v2/07.png",
+      "sha256": "8ba9b9fe8ba6c52f29c6eb06d8aee34b79e9ed721531dbf3dfadd919ea129ee7",
+      "pixelSHA256": "738ad2de187b96064b6a65ce8a1ff4f0e5d86f0bcc5713da31db2ae69e4e4855",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/8": {
+      "source": "raw/gesture-ruin-v2/08.png",
+      "sha256": "f3733ec3697d43a3dab52107f616e14f99ad6c732a61f734afb04f6959c149e5",
+      "pixelSHA256": "0f56ee7f3d31528e26347e902afa1f86315358de4894110487fe345ada3ec8bf",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/9": {
+      "source": "raw/gesture-ruin-v2/09.png",
+      "sha256": "bbae8790698fd91d3ce5867982cffacab067e9fef423fbfddfa6926808951527",
+      "pixelSHA256": "7ae3349c988e1b010f4632113615998f80c0f577d2ca1b1b73e245d0575af62b",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/10": {
+      "source": "raw/gesture-ruin-v2/10.png",
+      "sha256": "c703526317d41b7fa27a952e3a8d1437c7b493f4fe7fdccd4d63624e75434034",
+      "pixelSHA256": "101e212504b5f2e1d1d210d86f86689e9b53ca13b2503cc923ac481be9b72f15",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/11": {
+      "source": "../warrior-spear-empty-hand-review-v1/frames/ultimate-10.png",
+      "sha256": "1d41754f34df710274af2c5e981b2f73317648091a2a174c407f0d2ba90e36c0",
+      "pixelSHA256": "ab27fc6912f86b951d80c26b98a7be4301c22ff02cc4d60529fe4c5101466caa",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-ruin/12": {
+      "source": "../warrior-spear-empty-hand-review-v1/frames/ultimate-11.png",
+      "sha256": "25f4ae8cb7fdcb715f86c265fbe02abd2f44dd8a97cfe9b2af9063ee8ec043ac",
+      "pixelSHA256": "710930e287d831ea011005ec788073faa86f2ca471cd0e507bdc4f43d2ab90ba",
+      "width": 128,
+      "height": 128
+    },
+    "vfx-earthbreaker/0": {
+      "source": "raw/vfx-earthbreaker/00.png",
+      "sha256": "960f22b62f6543d38e2c4dd1c85999c6bcee43cb26308a3fcb3863aeb9f8338d",
+      "pixelSHA256": "dde8f3f2ca7ea2b006cdbf860d73cfa3f2b084194dbc03488d10b77c722181ac",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/1": {
+      "source": "raw/vfx-earthbreaker/01.png",
+      "sha256": "358ad316275142229e708571fa41e120672816b8c743e0f3963011629a975f6d",
+      "pixelSHA256": "1e8cc19542ae2691480168cfe5dc595c6923b458f81f2a2baa5274745721a57d",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/2": {
+      "source": "raw/vfx-earthbreaker/02.png",
+      "sha256": "16f04c5f9bd4fa4bb626137878b2f6f82436d7aabeb595564957792f23e64ce3",
+      "pixelSHA256": "349da8cfda9d9f763e9484866e30e5d365198f9fec84c620ee9d5998ddd707d8",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/3": {
+      "source": "raw/vfx-earthbreaker/03.png",
+      "sha256": "fc396bac64ed0c60489d7138517196bca578af0d12de0b6c6b4f0e921704b707",
+      "pixelSHA256": "bfbf6c4b94b8cf2ff41f148a2acc9d8168172be5f7bc9b71b5fa11d90b658d1b",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/4": {
+      "source": "raw/vfx-earthbreaker/04.png",
+      "sha256": "0a5ba75ec5026c714e749781ea5fe099b7fb3eebe4e6d9bea058bb9e10ce06c6",
+      "pixelSHA256": "2a22c22fbcc37ff8fefbe28d2f4d4d10344d1a000b3fd3268fbbcee8c767e213",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/5": {
+      "source": "raw/vfx-earthbreaker/05.png",
+      "sha256": "969cdf60aacfe20053601cc862877d41537390b65220ad2483b3c103ec33538d",
+      "pixelSHA256": "de9ce69964247029edb0ee5bd15e049730b7acb4fdf693037cb7bf84ff729b87",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/6": {
+      "source": "raw/vfx-earthbreaker/06.png",
+      "sha256": "e8ce2870ace7f29f92f9da84f3df32d4a7cac358cf10cddcc975c1fe89f3da0f",
+      "pixelSHA256": "8523f1976d0bbb106ee8009cb185ebb2e9256783e35f0d7fa4416f397d11c238",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/7": {
+      "source": "raw/vfx-earthbreaker/07.png",
+      "sha256": "c74a2f95814b31c02b31bc866a425ecb6c33cffc3110bc5a95a1bc18d69589fc",
+      "pixelSHA256": "8dd946e74fca93bcf338551f8021aeb795f71f1402c4a5730d19fe13b69c8388",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/8": {
+      "source": "raw/vfx-earthbreaker/08.png",
+      "sha256": "4d7c83f7a9f13809fb2ac048cedce4aa770a1c0148059fecb120cf55aefeab46",
+      "pixelSHA256": "ccc8cc38403712f7dea468461ea78c2ff31df7b4ce61c7db4002fe09e8756677",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/9": {
+      "source": "raw/vfx-earthbreaker/09.png",
+      "sha256": "21d76c2bb4e788839206a6183fcaa336ce3f7e52cc57972f355cb32a22544083",
+      "pixelSHA256": "59b6fa0f83b05c7fb336ccd75efb9d380055cc178e88c83d864dbd4608bf6b64",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/10": {
+      "source": "raw/vfx-earthbreaker/10.png",
+      "sha256": "e8e2d7ba8f8ceb9c5019ea929f59ea0cfe676194717cfa46ab51d851f014b28b",
+      "pixelSHA256": "01dccc5f60ca70d60390bbbe4aac518a34160bbe158ceefcf5657cba7340468c",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/11": {
+      "source": "raw/vfx-earthbreaker/11.png",
+      "sha256": "cf5862a495a96b9137c22981171596ff44d896f7922a10606cc1e8d080623c02",
+      "pixelSHA256": "74da323510e5b6a1771d602591121ff1a34ded2f010eae98ea874bd0588894f2",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-earthbreaker/12": {
+      "source": "raw/vfx-earthbreaker/12.png",
+      "sha256": "9ed7199819fce5c8893c70cb7d0c286e2b542ae44e4bfdbe7dbffb495ef69216",
+      "pixelSHA256": "fd6be315e4d94d1149038959915385499d4bd926d2e2e3dba4c87a8b0d1ccd42",
+      "width": 224,
+      "height": 160
+    },
+    "vfx-spear-of-ruin/0": {
+      "source": "raw/vfx-spear-of-ruin/00.png",
+      "sha256": "b6fcecc2e8c4fac8290e74b44ea3f3d03b9fbd95f5a249890931932e2dc0c4d1",
+      "pixelSHA256": "c6957a14b01a7758c6a7df105b26cb8c28d948bede177c1210f19d06b0c19531",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/1": {
+      "source": "raw/vfx-spear-of-ruin/01.png",
+      "sha256": "23b46f264f64efc789b15cb22204c64c37f4d4af811af50f8ed7e276a7c7b964",
+      "pixelSHA256": "231dc2baa016cd0902050032570672f865f9344c8656462b5b8b984d2b39c367",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/2": {
+      "source": "raw/vfx-spear-of-ruin/02.png",
+      "sha256": "11c7b9ac01240fab8e853b46aec3012c8448204a1f9b44a95b14bf91d6cb5be9",
+      "pixelSHA256": "30c0635467ae89ce5ecb2fa7e35f8b5e93dffb3a445c2aa23c2ea08eb352b448",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/3": {
+      "source": "raw/vfx-spear-of-ruin/03.png",
+      "sha256": "6de3436f017acfde0a7db4b6dca21c97e1e50b714748d788935ac65b4205dfe5",
+      "pixelSHA256": "df2adc293ae919587e48200ecc033292d563622a64ec64799a91d0c090430bc3",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/4": {
+      "source": "raw/vfx-spear-of-ruin/04.png",
+      "sha256": "b4d702e4bccc8a8d80fe58b181c62e5012790defb5638ebcca0f970955de3fab",
+      "pixelSHA256": "80c832d3be999a28519e5033c4f432917ac05bd22404e4d2b76a7ca23aeeb560",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/5": {
+      "source": "raw/vfx-spear-of-ruin/05.png",
+      "sha256": "2d5cd2078691a9f2ce2964a780ac65737ca02427f7cf4569297c99360a33c3c7",
+      "pixelSHA256": "1a735ce1fb4644580e12eaa22845081ba03943d7fc56b6bb3bb68e8ffe0f5979",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/6": {
+      "source": "raw/vfx-spear-of-ruin/06.png",
+      "sha256": "f723ba4fdf95ec54fb760af71ef295f10f8298795885109fed3a73e9abde5bd0",
+      "pixelSHA256": "fe98ef8c9a846b6780cbe48dd0cfbf8b750d62e54353a854c712d0c06cc7d595",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/7": {
+      "source": "raw/vfx-spear-of-ruin/07.png",
+      "sha256": "876e4df0dfb402e2a478c3ed050110219d58f5f801ce60f38782cf8be2295f4c",
+      "pixelSHA256": "bc18689641f0d213cdccbf672f71cd7cdb103f8cccd9ab0b054dc7360ec03e25",
+      "width": 224,
+      "height": 96
+    },
+    "vfx-spear-of-ruin/8": {
+      "source": "raw/vfx-spear-of-ruin/08.png",
+      "sha256": "627d8679401c2dea46ce9358073389f305070e6022f7629f894d13790645fce2",
+      "pixelSHA256": "9d1b77c7febfe8172b635ce7801ede1d6ed62ebbeadcafa9891ca9ce2ef5bc69",
+      "width": 224,
+      "height": 96
+    },
+    "gesture-banner/0": {
+      "source": "raw/gesture-banner-v3/00.png",
+      "sha256": "18c26b388b939a082872a50716fbf4d0954bff694497f2b4eed4587dc444def9",
+      "pixelSHA256": "9f48a6fda6d87cc7936829af8fca6aeb8a43f3205ad1b75a5e77daad26c8e921",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/1": {
+      "source": "raw/gesture-banner-v3/01.png",
+      "sha256": "8681381ca2138fa680ed8fbc1015ee9840ad7a8b020c1d561ab0a1bae92c641b",
+      "pixelSHA256": "5186847f976cb843cfaae80144cf0436cfe1ee14c97e221ac619c3af51a2e051",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/2": {
+      "source": "raw/gesture-banner-v3/02.png",
+      "sha256": "1100f28342839e6acbc753dffadc9424f2470c99f151dc49454348b1358c6752",
+      "pixelSHA256": "19d9f86515261eab1a4e175494f760a41713c71348283515dc60da0b5ded662a",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/3": {
+      "source": "raw/gesture-banner-v3/03.png",
+      "sha256": "7f76c12fdd37858aee017d3d396ca5cb7ea2abd4cb8f3659dbada559774e39bf",
+      "pixelSHA256": "f506f384acdcb794232de61c7e7796b4dd8d2f998f90ba19c469857e6d2819e4",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/4": {
+      "source": "raw/gesture-banner-v3/04.png",
+      "sha256": "0a5092f77f518da876d102d2543f10c4fcf1f32d2579ecd983523221c719a0fa",
+      "pixelSHA256": "96ba95a9f1dd470cf87f035af7dc12f0a3f758b19fa88bb4afccd36da7db4489",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/5": {
+      "source": "raw/gesture-banner-v3/05.png",
+      "sha256": "ee4dac1ade87c220f8a5f850e2093dadcfd6eaf75511e38f8e852172ac3ed8ff",
+      "pixelSHA256": "f3a5e81a10e7c4deb64066512c9d59c2f3f313855a11b8ee40ed504dd7037398",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/6": {
+      "source": "raw/gesture-banner-v3/06.png",
+      "sha256": "824a5d0d53794fd89559e5f2726bb6d23801747acaec2e7eeb7fa233bd0465b7",
+      "pixelSHA256": "b8b1f0fff90359c4e6f3899c6cd34698ea5255fadc9e79d0bba2e2c6330aeee4",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/7": {
+      "source": "raw/gesture-banner-v3/07.png",
+      "sha256": "9042a6e1d87efe50b4659bc9dc296998b37f026566688ec7b60f03976c74e588",
+      "pixelSHA256": "270ea532a932c53ad580e2fac97a155895f6127708de81e7c26d36c3196968a5",
+      "width": 128,
+      "height": 128
+    },
+    "gesture-banner/8": {
+      "source": "raw/gesture-banner-v3/08.png",
+      "sha256": "e3fd6a378f981304536b4df85942cdb89e24ac129864f079848a31639d0f108c",
+      "pixelSHA256": "939fbafef537dbcce871987438eab1e08bb8eaa9f4f4bf9dc45907b4c0b19a51",
+      "width": 128,
+      "height": 128
+    },
+    "vfx-war-banner/0": {
+      "source": "raw/vfx-war-banner/00.png",
+      "sha256": "3c78dcf32f9c7e056b056c03f8cae99e2b915b23fbc857abde624d158bcf5603",
+      "pixelSHA256": "b6d5b52066690f4d0ffcea41cbf94d35a8c39d88702e3d0d7cfdecac9386190c",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/1": {
+      "source": "raw/vfx-war-banner/01.png",
+      "sha256": "84bdf8b7c1c4f1d2aa3ce5e884206d80a15fa3cba72452a47f6facaeeb5b53c6",
+      "pixelSHA256": "b82ce2ace093d51a1ed55564e6e3bb15ed9d893d54f024f5f6ca319204452703",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/2": {
+      "source": "raw/vfx-war-banner/02.png",
+      "sha256": "c43bc874f3d22b3f4746df8019c4475126b0f8ba73b64226162498f206b8a388",
+      "pixelSHA256": "f56d80961d12a1de9ea77cd2a7678a14aa897bd49a8dc9751487d17042977e52",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/5": {
+      "source": "raw/vfx-war-banner/05.png",
+      "sha256": "6f41f012941c70551c11b4bfd855df7e2abafb86bbcc14e684235f8d89d92431",
+      "pixelSHA256": "ec1cdd0157eace1b511464bef697423d39c1f37dd0ed33d49fad045c73eb2ac1",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/6": {
+      "source": "raw/vfx-war-banner/06.png",
+      "sha256": "3cc491d236f7b1021d70c0c12e7107187b6232c2ec96bf3faa185b9f5ee132ed",
+      "pixelSHA256": "c28feba6ec82033b0d25f0a2694d7b55a59c1f6059b2399d353b64f94bafab3c",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/7": {
+      "source": "raw/vfx-war-banner/07.png",
+      "sha256": "625fe4e9d986d2e8f2c118f9ecd1a66a288b1f1b3c6cf98caf5c686276017750",
+      "pixelSHA256": "2a4796e9c789a1931b6f043e7fceb7dd5bfba5ab5e7bf5ec7ffdee2a3b33c30f",
+      "width": 192,
+      "height": 192
+    },
+    "vfx-war-banner/8": {
+      "source": "raw/vfx-war-banner/08.png",
+      "sha256": "1f2e7ec8c8b160b40349faaeae40f7f18adc57e07726acc176939d1677920c29",
+      "pixelSHA256": "c14d12b2fce697d76dee976093fb1ca3d42a66dbf367fa3e76c33268b9b2e3f1",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "northBodyReuse": {
+    "banner": "north-block",
+    "earthbreaker": "north-stomp",
+    "ruin": "north-throw",
+    "source": "src/game/art/warriorSkillsManifest.json",
+    "selectedBaseCell": 4
+  }
+}

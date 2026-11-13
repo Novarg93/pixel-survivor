@@ -15,6 +15,8 @@ import { HD_CORE_TEXTURE } from './hdCoreLayout';
 import { RUNNER_TEXTURE, RUNNER_CLIPS, runnerFrame, type RunnerPlayback } from './runnerPack';
 import {MAGE_HERO,MAGE_HERO_ORIGIN,mageHeroSelection,mageHeroTexture} from './mageHeroPack';
 import {MAGE_IDLE} from './mageIdlePack';
+import {WARRIOR_HERO,warriorHeroTexture,warriorHeroSelection} from './warriorHeroPack';
+import {WARRIOR_SKILLS,warriorSkillsTexture} from './warriorSkillsPack';
 import {MAGE_RUN_V2} from './mageRunPackV2';
 import {MAGE_BLINK,MAGE_BLINK_TEXTURE} from './mageBlinkPack';
 import { ENEMY_TEXTURE, ENEMY_CLIPS, isHdEnemy, packedEnemyFrame } from './enemyPack';
@@ -54,7 +56,7 @@ function lootAsset(size = 16, scale = 1): AssetSpec { return { ...hd(size, size,
 export const ASSET_REGISTRY = {
   magePhantom:{...hd(MAGE_PHANTOM.canvas,MAGE_PHANTOM.canvas,MAGE_PHANTOM.displaySize/MAGE_PHANTOM.canvas,'effect'),source:{kind:'atlas',key:MAGE_PHANTOM_TEXTURE,width:MAGE_PHANTOM.canvas,height:MAGE_PHANTOM.canvas},origin:{x:.5,y:.25},clips:{...single,idle:12}},
   mage: {...hd(MAGE_HERO.canvas,MAGE_HERO.canvas,MAGE_HERO.displaySize/MAGE_HERO.canvas,'actor'),source:{kind:'atlas',key:mageHeroTexture(0),width:MAGE_HERO.canvas,height:MAGE_HERO.canvas},origin:MAGE_HERO_ORIGIN,clips:{idle:MAGE_IDLE.clips.front.frames.length,walk:0,runStart:MAGE_RUN_V2.clips.south['run-start'].frames.length,run:MAGE_RUN_V2.clips.south.run.frames.length,runStop:MAGE_RUN_V2.clips.south['run-stop'].frames.length,hurt:0,death:13}},
-  warrior: { ...hd(16, 20, 1.5, 'actor', { idle: 2, walk: 4, hurt: 2, death: 0 }), origin: { x: 0.5, y: 0.75 } },
+  warrior: { ...hd(192,192,WARRIOR_HERO.displaySize/WARRIOR_HERO.canvas,'actor',{idle:13,walk:13,hurt:0,death:0}),source:{kind:'atlas',key:warriorHeroTexture(0),width:192,height:192},origin:{x:.5,y:132/192} },
   grunt: hd(16, 16, 1, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
   gruntElite: hd(16, 16, 1.4, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
   runner: runnerActor(), runnerElite: { ...runnerActor(1.4), adornment: 'copper-crest' },
@@ -77,7 +79,8 @@ export const ASSET_REGISTRY = {
   darkForest: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
   frost: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,1,'effect',{idle:SHIELD_NOVA.clips['frost-nova'].frameCount,walk:0,hurt:0,death:0}),source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, lightning: { ...drawn('RegularLightningArt'), status: 'hd-integrated' }, meteor: {...hd(MAGE_METEOR.canvas,MAGE_METEOR.canvas,MAGE_METEOR.flightSize/MAGE_METEOR.canvas,'effect'),source:{kind:'atlas',key:MAGE_METEOR_TEXTURE,width:MAGE_METEOR.canvas,height:MAGE_METEOR.canvas},origin:{x:.5,y:MAGE_METEOR.flightPivot.y/MAGE_METEOR.canvas},clips:{...single,idle:MAGE_METEOR.clips.flight.frameCount}},
   shield: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,SHIELD_NOVA.shieldScale,'effect',{idle:SHIELD_NOVA.clips['shield-loop'].frameCount,walk:0,hurt:0,death:0}),origin:{x:64/128,y:108/128},source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, whirlwind: { ...drawn('WarriorMagic:whirlwind'), status: 'hd-integrated' }, slam: { ...drawn('WarriorMagic:slam'), status: 'hd-integrated' },
-  blades: { ...drawn('WarriorMagic:blades'), status: 'hd-integrated' }, iron: { ...drawn('WarriorMagic:iron'), status: 'hd-integrated' }, hit: { ...drawn('CombatFeedback:hit'), status: 'hd-integrated' }, death: { ...drawn('CombatFeedback:death'), status: 'hd-integrated' },
+  spear:{...hd(192,192,.5,'projectile'),source:{kind:'atlas',key:warriorSkillsTexture(WARRIOR_SKILLS.locations.spear.page),width:192,height:192}},
+  blades: { ...drawn('WarriorMagic:piercingThrow'), status: 'hd-integrated' }, iron: { ...drawn('WarriorMagic:iron'), status: 'hd-integrated' }, hit: { ...drawn('CombatFeedback:hit'), status: 'hd-integrated' }, death: { ...drawn('CombatFeedback:death'), status: 'hd-integrated' },
   buffHaste: { ...drawn('LootPresentation:haste'), status: 'hd-integrated' }, buffFury: { ...drawn('LootPresentation:fury'), status: 'hd-integrated' },
   hostileImpact: { ...drawn('CombatFeedback:hostileImpact'), status: 'hd-integrated' },
   lootGlow: { ...drawn('LootPresentation:pickups'), status: 'hd-integrated' },
@@ -97,10 +100,9 @@ export const REPLACED_LEGACY_TEXTURES: ReadonlySet<string> = new Set(['warrior',
 export type Facing = 'down' | 'up' | 'side';
 export interface VisualSelection { asset: AssetId; texture: string; frame?: string; scale: number }
 export function selectAsset(asset: AssetId, frame?: string, scale = ASSET_REGISTRY[asset].worldScale): VisualSelection { return { asset, texture: ASSET_REGISTRY[asset].source.key, frame, scale }; }
-export function heroVisual(character: CharacterId, facing: Facing, moving: boolean, hurt: boolean, elapsed: number): VisualSelection {
+export function heroVisual(character: CharacterId, facing: Facing, moving: boolean, _hurt: boolean, elapsed: number): VisualSelection {
   if(character==='mage')return {...selectAsset('mage'),...mageHeroSelection({motion:moving?'run':'idle',direction:facing==='up'?'north':facing==='down'?'south':'east',age:elapsed,casting:false})};
-  const pose = hurt ? 'hurt' : moving ? 'walk' : 'idle', clip = ASSET_REGISTRY.warrior.clips[pose], rate = pose === 'walk' ? 9 : pose === 'hurt' ? 12 : 2;
-  return selectAsset('warrior', `warrior-${facing}-${pose}-${Math.floor(elapsed * rate) % clip}`);
+  return {...selectAsset('warrior'),...warriorHeroSelection(facing==='up'?'north':facing==='down'?'south':'east',moving?'run':'idle',elapsed)};
 }
 export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number, playback?: RunnerPlayback): VisualSelection {
   const asset = elite && kind !== 'ashGuard' && kind !== 'guardian' && kind !== 'charger' && kind !== 'sorcerer' && kind !== 'eclipse' ? ELITE_ART[kind] : ENEMY_ART[kind], spec = ASSET_REGISTRY[asset];

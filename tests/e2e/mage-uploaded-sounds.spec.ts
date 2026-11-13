@@ -14,7 +14,7 @@ async function setup(page:Page){
 }
 test('all five uploaded WAVs play, and thunder starts once at the actual ultimate release',async({page})=>{
   test.setTimeout(30000);mkdirSync(root,{recursive:true});const errors:string[]=[],files=new Set<string>();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().includes('/assets/audio/mage-sfx-uploaded-v1/')){files.add(new URL(r.url()).pathname);if(r.status()!==200)errors.push(`HTTP ${r.status()}`);}});
-  await setup(page);expect(await page.evaluate(()=>window.__PIXEL__!.audio().samplesLoaded)).toBe(27);expect(files.size).toBe(7);
+  await setup(page);expect(await page.evaluate(()=>window.__PIXEL__!.audio().samplesLoaded)).toBe(36);expect(files.size).toBe(7);
   await page.getByRole('button',{name:/Бой со Стражем/}).click();await page.waitForFunction(()=>window.__PIXEL__!.world.finalEncounter.phase==='phase1');
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.player.invulnerableUntil=Infinity;for(const a of Object.values(w.abilities))a.level=0;});await page.waitForTimeout(1100);
   async function heard(id:MageSampleId,trigger:()=>Promise<unknown>){
@@ -30,14 +30,14 @@ test('all five uploaded WAVs play, and thunder starts once at the actual ultimat
     return{starts,release:w.ultimate.released,started:w.ultimate.started,audio:window.__PIXEL__!.audio()};
   });
   const thunder=result.starts.filter(s=>Math.abs(s.seconds-2)<.001);expect(thunder).toHaveLength(1);expect(Math.abs(thunder[0]!.elapsed-result.release)).toBeLessThan(.05);expect(result.release-result.started).toBeGreaterThanOrEqual(.52);
-  expect(result.audio.failedAssets).toBe(0);expect(result.audio.sampleFallbacks).toBe(0);expect(result.audio.decodedBytes).toBeLessThan(15e6);expect(result.audio.peakVoices).toBeLessThanOrEqual(12);
+  expect(result.audio.failedAssets).toBe(0);expect(result.audio.sampleFallbacks).toBe(0);expect(result.audio.decodedBytes).toBeLessThan(26e6);expect(result.audio.peakVoices).toBeLessThanOrEqual(12);
   await page.locator('canvas').screenshot({path:root+'/ultimate-release.png'});await page.keyboard.press('Escape');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);
   const manifest=JSON.parse(readFileSync('art/generated/mage-uploaded-sounds-v1/manifest.json','utf8'))as{entries:{file:string;sha256:string}[]};for(const e of manifest.entries){const response=await page.request.get(e.file.replace('public/','/'));expect(response.ok()).toBe(true);expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(e.sha256);}
   expect(errors).toEqual([]);writeFileSync(root+'/evidence.json',JSON.stringify({...result,files:[...files],errors},null,2));
 });
 test('missing uploaded files retain four other cues and use immediate procedural fallback',async({page})=>{
   await page.route('**/assets/audio/mage-sfx-uploaded-v1/*.wav',r=>r.abort());await setup(page);
-  expect(await page.evaluate(()=>window.__PIXEL__!.audio().samplesLoaded)).toBe(20);expect(await page.evaluate(()=>window.__PIXEL__!.audio().failedAssets)).toBe(7);
+  expect(await page.evaluate(()=>window.__PIXEL__!.audio().samplesLoaded)).toBe(29);expect(await page.evaluate(()=>window.__PIXEL__!.audio().failedAssets)).toBe(7);
   await page.getByRole('button',{name:'Начать забег'}).click();await page.keyboard.press('Space');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().played['player.blink']??0)).toBe(1);
   expect(await page.evaluate(()=>window.__PIXEL__!.audio().samplePlays?.['mage-blink']??0)).toBe(0);expect(await page.evaluate(()=>window.__PIXEL__!.audio().sampleFallbacks)).toBeGreaterThan(0);
   await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=Infinity;for(const a of Object.values(w.abilities))a.level=0;w.player.invulnerableUntil=Infinity;const e=w.spawn('tank',{x:w.player.x+70,y:w.player.y})!;e.hp=e.maxHp=1e6;w.abilities.frost.level=1;w.abilities.frost.readyAt=0;});
@@ -52,7 +52,7 @@ test('user Frost Nova WAV plays on the actual automatic cast and freezes its tar
   const target=await page.evaluate(()=>{const w=window.__PIXEL__!.world;w.options.spawnRate=0;w.encounterDirector.nextAt=Infinity;for(const a of Object.values(w.abilities))a.level=0;w.player.invulnerableUntil=Infinity;w.enemies=[];const e=w.spawn('tank',{x:w.player.x+70,y:w.player.y})!;e.speed=0;e.hp=e.maxHp=1e6;w.abilities.frost.level=1;w.abilities.frost.readyAt=0;return e.id;});
   await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().samplePlays?.['mage-frost-nova']??0)).toBe(1);
   const result=await page.evaluate(id=>{const w=window.__PIXEL__!.world,e=w.enemies.find(e=>e.id===id)!;w.abilities.frost.level=0;return{frozen:(e.freezeUntil??0)>w.elapsed,damaged:e.hp<e.maxHp,audio:window.__PIXEL__!.audio()};},target);
-  expect(result.frozen).toBe(true);expect(result.damaged).toBe(true);expect(result.audio.sampleFallbacks).toBe(0);expect(result.audio.failedAssets).toBe(0);expect(result.audio.samplesLoaded).toBe(27);
+  expect(result.frozen).toBe(true);expect(result.damaged).toBe(true);expect(result.audio.sampleFallbacks).toBe(0);expect(result.audio.failedAssets).toBe(0);expect(result.audio.samplesLoaded).toBe(36);
   const m=JSON.parse(readFileSync('art/generated/frost-nova-sound-v1/manifest.json','utf8'))as{file:string;sha256:string};const response=await page.request.get(m.file.replace('public/','/'));expect(response.ok()).toBe(true);expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(m.sha256);
   mkdirSync('docs/screenshots',{recursive:true});await page.locator('canvas').screenshot({path:'docs/screenshots/19-frost-nova-upload.png'});
   await page.keyboard.press('Escape');await expect.poll(()=>page.evaluate(()=>window.__PIXEL__!.audio().sources)).toBe(0);expect(errors).toEqual([]);writeFileSync('.tmp/frost-nova-upload-evidence.json',JSON.stringify({...result,requests,errors},null,2));

@@ -2,6 +2,39 @@ import { test, expect } from '@playwright/test';
 import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
+test('built Warrior serves the exact accepted empty hand atlases',async({page})=>{
+ const manifest=JSON.parse(readFileSync('docs/verification/warrior-empty-hand-v1/integration-verification.json','utf8')) as {currentSHA256:Record<string,string>};
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/');await page.getByRole('button',{name:/^Warrior/}).click();
+ await page.getByRole('button',{name:/^Начать забег/}).click();
+ for(const [file,sha] of Object.entries(manifest.currentSHA256).filter(([f])=>f.startsWith('public/'))){
+  const response=await page.request.get(file.replace('public/','/'));
+  expect(response.ok()).toBe(true);expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(sha);
+ }
+ expect(await page.evaluate(()=>window.__PIXEL__)).toBeUndefined();expect(errors).toEqual([]);
+});
+
+test('built Warrior loads all nine exact uploaded WAVs and plays Charge after input',async({page})=>{
+ const files=new Set<string>(),errors:string[]=[];
+ await page.addInitScript(()=>{
+  Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});
+  localStorage.setItem('pixel-survivor-v1',JSON.stringify({version:2,settings:{volume:.5,sfxVolume:.8,musicVolume:0,muted:false,pixelScale:2},records:[]}));
+  Reflect.set(window,'__WARRIOR_STARTS__',[]);
+  const start=AudioBufferSourceNode.prototype.start;
+  AudioBufferSourceNode.prototype.start=function(...args:Parameters<AudioBufferSourceNode['start']>){
+   (Reflect.get(window,'__WARRIOR_STARTS__') as number[]).push(this.buffer?.duration??0);return Reflect.apply(start,this,args);
+  };
+ });
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().includes('/assets/audio/warrior-uploaded-v1/')){files.add(new URL(r.url()).pathname);if(!r.ok())errors.push(`HTTP ${r.status()}`);}});
+ await page.goto('/');await expect.poll(()=>files.size).toBe(9);
+ await page.getByRole('button',{name:/^Warrior/}).click();await page.getByRole('button',{name:/^Начать забег/}).click();await page.keyboard.press('Space');
+ const charge=JSON.parse(readFileSync('docs/verification/warrior-sounds-v1/manifest.json','utf8')).entries.find((e:{id:string})=>e.id==='warrior-charge') as {seconds:number};
+ await expect.poll(()=>page.evaluate(seconds=>(Reflect.get(window,'__WARRIOR_STARTS__') as number[]).some(s=>Math.abs(s-seconds)<.001),charge.seconds)).toBe(true);
+ const manifest=JSON.parse(readFileSync('docs/verification/warrior-sounds-v1/manifest.json','utf8')) as {entries:{file:string;sha256:string}[]};
+ for(const e of manifest.entries){const r=await page.request.get(e.file.replace('public/','/'));expect(r.ok()).toBe(true);expect(createHash('sha256').update(await r.body()).digest('hex')).toBe(e.sha256);}
+ expect(await page.evaluate(()=>Reflect.has(window,'__PIXEL__'))).toBe(false);expect(errors).toEqual([]);
+});
+
 test('built approved variant2 boss music streams through the single audio context and stops on pause',async({page})=>{
   await page.addInitScript(()=>{
     Object.defineProperty(HTMLElement.prototype,'requestFullscreen',{value:undefined});
@@ -90,10 +123,10 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await page.goto('/?test=1&visual=1' + (biome==='dark'?'&biome=dark-forest&visualTime=915':'')); await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible();
   await expect(page.getByLabel('Визуальный стиль')).toHaveCount(0);
   await expect(page.getByRole('button',{name:'Dark Forest',exact:true})).toHaveCount(0);await expect(page.getByLabel('Локация').getByRole('button')).toHaveCount(1);
-  await page.getByRole('button',{name:new RegExp('^'+hero)}).click({force:true}); if(hero==='Warrior'){await expect(page.getByText('Warrior находится в разработке',{exact:true})).toBeVisible(); await expect(page.getByRole('button',{name:/^Mage/})).toHaveAttribute('aria-pressed','true');} await page.getByRole('button',{name:biome==='dark'?'Роща осколков':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
+  await page.getByRole('button',{name:new RegExp('^'+hero)}).click({force:true}); await expect(page.getByRole('button',{name:new RegExp('^'+hero)})).toHaveAttribute('aria-pressed','true'); await page.getByRole('button',{name:biome==='dark'?'Роща осколков':'\u0420\u043e\u0449\u0430 \u043e\u0441\u043a\u043e\u043b\u043a\u043e\u0432',exact:true}).click();
   expect(await page.evaluate(() => window.__PIXEL__)).toBeUndefined();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-menu.png` });
-  await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(page.locator('.hero-name')).toContainText('MAGE');
+  await page.getByRole('button', { name: 'Начать забег' }).click(); await expect(page.locator('.hero-name')).toContainText(hero.toUpperCase());
   await expect.poll(() => page.evaluate(() => {
     const rms = Object.getOwnPropertyDescriptor(window, '__AUDIO_OUTPUT_RMS__')!.value as () => number; return rms();
   })).toBeGreaterThan(.0001);
@@ -109,14 +142,15 @@ for(const hero of ['Mage','Warrior'])for(const biome of ['grove','dark'])test('b
   await expect(page.getByLabel('Сенсорный джойстик')).toBeVisible();
   await page.screenshot({ path: `docs/screenshots/19-production-${hero}-${biome}-mobile.png` });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390); expect(external).toEqual([]); expect(errors).toEqual([]);
-expect(artRequests.sort()).toEqual([...['fire-ultimate-v1/fire-mantle','fire-ultimate-v1/fire-perimeter','frost-ultimate-v1/ice-crystal','frost-ultimate-v1/ice-wave','rune-warden-v2/atlas'].flatMap(id=>['json','png'].map(ext=>`/assets/hd/${id}.${ext}`)),...['north','meteor'].flatMap(id=>['json','png'].map(ext=>`/assets/hd/ash-warden-pixellab-v1/${id}.${ext}`)),'/assets/hd/mage-shield-nova-pixellab-v1/atlas.png','/assets/hd/mage-shield-nova-pixellab-v1/atlas.json','/assets/hd/mage-blink-v1/atlas.png','/assets/hd/mage-blink-v1/atlas.json','/assets/hd/mage-moving-cast-v2/upper.png','/assets/hd/mage-moving-cast-v2/upper.json','/assets/hd/mage-cast-v2/atlas.png','/assets/hd/mage-cast-v2/atlas.json','/assets/hd/mage-run-v2/atlas.png','/assets/hd/mage-run-v2/atlas.json','/assets/hd/mage-idle-v2/atlas.png','/assets/hd/mage-idle-v2/atlas.json','/assets/hd/mage-phantom-v1/atlas.png','/assets/hd/mage-phantom-v1/atlas.json','/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-meteor-pixellab-v1/atlas.png','/assets/hd/mage-meteor-pixellab-v1/atlas.json','/assets/hd/mage-fireball-pixellab-v1/atlas.png','/assets/hd/mage-fireball-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.png','/assets/hd/astral-projectile-pixellab-v1/atlas.json','/assets/hd/astral-projectile-pixellab-v1/atlas.png','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', ...MAGE_HERO.pages.flatMap(p=>[`/assets/hd/mage-hero-v2/${p.index}.json`,`/assets/hd/mage-hero-v2/${p.index}.png`]), '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
+expect(artRequests.sort()).toEqual([...['fire-ultimate-v1/fire-mantle','fire-ultimate-v1/fire-perimeter','frost-ultimate-v1/ice-crystal','frost-ultimate-v1/ice-wave','rune-warden-v2/atlas'].flatMap(id=>['json','png'].map(ext=>`/assets/hd/${id}.${ext}`)),...['north','meteor'].flatMap(id=>['json','png'].map(ext=>`/assets/hd/ash-warden-pixellab-v1/${id}.${ext}`)),'/assets/hd/mage-shield-nova-pixellab-v1/atlas.png','/assets/hd/mage-shield-nova-pixellab-v1/atlas.json','/assets/hd/mage-blink-v1/atlas.png','/assets/hd/mage-blink-v1/atlas.json','/assets/hd/mage-moving-cast-v2/upper.png','/assets/hd/mage-moving-cast-v2/upper.json','/assets/hd/mage-cast-v2/atlas.png','/assets/hd/mage-cast-v2/atlas.json','/assets/hd/mage-run-v2/atlas.png','/assets/hd/mage-run-v2/atlas.json','/assets/hd/mage-idle-v2/atlas.png','/assets/hd/mage-idle-v2/atlas.json','/assets/hd/mage-phantom-v1/atlas.png','/assets/hd/mage-phantom-v1/atlas.json','/assets/hd/lightning-ultimate-v1/atlas.png','/assets/hd/lightning-ultimate-v1/atlas.json','/assets/hd/regular-lightning-v1/atlas.png','/assets/hd/regular-lightning-v1/atlas.json','/assets/hd/mage-meteor-pixellab-v1/atlas.png','/assets/hd/mage-meteor-pixellab-v1/atlas.json','/assets/hd/mage-fireball-pixellab-v1/atlas.png','/assets/hd/mage-fireball-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.json','/assets/hd/astral-flame-pixellab-v1/atlas.png','/assets/hd/astral-projectile-pixellab-v1/atlas.json','/assets/hd/astral-projectile-pixellab-v1/atlas.png','/assets/hd/astral-revenant-v1/atlas.json','/assets/hd/astral-revenant-v1/atlas.png','/assets/hd/briar-beast-v1/atlas.json','/assets/hd/briar-beast-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.png','/assets/hd/rune-warden-pixellab-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.json','/assets/hd/rune-warden-v1/atlas.png','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json','/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png','/assets/hd/ash-warden-flame-strike-v1/atlas.json','/assets/hd/ash-warden-flame-strike-v1/atlas.png','/assets/hd/ash-warden-melee-combo-v1/atlas.json','/assets/hd/ash-warden-melee-combo-v1/atlas.png',...Array.from({length:4},(_,i)=>[`/assets/hd/ash-warden-v1/${i}.json`,`/assets/hd/ash-warden-v1/${i}.png`]).flat(), '/assets/hd/bosses.json', '/assets/hd/bosses.png', '/assets/hd/core.json', '/assets/hd/core.png', '/assets/hd/enemies.json', '/assets/hd/enemies.png', '/assets/hd/guardian.json', '/assets/hd/guardian.png', '/assets/hd/loot.json', '/assets/hd/loot.png', '/assets/hd/war-banner-v1/object.png','/assets/hd/warrior-ultimates-v1/0.png','/assets/hd/warrior-ultimates-v1/0.json',...MAGE_HERO.pages.flatMap(p=>[`/assets/hd/mage-hero-v2/${p.index}.json`,`/assets/hd/mage-hero-v2/${p.index}.png`]), ...Array.from({length:6},(_,i)=>[`/assets/hd/warrior-hero-v1/${i}.json`,`/assets/hd/warrior-hero-v1/${i}.png`]).flat(),...Array.from({length:7},(_,i)=>[`/assets/hd/warrior-skills-v1/${i}.json`,`/assets/hd/warrior-skills-v1/${i}.png`]).flat(), '/assets/hd/runner.json', '/assets/hd/runner.png'].sort());
 });
 
 for (const width of [1280, 390]) test(`built controller-only shell, movement, mobility and pause ${width}`, async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.setViewportSize({ width, height: width === 390 ? 844 : 720 }); await mockGamepads(page); await page.goto('/');
   await expect(page.getByRole('button', { name: 'Начать забег' })).toBeVisible(); await connectPad(page);
-  await padFocus(page, page.getByRole('button', { name: /^Warrior/ })); await pressPad(page, 'confirm'); await expect(page.getByText('Warrior находится в разработке', { exact: true })).toBeVisible(); await expect(page.getByRole('button', { name: /^Warrior/ })).toHaveAttribute('aria-disabled', 'true');
+  await padFocus(page, page.getByRole('button', { name: /^Warrior/ })); await pressPad(page, 'confirm'); await expect(page.getByRole('button', { name: /^Warrior/ })).toHaveAttribute('aria-pressed', 'true');
+  await padFocus(page,page.getByRole('button',{name:/^Mage/}));await pressPad(page,'confirm');
   await padFocus(page, page.getByRole('button', { name: 'Начать забег' })); await pressPad(page, 'confirm');
   await expect(page.locator('.hero-name')).toContainText('MAGE');
   await stick(page, .6, -.4); await page.waitForTimeout(150); await pressPad(page, 'mobility'); await stick(page, 0, 0);

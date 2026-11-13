@@ -55,6 +55,7 @@ export class GameScene extends Phaser.Scene {
   private runOptions: RunOptions = {};
   private testCharacter: CharacterId | undefined;
   private visualTime: number | undefined;
+  private ultimateReview = false;
   private orientationResume = false;
   private facing: Facing = 'down';
   private touch = { x: 0, y: 0 };
@@ -66,6 +67,7 @@ export class GameScene extends Phaser.Scene {
   constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
   preload() { preloadGameArt(this); }
   create() {
+    this.ultimateReview = import.meta.env.DEV && new URLSearchParams(location.search).get('warriorUltimatesReview') === '1';
     const audioRng = new SeededRandom(0xa07d);
     this.audio = new AudioController(new PhaserAudioBackend(this.sound, this.cache.audio), () => audioRng.next());
     this.audio.settings(this.preferences); this.audioPresentation = new AudioPresentation(this.audio);
@@ -111,7 +113,7 @@ export class GameScene extends Phaser.Scene {
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') {
-        this.runOptions.character = command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined);
+        this.runOptions.character = command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined,command.character??this.runOptions.character);
         if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
         this.world = new World(Date.now(), this.runOptions);
@@ -170,7 +172,7 @@ export class GameScene extends Phaser.Scene {
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
     const baseZoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640));
-    const zoom = baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
+    const zoom = this.ultimateReview ? Math.max(.35, Math.min(this.scale.width / 1000, this.scale.height / 720)) : baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
     this.world.ultimate.viewport={width:this.scale.width/zoom,height:this.scale.height/zoom};
@@ -188,7 +190,12 @@ export class GameScene extends Phaser.Scene {
     if(this.world.ultimate.casting){const u=this.world.ultimate,target=u.nodes[0]?.at??u.origin,dx=target.x-u.origin.x,dy=target.y-u.origin.y;this.facing=Math.abs(dx)>=Math.abs(dy)?'side':dy<0?'up':'down';this.mage.setFlipX(this.facing==='side'&&dx<0);}
     this.art.hero(this.mage, this.world, this.facing, moving, this.world.status === 'menu' && this.scale.width > 600 ? 2 : 1);
     this.mage.setPosition(this.world.player.x, this.world.player.y);
-    if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
+    if (this.ultimateReview && this.world.status !== 'menu') {
+      const u=this.world.ultimate,active=this.world.elapsed<u.activeUntil,origin=active?u.origin:this.world.player,aim=active?u.direction:this.world.facing;
+      const lead=u.selected==='ruin'?260:u.selected==='earthbreaker'?140:0;
+      this.cameras.main.stopFollow().centerOn(origin.x+aim.x*lead,origin.y+aim.y*lead);
+    }
+    else if (this.world.status === 'menu' && this.scale.width > 600) { this.cameras.main.stopFollow().centerOn(this.mage.x - this.world.width * 0.23, this.mage.y); }
     else { this.cameras.main.startFollow(this.mage, true, 1, 1); }
     // Keep the sky strike behind an opaque Mage, including a recent-hit blink.
     const lightningCharging=this.world.ultimate.selected==='lightning'&&this.world.ultimate.casting;
@@ -218,7 +225,7 @@ export class GameScene extends Phaser.Scene {
     }
     for (const [id, sprite] of this.sprites) if (!active.has(id)) { if (this.spareSprites.length < 128) { sprite.setVisible(false).setActive(false); this.spareSprites.push(sprite); } else sprite.destroy(); this.sprites.delete(id); }
     this.art.update(this.world, this.preferences.effectsIntensity ?? 0.7, this.preferences.reducedMotion || matchMedia('(prefers-reduced-motion: reduce)').matches, this.preferences.reducedFlash || matchMedia('(prefers-reduced-motion: reduce)').matches);
-    this.feedback.update(this.world, this.preferences);
+    this.feedback.update(this.world, this.preferences,this.art.warriorSlash());
     this.lootPresentation.update(this.world, this.preferences);
     this.radar.update(this.world);
     this.effects.clear();

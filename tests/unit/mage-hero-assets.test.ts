@@ -74,7 +74,7 @@ it('reconstructs each trimmed frame to its exact nearest-neighbor sampled pixel 
     }
   }
 });
-it('places Mage HP above the new head while retaining the Warrior layout and collision radius',()=>{
+it('places HP above both accepted hero heads without changing gameplay',()=>{
   const w=new World(8),before=JSON.stringify(w);expect(playerHealthLayout(w).y-w.player.y).toBe(-44);expect(JSON.stringify(w)).toBe(before);
-  const warrior=new World(9,{character:'warrior'});expect(playerHealthLayout(warrior).y-warrior.player.y).toBe(-33);
+  const warrior=new World(9,{character:'warrior'});expect(playerHealthLayout(warrior).y-warrior.player.y).toBe(-46);
 });
