@@ -16,3 +16,13 @@ run-stages.ps1
 
 # Local review launchers stay outside published game changes.
 /*-review.html
+
+# Web Platform documentation and integration smoke are deliverable sources.
+!/docs/
+/docs/*
+!/docs/web-platform/
+!/docs/PROGRESS.md
+!/docs/DECISIONS.md
+!/tests/
+/tests/*
+!/tests/web-platform/

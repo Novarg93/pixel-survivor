@@ -1,5 +1,78 @@
 # Pixel Survivor
 
+## Web Platform — Phase 01
+
+Laravel-сайт находится в `apps/web` в этом же репозитории. Публичный сайт:
+**http://127.0.0.1:8000**, игра: **http://127.0.0.1:8000/play**.
+Регистрация, session auth, подтверждение почты, восстановление пароля и кабинет
+используют официальный Laravel Vue Starter Kit. Contact сохраняется в БД, а не
+отправляется по email. Прогрессия, кошелёк, предметы, покупки и глобальный рейтинг
+пока не подключены. [Roadmap](docs/web-platform/ROADMAP.md),
+[архитектура](docs/web-platform/ARCHITECTURE.md),
+[отчёт и ограничения](docs/web-platform/PHASE_01_REPORT.md).
+
+Проверенная среда: Node22.16, Composer2.10.3, уже установленный Herd PHP8.5.12.
+PHP по умолчанию может быть8.3: для сайта выбирайте8.5 в PATH **текущего терминала**.
+Не требуется менять Windows или запускать Herd Desktop. Команды Windows PowerShell,
+начиная из корня репозитория:
+
+```powershell
+# Однократная установка корневых зависимостей игры
+npm.cmd ci --cache .npm-cache
+$env:PATH = "$env:USERPROFILE\.config\herd\bin\php85;$env:PATH"
+$env:COMPOSER_CACHE_DIR = "$PWD\.tmp\composer-cache"
+Set-Location apps/web
+composer install --no-interaction
+npm.cmd ci --cache ../../.npm-cache
+if (!(Test-Path .env)) { Copy-Item .env.example .env }
+# Только при первом создании .env: не заменяйте действующий APP_KEY
+php artisan key:generate
+if (!(Test-Path database/database.sqlite)) { New-Item database/database.sqlite -ItemType File }
+php artisan migrate
+npm.cmd run build
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+С готовой сборкой достаточно `php artisan serve`. Для hot reload во втором терминале
+в `apps/web` с тем же PHP PATH выполните `npm.cmd run dev` (Vite127.0.0.1:5174).
+Сайт открывайте на8000, не на5174. Перед проверкой готовой сборки остановите Vite.
+Если после аварийного завершения остался `public/hot`, удалите только этот файл
+(`Remove-Item -LiteralPath public/hot` в `apps/web`), чтобы Laravel использовал manifest.
+Для повторного запуска существующей установки: установить PHP PATH, перейти
+в `apps/web`, выполнить `php artisan serve --host=127.0.0.1 --port=8000`.
+
+`MAIL_MAILER=log`: verification/reset links находятся в локальном
+`apps/web/storage/logs/laravel.log`; реальных email нет. Журнал содержит приватные
+ссылки — не публикуйте его. `.env`, SQLite, vendor/node_modules/build игнорируются.
+Ключ и пароли в Git не добавляются.
+
+Standalone workflow остаётся прежним: из **корня** `npm.cmd run dev` →
+http://127.0.0.1:5173; `npm.cmd run check`; `npm.cmd run test:e2e`.
+Гостевой ключ localStorage сохранён, но разные origin/порты имеют отдельные saves.
+Игра в Laravel импортирует корневой `src/main.ts`, без копии исходников и iframe.
+
+Проверки платформы (терминал в `apps/web`, PHP8.5):
+
+```powershell
+php artisan test
+php vendor/bin/pint --test
+php vendor/bin/phpstan analyse --no-progress --memory-limit=512M
+npm.cmd run check
+npm.cmd run build
+```
+
+Browser smoke (из корня, сайт8000 + Vite5174 должны работать):
+
+```powershell
+node node_modules/@playwright/test/cli.js test --config web-platform.playwright.config.ts
+```
+
+Повторный smoke Contact в течение10минут может попасть в реальный rate limit;
+в отдельной локальной тестовой среде перед повтором допустим
+`php apps/web/artisan cache:clear`. Не очищайте cache работающего публичного сайта.
+Browser smoke создаёт тестовые аккаунты/обращения только в локальной БД.
+Следующее отдельное задание — **Account & Character Progression**.
+
 Играбельная одиночная survivors-игра с оригинальным пиксельным миром. Vue 3 + TypeScript + Phaser 4.2.1. Магия атакует автоматически: двигайтесь, собирайте кристаллы опыта, выбирайте улучшения и уклоняйтесь от атак.
 
 Текущая версия включает Mage V2, финального босса Ash Warden с тренировочным
@@ -12,10 +85,10 @@
 
 ## Gameplay Pacing / Guardian / Mobility
 
-В публичном MVP доступен **Mage**. Карточка **Warrior — В разработке** остаётся
-доступной для фокуса и сообщения, но не выбирает героя. Код Warrior сохранён;
-боевые E2E используют явный DEV-only fixture `selectTestCharacter`, отсутствующий
-в production API. Публичные команды запуска всегда выбирают Mage.
+Исторический MVP начинался с **Mage**. В текущем runtime публично доступны
+**Mage и Warrior**; подробности принятого Warrior описаны ниже в Phase2 и отчётах.
+DEV-only fixture `selectTestCharacter` остаётся тестовым инструментом и отсутствует
+в production API.
 
 Level Up показывает три карточки с оригинальными пиксельными эмблемами,
 цветами способностей, рангом и основным бонусом. `projectiles` относится

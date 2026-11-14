@@ -6,10 +6,11 @@ This is a NEW and ISOLATED project. Before any work read `PLAN.md`, matching `ta
 - Implement current task thoroughly, tests included, without routine questions. Make reasonable decisions and record rationale in `docs/DECISIONS.md`.
 - Never claim something works without actually validating it. Prefer a small, shippable slice to an oversized unfinished abstraction.
 - Never ask for admin rights, credentials or payments. Never `git push`, deploy, remove external files, or alter Windows system settings. Do not invoke `--yolo`.
-- Never introduce in-game real-money purchases, tokens, ads, sign-in, Laravel backend or global leaderboards during this plan.
+- The original offline MVP scope in PLAN.md is historical and complete. The user approved the separate Web Platform phase on 2026-11-14. Laravel inside apps/web, accounts, and future economy/monetization/leaderboards are permitted only within docs/web-platform/ROADMAP.md. Phase 01 implements foundation/auth/site/game integration only; no real payments, wallet, inventory, progression grants, paid revives or leaderboard implementation.
 - If missing asset: create original programmatic pixel art, do not scrape copyrighted sprites. Depend on well-maintained packages already specified in the plan.
 - After every meaningful edit: run relevant tests, fix type/lint/build failures. Do not suppress types or disable failing tests.
-- If you detect unrelated files or Laravel artisan/composer.json, stop immediately and explain that you are in wrong folder.
+- If you detect unrelated projects, stop immediately and explain that you are in the wrong folder. Laravel artisan/composer.json inside the authorized apps/web is expected; do not touch sibling projects or parent directories.
+- Keep secrets and local databases out of Git. No commit, push, deploy or Windows configuration changes during Web Platform Phase 01. Preserve the standalone game workflow, accepted assets, existing tests and current branch.
 - Do not spend more than 3 cycles repeating the same failed approach; diagnose, select alternate approach, or write blocker and stop.
 - Update `docs/PROGRESS.md` with implemented functions, files, tests, screenshots, blockers and next task.
 - Maintain `docs/art/PIXELLAB_PROMPT_JOURNAL.md`: after explicit user approval, append the exact selected image/animation prompt, tool, parameters, seed, job ID, source reference and accepted role. Preserve history and recommendations. Do not label unapproved trials or rejected AI probes as accepted; identify programmatic assets without inventing prompts.

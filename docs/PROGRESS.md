@@ -1,3 +1,33 @@
+# 2026-11-14 — подготовка ветки web
+
+По новому прямому поручению пользователя изменения Web Platform Phase 01 выделяются
+в отдельную ветку `web` для commit/push в origin. Ранее существовавшие изменения
+игровых тестов, art/screenshots и review-скрипты не включаются. Проверки реализации
+перечислены в отчёте Phase 01 ниже; новых изменений runtime в этом действии нет.
+Deploy и отправка в main не выполняются.
+
+# 2026-11-14 — Web Platform Phase 01
+
+Создан `apps/web`: Laravel13.42/PHP8.5.12, официальный Vue Starter Kit,
+Inertia3/Tailwind4. Landing, FAQ, validated/rate-limited Contact с DB persistence,
+legal drafts, стандартная Fortify авторизация/reset/verification и защищённый
+dashboard с честными empty states. `/play` — отдельный Blade/Vite entry, импортирует
+существующий `src/main.ts`; единые ассеты доступны через `/assets` и `/build/assets`.
+Root src/public/game configs неизменны; баланс/аудио/прогрессия не перерабатывались.
+
+PASS: root check1184unit/165files + types/lint/build; Laravel47tests/215assertions;
+web types/lint/build; Pint/PHPStan; new Playwright6DEV+2production, desktop1280×720
+и touch landscape844×390; existing smoke4audio/game+1unmount. Canvas просмотрен,
+новые screenshots — `screenshots/web-platform`. Runtime security audits0;
+полный npm audit:9moderate dev/minimatch advisories, без force-upgrade.
+
+Созданы7документов `docs/web-platform`, обновлены AGENTS/README/DECISIONS,
+старый PLAN сохранён. Mail=log, legal сведения/реальные устройства/полный E2E/
+static hosting требуют последующей работы. Блокирующих ошибок текущей фазы нет.
+Отчёт, команды, неудачные промежуточные проверки и ограничения:
+`docs/web-platform/PHASE_01_REPORT.md`. Следующий отдельный этап —
+Account & Character Progression; автоматически не начат. Commit/push/deploy нет.
+
 # 2026-11-13 — подготовка push main без art/screenshots
 
 Пользователь явно подтвердил публикацию с исключением `art` и `screenshots`. Перепаковывается только локальный неопубликованный коммит: содержимое этих двух каталогов в нём возвращается к прежнему origin/main, рабочие файлы сохраняются. Новые игровые ассеты `public/assets`, код, тесты и отчёты остаются. Исходные изображения/Aseprite и source-verification proofs из `art` нужны для локальных полных проверок, но не публикуются по прямому требованию пользователя; runtime использует готовые атласы. Последние проверки рабочего дерева:1184unit, check/build, DEV синхронизация кадра5/6, production Warrior2/2. Код игры при перепаковке не меняется.
