@@ -25,19 +25,19 @@
       "index": 2,
       "width": 1024,
       "height": 970,
-      "sha256": "936458b334cf49af0538a040516d907d7f978a673c115918da70677afea74900"
+      "sha256": "61452954f747323606c5810b05f4f1bb810632faa9c0c1d7825f0f89e1de995f"
     },
     {
       "index": 3,
       "width": 1024,
       "height": 970,
-      "sha256": "c3014fb4ef833f22b9f63a289becc29a4e46cf9e991a59343e2343d09e26c976"
+      "sha256": "0c0152c1cdb784edf5005dcea005a003ce7892c2272d033f5c3475f40e226ee5"
     },
     {
       "index": 4,
       "width": 1024,
       "height": 776,
-      "sha256": "b6034101d8ed13503bc7ce4070be723569c005bb74f92376fd28ef4b612c687b"
+      "sha256": "6a3a872adc01689e084e9c2314dd8f53e724d4f01ccc3ddc7638efbaf90acd36"
     },
     {
       "index": 5,
@@ -442,23 +442,23 @@
     "north-run/3": {
       "page": 2,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-run/03.png",
-      "sha256": "ccf917a51a7d4f6f65ead86b992421dcd164f2ece892657e1efa362073743cf5",
-      "pixelSHA256": "a9bf5e19d093c502253b0400e65ff50ca63ab2f7610b0f93b6c6763e3a60f192"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-run-3.png",
+      "sha256": "9c5bb088657a55bc8fa4940640fa2beec088ba6b02cdbf494618482c464860a0",
+      "pixelSHA256": "a2646005e7082b6d9309c97077cd669de3242815abee2a70227a27597c27bd82"
     },
     "north-run/4": {
       "page": 2,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-run/04.png",
-      "sha256": "de48446173e225a69ff3d8c872a4168036fc08297b8b6305f0829cc3a390a602",
-      "pixelSHA256": "fe8709f610ff0c9556a1675969a2ffaf344a3be5d6b339fba980ea954ce05f14"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-run-4.png",
+      "sha256": "089be14abb10ec979aa2d96c9c66dabcbcd530a1229b3dd32521a0fb3a950de5",
+      "pixelSHA256": "d419e560feb4ae1bc6c39dc27083507a7c5218868b0738efb277e1682f4c4a2d"
     },
     "north-run/5": {
       "page": 2,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-run/05.png",
-      "sha256": "4e001234ba9a12dc6f6a39187d7b25fad83c2f92e95c631b4755109f14bb9cac",
-      "pixelSHA256": "cad752442876a62ff6d6057495ac773b85621a85b04e4bc8e325c226c84150a4"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-run-5.png",
+      "sha256": "11f90a486d0612fe9b21fe69a4177b1769e92cc064dd79e654e51bc7197285a7",
+      "pixelSHA256": "20813482fdd0b06b666ef3977b356ce9766c95a20722a4eb4960605c1dbac5ef"
     },
     "north-run/6": {
       "page": 2,
@@ -631,37 +631,37 @@
     "north-c1/4": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c1/04.png",
-      "sha256": "811981af5cfdb07e9a772ecb72090511997987769e6a6b067fb3df3590e00788",
-      "pixelSHA256": "a0b1bd83efb352c2912243de5961bf7004881dc7eb3724bf088650f28c88ddf1"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c1-4.png",
+      "sha256": "07ea36308c31683f77630516de397269e98f53b981a9364196c35b8a03dbfa1b",
+      "pixelSHA256": "eb578cf87a324b778716dd0fa67cf03f48e0371a406780f5be0ceca2006b1b07"
     },
     "north-c1/5": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c1/05.png",
-      "sha256": "c4460d9a4891bd48254e78b183325837169513f4813acd4d37f75e0f3f05ae57",
-      "pixelSHA256": "76f29c639eaa8a78254a8975ca4c8be6779aa9ed7cf283558b7195f75e3a5518"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c1-5.png",
+      "sha256": "af3c8dbe6c6b447172332b85fec4bc3d2d1870990fc958a2770c7776ba904193",
+      "pixelSHA256": "dca54f555765b4bd58b7702d3755abcd33ed122a5207aaf3a95802ca163fb72d"
     },
     "north-c1/6": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c1/06.png",
-      "sha256": "ab701d7f85d3f728cc4d878665fa1d17d4f2b79031a24c204bc3dcba67853766",
-      "pixelSHA256": "627bb1bd6608ac0fc01d3ab6910b89c42090ab3cd1b82dc6da473679ce04cf82"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c1-6.png",
+      "sha256": "c0817957a4a1515f5b3d4bcaf587f60366a31ebfbddf3de96492547ffa9747d9",
+      "pixelSHA256": "935f726896eac9a019b50e631efe46eab77ba5cb1c9e83c1b4b16ff3cbac4143"
     },
     "north-c1/7": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c1/07.png",
-      "sha256": "f3e159e18b5276cbeace44874c9ed37be8d283840290ea41e19162c46f8e0d84",
-      "pixelSHA256": "0576961d5e684dde16c3eb4528dfc93f72d0580b9cc2978da53890ee8a37f8a3"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c1-7.png",
+      "sha256": "ed179666a510605c9686b20929863caf21b10bd73164940a5be8513d978cbc51",
+      "pixelSHA256": "ceac2170dd14d5027c97eb207800a5d4d4497e02eb4ead7abb2c2a77c2d76ff2"
     },
     "north-c1/8": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c1/08.png",
-      "sha256": "1aa70e4bd82a3743a04d5580e82c0e7acfa352902b0ddb18ba3ff82aaa216900",
-      "pixelSHA256": "617755cfcfef4227858d3352f6522f3376fd9528c83bcfe19410ab52e89b4ea2"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c1-8.png",
+      "sha256": "54119cce4cc1fa36523c496e840229b43228a41466fe661fce7737fb4a2c57be",
+      "pixelSHA256": "5ff6038ee29ba5ee64f1ab76c4d2e2a43c8b9ecf6db3eeb66191cd6ba43fdf9e"
     },
     "north-c1/9": {
       "page": 3,
@@ -743,30 +743,30 @@
     "north-c3/7": {
       "page": 3,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c3/07.png",
-      "sha256": "60306395e92bc8b99176b01ed9880823ce65c6b36d8851e45bf2012bc255b8c7",
-      "pixelSHA256": "cc21ad129f3ccb483efecfea62c41dc7f41e4adcae229528844456bc16b560f5"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c3-7.png",
+      "sha256": "a9756dec08348d5b1d77a07abc3dfaa61d956a55cfdcedcc4ace7a0b70469c04",
+      "pixelSHA256": "ce9c3ef7cfcfa503126c7e031bb0a5e8ee4e7d55177c3b656778abb4759fc26b"
     },
     "north-c3/8": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c3/08.png",
-      "sha256": "29a267563ba27a8855342e1fa69c62157ba18f373b5506f145ca005261f25765",
-      "pixelSHA256": "e66758ad4712672f573a7a418d62a4f36d44b4d568367a77844f8b4b0646c33e"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c3-8.png",
+      "sha256": "6caf5d47d208312a2a452d29ca39eee5693a6e8258584acc5fa8e92a9d99bcfe",
+      "pixelSHA256": "5eb7d67e525dd88f6d13ccaa4818ddb76f080ea8a1bbd519e6e14b7ace4ac72d"
     },
     "north-c3/9": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c3/09.png",
-      "sha256": "d6af677b4899ca54da3c0c2893326d5ff2b48a49efbcc25d0b11cb6594b5c93c",
-      "pixelSHA256": "2ea51c5b61c7ca062ee3d363357ece415c5356c7583b063eea1b885a639a0e50"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c3-9.png",
+      "sha256": "5adb05ee61881e32e435ef85ddf4baf7287120bb9b032ef228f434c680d9c482",
+      "pixelSHA256": "9e1a69a74986638a810cc64b8b87d72eaacfede89fe6e2749cdf79abcc1470a6"
     },
     "north-c3/10": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-c3/10.png",
-      "sha256": "c2d8e587ba5df30df6a0e078a68dd0e5fa988aab92d44d9af8622c5d150f7839",
-      "pixelSHA256": "170034256650b95328496289c5a629275e53c06c78ebd013e0a98376a03aa5f8"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-c3-10.png",
+      "sha256": "c698c077660fa5b815817c250890d30ef7963e1378cf342045bbaf75286dceac",
+      "pixelSHA256": "2845cd58f560efa16af2c6dbaeb16846cc616b7a3bee5345f01d862537147343"
     },
     "north-c3/11": {
       "page": 4,
@@ -827,30 +827,30 @@
     "north-heavy/6": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-heavy/06.png",
-      "sha256": "ea45a9c650e7af49cf8e66a2440e3e62c8672c0f0ad1015cdf5014f046aa0df8",
-      "pixelSHA256": "154e05f93fc7ac5d434d5756aba911fd8bfdd017766945ec1e030cb2c0498229"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-heavy-6.png",
+      "sha256": "6b3030f5a3b8a7bd8d42c145518d21ae0ba8be6eb03e481d0d2428ffffe55897",
+      "pixelSHA256": "4f7d6a903a1b71420b1a9c84cb3d73fc2b0cf265d8f703c8822a9c74c921351b"
     },
     "north-heavy/7": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-heavy/07.png",
-      "sha256": "405272a99c69fc9942b918acb05d473192cedc64e0e89ed6b87405190ae74f10",
-      "pixelSHA256": "dfb12eaee96976452c36508b8199c519f0c3995d481cb4513b28aea7ef4b1ec0"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-heavy-7.png",
+      "sha256": "cce832db35621c797bfd53a19c73b7192c9f287eff10fc49f8f911f50f47490a",
+      "pixelSHA256": "e07df5012085c58134e562fa7cee329de6b7b53c13ecdfacc10f1d770c8d87e2"
     },
     "north-heavy/8": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-heavy/08.png",
-      "sha256": "4c055a8e29573e8809a60852b9d88d6b3f51d759b4f098f43c2cb66843d34c53",
-      "pixelSHA256": "499acbf1449d084791daa7c246a138bb4daa89505261bca646e511af1fbb833a"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-heavy-8.png",
+      "sha256": "9e4249ecb39bae3b9ff6728d52413ef8ebe008dbae53e43a7a4947046ea74e4f",
+      "pixelSHA256": "83e4e1894095a6cdb2177d8183f1c218be64c685d320d98305336db79a88e777"
     },
     "north-heavy/9": {
       "page": 4,
       "sourceRoot": "art/generated/warrior-movement-attacks-review-v5",
-      "source": "raw/north-heavy/09.png",
-      "sha256": "72b9c7b5119aca625d92d074ba78365bdb1f9285859b73d7d0d98452361882ee",
-      "pixelSHA256": "d1a54dbcd02cff8b4eb8b44ddf7a06d5c534f6cf109b8a8b6f5f747944378a0f"
+      "source": "../warrior-shield-repair-v1/frames/hero-north-heavy-9.png",
+      "sha256": "38a2edc7ec17af1138065429fc10dee894f205e7dc0df4cfc26959f6fd09f1f4",
+      "pixelSHA256": "1ba7a03e0fbddcb7b66e8205fa20d98022f6452cce3ce89131b7074702efd0d1"
     },
     "north-heavy/10": {
       "page": 4,

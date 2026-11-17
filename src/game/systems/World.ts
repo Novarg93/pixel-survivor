@@ -1,3 +1,4 @@
+import type {PaidActionReceipt, ServerUpgradeOffer, UpgradeContext} from '../platform/premium';
 import {fireballDuration} from '../art/fireballPack';
 import {isWarriorAttackUltimate} from '../config/ultimates';
 import {WARRIOR_CAST} from '../config/warriorAbilities';
@@ -19,7 +20,7 @@ import { spawnPerimeter } from './SpawnSystem';
 import { receiveDamage } from './CombatSystem';
 import { ExperienceSystem, xpThreshold } from './ExperienceSystem';
 import { ObjectPool } from './ObjectPool';
-import { chooseUpgrades, applyUpgrade, type UpgradeDefinition } from './UpgradeSystem';
+import { chooseUpgrades, upgradePool, applyUpgrade, type UpgradeDefinition } from './UpgradeSystem';
 import { initialAbilities, ABILITIES, abilitiesFor } from '../abilities/definitions';
 import { CHARACTERS, type CharacterId } from '../config/characters';
 import { playableMap, type BiomeId } from '../config/biomes';
@@ -48,10 +49,75 @@ import { RareGuardianSystem, guardianVisible } from './RareGuardianSystem';
 import { MobilitySystem } from './MobilitySystem';
 import { formationEdge, pressureAt } from './EndgamePressure';
 import type { MovementInput } from '../input/movement';
-export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId }
+import { permanentBonuses, bonusFactor, type PermanentBonuses } from '../platform/progression';
+import { LOOT_FOR_ITEM, type RunEconomy, type RunItemId, type RunItemReceipt } from '../platform/runItems';
+export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId; permanentBonuses?: PermanentBonuses; clientRunId?: string; economy?: RunEconomy }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
+  premiumPending = false;
+  serverOffer: ServerUpgradeOffer | null = null;
+  readonly paidActions = {skill_reroll: 0, resurrection: 0};
+  private readonly appliedPaidActions = new Set<string>();
+  upgradeContext(): UpgradeContext { return {level:this.upgradeLevel, hero_level:this.experience.level, elapsed:Math.round(this.elapsed * 1000) / 1000, upgrades:{...this.upgrades}, ultimate:this.ultimate.selected ?? null}; }
+  applyServerOffer(offer: ServerUpgradeOffer, localOffer: number) {
+    if (this.status !== 'upgrade' || this.outcome || localOffer !== this.offerId || offer.level !== this.upgradeLevel || this.serverOffer && this.serverOffer.id !== offer.id) return false;
+    const pool = upgradePool(this);
+    if (new Set(offer.choices).size !== offer.choices.length || offer.choices.length !== Math.min(3,pool.length) || offer.choices.some(id => !pool.some(u => u.id === id))) return false;
+    this.choices = offer.choices.map(id => pool.find(u => u.id === id)!); this.serverOffer = offer; return true;
+  }
+  applyPaidAction(receipt: PaidActionReceipt) {
+    if (!this.serverEconomy || receipt.client_run_id !== this.runId || this.outcome || this.status === 'menu' || this.status === 'over') return false;
+    if (this.appliedPaidActions.has(receipt.id)) return true;
+    if (this.appliedPaidActions.size >= 128) return false;
+    if (receipt.effect.kind === 'reroll') {
+      if (!this.serverOffer || this.serverOffer.id !== receipt.effect.offer_id || receipt.effect.generation !== this.serverOffer.generation + 1) return false;
+      if (!this.applyServerOffer({...this.serverOffer,generation:receipt.effect.generation,choices:receipt.effect.choices},this.offerId)) return false;
+    } else {
+      if (!this.resurrect(receipt.death_id,receipt.effect)) return false;
+    }
+    this.appliedPaidActions.add(receipt.id); this.paidActions[receipt.action]++; return true;
+  }
+  awaitingRevive = false;
+  deathId: string | null = null;
+  reviveCount = 0;
+  readonly itemsUsed: Partial<Record<RunItemId, number>> = {};
+  private readonly appliedUsages = new Set<string>();
+  get serverEconomy() { return !!this.options.economy?.enabled && !this.practice; }
+  get serverUpgrades() { return this.serverEconomy && !!this.options.economy?.premium?.enabled; }
+  finishDefeat() {
+    if (this.outcome || this.status === 'over' || this.status === 'menu') return false;
+    this.awaitingRevive = false; this.deathId = null; this.outcome = 'defeat'; this.status = 'over'; this.clearTemporaryState(); return true;
+  }
+  applyRunItem(receipt: RunItemReceipt) {
+    if (!this.serverEconomy || receipt.client_run_id !== this.runId || this.outcome || this.status === 'over' || this.status === 'menu') return false;
+    if (this.appliedUsages.has(receipt.id)) return true;
+    if (this.appliedUsages.size >= 128 || !['paused','upgrade'].includes(this.status)) return false;
+    if (receipt.effect.kind === 'revive') {
+      if (receipt.item_id !== 'revive' || !this.resurrect(receipt.death_id,receipt.effect)) return false;
+    } else {
+      if (receipt.item_id === 'revive' || this.awaitingRevive || this.player.hp <= 0 || receipt.effect.loot_kind !== LOOT_FOR_ITEM[receipt.item_id] || receipt.item_id === 'healing_potion' && this.player.hp >= this.effectiveMaxHp) return false;
+      const prior = this.status; this.status = 'playing'; const applied = this.loot.grant(this, receipt.effect.loot_kind, receipt.effect.parameters); this.status = prior;
+      if (!applied) return false;
+    }
+    this.appliedUsages.add(receipt.id); this.itemsUsed[receipt.item_id] = (this.itemsUsed[receipt.item_id] ?? 0) + 1; return true;
+  }
+  private resurrect(deathId:string|null,effect:Extract<RunItemReceipt['effect'],{kind:'revive'}>) {
+      if (this.status !== 'paused' || !this.awaitingRevive || deathId !== this.deathId || this.player.hp > 0 || this.reviveCount >= (this.options.economy?.revive_limit ?? 0)
+        || effect.health_basis_points !== this.options.economy?.revive_health_basis_points || effect.protection_ms !== this.options.economy?.revive_protection_ms) return false;
+      this.player.hp = this.effectiveMaxHp * effect.health_basis_points / 10000;
+      this.player.invulnerableUntil = this.elapsed + effect.protection_ms / 1000;
+      this.retainProjectiles(p => !p.hostile || distance(p, this.player) > 96);
+      this.impacts = this.impacts.filter(i => !i.hostile || distance(i, this.player) > i.radius + 40);
+      for (const enemy of this.enemies) if (!enemy.boss && enemy.kind !== 'guardian' && distance(enemy, this.player) < 60) {
+        const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), fallback = away.x === 0 && away.y === 0;
+        enemy.x = this.player.x + (fallback ? 1 : away.x) * 60; enemy.y = this.player.y + away.y * 60;
+      }
+      this.reviveCount++; this.awaitingRevive = false; this.deathId = null; this.status = 'playing';
+      this.feedback({ type: 'pickup', kind: 'heal' }); this.effect('shield', this.player, 24, 0xb9eeff, .4); this.sound('pickup');
+      return true;
+  }
+  readonly permanent: PermanentBonuses;
   private bossDamageSequence=0;
   private bossDamageOrder=new Map<number,number>();
   readonly rng: SeededRandom;
@@ -65,7 +131,7 @@ export class World {
   readonly finalEncounter = new FinalEncounter();
   facing = { x: 0, y: 1 };
   get effectiveSpeed() { return this.player.speed * this.artifacts.multiplier('speed') * this.buffs.multiplier('haste', this.elapsed) * this.buffs.modifier('speed', this.elapsed); }
-  get effectiveDamage() { return this.stats.damage * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
+  get effectiveDamage() { return this.stats.damage * bonusFactor(this.permanent, 'damage') * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed); }
   get effectiveCooldown() { return this.stats.cooldown * this.artifacts.multiplier('cooldown') * this.buffs.modifier('cooldown', this.elapsed); }
   get effectiveMaxHp() { return Math.round(this.player.maxHp * this.artifacts.multiplier('health') * 100) / 100; }
   get absorb(){return this.shield.absorbValue(this.elapsed)+this.mobility.absorbValue(this.elapsed)+this.blockShield.absorbValue(this.elapsed);}
@@ -104,7 +170,7 @@ export class World {
   }
   sound(cue: LegacyCue) { if(cue.startsWith('final-')){if(this.sounds.length>=16)this.sounds.pop();this.sounds.unshift(cue);}else if (this.sounds.length < 16) this.sounds.push(cue); }
   pause() { if (this.status === 'playing') this.status = 'paused'; }
-  resume() { if (this.status === 'paused') this.status = 'playing'; }
+  resume() { if (!this.premiumPending && this.status === 'paused' && !this.awaitingRevive) this.status = 'playing'; }
   experience = new ExperienceSystem();
   get upgradeLevel() { return this.experience.pending > 0 ? this.experience.level - this.experience.pending + 1 : this.experience.level; }
   upgrades: Record<string, number> = {};
@@ -134,7 +200,7 @@ export class World {
   get bosses() { return this.enemies.filter(e => e.boss); }
   get hostileProjectileSlots(){return Math.max(0,Math.min(BALANCE.projectileCap-this.projectiles.length,GUARDIAN_ORBS.hostileCap-this.projectiles.filter(p=>p.hostile).length));}
   enemies: Enemy[] = []; projectiles: Projectile[] = []; effects: Effect[] = [];
-  readonly runId = globalThis.crypto.randomUUID();
+  readonly runId: string;
   elapsed = 0;
   private scoring = new ScoreSystem();
   get kills() { return this.scoring.kills; }
@@ -142,7 +208,13 @@ export class World {
   width = 640; height = 360;
   spawnedRegular = 0;
   private serial = 0; private cosmeticSerial = 0; private spawnClock = new SpawnClock();
-  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character]; this.player.hp=this.player.maxHp=hero.hp; this.player.speed=hero.speed; this.abilities=initialAbilities(this.character); }
+  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character];
+    this.permanent = permanentBonuses(options.permanentBonuses); this.runId = options.clientRunId ?? globalThis.crypto.randomUUID();
+    this.player.hp=this.player.maxHp=hero.hp * bonusFactor(this.permanent, 'maximum_health');
+    this.player.speed=hero.speed * bonusFactor(this.permanent, 'movement_speed');
+    this.stats.area *= bonusFactor(this.permanent, 'ability_area'); this.stats.pickup *= bonusFactor(this.permanent, 'pickup_radius');
+    this.stats.cooldown *= 1 - this.permanent.cooldown_reduction / 10000;
+    this.abilities=initialAbilities(this.character); }
   id() { return ++this.serial; }
   spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
     if(this.practiceDuel&&(this.outcome||kind!==this.practiceDuel.kind||this.enemies.length>0))return;
@@ -172,13 +244,13 @@ export class World {
     if (projectile) this.projectiles.push(projectile);
   }
   damageEnemy(enemy: Enemy, amount: number, source: DamageSource = 'unknown', maxDamage = Infinity, executeRegular = false) {
-    if (this.outcome || this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
+    if (this.awaitingRevive || this.outcome || this.status === 'over' || amount <= 0 || !Number.isFinite(amount) || enemy.hp <= 0 || !this.enemies.includes(enemy)) return false;
     if (enemy.kind === 'guardian' && !enemy.finalRole) { if (!enemy.discovered && !guardianVisible(this, enemy)) return false; enemy.discovered = true; this.guardianSystem.awaken(this, enemy); }
     if(!this.canDamageTarget(enemy)){this.finalEncounter.diagnostics.blocked++;return false;}
     const before = enemy.hp;
     if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
     const devastation=executeRegular&&source==='ultimate-lightning'&&!enemy.boss&&enemy.kind!=='guardian';
-    const resolved=Math.min(maxDamage, amount * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
+    const resolved=Math.min(maxDamage, amount * bonusFactor(this.permanent, 'damage') * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
     enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - this.finalEncounter.limitDamage(enemy,resolved));
     this.finalEncounter.afterDamage(this,enemy); enemy.hitUntil = this.elapsed + 0.12;
     if(enemy.boss&&enemy.finalRole!=='boss'&&enemy.hp<before){
@@ -216,12 +288,12 @@ export class World {
     if (orb) this.orbs.push(orb);
     else { const old = nearest(at, this.orbs, Infinity); if (old) old.value += value; }
   }
-  gainXp(amount: number) { if(this.outcome||this.status==='over'||this.status==='menu')return; const level = this.experience.level; this.experience.gain(amount * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
+  gainXp(amount: number) { if(this.outcome||this.status==='over'||this.status==='menu')return; const level = this.experience.level; this.experience.gain(amount * bonusFactor(this.permanent, 'experience_gain') * this.artifacts.multiplier('experience')); if (this.experience.level > level) this.sound('level'); this.openUpgrade(); }
   private openUpgrade() {
-    if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.offerId++; this.choices = chooseUpgrades(this); }
+    if (this.status === 'playing' && this.experience.pending > 0) { this.status = 'upgrade'; this.serverOffer = null; this.offerId++; this.choices = this.serverUpgrades ? [] : chooseUpgrades(this); }
   }
   selectUpgrade(id: string, offer = this.offerId) {
-    if (offer !== this.offerId || this.status !== 'upgrade' || !this.choices.some(c => c.id === id) || !applyUpgrade(this, id)) return false;
+    if (this.premiumPending || this.serverUpgrades && !this.serverOffer || offer !== this.offerId || this.status !== 'upgrade' || !this.choices.some(c => c.id === id) || !applyUpgrade(this, id)) return false;
     this.experience.pending--; this.choices = [];
     // Supply effects can resolve a terminal encounter during the choice itself.
     if(this.outcome)return true;
@@ -231,7 +303,7 @@ export class World {
   damagePlayer(amount: number) {
     if (this.outcome || this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
-    const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation;
+    const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation * (1 - this.permanent.damage_reduction / 10000);
     const block=this.blockShield.absorbDamage(this.elapsed,incoming);
     const arcane=this.shield.absorbDamage(this.elapsed,incoming-block);
     const mobility=this.mobility.absorbDamage(this.elapsed,incoming-block-arcane),absorbed=block+arcane+mobility;
@@ -239,11 +311,14 @@ export class World {
     const hpHit = receiveDamage(this.player, incoming - absorbed, this.elapsed);
     const hit = hpHit || absorbed > 0;
     if ((mobility > 0 || block > 0) && !hpHit) this.player.invulnerableUntil = this.elapsed + BALANCE.invulnerability;
-    if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) { this.outcome='defeat'; this.status = 'over'; this.clearTemporaryState(); } }
+    if (hit) { this.sound(hpHit ? 'hurt' : 'shield'); this.effect(hpHit ? 'hit' : 'shield', this.player, 16, hpHit ? 0xff6f70 : 0xb9eeff); if (this.player.hp <= 0) {
+      if (this.serverEconomy && this.reviveCount < (this.options.economy?.revive_limit ?? 0)) { this.awaitingRevive = true; this.deathId = crypto.randomUUID(); this.status = 'paused'; }
+      else this.finishDefeat();
+    } }
     return hit;
   }
   step(rawDelta: number, input: MovementInput = { x: 0, y: 0 }) {
-    if (this.status !== 'playing') return;
+    if (this.premiumPending || this.status !== 'playing') return;
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
     if(isWarriorAttackUltimate(this.ultimate.selected)){this.ultimate.update(this);if(this.status!=='playing')return;}
     if(this.finalEncounter.phase==='dying'){this.finalEncounter.update(this,dt);return;}
@@ -336,7 +411,10 @@ export class World {
       ...(this.practice?{practice:true}:{}),
       ...(this.practiceBoss?{practiceBoss:this.practiceBoss}:{}),
       ...(this.practiceDuel?{practiceElapsed:Math.max(0,this.elapsed-this.practiceDuel.at)}:{}),
+      premiumPending: this.premiumPending, premium: this.options.economy?.premium, upgradeContext: this.upgradeContext(), serverOffer: this.serverOffer, paidActions: {...this.paidActions}, difficultyStage: Math.min(4, Math.floor(this.elapsed / 300)),
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
+      ...(this.serverEconomy ? { serverEconomy: true, awaitingRevive: this.awaitingRevive, deathId: this.deathId, reviveCount: this.reviveCount, reviveLimit: this.options.economy?.revive_limit ?? 0,
+        reviveHealthPercent: (this.options.economy?.revive_health_basis_points ?? 0) / 100, reviveProtectionSeconds: (this.options.economy?.revive_protection_ms ?? 0) / 1000, itemsUsed: { ...this.itemsUsed }, eliteKillsByKind: { ...this.scoring.eliteByKind } } : {}),
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
       ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']+this.scoring.damage['ultimate-earthbreaker']+this.scoring.damage['ultimate-ruin']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire'],earthbreaker:this.scoring.damage['ultimate-earthbreaker'],ruin:this.scoring.damage['ultimate-ruin']}} : {}),
@@ -354,7 +432,7 @@ export class World {
       }),
       abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
       bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase,damageOrder:this.bossDamageOrder.get(e.id)??0 })),
-      wave: this.finalEncounter.phase!=='inactive'?'Финальная встреча':profileAt(this.elapsed).name,
+      wave: this.finalEncounter.phase!=='inactive'?'Final encounter':profileAt(this.elapsed).name,
     };
   }
 }

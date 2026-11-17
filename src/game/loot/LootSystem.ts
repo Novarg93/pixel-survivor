@@ -37,11 +37,11 @@ export class LootSystem {
     if (enemy.boss) { this.spawnChest(world, enemy, 'boss'); return; }
     if (shouldDrop(enemy.elite, this.rng)) { const kind = rollLoot(ITEM_LOOT_POOL, this.rng, world); if (kind) this.drop(world, kind, enemy); }
   }
-  grant(world: World, kind: LootKind) {
+  grant(world: World, kind: LootKind, parameters?: { heal_basis_points?: number; duration_ms?: number; multiplier_basis_points?: number }) {
     if (world.status !== 'playing' || world.player.hp <= 0) return false;
-    if (kind === 'healing') world.player.hp = Math.min(world.effectiveMaxHp, world.player.hp + world.effectiveMaxHp * C.healFraction);
+    if (kind === 'healing') world.player.hp = Math.min(world.effectiveMaxHp, world.player.hp + world.effectiveMaxHp * (parameters?.heal_basis_points === undefined ? C.healFraction : parameters.heal_basis_points / 10000));
     else if (kind === 'magnet') world.collectAllOrbs();
-    else world.buffs.activate(kind, world.elapsed);
+    else world.buffs.activate(kind, world.elapsed, parameters?.duration_ms === undefined ? undefined : parameters.duration_ms / 1000, parameters?.multiplier_basis_points === undefined ? undefined : parameters.multiplier_basis_points / 10000);
     world.feedback({ type: 'pickup', kind: kind === 'healing' ? 'heal' : 'buff' });
     this.notice = { kind, name: LOOT_NAMES[kind], expires: world.elapsed + C.pickupNoticeDuration };
     world.effect('shield', world.player, 20, LOOT_COLORS[kind], 0.3); world.sound('pickup'); return true;

@@ -1,0 +1,35 @@
+.leaderboard-page { max-width: 1200px; margin-inline: auto; }
+.leaderboard-page h1 { overflow-wrap: anywhere; }
+.leaderboard-page h2 { margin-block: 2rem 1rem; }
+.leaderboard-page .quiet-link { display: inline-block; margin-block: .75rem; }
+.own-rank { display: grid; gap: .6rem; padding: 1.5rem; margin-block: 1.5rem 2.5rem; border: 1px solid color-mix(in srgb, var(--site-mint) 40%, transparent); border-radius: 2px; background: var(--site-raised); }
+.own-rank strong { font-size: clamp(1.2rem, 3vw, 2rem); color: var(--site-mint); }
+.own-rank > p:first-child { font-size: .75rem; letter-spacing: .15em; }
+.rank-own { background: color-mix(in srgb, var(--site-mint) 7%, transparent); }
+.leaderboard-table { min-width: 780px; }
+.leaderboard-page a:not(.site-button) { color: var(--site-mint); }
+.rank-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem; }
+.rank-stats article { padding: 1rem; border: 1px solid var(--site-edge); border-radius: 2px; background: var(--site-panel); display: grid; gap: .75rem; }
+.rank-stats small { color: var(--site-muted); overflow-wrap: anywhere; }
+.rank-stats strong { font-size: clamp(1rem, 2vw, 1.6rem); }
+.run-badge { display: inline-block; padding: .25rem .6rem; border: 1px solid var(--site-edge); border-radius: 2px; font-size: .8rem; }
+.run-badge.victory, .run-badge[data-status="accepted"] { color: var(--site-mint); border-color: var(--site-mint); }
+.run-badge[data-status="pending_review"] { color: var(--site-gold); border-color: var(--site-edge-bright); }
+.run-badge[data-status="rejected"] { color: var(--site-danger); border-color: var(--site-edge); }
+.run-items { display: flex; flex-wrap: wrap; gap: .8rem; margin-block: 1rem; padding: 0; list-style: none; }
+.run-items li { display: grid; gap: .5rem; padding: 1rem; border: 1px solid var(--site-edge); border-radius: 2px; }
+.run-dictionary { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .4rem 1rem; max-width: 500px; margin-block: 1rem; }
+.run-dictionary dt { overflow-wrap: anywhere; }
+.leaderboard-page details { padding: 1rem; border: 1px solid var(--site-edge); border-radius: 2px; margin-block: 1rem; }
+.leaderboard-page summary { cursor: pointer; min-height: 30px; }
+.leaderboard-page pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; background: var(--site-inset); border: 1px solid var(--site-edge); border-radius: 2px; padding: 1rem; max-height: 600px; overflow: auto; margin-block: 1rem; }
+.nickname-form, .review-form { display: grid; gap: 1rem; margin-block: 1.5rem; max-width: 650px; }
+.nickname-form input, .review-form textarea, .review-form select { color: var(--site-text); background: var(--site-inset); border: 1px solid var(--site-edge-bright); border-radius: 2px; padding: .8rem; width: 100%; min-height: 44px; }
+.review-form textarea { min-height: 110px; }
+.operations-nav { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: 1.5rem; }
+.operations-nav a { padding: .7rem; border: 1px solid var(--site-edge); border-radius: 2px; min-height: 44px; }
+.operations-nav a[aria-current="page"] { background: var(--site-raised); }
+.review-history { list-style: none; padding: 0; }
+.review-history li { padding: 1rem; border-bottom: 1px solid var(--site-edge); overflow-wrap: anywhere; }
+@media (max-width: 760px) { .rank-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .leaderboard-page .section-heading { align-items: flex-start; gap: 1rem; } .leaderboard-page .site-button { min-height: 44px; } }
+@media (max-width: 1000px) { .site-header { flex-wrap: wrap; } .site-header nav { flex-wrap: wrap; max-width: 100%; } }

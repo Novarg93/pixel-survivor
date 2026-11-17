@@ -47,8 +47,8 @@ export function drawEnrageDanger(g:Phaser.GameObjects.Graphics,w:World){
   }
 }
 export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility: MobilitySystem, intensity: number) {
-  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   drawMobilityUpgrade(g, w, mobility, intensity);
+  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   const t = (w.elapsed - mobility.started) / MOBILITY.visualDuration;
   if (t < 0 || t >= 1 || w.status === 'over') return;
   const alpha = (1 - t) * Math.max(.25, intensity), color = MOBILITY[w.character].color;
@@ -67,7 +67,6 @@ export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility:
 
 // Bounded pixel clusters, drawn in the existing friendly batch below hostile tells.
 export function drawMobilityUpgrade(g: Phaser.GameObjects.Graphics, w: World, m: MobilitySystem, intensity: number) {
-  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   if (w.status === 'over' || !m.variant) return;
   for (const zone of w.zones) if (zone.wall && zone.expires > w.elapsed) {
     const wall = zone.wall, dx = wall.to.x-wall.from.x, dy = wall.to.y-wall.from.y, length = Math.hypot(dx,dy), steps = Math.max(1,Math.ceil(length/5));
@@ -81,6 +80,9 @@ export function drawMobilityUpgrade(g: Phaser.GameObjects.Graphics, w: World, m:
       g.fillStyle(cold?0xd9f3f7:0xffe2a3,fade).fillRect(x,y-rise+1,1,2);
     }
   }
+  // Persistent specialization walls remain visible with the accepted Blink art.
+  // Only the archived Blink/buff decorations follow the legacy presentation flag.
+  if(w.character==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   const sprint=w.buffs.remaining('arcane-sprint',w.elapsed)>0,berserk=w.buffs.remaining('berserk',w.elapsed)>0,absorb=m.absorbValue(w.elapsed)>0;
   if(absorb&&showPlayerShieldShell(w))for(const side of [-1,1])g.fillStyle(0xb9eeff,.65*intensity).fillRect(w.player.x+side*12-1,w.player.y-10,2,13).fillRect(w.player.x+side*10-1,w.player.y-13,3,3);
   if(sprint||berserk)for(let i=0;i<6;i++){

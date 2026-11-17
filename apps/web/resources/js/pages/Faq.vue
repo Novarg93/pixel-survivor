@@ -1,0 +1,15 @@
+<script setup lang="ts">
+import { Head } from '@inertiajs/vue3';
+const answers = [
+    ['How do I start playing?', 'Select Play Now, choose Mage or Warrior and start a run. Attacks are automatic. Collect XP, choose upgrades and dodge telegraphed attacks. The final Warden appears at 20:00.'],
+    ['What are the controls?', 'WASD or arrow keys to move; Space for Blink / Charge; Q for your selected ultimate when available; Esc / P to pause. On mobile, use landscape orientation, the joystick and on-screen buttons. Gamepad: left stick, X / Square to dash, Start to pause.'],
+    ['How do characters progress?', 'During a run, XP unlocks three free upgrades to choose from. Permanent account, Mage and Warrior levels are stored separately on the server: 1–10, with 100 XP per level. After a regular defeat, the character earns 0 XP before 3:00, 20 XP from 3:00 and 30 XP from 10:00. An accepted victory over the final Warden awards 50 XP each to the account and selected character. Practice grants no permanent XP. Character bonuses apply only to new runs.'],
+    ['Where are records saved?', 'Settings and personal records are currently stored in this browser’s localStorage. Clearing browser data removes them. Different origins, including a separate standalone game port, have separate storage. Signing in does not yet transfer or synchronize records.'],
+    ['Do I need an account?', 'No. Guests play with base stats and local records. After signing in and verifying your email, new runs are registered on the server, checked and may award permanent XP. Previous local results are not imported. Your account shows levels, bonuses and server history; Inventory and Wallet are available, and Shop sells items for internal credits. Local emails are logged instead of being sent.'],
+    ['How does XP Boost work?', 'Activate the inventory item manually for 24 hours of server time. It grants ×1.5 permanent Character XP for new runs started while the boost is active. Account XP and in-game crystals are unchanged. Reactivating an active boost is blocked without consuming an item. Potions/Haste/Fury are available separately during server runs; Revive is available after death.'],
+    ['Can I buy items?', 'Yes, with internal credits in Shop. Account levels 3 and 7 award 100 and 200 credits. Purchased items first go to Inventory: activate XP Boost separately and use consumables separately during a server run. The compact Shop is available while paused; Revive is available after death. Real-money top-ups are not connected yet.'],
+    ['Is there a shared leaderboard?', 'Only local records are currently available. A shared global leaderboard with server checks and consumable usage indicators is planned.'],
+];
+defineOptions({ name: 'FaqPage' });
+</script>
+<template><Head title="FAQ" /><section class="site-section reading-page"><p class="overline">BEFORE THE FIRST SPARK</p><h1>Questions and answers.</h1><details v-for="([question, answer], i) in answers" :key="question" :open="i === 0"><summary>{{ question }}</summary><p>{{ answer }}</p></details><a href="/play" class="site-button">Play Now ↗</a></section></template>

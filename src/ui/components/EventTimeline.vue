@@ -8,7 +8,7 @@ const props = defineProps<{ state: Snapshot }>();
 const timeline = computed(() => {const timeline=encounterTimeline(props.state.elapsed);return {...timeline,events:timeline.events.filter(e=>e.at<RUN_LIMITS.victoryAt)};});
 // Original integer-grid silhouettes; color supplements distinct shapes.
 const icons = {
-  boss: { label: 'Боссы', path: 'M2 1h3l9 9v3h-3L2 4zm9 0h3v3L5 13H2v-3zM1 12h4v3H1zm10 0h4v3h-4z' },
+  boss: { label: 'Bosses', path: 'M2 1h3l9 9v3h-3L2 4zm9 0h3v3L5 13H2v-3zM1 12h4v3H1zm10 0h4v3h-4z' },
   guardian: { label: 'Guardian', path: 'M6 0h4v3h3v3h3v4h-3v3h-3v3H6v-3H3v-3H0V6h3V3h3zm0 5v6h4V5z' },
   enrage: { label: 'Enrage', path: 'M8 0h2v4h2v3h2v5h-2v3H4v-2H2V8h2V5h2v4h2zm0 9v4h2v-2z' },
   endgame: { label: 'Phase II', path: 'M1 3h4l5 5-5 5H1l5-5zm6 0h4l5 5-5 5H7l5-5z' },
@@ -23,13 +23,13 @@ function markers(event: Event) {
   return result;
 }
 function label(event: Event) {
-  return `Запланировано ${formatTime(event.at)}: ${markers(event).map(m => `${icons[m.kind].label} ${m.count}`).join(', ')}. При свободных слотах.`;
+  return `Scheduled at ${formatTime(event.at)}: ${markers(event).map(m => `${icons[m.kind].label} ${m.count}`).join(', ')}. Subject to available slots.`;
 }
 </script>
 <template>
- <aside class="event-timeline" aria-label="Шкала запланированных событий" :data-elapsed="state.elapsed">
-  <div class="timeline-rail" role="list" aria-label="Запланированные события: минута до и после текущего времени">
-   <i class="timeline-now" role="img" aria-label="Сейчас"></i>
+ <aside class="event-timeline" aria-label="Scheduled event timeline" :data-elapsed="state.elapsed">
+  <div class="timeline-rail" role="list" aria-label="Scheduled events: one minute before and after the current time">
+   <i class="timeline-now" role="img" aria-label="Now"></i>
    <div v-for="event in timeline.events" :key="event.at" class="timeline-event" role="listitem" :data-at="event.at" :style="{ left: event.position + '%' }" :aria-label="label(event)">
     <span v-for="marker in markers(event)" :key="marker.kind" class="event-icon" :data-kind="marker.kind" aria-hidden="true">
      <svg viewBox="0 0 16 16" focusable="false"><path :d="icons[marker.kind].path" fill-rule="evenodd" /></svg>

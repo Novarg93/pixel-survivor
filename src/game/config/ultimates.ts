@@ -11,15 +11,15 @@ export const ULTIMATE = {
   ruin: { windup: .54, bodyDuration: 1.08, range: 560, speed: 440, hitRadius: 16, damage: 420, impactRadius: 48, impactDamage: 140, bossFraction: .18, aftermath: .4 },
 } as const;
 export const ULTIMATE_DEFINITIONS = [
-  { id: 'lightning', name: 'Гнев Небес', description: 'Катастрофический разряд: мгновенная разветвлённая паутина. Первый заряд готов; затем 10 успешных Blink.', icon: 'ϟ', color: '#458FFF' },
-  { id: 'frost', name: 'Абсолютный Ноль', description: 'Руна замораживает даже боссов и Guardian на 4 секунды, затем ещё 4 секунды льда. После каста ледяная лавина расходится к краям: 180 урона, боссам и Guardian — не более 8% HP. Первый заряд готов; затем 10 успешных Blink.', icon: '❄', color: '#D9F3F7' },
-  { id: 'fire', name: 'Погребальное Пламя', description: '10 секунд пламени: сжигает снаряды, обжигает врагов и лечит 20% HP/с. Каждые 2 секунды радиус +10% от исходного. Первый заряд готов; затем 10 успешных Blink.', icon: '♨', color: '#F05252' },
+  { id: 'lightning', name: 'Heavenly Wrath', description: 'A devastating discharge: an instant branching web of lightning. The first charge is ready; recharge with 10 successful Blinks.', icon: 'ϟ', color: '#458FFF' },
+  { id: 'frost', name: 'Absolute Zero', description: 'A rune freezes even bosses and Guardians for 4 seconds, followed by 4 seconds of ice. An ice avalanche spreads outward after casting: 180 damage, capped at 8% HP for bosses and Guardians. The first charge is ready; recharge with 10 successful Blinks.', icon: '❄', color: '#D9F3F7' },
+  { id: 'fire', name: 'Funeral Pyre', description: '10 seconds of fire: burns projectiles, scorches enemies and heals 20% HP/s. Every 2 seconds the radius grows by 10% of its original size. The first charge is ready; recharge with 10 successful Blinks.', icon: '♨', color: '#F05252' },
 ] as const;
-export const WAR_BANNER_DEFINITION={id:'banner',name:'Знамя авангарда',description:'Знамя на 15 секунд. В радиусе 140px восстанавливает 10% максимального HP в секунду. Первый заряд готов; затем 10 успешных рывков.',icon:'⚑',color:'#9BC5A5'} as const;
+export const WAR_BANNER_DEFINITION={id:'banner',name:'Vanguard Banner',description:'A banner lasts 15 seconds. Restores 10% maxHP per second within 140px. The first charge is ready; recharge with 10 successful dashes.',icon:'⚑',color:'#9BC5A5'} as const;
 export const WARRIOR_ULTIMATE_DEFINITIONS = [
   WAR_BANNER_DEFINITION,
-  { id: 'earthbreaker', name: 'Три ветви разлома', description: 'Три ветви вперёд на 280px: 4 последовательные волны по 100 урона. Одна цель — один удар за волну; боссам и Хранителям суммарно не более 16% maxHP. Первый заряд готов; затем 10 успешных рывков.', icon: '⋔', color: '#D4B37B' },
-  { id: 'ruin', name: 'Таранное копьё', description: 'Тяжёлое копьё пробивает врагов на 560px: 420 урона. В конце пути — удар 140 урона в радиусе 48px по ещё не задетым целям. Боссам и Хранителям не более 18% maxHP за применение. Первый заряд готов; затем 10 успешных рывков.', icon: '➶', color: '#BFD3D9' },
+  { id: 'earthbreaker', name: 'Threefold Fissure', description: 'Three branches extend 280px forward: 4 successive waves of 100 damage. Each target is hit once per wave; total damage to bosses and Guardians is capped at 16% maxHP. The first charge is ready; recharge with 10 successful dashes.', icon: '⋔', color: '#D4B37B' },
+  { id: 'ruin', name: 'Battering Spear', description: 'A heavy spear pierces enemies over 560px: 420 damage. At its endpoint, deals 140 damage within 48px to targets not already hit. Bosses and Guardians take at most 18% maxHP per cast. The first charge is ready; recharge with 10 successful dashes.', icon: '➶', color: '#BFD3D9' },
 ] as const;
 export function ultimateDefinitions(character:CharacterId){return character==='warrior'?WARRIOR_ULTIMATE_DEFINITIONS:ULTIMATE_DEFINITIONS;}
 export function isWarriorAttackUltimate(id: string | null): id is WarriorAttackUltimate { return id === 'earthbreaker' || id === 'ruin'; }

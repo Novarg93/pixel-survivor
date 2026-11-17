@@ -22,4 +22,4 @@ export const ARTIFACT_BALANCE = {
   maxStacks: 3, itemCap: 3, lifetime: 180, pickupRadius: 16, noticeDuration: 4,
   health: 0.1, damage: 0.08, speed: 0.07, cooldown: 0.06, experience: 0.15,
 } as const;
-export const RADAR_BALANCE = { hz: 5, radiusMultiplier: 2, minRadius: 128, desktopSize: 180, mobileSize: 112 } as const;
+export const RADAR_BALANCE = { hz: 5, radiusMultiplier: 2, minRadius: 128, desktopSize: 270, mobileSize: 168 } as const;

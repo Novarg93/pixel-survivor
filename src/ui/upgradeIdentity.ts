@@ -10,7 +10,7 @@ export const CARD_SELECTION_DELAY_MS = 200;
 type SkillUpgradeId = `${'unlock' | 'rank' | 'evolve'}-${AbilityId}` | 'projectiles';
 export type CardFamily = AbilityId | 'mobility' | 'general';
 // Effect ownership is explicit: projectiles changes fireball only, whereas the
-// evocatively named "Жар углей" changes damage across abilities.
+// evocatively named "Ember Heat" changes damage across abilities.
 export const SKILL_UPGRADE_IDS = {
   fireball: ['unlock-fireball', 'rank-fireball', 'evolve-fireball', 'projectiles'],
   frost: ['unlock-frost', 'rank-frost', 'evolve-frost'],

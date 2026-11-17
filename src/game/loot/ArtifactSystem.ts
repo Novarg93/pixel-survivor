@@ -7,11 +7,11 @@ import { distance, type Point } from '../utils/math';
 export type ArtifactId = 'health' | 'damage' | 'speed' | 'cooldown' | 'experience';
 export interface ArtifactDrop extends Point { id: number; artifact: ArtifactId; born: number; expires: number }
 export const ARTIFACTS: Record<ArtifactId, { name: string; effect: string; short: string; icon: string }> = {
-  health: { name: 'Сердце дуба', effect: '+10% максимального HP', short: 'HP', icon: '♥' },
-  damage: { name: 'Печать пламени', effect: '+8% общего урона', short: 'Урон', icon: '✦' },
-  speed: { name: 'Перо ветра', effect: '+7% скорости движения', short: 'Шаг', icon: '➤' },
-  cooldown: { name: 'Песочные часы', effect: '−6% времени перезарядки', short: 'Ритуал', icon: '⌛' },
-  experience: { name: 'Кристалл памяти', effect: '+15% получаемого опыта', short: 'XP', icon: '◆' },
+  health: { name: 'Oak Heart', effect: '+10% maxHP', short: 'HP', icon: '♥' },
+  damage: { name: 'Flame Seal', effect: '+8% overall damage', short: 'Damage', icon: '✦' },
+  speed: { name: 'Wind Feather', effect: '+7% movement speed', short: 'Speed', icon: '➤' },
+  cooldown: { name: 'Hourglass', effect: '−6% cooldown time', short: 'Cooldown', icon: '⌛' },
+  experience: { name: 'Memory Crystal', effect: '+15% XP gained', short: 'XP', icon: '◆' },
 };
 export interface ArtifactLootEntry { artifact: ArtifactId; weight: number }
 // Separate from consumable/chest rewards: future unique artifacts can extend this pool.

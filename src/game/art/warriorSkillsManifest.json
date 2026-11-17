@@ -22,7 +22,7 @@
       "index": 2,
       "width": 1024,
       "height": 970,
-      "sha256": "134cfbc5152a891ad1eb808d3fcd1357870f8cdea2a019dc10cd412396c07b59"
+      "sha256": "bbd19e411f1a7f414802a23c0a1fbf945b1cd5f5dff0096ccd35f00cd0bb7507"
     },
     {
       "index": 3,
@@ -34,19 +34,19 @@
       "index": 4,
       "width": 1024,
       "height": 970,
-      "sha256": "8e441d6bba2957e18416f5331f3bcdba7cae102a60f67e07795edf9e904f2b53"
+      "sha256": "da9368bacdd25870047d34982981ed22c83858e5dd7d4943ab32ab04b110448f"
     },
     {
       "index": 5,
       "width": 1024,
       "height": 970,
-      "sha256": "9de421c3674e3f43c9c82c1d446bc03e923bc56b4c2004f987bec143a9f1f159"
+      "sha256": "c7c002fb440b542cceab58299d1f4279f993476e558651514b753f7c9525cc65"
     },
     {
       "index": 6,
       "width": 1024,
       "height": 388,
-      "sha256": "70ff2cbbacaf444517a2787a730633466635448ad9346d6e204da29d84e2dfa5"
+      "sha256": "1d7665fc60b88b1a7e5cda144a388be6e2ed301e345af8b1cfeea2570b5003c3"
     }
   ],
   "locations": {
@@ -472,21 +472,21 @@
     },
     "north-whirlwind/5": {
       "page": 2,
-      "source": "raw/north-whirlwind/05.png",
-      "sha256": "189c4070e351be5f2cdc21eedabffd2fe1b85ba09f499c9e5ded9b8ee478e978",
-      "pixelSHA256": "fca368478f709f53830d721c8bc52149b340e4c158721add5817f4b37d32ad2e"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-whirlwind-5.png",
+      "sha256": "cfc5569d7383ff492a6a58234ace101489c194040a9bbbf1c529694278ff0117",
+      "pixelSHA256": "6b9a24c057566fb44c9a916ea0ff4be49f4753c1412c407ba80a4248c0160490"
     },
     "north-whirlwind/6": {
       "page": 2,
-      "source": "raw/north-whirlwind/06.png",
-      "sha256": "02dd486c89937e1cb1425991d6267d6e3022dd9c748faa1f699a5c7db75eafcd",
-      "pixelSHA256": "5168fe895835a6b25ad9678238deef80cd4f1a88657a7359141a4cfbce004829"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-whirlwind-6.png",
+      "sha256": "17244030cdb33915723044dc3d860bcbe26bbb48b94e5ace427aa6cf13a54f79",
+      "pixelSHA256": "15c942f9013068cba5f775bc07b2c42d24e6e3ddcfdf9130e50c3785009e3b43"
     },
     "north-whirlwind/7": {
       "page": 2,
-      "source": "raw/north-whirlwind/07.png",
-      "sha256": "e8db5d25e74d27df3535ecd43431afd3b5ebb495d1180d96ce1ec83677ecbecb",
-      "pixelSHA256": "17277b425102069cb575b32effa2d687dc84b922a986c47dccad0a8b2e476742"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-whirlwind-7.png",
+      "sha256": "7bb394d86f5e57cf96ce8330eb287e452d95666673912d94ee92a84638986433",
+      "pixelSHA256": "6869b967388b4497296b89cc49839b437a6524b5fd3aebc7fb3774b3a3f159e6"
     },
     "north-whirlwind/8": {
       "page": 2,
@@ -712,27 +712,27 @@
     },
     "north-cleave/6": {
       "page": 4,
-      "source": "raw/north-cleave/06.png",
-      "sha256": "10b945a9aec1da7f45b610a8049ff041d4b904a8d12c54caad691a5cfec8b2a3",
-      "pixelSHA256": "44a7122e7fb22f394849fd6e70a63560144c5f1be308d5a411233904eb8108b7"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-cleave-6.png",
+      "sha256": "31ee4cda69860c00248dd90edfff8d2dcf6a4c80826127cac6d6c3c4a66b07bf",
+      "pixelSHA256": "208cd3216f00098e0896cc6652dbee7b839f786bbef73890210c7875ef1d4467"
     },
     "north-cleave/7": {
       "page": 4,
-      "source": "raw/north-cleave/07.png",
-      "sha256": "7e8627c06db961984ea802b5ace37ff93aeaaeb78a6ae35fcd7bfece12d0378a",
-      "pixelSHA256": "575dff8540ffa7b6784d938dcf8f52c1cb01d4d6a581c79c45c7bc80ce1851a2"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-cleave-7.png",
+      "sha256": "b8787f9d8616d6a75739443455449d980c5063d7d0acdae0ded889ffa6ea8e19",
+      "pixelSHA256": "1fea4bd46eb7d9b0d35d9437f76756dfb92cdb5e801eed8274c0007e4dd4751b"
     },
     "north-cleave/8": {
       "page": 4,
-      "source": "raw/north-cleave/08.png",
-      "sha256": "ef2474ce469367a88695550fd34ecb64dd90bd2aaf38228c003d2a5ea2a5f7fc",
-      "pixelSHA256": "8e741901ebcdf37b0f688a12ea46c6910db953949c2d4d688c94a7cddc7dce1a"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-cleave-8.png",
+      "sha256": "b1e8692597a7fca41c4e438719ea01b917d33b88bec0d75988755fd5efcea355",
+      "pixelSHA256": "1be47ba7dbbcffbf175adefcb7fdaff517de51b74c5df791d5cb2f09b0fdbbf1"
     },
     "north-cleave/9": {
       "page": 4,
-      "source": "raw/north-cleave/09.png",
-      "sha256": "4f9344ecb57c4859beeaab2e2cb9a185c76430a29ffeff5a43fb0055b5e931cf",
-      "pixelSHA256": "4a41268af6a9d8cc8b0d286a1ef1af0df595a29e05a7913e466442b373ee0188"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-cleave-9.png",
+      "sha256": "c4b8c98c936370de6f5af4e21fded1176ba48c0a3c09ea798ffc8879fd4f0c72",
+      "pixelSHA256": "d4de94677d58e838427f59ef57922bb1ff80e8638ed4b935e1ac95836bc4d7ef"
     },
     "north-cleave/10": {
       "page": 4,
@@ -832,81 +832,81 @@
     },
     "front-throw/0": {
       "page": 5,
-      "source": "raw/front-throw-r3/00.png",
-      "sha256": "11d602b868a1bd284de21b13b066f7ed6d804e874b183de35e902df30a25c3ab",
-      "pixelSHA256": "90d29124bb23ce24575ce7200a68dec8f9fd6b0e2f687232e2bc29da53801a5e"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-0.png",
+      "sha256": "0507f7293a4783a291e1f70d1b6e9b895b965cf73411273cc847dc87353b5ddb",
+      "pixelSHA256": "3c8dca4fb9847be872b35760cdafc824a09081295af615ab8b8a177bca9f1646"
     },
     "front-throw/1": {
       "page": 5,
-      "source": "raw/front-throw-r3/01.png",
-      "sha256": "312cb0ef682e3ee52f58997881681930e49cb4223b15d2107ca9f64d7e643630",
-      "pixelSHA256": "a27e677a478052423e110d878f8cf980201b34163d6e1a8e57cad8bc910d97e6"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-1.png",
+      "sha256": "9012f0ce8e5affb7b2cd730c5b1e2d31c15dfc5fa3966f3e2438036e5dfa3292",
+      "pixelSHA256": "2d62d3981c36ca6b3d558ad2ccce941e081fd98eda3cf63d7ef1c23ace0d3dd6"
     },
     "front-throw/2": {
       "page": 5,
-      "source": "raw/front-throw-r3/02.png",
-      "sha256": "090303e31c0f070884c80815b0c3388f05e301480ae4b8835222e814ae6b74c1",
-      "pixelSHA256": "abc65c29b104c12a63e7d87445ad8f9f8204e2232c38a913e496f84838661133"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-2.png",
+      "sha256": "07bc0f09ba8cd117c15ecb5ed6b0b280f9beff193de7b9d3f3025ff89c94003d",
+      "pixelSHA256": "9b848d31d3cded92a14333fd1dece5061810a205080c9cd50b3992abe5549429"
     },
     "front-throw/3": {
       "page": 5,
-      "source": "raw/front-throw-r3/03.png",
-      "sha256": "08ef722ae88f7a61be3257861530a2dbf7f9d4cb5c0ca012534d6a9638a71fed",
-      "pixelSHA256": "aa25f57f103558cb0543793de402eb6beeee5ce56725ebd8e5428dc50bb4b98f"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-3.png",
+      "sha256": "b9e093ba4d6a7a9aa48adc04b83905acff0cf84f64b5025748e7b63583854185",
+      "pixelSHA256": "fa144b72b0be846ca4865f6a89ab0e6337ed1e520910155bd8f0db6c587b6ab4"
     },
     "front-throw/4": {
       "page": 5,
-      "source": "raw/front-throw-r3/04.png",
-      "sha256": "5aae1cf6d77b131be539ef43cbbcb3d813e921989ac2cffd738ceb341181a379",
-      "pixelSHA256": "5a5b439a81cbd5c7ad56b24cfd132c02a198247fc0f1f0b1738e8785f38f3914"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-4.png",
+      "sha256": "1bceb673d2e8eab9ceceb4474955d6b48be758be03409f426375ef2bc0f18081",
+      "pixelSHA256": "1b7dca60b1257c6364f97d9eada99bd18bf727e798b26a4012503f58c55f9c0c"
     },
     "front-throw/5": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-05.png",
-      "sha256": "cb453b0bd9eb3569fbf6233701c99755f73c5625bec6515518e5ae496767ff1e",
-      "pixelSHA256": "ad902a630baa3e6dcc867a53f1c69538ebe9e634c028c1f14f63c9058cc422f6"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-5.png",
+      "sha256": "2fb1a0cfad262707aac2949d4a317fc3dc027e193aced142be4c36b8759b6684",
+      "pixelSHA256": "667588671e948363a5110058d6cfd1bbc2b66fe0cb263890531263cffb5d7e3b"
     },
     "front-throw/6": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-06.png",
-      "sha256": "5eee8f5b5850e2981a7ecf3fe7945886e42e93d3c1e3964d33620c1da26060af",
-      "pixelSHA256": "f41880984b0c5f43f66c2e663881b10c4a6a3aa2bf20f1efcd6a03fe18343813"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-6.png",
+      "sha256": "1a79d1aa90d5b6e43653b33dbaa5681903cad25689e55ccf7463dc4584219818",
+      "pixelSHA256": "0a3a15243fe8b046f8f3bc86820e430d57ca9a7bada1d17e7ac4336accc03cb2"
     },
     "front-throw/7": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-07.png",
-      "sha256": "34e61ade1a44be4a4fc329c000e055a9bfe962f8e425cf8ba86f14620ca6713d",
-      "pixelSHA256": "7668ef079fbba1c118d2260749d3362387566fb901f1a748e8a6b655f7109e6e"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-7.png",
+      "sha256": "f923a6cb4a7791bd95db3cb03a700c738db8ac1e14aca5a419e2fbd054fb2cba",
+      "pixelSHA256": "b698c7e4bb048d9c14aa6265d90388f0f1d7b18b70c5e7d1e7cc0cc855070c27"
     },
     "front-throw/8": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-08.png",
-      "sha256": "6fd39ccd4b10b1a419f00b6d6d112908e620237db48c588b2a4ad5af3dad1de7",
-      "pixelSHA256": "cfeab2610e3864074a8a3fd8b94f2231a9056ac4cf89acb85d44a172ee174d88"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-8.png",
+      "sha256": "c423887d950b406d3bb58d52ac12ef78130ff39e3973e7ba6bfb18b18dd1c118",
+      "pixelSHA256": "db45fb86bf20ac65e3fe01a82049c3314f086a79029cb5272d3d89c89d7158fc"
     },
     "front-throw/9": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-09.png",
-      "sha256": "d44a8073adbc3b9c6faceb0208b9b9e9f23d82340ca721a033a08e3a0919cd10",
-      "pixelSHA256": "ce6bdc43706906e606491b36022ea16e648a1450d8f25c184ad7ef8e3bac4c1e"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-9.png",
+      "sha256": "012a117a2e667a90044ff76cea93fe413f193b37b443b2c1311598f1c2e2bc62",
+      "pixelSHA256": "9d4ed104078bcb47f3932377126d4d63ecb093c84690b725891fac321d9ffad0"
     },
     "front-throw/10": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-10.png",
-      "sha256": "e84529f38a9a8782d5d58d3627602590f4e26ec727f23df48493aa827ce63944",
-      "pixelSHA256": "3148b03b2aac9e5436a0201f82306b339fcf6ee17af0f3ecc40b1b103a670217"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-10.png",
+      "sha256": "69d286e6b9f640221477348eed6bc9403636d2fc162fd249d35afca1969e556f",
+      "pixelSHA256": "53f06323113a80c76e5cb0c3545acd8bb1a5960de4e3d085bb8dcdb14bce5a03"
     },
     "front-throw/11": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-11.png",
-      "sha256": "f35998039e0f572e446d0bc93918337bd530ef32e150e1d407da672e57ea072e",
-      "pixelSHA256": "0ade9c693b1d4379cad989e21ebac36a4f266bf9a3de6f29b99222a61326cec4"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-11.png",
+      "sha256": "72f8c039d03e65e5bd1eedec500519afa7a195acec10843290d9d0dd162be45e",
+      "pixelSHA256": "bd8a763789788a38b9c2db3b718ec678d16d68d28c6c0575fabc6b745f560735"
     },
     "front-throw/12": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/front-12.png",
-      "sha256": "257c4e47c84c78a05e196a3b8c44dfe21aeb90e45d464f0c2cf6c76ac06215fb",
-      "pixelSHA256": "8a04c8891a7d2e8a49e9b13987185a4a0812c0b6bf930daf8422e08fb0b20144"
+      "source": "../warrior-shield-repair-v1/frames/skills-front-throw-12.png",
+      "sha256": "f5dfd152a273006c4df83c66df13d6fcd3875a2bbf2d96827377cf23d8a56e54",
+      "pixelSHA256": "f6f54fb265fcd8841eefccb6410f2a7729bca07e201f97d8df678fc1881cf014"
     },
     "north-throw/0": {
       "page": 5,
@@ -940,39 +940,39 @@
     },
     "north-throw/5": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-05.png",
-      "sha256": "36635fb3dfba5499cb56bb9a9f62422cf1d3e38d974390f7ce575042f39e888c",
-      "pixelSHA256": "851c52d18901d6f042a2df8e711c0ab711db6c38d764341dd8433697e8f08d36"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-5.png",
+      "sha256": "80c0bd78c859ee43e8dc683967d3960f277178f7ff24340d512d562e38929120",
+      "pixelSHA256": "2a79021870bd90b93b92cf95ec145aa0a595392396ebaa8710a72a9e4dbee7fe"
     },
     "north-throw/6": {
       "page": 5,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-06.png",
-      "sha256": "f4ee1739dfc393adceb04a54de36fb00e650fa3cbb5812fd0cb72d9682d75b76",
-      "pixelSHA256": "0d6a5bf8a849b13c3a676a51be54a3a968b8b12ec69109805914035f2ad923f7"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-6.png",
+      "sha256": "3e81512bcbf56fd883dfd459640afcb9104bf2345d478ff8633189e674128ce8",
+      "pixelSHA256": "989139021f0f5da142829232866f761c235f1c9f963f5683ea89f8a3e6551d0e"
     },
     "north-throw/7": {
       "page": 6,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-07.png",
-      "sha256": "f37b3013dfb0cf1a7dc34afb75b88f0abc2cb58c1571e8f8d53312c752c8b80d",
-      "pixelSHA256": "1d31408688464e2c974b193cc731043c4b1796500c7fd15841163583f5ce5da3"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-7.png",
+      "sha256": "67f55fa5ce81dbd70913a3f555cb8bf61efa06ecf6e5cdcef7e71565a73820de",
+      "pixelSHA256": "bc52832112e5f5158ffc2300cc06da31240ece98790b68188c8010d766a6450f"
     },
     "north-throw/8": {
       "page": 6,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-08.png",
-      "sha256": "cc4378a75fa03a501162c0372d9302a1e87b2c2b97575c227564b88fad5170e0",
-      "pixelSHA256": "7f21155378348e81b750a97174d90e8d74022ef0ec56b036491ee717e475b165"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-8.png",
+      "sha256": "3ff32f45ccd7a99c839989266a4c3fbb1b8324818badbe0408cde0853c1545e7",
+      "pixelSHA256": "06080725b00e533f374103294f3147d0bb40c86faa184c34b7009154e4049014"
     },
     "north-throw/9": {
       "page": 6,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-09.png",
-      "sha256": "5c5a551a0fe70695c2f319fd7fd4853d86216754139da626e1752a0926204214",
-      "pixelSHA256": "6f433b42a3eb833209bed6b06c266f6992a84b96e17b3878c156090716b0893f"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-9.png",
+      "sha256": "f66821dc921ab5a8b1745bff70e5070cbef440e38f054c548ada33852631a495",
+      "pixelSHA256": "cc5053e57d7fd39478e39d80232ce3b5680fb1b183e0ac4bd6f73274dfd2e214"
     },
     "north-throw/10": {
       "page": 6,
-      "source": "../warrior-spear-empty-hand-review-v1/frames/north-10.png",
-      "sha256": "dc7ccfa4b39f443e974d4c298e39cc0f0adbccddb06c845fd130624ad571c055",
-      "pixelSHA256": "443054157c430103f704d1119ae9f0a1fc0966c1d47988d0bb93d5db12b41f39"
+      "source": "../warrior-shield-repair-v1/frames/skills-north-throw-10.png",
+      "sha256": "f4c44d275243ee8670f6efc45ee55b3370fdc931056a58ab98707eafa7126258",
+      "pixelSHA256": "8c6942afaa5778255ce70cd243903dd65197674144a1bfbfec0c102445792a56"
     },
     "north-throw/11": {
       "page": 6,

@@ -1,0 +1,20 @@
+.settings-page { width: min(100%, 1120px); margin-inline: auto; padding: 48px 6% 64px; }
+.settings-grid { display: grid; grid-template-columns: 192px minmax(0, 576px); gap: 48px; }
+.settings-sidebar, .settings-content { min-width: 0; }
+.settings-navigation { display: flex; flex-direction: column; gap: 4px; }
+.settings-navigation a { white-space: normal; min-height: 44px; }
+.settings-separator { display: none; }
+.settings-content { overflow-wrap: anywhere; }
+.settings-content header h2 { margin: 0 0 8px; }
+.settings-content input { min-width: 0; background: var(--site-panel); color: var(--site-text); border-color: var(--site-edge-bright); }
+.settings-content input:focus-visible { outline: 2px solid var(--site-gold); outline-offset: 3px; }
+.settings-content .text-muted-foreground { color: var(--site-muted); line-height: 1.7; }
+.settings-notice { border: 1px solid var(--site-edge); background: var(--site-raised); padding: 12px 16px; font-size: 13px; line-height: 1.7; }
+.settings-link { color: var(--site-gold); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 900px) {
+    .settings-page { padding-block: 32px 48px; }
+    .settings-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .settings-navigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .settings-separator { display: block; }
+    .settings-content { max-width: 576px; width: 100%; }
+}

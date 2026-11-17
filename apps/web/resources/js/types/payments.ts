@@ -1,0 +1,11 @@
+import type { Paged } from './commerce';
+import { formatMinor } from '../lib/currency';
+export type PaymentStatus = 'created' | 'checkout_pending' | 'processing' | 'succeeded' | 'failed' | 'canceled' | 'expired';
+export interface PaymentPackage { id: string; name: string; description: string | null; credits_amount: number; amount_minor: number; currency: string; currency_exponent: number; mode: 'test' | 'live'; active?: boolean }
+export interface PaymentOrder { id: string; provider: string; package: PaymentPackage; credits_amount: number; amount_minor: number; currency: string; currency_exponent: number; mode: 'test' | 'live'; status: PaymentStatus; fulfillment_status: 'not_ready' | 'pending' | 'failed' | 'fulfilled'; checkout_url: string | null; checkout_error: string | null; verification_error: string | null; fulfillment_error: string | null; created_at: string; expires_at: string; confirmed_at: string | null; fulfilled_at: string | null }
+export type PaymentSelection = { package_id: string; custom_credits?: never } | { custom_credits: number; package_id?: never };
+export type CheckoutRequest = PaymentSelection & { operation_id: string; quote_hash?: string; dev_confirmed?: boolean };
+export interface PaymentQuote { package_id: string | null; name: string; credits_amount: number; amount_minor: number; currency: string; currency_exponent: number; quote_hash: string; payment_method: string }
+export interface PaymentSnapshot { enabled: boolean; dev_mode: boolean; stripe_mode: boolean; mode: 'test' | 'live' | 'unavailable'; server_now: string; payment_method: string; custom: { enabled: boolean; min: number; max: number; step: number; test_only: boolean }; packages: PaymentPackage[]; orders: Paged<PaymentOrder> }
+export function paymentLabel(order: PaymentOrder): string { return order.status === 'succeeded' ? (order.fulfillment_status === 'fulfilled' ? 'Credits added' : 'Payment confirmed · credits pending') : ({ created: 'Order created', checkout_pending: 'Checkout preparing / awaiting payment', processing: 'Pending · awaiting confirmation', failed: 'Payment failed', canceled: 'Canceled', expired: 'Expired' })[order.status]; }
+export function minorLabel(amount: number, exponent: number, currency: string): string { return formatMinor(String(amount), exponent, currency); }

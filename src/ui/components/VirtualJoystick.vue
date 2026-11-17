@@ -8,4 +8,4 @@ function start(event: PointerEvent) { if (pointer !== undefined || !pad.value) r
 function stop(event?: PointerEvent) { if (event && event.pointerId !== pointer) return; pointer = undefined; offset.value = { x: 0, y: 0 }; emit('move', offset.value); }
 onUnmounted(stop);
 </script>
-<template><div ref="pad" class="joystick" aria-label="Сенсорный джойстик" @pointerdown.prevent="start" @pointermove.prevent="update" @pointerup="stop" @pointercancel="stop" @lostpointercapture="stop"><span :style="{ transform: `translate(${offset.x}px, ${offset.y}px)` }"></span><small>ДВИЖЕНИЕ</small></div></template>
+<template><div ref="pad" class="joystick" aria-label="Touch joystick" @pointerdown.prevent="start" @pointermove.prevent="update" @pointerup="stop" @pointercancel="stop" @lostpointercapture="stop"><span :style="{ transform: `translate(${offset.x}px, ${offset.y}px)` }"></span><small>MOVEMENT</small></div></template>

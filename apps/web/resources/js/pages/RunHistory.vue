@@ -1,0 +1,7 @@
+<script setup lang="ts">
+import { Head, Link } from '@inertiajs/vue3';
+import { dateUTC, duration, statusLabel } from '@/types/leaderboard';
+import type { OwnRun, PageSlice } from '@/types/leaderboard';
+defineProps<{ runs: PageSlice<OwnRun> }>();
+</script>
+<template><Head title="Run history" /><section class="site-section leaderboard-page"><Link href="/dashboard" class="quiet-link">← Back to account</Link><h1>Run history</h1><p>One best accepted regular run counts toward the leaderboard. Other results remain here.</p><div v-if="runs.data.length" class="progress-table-wrap"><table class="progress-table"><thead><tr><th>Character</th><th>Score / time</th><th>Status</th><th>Mode / date</th></tr></thead><tbody><tr v-for="run in runs.data" :key="run.id"><td><Link :href="`/runs/${run.id}`">{{ run.character_id === 'warrior' ? 'Warrior' : 'Mage' }} →</Link></td><td>{{ run.record?.score ?? '—' }} / {{ run.record ? duration(run.record.elapsed) : '—' }}</td><td>{{ statusLabel[run.status] ?? run.status }}<small>{{ run.lifecycle_state }}</small></td><td>{{ run.mode }}<small>{{ dateUTC(run.finished_at ?? run.started_at) }}</small></td></tr></tbody></table></div><p v-else>No runs yet.</p><nav v-if="runs.last_page > 1" class="commerce-pagination" aria-label="History"><Link v-if="runs.current_page > 1" :href="`/runs?page=${runs.current_page - 1}`">← Back</Link><span>{{ runs.current_page }} / {{ runs.last_page }}</span><Link v-if="runs.current_page < runs.last_page" :href="`/runs?page=${runs.current_page + 1}`">Next →</Link></nav></section></template>

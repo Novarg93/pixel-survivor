@@ -12,7 +12,7 @@ function keyboardClick(event:MouseEvent){if(event.detail===0)emit('activate');}
     :disabled="state.status!=='playing'||!state.ultimate.ready||state.ultimate.remaining>0" :aria-label="`${state.ultimate.name} · ${state.ultimate.charge}/10 · ${device==='gamepad'?'Y':'Q'}`"
     @pointerdown.prevent="emit('activate')" @click="keyboardClick">
     <span aria-hidden="true"><UpgradeEmblem :icon="(`ultimate-${state.ultimate.selected}` as EmblemId)" /></span><b>{{device==='gamepad'?'Y':'Q'}}</b>
-    <small>{{state.ultimate.remaining>0?state.ultimate.remaining.toFixed(1)+'с':state.ultimate.charge+'/10'}}</small>
+    <small>{{state.ultimate.remaining>0?state.ultimate.remaining.toFixed(1)+'s':state.ultimate.charge+'/10'}}</small>
   </button>
 </template>
 <style scoped>

@@ -59,7 +59,7 @@ export class RareGuardianSystem {
     const state = beginGuardianEncounter(w, e);
     state.until += Math.max(0, w.guardians.findIndex(g => g.id === e.id)) * D.guardianStagger;
     this.encounters.set(e.id, state);
-    this.notice = { text: w.elapsed >= GUARDIAN_ORBS.from ? 'Хранитель пробуждён! Уклоняйтесь от магических сфер' : 'Хранитель пробуждён! Следите за лучами и розовыми метками', until: w.elapsed + 3 };
+    this.notice = { text: w.elapsed >= GUARDIAN_ORBS.from ? 'Guardian awakened! Dodge the magic orbs' : 'Guardian awakened! Watch the beams and pink markers', until: w.elapsed + 3 };
   }
   private resolve(w: World, ownerId: number, killed: boolean) {
     w.clearOwnedEffects(ownerId); this.encounters.delete(ownerId);
@@ -70,8 +70,8 @@ export class RareGuardianSystem {
       if (!wave.failed && wave.killed === wave.total) {
         this.completedWaves++;
         const reward = w.artifacts.awardWave(w);
-        this.notice = { text: reward ? `Guardian Encounter завершён · 1 артефакт: ${ARTIFACTS[reward].name}` : 'Guardian Encounter завершён · лимит артефактов · опыт и очки', until: w.elapsed + 5 };
-      } else this.notice = { text: 'Волна Guardian прервана · артефакт не выдан', until: w.elapsed + 4 };
+        this.notice = { text: reward ? `Guardian Encounter complete · 1 artifact: ${ARTIFACTS[reward].name}` : 'Guardian Encounter complete · artifact limit reached · XP and score', until: w.elapsed + 5 };
+      } else this.notice = { text: 'Guardian wave interrupted · no artifact awarded', until: w.elapsed + 4 };
       this.waves.delete(id);
     }
   }

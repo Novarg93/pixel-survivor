@@ -15,7 +15,9 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run build",
     "test:e2e": "node scripts/e2e.mjs",
     "test:e2e:production": "node scripts/e2e.mjs --preview",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "prebuild": "node scripts/export-upgrade-catalog.mjs",
+    "export:upgrades": "node scripts/export-upgrade-catalog.mjs"
   },
   "dependencies": {
     "phaser": "4.2.1",

@@ -18,14 +18,14 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <header class="hud">
     <div class="vitals">
       <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b>
-      <div class="level-line"><small>УРОВЕНЬ {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Опыт" :aria-valuetext="state.level>=RUN_LIMITS.maxLevel?'Максимальный уровень':undefined" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ state.level>=RUN_LIMITS.maxLevel?'MAX':xpPercent(state.xp, state.xpNext)+'%' }}</span></div>
-      <span class="health-accessibility" role="progressbar" aria-label="Здоровье" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
+      <div class="level-line"><small>LEVEL {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Experience" :aria-valuetext="state.level>=RUN_LIMITS.maxLevel?'Maximum level':undefined" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ state.level>=RUN_LIMITS.maxLevel?'MAX':xpPercent(state.xp, state.xpNext)+'%' }}</span></div>
+      <span class="health-accessibility" role="progressbar" aria-label="Health" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>
-    <div class="run-clock"><b>{{ formatTime(state.practiceElapsed??state.elapsed) }}</b><small v-if="!state.practice && state.enrage.active && state.finalEncounter.phase==='inactive'" class="enrage-indicator" :aria-label="`Survival Enrage, интенсивность ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.practice?(state.practiceBoss==='rootbound-guardian'?'Корневой хранитель · 1×1':state.practiceBoss==='astral-revenant'?'Хранитель затмения · 1×1':state.practiceBoss==='briar-beast'?'Терновый зверь · 1×1':state.practiceBoss==='rune-warden'?'Хранитель рун · 1×1':'Тренировка Стража'):state.wave }}</small></div>
+    <div class="run-clock"><b>{{ formatTime(state.practiceElapsed??state.elapsed) }}</b><small v-if="!state.practice && state.enrage.active && state.finalEncounter.phase==='inactive'" class="enrage-indicator" :aria-label="`Survival Enrage, intensity ${state.enrage.tick}`">ENRAGE · {{ state.enrage.tick }}</small><small v-else>{{ state.practice?(state.practiceBoss==='rootbound-guardian'?'Rootbound Guardian · 1×1':state.practiceBoss==='astral-revenant'?'Eclipse Guardian · 1×1':state.practiceBoss==='briar-beast'?'Briar Beast · 1×1':state.practiceBoss==='rune-warden'?'Rune Warden · 1×1':'Warden practice'):state.wave }}</small></div>
     <div class="run-score">
-      <div><b>{{ state.score.toLocaleString('ru-RU') }}</b><small>ОЧКИ · {{ state.kills }} УБИЙСТВ</small></div>
-      <button class="pause-button" aria-label="Пауза" @click="emit('pause')">Ⅱ<small v-if="inputDevice === 'gamepad'" class="pause-key">START</small></button>
+      <div><b>{{ state.score.toLocaleString('en-US') }}</b><small>SCORE · {{ state.kills }} KILLS</small></div>
+      <button class="pause-button" aria-label="Pause" @click="emit('pause')">Ⅱ<small v-if="inputDevice === 'gamepad'" class="pause-key">START</small></button>
     </div>
   </header>
   <EventTimeline v-if="!state.practice && state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
@@ -33,13 +33,13 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
   <GameRadar />
   <MobilityControl :state="state" @activate="commands.emit({ type: 'mobility' })" />
-  <div class="skill-dock" role="list" aria-label="Способности">
+  <div class="skill-dock" role="list" aria-label="Abilities">
     <MobilityControl :state="state" inline />
-    <div v-for="ability in state.abilities" :key="ability.id" role="listitem" :aria-label="`${ability.name} · ${ability.level ? 'Ранг ' + ability.level : 'Открой при повышении уровня'}${ability.level && ability.readyIn > 0 ? ' · ' + Math.ceil(ability.readyIn) + ' секунд' : ''}`" :class="['skill-slot', ability.id, { locked: ability.level === 0 }]" :title="`${ability.name} · ${ability.level ? 'Ранг ' + ability.level : 'Открой при повышении уровня'}`">
-      <span>{{ ability.icon }}</span><b>{{ ability.level ? ability.level : '·' }}</b><small v-if="ability.level && ability.readyIn > 0">{{ Math.ceil(ability.readyIn) }}с</small><i v-if="ability.level === 0">◇</i>
+    <div v-for="ability in state.abilities" :key="ability.id" role="listitem" :aria-label="`${ability.name} · ${ability.level ? 'Rank ' + ability.level : 'Unlock on level up'}${ability.level && ability.readyIn > 0 ? ' · ' + Math.ceil(ability.readyIn) + ' seconds' : ''}`" :class="['skill-slot', ability.id, { locked: ability.level === 0 }]" :title="`${ability.name} · ${ability.level ? 'Rank ' + ability.level : 'Unlock on level up'}`">
+      <span>{{ ability.icon }}</span><b>{{ ability.level ? ability.level : '·' }}</b><small v-if="ability.level && ability.readyIn > 0">{{ Math.ceil(ability.readyIn) }}s</small><i v-if="ability.level === 0">◇</i>
     </div>
   </div>
-  <div class="control-hint">{{ inputDevice === 'gamepad' ? 'ЛЕВЫЙ СТИК' : 'W A S D' }} <span>движение</span> <kbd>{{ inputDevice === 'gamepad' ? 'X' : 'SPACE' }}</kbd> <span>{{ state.mobility.name }}</span> <kbd>{{ inputDevice === 'gamepad' ? 'START' : 'ESC' }}</kbd> <span>пауза</span></div>
+  <div class="control-hint">{{ inputDevice === 'gamepad' ? 'LEFT STICK' : 'W A S D' }} <span>move</span> <kbd>{{ inputDevice === 'gamepad' ? 'X' : 'SPACE' }}</kbd> <span>{{ state.mobility.name }}</span> <kbd>{{ inputDevice === 'gamepad' ? 'START' : 'ESC' }}</kbd> <span>pause</span></div>
 </template>
 <style scoped>
 .pause-button .pause-key{display:block;font:7px/1 monospace;margin-top:3px;color:#f1e5cb;letter-spacing:0}

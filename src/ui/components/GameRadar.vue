@@ -10,9 +10,9 @@ const angle = () => frame.value ? Math.atan2(frame.value.facing.y, frame.value.f
 </script>
 
 <template>
-  <aside v-if="frame" class="radar" aria-label="Локальный радар" :style="{ '--radar-size': `${RADAR_BALANCE.desktopSize}px`, '--radar-mobile-size': `${RADAR_BALANCE.mobileSize}px` }">
-    <span class="radar-label">РАДАР <small>N ↑</small></span>
-    <svg viewBox="0 0 180 180" role="img" aria-label="Противники и предметы поблизости">
+  <aside v-if="frame" class="radar" aria-label="Local radar" :style="{ '--radar-size': `${RADAR_BALANCE.desktopSize}px`, '--radar-mobile-size': `${RADAR_BALANCE.mobileSize}px` }">
+    <span class="radar-label">RADAR <small>N ↑</small></span>
+    <svg viewBox="0 0 180 180" role="img" aria-label="Nearby enemies and items">
       <circle cx="90" cy="90" r="87" fill="#102b31ed" stroke="#849877" />
       <circle cx="90" cy="90" r="43" fill="none" stroke="#708b6e" stroke-opacity=".28" stroke-dasharray="2 6" />
       <path d="M90 9V171M9 90H171" stroke="#708b6e" stroke-opacity=".22" />
@@ -29,11 +29,11 @@ const angle = () => frame.value ? Math.atan2(frame.value.facing.y, frame.value.f
       </g>
       <g data-player-marker="true" :transform="`translate(90 90) rotate(${angle()})`"><path d="M0 -8L5 5L0 2L-5 5Z" fill="#f4f4d6" stroke="#132c30" stroke-width="1.5" /></g>
     </svg>
-    <small class="radar-legend"><b>✦</b> хранитель <i>◆</i> артефакт</small>
+    <small class="radar-legend"><b>✦</b> Guardian <i>◆</i> artifact</small>
   </aside>
 </template>
 
 <style scoped>
-.radar{position:absolute;right:24px;top:112px;width:var(--radar-size);pointer-events:none}.radar-label{display:flex;justify-content:space-between;font:8px monospace;letter-spacing:.15em;color:#c7d4ac;margin-bottom:3px}.radar-label small{font-size:8px;color:#9bad9c}.radar svg{display:block;width:100%;height:auto}.radar-legend{display:block;text-align:center;font:8px monospace;color:#a1b6a0;white-space:nowrap;margin-top:3px}.radar-legend b{color:#ffda78}.radar-legend i{color:#ffe1a1;font-style:normal;margin-left:7px}
+.radar{position:absolute;right:24px;top:112px;width:var(--radar-size);pointer-events:none}.radar-label{display:flex;justify-content:space-between;font:10px monospace;letter-spacing:.15em;color:#c7d4ac;margin-bottom:3px}.radar-label small{font-size:10px;color:#9bad9c}.radar svg{display:block;width:100%;height:auto}.radar-legend{display:block;text-align:center;font:10px monospace;color:#a1b6a0;white-space:nowrap;margin-top:3px}.radar-legend b{color:#ffda78}.radar-legend i{color:#ffe1a1;font-style:normal;margin-left:7px}
 @media(max-width:600px){.radar{right:13px;top:106px;width:var(--radar-mobile-size)}.radar-label,.radar-label small{font-size:7px}.radar-legend{font-size:6px;margin-top:1px}.radar-legend i{margin-left:3px}}
 </style>

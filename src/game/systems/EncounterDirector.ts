@@ -34,7 +34,7 @@ export class EncounterDirector {
     this.history.push(event); if (this.history.length > C.historyCap) this.history.shift();
     const skipped = event.skippedBosses + event.skippedGuardians;
     const clock=`${Math.floor(minute)}:${Number.isInteger(minute)?'00':'30'}`;
-    this.notice = { text: `${plan.label} · ${clock} · боссы ${bosses.length}/${plan.bosses.length} · Guardian ${guardians.length}/${plan.guardians}${skipped ? ' · занятые слоты пропущены' : ''}`, until: w.elapsed + C.noticeDuration };
+    this.notice = { text: `${plan.label} · ${clock} · bosses ${bosses.length}/${plan.bosses.length} · Guardians ${guardians.length}/${plan.guardians}${skipped ? ' · occupied slots skipped' : ''}`, until: w.elapsed + C.noticeDuration };
     if (w.bosses.length + w.guardians.length >= 4) this.reliefUntil = w.elapsed + C.reliefDuration;
   }
   crowded(w: World) { return w.bosses.length + w.guardianSystem.encounters.size >= 3; }

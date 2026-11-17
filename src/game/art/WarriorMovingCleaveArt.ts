@@ -1,19 +1,22 @@
 import Phaser from 'phaser';
 import type {World} from '../systems/World';
-import {mageDirection} from './MageHeroAnimation';
 import {WARRIOR_HERO,warriorHeroSelection,warriorHeroTexture} from './warriorHeroPack';
 import {WARRIOR_SKILLS,warriorSkillsTexture} from './warriorSkillsPack';
 import type {WarriorHeroAnimation} from './WarriorHeroAnimation';
+import legLayers from './warriorMovingLegs.json';
 
-const KEY='warrior-moving-skills-v4',CELL=194,COLUMNS=10;
-const LEG={x:76,y:108,width:40,height:43};
-const SWORD=[[72,104],[78,101],[106,128],[102,133]];
-const SWORD_HORIZONTAL=[[69,103],[122,105],[122,115],[69,112]];
-const FRONT_SHIELD=[[110,96],[141,96],[135,136],[115,136],[109,119]];
-const NORTH_SHIELD=[[64,93],[80,93],[85,115],[79,127],[63,118]];
-const SHIELD=[[61,101],[85,101],[92,119],[87,133],[66,128]];
+// User-selected full-body attacks. The compositor remains for archived art review.
+const MOVING_ATTACK_LEGS_ENABLED=false;
+const KEY='warrior-moving-skills-v8',CELL=194,COLUMNS=10;
+// The leg image has padding for heels; only the central body is cut from attacks.
+const LEG=legLayers.upperCut;
+const FRONT_SHIELD=[[110,88],[141,88],[135,136],[115,136],[109,119]];
+const FRONT_HAND=[[66,88],[79,88],[81,111],[77,121],[66,121]];
+const FRONT_RETURN_HAND=[[98,93],[111,96],[114,104],[110,110],[102,106],[97,101]];
+const NORTH_HAND=[[106,91],[122,91],[122,107],[114,112],[106,104]];
+const NORTH_SHIELD=[[64,88],[80,88],[85,115],[77,141],[63,132]];
+const SHIELD=[[61,101],[85,101],[92,119],[83,143],[73,149],[62,132]];
 const BLOCK_SHIELD=[[85,89],[130,89],[125,127],[102,137],[84,115]];
-const SPEAR_THROW=[[88,92],[100,94],[157,151],[146,158]];
 export const movingCleaveLegCrop=LEG;
 // Derived display layers only. Accepted PNGs/atlases are never edited.
 export class WarriorMovingCleaveArt{
@@ -40,20 +43,12 @@ export class WarriorMovingCleaveArt{
   for(const[i,e]of pageEntries.entries()){
    const x=i%COLUMNS*CELL+1,y=Math.floor(i/COLUMNS)*CELL+1;frames.push({name:e.part+'/'+e.frame,x,y});
    if(e.part==='lower'){
-    ctx.save();ctx.beginPath();ctx.rect(x+LEG.x,y+LEG.y-2,LEG.width,LEG.height+2);ctx.clip();draw(e.texture,e.frame,x,y);
-    if(e.frame.startsWith('front')){
-     const original=ctx.getImageData(x,y,192,192);
-     ctx.globalCompositeOperation='destination-out';polygon(SWORD,x,y);ctx.fill();
-     const legs=ctx.getImageData(x+LEG.x,y+LEG.y-2,LEG.width,LEG.height+2);
-     // The Run sword occludes a few shin pixels. Reuse visible steel from the
-     // opposite leg there, instead of leaving a sword-shaped hole in the gait.
-     for(let dy=0;dy<legs.height;dy++)for(let dx=0;dx<legs.width;dx++){
-      const px=LEG.x+dx,py=LEG.y-2+dy,mirror=188-px,to=(dy*legs.width+dx)*4,from=(py*192+mirror)*4,p=original.data;
-      if(legs.data[to+3]===0&&ctx.isPointInPath(x+px+.5,y+py+.5)&&!ctx.isPointInPath(x+mirror+.5,y+py+.5)&&p[from+3]>0&&p[from+2]>=p[from]&&p[from+1]>=p[from]*.9)legs.data.set(p.subarray(from,from+4),to);
-     }
-     ctx.putImageData(legs,x+LEG.x,y+LEG.y-2);
-    }
-    ctx.restore();
+    // Restored pixels contain only this frame's moving lower body.
+    // Neither the Run weapon nor the Run shield can leak into an active skill.
+    const data=ctx.createImageData(legLayers.crop.width,legLayers.crop.height);
+    const runs=legLayers.frames[e.frame as keyof typeof legLayers.frames];let at=0;
+    for(let i=0;i<runs.length;i+=2)for(let n=0;n<runs[i];n++){data.data.set(legLayers.palette[runs[i+1]],at);at+=4;}
+    ctx.putImageData(data,x+legLayers.crop.x,y+legLayers.crop.y);
    }else{
     draw(e.texture,e.frame,x,y);
     const foreground=ctx.getImageData(x,y,192,192);
@@ -63,21 +58,29 @@ export class WarriorMovingCleaveArt{
     const restore=(points:number[][])=>{ctx.save();polygon(points,x,y);ctx.clip();draw(e.texture,e.frame,x,y);ctx.restore();};
     if(e.frame.startsWith('front')){
      const index=Number(e.frame.split('/')[1]);
+     restore(FRONT_HAND);
+     if(e.frame.startsWith('front-throw')&&index>=5)restore(FRONT_RETURN_HAND);
      restore(/front-(block|charge|stomp)/.test(e.frame)&&index>=2&&index<=8?BLOCK_SHIELD:FRONT_SHIELD);
-     if(e.frame.startsWith('front-c1'))restore(index===5||index===6?SWORD_HORIZONTAL:SWORD);
-     else if(e.frame.startsWith('front-throw')){if(index>=5&&index<=10)restore(SPEAR_THROW);}
-     else if(/front-(c3|heavy|cleave)/.test(e.frame)&&(e.frame.startsWith('front-heavy')?index<3||index>11:index<2||index>10))restore(SWORD);
-    }else restore(/north-(c1|c3|heavy|cleave)\/[4-8]$/.test(e.frame)?SHIELD:NORTH_SHIELD);
+    }else{restore(NORTH_HAND);restore(/north-(c1|c3|heavy|cleave)\/[4-8]$/.test(e.frame)?SHIELD:NORTH_SHIELD);}
     ctx.restore();
     if(foreground){
+     // Long bright components are weapon bevels or baked VFX. A bright greave
+     // by itself is not foreground: restoring it would reintroduce frozen legs.
+     const highlight=new Set<number>(),weapon=new Set<number>(),throwing=e.frame.includes('-throw/');
+     if(!throwing)for(let py=90;py<160;py++)for(let px=45;px<170;px++){const at=(py*192+px)*4,p=foreground.data;if(p[at+3]&&(p[at]>170&&p[at+1]>170&&p[at+2]>150||p[at]>100&&p[at+1]>115&&p[at+2]>125&&p[at+2]>=p[at]-10))highlight.add(py*192+px);}
+     while(highlight.size){const seed=highlight.values().next().value!,queue=[seed];highlight.delete(seed);let minX=192,minY=192,maxX=0,maxY=0,warm=false,outside=false;
+      for(let q=0;q<queue.length;q++){const at=queue[q],px=at%192,py=Math.floor(at/192),p=foreground.data;warm||=p[at*4]>170&&p[at*4+1]>170&&p[at*4+2]>150;outside||=px<LEG.x||px>=LEG.x+LEG.width;minX=Math.min(minX,px);maxX=Math.max(maxX,px);minY=Math.min(minY,py);maxY=Math.max(maxY,py);for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){const next=(py+dy)*192+px+dx;if(highlight.delete(next))queue.push(next);}}
+      if(queue.length<8||Math.max(maxX-minX,maxY-minY)<9||!warm&&!outside)continue;
+      for(const at of queue){const px=at%192,py=Math.floor(at/192);for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++)weapon.add((py+dy)*192+px+dx);}
+     }
      // Baked slash ribbons pass in front of the legs. Keep their exact RGBA,
      // including darker interior rows connecting the bright edges of the ribbon.
      const pixels=detailContext.createImageData(LEG.width,LEG.height),source=foreground.data;
      const bright=(px:number,py:number)=>{const i=(py*192+px)*4;return source[i+3]>0&&source[i]+source[i+1]+source[i+2]>330;};
      for(let dy=0;dy<LEG.height;dy++){
-      const py=LEG.y+dy,ribbon=bright(LEG.x-3,py)&&bright(LEG.x+LEG.width+3,py);
+      const py=LEG.y+dy,ribbon=!throwing&&bright(LEG.x-3,py)&&bright(LEG.x+LEG.width+3,py);
       for(let dx=0;dx<LEG.width;dx++){const from=(py*192+LEG.x+dx)*4,to=(dy*LEG.width+dx)*4;
-       if(source[from+3]&&(ribbon||source[from]+source[from+1]+source[from+2]>375&&source[from+1]>120&&source[from+2]>90))pixels.data.set(source.subarray(from,from+4),to);
+       if(source[from+3]&&(ribbon||weapon.has(py*192+LEG.x+dx)))pixels.data.set(source.subarray(from,from+4),to);
       }
      }
      detailContext.putImageData(pixels,0,0);ctx.drawImage(detail,x+LEG.x,y+LEG.y);
@@ -89,13 +92,17 @@ export class WarriorMovingCleaveArt{
  }
  }
  render(owner:Phaser.GameObjects.Sprite,w:World,pose:ReturnType<WarriorHeroAnimation['view']>,moving:boolean,size:number){
+  if(!MOVING_ATTACK_LEGS_ENABLED){this.hide();return;}
   this.ensure();this.owner=owner;
   if(this.run!==w.runId){this.run=w.runId;this.stride=0;this.x=w.player.x;this.y=w.player.y;this.elapsed=w.elapsed;}
   this.stride+=Math.min(Math.hypot(w.player.x-this.x,w.player.y-this.y),Math.max(0,w.elapsed-this.elapsed)*w.effectiveSpeed*1.5)/118;
   this.x=w.player.x;this.y=w.player.y;this.elapsed=w.elapsed;
   const layered=(moving||pose.motion==='charge')&&['attack','stomp','block','throw','charge'].includes(pose.motion);
   if(!layered){this.lower?.setVisible(false).setActive(false);this.lowerFrame='';return;}
-  const facing=pose.motion==='charge'?w.mobility.direction:w.facing,direction=mageDirection(facing.x,facing.y,pose.direction),legs=warriorHeroSelection(direction,'run',this.stride);
+  // The waist cut and foreground belong to the attack's projection. Keep the
+  // Run legs in that same view (including its mirror) when moving away from a
+  // target or turning mid-swing; actual distance still advances the gait.
+  const legs=warriorHeroSelection(pose.direction,'run',this.stride);
   const upperFrame='upper/'+pose.frame,lowerFrame='lower/'+legs.frame;
   owner.setTexture(this.locations.get(upperFrame)!,upperFrame);
   this.lower??=this.scene.add.image(0,0,this.locations.get(lowerFrame)!,lowerFrame).setName('warrior-moving-skill-legs');
@@ -104,6 +111,6 @@ export class WarriorMovingCleaveArt{
  }
  hide(){this.lower?.setVisible(false).setActive(false);this.lowerFrame='';}
  sync(){if(this.lower?.visible&&this.owner)this.lower.setAlpha(this.owner.alpha).setTint(this.owner.tintTopLeft);}
- diagnostics(){return {layered:!!this.lower?.visible,lowerFrame:this.lowerFrame,stride:this.stride,allocated:this.lower?1:0};}
+ diagnostics(){return {layered:!!this.lower?.visible,lowerFrame:this.lowerFrame,lowerFlipX:this.lower?.flipX??false,stride:this.stride,allocated:this.lower?1:0};}
  destroy(){this.lower?.destroy();this.lower=undefined;this.owner=undefined;for(const key of this.textureKeys)if(this.scene.textures.exists(key))this.scene.textures.remove(key);this.textureKeys=[];this.locations.clear();this.lowerFrame='';this.run='';}
 }

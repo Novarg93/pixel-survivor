@@ -4,44 +4,47 @@ import { ABILITIES } from '../abilities/definitions';
 import { distance } from '../utils/math';
 import { MOBILITY_MAX_RANK, MOBILITY_SPECIALIZATION_LEVEL, MOBILITY_UPGRADES } from '../config/mobilityUpgrades';
 const RANK_TEXT = {
-  fireball: '+20% базового урона огня. V + Жар III: дополнительный пробивающий шар.',
-  frost: 'I: root 1.2с. II: радиус +20%. III: базовый cooldown −15%. IV: root 1.7с. V: root 2с и ещё +20% радиуса. Урон +6 за ранг; V + Широкий круг III сохраняет +30% урона.',
-  lightning: '+9 урона и +1 цель в цепи (до 7 целей).',
-  meteor: '+25 урона и +7px радиуса. I–V: 1/1/2/2/3 метеорита. Интервал 0.15с; дополнительные удары наносят 75% урона. При равной плотности приоритет у целей под root.',
-  shield: 'Absorb I–V: 15/20/25/30/35% maxHP. +1с действия за ранг. Повторный каст обновляет запас без накопления.',
-  cleave: '+8 базового урона широкого удара.',
-  whirlwind: '+4 урона каждому из круговых импульсов.',
-  slam: '+15 урона и +5px радиуса удара.',
-  blades: '+12 урона копья и +1 пробитая цель (до 7 целей).',
-  iron: '+5% maxHP к Absorb и +0.5с действия Shield Block. Повторный каст обновляет запас.',
+  fireball: '+20% base fire damage. V + Ember Heat III: an extra piercing fireball.',
+  frost: 'I: 1.2s root. II: +20% radius. III: −15% base cooldown. IV: 1.7s root. V: 2s root and another +20% radius. +6 damage per rank; V + Wide Circle III retains +30% damage.',
+  lightning: '+9 damage and +1 chain target (up to 7 targets).',
+  meteor: '+25 damage and +7px radius. I–V: 1/1/2/2/3 meteors. Interval 0.15s; extra strikes deal 75% damage. Equally dense groups prioritize rooted targets.',
+  shield: 'Absorb I–V: 15/20/25/30/35% maxHP. +1s duration per rank. Recasting refreshes the shield without stacking.',
+  cleave: '+8 base damage to the wide strike.',
+  whirlwind: '+4 damage to each circular pulse.',
+  slam: '+15 damage and +5px strike radius.',
+  blades: '+12 spear damage and +1 pierced target (up to 7 targets).',
+  iron: '+5% maxHP Absorb and +0.5s Shield Block duration. Recasting refreshes the shield.',
 };
 export interface UpgradeDefinition { id: string; name: string; description: string; max: number; apply: (world: World) => void; eligible?: (world: World) => boolean }
 export const UPGRADES: UpgradeDefinition[] = [
-  ...MOBILITY_UPGRADES.map(u => ({ id: `mobility-${u.id}`, name: u.name, description: u.description + ' Одна специализация за забег.', max: MOBILITY_MAX_RANK, eligible: (w: World) => (w.status === 'playing' || w.status === 'upgrade') && w.character === u.character && w.experience.level >= MOBILITY_SPECIALIZATION_LEVEL && (w.mobility.variant ? w.mobility.variant === u.id : w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) && w.mobility.rank < MOBILITY_MAX_RANK, apply: (w: World) => { w.mobility.upgrade(w, u.id); } })),
-  { id: 'damage', name: 'Жар углей', description: '+25% к урону способностей.', max: 5, apply: w => { w.stats.damage += 0.25; } },
-  { id: 'cooldown', name: 'Быстрый ритуал', description: 'Перезарядка способностей быстрее на 10%.', max: 5, apply: w => { w.stats.cooldown *= 0.9; } },
-  { id: 'projectiles', name: 'Двойная искра', description: '+1 огненный шар за атаку (до 4).', max: 3, apply: w => { w.stats.projectiles++; } },
-  { id: 'speed', name: 'Лёгкий шаг', description: '+13.5px/с к скорости перемещения.', max: 4, apply: w => { w.player.speed += 13.5; } },
-  { id: 'health', name: 'Сила корней', description: '+20 к максимальному здоровью и лечение 30 HP.', max: 5, apply: w => { w.player.maxHp += 20; w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 30); } },
-  { id: 'pickup', name: 'Притяжение', description: '+20 к радиусу притяжения кристаллов.', max: 5, apply: w => { w.stats.pickup += 20; } },
-  { id: 'area', name: 'Широкий круг', description: '+15% к радиусу площадной магии.', max: 4, apply: w => { w.stats.area += 0.15; } },
-  ...ABILITIES.filter(a => a.id !== 'fireball' && a.id !== 'cleave').map(a => ({ id: `unlock-${a.id}`, name: a.name, description: a.description ?? `Открыть: ${a.id === 'lightning' ? 'молния прыгает между врагами' : 'периодический щит поглощает удары'}.`, max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level === 0, apply: (w: World) => { w.abilities[a.id].level = 1; } })),
+  ...MOBILITY_UPGRADES.map(u => ({ id: `mobility-${u.id}`, name: u.name, description: u.description + ' One specialization per run.', max: MOBILITY_MAX_RANK, eligible: (w: World) => (w.status === 'playing' || w.status === 'upgrade') && w.character === u.character && w.experience.level >= MOBILITY_SPECIALIZATION_LEVEL && (w.mobility.variant ? w.mobility.variant === u.id : w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) && w.mobility.rank < MOBILITY_MAX_RANK, apply: (w: World) => { w.mobility.upgrade(w, u.id); } })),
+  { id: 'damage', name: 'Ember Heat', description: '+25% ability damage.', max: 5, apply: w => { w.stats.damage += 0.25; } },
+  { id: 'cooldown', name: 'Swift Ritual', description: 'Abilities recharge 10% faster.', max: 5, apply: w => { w.stats.cooldown *= 0.9; } },
+  { id: 'projectiles', name: 'Double Spark', description: '+1 fireball per attack (up to 4).', max: 3, apply: w => { w.stats.projectiles++; } },
+  { id: 'speed', name: 'Light Step', description: '+13.5px/s movement speed.', max: 4, apply: w => { w.player.speed += 13.5; } },
+  { id: 'health', name: 'Root Strength', description: '+20 maximum health and heal 30 HP.', max: 5, apply: w => { w.player.maxHp += 20; w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 30); } },
+  { id: 'pickup', name: 'Attraction', description: '+20 crystal pickup radius.', max: 5, apply: w => { w.stats.pickup += 20; } },
+  { id: 'area', name: 'Wide Circle', description: '+15% area magic radius.', max: 4, apply: w => { w.stats.area += 0.15; } },
+  ...ABILITIES.filter(a => a.id !== 'fireball' && a.id !== 'cleave').map(a => ({ id: `unlock-${a.id}`, name: a.name, description: a.description ?? `Unlock: ${a.id === 'lightning' ? 'lightning jumps between enemies' : 'a periodic shield absorbs hits'}.`, max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level === 0, apply: (w: World) => { w.abilities[a.id].level = 1; } })),
   ...ABILITIES.map(a => ({ id: `rank-${a.id}`, name: `${a.name} +`, description: RANK_TEXT[a.id], max: 4, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level > 0 && w.abilities[a.id].level < 5, apply: (w: World) => { w.abilities[a.id].level++; } })),
-  ...ABILITIES.filter(a => !a.character).map(a => ({ id: `evolve-${a.id}`, name: `${a.name}: эволюция`, description: ({ fireball: 'Первое попадание шара: взрыв 45% урона в радиусе 38px.', frost: 'Два попадания за 4с: +0.75с следующему разрешённому root, не чаще раза в 6с. Не продлевает активный root и не обходит иммунитет после него.', lightning: 'Два вторичных разряда по новым целям с 35% уроном.', meteor: 'Каждый удар оставляет огонь на 3с с периодом 0.5с. Огонь дополнительных метеоритов тоже наносит 75% урона.', shield: 'Разрушение Absorb вызывает один защитный импульс 90px за активацию щита.' })[a.id as 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield'], max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level >= 3, apply: () => undefined })),
+  ...ABILITIES.filter(a => !a.character).map(a => ({ id: `evolve-${a.id}`, name: `${a.name}: evolution`, description: ({ fireball: 'The first fireball hit explodes for 45% damage within 38px.', frost: 'Two hits within 4s add 0.75s to the next eligible root, at most once every 6s. Does not extend an active root or bypass subsequent immunity.', lightning: 'Two secondary bolts hit new targets for 35% damage.', meteor: 'Each strike leaves fire for 3s, ticking every 0.5s. Fire from extra meteors also deals 75% damage.', shield: 'Breaking Absorb triggers one 90px defensive pulse per shield activation.' })[a.id as 'fireball' | 'frost' | 'lightning' | 'meteor' | 'shield'], max: 1, eligible: (w: World) => w.abilityDefinitions.includes(a) && w.abilities[a.id].level >= 3, apply: () => undefined })),
 ];
 export const SUPPLIES: UpgradeDefinition[] = [
-  { id: 'restore', name: 'Глоток жизни', description: 'Восстановить 40 HP.', max: Infinity, apply: w => { w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 40); } },
-  { id: 'nova', name: 'Вспышка', description: '120 урона всем врагам в радиусе 150px.', max: Infinity, apply: w => { for (const e of [...w.enemies]) if (distance(w.player, e) <= 150 + e.radius) w.damageEnemy(e, 120, 'nova'); w.effect('death', w.player, 150, 0xdabaff); } },
-  { id: 'magnet', name: 'Зов кристаллов', description: 'Собрать все кристаллы на поле.', max: Infinity, apply: w => { w.collectAllOrbs(); } },
+  { id: 'restore', name: 'Sip of Life', description: 'Restore 40 HP.', max: Infinity, apply: w => { w.player.hp = Math.min(w.effectiveMaxHp, w.player.hp + 40); } },
+  { id: 'nova', name: 'Flash', description: '120 damage to all enemies within 150px.', max: Infinity, apply: w => { for (const e of [...w.enemies]) if (distance(w.player, e) <= 150 + e.radius) w.damageEnemy(e, 120, 'nova'); w.effect('death', w.player, 150, 0xdabaff); } },
+  { id: 'magnet', name: 'Crystal Call', description: 'Collect all crystals on the field.', max: Infinity, apply: w => { w.collectAllOrbs(); } },
 ];
 export function eligibleUpgrades(w: World) { return UPGRADES.filter(u => (u.id !== 'projectiles' || w.character === 'mage') && (w.upgrades[u.id] ?? 0) < u.max && (!u.eligible || u.eligible(w))); }
-export function chooseUpgrades(w: World) {
-  const ultimates=w.ultimate.eligible(w)?ultimateDefinitions(w.character).map(d=>({id:`ultimate-${d.id}`,name:d.name,description:d.description,max:1,apply:()=>undefined})):[];
-  if(ultimates.length>=3)return ultimates;
+export function upgradePool(w: World): UpgradeDefinition[] {
+  const ultimates = w.ultimate.eligible(w) ? ultimateDefinitions(w.character).map(d => ({id: `ultimate-${d.id}`, name:d.name, description:d.description, max:1, apply:()=>undefined})) : [];
+  if (ultimates.length >= 3) return ultimates;
   const eligible = eligibleUpgrades(w);
   if (!ultimates.length && !w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL) return eligible.filter(u => u.id.startsWith('mobility-'));
-  const pool = eligible.length >= 3 ? [...eligible] : [...eligible, ...SUPPLIES];
-  const result: UpgradeDefinition[] = [...ultimates];
+  return [...ultimates, ...eligible, ...(eligible.length < 3 ? SUPPLIES : [])];
+}
+export function chooseUpgrades(w: World) {
+  const pool = upgradePool(w), result: UpgradeDefinition[] = [];
+  if(pool.every(u=>u.id.startsWith('ultimate-')) || !w.mobility.variant && w.upgradeLevel >= MOBILITY_SPECIALIZATION_LEVEL && pool.every(u=>u.id.startsWith('mobility-'))) return pool;
   while (result.length < 3 && pool.length) result.push(pool.splice(w.rng.int(pool.length), 1)[0]);
   return result;
 }

@@ -10,7 +10,7 @@ import { useInputDevice } from '../inputDevice';
 import UpgradeEmblem from './UpgradeEmblem.vue';
 import { upgradeCard } from '../upgradeCards';
 const inputDevice = useInputDevice();
-const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number }>();
+const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number; disabled?: boolean; loading?: boolean }>();
 const specializationChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.category && c.tier === 1));
 const ultimateChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.id.startsWith('ultimate-')));
 const emit = defineEmits<{ choose: [id: string, offer: number] }>();
@@ -20,7 +20,7 @@ let touchChoice: { id: string; pointerId: number; x: number; y: number } | undef
 const confirmation = new UpgradeConfirmation((id, offer) => emit('choose', id, offer));
 function cancelSelection() { confirmation.cancel(); selected.value = null; }
 function choose(id: string) {
-  if (!props.choices.some(choice => choice.id === id) || !confirmation.choose(id, props.offer)) return;
+  if (props.disabled || props.loading || !props.choices.some(choice => choice.id === id) || !confirmation.choose(id, props.offer)) return;
   selected.value = id;
   panel.value?.querySelector<HTMLButtonElement>(`[data-upgrade="${id}"]`)?.focus({ preventScroll: true });
 }
@@ -39,9 +39,9 @@ function confirmTouch(event: PointerEvent, id: string) {
 function cancelTouch(event: PointerEvent) {
   if (touchChoice?.pointerId === event.pointerId) touchChoice = undefined;
 }
-function focus() { void nextTick(() => panel.value?.querySelector('button')?.focus()); }
+function focus() { void nextTick(() => (panel.value?.querySelector<HTMLElement>('[data-upgrade]:not(:disabled)') ?? panel.value)?.focus({ preventScroll: true })); }
 const offGamepad = gamepadUi.on(({ scope, action }) => {
-  if (scope !== 'upgrade' || selected.value !== null) return;
+  if (props.disabled || scope !== 'upgrade' || selected.value !== null) return;
   const cards = [...panel.value?.querySelectorAll<HTMLButtonElement>('[data-upgrade]') ?? []];
   if (!cards.length) return;
   const focused = cards.findIndex(card => card === document.activeElement);
@@ -54,9 +54,10 @@ const offGamepad = gamepadUi.on(({ scope, action }) => {
   const card = cards[(index + step + cards.length) % cards.length];
   card.focus({ preventScroll: true }); card.scrollIntoView({ block: 'nearest' });
 });
-onMounted(focus); watch(() => props.offer, () => { cancelSelection(); focus(); }); onUnmounted(() => { confirmation.dispose(); offGamepad(); });
+onMounted(focus); watch(() => props.offer, () => { cancelSelection(); focus(); }); watch(() => [props.loading, props.disabled], ([loading, disabled]) => { if (!loading && !disabled) focus(); }); onUnmounted(() => { confirmation.dispose(); offGamepad(); });
 function key(event: KeyboardEvent) {
   event.stopPropagation();
+  if (event.target instanceof Element && event.target.closest('[data-premium]')) { trapTab(event,panel.value); return; }
   if (isSpace(event)) { event.preventDefault(); return; }
   if (event.type === 'keyup') { if (event.key === 'Enter') event.preventDefault(); return; }
   trapTab(event, panel.value);
@@ -72,25 +73,27 @@ function key(event: KeyboardEvent) {
 </script>
 <template>
   <div class="overlay">
-    <section ref="panel" class="panel upgrade-panel" role="dialog" aria-modal="true" aria-label="Новый уровень" :aria-busy="selected !== null" @keydown="key" @keyup="key">
-      <small>УРОВЕНЬ {{ level }} · МИР НА ПАУЗЕ</small>
-      <h1 v-if="ultimateChoice">Выбери ультимейт</h1><h1 v-else-if="!specializationChoice">Выбери свою магию</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Специализация</h1>
-      <p>Одно бесплатное улучшение. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — переключить · A — выбрать.' : 'Клавиши 1 / 2 / 3.' }}</p>
-      <div class="choices">
+    <section ref="panel" class="panel upgrade-panel" role="dialog" aria-modal="true" aria-label="Level up" tabindex="-1" :aria-busy="loading || selected !== null" @keydown="key" @keyup="key">
+      <small>LEVEL {{ level }} · WORLD PAUSED</small>
+      <h1 v-if="ultimateChoice">Choose your ultimate</h1><h1 v-else-if="!specializationChoice">Choose your magic</h1><h1 v-else>{{ inputDevice === 'gamepad' ? 'X' : 'Space' }} · Specialization</h1>
+      <p>One free upgrade. {{ inputDevice === 'gamepad' ? 'D-Pad / LB/RB — switch · A — select.' : 'Keys 1 / 2 / 3.' }}</p>
+      <fieldset class="upgrade-actions" :disabled="selected !== null"><slot /></fieldset>
+      <p v-if="loading" class="upgrade-loading" role="status">Preparing upgrades…</p>
+      <div v-else class="choices">
         <button v-for="(choice, i) in choices" :key="`${offer}-${choice.id}`" class="choice" :class="{'ultimate-choice':choice.id.startsWith('ultimate-')}"
           :data-upgrade="choice.id" :data-family="upgradeIdentity(choice.id).family" :data-rank="choice.tier"
           :data-dimmed="selected !== null && selected !== choice.id"
           :style="{ '--skill-color': upgradeIdentity(choice.id).color }" :aria-pressed="selected === choice.id"
-          :disabled="selected !== null && selected !== choice.id" @click="choose(choice.id)"
+          :disabled="disabled || selected !== null && selected !== choice.id" @click="choose(choice.id)"
           @pointerdown="beginTouch($event, choice.id)" @pointerup="confirmTouch($event, choice.id)" @pointercancel="cancelTouch">
-          <small class="choice-rank">{{ choice.category ? choice.category + ' · ' : '' }}РАНГ {{ choice.tier }}</small>
+          <small class="choice-rank">{{ choice.category ? choice.category + ' · ' : '' }}RANK {{ choice.tier }}</small>
           <span class="choice-key">0{{ i + 1 }}</span>
           <span class="emblem-socket"><UpgradeEmblem :icon="upgradeCard(choice).icon" /></span>
           <span class="choice-family">{{ upgradeCard(choice).label }}</span><b class="choice-title">{{ choice.name }}</b>
           <span class="choice-bonus">{{ upgradeCard(choice).value }}<span class="bonus-caption">{{ upgradeCard(choice).caption }}</span></span>
           <span class="choice-description" :title="choice.description">{{ upgradeCard(choice).summary }}</span>
           <span class="choice-original">{{ choice.description }}</span>
-          <strong class="choice-confirm">{{ selected === choice.id ? 'Выбрано ✓' : inputDevice === 'gamepad' ? 'A · Выбрать' : 'Выбрать →' }}</strong>
+          <strong class="choice-confirm">{{ selected === choice.id ? 'Selected ✓' : inputDevice === 'gamepad' ? 'A · Select' : 'Select →' }}</strong>
         </button>
       </div>
     </section>
@@ -99,6 +102,8 @@ function key(event: KeyboardEvent) {
 
 <style scoped>
 .upgrade-panel{width:min(990px,100%);padding:25px 28px 28px}
+.upgrade-actions{border:0;margin:0;padding:0;min-width:0}
+.upgrade-loading{display:grid;place-items:center;min-height:230px;color:#edd2a0}
 .upgrade-panel>h1{margin:12px 0}.upgrade-panel>p{margin:10px 0}
 .choices{gap:18px;margin-top:20px;align-items:stretch}
 .choice.choice{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;min-height:405px;gap:0;padding:18px 18px 15px;background-color:#121d2e;background-image:radial-gradient(ellipse at 50% 18%,color-mix(in srgb,var(--skill-color) 13%,transparent),transparent 62%);border:3px solid var(--skill-color);isolation:isolate}
@@ -137,5 +142,11 @@ function key(event: KeyboardEvent) {
   40% { box-shadow: inset 0 0 0 1px var(--skill-color), inset 0 0 0 4px #111d2d, 0 0 32px color-mix(in srgb, var(--skill-color) 80%, transparent); }
 }
 @media (prefers-reduced-motion: reduce) { .choice { transition: none; } .choice[aria-pressed="true"] { animation: none; } }
+@media(max-height:500px){
+ .upgrade-panel:has([data-premium]) .choice.choice{min-height:190px;padding:8px}
+ .upgrade-panel:has([data-premium]) .emblem-socket{width:32px;height:32px;padding:5px;margin:4px 0}
+ .upgrade-panel:has([data-premium]) .choice-title{font-size:14px;min-height:28px;margin:3px 0}
+ .upgrade-panel:has([data-premium]) .choice-description{font-size:9px}
+}
 .choice.ultimate-choice{box-shadow:0 0 0 2px #0b1320,0 0 0 4px #dcb96d,0 7px 28px #e2b34a55}.choice.ultimate-choice:before{border-color:#f4d895;inset:5px}.choice.ultimate-choice[aria-pressed="true"]{animation:none;box-shadow:0 0 0 2px #0b1320,0 0 0 4px #ffe3a1,0 7px 34px #e2b34a99}
 </style>

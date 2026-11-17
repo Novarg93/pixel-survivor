@@ -1,3 +1,4 @@
+import type {PaidActionReceipt,ServerUpgradeOffer} from '../platform/premium';
 import type { BiomeId } from '../config/biomes';
 export class Channel<T> {
   private listeners = new Set<(value: T) => void>();
@@ -13,15 +14,18 @@ import type { RadarFrame } from '../radar/radar';
 import type { Settings } from '../services/storage';
 import type { Point } from '../utils/math';
 import type { GamepadNotice } from '../input/GamepadInputController';
+import type { RunStart } from '../platform/port';
+import type { RunItemId, RunItemReceipt } from '../platform/runItems';
 export type InputDevice = 'keyboard' | 'touch' | 'gamepad';
-export type UiScreen = 'game' | 'settings' | 'help' | 'records';
+export type UiScreen = 'game' | 'settings' | 'help' | 'records' | 'inventory' | 'premium';
 export type GamepadUiAction = 'confirm' | 'up' | 'down' | 'left' | 'right' | 'previous' | 'next';
 export const gamepadUi = new Channel<{ scope: 'upgrade' | 'shell'; action: GamepadUiAction }>();
 export const inputDevices = new Channel<InputDevice>();
 export const gamepadNotices = new Channel<GamepadNotice>();
 export const snapshots = new Channel<Snapshot>();
 export const radarFrames = new Channel<RadarFrame | null>();
-export type Command = { type: 'restart' | 'boss-practice' | 'menu' | 'pause' | 'resume' | 'preview'; character?: CharacterId; biome?: BiomeId; practiceBoss?: PracticeBoss } | { type: 'mobility' | 'ultimate' } | { type: 'upgrade'; id: string; offer: number } | { type: 'settings'; value: Settings } | { type: 'move'; input: Point } | { type: 'ui-screen'; screen: UiScreen };
+export type Command = {type:'premium-lock';value:boolean} | {type:'apply-offer';offer:ServerUpgradeOffer;localOffer:number;acknowledge:(applied:boolean)=>void} | {type:'apply-paid-action';receipt:PaidActionReceipt;acknowledge:(applied:boolean)=>void} | { type: 'restart' | 'boss-practice' | 'menu' | 'pause' | 'resume' | 'preview'; character?: CharacterId; biome?: BiomeId; practiceBoss?: PracticeBoss; platformRun?: RunStart } | { type: 'mobility' | 'ultimate' | 'finish-run' } | { type: 'inventory-open'; item?: RunItemId } | { type: 'apply-run-item'; receipt: RunItemReceipt; acknowledge: (applied: boolean) => void } | { type: 'upgrade'; id: string; offer: number } | { type: 'settings'; value: Settings } | { type: 'move'; input: Point } | { type: 'ui-screen'; screen: UiScreen };
+export const inventoryMenus = new Channel<{ snapshot: Snapshot; fromPlaying: boolean; item?: RunItemId }>();
 export const commands = new Channel<Command>();
 export interface Metrics { fps: number; updateMs: number; enemies: number; projectiles: number; orbs: number; effects: number; bosses: number; chunks: number; sprites: number; pooledSprites: number; guardians: number; artifacts: { items: number; allocated: number }; radar: { updates: number; markers: number; listeners: number }; loot: { items: number; chests: number; buffs: number; trail: number; allocatedItems: number; allocatedChests: number }; allocations: { projectiles: number; orbs: number; effects: number } }
 export const metrics = new Channel<Metrics>();

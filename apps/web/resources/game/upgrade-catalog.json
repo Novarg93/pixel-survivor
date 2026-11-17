@@ -1,0 +1,489 @@
+{
+  "version": "upgrade-pool-v1",
+  "entries": [
+    {
+      "id": "mobility-flame-trail",
+      "name": "Flame Trail",
+      "description": "Blink leaves a wall of fire along its actual path. I–III: 3/3.5/4s, 12/18/24 damage per target every 0.5s; width 10/12/14px. One specialization per run.",
+      "max": 3,
+      "character": "mage",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Offensive"
+    },
+    {
+      "id": "mobility-slowing-flame",
+      "name": "Slowing Flame",
+      "description": "Blink leaves cold fire that slows regular enemies by 40%. I–III: 3/3.5/4s, wall width 12/18/24px. Does not stack. One specialization per run.",
+      "max": 3,
+      "character": "mage",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Defensive"
+    },
+    {
+      "id": "mobility-arcane-sprint",
+      "name": "Arcane Sprint",
+      "description": "After Blink: +30/35/40% speed for 2s. Recasting refreshes the effect. One specialization per run.",
+      "max": 3,
+      "character": "mage",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Utility"
+    },
+    {
+      "id": "mobility-cleaving-dash",
+      "name": "Cleaving Dash",
+      "description": "Hits all targets along the actual Dash path. I–III: 36/48/60 damage, width 12/14/16px. Each target is hit once per Dash. One specialization per run.",
+      "max": 3,
+      "character": "warrior",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Offensive"
+    },
+    {
+      "id": "mobility-absorb-shield",
+      "name": "Absorb Shield",
+      "description": "After Dash: Absorb equal to 25/30/35% maxHP for 3s. The shield takes damage before HP; recasting refreshes its strength. One specialization per run.",
+      "max": 3,
+      "character": "warrior",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Defensive"
+    },
+    {
+      "id": "mobility-berserk",
+      "name": "Berserk",
+      "description": "For 2s after Dash: +25/30/35% damage, 25/30/35% CDR and +30/35/40% movement speed. Affects newly started cooldowns; another dash refreshes the effect without stacking. One specialization per run.",
+      "max": 3,
+      "character": "warrior",
+      "rule": "mobility",
+      "ability": null,
+      "category": "Utility"
+    },
+    {
+      "id": "damage",
+      "name": "Ember Heat",
+      "description": "+25% ability damage.",
+      "max": 5,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "cooldown",
+      "name": "Swift Ritual",
+      "description": "Abilities recharge 10% faster.",
+      "max": 5,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "projectiles",
+      "name": "Double Spark",
+      "description": "+1 fireball per attack (up to 4).",
+      "max": 3,
+      "character": "mage",
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "speed",
+      "name": "Light Step",
+      "description": "+13.5px/s movement speed.",
+      "max": 4,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "health",
+      "name": "Root Strength",
+      "description": "+20 maximum health and heal 30 HP.",
+      "max": 5,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "pickup",
+      "name": "Attraction",
+      "description": "+20 crystal pickup radius.",
+      "max": 5,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "area",
+      "name": "Wide Circle",
+      "description": "+15% area magic radius.",
+      "max": 4,
+      "character": null,
+      "rule": "stat",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "unlock-frost",
+      "name": "Frost Nova",
+      "description": "An ice ring targets a dense group within 310px and the screen. The 1.2s root does not stop ranged attacks; targets gain 2s root immunity afterward. Bosses and Guardians receive a limited slow.",
+      "max": 1,
+      "character": "mage",
+      "rule": "unlock",
+      "ability": "frost",
+      "category": null
+    },
+    {
+      "id": "unlock-lightning",
+      "name": "Chain Lightning",
+      "description": "Unlock: lightning jumps between enemies.",
+      "max": 1,
+      "character": "mage",
+      "rule": "unlock",
+      "ability": "lightning",
+      "category": null
+    },
+    {
+      "id": "unlock-meteor",
+      "name": "Armageddon",
+      "description": "Automatically targets a dense group within 310px and the screen. Lands after 0.22s; ranks III/V add 2/3 strikes at 0.15s intervals.",
+      "max": 1,
+      "character": "mage",
+      "rule": "unlock",
+      "ability": "meteor",
+      "category": null
+    },
+    {
+      "id": "unlock-shield",
+      "name": "Arcane Shield",
+      "description": "Absorbs 15/20/25/30/35% maxHP for 6–10s. Excess damage reaches HP. Recasting replaces the remaining shield without stacking.",
+      "max": 1,
+      "character": "mage",
+      "rule": "unlock",
+      "ability": "shield",
+      "category": null
+    },
+    {
+      "id": "unlock-whirlwind",
+      "name": "Whirlwind",
+      "description": "A series of circular strikes over 1.2s.",
+      "max": 1,
+      "character": "warrior",
+      "rule": "unlock",
+      "ability": "whirlwind",
+      "category": null
+    },
+    {
+      "id": "unlock-slam",
+      "name": "Ground Stomp",
+      "description": "A marked area strike after a 0.65s delay.",
+      "max": 1,
+      "character": "warrior",
+      "rule": "unlock",
+      "ability": "slam",
+      "category": null
+    },
+    {
+      "id": "unlock-blades",
+      "name": "Piercing Throw",
+      "description": "A spear travels up to 360px with a 28px hit width, increased by area bonuses. Pierces 3–7 targets, hitting each once.",
+      "max": 1,
+      "character": "warrior",
+      "rule": "unlock",
+      "ability": "blades",
+      "category": null
+    },
+    {
+      "id": "unlock-iron",
+      "name": "Shield Block",
+      "description": "Reduces damage by 50%, absorbs enemy projectiles and grants Absorb equal to 20–40% maxHP while blocking. Recasting refreshes the shield without stacking.",
+      "max": 1,
+      "character": "warrior",
+      "rule": "unlock",
+      "ability": "iron",
+      "category": null
+    },
+    {
+      "id": "rank-fireball",
+      "name": "Fireball +",
+      "description": "+20% base fire damage. V + Ember Heat III: an extra piercing fireball.",
+      "max": 4,
+      "character": "mage",
+      "rule": "rank",
+      "ability": "fireball",
+      "category": null
+    },
+    {
+      "id": "rank-frost",
+      "name": "Frost Nova +",
+      "description": "I: 1.2s root. II: +20% radius. III: −15% base cooldown. IV: 1.7s root. V: 2s root and another +20% radius. +6 damage per rank; V + Wide Circle III retains +30% damage.",
+      "max": 4,
+      "character": "mage",
+      "rule": "rank",
+      "ability": "frost",
+      "category": null
+    },
+    {
+      "id": "rank-lightning",
+      "name": "Chain Lightning +",
+      "description": "+9 damage and +1 chain target (up to 7 targets).",
+      "max": 4,
+      "character": "mage",
+      "rule": "rank",
+      "ability": "lightning",
+      "category": null
+    },
+    {
+      "id": "rank-meteor",
+      "name": "Armageddon +",
+      "description": "+25 damage and +7px radius. I–V: 1/1/2/2/3 meteors. Interval 0.15s; extra strikes deal 75% damage. Equally dense groups prioritize rooted targets.",
+      "max": 4,
+      "character": "mage",
+      "rule": "rank",
+      "ability": "meteor",
+      "category": null
+    },
+    {
+      "id": "rank-shield",
+      "name": "Arcane Shield +",
+      "description": "Absorb I–V: 15/20/25/30/35% maxHP. +1s duration per rank. Recasting refreshes the shield without stacking.",
+      "max": 4,
+      "character": "mage",
+      "rule": "rank",
+      "ability": "shield",
+      "category": null
+    },
+    {
+      "id": "rank-cleave",
+      "name": "Cleave +",
+      "description": "+8 base damage to the wide strike.",
+      "max": 4,
+      "character": "warrior",
+      "rule": "rank",
+      "ability": "cleave",
+      "category": null
+    },
+    {
+      "id": "rank-whirlwind",
+      "name": "Whirlwind +",
+      "description": "+4 damage to each circular pulse.",
+      "max": 4,
+      "character": "warrior",
+      "rule": "rank",
+      "ability": "whirlwind",
+      "category": null
+    },
+    {
+      "id": "rank-slam",
+      "name": "Ground Stomp +",
+      "description": "+15 damage and +5px strike radius.",
+      "max": 4,
+      "character": "warrior",
+      "rule": "rank",
+      "ability": "slam",
+      "category": null
+    },
+    {
+      "id": "rank-blades",
+      "name": "Piercing Throw +",
+      "description": "+12 spear damage and +1 pierced target (up to 7 targets).",
+      "max": 4,
+      "character": "warrior",
+      "rule": "rank",
+      "ability": "blades",
+      "category": null
+    },
+    {
+      "id": "rank-iron",
+      "name": "Shield Block +",
+      "description": "+5% maxHP Absorb and +0.5s Shield Block duration. Recasting refreshes the shield.",
+      "max": 4,
+      "character": "warrior",
+      "rule": "rank",
+      "ability": "iron",
+      "category": null
+    },
+    {
+      "id": "evolve-fireball",
+      "name": "Fireball: evolution",
+      "description": "The first fireball hit explodes for 45% damage within 38px.",
+      "max": 1,
+      "character": "mage",
+      "rule": "evolve",
+      "ability": "fireball",
+      "category": null
+    },
+    {
+      "id": "evolve-frost",
+      "name": "Frost Nova: evolution",
+      "description": "Two hits within 4s add 0.75s to the next eligible root, at most once every 6s. Does not extend an active root or bypass subsequent immunity.",
+      "max": 1,
+      "character": "mage",
+      "rule": "evolve",
+      "ability": "frost",
+      "category": null
+    },
+    {
+      "id": "evolve-lightning",
+      "name": "Chain Lightning: evolution",
+      "description": "Two secondary bolts hit new targets for 35% damage.",
+      "max": 1,
+      "character": "mage",
+      "rule": "evolve",
+      "ability": "lightning",
+      "category": null
+    },
+    {
+      "id": "evolve-meteor",
+      "name": "Armageddon: evolution",
+      "description": "Each strike leaves fire for 3s, ticking every 0.5s. Fire from extra meteors also deals 75% damage.",
+      "max": 1,
+      "character": "mage",
+      "rule": "evolve",
+      "ability": "meteor",
+      "category": null
+    },
+    {
+      "id": "evolve-shield",
+      "name": "Arcane Shield: evolution",
+      "description": "Breaking Absorb triggers one 90px defensive pulse per shield activation.",
+      "max": 1,
+      "character": "mage",
+      "rule": "evolve",
+      "ability": "shield",
+      "category": null
+    },
+    {
+      "id": "restore",
+      "name": "Sip of Life",
+      "description": "Restore 40 HP.",
+      "max": 1000,
+      "character": null,
+      "rule": "supply",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "nova",
+      "name": "Flash",
+      "description": "120 damage to all enemies within 150px.",
+      "max": 1000,
+      "character": null,
+      "rule": "supply",
+      "ability": null,
+      "category": null
+    },
+    {
+      "id": "magnet",
+      "name": "Crystal Call",
+      "description": "Collect all crystals on the field.",
+      "max": 1000,
+      "character": null,
+      "rule": "supply",
+      "ability": null,
+      "category": null
+    }
+  ],
+  "mobilityLevel": 10,
+  "mobilityMax": 3,
+  "ultimateLevel": 30,
+  "ultimateTime": 300,
+  "ultimates": {
+    "mage": [
+      {
+        "id": "lightning",
+        "name": "Heavenly Wrath",
+        "description": "A devastating discharge: an instant branching web of lightning. The first charge is ready; recharge with 10 successful Blinks.",
+        "icon": "ϟ",
+        "color": "#458FFF"
+      },
+      {
+        "id": "frost",
+        "name": "Absolute Zero",
+        "description": "A rune freezes even bosses and Guardians for 4 seconds, followed by 4 seconds of ice. An ice avalanche spreads outward after casting: 180 damage, capped at 8% HP for bosses and Guardians. The first charge is ready; recharge with 10 successful Blinks.",
+        "icon": "❄",
+        "color": "#D9F3F7"
+      },
+      {
+        "id": "fire",
+        "name": "Funeral Pyre",
+        "description": "10 seconds of fire: burns projectiles, scorches enemies and heals 20% HP/s. Every 2 seconds the radius grows by 10% of its original size. The first charge is ready; recharge with 10 successful Blinks.",
+        "icon": "♨",
+        "color": "#F05252"
+      }
+    ],
+    "warrior": [
+      {
+        "id": "banner",
+        "name": "Vanguard Banner",
+        "description": "A banner lasts 15 seconds. Restores 10% maxHP per second within 140px. The first charge is ready; recharge with 10 successful dashes.",
+        "icon": "⚑",
+        "color": "#9BC5A5"
+      },
+      {
+        "id": "earthbreaker",
+        "name": "Threefold Fissure",
+        "description": "Three branches extend 280px forward: 4 successive waves of 100 damage. Each target is hit once per wave; total damage to bosses and Guardians is capped at 16% maxHP. The first charge is ready; recharge with 10 successful dashes.",
+        "icon": "⋔",
+        "color": "#D4B37B"
+      },
+      {
+        "id": "ruin",
+        "name": "Battering Spear",
+        "description": "A heavy spear pierces enemies over 560px: 420 damage. At its endpoint, deals 140 damage within 48px to targets not already hit. Bosses and Guardians take at most 18% maxHP per cast. The first charge is ready; recharge with 10 successful dashes.",
+        "icon": "➶",
+        "color": "#BFD3D9"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "id": "fireball",
+      "character": "mage"
+    },
+    {
+      "id": "frost",
+      "character": "mage"
+    },
+    {
+      "id": "lightning",
+      "character": "mage"
+    },
+    {
+      "id": "meteor",
+      "character": "mage"
+    },
+    {
+      "id": "shield",
+      "character": "mage"
+    },
+    {
+      "id": "cleave",
+      "character": "warrior"
+    },
+    {
+      "id": "whirlwind",
+      "character": "warrior"
+    },
+    {
+      "id": "slam",
+      "character": "warrior"
+    },
+    {
+      "id": "blades",
+      "character": "warrior"
+    },
+    {
+      "id": "iron",
+      "character": "warrior"
+    }
+  ]
+}

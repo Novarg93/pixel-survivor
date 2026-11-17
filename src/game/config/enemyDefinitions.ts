@@ -13,7 +13,7 @@ export const ENEMIES = {
   eclipse: { hp: 5040, speed: 26, damage: 24, score: 1500, xp: 150, radius: 24, color: 0x8bc4d5 },
 } as const;
 export type EnemyKind = keyof typeof ENEMIES;
-export const ENEMY_NAMES: Record<EnemyKind, string> = { ashGuard: 'Страж Пепельной Рощи', guardian: 'Редкий хранитель', grunt: 'Росток', runner: 'Бегун', tank: 'Каменный голем', caster: 'Рунный стрелок', rusher: 'Рывковик', splitter: 'Осколочник', charger: 'Терновый зверь', eclipse: 'Хранитель затмения', sorcerer: 'Хранитель рун' };
+export const ENEMY_NAMES: Record<EnemyKind, string> = { ashGuard: 'Ash Grove Warden', guardian: 'Rare Guardian', grunt: 'Sprout', runner: 'Runner', tank: 'Stone Golem', caster: 'Rune Archer', rusher: 'Rusher', splitter: 'Splitter', charger: 'Briar Beast', eclipse: 'Eclipse Guardian', sorcerer: 'Rune Warden' };
 export type ScheduledBossKind = 'charger' | 'sorcerer' | 'eclipse';
 export type BossKind = ScheduledBossKind | 'ashGuard';
 export type RegularKind = Exclude<EnemyKind, BossKind | 'guardian'>;

@@ -6,7 +6,7 @@ export type MapId = 'grove';
 export interface BiomePresentationConfig { artPack: 'grove'; phases: readonly PhaseDefinition[] }
 export interface MapDefinition { id: MapId; name: string; presentation: BiomePresentationConfig }
 export const AVAILABLE_MAPS: readonly MapDefinition[] = [
-  { id: 'grove', name: 'Роща осколков', presentation: { artPack: 'grove', phases: ATMOSPHERE_PHASES } },
+  { id: 'grove', name: 'Shard Grove', presentation: { artPack: 'grove', phases: ATMOSPHERE_PHASES } },
 ];
 export function playableMap(value: unknown): MapId { return AVAILABLE_MAPS.find(map => map.id === value)?.id ?? 'grove'; }
 export function mapDefinition(value: unknown) { return AVAILABLE_MAPS.find(map => map.id === playableMap(value))!; }

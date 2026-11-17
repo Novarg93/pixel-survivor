@@ -12,28 +12,29 @@ function chooseCharacter(value: CharacterId) {
   if (!isPublicCharacter(value)) { unavailable.value = true; return; }
   unavailable.value = false; emit('character', value);
 }
-defineProps<{ best: number; character: CharacterId; biome: BiomeId }>();
-const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; help: []; settings: []; records: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
+defineProps<{ best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; help: []; settings: []; records: []; premium: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
  <div class="menu-shell">
   <section class="menu-content">
-   <div class="eyebrow"><span class="spark">✦</span> ОДНА ИСКРА ПРОТИВ ЦЕЛОЙ ЧАЩИ</div>
+   <div class="eyebrow"><span class="spark">✦</span> ONE SPARK AGAINST AN ENTIRE GROVE</div>
    <h1 class="wordmark">PIXEL<br><span>SURVIVOR</span><i>✦</i></h1>
-   <p class="menu-description">Чаща пробуждается.<br>Двигайся. Собирай магию. Продержись ещё минуту.</p>
-   <div class="run-selection" aria-label="Персонаж"><button :aria-pressed="character === 'mage'" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · магия</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>150 HP · меч и щит</small></button></div>
-   <p v-if="unavailable" class="character-notice" role="status">Warrior находится в разработке</p>
-   <div class="run-selection" aria-label="Локация"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
-   <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Начать забег</span><span>→</span></button>
-   <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Бой со Стражем</b><small>Тренировка · Mage 54 · Гнев Небес</small></span><span aria-hidden="true">↗</span></button>
-   <button class="boss-practice-button guardian-practice-button" v-pad="() => emit('guardianPractice')" @click="emit('guardianPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Бой с Хранителем</b><small>Корневой тотем · 1×1 · Mage 54</small></span><span aria-hidden="true">↗</span></button></div>
-   <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">Как играть</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Настройки</button></div>
-   <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Локальные рекорды ↗</button>
-   <div class="menu-facts"><span><b>5</b> стихий магии</span><span><b>∞</b> бесконечный лес</span><span><b>1</b> последняя искра</span></div>
-   <p v-if="best" class="best">Личный рекорд · {{ best.toLocaleString('ru-RU') }} очков</p>
+   <p class="menu-description">The grove awakens.<br>Move. Gather magic. Survive another minute.</p>
+   <div class="run-selection" aria-label="Character"><button :aria-pressed="character === 'mage'" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · magic</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>150 HP · sword and shield</small></button></div>
+   <p v-if="unavailable" class="character-notice" role="status">Warrior is in development</p>
+   <div class="run-selection" aria-label="Location"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
+   <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Start run</span><span>→</span></button>
+   <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Fight the Warden</b><small>Practice · Mage 54 · Heavenly Wrath</small></span><span aria-hidden="true">↗</span></button>
+   <button class="boss-practice-button guardian-practice-button" v-pad="() => emit('guardianPractice')" @click="emit('guardianPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Fight a Guardian</b><small>Rootbound totem · 1×1 · Mage 54</small></span><span aria-hidden="true">↗</span></button></div>
+   <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">How to play</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Settings</button></div>
+   <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Local records ↗</button>
+   <button v-if="premiumAvailable" class="text-button" data-testid="menu-premium" v-pad="() => emit('premium')" @click="emit('premium')">Premium Actions ↗</button>
+   <div class="menu-facts"><span><b>5</b> schools of magic</span><span><b>∞</b> endless forest</span><span><b>1</b> last spark</span></div>
+   <p v-if="best" class="best">Personal best · {{ best.toLocaleString('en-US') }} points</p>
   </section>
-  <div class="menu-caption"><span>РОЩА ОСКОЛКОВ</span><small>Оригинальная пиксельная магия</small></div>
-  <footer class="menu-footer"><span>ОДИНОЧНАЯ ИГРА · БЕЗ СЕРВЕРА</span><span>{{ inputDevice === 'gamepad' ? 'D-PAD · A ВЫБРАТЬ · ЛЕВЫЙ СТИК В ЗАБЕГЕ' : 'WASD / СТРЕЛКИ · АВТОМАТИЧЕСКАЯ МАГИЯ' }}</span></footer>
+  <div class="menu-caption"><span>SHARD GROVE</span><small>Original pixel magic</small></div>
+  <footer class="menu-footer"><span>SINGLE PLAYER · OFFLINE</span><span>{{ inputDevice === 'gamepad' ? 'D-PAD · A SELECT · LEFT STICK IN GAME' : 'WASD / ARROW KEYS · AUTOMATIC MAGIC' }}</span></footer>
  </div>
 </template>
 <style scoped>

@@ -1,0 +1,11 @@
+<script setup lang="ts">
+import { Head, useForm } from '@inertiajs/vue3';
+import AccountOrders from '@/components/AccountOrders.vue';
+import AccountPagination from '@/components/AccountPagination.vue';
+import type { AccountOrder, AccountPage } from '@/types/account';
+defineOptions({ name: 'AccountOrdersPage' });
+const props = defineProps<{ orders: AccountPage<AccountOrder>; filters: { status?: string; direction?: string; fulfillment?: string } }>();
+const filter = useForm({ status: props.filters.status ?? '', direction: props.filters.direction ?? 'desc', fulfillment: props.filters.fulfillment ?? '' });
+function apply() { filter.get('/account/orders', { preserveState: true, preserveScroll: true }); }
+</script>
+<template><Head title="My orders" /><section class="site-section account-page"><p class="overline">TOKEN PURCHASE</p><h1>My orders</h1><p>Token purchases with money. The original amount and currency are preserved in the order and invoice. Game services purchased with credits are available in Inventory.</p><form class="account-filters" :aria-busy="filter.processing" @submit.prevent="apply"><label>Payment<select v-model="filter.status"><option value="">All statuses</option><option value="succeeded">Paid</option><option value="processing">Under review</option><option value="created">Created</option><option value="checkout_pending">Awaiting payment</option><option value="failed">Error</option><option value="canceled">Canceled</option><option value="expired">Expired</option></select></label><label>Fulfillment<select v-model="filter.fulfillment"><option value="">All</option><option value="fulfilled">Delivered</option><option value="pending">Pending</option><option value="failed">Error</option><option value="not_ready">Payment not confirmed</option></select></label><label>Date<select v-model="filter.direction"><option value="desc">Newest first</option><option value="asc">Oldest first</option></select></label><button class="site-button compact" :disabled="filter.processing">{{ filter.processing ? 'Loading…' : 'Apply' }}</button><p v-if="Object.keys(filter.errors).length" role="alert">Could not apply filters.</p></form><AccountOrders :entries="orders.data" /><AccountPagination :page="orders" /></section></template>

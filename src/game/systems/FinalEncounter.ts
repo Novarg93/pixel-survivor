@@ -100,7 +100,7 @@ export class FinalEncounter {
     this.setAttack('ritualEnter',C.ritualEnter);
     this.nextMeteor=this.bossClock+3;
     const count=repeat?2:3;
-    this.notice=repeat?'Второй и последний ритуал: разрушьте две опоры':'Разрушьте трёх хранителей щита';this.noticeUntil=this.clock+4;
+    this.notice=repeat?'Second and final ritual: destroy two anchors':'Destroy the three shield Guardians';this.noticeUntil=this.clock+4;
     let rotation=0;
     for(let attempt=0;attempt<12;attempt++){
       const angle=attempt*Math.PI/6;
@@ -255,7 +255,7 @@ export class FinalEncounter {
       this.attack.age+=bossDt;if(this.pending==='phase3'&&this.attack.age>=.7&&this.emit('phase3Overload'))w.sound('final-phase3');if(this.attack.age+1e-7<this.attack.duration)return;
       const next=this.pending;this.pending=null;
       if(next==='ritual1')this.enterRitual(w);
-      else {this.emit('phase3Ready');this.phase='phase3';this.notice='Армагеддон: последовательный метеоритный дождь';this.noticeUntil=this.clock+4;for(const id of [...this.supports.keys()]){w.clearOwnedEffects(id);w.enemies=w.enemies.filter(e=>e.id!==id);}this.supports.clear();this.meteors=[];this.setAttack('approach',0);this.nextVolley=this.clock+C.armageddonFirst;this.nextCombo=this.bossClock+C.firstCombo;}
+      else {this.emit('phase3Ready');this.phase='phase3';this.notice='Armageddon: successive meteor showers';this.noticeUntil=this.clock+4;for(const id of [...this.supports.keys()]){w.clearOwnedEffects(id);w.enemies=w.enemies.filter(e=>e.id!==id);}this.supports.clear();this.meteors=[];this.setAttack('approach',0);this.nextVolley=this.clock+C.armageddonFirst;this.nextCombo=this.bossClock+C.firstCombo;}
       return;
     }
     if(this.shielded){
@@ -273,7 +273,7 @@ export class FinalEncounter {
     this.updateCombo(w,bossDt);
   }
   finish(w:World){
-    if(w.status==='over'||w.status==='menu'||this.phase==='dying'||this.phase==='defeated')return;
+    if(w.awaitingRevive||w.status==='over'||w.status==='menu'||this.phase==='dying'||this.phase==='defeated')return;
     if(w.player.hp<=0){w.outcome='defeat';w.status='over';this.cancel();w.clearHostileThreats();return;}
     this.phase='dying';this.pending=null;this.meteors=[];this.meteorContacts.clear();this.supports.clear();this.departing=[];this.setAttack('death',C.deathDuration);this.emit('deathStart');
     if(this.boss)delete this.boss.ultimateFreeze;

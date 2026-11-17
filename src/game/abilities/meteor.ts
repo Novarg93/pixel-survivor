@@ -1,3 +1,4 @@
+import {baseDamage} from './baseDamage';
 import type { World } from '../systems/World';
 import { ARMAGEDDON as C } from '../config/mageAbilities';
 import { denseGroup, groundTargets, validGroundTarget } from './targeting';
@@ -22,7 +23,7 @@ export function meteor(w: World) {
       if (validGroundTarget(w, shifted, C.range)) at = shifted;
     }
     const damageScale = i === 0 ? 1 : C.extraDamage, launchAt = w.elapsed + i * C.interval;
-    w.impacts.push({ id: w.id(), ...at, radius, damage: (C.damageBase + rank * C.damagePerRank) * w.stats.damage * damageScale,
+    w.impacts.push({ id: w.id(), ...at, radius, damage: baseDamage('meteor',rank) * w.stats.damage * damageScale,
       launchAt, landAt: launchAt + C.delay, damageScale, hostile: false, source: 'meteor' });
   }
   w.feedback({ type: 'ability', ability: 'meteor', target: { ...first.center }, endsAt: w.impacts.at(-1)!.landAt });

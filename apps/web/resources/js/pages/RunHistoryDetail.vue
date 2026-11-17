@@ -1,0 +1,8 @@
+<script setup lang="ts">
+import { Head, Link, router } from '@inertiajs/vue3';
+import RunFactsView from '@/components/RunFacts.vue';
+import { dateUTC } from '@/types/leaderboard';
+import type { Decision, RunFacts } from '@/types/leaderboard';
+defineProps<{ run: RunFacts; lifecycle: string; decisions: Decision[]; initial_receipt: Record<string, unknown> | null; reward_receipt: Record<string, unknown> | null }>();
+</script>
+<template><Head title="My run" /><section class="site-section leaderboard-page"><Link href="/runs" class="quiet-link">← History</Link><h1>My run</h1><RunFactsView :run="run" /><p v-if="run.status === 'pending_review'" class="notice">This result is awaiting review and does not count toward the leaderboard yet. {{ reward_receipt ? 'Previously granted rewards are preserved and will not be granted again.' : 'Rewards will be granted once after acceptance.' }}</p><p>Session status: {{ lifecycle }}. {{ reward_receipt ? 'Reward fulfillment was recorded.' : 'No confirmed reward fulfillment.' }}</p><button class="site-button" @click="router.reload()">Refresh status</button><Link v-if="run.status === 'accepted' && run.mode === 'normal' && run.id" :href="`/leaderboard/runs/${run.id}`" class="quiet-link">Public details →</Link><h2>Review history</h2><ul class="review-history"><li v-for="(decision, index) in decisions" :key="index"><strong>{{ decision.action }}</strong> · {{ dateUTC(decision.created_at) }}<p>{{ decision.reason }}</p></li></ul><details v-if="initial_receipt"><summary>Original Finish Run response</summary><p class="subtle">Preserved unchanged for safe retries. The current status is shown above.</p><pre>{{ JSON.stringify(initial_receipt, null, 2) }}</pre></details></section></template>

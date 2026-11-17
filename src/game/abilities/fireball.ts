@@ -1,3 +1,4 @@
+import {baseDamage} from './baseDamage';
 import { BALANCE } from '../config/gameBalance';
 import type { World } from '../systems/World';
 import { nearest } from '../utils/math';
@@ -10,7 +11,7 @@ export function fireball(w: World) {
   const count = Math.min(6, w.stats.projectiles + (evolved ? 1 : 0));
   for (let i = 0; i < count; i++) {
     const angle = aim + (i - (count - 1) / 2) * 0.13;
-    w.shoot({ x: w.player.x, y: w.player.y, vx: Math.cos(angle) * BALANCE.fireballSpeed, vy: Math.sin(angle) * BALANCE.fireballSpeed, damage: BALANCE.fireballDamage * (1 + (level - 1) * 0.2) * w.stats.damage, hostile: false, source: 'fireball', pierce: evolved ? 1 : 0 });
+    w.shoot({ x: w.player.x, y: w.player.y, vx: Math.cos(angle) * BALANCE.fireballSpeed, vy: Math.sin(angle) * BALANCE.fireballSpeed, damage: baseDamage('fireball',level) * w.stats.damage, hostile: false, source: 'fireball', pierce: evolved ? 1 : 0 });
   }
   w.feedback({ type: 'ability', ability: 'fireball', target: { x: target.x, y: target.y } });
   return true;

@@ -11,7 +11,7 @@ import Phaser from 'phaser';
 import { LootPresentation } from '../art/LootPresentation';
 import { RadarPublisher } from '../radar/RadarPublisher';
 import { World, type RunOptions } from '../systems/World';
-import { snapshots, commands, metrics, radarFrames, gamepadUi, gamepadNotices, inputDevices, type UiScreen, type Metrics } from '../events/bridge';
+import { inventoryMenus, snapshots, commands, metrics, radarFrames, gamepadUi, gamepadNotices, inputDevices, type UiScreen, type Metrics } from '../events/bridge';
 import { WorldChunkSystem } from '../systems/WorldChunkSystem';
 import { AudioController } from '../audio/AudioController';
 import { AudioPresentation } from '../audio/AudioPresentation';
@@ -33,6 +33,7 @@ import type { CharacterId } from '../config/characters';
 import { mobileViewport } from '../../ui/mobileViewport';
 import { ForestAtmosphere } from '../art/ForestAtmosphere';
 import { mapDefinition } from '../config/biomes';
+import {playerCameraZoom} from '../config/playerVisuals';
 export class GameScene extends Phaser.Scene {
   world = new World();
   private mage!: Phaser.GameObjects.Sprite;
@@ -106,6 +107,17 @@ export class GameScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-Q',ultimateKey);
     this.input.keyboard?.on('keydown-SPACE', mobilityKey);
     const off = commands.on(command => {
+      if (command.type === 'inventory-open') {
+        if (!this.world.serverEconomy || this.world.outcome || this.world.awaitingRevive || !['playing', 'paused'].includes(this.world.status) || mobileViewport().blocked) return;
+        const fromPlaying = this.world.status === 'playing'; this.world.pause(); this.resetInput(); this.audioPresentation.observe(this.world); this.audio.stop();
+        const snapshot = this.world.snapshot(); snapshots.emit(snapshot); inventoryMenus.emit({ snapshot, fromPlaying, item: command.item }); return;
+      }
+      if (command.type === 'premium-lock') { this.world.premiumPending = command.value; snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'apply-offer') { command.acknowledge(this.world.applyServerOffer(command.offer,command.localOffer)); snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'apply-paid-action') { command.acknowledge(this.world.applyPaidAction(command.receipt)); this.audioPresentation.observe(this.world); this.resetInput(); snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'apply-run-item') { command.acknowledge(this.world.applyRunItem(command.receipt)); this.audioPresentation.observe(this.world); this.resetInput(); snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'finish-run') { if (this.world.serverEconomy && this.world.status === 'paused' && !this.world.premiumPending) this.world.finishDefeat(); snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'resume' && this.uiScreen === 'inventory') return;
       if (mobileViewport().blocked && ['restart', 'boss-practice', 'resume', 'mobility', 'ultimate'].includes(command.type)) return;
       if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
       if (command.type === 'ultimate') { if(this.world.status === 'playing')this.ultimateRequested=true;return; }
@@ -113,10 +125,13 @@ export class GameScene extends Phaser.Scene {
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') {
-        this.runOptions.character = command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined,command.character??this.runOptions.character);
-        if(command.biome)this.runOptions.biome=command.biome;if(command.type==='boss-practice')this.runOptions.biome='grove';
+        this.runOptions = { character: command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined,command.character??this.runOptions.character),
+          biome: command.type==='boss-practice'?'grove':command.biome??this.runOptions.biome,
+          permanentBonuses: command.type==='restart' ? command.platformRun?.bonuses : undefined,
+          economy: command.type === 'restart' ? command.platformRun?.economy : undefined,
+          clientRunId: command.platformRun?.clientRunId };
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
-        this.world = new World(Date.now(), this.runOptions);
+        this.world = new World(command.platformRun?.seed ?? Date.now(), this.runOptions);
         if(command.type==='boss-practice'){if(command.practiceBoss==='rootbound-guardian')startGuardianPractice(this.world);else if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
         for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
         if (window.__PIXEL__) window.__PIXEL__.world = this.world;
@@ -171,7 +186,7 @@ export class GameScene extends Phaser.Scene {
       const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause' && a !== 'ultimate');
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
-    const baseZoom = Math.max(this.preferences.pixelScale, Math.ceil(this.scale.width / 960), Math.ceil(this.scale.height / 640));
+    const baseZoom = playerCameraZoom(this.scale.width,this.scale.height,this.preferences.pixelScale);
     const zoom = this.ultimateReview ? Math.max(.35, Math.min(this.scale.width / 1000, this.scale.height / 720)) : baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
     this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });

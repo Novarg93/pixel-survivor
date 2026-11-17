@@ -4,8 +4,8 @@ defineProps<{state:Snapshot}>();
 </script>
 <template>
   <div v-if="state.status!=='over'" class="final-boss-bar" :data-phase="state.finalEncounter.phase">
-    <span>СТРАЖ ПЕПЕЛЬНОЙ РОЩИ <small>{{state.finalEncounter.phase==='dying'?'СТРАЖ ПОВЕРЖЕН':state.finalEncounter.pending?'СМЕНА ФАЗЫ':state.finalEncounter.shielded?'НЕУЯЗВИМ · ЩИТ '+state.finalEncounter.guardians:state.finalEncounter.phase==='intro'?'ПРОБУЖДЕНИЕ':state.finalEncounter.phase==='phase3'?'III · АРМАГЕДДОН':state.finalEncounter.phase==='phase1'?'I · ДВУРУЧНЫЙ МЕЧ':'II · ОТКРЫТЫЙ БОЙ'}}</small></span>
-    <div class="final-health"><progress :value="state.finalEncounter.hp" :max="state.finalEncounter.maxHp" aria-label="Страж Пепельной Рощи"></progress><i style="left:30%"></i><i style="left:70%"></i></div>
+    <span>ASH GROVE WARDEN <small>{{state.finalEncounter.phase==='dying'?'WARDEN DEFEATED':state.finalEncounter.pending?'PHASE TRANSITION':state.finalEncounter.shielded?'INVULNERABLE · SHIELD '+state.finalEncounter.guardians:state.finalEncounter.phase==='intro'?'AWAKENING':state.finalEncounter.phase==='phase3'?'III · ARMAGEDDON':state.finalEncounter.phase==='phase1'?'I · GREATSWORD':'II · OPEN COMBAT'}}</small></span>
+    <div class="final-health"><progress :value="state.finalEncounter.hp" :max="state.finalEncounter.maxHp" aria-label="Ash Grove Warden"></progress><i style="left:30%"></i><i style="left:70%"></i></div>
     <p v-if="state.finalEncounter.notice">{{state.finalEncounter.notice}}</p>
   </div>
 </template>
