@@ -29,6 +29,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login(fn () => redirect()->route('login'))
             ->brandName('Pixel Survivor · Treasury')
+            ->brandLogo(fn () => view('filament.brand-logo'))
+            ->brandLogoHeight('2rem')
             ->darkMode(true, isForced: true)
             ->renderHook(PanelsRenderHook::HEAD_END, fn () => view('filament.chronicle-theme'))
             ->colors([

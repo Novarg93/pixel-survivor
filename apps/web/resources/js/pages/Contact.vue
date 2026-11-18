@@ -1,8 +1,82 @@
 <script setup lang="ts">
-import { Head, useForm } from '@inertiajs/vue3';
-defineProps<{ received: boolean }>();
-const form = useForm({ name: '', email: '', subject: '', message: '' });
-function submit() { form.post('/contact', { preserveScroll: true, onSuccess: () => form.reset() }); }
+import { Head, Link, useForm } from '@inertiajs/vue3';
+import { CircleCheckIcon } from '@lucide/vue';
+import { nextTick, ref } from 'vue';
+
 defineOptions({ name: 'ContactPage' });
+const props = defineProps<{ received: boolean }>();
+const form = useForm({ name: '', email: '', subject: '', message: '' });
+const sent = ref(props.received);
+const confirmation = ref<HTMLElement>();
+const fields = [
+    { id: 'name', label: 'Name', type: 'text', autocomplete: 'name', maxLength: 100 },
+    { id: 'email', label: 'Email', type: 'email', autocomplete: 'email', maxLength: 254 },
+    { id: 'subject', label: 'Subject', type: 'text', autocomplete: 'off', maxLength: 160 },
+    { id: 'message', label: 'Message', maxLength: 5000 },
+] as const;
+
+function submit() {
+    if (form.processing) return;
+
+    sent.value = false;
+    form.post('/contact', {
+        preserveScroll: true,
+        onSuccess: async ({ props: response }) => {
+            if (response.received !== true) return;
+
+            form.reset();
+            sent.value = true;
+            await nextTick();
+            confirmation.value?.focus();
+        },
+    });
+}
 </script>
-<template><Head title="Feedback" /><section class="site-section reading-page"><p class="overline">A LINK BEYOND THE GROVE</p><h1>Tell us about your run.</h1><p>Found a bug or want to share feedback? Your message will be saved in our contact database. No email notification is sent.</p><div v-if="received" role="status" class="notice">Your latest message was received and saved. Thank you for your feedback.</div><form class="contact-form" @submit.prevent="submit"><template v-for="field in (['name', 'email', 'subject', 'message'] as const)" :key="field"><label :for="field">{{ { name: 'Name', email: 'Email', subject: 'Subject', message: 'Message' }[field] }}</label><textarea v-if="field === 'message'" :id="field" v-model="form[field]" required minlength="10" maxlength="5000" rows="6" :aria-invalid="!!form.errors[field]" :aria-describedby="form.errors[field] ? `${field}-error` : undefined" /><input v-else :id="field" v-model="form[field]" :type="field === 'email' ? 'email' : 'text'" required :maxlength="{ name: 100, email: 254, subject: 160 }[field]" :autocomplete="field === 'name' ? 'name' : field === 'email' ? 'email' : 'off'" :aria-invalid="!!form.errors[field]" :aria-describedby="form.errors[field] ? `${field}-error` : undefined" /><p v-if="form.errors[field]" :id="`${field}-error`" class="field-error">{{ form.errors[field] }}</p></template><p class="subtle">Do not send passwords or payment details. Your name, email and message will be stored with this request. <a href="/privacy">Data processing information (draft)</a>.</p><button class="site-button" :disabled="form.processing">{{ form.processing ? 'Saving…' : 'Send message →' }}</button></form></section></template>
+
+<template>
+    <Head title="Contact us" />
+    <section class="site-section reading-page">
+        <h1>Contact us</h1>
+        <p>Found a bug, have a question, or want to share feedback? Send us a message below.</p>
+        <form class="contact-form" @submit.prevent="submit">
+            <template v-for="field in fields" :key="field.id">
+                <label :for="field.id">{{ field.label }}</label>
+                <textarea
+                    v-if="field.id === 'message'"
+                    :id="field.id"
+                    v-model="form[field.id]"
+                    :maxlength="field.maxLength"
+                    required
+                    minlength="10"
+                    rows="6"
+                    :aria-invalid="!!form.errors[field.id]"
+                    :aria-describedby="form.errors[field.id] ? `${field.id}-error` : undefined"
+                />
+                <input
+                    v-else
+                    :id="field.id"
+                    v-model="form[field.id]"
+                    :type="field.type"
+                    :maxlength="field.maxLength"
+                    :autocomplete="field.autocomplete"
+                    required
+                    :aria-invalid="!!form.errors[field.id]"
+                    :aria-describedby="form.errors[field.id] ? `${field.id}-error` : undefined"
+                />
+                <p v-if="form.errors[field.id]" :id="`${field.id}-error`" class="field-error">{{ form.errors[field.id] }}</p>
+            </template>
+            <p class="subtle">Keep passwords and payment details private. We store your name, email and message with this request. <Link href="/privacy">Data processing information (draft)</Link>.</p>
+            <button type="submit" class="site-button" :disabled="form.processing">{{ form.processing ? 'Saving…' : 'Send message' }} <span v-if="!form.processing" aria-hidden="true">→</span></button>
+            <div v-if="sent" ref="confirmation" class="notice contact-success" role="status" tabindex="-1">
+                <CircleCheckIcon :size="24" aria-hidden="true" />
+                <div><strong>Message received</strong><p>Thanks for reaching out. Your message has been saved.</p></div>
+            </div>
+        </form>
+    </section>
+</template>
+
+<style scoped>
+.contact-success { display: flex; align-items: flex-start; gap: 12px; margin: 8px 0 0; }
+.contact-success svg { flex: none; margin-top: 2px; color: var(--site-mint); }
+.contact-success strong { display: block; color: var(--site-mint); font-size: 15px; }
+</style>

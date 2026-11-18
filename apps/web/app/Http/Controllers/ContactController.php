@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
@@ -17,7 +17,7 @@ class ContactController extends Controller
             'subject' => ['required', 'string', 'max:160'],
             'message' => ['required', 'string', 'min:10', 'max:5000'],
         ]);
-        DB::table('contact_messages')->insert([...$data, 'created_at' => now(), 'updated_at' => now()]);
+        ContactMessage::query()->create($data);
 
         // A concurrent web GET can consume flash before the redirect reaches Contact.
         $request->session()->put('contactReceived', true);

@@ -83,8 +83,11 @@ class PaymentController extends Controller
         return response()->json($this->snapshot($request, $order));
     }
 
-    public function result(Request $request, string $order): Response
+    public function result(Request $request, string $order, ?string $view = null): Response
     {
-        return Inertia::render('PaymentResult', $this->snapshot($request, $order));
+        return Inertia::render('PaymentResult', [
+            ...$this->snapshot($request, $order),
+            'checkout_return' => $view === 'success',
+        ]);
     }
 }

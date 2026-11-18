@@ -1,8 +1,10 @@
+@include('partials.site-icons')
 <style>
     .fi-body { background: #0c171f; color: #e7ebdf; }
     .fi-topbar, .fi-sidebar { background: #10212b; }
     .fi-topbar { border-bottom: 1px solid #3e5961; }
     .fi-logo, .fi-header-heading { font-family: Georgia, serif; color: #f1e5cb; }
+    .treasury-brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
     .fi-ta-ctn, .fi-section, .fi-modal-window { background: #162832; border: 1px solid #3e5961; border-radius: 2px; box-shadow: 0 4px 0 #061017; }
     .fi-ta-table thead { background: #203740; }
     .fi-ta-row { border-color: #3e5961; }
@@ -15,4 +17,5 @@
     .fi-sidebar-item-label, .fi-fo-field-wrp-label { color: #d2dfd7; }
     .fi-section-header { border-bottom: 1px solid #3e5961; }
     .fi-section-header-heading { color: #d8b476; }
+    .contact-message-body { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .875rem; line-height: 1.6; }
 </style>
