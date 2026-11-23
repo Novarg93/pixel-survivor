@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import type { Snapshot } from '../../game/systems/World';
 import { formatTime } from '../format';
 import BuffDock from './BuffDock.vue';
@@ -12,13 +13,15 @@ import { useInputDevice } from '../inputDevice';
 import EventTimeline from './EventTimeline.vue';
 import BiomePhaseNotice from './BiomePhaseNotice.vue';
 const inputDevice = useInputDevice();
-defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
+const props = defineProps<{ state: Snapshot }>();
+const emit = defineEmits<{ pause: [] }>();
+const experience = computed(() => xpPercent(props.state.xp, props.state.xpNext));
 </script>
 <template>
   <header class="hud">
-    <div class="vitals">
+    <div class="vitals" :style="{ '--hud-xp': `${state.level >= RUN_LIMITS.maxLevel ? 100 : experience}%` }">
       <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b>
-      <div class="level-line"><small>LEVEL {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Experience" :aria-valuetext="state.level>=RUN_LIMITS.maxLevel?'Maximum level':undefined" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ state.level>=RUN_LIMITS.maxLevel?'MAX':xpPercent(state.xp, state.xpNext)+'%' }}</span></div>
+      <div class="level-line"><small>LEVEL {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Experience" :aria-valuetext="state.level>=RUN_LIMITS.maxLevel?'Maximum level':undefined" :aria-valuenow="experience" aria-valuemin="0" aria-valuemax="100">{{ state.level>=RUN_LIMITS.maxLevel?'MAX':experience+'%' }}</span></div>
       <span class="health-accessibility" role="progressbar" aria-label="Health" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>

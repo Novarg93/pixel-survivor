@@ -24,5 +24,4 @@ const notice = computed(() => biomePhaseNotice(props.state));
 .biome-phase-notice[data-phase="burning"]{border-color:#c48b5c;color:#f5c491}
 .biome-phase-notice[data-phase="burning"] i{background:#c48b5c}
 @media(max-width:600px){.biome-phase-announcer{top:102px;width:280px}.biome-phase-notice strong{font-size:12px;line-height:14px}.biome-phase-notice span{font-size:9px;line-height:11px}}
-:global(.touch-layout .biome-phase-announcer){top:86px;width:min(280px,calc(100% - 410px))}
 </style>

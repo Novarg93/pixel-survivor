@@ -186,11 +186,21 @@ export class GameScene extends Phaser.Scene {
       const action = pad.actions.find(a => a === 'confirm') ?? pad.actions.find(a => a !== 'mobility' && a !== 'pause' && a !== 'ultimate');
       if (action) gamepadUi.emit({ scope: this.world.status === 'upgrade' ? 'upgrade' : 'shell', action });
     }
-    const baseZoom = playerCameraZoom(this.scale.width,this.scale.height,this.preferences.pixelScale);
-    const zoom = this.ultimateReview ? Math.max(.35, Math.min(this.scale.width / 1000, this.scale.height / 720)) : baseZoom * (viewport.touch ? .83 : 1) / (viewport.touch && !viewport.blocked ? 1.3 : 1); this.cameras.main.setZoom(zoom);
-    this.world.width = this.scale.width / baseZoom; this.world.height = this.scale.height / baseZoom;
+    const { width, height } = this.scale;
+    const baseZoom = playerCameraZoom(width, height, this.preferences.pixelScale);
+    const touchLandscape = viewport.touch && !viewport.blocked;
+    // Keep the original viewport for ultimate targeting. The extra mobile area is render-only.
+    const combatZoom = this.ultimateReview
+      ? Math.max(.35, Math.min(width / 1000, height / 720))
+      : baseZoom * (viewport.touch ? .83 : 1) / (touchLandscape ? 1.3 : 1);
+    const zoom = touchLandscape && !this.ultimateReview && this.world.status !== 'menu' ? combatZoom / 1.18 : combatZoom;
+    const camera = this.cameras.main;
+    if (camera.zoom !== zoom) camera.setZoom(zoom);
+    this.world.width = width / baseZoom;
+    this.world.height = height / baseZoom;
     const input = selectMovement(this.heldInput.input(), this.touch, context() === beforeInput ? pad.movement : { x: 0, y: 0 });
-    this.world.ultimate.viewport={width:this.scale.width/zoom,height:this.scale.height/zoom};
+    this.world.ultimate.viewport.width = width / combatZoom;
+    this.world.ultimate.viewport.height = height / combatZoom;
     this.art.prepare(this.world);
     this.feedback.prepare(this.world);
     if (this.mobilityRequested) { this.mobilityRequested = false; this.world.mobility.activate(this.world, this.mobilityDirection ?? input); this.mobilityDirection = undefined; }
@@ -217,7 +227,7 @@ export class GameScene extends Phaser.Scene {
     this.mage.setAlpha(!lightningCharging&&this.world.player.invulnerableUntil > this.world.elapsed && Math.floor(this.world.elapsed * 16) % 2 === 0 ? 0.4 : 1);
     const atmosphereStatus=this.world.status==='over'&&this.world.finalEncounter.phase!=='inactive'?'paused':this.world.status;
     this.atmosphere.render(this.visualTime ?? this.world.elapsed, atmosphereStatus, this.preferences, viewport.touch);
-    this.chunks.update(this.cameras.main.midPoint.x, this.cameras.main.midPoint.y, this.scale.width / zoom, this.scale.height / zoom, viewport.touch ? 0 : 1);
+    this.chunks.update(camera.midPoint.x, camera.midPoint.y, width / zoom, height / zoom, viewport.touch ? 0 : 1);
     const active = new Set<number>();
     for (const entity of [...this.world.enemies, ...this.world.projectiles, ...this.world.orbs, ...this.world.loot.items, ...this.world.loot.chests, ...this.world.artifacts.items]) {
       if('kind' in entity&&entity.kind==='ashGuard')continue; // Layered accepted pack is owned by FinalBossArt.
