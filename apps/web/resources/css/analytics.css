@@ -1,0 +1,54 @@
+.site-analytics-preferences {
+    position: fixed;
+    z-index: 50;
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    width: max-content;
+    max-width: min(22rem, calc(100% - 1.5rem));
+    max-height: calc(100dvh - 1.5rem);
+    overflow: auto;
+    border: 1px solid #54717d;
+    border-radius: 0.25rem;
+    background: #14252e;
+    color: #eef5f5;
+    font: 0.875rem/1.45 system-ui, sans-serif;
+    box-shadow: 0 0.5rem 1.5rem #0006;
+}
+
+.site-analytics-preferences summary {
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.site-analytics-preferences-body {
+    padding: 0 0.8rem 0.8rem;
+}
+
+.site-analytics-preferences-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+}
+
+.site-analytics-preferences-actions button {
+    min-height: 2.75rem;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    border: 1px solid #71909b;
+    border-radius: 0.2rem;
+    background: #203945;
+    color: inherit;
+    font: inherit;
+}
+
+.site-analytics-preferences-actions button[aria-pressed='true'] {
+    border-color: #d8b476;
+    color: #ffe1ab;
+}
+
+.site-analytics-preferences :is(summary, button):focus-visible {
+    outline: 2px solid #ffe1ab;
+    outline-offset: -2px;
+}

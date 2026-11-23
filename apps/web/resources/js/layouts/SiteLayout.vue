@@ -26,7 +26,12 @@ function current(href: string) { return page.url.split('?')[0] === href || page.
                 <a href="/play" class="site-button compact header-play">Play Now <span aria-hidden="true">↗</span></a>
             </div>
         </header>
-        <main class="site-content"><slot /></main>
+        <main class="site-content">
+            <p v-if="page.props.emailJustVerified" role="status" class="mx-auto mt-5 w-[min(90%,70rem)] rounded border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
+                Email verified. Your Pixel Survivor account is ready to use.
+            </p>
+            <slot />
+        </main>
         <footer class="site-footer">
             <div><Link href="/" class="site-logo" aria-label="Pixel Survivor home"><AppLogo /></Link><p>One spark against an entire grove.</p></div>
             <nav aria-label="Footer links"><Link href="/privacy">Privacy Policy · draft</Link><Link href="/terms">Terms of Service · draft</Link><Link href="/contact">Feedback</Link></nav>

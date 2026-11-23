@@ -14,7 +14,12 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => match (env('APP_ENV', 'production')) {
+        'production' => 'resend',
+        'local' => env('MAIL_MAILER', 'log'),
+        'testing' => 'array',
+        default => env('MAIL_MAILER', 'resend'),
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -77,15 +82,6 @@ return [
 
         'array' => [
             'transport' => 'array',
-        ],
-
-        'failover' => [
-            'transport' => 'failover',
-            'mailers' => [
-                'smtp',
-                'log',
-            ],
-            'retry_after' => 60,
         ],
 
         'roundrobin' => [

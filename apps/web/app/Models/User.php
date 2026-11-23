@@ -58,9 +58,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Pas
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'is_platform_operator' => 'boolean',
-            /* @chisel-2fa */
             'two_factor_confirmed_at' => 'datetime',
-            /* @end-chisel-2fa */
         ];
     }
 }

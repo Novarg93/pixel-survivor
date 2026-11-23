@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Form, Head } from '@inertiajs/vue3';
+import { onMounted, ref } from 'vue';
 import InputError from '@/components/InputError.vue';
 import TextLink from '@/components/TextLink.vue';
 import { Button } from '@/components/ui/button';
@@ -12,13 +13,17 @@ import { email } from '@/routes/password';
 defineOptions({
     layout: {
         title: 'Forgot password',
-        description: 'Enter your email to receive a password reset link',
+        description: 'Enter the email address you use for Pixel Survivor.',
     },
 });
 
 defineProps<{
     status?: string;
+    deliveryError?: string;
 }>();
+
+const ready = ref(false);
+onMounted(() => { ready.value = true; });
 </script>
 
 <template>
@@ -26,11 +31,15 @@ defineProps<{
 
     <div
         v-if="status"
-        class="mb-4 text-center text-sm font-medium text-green-600"
+        role="status"
+        class="mb-4 text-center text-sm font-medium text-emerald-600 dark:text-emerald-300"
     >
         {{ status }}
     </div>
 
+    <p v-if="deliveryError" role="alert" class="mb-4 text-center text-sm font-medium text-red-600 dark:text-red-300">
+        {{ deliveryError }}
+    </p>
     <div class="space-y-6">
         <Form v-bind="email.form()" v-slot="{ errors, processing }">
             <div class="grid gap-2">
@@ -39,7 +48,8 @@ defineProps<{
                     id="email"
                     type="email"
                     name="email"
-                    autocomplete="off"
+                    autocomplete="email"
+                    required
                     v-focus
                     placeholder="email@example.com"
                 />
@@ -49,7 +59,7 @@ defineProps<{
             <div class="my-6 flex items-center justify-start">
                 <Button
                     class="w-full"
-                    :disabled="processing"
+                    :disabled="!ready || processing"
                     data-test="email-password-reset-link-button"
                 >
                     <Spinner v-if="processing" />

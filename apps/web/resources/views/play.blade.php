@@ -7,6 +7,9 @@
     <title>Pixel Survivor — Play</title>
     @include('partials.site-icons')
     @vite('resources/js/game.ts')
+    @if (config('analytics.enabled'))
+        @vite('resources/js/analytics.ts')
+    @endif
 </head>
 <body><div id="app" data-platform-account="{{ auth()->check() ? '1' : '0' }}"></div></body>
 </html>

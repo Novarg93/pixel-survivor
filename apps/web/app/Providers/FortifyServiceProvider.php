@@ -2,20 +2,28 @@
 
 namespace App\Providers;
 
-/* @chisel-registration */
-
 use App\Actions\Fortify\CreateNewUser;
-/* @end-chisel-registration */
 use App\Actions\Fortify\ResetUserPassword;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Auth\RegistrationResponse;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Password as PasswordBroker;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
 use Inertia\Inertia;
+use Laravel\Fortify\Contracts\FailedPasswordResetResponse;
+use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Features;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Http\Controllers\NewPasswordController;
+use Laravel\Fortify\Http\Controllers\PasswordResetLinkController as FortifyPasswordResetLinkController;
+use Laravel\Fortify\Http\Responses\FailedPasswordResetResponse as FortifyFailedPasswordResetResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -24,7 +32,10 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(FortifyPasswordResetLinkController::class, PasswordResetLinkController::class);
+        $this->app->bind(NewPasswordController::class, ResetPasswordController::class);
+        $this->app->bind(FailedPasswordResetResponse::class, fn () => new FortifyFailedPasswordResetResponse(PasswordBroker::INVALID_TOKEN));
+        $this->app->bind(RegisterResponse::class, RegistrationResponse::class);
     }
 
     /**
@@ -35,6 +46,12 @@ class FortifyServiceProvider extends ServiceProvider
         $this->configureActions();
         $this->configureViews();
         $this->configureRateLimiting();
+
+        Event::listen(Verified::class, function (): void {
+            if (request()->routeIs('verification.verify') && request()->hasSession()) {
+                request()->session()->flash('emailJustVerified', true);
+            }
+        });
     }
 
     /**
@@ -43,9 +60,7 @@ class FortifyServiceProvider extends ServiceProvider
     private function configureActions(): void
     {
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
-        /* @chisel-registration */
         Fortify::createUsersUsing(CreateNewUser::class);
-        /* @end-chisel-registration */
     }
 
     /**
@@ -58,35 +73,33 @@ class FortifyServiceProvider extends ServiceProvider
             'status' => $request->session()->get('status'),
         ]));
 
-        Fortify::resetPasswordView(fn (Request $request) => Inertia::render('auth/ResetPassword', [
-            'email' => $request->email,
-            'token' => $request->route('token'),
-            'passwordRules' => Password::defaults()->toPasswordRulesString(),
-        ]));
+        Fortify::resetPasswordView(function (Request $request) {
+            $email = $request->query(Fortify::email());
+
+            return Inertia::render('auth/ResetPassword', [
+                'email' => is_string($email) ? $email : '',
+                'token' => $request->route('token'),
+                'passwordRules' => Password::defaults()->toPasswordRulesString(),
+            ]);
+        });
 
         Fortify::requestPasswordResetLinkView(fn (Request $request) => Inertia::render('auth/ForgotPassword', [
             'status' => $request->session()->get('status'),
+            'deliveryError' => $request->session()->get('deliveryError'),
         ]));
 
-        /* @chisel-email-verification */
         Fortify::verifyEmailView(fn (Request $request) => Inertia::render('auth/VerifyEmail', [
             'status' => $request->session()->get('status'),
+            'email' => $request->user()?->email,
         ]));
-        /* @end-chisel-email-verification */
 
-        /* @chisel-registration */
         Fortify::registerView(fn () => Inertia::render('auth/Register', [
             'passwordRules' => Password::defaults()->toPasswordRulesString(),
         ]));
-        /* @end-chisel-registration */
 
-        /* @chisel-2fa */
         Fortify::twoFactorChallengeView(fn () => Inertia::render('auth/TwoFactorChallenge'));
-        /* @end-chisel-2fa */
 
-        /* @chisel-password-confirmation */
         Fortify::confirmPasswordView(fn () => Inertia::render('auth/ConfirmPassword'));
-        /* @end-chisel-password-confirmation */
     }
 
     /**
@@ -94,11 +107,17 @@ class FortifyServiceProvider extends ServiceProvider
      */
     private function configureRateLimiting(): void
     {
-        /* @chisel-2fa */
+        RateLimiter::for('email-verification', fn (Request $request) => Limit::perMinute(6)->by(
+            $request->route()?->getName().'|'.$request->user()?->getAuthIdentifier(),
+        ));
+
+        RateLimiter::for('password-reset-links', fn (Request $request) => Limit::perMinute(5)->by((string) $request->ip()));
+        RateLimiter::for('password-reset-submissions', fn (Request $request) => Limit::perMinute(10)->by((string) $request->ip()));
+        RateLimiter::for('registration', fn (Request $request) => Limit::perMinute(15)->by((string) $request->ip()));
+
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
-        /* @end-chisel-2fa */
 
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
@@ -106,12 +125,10 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($throttleKey);
         });
 
-        /* @chisel-passkeys */
         RateLimiter::for('passkeys', function (Request $request) {
             return Limit::perMinute(10)->by(
                 ($request->input('credential.id') ?: $request->session()->getId()).'|'.$request->ip(),
             );
         });
-        /* @end-chisel-passkeys */
     }
 }

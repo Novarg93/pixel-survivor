@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { Form, Head } from '@inertiajs/vue3';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import InputError from '@/components/InputError.vue';
 import PasswordInput from '@/components/PasswordInput.vue';
+import TextLink from '@/components/TextLink.vue';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
-import { update } from '@/routes/password';
+import { request, update } from '@/routes/password';
 
 defineOptions({
     layout: {
@@ -23,6 +24,8 @@ const props = defineProps<{
 }>();
 
 const inputEmail = ref(props.email);
+const ready = ref(false);
+onMounted(() => { ready.value = true; });
 </script>
 
 <template>
@@ -30,7 +33,7 @@ const inputEmail = ref(props.email);
 
     <Form
         v-bind="update.form()"
-        :transform="(data) => ({ ...data, token, email })"
+        :transform="(data) => ({ ...data, token })"
         :reset-on-success="['password', 'password_confirmation']"
         v-slot="{ errors, processing }"
     >
@@ -44,7 +47,8 @@ const inputEmail = ref(props.email);
                     autocomplete="email"
                     v-model="inputEmail"
                     class="mt-1 block w-full"
-                    readonly
+                    :readonly="!!email"
+                    required
                 />
                 <InputError :message="errors.email" class="mt-2" />
             </div>
@@ -79,7 +83,7 @@ const inputEmail = ref(props.email);
             <Button
                 type="submit"
                 class="mt-4 w-full"
-                :disabled="processing"
+                :disabled="!ready || processing"
                 data-test="reset-password-button"
             >
                 <Spinner v-if="processing" />
@@ -87,4 +91,7 @@ const inputEmail = ref(props.email);
             </Button>
         </div>
     </Form>
+    <p class="text-center text-sm text-muted-foreground">
+        Link expired or already used? <TextLink :href="request()">Request a new reset link</TextLink>.
+    </p>
 </template>

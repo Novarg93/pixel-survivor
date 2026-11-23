@@ -40,6 +40,7 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'name' => config('app.name'),
             'csrfToken' => csrf_token(),
+            'emailJustVerified' => (bool) $request->session()->get('emailJustVerified', false),
             'currencies' => fn () => app(CurrencyService::class)->snapshot($request->user(), $request->session()->get('display_currency')),
             'auth' => [
                 'user' => $request->is('leaderboard', 'leaderboard/*', 'api/v1/leaderboard', 'api/v1/leaderboard/*') ? null : $request->user(),

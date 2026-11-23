@@ -31,11 +31,17 @@
         @include('partials.site-icons')
 
         @vite(['resources/css/app.css', 'resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
+        @if (config('analytics.enabled'))
+            @vite('resources/js/analytics.ts')
+        @endif
         <x-inertia::head>
             <title>{{ config('app.name', 'Laravel') }}</title>
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">
         <x-inertia::app />
+        @if (config('analytics.enabled'))
+            @include('partials.analytics-preferences')
+        @endif
     </body>
 </html>

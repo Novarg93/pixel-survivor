@@ -1,10 +1,13 @@
 <?php
 
+use App\Auth\AuthMailDeliveryFailed;
+use App\Http\Controllers\AnalyticsPageViewController;
 use App\Http\Controllers\PublicHealthController;
 use App\Http\Middleware\HandleAppearance;
 use App\Http\Middleware\HandleInertiaRequests;
 use App\Http\Middleware\PrivatePlatformResponses;
 use App\Http\Middleware\PublicHealthRateLimit;
+use App\Http\Middleware\ThrottleAuthRequests;
 use App\Payments\PaymentProblem;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
@@ -24,6 +27,10 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: null,
         then: function (): void {
+            Route::post('/analytics/page-view', AnalyticsPageViewController::class)
+                ->middleware('throttle:60,1,analytics-page-view-')
+                ->name('analytics.page-view');
+
             Route::get('/health', PublicHealthController::class)
                 ->middleware(PublicHealthRateLimit::class);
             Route::get('/up', PublicHealthController::class)
@@ -38,16 +45,48 @@ return Application::configure(basePath: dirname(__DIR__))
             HandleAppearance::class,
             HandleInertiaRequests::class,
             PrivatePlatformResponses::class,
+            ThrottleAuthRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
+        $exceptions->dontFlash('token');
+        $exceptions->dontReport(AuthMailDeliveryFailed::class);
+        $exceptions->render(function (AuthMailDeliveryFailed $error, Request $request) {
+            if ($request->expectsJson()) {
+                return response()->json(['message' => 'Email is temporarily unavailable. Please try again later.'], 503);
+            }
+
+            if ($request->routeIs('verification.send')) {
+                return redirect()->route('verification.notice')->with('status', 'verification-delivery-failed');
+            }
+
+            if ($request->routeIs('password.email')) {
+                return redirect()->route('password.request')->with('deliveryError', 'Password reset is temporarily unavailable. Please try again later.');
+            }
+        });
         $exceptions->dontReport(InvalidWebhookSignature::class);
         $exceptions->render(fn (InvalidWebhookSignature $error) => response()->json(['error' => 'invalid_stripe_signature'], 400));
         $exceptions->render(function (PaymentProblem $problem) {
             return response()->json(['error' => $problem->reason], in_array($problem->reason, ['provider_unavailable', 'checkout_unavailable', 'verification_unavailable'], true) ? 503 : 409);
         });
         $exceptions->render(function (HttpExceptionInterface $error, Request $request) {
+            if (! $request->expectsJson()) {
+                if ($error->getStatusCode() === 403 && $request->routeIs('verification.verify')) {
+                    return redirect()->route('verification.notice')->with('status', 'verification-link-invalid');
+                }
+
+                if ($error->getStatusCode() === 429) {
+                    if ($request->routeIs('verification.send')) {
+                        return redirect()->route('verification.notice')->with('status', 'verification-rate-limited');
+                    }
+
+                    if ($request->routeIs('password.email')) {
+                        return redirect()->route('password.request')->with('deliveryError', 'Too many requests. Wait a minute and try again.');
+                    }
+                }
+            }
+
             if ($request->is('health', 'operations*', 'api/*', 'leaderboard*')) {
                 $status = $error->getStatusCode();
 

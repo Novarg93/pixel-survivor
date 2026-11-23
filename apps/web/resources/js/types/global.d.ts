@@ -19,6 +19,7 @@ declare module '@inertiajs/core' {
         sharedPageProps: {
             name: string;
             csrfToken: string;
+            emailJustVerified: boolean;
             currencies: import('./currency').CurrencySnapshot;
             auth: Auth;
             sidebarOpen: boolean;

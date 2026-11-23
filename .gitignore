@@ -13,6 +13,7 @@ run-stages.ps1
 /docs/
 /art/
 /tests/
+/*.playwright.config.ts
 
 # Local review launchers stay outside published game changes.
 /*-review.html

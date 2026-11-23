@@ -50,23 +50,9 @@ yarn-error.log
 /database/*.sqlite*
 __pycache__/
 
-/tests/*
-!/tests/Feature/
-/tests/Feature/*
-!/tests/Feature/CurrencyManagementTest.php
-!/tests/Feature/AccountAreaTest.php
-!/tests/Fixtures/
-/tests/Fixtures/*
-!/tests/Fixtures/browser-account.php
+/tests/
+/phpunit*.xml
 /docs/
 /public/js/filament/
 /public/css/filament/
 /public/fonts/filament/
-
-!/tests/Feature/PremiumGameplayTest.php
-!/tests/Fixtures/browser-premium.php
-
-!/tests/MySQL/
-/tests/MySQL/*
-!/tests/MySQL/PremiumRaceTest.php
-!/tests/Fixtures/premium-worker.php
